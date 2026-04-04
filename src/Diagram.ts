@@ -334,11 +334,12 @@ export class Diagram {
     const dot = this._buildDot();
     const format = Array.isArray(this.outformat) ? this.outformat[0] : this.outformat;
 
-    // If icons are being used, we must render to SVG first (WASM Graphviz doesn't support PNG with images)
+    // Always render to SVG first - Graphviz WASM doesn't support PNG output
+    // We'll convert to PNG after rendering if needed
     const needsIconInjection = this._nodeIconMap.length > 0;
-    const renderFormat = needsIconInjection ? "svg" : format;
+    const renderFormat = "svg";
 
-    const result = this._viz.render(dot, { format: renderFormat as "svg" | "dot" });
+    const result = this._viz.render(dot, { format: renderFormat });
 
     if (result.status === "failure") {
       throw new Error(
@@ -346,7 +347,7 @@ export class Diagram {
       );
     }
 
-    let output = result.output;
+    let output = result.output as string;
 
     // Auto-inject icons if nodes with icons were created
     if (needsIconInjection) {
@@ -355,25 +356,43 @@ export class Diagram {
 
       if (Object.keys(this._iconData).length > 0 && this._nodeIconMap.length > 0) {
         const { injectIcons } = await import("./icons.js");
-        const svgString = typeof output === "string" ? output : new TextDecoder().decode(output);
-        output = injectIcons(svgString, this._nodeIconMap, this._iconData);
-
-        // If PNG format was originally requested, convert SVG to PNG
-        if (format === "png") {
-          output = await this._svgToPng(output as string);
-        }
+        output = injectIcons(output, this._nodeIconMap, this._iconData);
       }
+    }
+
+    // If PNG format was requested, convert SVG to PNG
+    if (format === "png") {
+      output = await this._svgToPng(output);
     }
 
     return output;
   }
 
   /**
-   * Convert SVG string to PNG binary data using Canvas API
+   * Detect if running in browser environment
+   */
+  private _isBrowser(): boolean {
+    return typeof window !== "undefined" && typeof document !== "undefined";
+  }
+
+  /**
+   * Convert SVG string to PNG binary data
+   * Uses Canvas API in browser, sharp in Node.js
    * @param svgString - The SVG string to convert
    * @returns Promise resolving to PNG data as Uint8Array
    */
   private async _svgToPng(svgString: string): Promise<Uint8Array> {
+    if (this._isBrowser()) {
+      return this._svgToPngBrowser(svgString);
+    } else {
+      return this._svgToPngNode(svgString);
+    }
+  }
+
+  /**
+   * Convert SVG to PNG using Canvas API (browser only)
+   */
+  private async _svgToPngBrowser(svgString: string): Promise<Uint8Array> {
     return new Promise((resolve, reject) => {
       const img = new Image();
       const svgBlob = new Blob([svgString], { type: "image/svg+xml;charset=utf-8" });
@@ -453,6 +472,47 @@ export class Diagram {
 
       img.src = url;
     });
+  }
+
+  /**
+   * Convert SVG to PNG using sharp (Node.js only)
+   */
+  private async _svgToPngNode(svgString: string): Promise<Uint8Array> {
+    try {
+      // Dynamic import to avoid bundling sharp in browser builds
+      const sharp = await import("sharp");
+      
+      // Parse SVG to get dimensions for scaling
+      const widthMatch = svgString.match(/width="([\d.]+)pt"/);
+      const heightMatch = svgString.match(/height="([\d.]+)pt"/);
+      const viewBoxMatch = svgString.match(/viewBox="[^"]+"/);
+      
+      let width = 800;
+      let height = 600;
+      
+      if (widthMatch && heightMatch) {
+        width = parseFloat(widthMatch[1]);
+        height = parseFloat(heightMatch[1]);
+      } else if (viewBoxMatch) {
+        const parts = viewBoxMatch[0].split(/\s+|,/);
+        if (parts.length >= 4) {
+          width = parseFloat(parts[2]);
+          height = parseFloat(parts[3]);
+        }
+      }
+      
+      // Convert SVG to PNG at 2x resolution for crisp output
+      const pngBuffer = await sharp.default(Buffer.from(svgString))
+        .resize(width * 2, height * 2)
+        .png()
+        .toBuffer();
+      
+      return new Uint8Array(pngBuffer);
+    } catch (error) {
+      throw new Error(
+        `Failed to convert SVG to PNG. Make sure 'sharp' is installed: npm install sharp. Error: ${error}`
+      );
+    }
   }
 
   /**

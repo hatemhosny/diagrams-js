@@ -257,13 +257,28 @@ const diagram = new Diagram("Themed", { theme: "blues" });
 
 ## Output Formats
 
-- **SVG** (default): `outformat: "svg"`
-- **PNG**: `outformat: "png"` - Requires Canvas API in browser or node-canvas in Node.js
+- **SVG** (default): `outformat: "svg"` - Works in all environments
+- **PNG**: `outformat: "png"` - Works in browsers (Canvas API) and Node.js (with sharp)
 
+### Browser PNG Export
 ```typescript
-// Browser - PNG export
 const diagram = new Diagram("My Diagram", { outformat: "png" });
 const pngDataUrl = await diagram.render();
+```
+
+### Node.js PNG Export
+For PNG output in Node.js, install the optional `sharp` dependency:
+
+```bash
+npm install sharp
+```
+
+Then use PNG output as normal:
+
+```typescript
+const diagram = new Diagram("My Diagram", { outformat: "png" });
+const pngBuffer = await diagram.render(); // Returns Uint8Array
+await fs.writeFile("diagram.png", pngBuffer);
 ```
 
 ## Development
