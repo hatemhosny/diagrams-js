@@ -9,6 +9,7 @@ import * as fs from "node:fs";
 import * as path from "node:path";
 import { fileURLToPath } from "node:url";
 import { build } from "esbuild";
+import { execSync } from "node:child_process";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -129,6 +130,21 @@ async function buildProvidersIndex() {
   }
 }
 
+async function buildTypes() {
+  console.log("Building types...");
+
+  try {
+    execSync("npx tsgo --rootDir src --outDir temp");
+    await fs.promises.cp(path.join("temp", "providers"), path.join("dist", "providers"), {
+      recursive: true,
+    });
+    await fs.promises.rm("temp", { recursive: true });
+    console.log("  ✓ types built\n");
+  } catch (err) {
+    console.error(`  ✗ Failed to build types: ${err.message}\n`);
+  }
+}
+
 /**
  * Update package.json exports
  */
@@ -156,7 +172,7 @@ function updatePackageExports() {
     // Provider index
     exports[`./providers/${provider}`] = {
       import: `./dist/providers/${provider}/index.js`,
-      types: `./src/providers/${provider}/index.ts`,
+      types: `./dist/providers/${provider}/index.d.ts`,
     };
 
     // Provider service modules
@@ -166,7 +182,7 @@ function updatePackageExports() {
         const serviceName = file.replace(".ts", "");
         exports[`./providers/${provider}/${serviceName}`] = {
           import: `./dist/providers/${provider}/${serviceName}.js`,
-          types: `./src/providers/${provider}/${file}`,
+          types: `./dist/providers/${provider}/${file.replace(".ts", ".d.ts")}`,
         };
       }
     }
@@ -200,6 +216,9 @@ async function main() {
 
   // Build index
   await buildProvidersIndex();
+
+  // Build types
+  await buildTypes();
 
   // Update package.json exports
   updatePackageExports();
