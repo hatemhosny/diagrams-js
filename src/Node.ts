@@ -129,11 +129,15 @@ export class Node {
    * Connect from another node (reverse direction)
    * Python: Self << Node
    * TypeScript: node.from(otherNode)
+   * 
+   * Example: pod.from(rs) means rs -> pod (arrow from rs to pod)
    */
   from(source: Node): Node;
   from(sources: Node[]): Node;
   from(sources: Node | Node[]): Node {
-    const edge = new Edge({ node: this, reverse: true });
+    // When we call p.from(rs), we want rs -> p (arrow from rs to p)
+    // So we create a forward edge from source to this node
+    const edge = new Edge({ node: this, forward: true });
 
     if (Array.isArray(sources)) {
       for (const source of sources) {
