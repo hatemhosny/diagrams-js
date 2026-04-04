@@ -1,15 +1,15 @@
 import { _Generic } from "./index.js";
+import mobileIcon from "../../../resources/generic/device/mobile.png";
+import tabletIcon from "../../../resources/generic/device/tablet.png";
 
 class _Device extends _Generic {
   protected static override _type = "device";
-  protected static override _iconDir = "generic/device";
 }
 
 export class Mobile extends _Device {
-  protected static override _icon = "mobile.png";
+  protected static override _iconDataUrl = mobileIcon;
 }
 
 export class Tablet extends _Device {
-  protected static override _icon = "tablet.png";
+  protected static override _iconDataUrl = tabletIcon;
 }
-

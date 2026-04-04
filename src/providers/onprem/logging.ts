@@ -1,31 +1,34 @@
 import { _Onprem } from "./index.js";
+import fluentbitIcon from "../../../resources/onprem/logging/fluentbit.png";
+import graylogIcon from "../../../resources/onprem/logging/graylog.png";
+import lokiIcon from "../../../resources/onprem/logging/loki.png";
+import rsyslogIcon from "../../../resources/onprem/logging/rsyslog.png";
+import syslog_ngIcon from "../../../resources/onprem/logging/syslog-ng.png";
 
 class _Logging extends _Onprem {
   protected static override _type = "logging";
-  protected static override _iconDir = "onprem/logging";
 }
 
 export class Fluentbit extends _Logging {
-  protected static override _icon = "fluentbit.png";
+  protected static override _iconDataUrl = fluentbitIcon;
 }
 
 export class Graylog extends _Logging {
-  protected static override _icon = "graylog.png";
+  protected static override _iconDataUrl = graylogIcon;
 }
 
 export class Loki extends _Logging {
-  protected static override _icon = "loki.png";
+  protected static override _iconDataUrl = lokiIcon;
 }
 
 export class Rsyslog extends _Logging {
-  protected static override _icon = "rsyslog.png";
+  protected static override _iconDataUrl = rsyslogIcon;
 }
 
 export class SyslogNg extends _Logging {
-  protected static override _icon = "syslog-ng.png";
+  protected static override _iconDataUrl = syslog_ngIcon;
 }
 
 // Aliases
 export const FluentBit = Fluentbit;
 export const RSyslog = Rsyslog;
-

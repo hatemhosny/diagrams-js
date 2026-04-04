@@ -18,8 +18,995 @@
   ],
   "type": "module",
   "exports": {
-    ".": "./dist/index.mjs",
-    "./package.json": "./package.json"
+    ".": {
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.mts"
+    },
+    "./package.json": "./package.json",
+    "./providers/alibabacloud": {
+      "import": "./dist/providers/alibabacloud/index.js",
+      "types": "./src/providers/alibabacloud/index.ts"
+    },
+    "./providers/alibabacloud/analytics": {
+      "import": "./dist/providers/alibabacloud/analytics.js",
+      "types": "./src/providers/alibabacloud/analytics.ts"
+    },
+    "./providers/alibabacloud/application": {
+      "import": "./dist/providers/alibabacloud/application.js",
+      "types": "./src/providers/alibabacloud/application.ts"
+    },
+    "./providers/alibabacloud/communication": {
+      "import": "./dist/providers/alibabacloud/communication.js",
+      "types": "./src/providers/alibabacloud/communication.ts"
+    },
+    "./providers/alibabacloud/compute": {
+      "import": "./dist/providers/alibabacloud/compute.js",
+      "types": "./src/providers/alibabacloud/compute.ts"
+    },
+    "./providers/alibabacloud/database": {
+      "import": "./dist/providers/alibabacloud/database.js",
+      "types": "./src/providers/alibabacloud/database.ts"
+    },
+    "./providers/alibabacloud/iot": {
+      "import": "./dist/providers/alibabacloud/iot.js",
+      "types": "./src/providers/alibabacloud/iot.ts"
+    },
+    "./providers/alibabacloud/network": {
+      "import": "./dist/providers/alibabacloud/network.js",
+      "types": "./src/providers/alibabacloud/network.ts"
+    },
+    "./providers/alibabacloud/security": {
+      "import": "./dist/providers/alibabacloud/security.js",
+      "types": "./src/providers/alibabacloud/security.ts"
+    },
+    "./providers/alibabacloud/storage": {
+      "import": "./dist/providers/alibabacloud/storage.js",
+      "types": "./src/providers/alibabacloud/storage.ts"
+    },
+    "./providers/alibabacloud/web": {
+      "import": "./dist/providers/alibabacloud/web.js",
+      "types": "./src/providers/alibabacloud/web.ts"
+    },
+    "./providers/aws": {
+      "import": "./dist/providers/aws/index.js",
+      "types": "./src/providers/aws/index.ts"
+    },
+    "./providers/aws/analytics": {
+      "import": "./dist/providers/aws/analytics.js",
+      "types": "./src/providers/aws/analytics.ts"
+    },
+    "./providers/aws/ar": {
+      "import": "./dist/providers/aws/ar.js",
+      "types": "./src/providers/aws/ar.ts"
+    },
+    "./providers/aws/blockchain": {
+      "import": "./dist/providers/aws/blockchain.js",
+      "types": "./src/providers/aws/blockchain.ts"
+    },
+    "./providers/aws/business": {
+      "import": "./dist/providers/aws/business.js",
+      "types": "./src/providers/aws/business.ts"
+    },
+    "./providers/aws/compute": {
+      "import": "./dist/providers/aws/compute.js",
+      "types": "./src/providers/aws/compute.ts"
+    },
+    "./providers/aws/cost": {
+      "import": "./dist/providers/aws/cost.js",
+      "types": "./src/providers/aws/cost.ts"
+    },
+    "./providers/aws/database": {
+      "import": "./dist/providers/aws/database.js",
+      "types": "./src/providers/aws/database.ts"
+    },
+    "./providers/aws/devtools": {
+      "import": "./dist/providers/aws/devtools.js",
+      "types": "./src/providers/aws/devtools.ts"
+    },
+    "./providers/aws/enablement": {
+      "import": "./dist/providers/aws/enablement.js",
+      "types": "./src/providers/aws/enablement.ts"
+    },
+    "./providers/aws/enduser": {
+      "import": "./dist/providers/aws/enduser.js",
+      "types": "./src/providers/aws/enduser.ts"
+    },
+    "./providers/aws/engagement": {
+      "import": "./dist/providers/aws/engagement.js",
+      "types": "./src/providers/aws/engagement.ts"
+    },
+    "./providers/aws/game": {
+      "import": "./dist/providers/aws/game.js",
+      "types": "./src/providers/aws/game.ts"
+    },
+    "./providers/aws/general": {
+      "import": "./dist/providers/aws/general.js",
+      "types": "./src/providers/aws/general.ts"
+    },
+    "./providers/aws/integration": {
+      "import": "./dist/providers/aws/integration.js",
+      "types": "./src/providers/aws/integration.ts"
+    },
+    "./providers/aws/iot": {
+      "import": "./dist/providers/aws/iot.js",
+      "types": "./src/providers/aws/iot.ts"
+    },
+    "./providers/aws/management": {
+      "import": "./dist/providers/aws/management.js",
+      "types": "./src/providers/aws/management.ts"
+    },
+    "./providers/aws/media": {
+      "import": "./dist/providers/aws/media.js",
+      "types": "./src/providers/aws/media.ts"
+    },
+    "./providers/aws/migration": {
+      "import": "./dist/providers/aws/migration.js",
+      "types": "./src/providers/aws/migration.ts"
+    },
+    "./providers/aws/ml": {
+      "import": "./dist/providers/aws/ml.js",
+      "types": "./src/providers/aws/ml.ts"
+    },
+    "./providers/aws/mobile": {
+      "import": "./dist/providers/aws/mobile.js",
+      "types": "./src/providers/aws/mobile.ts"
+    },
+    "./providers/aws/network": {
+      "import": "./dist/providers/aws/network.js",
+      "types": "./src/providers/aws/network.ts"
+    },
+    "./providers/aws/quantum": {
+      "import": "./dist/providers/aws/quantum.js",
+      "types": "./src/providers/aws/quantum.ts"
+    },
+    "./providers/aws/robotics": {
+      "import": "./dist/providers/aws/robotics.js",
+      "types": "./src/providers/aws/robotics.ts"
+    },
+    "./providers/aws/satellite": {
+      "import": "./dist/providers/aws/satellite.js",
+      "types": "./src/providers/aws/satellite.ts"
+    },
+    "./providers/aws/security": {
+      "import": "./dist/providers/aws/security.js",
+      "types": "./src/providers/aws/security.ts"
+    },
+    "./providers/aws/storage": {
+      "import": "./dist/providers/aws/storage.js",
+      "types": "./src/providers/aws/storage.ts"
+    },
+    "./providers/azure": {
+      "import": "./dist/providers/azure/index.js",
+      "types": "./src/providers/azure/index.ts"
+    },
+    "./providers/azure/aimachinelearning": {
+      "import": "./dist/providers/azure/aimachinelearning.js",
+      "types": "./src/providers/azure/aimachinelearning.ts"
+    },
+    "./providers/azure/analytics": {
+      "import": "./dist/providers/azure/analytics.js",
+      "types": "./src/providers/azure/analytics.ts"
+    },
+    "./providers/azure/appservices": {
+      "import": "./dist/providers/azure/appservices.js",
+      "types": "./src/providers/azure/appservices.ts"
+    },
+    "./providers/azure/azureecosystem": {
+      "import": "./dist/providers/azure/azureecosystem.js",
+      "types": "./src/providers/azure/azureecosystem.ts"
+    },
+    "./providers/azure/azurestack": {
+      "import": "./dist/providers/azure/azurestack.js",
+      "types": "./src/providers/azure/azurestack.ts"
+    },
+    "./providers/azure/blockchain": {
+      "import": "./dist/providers/azure/blockchain.js",
+      "types": "./src/providers/azure/blockchain.ts"
+    },
+    "./providers/azure/compute": {
+      "import": "./dist/providers/azure/compute.js",
+      "types": "./src/providers/azure/compute.ts"
+    },
+    "./providers/azure/containers": {
+      "import": "./dist/providers/azure/containers.js",
+      "types": "./src/providers/azure/containers.ts"
+    },
+    "./providers/azure/database": {
+      "import": "./dist/providers/azure/database.js",
+      "types": "./src/providers/azure/database.ts"
+    },
+    "./providers/azure/databases": {
+      "import": "./dist/providers/azure/databases.js",
+      "types": "./src/providers/azure/databases.ts"
+    },
+    "./providers/azure/devops": {
+      "import": "./dist/providers/azure/devops.js",
+      "types": "./src/providers/azure/devops.ts"
+    },
+    "./providers/azure/general": {
+      "import": "./dist/providers/azure/general.js",
+      "types": "./src/providers/azure/general.ts"
+    },
+    "./providers/azure/hybridmulticloud": {
+      "import": "./dist/providers/azure/hybridmulticloud.js",
+      "types": "./src/providers/azure/hybridmulticloud.ts"
+    },
+    "./providers/azure/identity": {
+      "import": "./dist/providers/azure/identity.js",
+      "types": "./src/providers/azure/identity.ts"
+    },
+    "./providers/azure/integration": {
+      "import": "./dist/providers/azure/integration.js",
+      "types": "./src/providers/azure/integration.ts"
+    },
+    "./providers/azure/intune": {
+      "import": "./dist/providers/azure/intune.js",
+      "types": "./src/providers/azure/intune.ts"
+    },
+    "./providers/azure/iot": {
+      "import": "./dist/providers/azure/iot.js",
+      "types": "./src/providers/azure/iot.ts"
+    },
+    "./providers/azure/managementgovernance": {
+      "import": "./dist/providers/azure/managementgovernance.js",
+      "types": "./src/providers/azure/managementgovernance.ts"
+    },
+    "./providers/azure/menu": {
+      "import": "./dist/providers/azure/menu.js",
+      "types": "./src/providers/azure/menu.ts"
+    },
+    "./providers/azure/migrate": {
+      "import": "./dist/providers/azure/migrate.js",
+      "types": "./src/providers/azure/migrate.ts"
+    },
+    "./providers/azure/migration": {
+      "import": "./dist/providers/azure/migration.js",
+      "types": "./src/providers/azure/migration.ts"
+    },
+    "./providers/azure/mixedreality": {
+      "import": "./dist/providers/azure/mixedreality.js",
+      "types": "./src/providers/azure/mixedreality.ts"
+    },
+    "./providers/azure/ml": {
+      "import": "./dist/providers/azure/ml.js",
+      "types": "./src/providers/azure/ml.ts"
+    },
+    "./providers/azure/mobile": {
+      "import": "./dist/providers/azure/mobile.js",
+      "types": "./src/providers/azure/mobile.ts"
+    },
+    "./providers/azure/monitor": {
+      "import": "./dist/providers/azure/monitor.js",
+      "types": "./src/providers/azure/monitor.ts"
+    },
+    "./providers/azure/network": {
+      "import": "./dist/providers/azure/network.js",
+      "types": "./src/providers/azure/network.ts"
+    },
+    "./providers/azure/networking": {
+      "import": "./dist/providers/azure/networking.js",
+      "types": "./src/providers/azure/networking.ts"
+    },
+    "./providers/azure/newicons": {
+      "import": "./dist/providers/azure/newicons.js",
+      "types": "./src/providers/azure/newicons.ts"
+    },
+    "./providers/azure/other": {
+      "import": "./dist/providers/azure/other.js",
+      "types": "./src/providers/azure/other.ts"
+    },
+    "./providers/azure/security": {
+      "import": "./dist/providers/azure/security.js",
+      "types": "./src/providers/azure/security.ts"
+    },
+    "./providers/azure/storage": {
+      "import": "./dist/providers/azure/storage.js",
+      "types": "./src/providers/azure/storage.ts"
+    },
+    "./providers/azure/web": {
+      "import": "./dist/providers/azure/web.js",
+      "types": "./src/providers/azure/web.ts"
+    },
+    "./providers/digitalocean": {
+      "import": "./dist/providers/digitalocean/index.js",
+      "types": "./src/providers/digitalocean/index.ts"
+    },
+    "./providers/digitalocean/compute": {
+      "import": "./dist/providers/digitalocean/compute.js",
+      "types": "./src/providers/digitalocean/compute.ts"
+    },
+    "./providers/digitalocean/database": {
+      "import": "./dist/providers/digitalocean/database.js",
+      "types": "./src/providers/digitalocean/database.ts"
+    },
+    "./providers/digitalocean/network": {
+      "import": "./dist/providers/digitalocean/network.js",
+      "types": "./src/providers/digitalocean/network.ts"
+    },
+    "./providers/digitalocean/storage": {
+      "import": "./dist/providers/digitalocean/storage.js",
+      "types": "./src/providers/digitalocean/storage.ts"
+    },
+    "./providers/elastic": {
+      "import": "./dist/providers/elastic/index.js",
+      "types": "./src/providers/elastic/index.ts"
+    },
+    "./providers/elastic/agent": {
+      "import": "./dist/providers/elastic/agent.js",
+      "types": "./src/providers/elastic/agent.ts"
+    },
+    "./providers/elastic/beats": {
+      "import": "./dist/providers/elastic/beats.js",
+      "types": "./src/providers/elastic/beats.ts"
+    },
+    "./providers/elastic/elasticsearch": {
+      "import": "./dist/providers/elastic/elasticsearch.js",
+      "types": "./src/providers/elastic/elasticsearch.ts"
+    },
+    "./providers/elastic/enterprisesearch": {
+      "import": "./dist/providers/elastic/enterprisesearch.js",
+      "types": "./src/providers/elastic/enterprisesearch.ts"
+    },
+    "./providers/elastic/observability": {
+      "import": "./dist/providers/elastic/observability.js",
+      "types": "./src/providers/elastic/observability.ts"
+    },
+    "./providers/elastic/orchestration": {
+      "import": "./dist/providers/elastic/orchestration.js",
+      "types": "./src/providers/elastic/orchestration.ts"
+    },
+    "./providers/elastic/saas": {
+      "import": "./dist/providers/elastic/saas.js",
+      "types": "./src/providers/elastic/saas.ts"
+    },
+    "./providers/elastic/security": {
+      "import": "./dist/providers/elastic/security.js",
+      "types": "./src/providers/elastic/security.ts"
+    },
+    "./providers/firebase": {
+      "import": "./dist/providers/firebase/index.js",
+      "types": "./src/providers/firebase/index.ts"
+    },
+    "./providers/firebase/base": {
+      "import": "./dist/providers/firebase/base.js",
+      "types": "./src/providers/firebase/base.ts"
+    },
+    "./providers/firebase/develop": {
+      "import": "./dist/providers/firebase/develop.js",
+      "types": "./src/providers/firebase/develop.ts"
+    },
+    "./providers/firebase/extentions": {
+      "import": "./dist/providers/firebase/extentions.js",
+      "types": "./src/providers/firebase/extentions.ts"
+    },
+    "./providers/firebase/grow": {
+      "import": "./dist/providers/firebase/grow.js",
+      "types": "./src/providers/firebase/grow.ts"
+    },
+    "./providers/firebase/quality": {
+      "import": "./dist/providers/firebase/quality.js",
+      "types": "./src/providers/firebase/quality.ts"
+    },
+    "./providers/gcp": {
+      "import": "./dist/providers/gcp/index.js",
+      "types": "./src/providers/gcp/index.ts"
+    },
+    "./providers/gcp/analytics": {
+      "import": "./dist/providers/gcp/analytics.js",
+      "types": "./src/providers/gcp/analytics.ts"
+    },
+    "./providers/gcp/api": {
+      "import": "./dist/providers/gcp/api.js",
+      "types": "./src/providers/gcp/api.ts"
+    },
+    "./providers/gcp/compute": {
+      "import": "./dist/providers/gcp/compute.js",
+      "types": "./src/providers/gcp/compute.ts"
+    },
+    "./providers/gcp/database": {
+      "import": "./dist/providers/gcp/database.js",
+      "types": "./src/providers/gcp/database.ts"
+    },
+    "./providers/gcp/devtools": {
+      "import": "./dist/providers/gcp/devtools.js",
+      "types": "./src/providers/gcp/devtools.ts"
+    },
+    "./providers/gcp/iot": {
+      "import": "./dist/providers/gcp/iot.js",
+      "types": "./src/providers/gcp/iot.ts"
+    },
+    "./providers/gcp/management": {
+      "import": "./dist/providers/gcp/management.js",
+      "types": "./src/providers/gcp/management.ts"
+    },
+    "./providers/gcp/migration": {
+      "import": "./dist/providers/gcp/migration.js",
+      "types": "./src/providers/gcp/migration.ts"
+    },
+    "./providers/gcp/ml": {
+      "import": "./dist/providers/gcp/ml.js",
+      "types": "./src/providers/gcp/ml.ts"
+    },
+    "./providers/gcp/network": {
+      "import": "./dist/providers/gcp/network.js",
+      "types": "./src/providers/gcp/network.ts"
+    },
+    "./providers/gcp/operations": {
+      "import": "./dist/providers/gcp/operations.js",
+      "types": "./src/providers/gcp/operations.ts"
+    },
+    "./providers/gcp/security": {
+      "import": "./dist/providers/gcp/security.js",
+      "types": "./src/providers/gcp/security.ts"
+    },
+    "./providers/gcp/storage": {
+      "import": "./dist/providers/gcp/storage.js",
+      "types": "./src/providers/gcp/storage.ts"
+    },
+    "./providers/generic": {
+      "import": "./dist/providers/generic/index.js",
+      "types": "./src/providers/generic/index.ts"
+    },
+    "./providers/generic/blank": {
+      "import": "./dist/providers/generic/blank.js",
+      "types": "./src/providers/generic/blank.ts"
+    },
+    "./providers/generic/compute": {
+      "import": "./dist/providers/generic/compute.js",
+      "types": "./src/providers/generic/compute.ts"
+    },
+    "./providers/generic/database": {
+      "import": "./dist/providers/generic/database.js",
+      "types": "./src/providers/generic/database.ts"
+    },
+    "./providers/generic/device": {
+      "import": "./dist/providers/generic/device.js",
+      "types": "./src/providers/generic/device.ts"
+    },
+    "./providers/generic/network": {
+      "import": "./dist/providers/generic/network.js",
+      "types": "./src/providers/generic/network.ts"
+    },
+    "./providers/generic/os": {
+      "import": "./dist/providers/generic/os.js",
+      "types": "./src/providers/generic/os.ts"
+    },
+    "./providers/generic/place": {
+      "import": "./dist/providers/generic/place.js",
+      "types": "./src/providers/generic/place.ts"
+    },
+    "./providers/generic/storage": {
+      "import": "./dist/providers/generic/storage.js",
+      "types": "./src/providers/generic/storage.ts"
+    },
+    "./providers/generic/virtualization": {
+      "import": "./dist/providers/generic/virtualization.js",
+      "types": "./src/providers/generic/virtualization.ts"
+    },
+    "./providers/gis": {
+      "import": "./dist/providers/gis/index.js",
+      "types": "./src/providers/gis/index.ts"
+    },
+    "./providers/gis/cli": {
+      "import": "./dist/providers/gis/cli.js",
+      "types": "./src/providers/gis/cli.ts"
+    },
+    "./providers/gis/data": {
+      "import": "./dist/providers/gis/data.js",
+      "types": "./src/providers/gis/data.ts"
+    },
+    "./providers/gis/database": {
+      "import": "./dist/providers/gis/database.js",
+      "types": "./src/providers/gis/database.ts"
+    },
+    "./providers/gis/desktop": {
+      "import": "./dist/providers/gis/desktop.js",
+      "types": "./src/providers/gis/desktop.ts"
+    },
+    "./providers/gis/format": {
+      "import": "./dist/providers/gis/format.js",
+      "types": "./src/providers/gis/format.ts"
+    },
+    "./providers/gis/geocoding": {
+      "import": "./dist/providers/gis/geocoding.js",
+      "types": "./src/providers/gis/geocoding.ts"
+    },
+    "./providers/gis/java": {
+      "import": "./dist/providers/gis/java.js",
+      "types": "./src/providers/gis/java.ts"
+    },
+    "./providers/gis/javascript": {
+      "import": "./dist/providers/gis/javascript.js",
+      "types": "./src/providers/gis/javascript.ts"
+    },
+    "./providers/gis/mobile": {
+      "import": "./dist/providers/gis/mobile.js",
+      "types": "./src/providers/gis/mobile.ts"
+    },
+    "./providers/gis/ogc": {
+      "import": "./dist/providers/gis/ogc.js",
+      "types": "./src/providers/gis/ogc.ts"
+    },
+    "./providers/gis/organization": {
+      "import": "./dist/providers/gis/organization.js",
+      "types": "./src/providers/gis/organization.ts"
+    },
+    "./providers/gis/python": {
+      "import": "./dist/providers/gis/python.js",
+      "types": "./src/providers/gis/python.ts"
+    },
+    "./providers/gis/routing": {
+      "import": "./dist/providers/gis/routing.js",
+      "types": "./src/providers/gis/routing.ts"
+    },
+    "./providers/gis/server": {
+      "import": "./dist/providers/gis/server.js",
+      "types": "./src/providers/gis/server.ts"
+    },
+    "./providers/ibm": {
+      "import": "./dist/providers/ibm/index.js",
+      "types": "./src/providers/ibm/index.ts"
+    },
+    "./providers/ibm/analytics": {
+      "import": "./dist/providers/ibm/analytics.js",
+      "types": "./src/providers/ibm/analytics.ts"
+    },
+    "./providers/ibm/applications": {
+      "import": "./dist/providers/ibm/applications.js",
+      "types": "./src/providers/ibm/applications.ts"
+    },
+    "./providers/ibm/blockchain": {
+      "import": "./dist/providers/ibm/blockchain.js",
+      "types": "./src/providers/ibm/blockchain.ts"
+    },
+    "./providers/ibm/compute": {
+      "import": "./dist/providers/ibm/compute.js",
+      "types": "./src/providers/ibm/compute.ts"
+    },
+    "./providers/ibm/data": {
+      "import": "./dist/providers/ibm/data.js",
+      "types": "./src/providers/ibm/data.ts"
+    },
+    "./providers/ibm/devops": {
+      "import": "./dist/providers/ibm/devops.js",
+      "types": "./src/providers/ibm/devops.ts"
+    },
+    "./providers/ibm/general": {
+      "import": "./dist/providers/ibm/general.js",
+      "types": "./src/providers/ibm/general.ts"
+    },
+    "./providers/ibm/infrastructure": {
+      "import": "./dist/providers/ibm/infrastructure.js",
+      "types": "./src/providers/ibm/infrastructure.ts"
+    },
+    "./providers/ibm/management": {
+      "import": "./dist/providers/ibm/management.js",
+      "types": "./src/providers/ibm/management.ts"
+    },
+    "./providers/ibm/network": {
+      "import": "./dist/providers/ibm/network.js",
+      "types": "./src/providers/ibm/network.ts"
+    },
+    "./providers/ibm/security": {
+      "import": "./dist/providers/ibm/security.js",
+      "types": "./src/providers/ibm/security.ts"
+    },
+    "./providers/ibm/social": {
+      "import": "./dist/providers/ibm/social.js",
+      "types": "./src/providers/ibm/social.ts"
+    },
+    "./providers/ibm/storage": {
+      "import": "./dist/providers/ibm/storage.js",
+      "types": "./src/providers/ibm/storage.ts"
+    },
+    "./providers/ibm/user": {
+      "import": "./dist/providers/ibm/user.js",
+      "types": "./src/providers/ibm/user.ts"
+    },
+    "./providers/k8s": {
+      "import": "./dist/providers/k8s/index.js",
+      "types": "./src/providers/k8s/index.ts"
+    },
+    "./providers/k8s/chaos": {
+      "import": "./dist/providers/k8s/chaos.js",
+      "types": "./src/providers/k8s/chaos.ts"
+    },
+    "./providers/k8s/clusterconfig": {
+      "import": "./dist/providers/k8s/clusterconfig.js",
+      "types": "./src/providers/k8s/clusterconfig.ts"
+    },
+    "./providers/k8s/compute": {
+      "import": "./dist/providers/k8s/compute.js",
+      "types": "./src/providers/k8s/compute.ts"
+    },
+    "./providers/k8s/controlplane": {
+      "import": "./dist/providers/k8s/controlplane.js",
+      "types": "./src/providers/k8s/controlplane.ts"
+    },
+    "./providers/k8s/ecosystem": {
+      "import": "./dist/providers/k8s/ecosystem.js",
+      "types": "./src/providers/k8s/ecosystem.ts"
+    },
+    "./providers/k8s/group": {
+      "import": "./dist/providers/k8s/group.js",
+      "types": "./src/providers/k8s/group.ts"
+    },
+    "./providers/k8s/infra": {
+      "import": "./dist/providers/k8s/infra.js",
+      "types": "./src/providers/k8s/infra.ts"
+    },
+    "./providers/k8s/network": {
+      "import": "./dist/providers/k8s/network.js",
+      "types": "./src/providers/k8s/network.ts"
+    },
+    "./providers/k8s/others": {
+      "import": "./dist/providers/k8s/others.js",
+      "types": "./src/providers/k8s/others.ts"
+    },
+    "./providers/k8s/podconfig": {
+      "import": "./dist/providers/k8s/podconfig.js",
+      "types": "./src/providers/k8s/podconfig.ts"
+    },
+    "./providers/k8s/rbac": {
+      "import": "./dist/providers/k8s/rbac.js",
+      "types": "./src/providers/k8s/rbac.ts"
+    },
+    "./providers/k8s/storage": {
+      "import": "./dist/providers/k8s/storage.js",
+      "types": "./src/providers/k8s/storage.ts"
+    },
+    "./providers/oci": {
+      "import": "./dist/providers/oci/index.js",
+      "types": "./src/providers/oci/index.ts"
+    },
+    "./providers/oci/compute": {
+      "import": "./dist/providers/oci/compute.js",
+      "types": "./src/providers/oci/compute.ts"
+    },
+    "./providers/oci/connectivity": {
+      "import": "./dist/providers/oci/connectivity.js",
+      "types": "./src/providers/oci/connectivity.ts"
+    },
+    "./providers/oci/database": {
+      "import": "./dist/providers/oci/database.js",
+      "types": "./src/providers/oci/database.ts"
+    },
+    "./providers/oci/devops": {
+      "import": "./dist/providers/oci/devops.js",
+      "types": "./src/providers/oci/devops.ts"
+    },
+    "./providers/oci/governance": {
+      "import": "./dist/providers/oci/governance.js",
+      "types": "./src/providers/oci/governance.ts"
+    },
+    "./providers/oci/monitoring": {
+      "import": "./dist/providers/oci/monitoring.js",
+      "types": "./src/providers/oci/monitoring.ts"
+    },
+    "./providers/oci/network": {
+      "import": "./dist/providers/oci/network.js",
+      "types": "./src/providers/oci/network.ts"
+    },
+    "./providers/oci/security": {
+      "import": "./dist/providers/oci/security.js",
+      "types": "./src/providers/oci/security.ts"
+    },
+    "./providers/oci/storage": {
+      "import": "./dist/providers/oci/storage.js",
+      "types": "./src/providers/oci/storage.ts"
+    },
+    "./providers/onprem": {
+      "import": "./dist/providers/onprem/index.js",
+      "types": "./src/providers/onprem/index.ts"
+    },
+    "./providers/onprem/aggregator": {
+      "import": "./dist/providers/onprem/aggregator.js",
+      "types": "./src/providers/onprem/aggregator.ts"
+    },
+    "./providers/onprem/analytics": {
+      "import": "./dist/providers/onprem/analytics.js",
+      "types": "./src/providers/onprem/analytics.ts"
+    },
+    "./providers/onprem/auth": {
+      "import": "./dist/providers/onprem/auth.js",
+      "types": "./src/providers/onprem/auth.ts"
+    },
+    "./providers/onprem/cd": {
+      "import": "./dist/providers/onprem/cd.js",
+      "types": "./src/providers/onprem/cd.ts"
+    },
+    "./providers/onprem/certificates": {
+      "import": "./dist/providers/onprem/certificates.js",
+      "types": "./src/providers/onprem/certificates.ts"
+    },
+    "./providers/onprem/ci": {
+      "import": "./dist/providers/onprem/ci.js",
+      "types": "./src/providers/onprem/ci.ts"
+    },
+    "./providers/onprem/client": {
+      "import": "./dist/providers/onprem/client.js",
+      "types": "./src/providers/onprem/client.ts"
+    },
+    "./providers/onprem/compute": {
+      "import": "./dist/providers/onprem/compute.js",
+      "types": "./src/providers/onprem/compute.ts"
+    },
+    "./providers/onprem/container": {
+      "import": "./dist/providers/onprem/container.js",
+      "types": "./src/providers/onprem/container.ts"
+    },
+    "./providers/onprem/database": {
+      "import": "./dist/providers/onprem/database.js",
+      "types": "./src/providers/onprem/database.ts"
+    },
+    "./providers/onprem/dns": {
+      "import": "./dist/providers/onprem/dns.js",
+      "types": "./src/providers/onprem/dns.ts"
+    },
+    "./providers/onprem/etl": {
+      "import": "./dist/providers/onprem/etl.js",
+      "types": "./src/providers/onprem/etl.ts"
+    },
+    "./providers/onprem/gitops": {
+      "import": "./dist/providers/onprem/gitops.js",
+      "types": "./src/providers/onprem/gitops.ts"
+    },
+    "./providers/onprem/groupware": {
+      "import": "./dist/providers/onprem/groupware.js",
+      "types": "./src/providers/onprem/groupware.ts"
+    },
+    "./providers/onprem/iac": {
+      "import": "./dist/providers/onprem/iac.js",
+      "types": "./src/providers/onprem/iac.ts"
+    },
+    "./providers/onprem/identity": {
+      "import": "./dist/providers/onprem/identity.js",
+      "types": "./src/providers/onprem/identity.ts"
+    },
+    "./providers/onprem/inmemory": {
+      "import": "./dist/providers/onprem/inmemory.js",
+      "types": "./src/providers/onprem/inmemory.ts"
+    },
+    "./providers/onprem/logging": {
+      "import": "./dist/providers/onprem/logging.js",
+      "types": "./src/providers/onprem/logging.ts"
+    },
+    "./providers/onprem/messaging": {
+      "import": "./dist/providers/onprem/messaging.js",
+      "types": "./src/providers/onprem/messaging.ts"
+    },
+    "./providers/onprem/mlops": {
+      "import": "./dist/providers/onprem/mlops.js",
+      "types": "./src/providers/onprem/mlops.ts"
+    },
+    "./providers/onprem/monitoring": {
+      "import": "./dist/providers/onprem/monitoring.js",
+      "types": "./src/providers/onprem/monitoring.ts"
+    },
+    "./providers/onprem/network": {
+      "import": "./dist/providers/onprem/network.js",
+      "types": "./src/providers/onprem/network.ts"
+    },
+    "./providers/onprem/proxmox": {
+      "import": "./dist/providers/onprem/proxmox.js",
+      "types": "./src/providers/onprem/proxmox.ts"
+    },
+    "./providers/onprem/queue": {
+      "import": "./dist/providers/onprem/queue.js",
+      "types": "./src/providers/onprem/queue.ts"
+    },
+    "./providers/onprem/registry": {
+      "import": "./dist/providers/onprem/registry.js",
+      "types": "./src/providers/onprem/registry.ts"
+    },
+    "./providers/onprem/search": {
+      "import": "./dist/providers/onprem/search.js",
+      "types": "./src/providers/onprem/search.ts"
+    },
+    "./providers/onprem/security": {
+      "import": "./dist/providers/onprem/security.js",
+      "types": "./src/providers/onprem/security.ts"
+    },
+    "./providers/onprem/storage": {
+      "import": "./dist/providers/onprem/storage.js",
+      "types": "./src/providers/onprem/storage.ts"
+    },
+    "./providers/onprem/tracing": {
+      "import": "./dist/providers/onprem/tracing.js",
+      "types": "./src/providers/onprem/tracing.ts"
+    },
+    "./providers/onprem/vcs": {
+      "import": "./dist/providers/onprem/vcs.js",
+      "types": "./src/providers/onprem/vcs.ts"
+    },
+    "./providers/onprem/workflow": {
+      "import": "./dist/providers/onprem/workflow.js",
+      "types": "./src/providers/onprem/workflow.ts"
+    },
+    "./providers/openstack": {
+      "import": "./dist/providers/openstack/index.js",
+      "types": "./src/providers/openstack/index.ts"
+    },
+    "./providers/openstack/apiproxies": {
+      "import": "./dist/providers/openstack/apiproxies.js",
+      "types": "./src/providers/openstack/apiproxies.ts"
+    },
+    "./providers/openstack/applicationlifecycle": {
+      "import": "./dist/providers/openstack/applicationlifecycle.js",
+      "types": "./src/providers/openstack/applicationlifecycle.ts"
+    },
+    "./providers/openstack/baremetal": {
+      "import": "./dist/providers/openstack/baremetal.js",
+      "types": "./src/providers/openstack/baremetal.ts"
+    },
+    "./providers/openstack/billing": {
+      "import": "./dist/providers/openstack/billing.js",
+      "types": "./src/providers/openstack/billing.ts"
+    },
+    "./providers/openstack/compute": {
+      "import": "./dist/providers/openstack/compute.js",
+      "types": "./src/providers/openstack/compute.ts"
+    },
+    "./providers/openstack/containerservices": {
+      "import": "./dist/providers/openstack/containerservices.js",
+      "types": "./src/providers/openstack/containerservices.ts"
+    },
+    "./providers/openstack/deployment": {
+      "import": "./dist/providers/openstack/deployment.js",
+      "types": "./src/providers/openstack/deployment.ts"
+    },
+    "./providers/openstack/frontend": {
+      "import": "./dist/providers/openstack/frontend.js",
+      "types": "./src/providers/openstack/frontend.ts"
+    },
+    "./providers/openstack/monitoring": {
+      "import": "./dist/providers/openstack/monitoring.js",
+      "types": "./src/providers/openstack/monitoring.ts"
+    },
+    "./providers/openstack/multiregion": {
+      "import": "./dist/providers/openstack/multiregion.js",
+      "types": "./src/providers/openstack/multiregion.ts"
+    },
+    "./providers/openstack/networking": {
+      "import": "./dist/providers/openstack/networking.js",
+      "types": "./src/providers/openstack/networking.ts"
+    },
+    "./providers/openstack/nfv": {
+      "import": "./dist/providers/openstack/nfv.js",
+      "types": "./src/providers/openstack/nfv.ts"
+    },
+    "./providers/openstack/optimization": {
+      "import": "./dist/providers/openstack/optimization.js",
+      "types": "./src/providers/openstack/optimization.ts"
+    },
+    "./providers/openstack/orchestration": {
+      "import": "./dist/providers/openstack/orchestration.js",
+      "types": "./src/providers/openstack/orchestration.ts"
+    },
+    "./providers/openstack/packaging": {
+      "import": "./dist/providers/openstack/packaging.js",
+      "types": "./src/providers/openstack/packaging.ts"
+    },
+    "./providers/openstack/sharedservices": {
+      "import": "./dist/providers/openstack/sharedservices.js",
+      "types": "./src/providers/openstack/sharedservices.ts"
+    },
+    "./providers/openstack/storage": {
+      "import": "./dist/providers/openstack/storage.js",
+      "types": "./src/providers/openstack/storage.ts"
+    },
+    "./providers/openstack/user": {
+      "import": "./dist/providers/openstack/user.js",
+      "types": "./src/providers/openstack/user.ts"
+    },
+    "./providers/openstack/workloadprovisioning": {
+      "import": "./dist/providers/openstack/workloadprovisioning.js",
+      "types": "./src/providers/openstack/workloadprovisioning.ts"
+    },
+    "./providers/outscale": {
+      "import": "./dist/providers/outscale/index.js",
+      "types": "./src/providers/outscale/index.ts"
+    },
+    "./providers/outscale/compute": {
+      "import": "./dist/providers/outscale/compute.js",
+      "types": "./src/providers/outscale/compute.ts"
+    },
+    "./providers/outscale/network": {
+      "import": "./dist/providers/outscale/network.js",
+      "types": "./src/providers/outscale/network.ts"
+    },
+    "./providers/outscale/security": {
+      "import": "./dist/providers/outscale/security.js",
+      "types": "./src/providers/outscale/security.ts"
+    },
+    "./providers/outscale/storage": {
+      "import": "./dist/providers/outscale/storage.js",
+      "types": "./src/providers/outscale/storage.ts"
+    },
+    "./providers/programming": {
+      "import": "./dist/providers/programming/index.js",
+      "types": "./src/providers/programming/index.ts"
+    },
+    "./providers/programming/flowchart": {
+      "import": "./dist/providers/programming/flowchart.js",
+      "types": "./src/providers/programming/flowchart.ts"
+    },
+    "./providers/programming/framework": {
+      "import": "./dist/providers/programming/framework.js",
+      "types": "./src/providers/programming/framework.ts"
+    },
+    "./providers/programming/language": {
+      "import": "./dist/providers/programming/language.js",
+      "types": "./src/providers/programming/language.ts"
+    },
+    "./providers/programming/runtime": {
+      "import": "./dist/providers/programming/runtime.js",
+      "types": "./src/providers/programming/runtime.ts"
+    },
+    "./providers/saas": {
+      "import": "./dist/providers/saas/index.js",
+      "types": "./src/providers/saas/index.ts"
+    },
+    "./providers/saas/alerting": {
+      "import": "./dist/providers/saas/alerting.js",
+      "types": "./src/providers/saas/alerting.ts"
+    },
+    "./providers/saas/analytics": {
+      "import": "./dist/providers/saas/analytics.js",
+      "types": "./src/providers/saas/analytics.ts"
+    },
+    "./providers/saas/automation": {
+      "import": "./dist/providers/saas/automation.js",
+      "types": "./src/providers/saas/automation.ts"
+    },
+    "./providers/saas/cdn": {
+      "import": "./dist/providers/saas/cdn.js",
+      "types": "./src/providers/saas/cdn.ts"
+    },
+    "./providers/saas/chat": {
+      "import": "./dist/providers/saas/chat.js",
+      "types": "./src/providers/saas/chat.ts"
+    },
+    "./providers/saas/communication": {
+      "import": "./dist/providers/saas/communication.js",
+      "types": "./src/providers/saas/communication.ts"
+    },
+    "./providers/saas/crm": {
+      "import": "./dist/providers/saas/crm.js",
+      "types": "./src/providers/saas/crm.ts"
+    },
+    "./providers/saas/filesharing": {
+      "import": "./dist/providers/saas/filesharing.js",
+      "types": "./src/providers/saas/filesharing.ts"
+    },
+    "./providers/saas/identity": {
+      "import": "./dist/providers/saas/identity.js",
+      "types": "./src/providers/saas/identity.ts"
+    },
+    "./providers/saas/logging": {
+      "import": "./dist/providers/saas/logging.js",
+      "types": "./src/providers/saas/logging.ts"
+    },
+    "./providers/saas/media": {
+      "import": "./dist/providers/saas/media.js",
+      "types": "./src/providers/saas/media.ts"
+    },
+    "./providers/saas/payment": {
+      "import": "./dist/providers/saas/payment.js",
+      "types": "./src/providers/saas/payment.ts"
+    },
+    "./providers/saas/recommendation": {
+      "import": "./dist/providers/saas/recommendation.js",
+      "types": "./src/providers/saas/recommendation.ts"
+    },
+    "./providers/saas/security": {
+      "import": "./dist/providers/saas/security.js",
+      "types": "./src/providers/saas/security.ts"
+    },
+    "./providers/saas/social": {
+      "import": "./dist/providers/saas/social.js",
+      "types": "./src/providers/saas/social.ts"
+    }
   },
   "publishConfig": {
     "access": "public"

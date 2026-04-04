@@ -1,14 +1,13 @@
 import { _Openstack } from "./index.js";
+import cloudkittyIcon from "../../../resources/openstack/billing/cloudkitty.png";
 
 class _Billing extends _Openstack {
   protected static override _type = "billing";
-  protected static override _iconDir = "openstack/billing";
 }
 
 export class Cloudkitty extends _Billing {
-  protected static override _icon = "cloudkitty.png";
+  protected static override _iconDataUrl = cloudkittyIcon;
 }
 
 // Aliases
 export const CloudKitty = Cloudkitty;
-

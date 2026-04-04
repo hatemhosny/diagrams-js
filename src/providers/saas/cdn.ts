@@ -1,23 +1,25 @@
 import { _Saas } from "./index.js";
+import akamaiIcon from "../../../resources/saas/cdn/akamai.png";
+import cloudflareIcon from "../../../resources/saas/cdn/cloudflare.png";
+import fastlyIcon from "../../../resources/saas/cdn/fastly.png";
+import impervaIcon from "../../../resources/saas/cdn/imperva.png";
 
 class _Cdn extends _Saas {
   protected static override _type = "cdn";
-  protected static override _iconDir = "saas/cdn";
 }
 
 export class Akamai extends _Cdn {
-  protected static override _icon = "akamai.png";
+  protected static override _iconDataUrl = akamaiIcon;
 }
 
 export class Cloudflare extends _Cdn {
-  protected static override _icon = "cloudflare.png";
+  protected static override _iconDataUrl = cloudflareIcon;
 }
 
 export class Fastly extends _Cdn {
-  protected static override _icon = "fastly.png";
+  protected static override _iconDataUrl = fastlyIcon;
 }
 
 export class Imperva extends _Cdn {
-  protected static override _icon = "imperva.png";
+  protected static override _iconDataUrl = impervaIcon;
 }
-

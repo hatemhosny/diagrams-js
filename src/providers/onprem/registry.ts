@@ -1,15 +1,15 @@
 import { _Onprem } from "./index.js";
+import harborIcon from "../../../resources/onprem/registry/harbor.png";
+import jfrogIcon from "../../../resources/onprem/registry/jfrog.png";
 
 class _Registry extends _Onprem {
   protected static override _type = "registry";
-  protected static override _iconDir = "onprem/registry";
 }
 
 export class Harbor extends _Registry {
-  protected static override _icon = "harbor.png";
+  protected static override _iconDataUrl = harborIcon;
 }
 
 export class Jfrog extends _Registry {
-  protected static override _icon = "jfrog.png";
+  protected static override _iconDataUrl = jfrogIcon;
 }
-

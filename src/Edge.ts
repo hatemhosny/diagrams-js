@@ -34,7 +34,14 @@ export class Edge {
 
     // Set any additional attributes
     for (const [key, value] of Object.entries(options)) {
-      if (key !== "node" && key !== "forward" && key !== "reverse" && key !== "label" && key !== "color" && key !== "style") {
+      if (
+        key !== "node" &&
+        key !== "forward" &&
+        key !== "reverse" &&
+        key !== "label" &&
+        key !== "color" &&
+        key !== "style"
+      ) {
         this._attrs[key] = String(value);
       }
     }

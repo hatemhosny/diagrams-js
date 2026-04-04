@@ -1,32 +1,37 @@
 import { _K8s } from "./index.js";
+import apiIcon from "../../../resources/k8s/controlplane/api.png";
+import c_c_mIcon from "../../../resources/k8s/controlplane/c-c-m.png";
+import c_mIcon from "../../../resources/k8s/controlplane/c-m.png";
+import k_proxyIcon from "../../../resources/k8s/controlplane/k-proxy.png";
+import kubeletIcon from "../../../resources/k8s/controlplane/kubelet.png";
+import schedIcon from "../../../resources/k8s/controlplane/sched.png";
 
 class _Controlplane extends _K8s {
   protected static override _type = "controlplane";
-  protected static override _iconDir = "k8s/controlplane";
 }
 
 export class API extends _Controlplane {
-  protected static override _icon = "api.png";
+  protected static override _iconDataUrl = apiIcon;
 }
 
 export class CCM extends _Controlplane {
-  protected static override _icon = "c-c-m.png";
+  protected static override _iconDataUrl = c_c_mIcon;
 }
 
 export class CM extends _Controlplane {
-  protected static override _icon = "c-m.png";
+  protected static override _iconDataUrl = c_mIcon;
 }
 
 export class KProxy extends _Controlplane {
-  protected static override _icon = "k-proxy.png";
+  protected static override _iconDataUrl = k_proxyIcon;
 }
 
 export class Kubelet extends _Controlplane {
-  protected static override _icon = "kubelet.png";
+  protected static override _iconDataUrl = kubeletIcon;
 }
 
 export class Sched extends _Controlplane {
-  protected static override _icon = "sched.png";
+  protected static override _iconDataUrl = schedIcon;
 }
 
 // Aliases
@@ -34,4 +39,3 @@ export const APIServer = API;
 export const ControllerManager = CM;
 export const KubeProxy = KProxy;
 export const Scheduler = Sched;
-

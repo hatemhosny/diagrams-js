@@ -1,23 +1,25 @@
 import { _Gcp } from "./index.js";
+import billingIcon from "../../../resources/gcp/management/billing.png";
+import projectIcon from "../../../resources/gcp/management/project.png";
+import quotasIcon from "../../../resources/gcp/management/quotas.png";
+import supportIcon from "../../../resources/gcp/management/support.png";
 
 class _Management extends _Gcp {
   protected static override _type = "management";
-  protected static override _iconDir = "gcp/management";
 }
 
 export class Billing extends _Management {
-  protected static override _icon = "billing.png";
+  protected static override _iconDataUrl = billingIcon;
 }
 
 export class Project extends _Management {
-  protected static override _icon = "project.png";
+  protected static override _iconDataUrl = projectIcon;
 }
 
 export class Quotas extends _Management {
-  protected static override _icon = "quotas.png";
+  protected static override _iconDataUrl = quotasIcon;
 }
 
 export class Support extends _Management {
-  protected static override _icon = "support.png";
+  protected static override _iconDataUrl = supportIcon;
 }
-

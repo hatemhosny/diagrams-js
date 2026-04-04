@@ -1,11 +1,10 @@
 import { _Gcp } from "./index.js";
+import iot_coreIcon from "../../../resources/gcp/iot/iot-core.png";
 
 class _Iot extends _Gcp {
   protected static override _type = "iot";
-  protected static override _iconDir = "gcp/iot";
 }
 
 export class IotCore extends _Iot {
-  protected static override _icon = "iot-core.png";
+  protected static override _iconDataUrl = iot_coreIcon;
 }
-

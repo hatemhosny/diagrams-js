@@ -1,23 +1,25 @@
 import { _Elastic } from "./index.js";
+import endpointIcon from "../../../resources/elastic/security/endpoint.png";
+import securityIcon from "../../../resources/elastic/security/security.png";
+import siemIcon from "../../../resources/elastic/security/siem.png";
+import xdrIcon from "../../../resources/elastic/security/xdr.png";
 
 class _Security extends _Elastic {
   protected static override _type = "security";
-  protected static override _iconDir = "elastic/security";
 }
 
 export class Endpoint extends _Security {
-  protected static override _icon = "endpoint.png";
+  protected static override _iconDataUrl = endpointIcon;
 }
 
 export class Security extends _Security {
-  protected static override _icon = "security.png";
+  protected static override _iconDataUrl = securityIcon;
 }
 
 export class SIEM extends _Security {
-  protected static override _icon = "siem.png";
+  protected static override _iconDataUrl = siemIcon;
 }
 
 export class Xdr extends _Security {
-  protected static override _icon = "xdr.png";
+  protected static override _iconDataUrl = xdrIcon;
 }
-

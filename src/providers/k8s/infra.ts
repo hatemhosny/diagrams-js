@@ -1,19 +1,20 @@
 import { _K8s } from "./index.js";
+import etcdIcon from "../../../resources/k8s/infra/etcd.png";
+import masterIcon from "../../../resources/k8s/infra/master.png";
+import nodeIcon from "../../../resources/k8s/infra/node.png";
 
 class _Infra extends _K8s {
   protected static override _type = "infra";
-  protected static override _iconDir = "k8s/infra";
 }
 
 export class ETCD extends _Infra {
-  protected static override _icon = "etcd.png";
+  protected static override _iconDataUrl = etcdIcon;
 }
 
 export class Master extends _Infra {
-  protected static override _icon = "master.png";
+  protected static override _iconDataUrl = masterIcon;
 }
 
 export class Node extends _Infra {
-  protected static override _icon = "node.png";
+  protected static override _iconDataUrl = nodeIcon;
 }
-

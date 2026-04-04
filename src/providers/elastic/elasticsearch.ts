@@ -1,68 +1,80 @@
 import { _Elastic } from "./index.js";
+import alertingIcon from "../../../resources/elastic/elasticsearch/alerting.png";
+import beatsIcon from "../../../resources/elastic/elasticsearch/beats.png";
+import elasticsearchIcon from "../../../resources/elastic/elasticsearch/elasticsearch.png";
+import kibanaIcon from "../../../resources/elastic/elasticsearch/kibana.png";
+import logstash_pipelineIcon from "../../../resources/elastic/elasticsearch/logstash-pipeline.png";
+import logstashIcon from "../../../resources/elastic/elasticsearch/logstash.png";
+import machine_learningIcon from "../../../resources/elastic/elasticsearch/machine-learning.png";
+import map_servicesIcon from "../../../resources/elastic/elasticsearch/map-services.png";
+import mapsIcon from "../../../resources/elastic/elasticsearch/maps.png";
+import monitoringIcon from "../../../resources/elastic/elasticsearch/monitoring.png";
+import searchable_snapshotsIcon from "../../../resources/elastic/elasticsearch/searchable-snapshots.png";
+import security_settingsIcon from "../../../resources/elastic/elasticsearch/security-settings.png";
+import sqlIcon from "../../../resources/elastic/elasticsearch/sql.png";
+import stackIcon from "../../../resources/elastic/elasticsearch/stack.png";
 
 class _Elasticsearch extends _Elastic {
   protected static override _type = "elasticsearch";
-  protected static override _iconDir = "elastic/elasticsearch";
 }
 
 export class Alerting extends _Elasticsearch {
-  protected static override _icon = "alerting.png";
+  protected static override _iconDataUrl = alertingIcon;
 }
 
 export class Beats extends _Elasticsearch {
-  protected static override _icon = "beats.png";
+  protected static override _iconDataUrl = beatsIcon;
 }
 
 export class Elasticsearch extends _Elasticsearch {
-  protected static override _icon = "elasticsearch.png";
+  protected static override _iconDataUrl = elasticsearchIcon;
 }
 
 export class Kibana extends _Elasticsearch {
-  protected static override _icon = "kibana.png";
+  protected static override _iconDataUrl = kibanaIcon;
 }
 
 export class LogstashPipeline extends _Elasticsearch {
-  protected static override _icon = "logstash-pipeline.png";
+  protected static override _iconDataUrl = logstash_pipelineIcon;
 }
 
 export class Logstash extends _Elasticsearch {
-  protected static override _icon = "logstash.png";
+  protected static override _iconDataUrl = logstashIcon;
 }
 
 export class MachineLearning extends _Elasticsearch {
-  protected static override _icon = "machine-learning.png";
+  protected static override _iconDataUrl = machine_learningIcon;
 }
 
 export class MapServices extends _Elasticsearch {
-  protected static override _icon = "map-services.png";
+  protected static override _iconDataUrl = map_servicesIcon;
 }
 
 export class Maps extends _Elasticsearch {
-  protected static override _icon = "maps.png";
+  protected static override _iconDataUrl = mapsIcon;
 }
 
 export class Monitoring extends _Elasticsearch {
-  protected static override _icon = "monitoring.png";
+  protected static override _iconDataUrl = monitoringIcon;
 }
 
 export class SearchableSnapshots extends _Elasticsearch {
-  protected static override _icon = "searchable-snapshots.png";
+  protected static override _iconDataUrl = searchable_snapshotsIcon;
 }
 
 export class SecuritySettings extends _Elasticsearch {
-  protected static override _icon = "security-settings.png";
+  protected static override _iconDataUrl = security_settingsIcon;
 }
 
 export class SQL extends _Elasticsearch {
-  protected static override _icon = "sql.png";
+  protected static override _iconDataUrl = sqlIcon;
 }
 
 export class Stack extends _Elasticsearch {
-  protected static override _icon = "stack.png";
+  protected static override _iconDataUrl = stackIcon;
 }
 
 // Aliases
 export const ElasticSearch = Elasticsearch;
 export const LogStash = Logstash;
 export const ML = MachineLearning;
-

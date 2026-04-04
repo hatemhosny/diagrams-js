@@ -38,7 +38,6 @@ export interface DiagramOptions {
   curvestyle?: "ortho" | "curved" | "spline" | "polyline";
   outformat?: string | string[];
   autolabel?: boolean;
-  show?: boolean;
   strict?: boolean;
   theme?: ThemeName;
   graphAttr?: Record<string, string>;

@@ -21,7 +21,11 @@ export class Cluster {
   depth: number;
   graphAttr: Record<string, string> = {};
 
-  constructor(label = "cluster", direction: "TB" | "BT" | "LR" | "RL" = "LR", graphAttr?: Record<string, string>) {
+  constructor(
+    label = "cluster",
+    direction: "TB" | "BT" | "LR" | "RL" = "LR",
+    graphAttr?: Record<string, string>,
+  ) {
     this.label = label;
     this.name = `cluster_${label.replace(/\s+/g, "_")}`;
 

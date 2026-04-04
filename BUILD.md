@@ -3,6 +3,7 @@
 ## Overview
 
 The TypeScript port of the diagrams Python library now has a complete build system that:
+
 - Compiles the core library to ESM JavaScript
 - Compiles all 17 providers (1000+ classes) to JavaScript
 - Generates proper package.json exports for tree-shaking
@@ -82,7 +83,7 @@ setIconBaseDir("resources");
 
 const diagram = new Diagram("My Architecture", {
   direction: "TB",
-  outformat: "svg"
+  outformat: "svg",
 });
 
 const web = diagram.add(new EC2("web-server"));
@@ -129,6 +130,7 @@ import * as providers from "diagrams-ts/providers";
 ## npm Publishing
 
 The package includes:
+
 - ✅ Compiled JavaScript (ESM)
 - ✅ TypeScript definitions
 - ✅ Icon resources

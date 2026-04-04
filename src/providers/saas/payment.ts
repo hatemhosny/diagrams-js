@@ -1,23 +1,25 @@
 import { _Saas } from "./index.js";
+import adyenIcon from "../../../resources/saas/payment/adyen.png";
+import amazon_payIcon from "../../../resources/saas/payment/amazon-pay.png";
+import paypalIcon from "../../../resources/saas/payment/paypal.png";
+import stripeIcon from "../../../resources/saas/payment/stripe.png";
 
 class _Payment extends _Saas {
   protected static override _type = "payment";
-  protected static override _iconDir = "saas/payment";
 }
 
 export class Adyen extends _Payment {
-  protected static override _icon = "adyen.png";
+  protected static override _iconDataUrl = adyenIcon;
 }
 
 export class AmazonPay extends _Payment {
-  protected static override _icon = "amazon-pay.png";
+  protected static override _iconDataUrl = amazon_payIcon;
 }
 
 export class Paypal extends _Payment {
-  protected static override _icon = "paypal.png";
+  protected static override _iconDataUrl = paypalIcon;
 }
 
 export class Stripe extends _Payment {
-  protected static override _icon = "stripe.png";
+  protected static override _iconDataUrl = stripeIcon;
 }
-

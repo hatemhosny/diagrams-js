@@ -40,7 +40,7 @@ function generateClassName(provider: string, filename: string): string {
 
 function generateProviderIndex(provider: string): string {
   const pascalProvider = toPascalCase(provider);
-  
+
   return `import { Node } from "../../core/Node.js";
 
 export class _${pascalProvider} extends Node {
@@ -57,28 +57,36 @@ export class ${pascalProvider} extends _${pascalProvider} {
 function generateModule(provider: string, serviceType: string, iconFiles: string[]): string {
   const pascalProvider = toPascalCase(provider);
   const pascalServiceType = toPascalCase(serviceType);
-  
+
   const classMetas = iconFiles
     .filter((file) => !file.includes("rounded"))
     .map((file) => ({
       name: generateClassName(provider, file),
       icon: file,
+      importName: file.replace(/\.[^/.]+$/, "").replace(/[^a-zA-Z0-9]/g, "_"),
     }));
 
   const aliases = ALIASES[provider]?.[serviceType] || {};
 
+  // Generate imports for all icons
   let code = `import { _${pascalProvider} } from "./index.js";
+`;
 
+  for (const meta of classMetas) {
+    code += `import ${meta.importName}Icon from "../../../resources/${provider}/${serviceType}/${meta.icon}";
+`;
+  }
+
+  code += `
 class _${pascalServiceType} extends _${pascalProvider} {
   protected static override _type = "${serviceType}";
-  protected static override _iconDir = "${provider}/${serviceType}";
 }
 
 `;
 
   for (const meta of classMetas) {
     code += `export class ${meta.name} extends _${pascalServiceType} {
-  protected static override _icon = "${meta.icon}";
+  protected static override _iconDataUrl = ${meta.importName}Icon;
 }
 
 `;
@@ -121,16 +129,14 @@ function generateProvider(provider: Provider): void {
   }
 
   const entries = fs.readdirSync(resourceDir, { withFileTypes: true });
-  
+
   for (const entry of entries) {
     if (entry.isDirectory()) {
       const serviceType = entry.name;
       const serviceDir = path.join(resourceDir, serviceType);
-      
+
       const files = fs.readdirSync(serviceDir);
-      const pngFiles = files
-        .filter((f) => f.endsWith(".png"))
-        .sort();
+      const pngFiles = files.filter((f) => f.endsWith(".png")).sort();
 
       if (pngFiles.length === 0) {
         continue;
@@ -160,7 +166,7 @@ function generateProvidersIndex(): void {
 
 function main(): void {
   const args = process.argv.slice(2);
-  
+
   if (!fs.existsSync(PROVIDERS_DIR)) {
     fs.mkdirSync(PROVIDERS_DIR, { recursive: true });
   }

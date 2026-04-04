@@ -1,14 +1,13 @@
 import { _K8s } from "./index.js";
+import nsIcon from "../../../resources/k8s/group/ns.png";
 
 class _Group extends _K8s {
   protected static override _type = "group";
-  protected static override _iconDir = "k8s/group";
 }
 
 export class NS extends _Group {
-  protected static override _icon = "ns.png";
+  protected static override _iconDataUrl = nsIcon;
 }
 
 // Aliases
 export const Namespace = NS;
-

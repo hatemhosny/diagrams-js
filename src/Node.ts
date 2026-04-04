@@ -19,6 +19,7 @@ export class Node {
   protected static _type: string | null = null;
   protected static _iconDir: string | null = null;
   protected static _icon: string | null = null;
+  protected static _iconDataUrl: string | null = null;
   protected static _height = 1.9;
 
   private _id: string;
@@ -52,13 +53,15 @@ export class Node {
     const padding = 0.4 * (this.label.split("\n").length - 1);
     const height = (this.constructor as typeof Node)._height + padding;
 
-    // Set attributes
-    const icon = this._loadIcon();
-    if (icon) {
+    // Check if this node has an icon data URL (embedded via esbuild dataurl loader)
+    const iconDataUrl = (this.constructor as typeof Node)._iconDataUrl;
+    if (iconDataUrl) {
       this._attrs = {
         shape: "none",
-        height: String(height),
-        image: icon,
+        height: "1.0",
+        width: "1.0",
+        fixedsize: "true",
+        margin: "0,0",
       };
     }
 
@@ -76,6 +79,11 @@ export class Node {
       this._cluster.node(this._id, this.label, this._attrs);
     } else {
       this._diagram.node(this._id, this.label, this._attrs);
+    }
+
+    // Track this node if it has an icon data URL (for auto-icon injection)
+    if (iconDataUrl && this._diagram) {
+      this._diagram.trackNodeWithIcon(this, iconDataUrl);
     }
   }
 
@@ -173,14 +181,5 @@ export class Node {
 
   private _randId(): string {
     return `${Date.now().toString(36)}_${Math.random().toString(36).substr(2, 9)}`;
-  }
-
-  private _loadIcon(): string | null {
-    const ctor = this.constructor as typeof Node;
-    if (!ctor._icon || !ctor._iconDir) {
-      return null;
-    }
-    const baseDir = getIconBaseDir() || "";
-    return `${baseDir}/${ctor._iconDir}/${ctor._icon}`;
   }
 }

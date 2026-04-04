@@ -1,15 +1,15 @@
 import { _Onprem } from "./index.js";
+import mlflowIcon from "../../../resources/onprem/mlops/mlflow.png";
+import polyaxonIcon from "../../../resources/onprem/mlops/polyaxon.png";
 
 class _Mlops extends _Onprem {
   protected static override _type = "mlops";
-  protected static override _iconDir = "onprem/mlops";
 }
 
 export class Mlflow extends _Mlops {
-  protected static override _icon = "mlflow.png";
+  protected static override _iconDataUrl = mlflowIcon;
 }
 
 export class Polyaxon extends _Mlops {
-  protected static override _icon = "polyaxon.png";
+  protected static override _iconDataUrl = polyaxonIcon;
 }
-

@@ -1,71 +1,85 @@
 import { _Oci } from "./index.js";
+import drg_whiteIcon from "../../../resources/oci/network/drg-white.png";
+import drgIcon from "../../../resources/oci/network/drg.png";
+import firewall_whiteIcon from "../../../resources/oci/network/firewall-white.png";
+import firewallIcon from "../../../resources/oci/network/firewall.png";
+import internet_gateway_whiteIcon from "../../../resources/oci/network/internet-gateway-white.png";
+import internet_gatewayIcon from "../../../resources/oci/network/internet-gateway.png";
+import load_balancer_whiteIcon from "../../../resources/oci/network/load-balancer-white.png";
+import load_balancerIcon from "../../../resources/oci/network/load-balancer.png";
+import route_table_whiteIcon from "../../../resources/oci/network/route-table-white.png";
+import route_tableIcon from "../../../resources/oci/network/route-table.png";
+import security_lists_whiteIcon from "../../../resources/oci/network/security-lists-white.png";
+import security_listsIcon from "../../../resources/oci/network/security-lists.png";
+import service_gateway_whiteIcon from "../../../resources/oci/network/service-gateway-white.png";
+import service_gatewayIcon from "../../../resources/oci/network/service-gateway.png";
+import vcn_whiteIcon from "../../../resources/oci/network/vcn-white.png";
+import vcnIcon from "../../../resources/oci/network/vcn.png";
 
 class _Network extends _Oci {
   protected static override _type = "network";
-  protected static override _iconDir = "oci/network";
 }
 
 export class DrgWhite extends _Network {
-  protected static override _icon = "drg-white.png";
+  protected static override _iconDataUrl = drg_whiteIcon;
 }
 
 export class Drg extends _Network {
-  protected static override _icon = "drg.png";
+  protected static override _iconDataUrl = drgIcon;
 }
 
 export class FirewallWhite extends _Network {
-  protected static override _icon = "firewall-white.png";
+  protected static override _iconDataUrl = firewall_whiteIcon;
 }
 
 export class Firewall extends _Network {
-  protected static override _icon = "firewall.png";
+  protected static override _iconDataUrl = firewallIcon;
 }
 
 export class InternetGatewayWhite extends _Network {
-  protected static override _icon = "internet-gateway-white.png";
+  protected static override _iconDataUrl = internet_gateway_whiteIcon;
 }
 
 export class InternetGateway extends _Network {
-  protected static override _icon = "internet-gateway.png";
+  protected static override _iconDataUrl = internet_gatewayIcon;
 }
 
 export class LoadBalancerWhite extends _Network {
-  protected static override _icon = "load-balancer-white.png";
+  protected static override _iconDataUrl = load_balancer_whiteIcon;
 }
 
 export class LoadBalancer extends _Network {
-  protected static override _icon = "load-balancer.png";
+  protected static override _iconDataUrl = load_balancerIcon;
 }
 
 export class RouteTableWhite extends _Network {
-  protected static override _icon = "route-table-white.png";
+  protected static override _iconDataUrl = route_table_whiteIcon;
 }
 
 export class RouteTable extends _Network {
-  protected static override _icon = "route-table.png";
+  protected static override _iconDataUrl = route_tableIcon;
 }
 
 export class SecurityListsWhite extends _Network {
-  protected static override _icon = "security-lists-white.png";
+  protected static override _iconDataUrl = security_lists_whiteIcon;
 }
 
 export class SecurityLists extends _Network {
-  protected static override _icon = "security-lists.png";
+  protected static override _iconDataUrl = security_listsIcon;
 }
 
 export class ServiceGatewayWhite extends _Network {
-  protected static override _icon = "service-gateway-white.png";
+  protected static override _iconDataUrl = service_gateway_whiteIcon;
 }
 
 export class ServiceGateway extends _Network {
-  protected static override _icon = "service-gateway.png";
+  protected static override _iconDataUrl = service_gatewayIcon;
 }
 
 export class VcnWhite extends _Network {
-  protected static override _icon = "vcn-white.png";
+  protected static override _iconDataUrl = vcn_whiteIcon;
 }
 
 export class Vcn extends _Network {
-  protected static override _icon = "vcn.png";
+  protected static override _iconDataUrl = vcnIcon;
 }
-

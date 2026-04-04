@@ -1,15 +1,15 @@
 import { _Alibabacloud } from "./index.js";
+import dnsIcon from "../../../resources/alibabacloud/web/dns.png";
+import domainIcon from "../../../resources/alibabacloud/web/domain.png";
 
 class _Web extends _Alibabacloud {
   protected static override _type = "web";
-  protected static override _iconDir = "alibabacloud/web";
 }
 
 export class Dns extends _Web {
-  protected static override _icon = "dns.png";
+  protected static override _iconDataUrl = dnsIcon;
 }
 
 export class Domain extends _Web {
-  protected static override _icon = "domain.png";
+  protected static override _iconDataUrl = domainIcon;
 }
-

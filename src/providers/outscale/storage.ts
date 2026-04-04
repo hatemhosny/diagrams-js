@@ -1,15 +1,15 @@
 import { _Outscale } from "./index.js";
+import simple_storage_serviceIcon from "../../../resources/outscale/storage/simple-storage-service.png";
+import storageIcon from "../../../resources/outscale/storage/storage.png";
 
 class _Storage extends _Outscale {
   protected static override _type = "storage";
-  protected static override _iconDir = "outscale/storage";
 }
 
 export class SimpleStorageService extends _Storage {
-  protected static override _icon = "simple-storage-service.png";
+  protected static override _iconDataUrl = simple_storage_serviceIcon;
 }
 
 export class Storage extends _Storage {
-  protected static override _icon = "storage.png";
+  protected static override _iconDataUrl = storageIcon;
 }
-

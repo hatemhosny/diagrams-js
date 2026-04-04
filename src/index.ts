@@ -16,14 +16,18 @@ export {
   clearCluster,
 } from "./context.js";
 
+// Icon utilities
+export {
+  loadIcon,
+  loadIcons,
+  injectIcons,
+  IconManager,
+  type NodeIconMap,
+  type IconData,
+} from "./icons.js";
+
 // Types
-export type {
-  DiagramOptions,
-  EdgeOptions,
-  NodeOptions,
-  ThemeName,
-  ThemeConfig,
-} from "./types.js";
+export type { DiagramOptions, EdgeOptions, NodeOptions, ThemeName, ThemeConfig } from "./types.js";
 
 // Group is an alias for Cluster (same as Python)
 export { Cluster as Group } from "./Cluster.js";

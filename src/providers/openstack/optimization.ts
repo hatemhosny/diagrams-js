@@ -1,23 +1,25 @@
 import { _Openstack } from "./index.js";
+import congressIcon from "../../../resources/openstack/optimization/congress.png";
+import rallyIcon from "../../../resources/openstack/optimization/rally.png";
+import vitrageIcon from "../../../resources/openstack/optimization/vitrage.png";
+import watcherIcon from "../../../resources/openstack/optimization/watcher.png";
 
 class _Optimization extends _Openstack {
   protected static override _type = "optimization";
-  protected static override _iconDir = "openstack/optimization";
 }
 
 export class Congress extends _Optimization {
-  protected static override _icon = "congress.png";
+  protected static override _iconDataUrl = congressIcon;
 }
 
 export class Rally extends _Optimization {
-  protected static override _icon = "rally.png";
+  protected static override _iconDataUrl = rallyIcon;
 }
 
 export class Vitrage extends _Optimization {
-  protected static override _icon = "vitrage.png";
+  protected static override _iconDataUrl = vitrageIcon;
 }
 
 export class Watcher extends _Optimization {
-  protected static override _icon = "watcher.png";
+  protected static override _iconDataUrl = watcherIcon;
 }
-

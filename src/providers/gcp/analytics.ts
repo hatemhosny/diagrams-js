@@ -1,55 +1,64 @@
 import { _Gcp } from "./index.js";
+import bigqueryIcon from "../../../resources/gcp/analytics/bigquery.png";
+import composerIcon from "../../../resources/gcp/analytics/composer.png";
+import data_catalogIcon from "../../../resources/gcp/analytics/data-catalog.png";
+import data_fusionIcon from "../../../resources/gcp/analytics/data-fusion.png";
+import dataflowIcon from "../../../resources/gcp/analytics/dataflow.png";
+import datalabIcon from "../../../resources/gcp/analytics/datalab.png";
+import dataprepIcon from "../../../resources/gcp/analytics/dataprep.png";
+import dataprocIcon from "../../../resources/gcp/analytics/dataproc.png";
+import genomicsIcon from "../../../resources/gcp/analytics/genomics.png";
+import lookerIcon from "../../../resources/gcp/analytics/looker.png";
+import pubsubIcon from "../../../resources/gcp/analytics/pubsub.png";
 
 class _Analytics extends _Gcp {
   protected static override _type = "analytics";
-  protected static override _iconDir = "gcp/analytics";
 }
 
 export class Bigquery extends _Analytics {
-  protected static override _icon = "bigquery.png";
+  protected static override _iconDataUrl = bigqueryIcon;
 }
 
 export class Composer extends _Analytics {
-  protected static override _icon = "composer.png";
+  protected static override _iconDataUrl = composerIcon;
 }
 
 export class DataCatalog extends _Analytics {
-  protected static override _icon = "data-catalog.png";
+  protected static override _iconDataUrl = data_catalogIcon;
 }
 
 export class DataFusion extends _Analytics {
-  protected static override _icon = "data-fusion.png";
+  protected static override _iconDataUrl = data_fusionIcon;
 }
 
 export class Dataflow extends _Analytics {
-  protected static override _icon = "dataflow.png";
+  protected static override _iconDataUrl = dataflowIcon;
 }
 
 export class Datalab extends _Analytics {
-  protected static override _icon = "datalab.png";
+  protected static override _iconDataUrl = datalabIcon;
 }
 
 export class Dataprep extends _Analytics {
-  protected static override _icon = "dataprep.png";
+  protected static override _iconDataUrl = dataprepIcon;
 }
 
 export class Dataproc extends _Analytics {
-  protected static override _icon = "dataproc.png";
+  protected static override _iconDataUrl = dataprocIcon;
 }
 
 export class Genomics extends _Analytics {
-  protected static override _icon = "genomics.png";
+  protected static override _iconDataUrl = genomicsIcon;
 }
 
 export class Looker extends _Analytics {
-  protected static override _icon = "looker.png";
+  protected static override _iconDataUrl = lookerIcon;
 }
 
 export class Pubsub extends _Analytics {
-  protected static override _icon = "pubsub.png";
+  protected static override _iconDataUrl = pubsubIcon;
 }
 
 // Aliases
 export const BigQuery = Bigquery;
 export const PubSub = Pubsub;
-

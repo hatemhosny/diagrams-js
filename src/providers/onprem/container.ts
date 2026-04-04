@@ -1,43 +1,49 @@
 import { _Onprem } from "./index.js";
+import containerdIcon from "../../../resources/onprem/container/containerd.png";
+import crioIcon from "../../../resources/onprem/container/crio.png";
+import dockerIcon from "../../../resources/onprem/container/docker.png";
+import firecrackerIcon from "../../../resources/onprem/container/firecracker.png";
+import gvisorIcon from "../../../resources/onprem/container/gvisor.png";
+import k3sIcon from "../../../resources/onprem/container/k3s.png";
+import lxcIcon from "../../../resources/onprem/container/lxc.png";
+import rktIcon from "../../../resources/onprem/container/rkt.png";
 
 class _Container extends _Onprem {
   protected static override _type = "container";
-  protected static override _iconDir = "onprem/container";
 }
 
 export class Containerd extends _Container {
-  protected static override _icon = "containerd.png";
+  protected static override _iconDataUrl = containerdIcon;
 }
 
 export class Crio extends _Container {
-  protected static override _icon = "crio.png";
+  protected static override _iconDataUrl = crioIcon;
 }
 
 export class Docker extends _Container {
-  protected static override _icon = "docker.png";
+  protected static override _iconDataUrl = dockerIcon;
 }
 
 export class Firecracker extends _Container {
-  protected static override _icon = "firecracker.png";
+  protected static override _iconDataUrl = firecrackerIcon;
 }
 
 export class Gvisor extends _Container {
-  protected static override _icon = "gvisor.png";
+  protected static override _iconDataUrl = gvisorIcon;
 }
 
 export class K3s extends _Container {
-  protected static override _icon = "k3s.png";
+  protected static override _iconDataUrl = k3sIcon;
 }
 
 export class Lxc extends _Container {
-  protected static override _icon = "lxc.png";
+  protected static override _iconDataUrl = lxcIcon;
 }
 
 export class Rkt extends _Container {
-  protected static override _icon = "rkt.png";
+  protected static override _iconDataUrl = rktIcon;
 }
 
 // Aliases
 export const LXC = Lxc;
 export const RKT = Rkt;
-

@@ -1,15 +1,15 @@
 import { _Gis } from "./index.js";
+import geopandasIcon from "../../../resources/gis/python/geopandas.png";
+import pysalIcon from "../../../resources/gis/python/pysal.png";
 
 class _Python extends _Gis {
   protected static override _type = "python";
-  protected static override _iconDir = "gis/python";
 }
 
 export class Geopandas extends _Python {
-  protected static override _icon = "geopandas.png";
+  protected static override _iconDataUrl = geopandasIcon;
 }
 
 export class Pysal extends _Python {
-  protected static override _icon = "pysal.png";
+  protected static override _iconDataUrl = pysalIcon;
 }
-

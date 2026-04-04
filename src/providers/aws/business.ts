@@ -1,26 +1,28 @@
 import { _Aws } from "./index.js";
+import alexa_for_businessIcon from "../../../resources/aws/business/alexa-for-business.png";
+import business_applicationsIcon from "../../../resources/aws/business/business-applications.png";
+import chimeIcon from "../../../resources/aws/business/chime.png";
+import workmailIcon from "../../../resources/aws/business/workmail.png";
 
 class _Business extends _Aws {
   protected static override _type = "business";
-  protected static override _iconDir = "aws/business";
 }
 
 export class AlexaForBusiness extends _Business {
-  protected static override _icon = "alexa-for-business.png";
+  protected static override _iconDataUrl = alexa_for_businessIcon;
 }
 
 export class BusinessApplications extends _Business {
-  protected static override _icon = "business-applications.png";
+  protected static override _iconDataUrl = business_applicationsIcon;
 }
 
 export class Chime extends _Business {
-  protected static override _icon = "chime.png";
+  protected static override _iconDataUrl = chimeIcon;
 }
 
 export class Workmail extends _Business {
-  protected static override _icon = "workmail.png";
+  protected static override _iconDataUrl = workmailIcon;
 }
 
 // Aliases
 export const A4B = AlexaForBusiness;
-

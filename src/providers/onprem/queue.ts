@@ -1,36 +1,42 @@
 import { _Onprem } from "./index.js";
+import activemqIcon from "../../../resources/onprem/queue/activemq.png";
+import celeryIcon from "../../../resources/onprem/queue/celery.png";
+import emqxIcon from "../../../resources/onprem/queue/emqx.png";
+import kafkaIcon from "../../../resources/onprem/queue/kafka.png";
+import natsIcon from "../../../resources/onprem/queue/nats.png";
+import rabbitmqIcon from "../../../resources/onprem/queue/rabbitmq.png";
+import zeromqIcon from "../../../resources/onprem/queue/zeromq.png";
 
 class _Queue extends _Onprem {
   protected static override _type = "queue";
-  protected static override _iconDir = "onprem/queue";
 }
 
 export class Activemq extends _Queue {
-  protected static override _icon = "activemq.png";
+  protected static override _iconDataUrl = activemqIcon;
 }
 
 export class Celery extends _Queue {
-  protected static override _icon = "celery.png";
+  protected static override _iconDataUrl = celeryIcon;
 }
 
 export class Emqx extends _Queue {
-  protected static override _icon = "emqx.png";
+  protected static override _iconDataUrl = emqxIcon;
 }
 
 export class Kafka extends _Queue {
-  protected static override _icon = "kafka.png";
+  protected static override _iconDataUrl = kafkaIcon;
 }
 
 export class Nats extends _Queue {
-  protected static override _icon = "nats.png";
+  protected static override _iconDataUrl = natsIcon;
 }
 
 export class Rabbitmq extends _Queue {
-  protected static override _icon = "rabbitmq.png";
+  protected static override _iconDataUrl = rabbitmqIcon;
 }
 
 export class Zeromq extends _Queue {
-  protected static override _icon = "zeromq.png";
+  protected static override _iconDataUrl = zeromqIcon;
 }
 
 // Aliases
@@ -38,4 +44,3 @@ export const ActiveMQ = Activemq;
 export const EMQX = Emqx;
 export const RabbitMQ = Rabbitmq;
 export const ZeroMQ = Zeromq;
-

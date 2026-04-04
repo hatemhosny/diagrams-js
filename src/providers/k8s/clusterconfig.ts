@@ -1,23 +1,24 @@
 import { _K8s } from "./index.js";
+import hpaIcon from "../../../resources/k8s/clusterconfig/hpa.png";
+import limitsIcon from "../../../resources/k8s/clusterconfig/limits.png";
+import quotaIcon from "../../../resources/k8s/clusterconfig/quota.png";
 
 class _Clusterconfig extends _K8s {
   protected static override _type = "clusterconfig";
-  protected static override _iconDir = "k8s/clusterconfig";
 }
 
 export class HPA extends _Clusterconfig {
-  protected static override _icon = "hpa.png";
+  protected static override _iconDataUrl = hpaIcon;
 }
 
 export class Limits extends _Clusterconfig {
-  protected static override _icon = "limits.png";
+  protected static override _iconDataUrl = limitsIcon;
 }
 
 export class Quota extends _Clusterconfig {
-  protected static override _icon = "quota.png";
+  protected static override _iconDataUrl = quotaIcon;
 }
 
 // Aliases
 export const LimitRange = Limits;
 export const HorizontalPodAutoscaler = HPA;
-

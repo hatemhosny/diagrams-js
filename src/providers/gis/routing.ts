@@ -1,23 +1,25 @@
 import { _Gis } from "./index.js";
+import graphhopperIcon from "../../../resources/gis/routing/graphhopper.png";
+import osrmIcon from "../../../resources/gis/routing/osrm.png";
+import pgroutingIcon from "../../../resources/gis/routing/pgrouting.png";
+import valhallaIcon from "../../../resources/gis/routing/valhalla.png";
 
 class _Routing extends _Gis {
   protected static override _type = "routing";
-  protected static override _iconDir = "gis/routing";
 }
 
 export class Graphhopper extends _Routing {
-  protected static override _icon = "graphhopper.png";
+  protected static override _iconDataUrl = graphhopperIcon;
 }
 
 export class Osrm extends _Routing {
-  protected static override _icon = "osrm.png";
+  protected static override _iconDataUrl = osrmIcon;
 }
 
 export class Pgrouting extends _Routing {
-  protected static override _icon = "pgrouting.png";
+  protected static override _iconDataUrl = pgroutingIcon;
 }
 
 export class Valhalla extends _Routing {
-  protected static override _icon = "valhalla.png";
+  protected static override _iconDataUrl = valhallaIcon;
 }
-

@@ -1,19 +1,20 @@
 import { _Azure } from "./index.js";
+import applensIcon from "../../../resources/azure/azureecosystem/applens.png";
+import azure_hybrid_centerIcon from "../../../resources/azure/azureecosystem/azure-hybrid-center.png";
+import collaborative_serviceIcon from "../../../resources/azure/azureecosystem/collaborative-service.png";
 
 class _Azureecosystem extends _Azure {
   protected static override _type = "azureecosystem";
-  protected static override _iconDir = "azure/azureecosystem";
 }
 
 export class Applens extends _Azureecosystem {
-  protected static override _icon = "applens.png";
+  protected static override _iconDataUrl = applensIcon;
 }
 
 export class AzureHybridCenter extends _Azureecosystem {
-  protected static override _icon = "azure-hybrid-center.png";
+  protected static override _iconDataUrl = azure_hybrid_centerIcon;
 }
 
 export class CollaborativeService extends _Azureecosystem {
-  protected static override _icon = "collaborative-service.png";
+  protected static override _iconDataUrl = collaborative_serviceIcon;
 }
-

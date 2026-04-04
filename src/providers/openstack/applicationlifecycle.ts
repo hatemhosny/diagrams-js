@@ -1,23 +1,25 @@
 import { _Openstack } from "./index.js";
+import freezerIcon from "../../../resources/openstack/applicationlifecycle/freezer.png";
+import masakariIcon from "../../../resources/openstack/applicationlifecycle/masakari.png";
+import muranoIcon from "../../../resources/openstack/applicationlifecycle/murano.png";
+import solumIcon from "../../../resources/openstack/applicationlifecycle/solum.png";
 
 class _Applicationlifecycle extends _Openstack {
   protected static override _type = "applicationlifecycle";
-  protected static override _iconDir = "openstack/applicationlifecycle";
 }
 
 export class Freezer extends _Applicationlifecycle {
-  protected static override _icon = "freezer.png";
+  protected static override _iconDataUrl = freezerIcon;
 }
 
 export class Masakari extends _Applicationlifecycle {
-  protected static override _icon = "masakari.png";
+  protected static override _iconDataUrl = masakariIcon;
 }
 
 export class Murano extends _Applicationlifecycle {
-  protected static override _icon = "murano.png";
+  protected static override _iconDataUrl = muranoIcon;
 }
 
 export class Solum extends _Applicationlifecycle {
-  protected static override _icon = "solum.png";
+  protected static override _iconDataUrl = solumIcon;
 }
-

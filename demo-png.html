@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>SVG to PNG Converter</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        padding: 40px;
+        background: #f5f5f5;
+      }
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        background: white;
+        padding: 40px;
+        border-radius: 8px;
+      }
+      .diagram {
+        border: 2px solid #ccc;
+        padding: 20px;
+        margin: 20px 0;
+        background: #f9f9f9;
+        min-height: 300px;
+      }
+      button {
+        padding: 10px 20px;
+        margin: 10px 5px;
+        cursor: pointer;
+        background: #667eea;
+        color: white;
+        border: none;
+        border-radius: 6px;
+      }
+      button:hover {
+        background: #5568d3;
+      }
+      canvas {
+        border: 1px solid #ddd;
+        margin: 20px 0;
+        max-width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>SVG to PNG Demo</h1>
+      <p>Generate a diagram and convert to PNG</p>
+
+      <button onclick="generateSVG()">Generate SVG Diagram</button>
+      <button onclick="convertToPNG()">Convert to PNG</button>
+      <button onclick="downloadPNG()">Download PNG</button>
+
+      <h3>SVG Output</h3>
+      <div class="diagram" id="svg-output">
+        <p style="color: #999; text-align: center; padding: 50px">
+          Click "Generate SVG" to create diagram
+        </p>
+      </div>
+
+      <h3>PNG Output</h3>
+      <canvas id="png-canvas"></canvas>
+    </div>
+
+    <script type="module">
+      let currentSVG = null;
+
+      window.generateSVG = async function () {
+        const module = await import("./dist/index.mjs");
+        const { Diagram, setIconBaseDir } = module;
+        const { EC2 } = await import("./dist/providers/aws/compute.js");
+
+        setIconBaseDir("resources");
+
+        const diagram = new Diagram("Test", { direction: "LR", outformat: "svg" });
+        const node1 = diagram.add(new EC2("Server 1"));
+        const node2 = diagram.add(new EC2("Server 2"));
+        node1.to(node2);
+
+        const svg = await diagram.render();
+        currentSVG = typeof svg === "string" ? svg : new TextDecoder().decode(svg);
+
+        document.getElementById("svg-output").innerHTML = currentSVG;
+      };
+
+      window.convertToPNG = async function () {
+        if (!currentSVG) {
+          alert("Generate SVG first!");
+          return;
+        }
+
+        const canvas = document.getElementById("png-canvas");
+        const ctx = canvas.getContext("2d");
+
+        // Create an image from SVG
+        const img = new Image();
+        const svgBlob = new Blob([currentSVG], { type: "image/svg+xml;charset=utf-8" });
+        const url = URL.createObjectURL(svgBlob);
+
+        img.onload = function () {
+          // Set canvas size to match SVG
+          const svgElement = document.querySelector("#svg-output svg");
+          const width = parseInt(svgElement.getAttribute("width")) || 800;
+          const height = parseInt(svgElement.getAttribute("height")) || 600;
+
+          canvas.width = width * 2; // 2x for high DPI
+          canvas.height = height * 2;
+          canvas.style.width = width + "px";
+          canvas.style.height = height + "px";
+
+          // Draw with white background
+          ctx.fillStyle = "white";
+          ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+          // Scale for high DPI
+          ctx.scale(2, 2);
+          ctx.drawImage(img, 0, 0, width, height);
+
+          URL.revokeObjectURL(url);
+        };
+
+        img.src = url;
+      };
+
+      window.downloadPNG = function () {
+        const canvas = document.getElementById("png-canvas");
+        if (!canvas.width) {
+          alert("Convert to PNG first!");
+          return;
+        }
+
+        canvas.toBlob(function (blob) {
+          const url = URL.createObjectURL(blob);
+          const a = document.createElement("a");
+          a.href = url;
+          a.download = "diagram.png";
+          document.body.appendChild(a);
+          a.click();
+          document.body.removeChild(a);
+          URL.revokeObjectURL(url);
+        }, "image/png");
+      };
+    </script>
+  </body>
+</html>

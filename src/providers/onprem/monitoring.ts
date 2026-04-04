@@ -1,63 +1,75 @@
 import { _Onprem } from "./index.js";
+import cortexIcon from "../../../resources/onprem/monitoring/cortex.png";
+import datadogIcon from "../../../resources/onprem/monitoring/datadog.png";
+import dynatraceIcon from "../../../resources/onprem/monitoring/dynatrace.png";
+import grafanaIcon from "../../../resources/onprem/monitoring/grafana.png";
+import humioIcon from "../../../resources/onprem/monitoring/humio.png";
+import mimirIcon from "../../../resources/onprem/monitoring/mimir.png";
+import nagiosIcon from "../../../resources/onprem/monitoring/nagios.png";
+import newrelicIcon from "../../../resources/onprem/monitoring/newrelic.png";
+import prometheus_operatorIcon from "../../../resources/onprem/monitoring/prometheus-operator.png";
+import prometheusIcon from "../../../resources/onprem/monitoring/prometheus.png";
+import sentryIcon from "../../../resources/onprem/monitoring/sentry.png";
+import splunkIcon from "../../../resources/onprem/monitoring/splunk.png";
+import thanosIcon from "../../../resources/onprem/monitoring/thanos.png";
+import zabbixIcon from "../../../resources/onprem/monitoring/zabbix.png";
 
 class _Monitoring extends _Onprem {
   protected static override _type = "monitoring";
-  protected static override _iconDir = "onprem/monitoring";
 }
 
 export class Cortex extends _Monitoring {
-  protected static override _icon = "cortex.png";
+  protected static override _iconDataUrl = cortexIcon;
 }
 
 export class Datadog extends _Monitoring {
-  protected static override _icon = "datadog.png";
+  protected static override _iconDataUrl = datadogIcon;
 }
 
 export class Dynatrace extends _Monitoring {
-  protected static override _icon = "dynatrace.png";
+  protected static override _iconDataUrl = dynatraceIcon;
 }
 
 export class Grafana extends _Monitoring {
-  protected static override _icon = "grafana.png";
+  protected static override _iconDataUrl = grafanaIcon;
 }
 
 export class Humio extends _Monitoring {
-  protected static override _icon = "humio.png";
+  protected static override _iconDataUrl = humioIcon;
 }
 
 export class Mimir extends _Monitoring {
-  protected static override _icon = "mimir.png";
+  protected static override _iconDataUrl = mimirIcon;
 }
 
 export class Nagios extends _Monitoring {
-  protected static override _icon = "nagios.png";
+  protected static override _iconDataUrl = nagiosIcon;
 }
 
 export class Newrelic extends _Monitoring {
-  protected static override _icon = "newrelic.png";
+  protected static override _iconDataUrl = newrelicIcon;
 }
 
 export class PrometheusOperator extends _Monitoring {
-  protected static override _icon = "prometheus-operator.png";
+  protected static override _iconDataUrl = prometheus_operatorIcon;
 }
 
 export class Prometheus extends _Monitoring {
-  protected static override _icon = "prometheus.png";
+  protected static override _iconDataUrl = prometheusIcon;
 }
 
 export class Sentry extends _Monitoring {
-  protected static override _icon = "sentry.png";
+  protected static override _iconDataUrl = sentryIcon;
 }
 
 export class Splunk extends _Monitoring {
-  protected static override _icon = "splunk.png";
+  protected static override _iconDataUrl = splunkIcon;
 }
 
 export class Thanos extends _Monitoring {
-  protected static override _icon = "thanos.png";
+  protected static override _iconDataUrl = thanosIcon;
 }
 
 export class Zabbix extends _Monitoring {
-  protected static override _icon = "zabbix.png";
+  protected static override _iconDataUrl = zabbixIcon;
 }
-

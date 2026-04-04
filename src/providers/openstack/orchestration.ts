@@ -1,27 +1,30 @@
 import { _Openstack } from "./index.js";
+import blazarIcon from "../../../resources/openstack/orchestration/blazar.png";
+import heatIcon from "../../../resources/openstack/orchestration/heat.png";
+import mistralIcon from "../../../resources/openstack/orchestration/mistral.png";
+import senlinIcon from "../../../resources/openstack/orchestration/senlin.png";
+import zaqarIcon from "../../../resources/openstack/orchestration/zaqar.png";
 
 class _Orchestration extends _Openstack {
   protected static override _type = "orchestration";
-  protected static override _iconDir = "openstack/orchestration";
 }
 
 export class Blazar extends _Orchestration {
-  protected static override _icon = "blazar.png";
+  protected static override _iconDataUrl = blazarIcon;
 }
 
 export class Heat extends _Orchestration {
-  protected static override _icon = "heat.png";
+  protected static override _iconDataUrl = heatIcon;
 }
 
 export class Mistral extends _Orchestration {
-  protected static override _icon = "mistral.png";
+  protected static override _iconDataUrl = mistralIcon;
 }
 
 export class Senlin extends _Orchestration {
-  protected static override _icon = "senlin.png";
+  protected static override _iconDataUrl = senlinIcon;
 }
 
 export class Zaqar extends _Orchestration {
-  protected static override _icon = "zaqar.png";
+  protected static override _iconDataUrl = zaqarIcon;
 }
-
