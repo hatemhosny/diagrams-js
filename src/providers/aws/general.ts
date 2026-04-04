@@ -29,99 +29,97 @@ class _General extends _Aws {
 }
 
 export class Client extends _General {
-  protected static override _iconDataUrl = clientIcon;
+  protected static _iconDataUrl = clientIcon;
 }
 
 export class Disk extends _General {
-  protected static override _iconDataUrl = diskIcon;
+  protected static _iconDataUrl = diskIcon;
 }
 
 export class Forums extends _General {
-  protected static override _iconDataUrl = forumsIcon;
+  protected static _iconDataUrl = forumsIcon;
 }
 
 export class General extends _General {
-  protected static override _iconDataUrl = generalIcon;
+  protected static _iconDataUrl = generalIcon;
 }
 
 export class GenericDatabase extends _General {
-  protected static override _iconDataUrl = generic_databaseIcon;
+  protected static _iconDataUrl = generic_databaseIcon;
 }
 
 export class GenericFirewall extends _General {
-  protected static override _iconDataUrl = generic_firewallIcon;
+  protected static _iconDataUrl = generic_firewallIcon;
 }
 
 export class GenericOfficeBuilding extends _General {
-  protected static override _iconDataUrl = generic_office_buildingIcon;
+  protected static _iconDataUrl = generic_office_buildingIcon;
 }
 
 export class GenericSamlToken extends _General {
-  protected static override _iconDataUrl = generic_saml_tokenIcon;
+  protected static _iconDataUrl = generic_saml_tokenIcon;
 }
 
 export class GenericSDK extends _General {
-  protected static override _iconDataUrl = generic_sdkIcon;
+  protected static _iconDataUrl = generic_sdkIcon;
 }
 
 export class InternetAlt1 extends _General {
-  protected static override _iconDataUrl = internet_alt1Icon;
+  protected static _iconDataUrl = internet_alt1Icon;
 }
 
 export class InternetAlt2 extends _General {
-  protected static override _iconDataUrl = internet_alt2Icon;
+  protected static _iconDataUrl = internet_alt2Icon;
 }
 
 export class InternetGateway extends _General {
-  protected static override _iconDataUrl = internet_gatewayIcon;
+  protected static _iconDataUrl = internet_gatewayIcon;
 }
 
 export class Marketplace extends _General {
-  protected static override _iconDataUrl = marketplaceIcon;
+  protected static _iconDataUrl = marketplaceIcon;
 }
 
 export class MobileClient extends _General {
-  protected static override _iconDataUrl = mobile_clientIcon;
+  protected static _iconDataUrl = mobile_clientIcon;
 }
 
 export class Multimedia extends _General {
-  protected static override _iconDataUrl = multimediaIcon;
+  protected static _iconDataUrl = multimediaIcon;
 }
 
 export class OfficeBuilding extends _General {
-  protected static override _iconDataUrl = office_buildingIcon;
+  protected static _iconDataUrl = office_buildingIcon;
 }
 
 export class SamlToken extends _General {
-  protected static override _iconDataUrl = saml_tokenIcon;
+  protected static _iconDataUrl = saml_tokenIcon;
 }
 
 export class SDK extends _General {
-  protected static override _iconDataUrl = sdkIcon;
+  protected static _iconDataUrl = sdkIcon;
 }
 
 export class SslPadlock extends _General {
-  protected static override _iconDataUrl = ssl_padlockIcon;
+  protected static _iconDataUrl = ssl_padlockIcon;
 }
 
 export class TapeStorage extends _General {
-  protected static override _iconDataUrl = tape_storageIcon;
+  protected static _iconDataUrl = tape_storageIcon;
 }
 
 export class Toolkit extends _General {
-  protected static override _iconDataUrl = toolkitIcon;
+  protected static _iconDataUrl = toolkitIcon;
 }
 
 export class TraditionalServer extends _General {
-  protected static override _iconDataUrl = traditional_serverIcon;
+  protected static _iconDataUrl = traditional_serverIcon;
 }
 
 export class User extends _General {
-  protected static override _iconDataUrl = userIcon;
+  protected static _iconDataUrl = userIcon;
 }
 
 export class Users extends _General {
-  protected static override _iconDataUrl = usersIcon;
+  protected static _iconDataUrl = usersIcon;
 }
-
-// Note: GenericOfficeBuilding is available as an alternative to OfficeBuilding

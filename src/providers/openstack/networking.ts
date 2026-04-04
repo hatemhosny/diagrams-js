@@ -8,13 +8,13 @@ class _Networking extends _Openstack {
 }
 
 export class Designate extends _Networking {
-  protected static override _iconDataUrl = designateIcon;
+  protected static _iconDataUrl = designateIcon;
 }
 
 export class Neutron extends _Networking {
-  protected static override _iconDataUrl = neutronIcon;
+  protected static _iconDataUrl = neutronIcon;
 }
 
 export class Octavia extends _Networking {
-  protected static override _iconDataUrl = octaviaIcon;
+  protected static _iconDataUrl = octaviaIcon;
 }

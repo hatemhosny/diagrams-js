@@ -21,65 +21,65 @@ class _Network extends _Oci {
 }
 
 export class DrgWhite extends _Network {
-  protected static override _iconDataUrl = drg_whiteIcon;
+  protected static _iconDataUrl = drg_whiteIcon;
 }
 
 export class Drg extends _Network {
-  protected static override _iconDataUrl = drgIcon;
+  protected static _iconDataUrl = drgIcon;
 }
 
 export class FirewallWhite extends _Network {
-  protected static override _iconDataUrl = firewall_whiteIcon;
+  protected static _iconDataUrl = firewall_whiteIcon;
 }
 
 export class Firewall extends _Network {
-  protected static override _iconDataUrl = firewallIcon;
+  protected static _iconDataUrl = firewallIcon;
 }
 
 export class InternetGatewayWhite extends _Network {
-  protected static override _iconDataUrl = internet_gateway_whiteIcon;
+  protected static _iconDataUrl = internet_gateway_whiteIcon;
 }
 
 export class InternetGateway extends _Network {
-  protected static override _iconDataUrl = internet_gatewayIcon;
+  protected static _iconDataUrl = internet_gatewayIcon;
 }
 
 export class LoadBalancerWhite extends _Network {
-  protected static override _iconDataUrl = load_balancer_whiteIcon;
+  protected static _iconDataUrl = load_balancer_whiteIcon;
 }
 
 export class LoadBalancer extends _Network {
-  protected static override _iconDataUrl = load_balancerIcon;
+  protected static _iconDataUrl = load_balancerIcon;
 }
 
 export class RouteTableWhite extends _Network {
-  protected static override _iconDataUrl = route_table_whiteIcon;
+  protected static _iconDataUrl = route_table_whiteIcon;
 }
 
 export class RouteTable extends _Network {
-  protected static override _iconDataUrl = route_tableIcon;
+  protected static _iconDataUrl = route_tableIcon;
 }
 
 export class SecurityListsWhite extends _Network {
-  protected static override _iconDataUrl = security_lists_whiteIcon;
+  protected static _iconDataUrl = security_lists_whiteIcon;
 }
 
 export class SecurityLists extends _Network {
-  protected static override _iconDataUrl = security_listsIcon;
+  protected static _iconDataUrl = security_listsIcon;
 }
 
 export class ServiceGatewayWhite extends _Network {
-  protected static override _iconDataUrl = service_gateway_whiteIcon;
+  protected static _iconDataUrl = service_gateway_whiteIcon;
 }
 
 export class ServiceGateway extends _Network {
-  protected static override _iconDataUrl = service_gatewayIcon;
+  protected static _iconDataUrl = service_gatewayIcon;
 }
 
 export class VcnWhite extends _Network {
-  protected static override _iconDataUrl = vcn_whiteIcon;
+  protected static _iconDataUrl = vcn_whiteIcon;
 }
 
 export class Vcn extends _Network {
-  protected static override _iconDataUrl = vcnIcon;
+  protected static _iconDataUrl = vcnIcon;
 }

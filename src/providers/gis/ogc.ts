@@ -8,13 +8,13 @@ class _Ogc extends _Gis {
 }
 
 export class OGC extends _Ogc {
-  protected static override _iconDataUrl = ogcIcon;
+  protected static _iconDataUrl = ogcIcon;
 }
 
 export class WFS extends _Ogc {
-  protected static override _iconDataUrl = wfsIcon;
+  protected static _iconDataUrl = wfsIcon;
 }
 
 export class WMS extends _Ogc {
-  protected static override _iconDataUrl = wmsIcon;
+  protected static _iconDataUrl = wmsIcon;
 }

@@ -7,9 +7,9 @@ class _Aggregator extends _Onprem {
 }
 
 export class Fluentd extends _Aggregator {
-  protected static override _iconDataUrl = fluentdIcon;
+  protected static _iconDataUrl = fluentdIcon;
 }
 
 export class Vector extends _Aggregator {
-  protected static override _iconDataUrl = vectorIcon;
+  protected static _iconDataUrl = vectorIcon;
 }

@@ -6,5 +6,5 @@ class _Communication extends _Saas {
 }
 
 export class Twilio extends _Communication {
-  protected static override _iconDataUrl = twilioIcon;
+  protected static _iconDataUrl = twilioIcon;
 }

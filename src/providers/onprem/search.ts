@@ -6,5 +6,5 @@ class _Search extends _Onprem {
 }
 
 export class Solr extends _Search {
-  protected static override _iconDataUrl = solrIcon;
+  protected static _iconDataUrl = solrIcon;
 }

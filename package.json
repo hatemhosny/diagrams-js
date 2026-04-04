@@ -14,7 +14,9 @@
   },
   "files": [
     "dist",
-    "resources"
+    "src",
+    "LICENSE",
+    "README.md"
   ],
   "type": "module",
   "exports": {

@@ -7,9 +7,9 @@ class _Chaos extends _K8s {
 }
 
 export class ChaosMesh extends _Chaos {
-  protected static override _iconDataUrl = chaos_meshIcon;
+  protected static _iconDataUrl = chaos_meshIcon;
 }
 
 export class LitmusChaos extends _Chaos {
-  protected static override _iconDataUrl = litmus_chaosIcon;
+  protected static _iconDataUrl = litmus_chaosIcon;
 }

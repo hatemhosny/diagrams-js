@@ -9,19 +9,19 @@ class _Blockchain extends _Aws {
 }
 
 export class BlockchainResource extends _Blockchain {
-  protected static override _iconDataUrl = blockchain_resourceIcon;
+  protected static _iconDataUrl = blockchain_resourceIcon;
 }
 
 export class Blockchain extends _Blockchain {
-  protected static override _iconDataUrl = blockchainIcon;
+  protected static _iconDataUrl = blockchainIcon;
 }
 
 export class ManagedBlockchain extends _Blockchain {
-  protected static override _iconDataUrl = managed_blockchainIcon;
+  protected static _iconDataUrl = managed_blockchainIcon;
 }
 
 export class QuantumLedgerDatabaseQldb extends _Blockchain {
-  protected static override _iconDataUrl = quantum_ledger_database_qldbIcon;
+  protected static _iconDataUrl = quantum_ledger_database_qldbIcon;
 }
 
 // Aliases

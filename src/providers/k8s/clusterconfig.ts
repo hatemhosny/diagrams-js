@@ -8,15 +8,15 @@ class _Clusterconfig extends _K8s {
 }
 
 export class HPA extends _Clusterconfig {
-  protected static override _iconDataUrl = hpaIcon;
+  protected static _iconDataUrl = hpaIcon;
 }
 
 export class Limits extends _Clusterconfig {
-  protected static override _iconDataUrl = limitsIcon;
+  protected static _iconDataUrl = limitsIcon;
 }
 
 export class Quota extends _Clusterconfig {
-  protected static override _iconDataUrl = quotaIcon;
+  protected static _iconDataUrl = quotaIcon;
 }
 
 // Aliases

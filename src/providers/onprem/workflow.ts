@@ -9,19 +9,19 @@ class _Workflow extends _Onprem {
 }
 
 export class Airflow extends _Workflow {
-  protected static override _iconDataUrl = airflowIcon;
+  protected static _iconDataUrl = airflowIcon;
 }
 
 export class Digdag extends _Workflow {
-  protected static override _iconDataUrl = digdagIcon;
+  protected static _iconDataUrl = digdagIcon;
 }
 
 export class Kubeflow extends _Workflow {
-  protected static override _iconDataUrl = kubeflowIcon;
+  protected static _iconDataUrl = kubeflowIcon;
 }
 
 export class Nifi extends _Workflow {
-  protected static override _iconDataUrl = nifiIcon;
+  protected static _iconDataUrl = nifiIcon;
 }
 
 // Aliases

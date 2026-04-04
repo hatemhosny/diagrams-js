@@ -10,21 +10,21 @@ class _Enterprisesearch extends _Elastic {
 }
 
 export class AppSearch extends _Enterprisesearch {
-  protected static override _iconDataUrl = app_searchIcon;
+  protected static _iconDataUrl = app_searchIcon;
 }
 
 export class Crawler extends _Enterprisesearch {
-  protected static override _iconDataUrl = crawlerIcon;
+  protected static _iconDataUrl = crawlerIcon;
 }
 
 export class EnterpriseSearch extends _Enterprisesearch {
-  protected static override _iconDataUrl = enterprise_searchIcon;
+  protected static _iconDataUrl = enterprise_searchIcon;
 }
 
 export class SiteSearch extends _Enterprisesearch {
-  protected static override _iconDataUrl = site_searchIcon;
+  protected static _iconDataUrl = site_searchIcon;
 }
 
 export class WorkplaceSearch extends _Enterprisesearch {
-  protected static override _iconDataUrl = workplace_searchIcon;
+  protected static _iconDataUrl = workplace_searchIcon;
 }

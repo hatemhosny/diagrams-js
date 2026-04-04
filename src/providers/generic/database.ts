@@ -6,5 +6,5 @@ class _Database extends _Generic {
 }
 
 export class SQL extends _Database {
-  protected static override _iconDataUrl = sqlIcon;
+  protected static _iconDataUrl = sqlIcon;
 }

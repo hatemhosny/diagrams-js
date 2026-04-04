@@ -33,113 +33,113 @@ class _Network extends _Azure {
 }
 
 export class ApplicationGateway extends _Network {
-  protected static override _iconDataUrl = application_gatewayIcon;
+  protected static _iconDataUrl = application_gatewayIcon;
 }
 
 export class ApplicationSecurityGroups extends _Network {
-  protected static override _iconDataUrl = application_security_groupsIcon;
+  protected static _iconDataUrl = application_security_groupsIcon;
 }
 
 export class CDNProfiles extends _Network {
-  protected static override _iconDataUrl = cdn_profilesIcon;
+  protected static _iconDataUrl = cdn_profilesIcon;
 }
 
 export class Connections extends _Network {
-  protected static override _iconDataUrl = connectionsIcon;
+  protected static _iconDataUrl = connectionsIcon;
 }
 
 export class DDOSProtectionPlans extends _Network {
-  protected static override _iconDataUrl = ddos_protection_plansIcon;
+  protected static _iconDataUrl = ddos_protection_plansIcon;
 }
 
 export class DNSPrivateZones extends _Network {
-  protected static override _iconDataUrl = dns_private_zonesIcon;
+  protected static _iconDataUrl = dns_private_zonesIcon;
 }
 
 export class DNSZones extends _Network {
-  protected static override _iconDataUrl = dns_zonesIcon;
+  protected static _iconDataUrl = dns_zonesIcon;
 }
 
 export class ExpressrouteCircuits extends _Network {
-  protected static override _iconDataUrl = expressroute_circuitsIcon;
+  protected static _iconDataUrl = expressroute_circuitsIcon;
 }
 
 export class Firewall extends _Network {
-  protected static override _iconDataUrl = firewallIcon;
+  protected static _iconDataUrl = firewallIcon;
 }
 
 export class FrontDoors extends _Network {
-  protected static override _iconDataUrl = front_doorsIcon;
+  protected static _iconDataUrl = front_doorsIcon;
 }
 
 export class LoadBalancers extends _Network {
-  protected static override _iconDataUrl = load_balancersIcon;
+  protected static _iconDataUrl = load_balancersIcon;
 }
 
 export class LocalNetworkGateways extends _Network {
-  protected static override _iconDataUrl = local_network_gatewaysIcon;
+  protected static _iconDataUrl = local_network_gatewaysIcon;
 }
 
 export class NetworkInterfaces extends _Network {
-  protected static override _iconDataUrl = network_interfacesIcon;
+  protected static _iconDataUrl = network_interfacesIcon;
 }
 
 export class NetworkSecurityGroupsClassic extends _Network {
-  protected static override _iconDataUrl = network_security_groups_classicIcon;
+  protected static _iconDataUrl = network_security_groups_classicIcon;
 }
 
 export class NetworkWatcher extends _Network {
-  protected static override _iconDataUrl = network_watcherIcon;
+  protected static _iconDataUrl = network_watcherIcon;
 }
 
 export class OnPremisesDataGateways extends _Network {
-  protected static override _iconDataUrl = on_premises_data_gatewaysIcon;
+  protected static _iconDataUrl = on_premises_data_gatewaysIcon;
 }
 
 export class PrivateEndpoint extends _Network {
-  protected static override _iconDataUrl = private_endpointIcon;
+  protected static _iconDataUrl = private_endpointIcon;
 }
 
 export class PublicIpAddresses extends _Network {
-  protected static override _iconDataUrl = public_ip_addressesIcon;
+  protected static _iconDataUrl = public_ip_addressesIcon;
 }
 
 export class ReservedIpAddressesClassic extends _Network {
-  protected static override _iconDataUrl = reserved_ip_addresses_classicIcon;
+  protected static _iconDataUrl = reserved_ip_addresses_classicIcon;
 }
 
 export class RouteFilters extends _Network {
-  protected static override _iconDataUrl = route_filtersIcon;
+  protected static _iconDataUrl = route_filtersIcon;
 }
 
 export class RouteTables extends _Network {
-  protected static override _iconDataUrl = route_tablesIcon;
+  protected static _iconDataUrl = route_tablesIcon;
 }
 
 export class ServiceEndpointPolicies extends _Network {
-  protected static override _iconDataUrl = service_endpoint_policiesIcon;
+  protected static _iconDataUrl = service_endpoint_policiesIcon;
 }
 
 export class Subnets extends _Network {
-  protected static override _iconDataUrl = subnetsIcon;
+  protected static _iconDataUrl = subnetsIcon;
 }
 
 export class TrafficManagerProfiles extends _Network {
-  protected static override _iconDataUrl = traffic_manager_profilesIcon;
+  protected static _iconDataUrl = traffic_manager_profilesIcon;
 }
 
 export class VirtualNetworkClassic extends _Network {
-  protected static override _iconDataUrl = virtual_network_classicIcon;
+  protected static _iconDataUrl = virtual_network_classicIcon;
 }
 
 export class VirtualNetworkGateways extends _Network {
-  protected static override _iconDataUrl = virtual_network_gatewaysIcon;
+  protected static _iconDataUrl = virtual_network_gatewaysIcon;
 }
 
 export class VirtualNetworks extends _Network {
-  protected static override _iconDataUrl = virtual_networksIcon;
+  protected static _iconDataUrl = virtual_networksIcon;
 }
 
 export class VirtualWans extends _Network {
-  protected static override _iconDataUrl = virtual_wansIcon;
+  protected static _iconDataUrl = virtual_wansIcon;
 }

@@ -13,35 +13,35 @@ class _Storage extends _Alibabacloud {
 }
 
 export class CloudStorageGateway extends _Storage {
-  protected static override _iconDataUrl = cloud_storage_gatewayIcon;
+  protected static _iconDataUrl = cloud_storage_gatewayIcon;
 }
 
 export class FileStorageHdfs extends _Storage {
-  protected static override _iconDataUrl = file_storage_hdfsIcon;
+  protected static _iconDataUrl = file_storage_hdfsIcon;
 }
 
 export class FileStorageNas extends _Storage {
-  protected static override _iconDataUrl = file_storage_nasIcon;
+  protected static _iconDataUrl = file_storage_nasIcon;
 }
 
 export class HybridBackupRecovery extends _Storage {
-  protected static override _iconDataUrl = hybrid_backup_recoveryIcon;
+  protected static _iconDataUrl = hybrid_backup_recoveryIcon;
 }
 
 export class HybridCloudDisasterRecovery extends _Storage {
-  protected static override _iconDataUrl = hybrid_cloud_disaster_recoveryIcon;
+  protected static _iconDataUrl = hybrid_cloud_disaster_recoveryIcon;
 }
 
 export class Imm extends _Storage {
-  protected static override _iconDataUrl = immIcon;
+  protected static _iconDataUrl = immIcon;
 }
 
 export class ObjectStorageService extends _Storage {
-  protected static override _iconDataUrl = object_storage_serviceIcon;
+  protected static _iconDataUrl = object_storage_serviceIcon;
 }
 
 export class ObjectTableStore extends _Storage {
-  protected static override _iconDataUrl = object_table_storeIcon;
+  protected static _iconDataUrl = object_table_storeIcon;
 }
 
 // Aliases

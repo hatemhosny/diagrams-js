@@ -7,9 +7,9 @@ class _Certificates extends _Onprem {
 }
 
 export class CertManager extends _Certificates {
-  protected static override _iconDataUrl = cert_managerIcon;
+  protected static _iconDataUrl = cert_managerIcon;
 }
 
 export class LetsEncrypt extends _Certificates {
-  protected static override _iconDataUrl = lets_encryptIcon;
+  protected static _iconDataUrl = lets_encryptIcon;
 }

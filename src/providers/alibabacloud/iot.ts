@@ -9,17 +9,17 @@ class _Iot extends _Alibabacloud {
 }
 
 export class IotInternetDeviceId extends _Iot {
-  protected static override _iconDataUrl = iot_internet_device_idIcon;
+  protected static _iconDataUrl = iot_internet_device_idIcon;
 }
 
 export class IotLinkWan extends _Iot {
-  protected static override _iconDataUrl = iot_link_wanIcon;
+  protected static _iconDataUrl = iot_link_wanIcon;
 }
 
 export class IotMobileConnectionPackage extends _Iot {
-  protected static override _iconDataUrl = iot_mobile_connection_packageIcon;
+  protected static _iconDataUrl = iot_mobile_connection_packageIcon;
 }
 
 export class IotPlatform extends _Iot {
-  protected static override _iconDataUrl = iot_platformIcon;
+  protected static _iconDataUrl = iot_platformIcon;
 }

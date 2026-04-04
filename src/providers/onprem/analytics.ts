@@ -22,71 +22,71 @@ class _Analytics extends _Onprem {
 }
 
 export class Beam extends _Analytics {
-  protected static override _iconDataUrl = beamIcon;
+  protected static _iconDataUrl = beamIcon;
 }
 
 export class Databricks extends _Analytics {
-  protected static override _iconDataUrl = databricksIcon;
+  protected static _iconDataUrl = databricksIcon;
 }
 
 export class Dbt extends _Analytics {
-  protected static override _iconDataUrl = dbtIcon;
+  protected static _iconDataUrl = dbtIcon;
 }
 
 export class Dremio extends _Analytics {
-  protected static override _iconDataUrl = dremioIcon;
+  protected static _iconDataUrl = dremioIcon;
 }
 
 export class Flink extends _Analytics {
-  protected static override _iconDataUrl = flinkIcon;
+  protected static _iconDataUrl = flinkIcon;
 }
 
 export class Hadoop extends _Analytics {
-  protected static override _iconDataUrl = hadoopIcon;
+  protected static _iconDataUrl = hadoopIcon;
 }
 
 export class Hive extends _Analytics {
-  protected static override _iconDataUrl = hiveIcon;
+  protected static _iconDataUrl = hiveIcon;
 }
 
 export class Metabase extends _Analytics {
-  protected static override _iconDataUrl = metabaseIcon;
+  protected static _iconDataUrl = metabaseIcon;
 }
 
 export class Norikra extends _Analytics {
-  protected static override _iconDataUrl = norikraIcon;
+  protected static _iconDataUrl = norikraIcon;
 }
 
 export class Powerbi extends _Analytics {
-  protected static override _iconDataUrl = powerbiIcon;
+  protected static _iconDataUrl = powerbiIcon;
 }
 
 export class Presto extends _Analytics {
-  protected static override _iconDataUrl = prestoIcon;
+  protected static _iconDataUrl = prestoIcon;
 }
 
 export class Singer extends _Analytics {
-  protected static override _iconDataUrl = singerIcon;
+  protected static _iconDataUrl = singerIcon;
 }
 
 export class Spark extends _Analytics {
-  protected static override _iconDataUrl = sparkIcon;
+  protected static _iconDataUrl = sparkIcon;
 }
 
 export class Storm extends _Analytics {
-  protected static override _iconDataUrl = stormIcon;
+  protected static _iconDataUrl = stormIcon;
 }
 
 export class Superset extends _Analytics {
-  protected static override _iconDataUrl = supersetIcon;
+  protected static _iconDataUrl = supersetIcon;
 }
 
 export class Tableau extends _Analytics {
-  protected static override _iconDataUrl = tableauIcon;
+  protected static _iconDataUrl = tableauIcon;
 }
 
 export class Trino extends _Analytics {
-  protected static override _iconDataUrl = trinoIcon;
+  protected static _iconDataUrl = trinoIcon;
 }
 
 // Aliases

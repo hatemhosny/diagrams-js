@@ -15,41 +15,41 @@ class _Devops extends _Ibm {
 }
 
 export class ArtifactManagement extends _Devops {
-  protected static override _iconDataUrl = artifact_managementIcon;
+  protected static _iconDataUrl = artifact_managementIcon;
 }
 
 export class BuildTest extends _Devops {
-  protected static override _iconDataUrl = build_testIcon;
+  protected static _iconDataUrl = build_testIcon;
 }
 
 export class CodeEditor extends _Devops {
-  protected static override _iconDataUrl = code_editorIcon;
+  protected static _iconDataUrl = code_editorIcon;
 }
 
 export class CollaborativeDevelopment extends _Devops {
-  protected static override _iconDataUrl = collaborative_developmentIcon;
+  protected static _iconDataUrl = collaborative_developmentIcon;
 }
 
 export class ConfigurationManagement extends _Devops {
-  protected static override _iconDataUrl = configuration_managementIcon;
+  protected static _iconDataUrl = configuration_managementIcon;
 }
 
 export class ContinuousDeploy extends _Devops {
-  protected static override _iconDataUrl = continuous_deployIcon;
+  protected static _iconDataUrl = continuous_deployIcon;
 }
 
 export class ContinuousTesting extends _Devops {
-  protected static override _iconDataUrl = continuous_testingIcon;
+  protected static _iconDataUrl = continuous_testingIcon;
 }
 
 export class Devops extends _Devops {
-  protected static override _iconDataUrl = devopsIcon;
+  protected static _iconDataUrl = devopsIcon;
 }
 
 export class Provision extends _Devops {
-  protected static override _iconDataUrl = provisionIcon;
+  protected static _iconDataUrl = provisionIcon;
 }
 
 export class ReleaseManagement extends _Devops {
-  protected static override _iconDataUrl = release_managementIcon;
+  protected static _iconDataUrl = release_managementIcon;
 }

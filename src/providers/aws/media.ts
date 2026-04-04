@@ -18,53 +18,53 @@ class _Media extends _Aws {
 }
 
 export class ElasticTranscoder extends _Media {
-  protected static override _iconDataUrl = elastic_transcoderIcon;
+  protected static _iconDataUrl = elastic_transcoderIcon;
 }
 
 export class ElementalConductor extends _Media {
-  protected static override _iconDataUrl = elemental_conductorIcon;
+  protected static _iconDataUrl = elemental_conductorIcon;
 }
 
 export class ElementalDelta extends _Media {
-  protected static override _iconDataUrl = elemental_deltaIcon;
+  protected static _iconDataUrl = elemental_deltaIcon;
 }
 
 export class ElementalLive extends _Media {
-  protected static override _iconDataUrl = elemental_liveIcon;
+  protected static _iconDataUrl = elemental_liveIcon;
 }
 
 export class ElementalMediaconnect extends _Media {
-  protected static override _iconDataUrl = elemental_mediaconnectIcon;
+  protected static _iconDataUrl = elemental_mediaconnectIcon;
 }
 
 export class ElementalMediaconvert extends _Media {
-  protected static override _iconDataUrl = elemental_mediaconvertIcon;
+  protected static _iconDataUrl = elemental_mediaconvertIcon;
 }
 
 export class ElementalMedialive extends _Media {
-  protected static override _iconDataUrl = elemental_medialiveIcon;
+  protected static _iconDataUrl = elemental_medialiveIcon;
 }
 
 export class ElementalMediapackage extends _Media {
-  protected static override _iconDataUrl = elemental_mediapackageIcon;
+  protected static _iconDataUrl = elemental_mediapackageIcon;
 }
 
 export class ElementalMediastore extends _Media {
-  protected static override _iconDataUrl = elemental_mediastoreIcon;
+  protected static _iconDataUrl = elemental_mediastoreIcon;
 }
 
 export class ElementalMediatailor extends _Media {
-  protected static override _iconDataUrl = elemental_mediatailorIcon;
+  protected static _iconDataUrl = elemental_mediatailorIcon;
 }
 
 export class ElementalServer extends _Media {
-  protected static override _iconDataUrl = elemental_serverIcon;
+  protected static _iconDataUrl = elemental_serverIcon;
 }
 
 export class KinesisVideoStreams extends _Media {
-  protected static override _iconDataUrl = kinesis_video_streamsIcon;
+  protected static _iconDataUrl = kinesis_video_streamsIcon;
 }
 
 export class MediaServices extends _Media {
-  protected static override _iconDataUrl = media_servicesIcon;
+  protected static _iconDataUrl = media_servicesIcon;
 }

@@ -9,19 +9,19 @@ class _Storage extends _K8s {
 }
 
 export class PV extends _Storage {
-  protected static override _iconDataUrl = pvIcon;
+  protected static _iconDataUrl = pvIcon;
 }
 
 export class PVC extends _Storage {
-  protected static override _iconDataUrl = pvcIcon;
+  protected static _iconDataUrl = pvcIcon;
 }
 
 export class SC extends _Storage {
-  protected static override _iconDataUrl = scIcon;
+  protected static _iconDataUrl = scIcon;
 }
 
 export class Vol extends _Storage {
-  protected static override _iconDataUrl = volIcon;
+  protected static _iconDataUrl = volIcon;
 }
 
 // Aliases

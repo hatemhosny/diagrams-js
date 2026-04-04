@@ -7,9 +7,9 @@ class _Dns extends _Onprem {
 }
 
 export class Coredns extends _Dns {
-  protected static override _iconDataUrl = corednsIcon;
+  protected static _iconDataUrl = corednsIcon;
 }
 
 export class Powerdns extends _Dns {
-  protected static override _iconDataUrl = powerdnsIcon;
+  protected static _iconDataUrl = powerdnsIcon;
 }

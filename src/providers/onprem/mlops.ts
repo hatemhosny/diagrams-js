@@ -7,9 +7,9 @@ class _Mlops extends _Onprem {
 }
 
 export class Mlflow extends _Mlops {
-  protected static override _iconDataUrl = mlflowIcon;
+  protected static _iconDataUrl = mlflowIcon;
 }
 
 export class Polyaxon extends _Mlops {
-  protected static override _iconDataUrl = polyaxonIcon;
+  protected static _iconDataUrl = polyaxonIcon;
 }

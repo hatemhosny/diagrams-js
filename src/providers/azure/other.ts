@@ -133,513 +133,513 @@ class _Other extends _Azure {
 }
 
 export class AadLicenses extends _Other {
-  protected static override _iconDataUrl = aad_licensesIcon;
+  protected static _iconDataUrl = aad_licensesIcon;
 }
 
 export class AksIstio extends _Other {
-  protected static override _iconDataUrl = aks_istioIcon;
+  protected static _iconDataUrl = aks_istioIcon;
 }
 
 export class AppComplianceAutomation extends _Other {
-  protected static override _iconDataUrl = app_compliance_automationIcon;
+  protected static _iconDataUrl = app_compliance_automationIcon;
 }
 
 export class AppRegistrations extends _Other {
-  protected static override _iconDataUrl = app_registrationsIcon;
+  protected static _iconDataUrl = app_registrationsIcon;
 }
 
 export class Aquila extends _Other {
-  protected static override _iconDataUrl = aquilaIcon;
+  protected static _iconDataUrl = aquilaIcon;
 }
 
 export class ArcDataServices extends _Other {
-  protected static override _iconDataUrl = arc_data_servicesIcon;
+  protected static _iconDataUrl = arc_data_servicesIcon;
 }
 
 export class ArcKubernetes extends _Other {
-  protected static override _iconDataUrl = arc_kubernetesIcon;
+  protected static _iconDataUrl = arc_kubernetesIcon;
 }
 
 export class ArcPostgresql extends _Other {
-  protected static override _iconDataUrl = arc_postgresql_Icon;
+  protected static _iconDataUrl = arc_postgresql_Icon;
 }
 
 export class ArcSQLManagedInstance extends _Other {
-  protected static override _iconDataUrl = arc_sql_managed_instanceIcon;
+  protected static _iconDataUrl = arc_sql_managed_instanceIcon;
 }
 
 export class ArcSQLServer extends _Other {
-  protected static override _iconDataUrl = arc_sql_serverIcon;
+  protected static _iconDataUrl = arc_sql_serverIcon;
 }
 
 export class AvsVM extends _Other {
-  protected static override _iconDataUrl = avs_vmIcon;
+  protected static _iconDataUrl = avs_vmIcon;
 }
 
 export class AzureA extends _Other {
-  protected static override _iconDataUrl = azure_aIcon;
+  protected static _iconDataUrl = azure_aIcon;
 }
 
 export class AzureBackupCenter extends _Other {
-  protected static override _iconDataUrl = azure_backup_centerIcon;
+  protected static _iconDataUrl = azure_backup_centerIcon;
 }
 
 export class AzureCenterForSAP extends _Other {
-  protected static override _iconDataUrl = azure_center_for_sapIcon;
+  protected static _iconDataUrl = azure_center_for_sapIcon;
 }
 
 export class AzureChaosStudio extends _Other {
-  protected static override _iconDataUrl = azure_chaos_studioIcon;
+  protected static _iconDataUrl = azure_chaos_studioIcon;
 }
 
 export class AzureCloudShell extends _Other {
-  protected static override _iconDataUrl = azure_cloud_shellIcon;
+  protected static _iconDataUrl = azure_cloud_shellIcon;
 }
 
 export class AzureCommunicationServices extends _Other {
-  protected static override _iconDataUrl = azure_communication_servicesIcon;
+  protected static _iconDataUrl = azure_communication_servicesIcon;
 }
 
 export class AzureComputeGalleries extends _Other {
-  protected static override _iconDataUrl = azure_compute_galleriesIcon;
+  protected static _iconDataUrl = azure_compute_galleriesIcon;
 }
 
 export class AzureDeploymentEnvironments extends _Other {
-  protected static override _iconDataUrl = azure_deployment_environmentsIcon;
+  protected static _iconDataUrl = azure_deployment_environmentsIcon;
 }
 
 export class AzureDevTunnels extends _Other {
-  protected static override _iconDataUrl = azure_dev_tunnelsIcon;
+  protected static _iconDataUrl = azure_dev_tunnelsIcon;
 }
 
 export class AzureEdgeHardwareCenter extends _Other {
-  protected static override _iconDataUrl = azure_edge_hardware_centerIcon;
+  protected static _iconDataUrl = azure_edge_hardware_centerIcon;
 }
 
 export class AzureHpcWorkbenches extends _Other {
-  protected static override _iconDataUrl = azure_hpc_workbenchesIcon;
+  protected static _iconDataUrl = azure_hpc_workbenchesIcon;
 }
 
 export class AzureLoadTesting extends _Other {
-  protected static override _iconDataUrl = azure_load_testingIcon;
+  protected static _iconDataUrl = azure_load_testingIcon;
 }
 
 export class AzureManagedGrafana extends _Other {
-  protected static override _iconDataUrl = azure_managed_grafanaIcon;
+  protected static _iconDataUrl = azure_managed_grafanaIcon;
 }
 
 export class AzureMonitorDashboard extends _Other {
-  protected static override _iconDataUrl = azure_monitor_dashboardIcon;
+  protected static _iconDataUrl = azure_monitor_dashboardIcon;
 }
 
 export class AzureNetworkFunctionManagerFunctions extends _Other {
-  protected static override _iconDataUrl = azure_network_function_manager_functionsIcon;
+  protected static _iconDataUrl = azure_network_function_manager_functionsIcon;
 }
 
 export class AzureNetworkFunctionManager extends _Other {
-  protected static override _iconDataUrl = azure_network_function_managerIcon;
+  protected static _iconDataUrl = azure_network_function_managerIcon;
 }
 
 export class AzureOrbital extends _Other {
-  protected static override _iconDataUrl = azure_orbitalIcon;
+  protected static _iconDataUrl = azure_orbitalIcon;
 }
 
 export class AzureQuotas extends _Other {
-  protected static override _iconDataUrl = azure_quotasIcon;
+  protected static _iconDataUrl = azure_quotasIcon;
 }
 
 export class AzureSphere extends _Other {
-  protected static override _iconDataUrl = azure_sphereIcon;
+  protected static _iconDataUrl = azure_sphereIcon;
 }
 
 export class AzureStorageMover extends _Other {
-  protected static override _iconDataUrl = azure_storage_moverIcon;
+  protected static _iconDataUrl = azure_storage_moverIcon;
 }
 
 export class AzureSupportCenterBlue extends _Other {
-  protected static override _iconDataUrl = azure_support_center_blueIcon;
+  protected static _iconDataUrl = azure_support_center_blueIcon;
 }
 
 export class AzureVideoIndexer extends _Other {
-  protected static override _iconDataUrl = azure_video_indexerIcon;
+  protected static _iconDataUrl = azure_video_indexerIcon;
 }
 
 export class AzureVirtualDesktop extends _Other {
-  protected static override _iconDataUrl = azure_virtual_desktopIcon;
+  protected static _iconDataUrl = azure_virtual_desktopIcon;
 }
 
 export class AzureVmwareSolution extends _Other {
-  protected static override _iconDataUrl = azure_vmware_solutionIcon;
+  protected static _iconDataUrl = azure_vmware_solutionIcon;
 }
 
 export class Azureattestation extends _Other {
-  protected static override _iconDataUrl = azureattestationIcon;
+  protected static _iconDataUrl = azureattestationIcon;
 }
 
 export class Azurite extends _Other {
-  protected static override _iconDataUrl = azuriteIcon;
+  protected static _iconDataUrl = azuriteIcon;
 }
 
 export class BackupVault extends _Other {
-  protected static override _iconDataUrl = backup_vaultIcon;
+  protected static _iconDataUrl = backup_vaultIcon;
 }
 
 export class BareMetalInfrastructure extends _Other {
-  protected static override _iconDataUrl = bare_metal_infrastructureIcon;
+  protected static _iconDataUrl = bare_metal_infrastructureIcon;
 }
 
 export class CapacityReservationGroups extends _Other {
-  protected static override _iconDataUrl = capacity_reservation_groupsIcon;
+  protected static _iconDataUrl = capacity_reservation_groupsIcon;
 }
 
 export class CentralServiceInstanceForSAP extends _Other {
-  protected static override _iconDataUrl = central_service_instance_for_sapIcon;
+  protected static _iconDataUrl = central_service_instance_for_sapIcon;
 }
 
 export class Ceres extends _Other {
-  protected static override _iconDataUrl = ceresIcon;
+  protected static _iconDataUrl = ceresIcon;
 }
 
 export class CloudServicesExtendedSupport extends _Other {
-  protected static override _iconDataUrl = cloud_services_extended_supportIcon;
+  protected static _iconDataUrl = cloud_services_extended_supportIcon;
 }
 
 export class CommunityImages extends _Other {
-  protected static override _iconDataUrl = community_imagesIcon;
+  protected static _iconDataUrl = community_imagesIcon;
 }
 
 export class ComplianceCenter extends _Other {
-  protected static override _iconDataUrl = compliance_centerIcon;
+  protected static _iconDataUrl = compliance_centerIcon;
 }
 
 export class ConfidentialLedgers extends _Other {
-  protected static override _iconDataUrl = confidential_ledgersIcon;
+  protected static _iconDataUrl = confidential_ledgersIcon;
 }
 
 export class ContainerAppsEnvironments extends _Other {
-  protected static override _iconDataUrl = container_apps_environmentsIcon;
+  protected static _iconDataUrl = container_apps_environmentsIcon;
 }
 
 export class CostExport extends _Other {
-  protected static override _iconDataUrl = cost_exportIcon;
+  protected static _iconDataUrl = cost_exportIcon;
 }
 
 export class CustomIpPrefix extends _Other {
-  protected static override _iconDataUrl = custom_ip_prefixIcon;
+  protected static _iconDataUrl = custom_ip_prefixIcon;
 }
 
 export class DashboardHub extends _Other {
-  protected static override _iconDataUrl = dashboard_hubIcon;
+  protected static _iconDataUrl = dashboard_hubIcon;
 }
 
 export class DataCollectionRules extends _Other {
-  protected static override _iconDataUrl = data_collection_rulesIcon;
+  protected static _iconDataUrl = data_collection_rulesIcon;
 }
 
 export class DatabaseInstanceForSAP extends _Other {
-  protected static override _iconDataUrl = database_instance_for_sapIcon;
+  protected static _iconDataUrl = database_instance_for_sapIcon;
 }
 
 export class DedicatedHsm extends _Other {
-  protected static override _iconDataUrl = dedicated_hsmIcon;
+  protected static _iconDataUrl = dedicated_hsmIcon;
 }
 
 export class DefenderCmLocalManager extends _Other {
-  protected static override _iconDataUrl = defender_cm_local_managerIcon;
+  protected static _iconDataUrl = defender_cm_local_managerIcon;
 }
 
 export class DefenderDcsController extends _Other {
-  protected static override _iconDataUrl = defender_dcs_controllerIcon;
+  protected static _iconDataUrl = defender_dcs_controllerIcon;
 }
 
 export class DefenderDistributerControlSystem extends _Other {
-  protected static override _iconDataUrl = defender_distributer_control_systemIcon;
+  protected static _iconDataUrl = defender_distributer_control_systemIcon;
 }
 
 export class DefenderEngineeringStation extends _Other {
-  protected static override _iconDataUrl = defender_engineering_stationIcon;
+  protected static _iconDataUrl = defender_engineering_stationIcon;
 }
 
 export class DefenderExternalManagement extends _Other {
-  protected static override _iconDataUrl = defender_external_managementIcon;
+  protected static _iconDataUrl = defender_external_managementIcon;
 }
 
 export class DefenderFreezerMonitor extends _Other {
-  protected static override _iconDataUrl = defender_freezer_monitorIcon;
+  protected static _iconDataUrl = defender_freezer_monitorIcon;
 }
 
 export class DefenderHistorian extends _Other {
-  protected static override _iconDataUrl = defender_historianIcon;
+  protected static _iconDataUrl = defender_historianIcon;
 }
 
 export class DefenderHmi extends _Other {
-  protected static override _iconDataUrl = defender_hmiIcon;
+  protected static _iconDataUrl = defender_hmiIcon;
 }
 
 export class DefenderIndustrialPackagingSystem extends _Other {
-  protected static override _iconDataUrl = defender_industrial_packaging_systemIcon;
+  protected static _iconDataUrl = defender_industrial_packaging_systemIcon;
 }
 
 export class DefenderIndustrialPrinter extends _Other {
-  protected static override _iconDataUrl = defender_industrial_printerIcon;
+  protected static _iconDataUrl = defender_industrial_printerIcon;
 }
 
 export class DefenderIndustrialRobot extends _Other {
-  protected static override _iconDataUrl = defender_industrial_robotIcon;
+  protected static _iconDataUrl = defender_industrial_robotIcon;
 }
 
 export class DefenderIndustrialScaleSystem extends _Other {
-  protected static override _iconDataUrl = defender_industrial_scale_systemIcon;
+  protected static _iconDataUrl = defender_industrial_scale_systemIcon;
 }
 
 export class DefenderMarquee extends _Other {
-  protected static override _iconDataUrl = defender_marqueeIcon;
+  protected static _iconDataUrl = defender_marqueeIcon;
 }
 
 export class DefenderMeter extends _Other {
-  protected static override _iconDataUrl = defender_meterIcon;
+  protected static _iconDataUrl = defender_meterIcon;
 }
 
 export class DefenderPlc extends _Other {
-  protected static override _iconDataUrl = defender_plcIcon;
+  protected static _iconDataUrl = defender_plcIcon;
 }
 
 export class DefenderPneumaticDevice extends _Other {
-  protected static override _iconDataUrl = defender_pneumatic_deviceIcon;
+  protected static _iconDataUrl = defender_pneumatic_deviceIcon;
 }
 
 export class DefenderProgramableBoard extends _Other {
-  protected static override _iconDataUrl = defender_programable_boardIcon;
+  protected static _iconDataUrl = defender_programable_boardIcon;
 }
 
 export class DefenderRelay extends _Other {
-  protected static override _iconDataUrl = defender_relayIcon;
+  protected static _iconDataUrl = defender_relayIcon;
 }
 
 export class DefenderRobotController extends _Other {
-  protected static override _iconDataUrl = defender_robot_controllerIcon;
+  protected static _iconDataUrl = defender_robot_controllerIcon;
 }
 
 export class DefenderRtu extends _Other {
-  protected static override _iconDataUrl = defender_rtuIcon;
+  protected static _iconDataUrl = defender_rtuIcon;
 }
 
 export class DefenderSensor extends _Other {
-  protected static override _iconDataUrl = defender_sensorIcon;
+  protected static _iconDataUrl = defender_sensorIcon;
 }
 
 export class DefenderSlot extends _Other {
-  protected static override _iconDataUrl = defender_slotIcon;
+  protected static _iconDataUrl = defender_slotIcon;
 }
 
 export class DefenderWebGuidingSystem extends _Other {
-  protected static override _iconDataUrl = defender_web_guiding_systemIcon;
+  protected static _iconDataUrl = defender_web_guiding_systemIcon;
 }
 
 export class DeviceUpdateIotHub extends _Other {
-  protected static override _iconDataUrl = device_update_iot_hubIcon;
+  protected static _iconDataUrl = device_update_iot_hubIcon;
 }
 
 export class DiskPool extends _Other {
-  protected static override _iconDataUrl = disk_poolIcon;
+  protected static _iconDataUrl = disk_poolIcon;
 }
 
 export class EdgeManagement extends _Other {
-  protected static override _iconDataUrl = edge_managementIcon;
+  protected static _iconDataUrl = edge_managementIcon;
 }
 
 export class ElasticSan extends _Other {
-  protected static override _iconDataUrl = elastic_sanIcon;
+  protected static _iconDataUrl = elastic_sanIcon;
 }
 
 export class ExchangeOnPremisesAccess extends _Other {
-  protected static override _iconDataUrl = exchange_on_premises_accessIcon;
+  protected static _iconDataUrl = exchange_on_premises_accessIcon;
 }
 
 export class ExpressRouteTrafficCollector extends _Other {
-  protected static override _iconDataUrl = express_route_traffic_collectorIcon;
+  protected static _iconDataUrl = express_route_traffic_collectorIcon;
 }
 
 export class ExpressrouteDirect extends _Other {
-  protected static override _iconDataUrl = expressroute_directIcon;
+  protected static _iconDataUrl = expressroute_directIcon;
 }
 
 export class FhirService extends _Other {
-  protected static override _iconDataUrl = fhir_serviceIcon;
+  protected static _iconDataUrl = fhir_serviceIcon;
 }
 
 export class Fiji extends _Other {
-  protected static override _iconDataUrl = fijiIcon;
+  protected static _iconDataUrl = fijiIcon;
 }
 
 export class HdiAksCluster extends _Other {
-  protected static override _iconDataUrl = hdi_aks_clusterIcon;
+  protected static _iconDataUrl = hdi_aks_clusterIcon;
 }
 
 export class InstancePools extends _Other {
-  protected static override _iconDataUrl = instance_poolsIcon;
+  protected static _iconDataUrl = instance_poolsIcon;
 }
 
 export class InternetAnalyzerProfiles extends _Other {
-  protected static override _iconDataUrl = internet_analyzer_profilesIcon;
+  protected static _iconDataUrl = internet_analyzer_profilesIcon;
 }
 
 export class KubernetesFleetManager extends _Other {
-  protected static override _iconDataUrl = kubernetes_fleet_managerIcon;
+  protected static _iconDataUrl = kubernetes_fleet_managerIcon;
 }
 
 export class LocalNetworkGateways extends _Other {
-  protected static override _iconDataUrl = local_network_gatewaysIcon;
+  protected static _iconDataUrl = local_network_gatewaysIcon;
 }
 
 export class LogAnalyticsQueryPack extends _Other {
-  protected static override _iconDataUrl = log_analytics_query_packIcon;
+  protected static _iconDataUrl = log_analytics_query_packIcon;
 }
 
 export class ManagedInstanceApacheCassandra extends _Other {
-  protected static override _iconDataUrl = managed_instance_apache_cassandraIcon;
+  protected static _iconDataUrl = managed_instance_apache_cassandraIcon;
 }
 
 export class MedtechService extends _Other {
-  protected static override _iconDataUrl = medtech_serviceIcon;
+  protected static _iconDataUrl = medtech_serviceIcon;
 }
 
 export class MicrosoftDevBox extends _Other {
-  protected static override _iconDataUrl = microsoft_dev_boxIcon;
+  protected static _iconDataUrl = microsoft_dev_boxIcon;
 }
 
 export class MissionLandingZone extends _Other {
-  protected static override _iconDataUrl = mission_landing_zoneIcon;
+  protected static _iconDataUrl = mission_landing_zoneIcon;
 }
 
 export class MobileNetworks extends _Other {
-  protected static override _iconDataUrl = mobile_networksIcon;
+  protected static _iconDataUrl = mobile_networksIcon;
 }
 
 export class ModularDataCenter extends _Other {
-  protected static override _iconDataUrl = modular_data_centerIcon;
+  protected static _iconDataUrl = modular_data_centerIcon;
 }
 
 export class NetworkManagers extends _Other {
-  protected static override _iconDataUrl = network_managersIcon;
+  protected static _iconDataUrl = network_managersIcon;
 }
 
 export class NetworkSecurityPerimeters extends _Other {
-  protected static override _iconDataUrl = network_security_perimetersIcon;
+  protected static _iconDataUrl = network_security_perimetersIcon;
 }
 
 export class OpenSupplyChainPlatform extends _Other {
-  protected static override _iconDataUrl = open_supply_chain_platformIcon;
+  protected static _iconDataUrl = open_supply_chain_platformIcon;
 }
 
 export class PeeringService extends _Other {
-  protected static override _iconDataUrl = peering_serviceIcon;
+  protected static _iconDataUrl = peering_serviceIcon;
 }
 
 export class Peerings extends _Other {
-  protected static override _iconDataUrl = peeringsIcon;
+  protected static _iconDataUrl = peeringsIcon;
 }
 
 export class PrivateEndpoints extends _Other {
-  protected static override _iconDataUrl = private_endpointsIcon;
+  protected static _iconDataUrl = private_endpointsIcon;
 }
 
 export class ReservedCapacity extends _Other {
-  protected static override _iconDataUrl = reserved_capacityIcon;
+  protected static _iconDataUrl = reserved_capacityIcon;
 }
 
 export class ResourceGuard extends _Other {
-  protected static override _iconDataUrl = resource_guardIcon;
+  protected static _iconDataUrl = resource_guardIcon;
 }
 
 export class ResourceMover extends _Other {
-  protected static override _iconDataUrl = resource_moverIcon;
+  protected static _iconDataUrl = resource_moverIcon;
 }
 
 export class Rtos extends _Other {
-  protected static override _iconDataUrl = rtosIcon;
+  protected static _iconDataUrl = rtosIcon;
 }
 
 export class SavingsPlans extends _Other {
-  protected static override _iconDataUrl = savings_plansIcon;
+  protected static _iconDataUrl = savings_plansIcon;
 }
 
 export class ScvmmManagementServers extends _Other {
-  protected static override _iconDataUrl = scvmm_management_serversIcon;
+  protected static _iconDataUrl = scvmm_management_serversIcon;
 }
 
 export class SonicDash extends _Other {
-  protected static override _iconDataUrl = sonic_dashIcon;
+  protected static _iconDataUrl = sonic_dashIcon;
 }
 
 export class SshKeys extends _Other {
-  protected static override _iconDataUrl = ssh_keysIcon;
+  protected static _iconDataUrl = ssh_keysIcon;
 }
 
 export class StorageFunctions extends _Other {
-  protected static override _iconDataUrl = storage_functionsIcon;
+  protected static _iconDataUrl = storage_functionsIcon;
 }
 
 export class TargetsManagement extends _Other {
-  protected static override _iconDataUrl = targets_managementIcon;
+  protected static _iconDataUrl = targets_managementIcon;
 }
 
 export class TemplateSpecs extends _Other {
-  protected static override _iconDataUrl = template_specsIcon;
+  protected static _iconDataUrl = template_specsIcon;
 }
 
 export class TestBase extends _Other {
-  protected static override _iconDataUrl = test_baseIcon;
+  protected static _iconDataUrl = test_baseIcon;
 }
 
 export class UpdateManagementCenter extends _Other {
-  protected static override _iconDataUrl = update_management_centerIcon;
+  protected static _iconDataUrl = update_management_centerIcon;
 }
 
 export class VideoAnalyzers extends _Other {
-  protected static override _iconDataUrl = video_analyzersIcon;
+  protected static _iconDataUrl = video_analyzersIcon;
 }
 
 export class VirtualEnclaves extends _Other {
-  protected static override _iconDataUrl = virtual_enclavesIcon;
+  protected static _iconDataUrl = virtual_enclavesIcon;
 }
 
 export class VirtualInstanceForSAP extends _Other {
-  protected static override _iconDataUrl = virtual_instance_for_sapIcon;
+  protected static _iconDataUrl = virtual_instance_for_sapIcon;
 }
 
 export class VirtualVisitsBuilder extends _Other {
-  protected static override _iconDataUrl = virtual_visits_builderIcon;
+  protected static _iconDataUrl = virtual_visits_builderIcon;
 }
 
 export class VMAppDefinitions extends _Other {
-  protected static override _iconDataUrl = vm_app_definitionsIcon;
+  protected static _iconDataUrl = vm_app_definitionsIcon;
 }
 
 export class VMAppVersions extends _Other {
-  protected static override _iconDataUrl = vm_app_versionsIcon;
+  protected static _iconDataUrl = vm_app_versionsIcon;
 }
 
 export class VMImageVersion extends _Other {
-  protected static override _iconDataUrl = vm_image_versionIcon;
+  protected static _iconDataUrl = vm_image_versionIcon;
 }
 
 export class Wac extends _Other {
-  protected static override _iconDataUrl = wacIcon;
+  protected static _iconDataUrl = wacIcon;
 }
 
 export class WebAppDatabase extends _Other {
-  protected static override _iconDataUrl = web_app_databaseIcon;
+  protected static _iconDataUrl = web_app_databaseIcon;
 }
 
 export class WebJobs extends _Other {
-  protected static override _iconDataUrl = web_jobsIcon;
+  protected static _iconDataUrl = web_jobsIcon;
 }
 
 export class WindowsNotificationServices extends _Other {
-  protected static override _iconDataUrl = windows_notification_servicesIcon;
+  protected static _iconDataUrl = windows_notification_servicesIcon;
 }
 
 export class WorkerContainerApp extends _Other {
-  protected static override _iconDataUrl = worker_container_appIcon;
+  protected static _iconDataUrl = worker_container_appIcon;
 }

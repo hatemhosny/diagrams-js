@@ -25,81 +25,81 @@ class _Web extends _Azure {
 }
 
 export class APICenter extends _Web {
-  protected static override _iconDataUrl = api_centerIcon;
+  protected static _iconDataUrl = api_centerIcon;
 }
 
 export class APIConnections extends _Web {
-  protected static override _iconDataUrl = api_connectionsIcon;
+  protected static _iconDataUrl = api_connectionsIcon;
 }
 
 export class APIManagementServices extends _Web {
-  protected static override _iconDataUrl = api_management_servicesIcon;
+  protected static _iconDataUrl = api_management_servicesIcon;
 }
 
 export class AppServiceCertificates extends _Web {
-  protected static override _iconDataUrl = app_service_certificatesIcon;
+  protected static _iconDataUrl = app_service_certificatesIcon;
 }
 
 export class AppServiceDomains extends _Web {
-  protected static override _iconDataUrl = app_service_domainsIcon;
+  protected static _iconDataUrl = app_service_domainsIcon;
 }
 
 export class AppServiceEnvironments extends _Web {
-  protected static override _iconDataUrl = app_service_environmentsIcon;
+  protected static _iconDataUrl = app_service_environmentsIcon;
 }
 
 export class AppServicePlans extends _Web {
-  protected static override _iconDataUrl = app_service_plansIcon;
+  protected static _iconDataUrl = app_service_plansIcon;
 }
 
 export class AppServices extends _Web {
-  protected static override _iconDataUrl = app_servicesIcon;
+  protected static _iconDataUrl = app_servicesIcon;
 }
 
 export class AppSpace extends _Web {
-  protected static override _iconDataUrl = app_spaceIcon;
+  protected static _iconDataUrl = app_spaceIcon;
 }
 
 export class AzureMediaService extends _Web {
-  protected static override _iconDataUrl = azure_media_serviceIcon;
+  protected static _iconDataUrl = azure_media_serviceIcon;
 }
 
 export class AzureSpringApps extends _Web {
-  protected static override _iconDataUrl = azure_spring_appsIcon;
+  protected static _iconDataUrl = azure_spring_appsIcon;
 }
 
 export class CognitiveSearch extends _Web {
-  protected static override _iconDataUrl = cognitive_searchIcon;
+  protected static _iconDataUrl = cognitive_searchIcon;
 }
 
 export class CognitiveServices extends _Web {
-  protected static override _iconDataUrl = cognitive_servicesIcon;
+  protected static _iconDataUrl = cognitive_servicesIcon;
 }
 
 export class FrontDoorAndCDNProfiles extends _Web {
-  protected static override _iconDataUrl = front_door_and_cdn_profilesIcon;
+  protected static _iconDataUrl = front_door_and_cdn_profilesIcon;
 }
 
 export class MediaServices extends _Web {
-  protected static override _iconDataUrl = media_servicesIcon;
+  protected static _iconDataUrl = media_servicesIcon;
 }
 
 export class NotificationHubNamespaces extends _Web {
-  protected static override _iconDataUrl = notification_hub_namespacesIcon;
+  protected static _iconDataUrl = notification_hub_namespacesIcon;
 }
 
 export class PowerPlatform extends _Web {
-  protected static override _iconDataUrl = power_platformIcon;
+  protected static _iconDataUrl = power_platformIcon;
 }
 
 export class Search extends _Web {
-  protected static override _iconDataUrl = searchIcon;
+  protected static _iconDataUrl = searchIcon;
 }
 
 export class Signalr extends _Web {
-  protected static override _iconDataUrl = signalrIcon;
+  protected static _iconDataUrl = signalrIcon;
 }
 
 export class StaticApps extends _Web {
-  protected static override _iconDataUrl = static_appsIcon;
+  protected static _iconDataUrl = static_appsIcon;
 }

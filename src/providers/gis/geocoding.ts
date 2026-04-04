@@ -9,17 +9,17 @@ class _Geocoding extends _Gis {
 }
 
 export class Addok extends _Geocoding {
-  protected static override _iconDataUrl = addokIcon;
+  protected static _iconDataUrl = addokIcon;
 }
 
 export class Gisgraphy extends _Geocoding {
-  protected static override _iconDataUrl = gisgraphyIcon;
+  protected static _iconDataUrl = gisgraphyIcon;
 }
 
 export class Nominatim extends _Geocoding {
-  protected static override _iconDataUrl = nominatimIcon;
+  protected static _iconDataUrl = nominatimIcon;
 }
 
 export class Pelias extends _Geocoding {
-  protected static override _iconDataUrl = peliasIcon;
+  protected static _iconDataUrl = peliasIcon;
 }

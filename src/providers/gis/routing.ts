@@ -9,17 +9,17 @@ class _Routing extends _Gis {
 }
 
 export class Graphhopper extends _Routing {
-  protected static override _iconDataUrl = graphhopperIcon;
+  protected static _iconDataUrl = graphhopperIcon;
 }
 
 export class Osrm extends _Routing {
-  protected static override _iconDataUrl = osrmIcon;
+  protected static _iconDataUrl = osrmIcon;
 }
 
 export class Pgrouting extends _Routing {
-  protected static override _iconDataUrl = pgroutingIcon;
+  protected static _iconDataUrl = pgroutingIcon;
 }
 
 export class Valhalla extends _Routing {
-  protected static override _iconDataUrl = valhallaIcon;
+  protected static _iconDataUrl = valhallaIcon;
 }

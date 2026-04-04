@@ -11,25 +11,25 @@ class _Network extends _Outscale {
 }
 
 export class ClientVpn extends _Network {
-  protected static override _iconDataUrl = client_vpnIcon;
+  protected static _iconDataUrl = client_vpnIcon;
 }
 
 export class InternetService extends _Network {
-  protected static override _iconDataUrl = internet_serviceIcon;
+  protected static _iconDataUrl = internet_serviceIcon;
 }
 
 export class LoadBalancer extends _Network {
-  protected static override _iconDataUrl = load_balancerIcon;
+  protected static _iconDataUrl = load_balancerIcon;
 }
 
 export class NatService extends _Network {
-  protected static override _iconDataUrl = nat_serviceIcon;
+  protected static _iconDataUrl = nat_serviceIcon;
 }
 
 export class Net extends _Network {
-  protected static override _iconDataUrl = netIcon;
+  protected static _iconDataUrl = netIcon;
 }
 
 export class SiteToSiteVpng extends _Network {
-  protected static override _iconDataUrl = site_to_site_vpngIcon;
+  protected static _iconDataUrl = site_to_site_vpngIcon;
 }

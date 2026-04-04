@@ -6,5 +6,5 @@ class _Blank extends _Generic {
 }
 
 export class Blank extends _Blank {
-  protected static override _iconDataUrl = blankIcon;
+  protected static _iconDataUrl = blankIcon;
 }

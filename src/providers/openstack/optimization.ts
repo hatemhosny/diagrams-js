@@ -9,17 +9,17 @@ class _Optimization extends _Openstack {
 }
 
 export class Congress extends _Optimization {
-  protected static override _iconDataUrl = congressIcon;
+  protected static _iconDataUrl = congressIcon;
 }
 
 export class Rally extends _Optimization {
-  protected static override _iconDataUrl = rallyIcon;
+  protected static _iconDataUrl = rallyIcon;
 }
 
 export class Vitrage extends _Optimization {
-  protected static override _iconDataUrl = vitrageIcon;
+  protected static _iconDataUrl = vitrageIcon;
 }
 
 export class Watcher extends _Optimization {
-  protected static override _iconDataUrl = watcherIcon;
+  protected static _iconDataUrl = watcherIcon;
 }

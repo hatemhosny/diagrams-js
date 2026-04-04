@@ -20,61 +20,61 @@ class _Management extends _Ibm {
 }
 
 export class AlertNotification extends _Management {
-  protected static override _iconDataUrl = alert_notificationIcon;
+  protected static _iconDataUrl = alert_notificationIcon;
 }
 
 export class ApiManagement extends _Management {
-  protected static override _iconDataUrl = api_managementIcon;
+  protected static _iconDataUrl = api_managementIcon;
 }
 
 export class CloudManagement extends _Management {
-  protected static override _iconDataUrl = cloud_managementIcon;
+  protected static _iconDataUrl = cloud_managementIcon;
 }
 
 export class ClusterManagement extends _Management {
-  protected static override _iconDataUrl = cluster_managementIcon;
+  protected static _iconDataUrl = cluster_managementIcon;
 }
 
 export class ContentManagement extends _Management {
-  protected static override _iconDataUrl = content_managementIcon;
+  protected static _iconDataUrl = content_managementIcon;
 }
 
 export class DataServices extends _Management {
-  protected static override _iconDataUrl = data_servicesIcon;
+  protected static _iconDataUrl = data_servicesIcon;
 }
 
 export class DeviceManagement extends _Management {
-  protected static override _iconDataUrl = device_managementIcon;
+  protected static _iconDataUrl = device_managementIcon;
 }
 
 export class InformationGovernance extends _Management {
-  protected static override _iconDataUrl = information_governanceIcon;
+  protected static _iconDataUrl = information_governanceIcon;
 }
 
 export class ItServiceManagement extends _Management {
-  protected static override _iconDataUrl = it_service_managementIcon;
+  protected static _iconDataUrl = it_service_managementIcon;
 }
 
 export class Management extends _Management {
-  protected static override _iconDataUrl = managementIcon;
+  protected static _iconDataUrl = managementIcon;
 }
 
 export class MonitoringMetrics extends _Management {
-  protected static override _iconDataUrl = monitoring_metricsIcon;
+  protected static _iconDataUrl = monitoring_metricsIcon;
 }
 
 export class ProcessManagement extends _Management {
-  protected static override _iconDataUrl = process_managementIcon;
+  protected static _iconDataUrl = process_managementIcon;
 }
 
 export class ProviderCloudPortalService extends _Management {
-  protected static override _iconDataUrl = provider_cloud_portal_serviceIcon;
+  protected static _iconDataUrl = provider_cloud_portal_serviceIcon;
 }
 
 export class PushNotifications extends _Management {
-  protected static override _iconDataUrl = push_notificationsIcon;
+  protected static _iconDataUrl = push_notificationsIcon;
 }
 
 export class ServiceManagementTools extends _Management {
-  protected static override _iconDataUrl = service_management_toolsIcon;
+  protected static _iconDataUrl = service_management_toolsIcon;
 }

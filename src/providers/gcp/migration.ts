@@ -7,11 +7,11 @@ class _Migration extends _Gcp {
 }
 
 export class MigrateComputeEngine extends _Migration {
-  protected static override _iconDataUrl = migrate_compute_engineIcon;
+  protected static _iconDataUrl = migrate_compute_engineIcon;
 }
 
 export class TransferAppliance extends _Migration {
-  protected static override _iconDataUrl = transfer_applianceIcon;
+  protected static _iconDataUrl = transfer_applianceIcon;
 }
 
 // Aliases

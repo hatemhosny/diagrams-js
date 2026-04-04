@@ -6,5 +6,5 @@ class _Media extends _Saas {
 }
 
 export class Cloudinary extends _Media {
-  protected static override _iconDataUrl = cloudinaryIcon;
+  protected static _iconDataUrl = cloudinaryIcon;
 }

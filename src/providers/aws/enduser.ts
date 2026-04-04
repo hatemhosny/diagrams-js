@@ -10,21 +10,21 @@ class _Enduser extends _Aws {
 }
 
 export class Appstream20 extends _Enduser {
-  protected static override _iconDataUrl = appstream_2_0Icon;
+  protected static _iconDataUrl = appstream_2_0Icon;
 }
 
 export class DesktopAndAppStreaming extends _Enduser {
-  protected static override _iconDataUrl = desktop_and_app_streamingIcon;
+  protected static _iconDataUrl = desktop_and_app_streamingIcon;
 }
 
 export class Workdocs extends _Enduser {
-  protected static override _iconDataUrl = workdocsIcon;
+  protected static _iconDataUrl = workdocsIcon;
 }
 
 export class Worklink extends _Enduser {
-  protected static override _iconDataUrl = worklinkIcon;
+  protected static _iconDataUrl = worklinkIcon;
 }
 
 export class Workspaces extends _Enduser {
-  protected static override _iconDataUrl = workspacesIcon;
+  protected static _iconDataUrl = workspacesIcon;
 }

@@ -63,29 +63,33 @@ async function buildProvider(provider) {
         outdir,
         outExtension: { ".js": ".js" },
         loader: { ".png": "dataurl" },
-        external: ["../../core/*.js", "../core/*.js", "../../../core/*.js", "*.mjs"],
+        external: [
+          "../../Node.js",
+          "../../../Node.js",
+          "../../../../Node.js",
+          "../*.mjs",
+          "../../*.mjs",
+          "../../../*.mjs",
+        ],
       });
 
       // Rewrite imports to point to the main bundle
       const outFile = path.join(outdir, file.replace(".ts", ".js"));
       let content = fs.readFileSync(outFile, "utf-8");
 
-      // Replace imports from core/ to point to the main bundle
-      content = content.replace(
-        /from\s+["']\.\.\/core\/([^"']+)\.js["']/g,
-        'from "../../index.mjs"',
-      );
+      // Replace imports from ../../Node.js to point to the main bundle
+      content = content.replace(/from\s+["']\.\.\/\.\.\/Node\.js["']/g, 'from "../../index.mjs"');
 
-      // Replace imports from ../../core/ to point to main bundle
+      // Replace imports from ../../../Node.js to point to main bundle
       content = content.replace(
-        /from\s+["']\.\.\/\.\.\/core\/([^"']+)\.js["']/g,
-        'from "../../index.mjs"',
-      );
-
-      // Replace imports from ../../../core/ to point to main bundle
-      content = content.replace(
-        /from\s+["']\.\.\/\.\.\/\.\.\/core\/([^"']+)\.js["']/g,
+        /from\s+["']\.\.\/\.\.\/\.\.\/Node\.js["']/g,
         'from "../../../index.mjs"',
+      );
+
+      // Replace imports from ../../../../Node.js to point to main bundle
+      content = content.replace(
+        /from\s+["']\.\.\/\.\.\/\.\.\/\.\.\/Node\.js["']/g,
+        'from "../../../../index.mjs"',
       );
 
       fs.writeFileSync(outFile, content);

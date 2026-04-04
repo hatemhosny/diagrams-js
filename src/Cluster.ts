@@ -1,7 +1,6 @@
 import type { Diagram } from "./Diagram.js";
 import type { Node } from "./Node.js";
 import { getDiagram, getCluster, setCluster, clearCluster } from "./context.js";
-import type { ThemeConfig } from "./types.js";
 
 export class Cluster {
   private static defaultGraphAttrs: Record<string, string> = {

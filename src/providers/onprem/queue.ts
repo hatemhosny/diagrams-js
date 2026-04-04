@@ -12,31 +12,31 @@ class _Queue extends _Onprem {
 }
 
 export class Activemq extends _Queue {
-  protected static override _iconDataUrl = activemqIcon;
+  protected static _iconDataUrl = activemqIcon;
 }
 
 export class Celery extends _Queue {
-  protected static override _iconDataUrl = celeryIcon;
+  protected static _iconDataUrl = celeryIcon;
 }
 
 export class Emqx extends _Queue {
-  protected static override _iconDataUrl = emqxIcon;
+  protected static _iconDataUrl = emqxIcon;
 }
 
 export class Kafka extends _Queue {
-  protected static override _iconDataUrl = kafkaIcon;
+  protected static _iconDataUrl = kafkaIcon;
 }
 
 export class Nats extends _Queue {
-  protected static override _iconDataUrl = natsIcon;
+  protected static _iconDataUrl = natsIcon;
 }
 
 export class Rabbitmq extends _Queue {
-  protected static override _iconDataUrl = rabbitmqIcon;
+  protected static _iconDataUrl = rabbitmqIcon;
 }
 
 export class Zeromq extends _Queue {
-  protected static override _iconDataUrl = zeromqIcon;
+  protected static _iconDataUrl = zeromqIcon;
 }
 
 // Aliases

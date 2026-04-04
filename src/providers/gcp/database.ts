@@ -11,27 +11,27 @@ class _Database extends _Gcp {
 }
 
 export class Bigtable extends _Database {
-  protected static override _iconDataUrl = bigtableIcon;
+  protected static _iconDataUrl = bigtableIcon;
 }
 
 export class Datastore extends _Database {
-  protected static override _iconDataUrl = datastoreIcon;
+  protected static _iconDataUrl = datastoreIcon;
 }
 
 export class Firestore extends _Database {
-  protected static override _iconDataUrl = firestoreIcon;
+  protected static _iconDataUrl = firestoreIcon;
 }
 
 export class Memorystore extends _Database {
-  protected static override _iconDataUrl = memorystoreIcon;
+  protected static _iconDataUrl = memorystoreIcon;
 }
 
 export class Spanner extends _Database {
-  protected static override _iconDataUrl = spannerIcon;
+  protected static _iconDataUrl = spannerIcon;
 }
 
 export class SQL extends _Database {
-  protected static override _iconDataUrl = sqlIcon;
+  protected static _iconDataUrl = sqlIcon;
 }
 
 // Aliases

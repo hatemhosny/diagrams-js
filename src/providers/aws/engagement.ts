@@ -10,23 +10,23 @@ class _Engagement extends _Aws {
 }
 
 export class Connect extends _Engagement {
-  protected static override _iconDataUrl = connectIcon;
+  protected static _iconDataUrl = connectIcon;
 }
 
 export class CustomerEngagement extends _Engagement {
-  protected static override _iconDataUrl = customer_engagementIcon;
+  protected static _iconDataUrl = customer_engagementIcon;
 }
 
 export class Pinpoint extends _Engagement {
-  protected static override _iconDataUrl = pinpointIcon;
+  protected static _iconDataUrl = pinpointIcon;
 }
 
 export class SimpleEmailServiceSesEmail extends _Engagement {
-  protected static override _iconDataUrl = simple_email_service_ses_emailIcon;
+  protected static _iconDataUrl = simple_email_service_ses_emailIcon;
 }
 
 export class SimpleEmailServiceSes extends _Engagement {
-  protected static override _iconDataUrl = simple_email_service_sesIcon;
+  protected static _iconDataUrl = simple_email_service_sesIcon;
 }
 
 // Aliases

@@ -23,75 +23,75 @@ class _Security extends _Alibabacloud {
 }
 
 export class AntiBotService extends _Security {
-  protected static override _iconDataUrl = anti_bot_serviceIcon;
+  protected static _iconDataUrl = anti_bot_serviceIcon;
 }
 
 export class AntiDdosBasic extends _Security {
-  protected static override _iconDataUrl = anti_ddos_basicIcon;
+  protected static _iconDataUrl = anti_ddos_basicIcon;
 }
 
 export class AntiDdosPro extends _Security {
-  protected static override _iconDataUrl = anti_ddos_proIcon;
+  protected static _iconDataUrl = anti_ddos_proIcon;
 }
 
 export class AntifraudService extends _Security {
-  protected static override _iconDataUrl = antifraud_serviceIcon;
+  protected static _iconDataUrl = antifraud_serviceIcon;
 }
 
 export class BastionHost extends _Security {
-  protected static override _iconDataUrl = bastion_hostIcon;
+  protected static _iconDataUrl = bastion_hostIcon;
 }
 
 export class CloudFirewall extends _Security {
-  protected static override _iconDataUrl = cloud_firewallIcon;
+  protected static _iconDataUrl = cloud_firewallIcon;
 }
 
 export class CloudSecurityScanner extends _Security {
-  protected static override _iconDataUrl = cloud_security_scannerIcon;
+  protected static _iconDataUrl = cloud_security_scannerIcon;
 }
 
 export class ContentModeration extends _Security {
-  protected static override _iconDataUrl = content_moderationIcon;
+  protected static _iconDataUrl = content_moderationIcon;
 }
 
 export class CrowdsourcedSecurityTesting extends _Security {
-  protected static override _iconDataUrl = crowdsourced_security_testingIcon;
+  protected static _iconDataUrl = crowdsourced_security_testingIcon;
 }
 
 export class DataEncryptionService extends _Security {
-  protected static override _iconDataUrl = data_encryption_serviceIcon;
+  protected static _iconDataUrl = data_encryption_serviceIcon;
 }
 
 export class DbAudit extends _Security {
-  protected static override _iconDataUrl = db_auditIcon;
+  protected static _iconDataUrl = db_auditIcon;
 }
 
 export class GameShield extends _Security {
-  protected static override _iconDataUrl = game_shieldIcon;
+  protected static _iconDataUrl = game_shieldIcon;
 }
 
 export class IdVerification extends _Security {
-  protected static override _iconDataUrl = id_verificationIcon;
+  protected static _iconDataUrl = id_verificationIcon;
 }
 
 export class ManagedSecurityService extends _Security {
-  protected static override _iconDataUrl = managed_security_serviceIcon;
+  protected static _iconDataUrl = managed_security_serviceIcon;
 }
 
 export class SecurityCenter extends _Security {
-  protected static override _iconDataUrl = security_centerIcon;
+  protected static _iconDataUrl = security_centerIcon;
 }
 
 export class ServerGuard extends _Security {
-  protected static override _iconDataUrl = server_guardIcon;
+  protected static _iconDataUrl = server_guardIcon;
 }
 
 export class SslCertificates extends _Security {
-  protected static override _iconDataUrl = ssl_certificatesIcon;
+  protected static _iconDataUrl = ssl_certificatesIcon;
 }
 
 export class WebApplicationFirewall extends _Security {
-  protected static override _iconDataUrl = web_application_firewallIcon;
+  protected static _iconDataUrl = web_application_firewallIcon;
 }
 
 // Aliases

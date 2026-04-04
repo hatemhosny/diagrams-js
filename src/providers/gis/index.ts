@@ -1,4 +1,4 @@
-import { Node } from "../../core/Node.js";
+import { Node } from "../../Node.js";
 
 export class _Gis extends Node {
   protected static override _provider = "gis";

@@ -13,33 +13,33 @@ class _Chat extends _Saas {
 }
 
 export class Discord extends _Chat {
-  protected static override _iconDataUrl = discordIcon;
+  protected static _iconDataUrl = discordIcon;
 }
 
 export class Line extends _Chat {
-  protected static override _iconDataUrl = lineIcon;
+  protected static _iconDataUrl = lineIcon;
 }
 
 export class Mattermost extends _Chat {
-  protected static override _iconDataUrl = mattermostIcon;
+  protected static _iconDataUrl = mattermostIcon;
 }
 
 export class Messenger extends _Chat {
-  protected static override _iconDataUrl = messengerIcon;
+  protected static _iconDataUrl = messengerIcon;
 }
 
 export class RocketChat extends _Chat {
-  protected static override _iconDataUrl = rocket_chatIcon;
+  protected static _iconDataUrl = rocket_chatIcon;
 }
 
 export class Slack extends _Chat {
-  protected static override _iconDataUrl = slackIcon;
+  protected static _iconDataUrl = slackIcon;
 }
 
 export class Teams extends _Chat {
-  protected static override _iconDataUrl = teamsIcon;
+  protected static _iconDataUrl = teamsIcon;
 }
 
 export class Telegram extends _Chat {
-  protected static override _iconDataUrl = telegramIcon;
+  protected static _iconDataUrl = telegramIcon;
 }

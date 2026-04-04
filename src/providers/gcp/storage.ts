@@ -9,19 +9,19 @@ class _Storage extends _Gcp {
 }
 
 export class Filestore extends _Storage {
-  protected static override _iconDataUrl = filestoreIcon;
+  protected static _iconDataUrl = filestoreIcon;
 }
 
 export class LocalSSD extends _Storage {
-  protected static override _iconDataUrl = local_ssdIcon;
+  protected static _iconDataUrl = local_ssdIcon;
 }
 
 export class PersistentDisk extends _Storage {
-  protected static override _iconDataUrl = persistent_diskIcon;
+  protected static _iconDataUrl = persistent_diskIcon;
 }
 
 export class Storage extends _Storage {
-  protected static override _iconDataUrl = storageIcon;
+  protected static _iconDataUrl = storageIcon;
 }
 
 // Aliases

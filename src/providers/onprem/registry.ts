@@ -7,9 +7,9 @@ class _Registry extends _Onprem {
 }
 
 export class Harbor extends _Registry {
-  protected static override _iconDataUrl = harborIcon;
+  protected static _iconDataUrl = harborIcon;
 }
 
 export class Jfrog extends _Registry {
-  protected static override _iconDataUrl = jfrogIcon;
+  protected static _iconDataUrl = jfrogIcon;
 }

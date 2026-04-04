@@ -6,5 +6,5 @@ class _Nfv extends _Openstack {
 }
 
 export class Tacker extends _Nfv {
-  protected static override _iconDataUrl = tackerIcon;
+  protected static _iconDataUrl = tackerIcon;
 }

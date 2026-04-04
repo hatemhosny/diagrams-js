@@ -7,9 +7,9 @@ class _Social extends _Saas {
 }
 
 export class Facebook extends _Social {
-  protected static override _iconDataUrl = facebookIcon;
+  protected static _iconDataUrl = facebookIcon;
 }
 
 export class Twitter extends _Social {
-  protected static override _iconDataUrl = twitterIcon;
+  protected static _iconDataUrl = twitterIcon;
 }

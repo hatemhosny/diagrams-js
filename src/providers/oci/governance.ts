@@ -19,57 +19,57 @@ class _Governance extends _Oci {
 }
 
 export class AuditWhite extends _Governance {
-  protected static override _iconDataUrl = audit_whiteIcon;
+  protected static _iconDataUrl = audit_whiteIcon;
 }
 
 export class Audit extends _Governance {
-  protected static override _iconDataUrl = auditIcon;
+  protected static _iconDataUrl = auditIcon;
 }
 
 export class CompartmentsWhite extends _Governance {
-  protected static override _iconDataUrl = compartments_whiteIcon;
+  protected static _iconDataUrl = compartments_whiteIcon;
 }
 
 export class Compartments extends _Governance {
-  protected static override _iconDataUrl = compartmentsIcon;
+  protected static _iconDataUrl = compartmentsIcon;
 }
 
 export class GroupsWhite extends _Governance {
-  protected static override _iconDataUrl = groups_whiteIcon;
+  protected static _iconDataUrl = groups_whiteIcon;
 }
 
 export class Groups extends _Governance {
-  protected static override _iconDataUrl = groupsIcon;
+  protected static _iconDataUrl = groupsIcon;
 }
 
 export class LoggingWhite extends _Governance {
-  protected static override _iconDataUrl = logging_whiteIcon;
+  protected static _iconDataUrl = logging_whiteIcon;
 }
 
 export class Logging extends _Governance {
-  protected static override _iconDataUrl = loggingIcon;
+  protected static _iconDataUrl = loggingIcon;
 }
 
 export class OCIDWhite extends _Governance {
-  protected static override _iconDataUrl = ocid_whiteIcon;
+  protected static _iconDataUrl = ocid_whiteIcon;
 }
 
 export class OCID extends _Governance {
-  protected static override _iconDataUrl = ocidIcon;
+  protected static _iconDataUrl = ocidIcon;
 }
 
 export class PoliciesWhite extends _Governance {
-  protected static override _iconDataUrl = policies_whiteIcon;
+  protected static _iconDataUrl = policies_whiteIcon;
 }
 
 export class Policies extends _Governance {
-  protected static override _iconDataUrl = policiesIcon;
+  protected static _iconDataUrl = policiesIcon;
 }
 
 export class TaggingWhite extends _Governance {
-  protected static override _iconDataUrl = tagging_whiteIcon;
+  protected static _iconDataUrl = tagging_whiteIcon;
 }
 
 export class Tagging extends _Governance {
-  protected static override _iconDataUrl = taggingIcon;
+  protected static _iconDataUrl = taggingIcon;
 }

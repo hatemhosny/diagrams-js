@@ -6,5 +6,5 @@ class _Base extends _Firebase {
 }
 
 export class Firebase extends _Base {
-  protected static override _iconDataUrl = firebaseIcon;
+  protected static _iconDataUrl = firebaseIcon;
 }

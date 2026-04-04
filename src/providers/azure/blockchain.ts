@@ -11,25 +11,25 @@ class _Blockchain extends _Azure {
 }
 
 export class AbsMember extends _Blockchain {
-  protected static override _iconDataUrl = abs_memberIcon;
+  protected static _iconDataUrl = abs_memberIcon;
 }
 
 export class AzureBlockchainService extends _Blockchain {
-  protected static override _iconDataUrl = azure_blockchain_serviceIcon;
+  protected static _iconDataUrl = azure_blockchain_serviceIcon;
 }
 
 export class AzureTokenService extends _Blockchain {
-  protected static override _iconDataUrl = azure_token_serviceIcon;
+  protected static _iconDataUrl = azure_token_serviceIcon;
 }
 
 export class BlockchainApplications extends _Blockchain {
-  protected static override _iconDataUrl = blockchain_applicationsIcon;
+  protected static _iconDataUrl = blockchain_applicationsIcon;
 }
 
 export class Consortium extends _Blockchain {
-  protected static override _iconDataUrl = consortiumIcon;
+  protected static _iconDataUrl = consortiumIcon;
 }
 
 export class OutboundConnection extends _Blockchain {
-  protected static override _iconDataUrl = outbound_connectionIcon;
+  protected static _iconDataUrl = outbound_connectionIcon;
 }

@@ -7,9 +7,9 @@ class _Game extends _Aws {
 }
 
 export class GameTech extends _Game {
-  protected static override _iconDataUrl = game_techIcon;
+  protected static _iconDataUrl = game_techIcon;
 }
 
 export class Gamelift extends _Game {
-  protected static override _iconDataUrl = gameliftIcon;
+  protected static _iconDataUrl = gameliftIcon;
 }

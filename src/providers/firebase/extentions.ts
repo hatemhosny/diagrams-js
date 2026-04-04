@@ -6,5 +6,5 @@ class _Extentions extends _Firebase {
 }
 
 export class Extensions extends _Extentions {
-  protected static override _iconDataUrl = extensionsIcon;
+  protected static _iconDataUrl = extensionsIcon;
 }

@@ -6,5 +6,5 @@ class _Iot extends _Gcp {
 }
 
 export class IotCore extends _Iot {
-  protected static override _iconDataUrl = iot_coreIcon;
+  protected static _iconDataUrl = iot_coreIcon;
 }

@@ -22,71 +22,71 @@ class _Database extends _Alibabacloud {
 }
 
 export class ApsaradbCassandra extends _Database {
-  protected static override _iconDataUrl = apsaradb_cassandraIcon;
+  protected static _iconDataUrl = apsaradb_cassandraIcon;
 }
 
 export class ApsaradbHbase extends _Database {
-  protected static override _iconDataUrl = apsaradb_hbaseIcon;
+  protected static _iconDataUrl = apsaradb_hbaseIcon;
 }
 
 export class ApsaradbMemcache extends _Database {
-  protected static override _iconDataUrl = apsaradb_memcacheIcon;
+  protected static _iconDataUrl = apsaradb_memcacheIcon;
 }
 
 export class ApsaradbMongodb extends _Database {
-  protected static override _iconDataUrl = apsaradb_mongodbIcon;
+  protected static _iconDataUrl = apsaradb_mongodbIcon;
 }
 
 export class ApsaradbOceanbase extends _Database {
-  protected static override _iconDataUrl = apsaradb_oceanbaseIcon;
+  protected static _iconDataUrl = apsaradb_oceanbaseIcon;
 }
 
 export class ApsaradbPolardb extends _Database {
-  protected static override _iconDataUrl = apsaradb_polardbIcon;
+  protected static _iconDataUrl = apsaradb_polardbIcon;
 }
 
 export class ApsaradbPostgresql extends _Database {
-  protected static override _iconDataUrl = apsaradb_postgresqlIcon;
+  protected static _iconDataUrl = apsaradb_postgresqlIcon;
 }
 
 export class ApsaradbPpas extends _Database {
-  protected static override _iconDataUrl = apsaradb_ppasIcon;
+  protected static _iconDataUrl = apsaradb_ppasIcon;
 }
 
 export class ApsaradbRedis extends _Database {
-  protected static override _iconDataUrl = apsaradb_redisIcon;
+  protected static _iconDataUrl = apsaradb_redisIcon;
 }
 
 export class ApsaradbSqlserver extends _Database {
-  protected static override _iconDataUrl = apsaradb_sqlserverIcon;
+  protected static _iconDataUrl = apsaradb_sqlserverIcon;
 }
 
 export class DataManagementService extends _Database {
-  protected static override _iconDataUrl = data_management_serviceIcon;
+  protected static _iconDataUrl = data_management_serviceIcon;
 }
 
 export class DataTransmissionService extends _Database {
-  protected static override _iconDataUrl = data_transmission_serviceIcon;
+  protected static _iconDataUrl = data_transmission_serviceIcon;
 }
 
 export class DatabaseBackupService extends _Database {
-  protected static override _iconDataUrl = database_backup_serviceIcon;
+  protected static _iconDataUrl = database_backup_serviceIcon;
 }
 
 export class DisributeRelationalDatabaseService extends _Database {
-  protected static override _iconDataUrl = disribute_relational_database_serviceIcon;
+  protected static _iconDataUrl = disribute_relational_database_serviceIcon;
 }
 
 export class GraphDatabaseService extends _Database {
-  protected static override _iconDataUrl = graph_database_serviceIcon;
+  protected static _iconDataUrl = graph_database_serviceIcon;
 }
 
 export class HybriddbForMysql extends _Database {
-  protected static override _iconDataUrl = hybriddb_for_mysqlIcon;
+  protected static _iconDataUrl = hybriddb_for_mysqlIcon;
 }
 
 export class RelationalDatabaseService extends _Database {
-  protected static override _iconDataUrl = relational_database_serviceIcon;
+  protected static _iconDataUrl = relational_database_serviceIcon;
 }
 
 // Aliases

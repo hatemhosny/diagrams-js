@@ -9,19 +9,19 @@ class _Network extends _K8s {
 }
 
 export class Ep extends _Network {
-  protected static override _iconDataUrl = epIcon;
+  protected static _iconDataUrl = epIcon;
 }
 
 export class Ing extends _Network {
-  protected static override _iconDataUrl = ingIcon;
+  protected static _iconDataUrl = ingIcon;
 }
 
 export class Netpol extends _Network {
-  protected static override _iconDataUrl = netpolIcon;
+  protected static _iconDataUrl = netpolIcon;
 }
 
 export class SVC extends _Network {
-  protected static override _iconDataUrl = svcIcon;
+  protected static _iconDataUrl = svcIcon;
 }
 
 // Aliases

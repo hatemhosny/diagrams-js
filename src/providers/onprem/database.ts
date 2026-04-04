@@ -25,83 +25,83 @@ class _Database extends _Onprem {
 }
 
 export class Cassandra extends _Database {
-  protected static override _iconDataUrl = cassandraIcon;
+  protected static _iconDataUrl = cassandraIcon;
 }
 
 export class Clickhouse extends _Database {
-  protected static override _iconDataUrl = clickhouseIcon;
+  protected static _iconDataUrl = clickhouseIcon;
 }
 
 export class Cockroachdb extends _Database {
-  protected static override _iconDataUrl = cockroachdbIcon;
+  protected static _iconDataUrl = cockroachdbIcon;
 }
 
 export class Couchbase extends _Database {
-  protected static override _iconDataUrl = couchbaseIcon;
+  protected static _iconDataUrl = couchbaseIcon;
 }
 
 export class Couchdb extends _Database {
-  protected static override _iconDataUrl = couchdbIcon;
+  protected static _iconDataUrl = couchdbIcon;
 }
 
 export class Dgraph extends _Database {
-  protected static override _iconDataUrl = dgraphIcon;
+  protected static _iconDataUrl = dgraphIcon;
 }
 
 export class Druid extends _Database {
-  protected static override _iconDataUrl = druidIcon;
+  protected static _iconDataUrl = druidIcon;
 }
 
 export class Duckdb extends _Database {
-  protected static override _iconDataUrl = duckdbIcon;
+  protected static _iconDataUrl = duckdbIcon;
 }
 
 export class Hbase extends _Database {
-  protected static override _iconDataUrl = hbaseIcon;
+  protected static _iconDataUrl = hbaseIcon;
 }
 
 export class Influxdb extends _Database {
-  protected static override _iconDataUrl = influxdbIcon;
+  protected static _iconDataUrl = influxdbIcon;
 }
 
 export class Janusgraph extends _Database {
-  protected static override _iconDataUrl = janusgraphIcon;
+  protected static _iconDataUrl = janusgraphIcon;
 }
 
 export class Mariadb extends _Database {
-  protected static override _iconDataUrl = mariadbIcon;
+  protected static _iconDataUrl = mariadbIcon;
 }
 
 export class Mongodb extends _Database {
-  protected static override _iconDataUrl = mongodbIcon;
+  protected static _iconDataUrl = mongodbIcon;
 }
 
 export class Mssql extends _Database {
-  protected static override _iconDataUrl = mssqlIcon;
+  protected static _iconDataUrl = mssqlIcon;
 }
 
 export class Mysql extends _Database {
-  protected static override _iconDataUrl = mysqlIcon;
+  protected static _iconDataUrl = mysqlIcon;
 }
 
 export class Neo4j extends _Database {
-  protected static override _iconDataUrl = neo4jIcon;
+  protected static _iconDataUrl = neo4jIcon;
 }
 
 export class Oracle extends _Database {
-  protected static override _iconDataUrl = oracleIcon;
+  protected static _iconDataUrl = oracleIcon;
 }
 
 export class Postgresql extends _Database {
-  protected static override _iconDataUrl = postgresqlIcon;
+  protected static _iconDataUrl = postgresqlIcon;
 }
 
 export class Qdrant extends _Database {
-  protected static override _iconDataUrl = qdrantIcon;
+  protected static _iconDataUrl = qdrantIcon;
 }
 
 export class Scylla extends _Database {
-  protected static override _iconDataUrl = scyllaIcon;
+  protected static _iconDataUrl = scyllaIcon;
 }
 
 // Aliases

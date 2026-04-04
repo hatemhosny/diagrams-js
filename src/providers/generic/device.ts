@@ -7,9 +7,9 @@ class _Device extends _Generic {
 }
 
 export class Mobile extends _Device {
-  protected static override _iconDataUrl = mobileIcon;
+  protected static _iconDataUrl = mobileIcon;
 }
 
 export class Tablet extends _Device {
-  protected static override _iconDataUrl = tabletIcon;
+  protected static _iconDataUrl = tabletIcon;
 }

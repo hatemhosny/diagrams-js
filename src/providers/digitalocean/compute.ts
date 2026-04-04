@@ -13,33 +13,33 @@ class _Compute extends _Digitalocean {
 }
 
 export class Containers extends _Compute {
-  protected static override _iconDataUrl = containersIcon;
+  protected static _iconDataUrl = containersIcon;
 }
 
 export class Docker extends _Compute {
-  protected static override _iconDataUrl = dockerIcon;
+  protected static _iconDataUrl = dockerIcon;
 }
 
 export class DropletConnect extends _Compute {
-  protected static override _iconDataUrl = droplet_connectIcon;
+  protected static _iconDataUrl = droplet_connectIcon;
 }
 
 export class DropletSnapshot extends _Compute {
-  protected static override _iconDataUrl = droplet_snapshotIcon;
+  protected static _iconDataUrl = droplet_snapshotIcon;
 }
 
 export class Droplet extends _Compute {
-  protected static override _iconDataUrl = dropletIcon;
+  protected static _iconDataUrl = dropletIcon;
 }
 
 export class K8sCluster extends _Compute {
-  protected static override _iconDataUrl = k8s_clusterIcon;
+  protected static _iconDataUrl = k8s_clusterIcon;
 }
 
 export class K8sNodePool extends _Compute {
-  protected static override _iconDataUrl = k8s_node_poolIcon;
+  protected static _iconDataUrl = k8s_node_poolIcon;
 }
 
 export class K8sNode extends _Compute {
-  protected static override _iconDataUrl = k8s_nodeIcon;
+  protected static _iconDataUrl = k8s_nodeIcon;
 }

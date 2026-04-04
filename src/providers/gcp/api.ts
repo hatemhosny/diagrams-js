@@ -8,13 +8,13 @@ class _Api extends _Gcp {
 }
 
 export class APIGateway extends _Api {
-  protected static override _iconDataUrl = api_gatewayIcon;
+  protected static _iconDataUrl = api_gatewayIcon;
 }
 
 export class Apigee extends _Api {
-  protected static override _iconDataUrl = apigeeIcon;
+  protected static _iconDataUrl = apigeeIcon;
 }
 
 export class Endpoints extends _Api {
-  protected static override _iconDataUrl = endpointsIcon;
+  protected static _iconDataUrl = endpointsIcon;
 }

@@ -28,95 +28,95 @@ class _Language extends _Programming {
 }
 
 export class Bash extends _Language {
-  protected static override _iconDataUrl = bashIcon;
+  protected static _iconDataUrl = bashIcon;
 }
 
 export class C extends _Language {
-  protected static override _iconDataUrl = cIcon;
+  protected static _iconDataUrl = cIcon;
 }
 
 export class Cpp extends _Language {
-  protected static override _iconDataUrl = cppIcon;
+  protected static _iconDataUrl = cppIcon;
 }
 
 export class Csharp extends _Language {
-  protected static override _iconDataUrl = csharpIcon;
+  protected static _iconDataUrl = csharpIcon;
 }
 
 export class Dart extends _Language {
-  protected static override _iconDataUrl = dartIcon;
+  protected static _iconDataUrl = dartIcon;
 }
 
 export class Elixir extends _Language {
-  protected static override _iconDataUrl = elixirIcon;
+  protected static _iconDataUrl = elixirIcon;
 }
 
 export class Erlang extends _Language {
-  protected static override _iconDataUrl = erlangIcon;
+  protected static _iconDataUrl = erlangIcon;
 }
 
 export class Go extends _Language {
-  protected static override _iconDataUrl = goIcon;
+  protected static _iconDataUrl = goIcon;
 }
 
 export class Java extends _Language {
-  protected static override _iconDataUrl = javaIcon;
+  protected static _iconDataUrl = javaIcon;
 }
 
 export class Javascript extends _Language {
-  protected static override _iconDataUrl = javascriptIcon;
+  protected static _iconDataUrl = javascriptIcon;
 }
 
 export class Kotlin extends _Language {
-  protected static override _iconDataUrl = kotlinIcon;
+  protected static _iconDataUrl = kotlinIcon;
 }
 
 export class Latex extends _Language {
-  protected static override _iconDataUrl = latexIcon;
+  protected static _iconDataUrl = latexIcon;
 }
 
 export class Matlab extends _Language {
-  protected static override _iconDataUrl = matlabIcon;
+  protected static _iconDataUrl = matlabIcon;
 }
 
 export class Nodejs extends _Language {
-  protected static override _iconDataUrl = nodejsIcon;
+  protected static _iconDataUrl = nodejsIcon;
 }
 
 export class Php extends _Language {
-  protected static override _iconDataUrl = phpIcon;
+  protected static _iconDataUrl = phpIcon;
 }
 
 export class Python extends _Language {
-  protected static override _iconDataUrl = pythonIcon;
+  protected static _iconDataUrl = pythonIcon;
 }
 
 export class R extends _Language {
-  protected static override _iconDataUrl = rIcon;
+  protected static _iconDataUrl = rIcon;
 }
 
 export class Ruby extends _Language {
-  protected static override _iconDataUrl = rubyIcon;
+  protected static _iconDataUrl = rubyIcon;
 }
 
 export class Rust extends _Language {
-  protected static override _iconDataUrl = rustIcon;
+  protected static _iconDataUrl = rustIcon;
 }
 
 export class Scala extends _Language {
-  protected static override _iconDataUrl = scalaIcon;
+  protected static _iconDataUrl = scalaIcon;
 }
 
 export class Sql extends _Language {
-  protected static override _iconDataUrl = sqlIcon;
+  protected static _iconDataUrl = sqlIcon;
 }
 
 export class Swift extends _Language {
-  protected static override _iconDataUrl = swiftIcon;
+  protected static _iconDataUrl = swiftIcon;
 }
 
 export class Typescript extends _Language {
-  protected static override _iconDataUrl = typescriptIcon;
+  protected static _iconDataUrl = typescriptIcon;
 }
 
 // Aliases

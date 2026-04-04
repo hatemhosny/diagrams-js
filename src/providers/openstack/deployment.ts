@@ -11,27 +11,27 @@ class _Deployment extends _Openstack {
 }
 
 export class Ansible extends _Deployment {
-  protected static override _iconDataUrl = ansibleIcon;
+  protected static _iconDataUrl = ansibleIcon;
 }
 
 export class Charms extends _Deployment {
-  protected static override _iconDataUrl = charmsIcon;
+  protected static _iconDataUrl = charmsIcon;
 }
 
 export class Chef extends _Deployment {
-  protected static override _iconDataUrl = chefIcon;
+  protected static _iconDataUrl = chefIcon;
 }
 
 export class Helm extends _Deployment {
-  protected static override _iconDataUrl = helmIcon;
+  protected static _iconDataUrl = helmIcon;
 }
 
 export class Kolla extends _Deployment {
-  protected static override _iconDataUrl = kollaIcon;
+  protected static _iconDataUrl = kollaIcon;
 }
 
 export class Tripleo extends _Deployment {
-  protected static override _iconDataUrl = tripleoIcon;
+  protected static _iconDataUrl = tripleoIcon;
 }
 
 // Aliases

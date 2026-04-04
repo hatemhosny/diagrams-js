@@ -7,9 +7,9 @@ class _Monitoring extends _Openstack {
 }
 
 export class Monasca extends _Monitoring {
-  protected static override _iconDataUrl = monascaIcon;
+  protected static _iconDataUrl = monascaIcon;
 }
 
 export class Telemetry extends _Monitoring {
-  protected static override _iconDataUrl = telemetryIcon;
+  protected static _iconDataUrl = telemetryIcon;
 }

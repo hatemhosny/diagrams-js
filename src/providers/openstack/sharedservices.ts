@@ -10,21 +10,21 @@ class _Sharedservices extends _Openstack {
 }
 
 export class Barbican extends _Sharedservices {
-  protected static override _iconDataUrl = barbicanIcon;
+  protected static _iconDataUrl = barbicanIcon;
 }
 
 export class Glance extends _Sharedservices {
-  protected static override _iconDataUrl = glanceIcon;
+  protected static _iconDataUrl = glanceIcon;
 }
 
 export class Karbor extends _Sharedservices {
-  protected static override _iconDataUrl = karborIcon;
+  protected static _iconDataUrl = karborIcon;
 }
 
 export class Keystone extends _Sharedservices {
-  protected static override _iconDataUrl = keystoneIcon;
+  protected static _iconDataUrl = keystoneIcon;
 }
 
 export class Searchlight extends _Sharedservices {
-  protected static override _iconDataUrl = searchlightIcon;
+  protected static _iconDataUrl = searchlightIcon;
 }

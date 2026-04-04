@@ -6,5 +6,5 @@ class _Menu extends _Azure {
 }
 
 export class Keys extends _Menu {
-  protected static override _iconDataUrl = keysIcon;
+  protected static _iconDataUrl = keysIcon;
 }

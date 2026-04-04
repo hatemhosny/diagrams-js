@@ -10,21 +10,21 @@ class _Enablement extends _Aws {
 }
 
 export class CustomerEnablement extends _Enablement {
-  protected static override _iconDataUrl = customer_enablementIcon;
+  protected static _iconDataUrl = customer_enablementIcon;
 }
 
 export class Iq extends _Enablement {
-  protected static override _iconDataUrl = iqIcon;
+  protected static _iconDataUrl = iqIcon;
 }
 
 export class ManagedServices extends _Enablement {
-  protected static override _iconDataUrl = managed_servicesIcon;
+  protected static _iconDataUrl = managed_servicesIcon;
 }
 
 export class ProfessionalServices extends _Enablement {
-  protected static override _iconDataUrl = professional_servicesIcon;
+  protected static _iconDataUrl = professional_servicesIcon;
 }
 
 export class Support extends _Enablement {
-  protected static override _iconDataUrl = supportIcon;
+  protected static _iconDataUrl = supportIcon;
 }

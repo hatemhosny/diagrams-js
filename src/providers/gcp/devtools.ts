@@ -22,71 +22,71 @@ class _Devtools extends _Gcp {
 }
 
 export class Build extends _Devtools {
-  protected static override _iconDataUrl = buildIcon;
+  protected static _iconDataUrl = buildIcon;
 }
 
 export class CloudShell extends _Devtools {
-  protected static override _iconDataUrl = cloud_shellIcon;
+  protected static _iconDataUrl = cloud_shellIcon;
 }
 
 export class CodeForIntellij extends _Devtools {
-  protected static override _iconDataUrl = code_for_intellijIcon;
+  protected static _iconDataUrl = code_for_intellijIcon;
 }
 
 export class Code extends _Devtools {
-  protected static override _iconDataUrl = codeIcon;
+  protected static _iconDataUrl = codeIcon;
 }
 
 export class ContainerRegistry extends _Devtools {
-  protected static override _iconDataUrl = container_registryIcon;
+  protected static _iconDataUrl = container_registryIcon;
 }
 
 export class GradleAppEnginePlugin extends _Devtools {
-  protected static override _iconDataUrl = gradle_app_engine_pluginIcon;
+  protected static _iconDataUrl = gradle_app_engine_pluginIcon;
 }
 
 export class IdePlugins extends _Devtools {
-  protected static override _iconDataUrl = ide_pluginsIcon;
+  protected static _iconDataUrl = ide_pluginsIcon;
 }
 
 export class MavenAppEnginePlugin extends _Devtools {
-  protected static override _iconDataUrl = maven_app_engine_pluginIcon;
+  protected static _iconDataUrl = maven_app_engine_pluginIcon;
 }
 
 export class Scheduler extends _Devtools {
-  protected static override _iconDataUrl = schedulerIcon;
+  protected static _iconDataUrl = schedulerIcon;
 }
 
 export class SDK extends _Devtools {
-  protected static override _iconDataUrl = sdkIcon;
+  protected static _iconDataUrl = sdkIcon;
 }
 
 export class ServiceCatalog extends _Devtools {
-  protected static override _iconDataUrl = service_catalogIcon;
+  protected static _iconDataUrl = service_catalogIcon;
 }
 
 export class SourceRepositories extends _Devtools {
-  protected static override _iconDataUrl = source_repositoriesIcon;
+  protected static _iconDataUrl = source_repositoriesIcon;
 }
 
 export class Tasks extends _Devtools {
-  protected static override _iconDataUrl = tasksIcon;
+  protected static _iconDataUrl = tasksIcon;
 }
 
 export class TestLab extends _Devtools {
-  protected static override _iconDataUrl = test_labIcon;
+  protected static _iconDataUrl = test_labIcon;
 }
 
 export class ToolsForEclipse extends _Devtools {
-  protected static override _iconDataUrl = tools_for_eclipseIcon;
+  protected static _iconDataUrl = tools_for_eclipseIcon;
 }
 
 export class ToolsForPowershell extends _Devtools {
-  protected static override _iconDataUrl = tools_for_powershellIcon;
+  protected static _iconDataUrl = tools_for_powershellIcon;
 }
 
 export class ToolsForVisualStudio extends _Devtools {
-  protected static override _iconDataUrl = tools_for_visual_studioIcon;
+  protected static _iconDataUrl = tools_for_visual_studioIcon;
 }
 
 // Aliases

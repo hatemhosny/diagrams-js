@@ -10,21 +10,21 @@ class _Alerting extends _Saas {
 }
 
 export class Newrelic extends _Alerting {
-  protected static override _iconDataUrl = newrelicIcon;
+  protected static _iconDataUrl = newrelicIcon;
 }
 
 export class Opsgenie extends _Alerting {
-  protected static override _iconDataUrl = opsgenieIcon;
+  protected static _iconDataUrl = opsgenieIcon;
 }
 
 export class Pagerduty extends _Alerting {
-  protected static override _iconDataUrl = pagerdutyIcon;
+  protected static _iconDataUrl = pagerdutyIcon;
 }
 
 export class Pushover extends _Alerting {
-  protected static override _iconDataUrl = pushoverIcon;
+  protected static _iconDataUrl = pushoverIcon;
 }
 
 export class Xmatters extends _Alerting {
-  protected static override _iconDataUrl = xmattersIcon;
+  protected static _iconDataUrl = xmattersIcon;
 }

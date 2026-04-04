@@ -30,103 +30,103 @@ class _Framework extends _Programming {
 }
 
 export class Angular extends _Framework {
-  protected static override _iconDataUrl = angularIcon;
+  protected static _iconDataUrl = angularIcon;
 }
 
 export class Backbone extends _Framework {
-  protected static override _iconDataUrl = backboneIcon;
+  protected static _iconDataUrl = backboneIcon;
 }
 
 export class Camel extends _Framework {
-  protected static override _iconDataUrl = camelIcon;
+  protected static _iconDataUrl = camelIcon;
 }
 
 export class Django extends _Framework {
-  protected static override _iconDataUrl = djangoIcon;
+  protected static _iconDataUrl = djangoIcon;
 }
 
 export class Dotnet extends _Framework {
-  protected static override _iconDataUrl = dotnetIcon;
+  protected static _iconDataUrl = dotnetIcon;
 }
 
 export class Ember extends _Framework {
-  protected static override _iconDataUrl = emberIcon;
+  protected static _iconDataUrl = emberIcon;
 }
 
 export class Fastapi extends _Framework {
-  protected static override _iconDataUrl = fastapiIcon;
+  protected static _iconDataUrl = fastapiIcon;
 }
 
 export class Flask extends _Framework {
-  protected static override _iconDataUrl = flaskIcon;
+  protected static _iconDataUrl = flaskIcon;
 }
 
 export class Flutter extends _Framework {
-  protected static override _iconDataUrl = flutterIcon;
+  protected static _iconDataUrl = flutterIcon;
 }
 
 export class Graphql extends _Framework {
-  protected static override _iconDataUrl = graphqlIcon;
+  protected static _iconDataUrl = graphqlIcon;
 }
 
 export class Hibernate extends _Framework {
-  protected static override _iconDataUrl = hibernateIcon;
+  protected static _iconDataUrl = hibernateIcon;
 }
 
 export class Jhipster extends _Framework {
-  protected static override _iconDataUrl = jhipsterIcon;
+  protected static _iconDataUrl = jhipsterIcon;
 }
 
 export class Laravel extends _Framework {
-  protected static override _iconDataUrl = laravelIcon;
+  protected static _iconDataUrl = laravelIcon;
 }
 
 export class Micronaut extends _Framework {
-  protected static override _iconDataUrl = micronautIcon;
+  protected static _iconDataUrl = micronautIcon;
 }
 
 export class Nextjs extends _Framework {
-  protected static override _iconDataUrl = nextjsIcon;
+  protected static _iconDataUrl = nextjsIcon;
 }
 
 export class Phoenix extends _Framework {
-  protected static override _iconDataUrl = phoenixIcon;
+  protected static _iconDataUrl = phoenixIcon;
 }
 
 export class Quarkus extends _Framework {
-  protected static override _iconDataUrl = quarkusIcon;
+  protected static _iconDataUrl = quarkusIcon;
 }
 
 export class Rails extends _Framework {
-  protected static override _iconDataUrl = railsIcon;
+  protected static _iconDataUrl = railsIcon;
 }
 
 export class React extends _Framework {
-  protected static override _iconDataUrl = reactIcon;
+  protected static _iconDataUrl = reactIcon;
 }
 
 export class Spring extends _Framework {
-  protected static override _iconDataUrl = springIcon;
+  protected static _iconDataUrl = springIcon;
 }
 
 export class Sqlpage extends _Framework {
-  protected static override _iconDataUrl = sqlpageIcon;
+  protected static _iconDataUrl = sqlpageIcon;
 }
 
 export class Starlette extends _Framework {
-  protected static override _iconDataUrl = starletteIcon;
+  protected static _iconDataUrl = starletteIcon;
 }
 
 export class Svelte extends _Framework {
-  protected static override _iconDataUrl = svelteIcon;
+  protected static _iconDataUrl = svelteIcon;
 }
 
 export class Vercel extends _Framework {
-  protected static override _iconDataUrl = vercelIcon;
+  protected static _iconDataUrl = vercelIcon;
 }
 
 export class Vue extends _Framework {
-  protected static override _iconDataUrl = vueIcon;
+  protected static _iconDataUrl = vueIcon;
 }
 
 // Aliases

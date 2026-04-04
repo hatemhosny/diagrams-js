@@ -10,21 +10,21 @@ class _Network extends _Generic {
 }
 
 export class Firewall extends _Network {
-  protected static override _iconDataUrl = firewallIcon;
+  protected static _iconDataUrl = firewallIcon;
 }
 
 export class Router extends _Network {
-  protected static override _iconDataUrl = routerIcon;
+  protected static _iconDataUrl = routerIcon;
 }
 
 export class Subnet extends _Network {
-  protected static override _iconDataUrl = subnetIcon;
+  protected static _iconDataUrl = subnetIcon;
 }
 
 export class Switch extends _Network {
-  protected static override _iconDataUrl = switchIcon;
+  protected static _iconDataUrl = switchIcon;
 }
 
 export class VPN extends _Network {
-  protected static override _iconDataUrl = vpnIcon;
+  protected static _iconDataUrl = vpnIcon;
 }

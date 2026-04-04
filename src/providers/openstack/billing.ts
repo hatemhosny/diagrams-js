@@ -6,7 +6,7 @@ class _Billing extends _Openstack {
 }
 
 export class Cloudkitty extends _Billing {
-  protected static override _iconDataUrl = cloudkittyIcon;
+  protected static _iconDataUrl = cloudkittyIcon;
 }
 
 // Aliases

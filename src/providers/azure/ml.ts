@@ -15,41 +15,41 @@ class _Ml extends _Azure {
 }
 
 export class AzureOpenAI extends _Ml {
-  protected static override _iconDataUrl = azure_open_aiIcon;
+  protected static _iconDataUrl = azure_open_aiIcon;
 }
 
 export class AzureSpeechService extends _Ml {
-  protected static override _iconDataUrl = azure_speech_serviceIcon;
+  protected static _iconDataUrl = azure_speech_serviceIcon;
 }
 
 export class BatchAI extends _Ml {
-  protected static override _iconDataUrl = batch_aiIcon;
+  protected static _iconDataUrl = batch_aiIcon;
 }
 
 export class BotServices extends _Ml {
-  protected static override _iconDataUrl = bot_servicesIcon;
+  protected static _iconDataUrl = bot_servicesIcon;
 }
 
 export class CognitiveServices extends _Ml {
-  protected static override _iconDataUrl = cognitive_servicesIcon;
+  protected static _iconDataUrl = cognitive_servicesIcon;
 }
 
 export class GenomicsAccounts extends _Ml {
-  protected static override _iconDataUrl = genomics_accountsIcon;
+  protected static _iconDataUrl = genomics_accountsIcon;
 }
 
 export class MachineLearningServiceWorkspaces extends _Ml {
-  protected static override _iconDataUrl = machine_learning_service_workspacesIcon;
+  protected static _iconDataUrl = machine_learning_service_workspacesIcon;
 }
 
 export class MachineLearningStudioWebServicePlans extends _Ml {
-  protected static override _iconDataUrl = machine_learning_studio_web_service_plansIcon;
+  protected static _iconDataUrl = machine_learning_studio_web_service_plansIcon;
 }
 
 export class MachineLearningStudioWebServices extends _Ml {
-  protected static override _iconDataUrl = machine_learning_studio_web_servicesIcon;
+  protected static _iconDataUrl = machine_learning_studio_web_servicesIcon;
 }
 
 export class MachineLearningStudioWorkspaces extends _Ml {
-  protected static override _iconDataUrl = machine_learning_studio_workspacesIcon;
+  protected static _iconDataUrl = machine_learning_studio_workspacesIcon;
 }

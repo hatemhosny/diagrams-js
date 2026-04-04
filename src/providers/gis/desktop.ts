@@ -7,9 +7,9 @@ class _Desktop extends _Gis {
 }
 
 export class Maptunik extends _Desktop {
-  protected static override _iconDataUrl = maptunikIcon;
+  protected static _iconDataUrl = maptunikIcon;
 }
 
 export class QGIS extends _Desktop {
-  protected static override _iconDataUrl = qgisIcon;
+  protected static _iconDataUrl = qgisIcon;
 }

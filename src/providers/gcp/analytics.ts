@@ -16,47 +16,47 @@ class _Analytics extends _Gcp {
 }
 
 export class Bigquery extends _Analytics {
-  protected static override _iconDataUrl = bigqueryIcon;
+  protected static _iconDataUrl = bigqueryIcon;
 }
 
 export class Composer extends _Analytics {
-  protected static override _iconDataUrl = composerIcon;
+  protected static _iconDataUrl = composerIcon;
 }
 
 export class DataCatalog extends _Analytics {
-  protected static override _iconDataUrl = data_catalogIcon;
+  protected static _iconDataUrl = data_catalogIcon;
 }
 
 export class DataFusion extends _Analytics {
-  protected static override _iconDataUrl = data_fusionIcon;
+  protected static _iconDataUrl = data_fusionIcon;
 }
 
 export class Dataflow extends _Analytics {
-  protected static override _iconDataUrl = dataflowIcon;
+  protected static _iconDataUrl = dataflowIcon;
 }
 
 export class Datalab extends _Analytics {
-  protected static override _iconDataUrl = datalabIcon;
+  protected static _iconDataUrl = datalabIcon;
 }
 
 export class Dataprep extends _Analytics {
-  protected static override _iconDataUrl = dataprepIcon;
+  protected static _iconDataUrl = dataprepIcon;
 }
 
 export class Dataproc extends _Analytics {
-  protected static override _iconDataUrl = dataprocIcon;
+  protected static _iconDataUrl = dataprocIcon;
 }
 
 export class Genomics extends _Analytics {
-  protected static override _iconDataUrl = genomicsIcon;
+  protected static _iconDataUrl = genomicsIcon;
 }
 
 export class Looker extends _Analytics {
-  protected static override _iconDataUrl = lookerIcon;
+  protected static _iconDataUrl = lookerIcon;
 }
 
 export class Pubsub extends _Analytics {
-  protected static override _iconDataUrl = pubsubIcon;
+  protected static _iconDataUrl = pubsubIcon;
 }
 
 // Aliases

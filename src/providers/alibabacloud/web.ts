@@ -7,9 +7,9 @@ class _Web extends _Alibabacloud {
 }
 
 export class Dns extends _Web {
-  protected static override _iconDataUrl = dnsIcon;
+  protected static _iconDataUrl = dnsIcon;
 }
 
 export class Domain extends _Web {
-  protected static override _iconDataUrl = domainIcon;
+  protected static _iconDataUrl = domainIcon;
 }

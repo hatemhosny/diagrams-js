@@ -14,39 +14,39 @@ class _Network extends _Alibabacloud {
 }
 
 export class Cdn extends _Network {
-  protected static override _iconDataUrl = cdnIcon;
+  protected static _iconDataUrl = cdnIcon;
 }
 
 export class CloudEnterpriseNetwork extends _Network {
-  protected static override _iconDataUrl = cloud_enterprise_networkIcon;
+  protected static _iconDataUrl = cloud_enterprise_networkIcon;
 }
 
 export class ElasticIpAddress extends _Network {
-  protected static override _iconDataUrl = elastic_ip_addressIcon;
+  protected static _iconDataUrl = elastic_ip_addressIcon;
 }
 
 export class ExpressConnect extends _Network {
-  protected static override _iconDataUrl = express_connectIcon;
+  protected static _iconDataUrl = express_connectIcon;
 }
 
 export class NatGateway extends _Network {
-  protected static override _iconDataUrl = nat_gatewayIcon;
+  protected static _iconDataUrl = nat_gatewayIcon;
 }
 
 export class ServerLoadBalancer extends _Network {
-  protected static override _iconDataUrl = server_load_balancerIcon;
+  protected static _iconDataUrl = server_load_balancerIcon;
 }
 
 export class SmartAccessGateway extends _Network {
-  protected static override _iconDataUrl = smart_access_gatewayIcon;
+  protected static _iconDataUrl = smart_access_gatewayIcon;
 }
 
 export class VirtualPrivateCloud extends _Network {
-  protected static override _iconDataUrl = virtual_private_cloudIcon;
+  protected static _iconDataUrl = virtual_private_cloudIcon;
 }
 
 export class VpnGateway extends _Network {
-  protected static override _iconDataUrl = vpn_gatewayIcon;
+  protected static _iconDataUrl = vpn_gatewayIcon;
 }
 
 // Aliases

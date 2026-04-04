@@ -31,105 +31,105 @@ class _Storage extends _Azure {
 }
 
 export class ArchiveStorage extends _Storage {
-  protected static override _iconDataUrl = archive_storageIcon;
+  protected static _iconDataUrl = archive_storageIcon;
 }
 
 export class AzureDataboxGateway extends _Storage {
-  protected static override _iconDataUrl = azure_databox_gatewayIcon;
+  protected static _iconDataUrl = azure_databox_gatewayIcon;
 }
 
 export class AzureFileshares extends _Storage {
-  protected static override _iconDataUrl = azure_filesharesIcon;
+  protected static _iconDataUrl = azure_filesharesIcon;
 }
 
 export class AzureHcpCache extends _Storage {
-  protected static override _iconDataUrl = azure_hcp_cacheIcon;
+  protected static _iconDataUrl = azure_hcp_cacheIcon;
 }
 
 export class AzureNetappFiles extends _Storage {
-  protected static override _iconDataUrl = azure_netapp_filesIcon;
+  protected static _iconDataUrl = azure_netapp_filesIcon;
 }
 
 export class AzureStackEdge extends _Storage {
-  protected static override _iconDataUrl = azure_stack_edgeIcon;
+  protected static _iconDataUrl = azure_stack_edgeIcon;
 }
 
 export class Azurefxtedgefiler extends _Storage {
-  protected static override _iconDataUrl = azurefxtedgefilerIcon;
+  protected static _iconDataUrl = azurefxtedgefilerIcon;
 }
 
 export class BlobStorage extends _Storage {
-  protected static override _iconDataUrl = blob_storageIcon;
+  protected static _iconDataUrl = blob_storageIcon;
 }
 
 export class DataBoxEdgeDataBoxGateway extends _Storage {
-  protected static override _iconDataUrl = data_box_edge_data_box_gatewayIcon;
+  protected static _iconDataUrl = data_box_edge_data_box_gatewayIcon;
 }
 
 export class DataBox extends _Storage {
-  protected static override _iconDataUrl = data_boxIcon;
+  protected static _iconDataUrl = data_boxIcon;
 }
 
 export class DataLakeStorageGen1 extends _Storage {
-  protected static override _iconDataUrl = data_lake_storage_gen1Icon;
+  protected static _iconDataUrl = data_lake_storage_gen1Icon;
 }
 
 export class DataLakeStorage extends _Storage {
-  protected static override _iconDataUrl = data_lake_storageIcon;
+  protected static _iconDataUrl = data_lake_storageIcon;
 }
 
 export class DataShareInvitations extends _Storage {
-  protected static override _iconDataUrl = data_share_invitationsIcon;
+  protected static _iconDataUrl = data_share_invitationsIcon;
 }
 
 export class DataShares extends _Storage {
-  protected static override _iconDataUrl = data_sharesIcon;
+  protected static _iconDataUrl = data_sharesIcon;
 }
 
 export class GeneralStorage extends _Storage {
-  protected static override _iconDataUrl = general_storageIcon;
+  protected static _iconDataUrl = general_storageIcon;
 }
 
 export class ImportExportJobs extends _Storage {
-  protected static override _iconDataUrl = import_export_jobsIcon;
+  protected static _iconDataUrl = import_export_jobsIcon;
 }
 
 export class NetappFiles extends _Storage {
-  protected static override _iconDataUrl = netapp_filesIcon;
+  protected static _iconDataUrl = netapp_filesIcon;
 }
 
 export class QueuesStorage extends _Storage {
-  protected static override _iconDataUrl = queues_storageIcon;
+  protected static _iconDataUrl = queues_storageIcon;
 }
 
 export class RecoveryServicesVaults extends _Storage {
-  protected static override _iconDataUrl = recovery_services_vaultsIcon;
+  protected static _iconDataUrl = recovery_services_vaultsIcon;
 }
 
 export class StorageAccountsClassic extends _Storage {
-  protected static override _iconDataUrl = storage_accounts_classicIcon;
+  protected static _iconDataUrl = storage_accounts_classicIcon;
 }
 
 export class StorageAccounts extends _Storage {
-  protected static override _iconDataUrl = storage_accountsIcon;
+  protected static _iconDataUrl = storage_accountsIcon;
 }
 
 export class StorageExplorer extends _Storage {
-  protected static override _iconDataUrl = storage_explorerIcon;
+  protected static _iconDataUrl = storage_explorerIcon;
 }
 
 export class StorageSyncServices extends _Storage {
-  protected static override _iconDataUrl = storage_sync_servicesIcon;
+  protected static _iconDataUrl = storage_sync_servicesIcon;
 }
 
 export class StorsimpleDataManagers extends _Storage {
-  protected static override _iconDataUrl = storsimple_data_managersIcon;
+  protected static _iconDataUrl = storsimple_data_managersIcon;
 }
 
 export class StorsimpleDeviceManagers extends _Storage {
-  protected static override _iconDataUrl = storsimple_device_managersIcon;
+  protected static _iconDataUrl = storsimple_device_managersIcon;
 }
 
 export class TableStorage extends _Storage {
-  protected static override _iconDataUrl = table_storageIcon;
+  protected static _iconDataUrl = table_storageIcon;
 }

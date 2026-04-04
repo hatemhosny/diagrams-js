@@ -26,85 +26,85 @@ class _Network extends _Ibm {
 }
 
 export class Bridge extends _Network {
-  protected static override _iconDataUrl = bridgeIcon;
+  protected static _iconDataUrl = bridgeIcon;
 }
 
 export class DirectLink extends _Network {
-  protected static override _iconDataUrl = direct_linkIcon;
+  protected static _iconDataUrl = direct_linkIcon;
 }
 
 export class Enterprise extends _Network {
-  protected static override _iconDataUrl = enterpriseIcon;
+  protected static _iconDataUrl = enterpriseIcon;
 }
 
 export class Firewall extends _Network {
-  protected static override _iconDataUrl = firewallIcon;
+  protected static _iconDataUrl = firewallIcon;
 }
 
 export class FloatingIp extends _Network {
-  protected static override _iconDataUrl = floating_ipIcon;
+  protected static _iconDataUrl = floating_ipIcon;
 }
 
 export class Gateway extends _Network {
-  protected static override _iconDataUrl = gatewayIcon;
+  protected static _iconDataUrl = gatewayIcon;
 }
 
 export class InternetServices extends _Network {
-  protected static override _iconDataUrl = internet_servicesIcon;
+  protected static _iconDataUrl = internet_servicesIcon;
 }
 
 export class LoadBalancerListener extends _Network {
-  protected static override _iconDataUrl = load_balancer_listenerIcon;
+  protected static _iconDataUrl = load_balancer_listenerIcon;
 }
 
 export class LoadBalancerPool extends _Network {
-  protected static override _iconDataUrl = load_balancer_poolIcon;
+  protected static _iconDataUrl = load_balancer_poolIcon;
 }
 
 export class LoadBalancer extends _Network {
-  protected static override _iconDataUrl = load_balancerIcon;
+  protected static _iconDataUrl = load_balancerIcon;
 }
 
 export class LoadBalancingRouting extends _Network {
-  protected static override _iconDataUrl = load_balancing_routingIcon;
+  protected static _iconDataUrl = load_balancing_routingIcon;
 }
 
 export class PublicGateway extends _Network {
-  protected static override _iconDataUrl = public_gatewayIcon;
+  protected static _iconDataUrl = public_gatewayIcon;
 }
 
 export class Region extends _Network {
-  protected static override _iconDataUrl = regionIcon;
+  protected static _iconDataUrl = regionIcon;
 }
 
 export class Router extends _Network {
-  protected static override _iconDataUrl = routerIcon;
+  protected static _iconDataUrl = routerIcon;
 }
 
 export class Rules extends _Network {
-  protected static override _iconDataUrl = rulesIcon;
+  protected static _iconDataUrl = rulesIcon;
 }
 
 export class Subnet extends _Network {
-  protected static override _iconDataUrl = subnetIcon;
+  protected static _iconDataUrl = subnetIcon;
 }
 
 export class TransitGateway extends _Network {
-  protected static override _iconDataUrl = transit_gatewayIcon;
+  protected static _iconDataUrl = transit_gatewayIcon;
 }
 
 export class Vpc extends _Network {
-  protected static override _iconDataUrl = vpcIcon;
+  protected static _iconDataUrl = vpcIcon;
 }
 
 export class VpnConnection extends _Network {
-  protected static override _iconDataUrl = vpn_connectionIcon;
+  protected static _iconDataUrl = vpn_connectionIcon;
 }
 
 export class VpnGateway extends _Network {
-  protected static override _iconDataUrl = vpn_gatewayIcon;
+  protected static _iconDataUrl = vpn_gatewayIcon;
 }
 
 export class VpnPolicy extends _Network {
-  protected static override _iconDataUrl = vpn_policyIcon;
+  protected static _iconDataUrl = vpn_policyIcon;
 }

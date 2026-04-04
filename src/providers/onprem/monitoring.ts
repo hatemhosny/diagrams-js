@@ -19,57 +19,57 @@ class _Monitoring extends _Onprem {
 }
 
 export class Cortex extends _Monitoring {
-  protected static override _iconDataUrl = cortexIcon;
+  protected static _iconDataUrl = cortexIcon;
 }
 
 export class Datadog extends _Monitoring {
-  protected static override _iconDataUrl = datadogIcon;
+  protected static _iconDataUrl = datadogIcon;
 }
 
 export class Dynatrace extends _Monitoring {
-  protected static override _iconDataUrl = dynatraceIcon;
+  protected static _iconDataUrl = dynatraceIcon;
 }
 
 export class Grafana extends _Monitoring {
-  protected static override _iconDataUrl = grafanaIcon;
+  protected static _iconDataUrl = grafanaIcon;
 }
 
 export class Humio extends _Monitoring {
-  protected static override _iconDataUrl = humioIcon;
+  protected static _iconDataUrl = humioIcon;
 }
 
 export class Mimir extends _Monitoring {
-  protected static override _iconDataUrl = mimirIcon;
+  protected static _iconDataUrl = mimirIcon;
 }
 
 export class Nagios extends _Monitoring {
-  protected static override _iconDataUrl = nagiosIcon;
+  protected static _iconDataUrl = nagiosIcon;
 }
 
 export class Newrelic extends _Monitoring {
-  protected static override _iconDataUrl = newrelicIcon;
+  protected static _iconDataUrl = newrelicIcon;
 }
 
 export class PrometheusOperator extends _Monitoring {
-  protected static override _iconDataUrl = prometheus_operatorIcon;
+  protected static _iconDataUrl = prometheus_operatorIcon;
 }
 
 export class Prometheus extends _Monitoring {
-  protected static override _iconDataUrl = prometheusIcon;
+  protected static _iconDataUrl = prometheusIcon;
 }
 
 export class Sentry extends _Monitoring {
-  protected static override _iconDataUrl = sentryIcon;
+  protected static _iconDataUrl = sentryIcon;
 }
 
 export class Splunk extends _Monitoring {
-  protected static override _iconDataUrl = splunkIcon;
+  protected static _iconDataUrl = splunkIcon;
 }
 
 export class Thanos extends _Monitoring {
-  protected static override _iconDataUrl = thanosIcon;
+  protected static _iconDataUrl = thanosIcon;
 }
 
 export class Zabbix extends _Monitoring {
-  protected static override _iconDataUrl = zabbixIcon;
+  protected static _iconDataUrl = zabbixIcon;
 }

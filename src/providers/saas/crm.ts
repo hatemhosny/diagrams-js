@@ -7,9 +7,9 @@ class _Crm extends _Saas {
 }
 
 export class Intercom extends _Crm {
-  protected static override _iconDataUrl = intercomIcon;
+  protected static _iconDataUrl = intercomIcon;
 }
 
 export class Zendesk extends _Crm {
-  protected static override _iconDataUrl = zendeskIcon;
+  protected static _iconDataUrl = zendeskIcon;
 }

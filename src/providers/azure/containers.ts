@@ -12,29 +12,29 @@ class _Containers extends _Azure {
 }
 
 export class AppServices extends _Containers {
-  protected static override _iconDataUrl = app_servicesIcon;
+  protected static _iconDataUrl = app_servicesIcon;
 }
 
 export class AzureRedHatOpenshift extends _Containers {
-  protected static override _iconDataUrl = azure_red_hat_openshiftIcon;
+  protected static _iconDataUrl = azure_red_hat_openshiftIcon;
 }
 
 export class BatchAccounts extends _Containers {
-  protected static override _iconDataUrl = batch_accountsIcon;
+  protected static _iconDataUrl = batch_accountsIcon;
 }
 
 export class ContainerInstances extends _Containers {
-  protected static override _iconDataUrl = container_instancesIcon;
+  protected static _iconDataUrl = container_instancesIcon;
 }
 
 export class ContainerRegistries extends _Containers {
-  protected static override _iconDataUrl = container_registriesIcon;
+  protected static _iconDataUrl = container_registriesIcon;
 }
 
 export class KubernetesServices extends _Containers {
-  protected static override _iconDataUrl = kubernetes_servicesIcon;
+  protected static _iconDataUrl = kubernetes_servicesIcon;
 }
 
 export class ServiceFabricClusters extends _Containers {
-  protected static override _iconDataUrl = service_fabric_clustersIcon;
+  protected static _iconDataUrl = service_fabric_clustersIcon;
 }

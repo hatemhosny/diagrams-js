@@ -6,5 +6,5 @@ class _Automation extends _Saas {
 }
 
 export class N8n extends _Automation {
-  protected static override _iconDataUrl = n8nIcon;
+  protected static _iconDataUrl = n8nIcon;
 }

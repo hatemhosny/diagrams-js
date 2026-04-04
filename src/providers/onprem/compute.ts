@@ -7,9 +7,9 @@ class _Compute extends _Onprem {
 }
 
 export class Nomad extends _Compute {
-  protected static override _iconDataUrl = nomadIcon;
+  protected static _iconDataUrl = nomadIcon;
 }
 
 export class Server extends _Compute {
-  protected static override _iconDataUrl = serverIcon;
+  protected static _iconDataUrl = serverIcon;
 }

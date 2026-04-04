@@ -8,13 +8,13 @@ class _Analytics extends _Saas {
 }
 
 export class Dataform extends _Analytics {
-  protected static override _iconDataUrl = dataformIcon;
+  protected static _iconDataUrl = dataformIcon;
 }
 
 export class Snowflake extends _Analytics {
-  protected static override _iconDataUrl = snowflakeIcon;
+  protected static _iconDataUrl = snowflakeIcon;
 }
 
 export class Stitch extends _Analytics {
-  protected static override _iconDataUrl = stitchIcon;
+  protected static _iconDataUrl = stitchIcon;
 }

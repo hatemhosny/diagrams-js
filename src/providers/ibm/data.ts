@@ -18,53 +18,53 @@ class _Data extends _Ibm {
 }
 
 export class Caches extends _Data {
-  protected static override _iconDataUrl = cachesIcon;
+  protected static _iconDataUrl = cachesIcon;
 }
 
 export class Cloud extends _Data {
-  protected static override _iconDataUrl = cloudIcon;
+  protected static _iconDataUrl = cloudIcon;
 }
 
 export class ConversationTrainedDeployed extends _Data {
-  protected static override _iconDataUrl = conversation_trained_deployedIcon;
+  protected static _iconDataUrl = conversation_trained_deployedIcon;
 }
 
 export class DataServices extends _Data {
-  protected static override _iconDataUrl = data_servicesIcon;
+  protected static _iconDataUrl = data_servicesIcon;
 }
 
 export class DataSources extends _Data {
-  protected static override _iconDataUrl = data_sourcesIcon;
+  protected static _iconDataUrl = data_sourcesIcon;
 }
 
 export class DeviceIdentityService extends _Data {
-  protected static override _iconDataUrl = device_identity_serviceIcon;
+  protected static _iconDataUrl = device_identity_serviceIcon;
 }
 
 export class DeviceRegistry extends _Data {
-  protected static override _iconDataUrl = device_registryIcon;
+  protected static _iconDataUrl = device_registryIcon;
 }
 
 export class EnterpriseData extends _Data {
-  protected static override _iconDataUrl = enterprise_dataIcon;
+  protected static _iconDataUrl = enterprise_dataIcon;
 }
 
 export class EnterpriseUserDirectory extends _Data {
-  protected static override _iconDataUrl = enterprise_user_directoryIcon;
+  protected static _iconDataUrl = enterprise_user_directoryIcon;
 }
 
 export class FileRepository extends _Data {
-  protected static override _iconDataUrl = file_repositoryIcon;
+  protected static _iconDataUrl = file_repositoryIcon;
 }
 
 export class GroundTruth extends _Data {
-  protected static override _iconDataUrl = ground_truthIcon;
+  protected static _iconDataUrl = ground_truthIcon;
 }
 
 export class Model extends _Data {
-  protected static override _iconDataUrl = modelIcon;
+  protected static _iconDataUrl = modelIcon;
 }
 
 export class TmsDataInterface extends _Data {
-  protected static override _iconDataUrl = tms_data_interfaceIcon;
+  protected static _iconDataUrl = tms_data_interfaceIcon;
 }

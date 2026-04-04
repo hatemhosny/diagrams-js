@@ -11,25 +11,25 @@ class _Robotics extends _Aws {
 }
 
 export class RobomakerCloudExtensionRos extends _Robotics {
-  protected static override _iconDataUrl = robomaker_cloud_extension_rosIcon;
+  protected static _iconDataUrl = robomaker_cloud_extension_rosIcon;
 }
 
 export class RobomakerDevelopmentEnvironment extends _Robotics {
-  protected static override _iconDataUrl = robomaker_development_environmentIcon;
+  protected static _iconDataUrl = robomaker_development_environmentIcon;
 }
 
 export class RobomakerFleetManagement extends _Robotics {
-  protected static override _iconDataUrl = robomaker_fleet_managementIcon;
+  protected static _iconDataUrl = robomaker_fleet_managementIcon;
 }
 
 export class RobomakerSimulator extends _Robotics {
-  protected static override _iconDataUrl = robomaker_simulatorIcon;
+  protected static _iconDataUrl = robomaker_simulatorIcon;
 }
 
 export class Robomaker extends _Robotics {
-  protected static override _iconDataUrl = robomakerIcon;
+  protected static _iconDataUrl = robomakerIcon;
 }
 
 export class Robotics extends _Robotics {
-  protected static override _iconDataUrl = roboticsIcon;
+  protected static _iconDataUrl = roboticsIcon;
 }

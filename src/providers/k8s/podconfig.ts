@@ -7,11 +7,11 @@ class _Podconfig extends _K8s {
 }
 
 export class CM extends _Podconfig {
-  protected static override _iconDataUrl = cmIcon;
+  protected static _iconDataUrl = cmIcon;
 }
 
 export class Secret extends _Podconfig {
-  protected static override _iconDataUrl = secretIcon;
+  protected static _iconDataUrl = secretIcon;
 }
 
 // Aliases

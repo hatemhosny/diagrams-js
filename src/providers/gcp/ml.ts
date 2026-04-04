@@ -27,91 +27,91 @@ class _Ml extends _Gcp {
 }
 
 export class AdvancedSolutionsLab extends _Ml {
-  protected static override _iconDataUrl = advanced_solutions_labIcon;
+  protected static _iconDataUrl = advanced_solutions_labIcon;
 }
 
 export class AIHub extends _Ml {
-  protected static override _iconDataUrl = ai_hubIcon;
+  protected static _iconDataUrl = ai_hubIcon;
 }
 
 export class AIPlatformDataLabelingService extends _Ml {
-  protected static override _iconDataUrl = ai_platform_data_labeling_serviceIcon;
+  protected static _iconDataUrl = ai_platform_data_labeling_serviceIcon;
 }
 
 export class AIPlatform extends _Ml {
-  protected static override _iconDataUrl = ai_platformIcon;
+  protected static _iconDataUrl = ai_platformIcon;
 }
 
 export class AutomlNaturalLanguage extends _Ml {
-  protected static override _iconDataUrl = automl_natural_languageIcon;
+  protected static _iconDataUrl = automl_natural_languageIcon;
 }
 
 export class AutomlTables extends _Ml {
-  protected static override _iconDataUrl = automl_tablesIcon;
+  protected static _iconDataUrl = automl_tablesIcon;
 }
 
 export class AutomlTranslation extends _Ml {
-  protected static override _iconDataUrl = automl_translationIcon;
+  protected static _iconDataUrl = automl_translationIcon;
 }
 
 export class AutomlVideoIntelligence extends _Ml {
-  protected static override _iconDataUrl = automl_video_intelligenceIcon;
+  protected static _iconDataUrl = automl_video_intelligenceIcon;
 }
 
 export class AutomlVision extends _Ml {
-  protected static override _iconDataUrl = automl_visionIcon;
+  protected static _iconDataUrl = automl_visionIcon;
 }
 
 export class Automl extends _Ml {
-  protected static override _iconDataUrl = automlIcon;
+  protected static _iconDataUrl = automlIcon;
 }
 
 export class DialogFlowEnterpriseEdition extends _Ml {
-  protected static override _iconDataUrl = dialog_flow_enterprise_editionIcon;
+  protected static _iconDataUrl = dialog_flow_enterprise_editionIcon;
 }
 
 export class InferenceAPI extends _Ml {
-  protected static override _iconDataUrl = inference_apiIcon;
+  protected static _iconDataUrl = inference_apiIcon;
 }
 
 export class JobsAPI extends _Ml {
-  protected static override _iconDataUrl = jobs_apiIcon;
+  protected static _iconDataUrl = jobs_apiIcon;
 }
 
 export class NaturalLanguageAPI extends _Ml {
-  protected static override _iconDataUrl = natural_language_apiIcon;
+  protected static _iconDataUrl = natural_language_apiIcon;
 }
 
 export class RecommendationsAI extends _Ml {
-  protected static override _iconDataUrl = recommendations_aiIcon;
+  protected static _iconDataUrl = recommendations_aiIcon;
 }
 
 export class SpeechToText extends _Ml {
-  protected static override _iconDataUrl = speech_to_textIcon;
+  protected static _iconDataUrl = speech_to_textIcon;
 }
 
 export class TextToSpeech extends _Ml {
-  protected static override _iconDataUrl = text_to_speechIcon;
+  protected static _iconDataUrl = text_to_speechIcon;
 }
 
 export class TPU extends _Ml {
-  protected static override _iconDataUrl = tpuIcon;
+  protected static _iconDataUrl = tpuIcon;
 }
 
 export class TranslationAPI extends _Ml {
-  protected static override _iconDataUrl = translation_apiIcon;
+  protected static _iconDataUrl = translation_apiIcon;
 }
 
 export class VertexAI extends _Ml {
-  protected static override _iconDataUrl = vertex_aiIcon;
+  protected static _iconDataUrl = vertex_aiIcon;
 }
 
 export class VideoIntelligenceAPI extends _Ml {
-  protected static override _iconDataUrl = video_intelligence_apiIcon;
+  protected static _iconDataUrl = video_intelligence_apiIcon;
 }
 
 export class VisionAPI extends _Ml {
-  protected static override _iconDataUrl = vision_apiIcon;
+  protected static _iconDataUrl = vision_apiIcon;
 }
 
 // Aliases

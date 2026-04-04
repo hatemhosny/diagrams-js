@@ -23,73 +23,73 @@ class _Storage extends _Oci {
 }
 
 export class BackupRestoreWhite extends _Storage {
-  protected static override _iconDataUrl = backup_restore_whiteIcon;
+  protected static _iconDataUrl = backup_restore_whiteIcon;
 }
 
 export class BackupRestore extends _Storage {
-  protected static override _iconDataUrl = backup_restoreIcon;
+  protected static _iconDataUrl = backup_restoreIcon;
 }
 
 export class BlockStorageCloneWhite extends _Storage {
-  protected static override _iconDataUrl = block_storage_clone_whiteIcon;
+  protected static _iconDataUrl = block_storage_clone_whiteIcon;
 }
 
 export class BlockStorageClone extends _Storage {
-  protected static override _iconDataUrl = block_storage_cloneIcon;
+  protected static _iconDataUrl = block_storage_cloneIcon;
 }
 
 export class BlockStorageWhite extends _Storage {
-  protected static override _iconDataUrl = block_storage_whiteIcon;
+  protected static _iconDataUrl = block_storage_whiteIcon;
 }
 
 export class BlockStorage extends _Storage {
-  protected static override _iconDataUrl = block_storageIcon;
+  protected static _iconDataUrl = block_storageIcon;
 }
 
 export class BucketsWhite extends _Storage {
-  protected static override _iconDataUrl = buckets_whiteIcon;
+  protected static _iconDataUrl = buckets_whiteIcon;
 }
 
 export class Buckets extends _Storage {
-  protected static override _iconDataUrl = bucketsIcon;
+  protected static _iconDataUrl = bucketsIcon;
 }
 
 export class DataTransferWhite extends _Storage {
-  protected static override _iconDataUrl = data_transfer_whiteIcon;
+  protected static _iconDataUrl = data_transfer_whiteIcon;
 }
 
 export class DataTransfer extends _Storage {
-  protected static override _iconDataUrl = data_transferIcon;
+  protected static _iconDataUrl = data_transferIcon;
 }
 
 export class ElasticPerformanceWhite extends _Storage {
-  protected static override _iconDataUrl = elastic_performance_whiteIcon;
+  protected static _iconDataUrl = elastic_performance_whiteIcon;
 }
 
 export class ElasticPerformance extends _Storage {
-  protected static override _iconDataUrl = elastic_performanceIcon;
+  protected static _iconDataUrl = elastic_performanceIcon;
 }
 
 export class FileStorageWhite extends _Storage {
-  protected static override _iconDataUrl = file_storage_whiteIcon;
+  protected static _iconDataUrl = file_storage_whiteIcon;
 }
 
 export class FileStorage extends _Storage {
-  protected static override _iconDataUrl = file_storageIcon;
+  protected static _iconDataUrl = file_storageIcon;
 }
 
 export class ObjectStorageWhite extends _Storage {
-  protected static override _iconDataUrl = object_storage_whiteIcon;
+  protected static _iconDataUrl = object_storage_whiteIcon;
 }
 
 export class ObjectStorage extends _Storage {
-  protected static override _iconDataUrl = object_storageIcon;
+  protected static _iconDataUrl = object_storageIcon;
 }
 
 export class StorageGatewayWhite extends _Storage {
-  protected static override _iconDataUrl = storage_gateway_whiteIcon;
+  protected static _iconDataUrl = storage_gateway_whiteIcon;
 }
 
 export class StorageGateway extends _Storage {
-  protected static override _iconDataUrl = storage_gatewayIcon;
+  protected static _iconDataUrl = storage_gatewayIcon;
 }

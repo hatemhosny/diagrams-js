@@ -8,13 +8,13 @@ class _Mobile extends _Gis {
 }
 
 export class Mergin extends _Mobile {
-  protected static override _iconDataUrl = merginIcon;
+  protected static _iconDataUrl = merginIcon;
 }
 
 export class Qfield extends _Mobile {
-  protected static override _iconDataUrl = qfieldIcon;
+  protected static _iconDataUrl = qfieldIcon;
 }
 
 export class Smash extends _Mobile {
-  protected static override _iconDataUrl = smashIcon;
+  protected static _iconDataUrl = smashIcon;
 }

@@ -13,35 +13,35 @@ class _Grow extends _Firebase {
 }
 
 export class ABTesting extends _Grow {
-  protected static override _iconDataUrl = ab_testingIcon;
+  protected static _iconDataUrl = ab_testingIcon;
 }
 
 export class AppIndexing extends _Grow {
-  protected static override _iconDataUrl = app_indexingIcon;
+  protected static _iconDataUrl = app_indexingIcon;
 }
 
 export class DynamicLinks extends _Grow {
-  protected static override _iconDataUrl = dynamic_linksIcon;
+  protected static _iconDataUrl = dynamic_linksIcon;
 }
 
 export class InAppMessaging extends _Grow {
-  protected static override _iconDataUrl = in_app_messagingIcon;
+  protected static _iconDataUrl = in_app_messagingIcon;
 }
 
 export class Invites extends _Grow {
-  protected static override _iconDataUrl = invitesIcon;
+  protected static _iconDataUrl = invitesIcon;
 }
 
 export class Messaging extends _Grow {
-  protected static override _iconDataUrl = messagingIcon;
+  protected static _iconDataUrl = messagingIcon;
 }
 
 export class Predictions extends _Grow {
-  protected static override _iconDataUrl = predictionsIcon;
+  protected static _iconDataUrl = predictionsIcon;
 }
 
 export class RemoteConfig extends _Grow {
-  protected static override _iconDataUrl = remote_configIcon;
+  protected static _iconDataUrl = remote_configIcon;
 }
 
 // Aliases

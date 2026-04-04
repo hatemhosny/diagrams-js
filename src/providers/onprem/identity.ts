@@ -6,5 +6,5 @@ class _Identity extends _Onprem {
 }
 
 export class Dex extends _Identity {
-  protected static override _iconDataUrl = dexIcon;
+  protected static _iconDataUrl = dexIcon;
 }

@@ -11,25 +11,25 @@ class _Migration extends _Azure {
 }
 
 export class AzureDatabaseMigrationServices extends _Migration {
-  protected static override _iconDataUrl = azure_database_migration_servicesIcon;
+  protected static _iconDataUrl = azure_database_migration_servicesIcon;
 }
 
 export class DataBoxEdge extends _Migration {
-  protected static override _iconDataUrl = data_box_edgeIcon;
+  protected static _iconDataUrl = data_box_edgeIcon;
 }
 
 export class DataBox extends _Migration {
-  protected static override _iconDataUrl = data_boxIcon;
+  protected static _iconDataUrl = data_boxIcon;
 }
 
 export class DatabaseMigrationServices extends _Migration {
-  protected static override _iconDataUrl = database_migration_servicesIcon;
+  protected static _iconDataUrl = database_migration_servicesIcon;
 }
 
 export class MigrationProjects extends _Migration {
-  protected static override _iconDataUrl = migration_projectsIcon;
+  protected static _iconDataUrl = migration_projectsIcon;
 }
 
 export class RecoveryServicesVaults extends _Migration {
-  protected static override _iconDataUrl = recovery_services_vaultsIcon;
+  protected static _iconDataUrl = recovery_services_vaultsIcon;
 }

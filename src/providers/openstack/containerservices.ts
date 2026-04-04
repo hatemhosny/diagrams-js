@@ -6,5 +6,5 @@ class _Containerservices extends _Openstack {
 }
 
 export class Kuryr extends _Containerservices {
-  protected static override _iconDataUrl = kuryrIcon;
+  protected static _iconDataUrl = kuryrIcon;
 }

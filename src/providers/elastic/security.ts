@@ -9,17 +9,17 @@ class _Security extends _Elastic {
 }
 
 export class Endpoint extends _Security {
-  protected static override _iconDataUrl = endpointIcon;
+  protected static _iconDataUrl = endpointIcon;
 }
 
 export class Security extends _Security {
-  protected static override _iconDataUrl = securityIcon;
+  protected static _iconDataUrl = securityIcon;
 }
 
 export class SIEM extends _Security {
-  protected static override _iconDataUrl = siemIcon;
+  protected static _iconDataUrl = siemIcon;
 }
 
 export class Xdr extends _Security {
-  protected static override _iconDataUrl = xdrIcon;
+  protected static _iconDataUrl = xdrIcon;
 }

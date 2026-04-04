@@ -9,17 +9,17 @@ class _Payment extends _Saas {
 }
 
 export class Adyen extends _Payment {
-  protected static override _iconDataUrl = adyenIcon;
+  protected static _iconDataUrl = adyenIcon;
 }
 
 export class AmazonPay extends _Payment {
-  protected static override _iconDataUrl = amazon_payIcon;
+  protected static _iconDataUrl = amazon_payIcon;
 }
 
 export class Paypal extends _Payment {
-  protected static override _iconDataUrl = paypalIcon;
+  protected static _iconDataUrl = paypalIcon;
 }
 
 export class Stripe extends _Payment {
-  protected static override _iconDataUrl = stripeIcon;
+  protected static _iconDataUrl = stripeIcon;
 }

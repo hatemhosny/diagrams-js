@@ -6,5 +6,5 @@ class _Frontend extends _Openstack {
 }
 
 export class Horizon extends _Frontend {
-  protected static override _iconDataUrl = horizonIcon;
+  protected static _iconDataUrl = horizonIcon;
 }

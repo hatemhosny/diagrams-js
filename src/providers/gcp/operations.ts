@@ -7,9 +7,9 @@ class _Operations extends _Gcp {
 }
 
 export class Logging extends _Operations {
-  protected static override _iconDataUrl = loggingIcon;
+  protected static _iconDataUrl = loggingIcon;
 }
 
 export class Monitoring extends _Operations {
-  protected static override _iconDataUrl = monitoringIcon;
+  protected static _iconDataUrl = monitoringIcon;
 }

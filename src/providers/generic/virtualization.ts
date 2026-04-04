@@ -9,17 +9,17 @@ class _Virtualization extends _Generic {
 }
 
 export class Qemu extends _Virtualization {
-  protected static override _iconDataUrl = qemuIcon;
+  protected static _iconDataUrl = qemuIcon;
 }
 
 export class Virtualbox extends _Virtualization {
-  protected static override _iconDataUrl = virtualboxIcon;
+  protected static _iconDataUrl = virtualboxIcon;
 }
 
 export class Vmware extends _Virtualization {
-  protected static override _iconDataUrl = vmwareIcon;
+  protected static _iconDataUrl = vmwareIcon;
 }
 
 export class XEN extends _Virtualization {
-  protected static override _iconDataUrl = xenIcon;
+  protected static _iconDataUrl = xenIcon;
 }

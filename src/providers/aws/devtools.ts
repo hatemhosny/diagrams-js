@@ -19,59 +19,59 @@ class _Devtools extends _Aws {
 }
 
 export class CloudDevelopmentKit extends _Devtools {
-  protected static override _iconDataUrl = cloud_development_kitIcon;
+  protected static _iconDataUrl = cloud_development_kitIcon;
 }
 
 export class Cloud9Resource extends _Devtools {
-  protected static override _iconDataUrl = cloud9_resourceIcon;
+  protected static _iconDataUrl = cloud9_resourceIcon;
 }
 
 export class Cloud9 extends _Devtools {
-  protected static override _iconDataUrl = cloud9Icon;
+  protected static _iconDataUrl = cloud9Icon;
 }
 
 export class Cloudshell extends _Devtools {
-  protected static override _iconDataUrl = cloudshellIcon;
+  protected static _iconDataUrl = cloudshellIcon;
 }
 
 export class Codeartifact extends _Devtools {
-  protected static override _iconDataUrl = codeartifactIcon;
+  protected static _iconDataUrl = codeartifactIcon;
 }
 
 export class Codebuild extends _Devtools {
-  protected static override _iconDataUrl = codebuildIcon;
+  protected static _iconDataUrl = codebuildIcon;
 }
 
 export class Codecommit extends _Devtools {
-  protected static override _iconDataUrl = codecommitIcon;
+  protected static _iconDataUrl = codecommitIcon;
 }
 
 export class Codedeploy extends _Devtools {
-  protected static override _iconDataUrl = codedeployIcon;
+  protected static _iconDataUrl = codedeployIcon;
 }
 
 export class Codepipeline extends _Devtools {
-  protected static override _iconDataUrl = codepipelineIcon;
+  protected static _iconDataUrl = codepipelineIcon;
 }
 
 export class Codestar extends _Devtools {
-  protected static override _iconDataUrl = codestarIcon;
+  protected static _iconDataUrl = codestarIcon;
 }
 
 export class CommandLineInterface extends _Devtools {
-  protected static override _iconDataUrl = command_line_interfaceIcon;
+  protected static _iconDataUrl = command_line_interfaceIcon;
 }
 
 export class DeveloperTools extends _Devtools {
-  protected static override _iconDataUrl = developer_toolsIcon;
+  protected static _iconDataUrl = developer_toolsIcon;
 }
 
 export class ToolsAndSdks extends _Devtools {
-  protected static override _iconDataUrl = tools_and_sdksIcon;
+  protected static _iconDataUrl = tools_and_sdksIcon;
 }
 
 export class XRay extends _Devtools {
-  protected static override _iconDataUrl = x_rayIcon;
+  protected static _iconDataUrl = x_rayIcon;
 }
 
 // Aliases

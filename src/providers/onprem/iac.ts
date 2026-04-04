@@ -11,25 +11,25 @@ class _Iac extends _Onprem {
 }
 
 export class Ansible extends _Iac {
-  protected static override _iconDataUrl = ansibleIcon;
+  protected static _iconDataUrl = ansibleIcon;
 }
 
 export class Atlantis extends _Iac {
-  protected static override _iconDataUrl = atlantisIcon;
+  protected static _iconDataUrl = atlantisIcon;
 }
 
 export class Awx extends _Iac {
-  protected static override _iconDataUrl = awxIcon;
+  protected static _iconDataUrl = awxIcon;
 }
 
 export class Pulumi extends _Iac {
-  protected static override _iconDataUrl = pulumiIcon;
+  protected static _iconDataUrl = pulumiIcon;
 }
 
 export class Puppet extends _Iac {
-  protected static override _iconDataUrl = puppetIcon;
+  protected static _iconDataUrl = puppetIcon;
 }
 
 export class Terraform extends _Iac {
-  protected static override _iconDataUrl = terraformIcon;
+  protected static _iconDataUrl = terraformIcon;
 }

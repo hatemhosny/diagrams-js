@@ -10,21 +10,21 @@ class _Analytics extends _Alibabacloud {
 }
 
 export class AnalyticDb extends _Analytics {
-  protected static override _iconDataUrl = analytic_dbIcon;
+  protected static _iconDataUrl = analytic_dbIcon;
 }
 
 export class ClickHouse extends _Analytics {
-  protected static override _iconDataUrl = click_houseIcon;
+  protected static _iconDataUrl = click_houseIcon;
 }
 
 export class DataLakeAnalytics extends _Analytics {
-  protected static override _iconDataUrl = data_lake_analyticsIcon;
+  protected static _iconDataUrl = data_lake_analyticsIcon;
 }
 
 export class ElaticMapReduce extends _Analytics {
-  protected static override _iconDataUrl = elatic_map_reduceIcon;
+  protected static _iconDataUrl = elatic_map_reduceIcon;
 }
 
 export class OpenSearch extends _Analytics {
-  protected static override _iconDataUrl = open_searchIcon;
+  protected static _iconDataUrl = open_searchIcon;
 }

@@ -7,9 +7,9 @@ class _Communication extends _Alibabacloud {
 }
 
 export class DirectMail extends _Communication {
-  protected static override _iconDataUrl = direct_mailIcon;
+  protected static _iconDataUrl = direct_mailIcon;
 }
 
 export class MobilePush extends _Communication {
-  protected static override _iconDataUrl = mobile_pushIcon;
+  protected static _iconDataUrl = mobile_pushIcon;
 }

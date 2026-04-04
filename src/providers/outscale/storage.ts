@@ -7,9 +7,9 @@ class _Storage extends _Outscale {
 }
 
 export class SimpleStorageService extends _Storage {
-  protected static override _iconDataUrl = simple_storage_serviceIcon;
+  protected static _iconDataUrl = simple_storage_serviceIcon;
 }
 
 export class Storage extends _Storage {
-  protected static override _iconDataUrl = storageIcon;
+  protected static _iconDataUrl = storageIcon;
 }

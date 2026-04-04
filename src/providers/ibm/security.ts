@@ -19,57 +19,57 @@ class _Security extends _Ibm {
 }
 
 export class ApiSecurity extends _Security {
-  protected static override _iconDataUrl = api_securityIcon;
+  protected static _iconDataUrl = api_securityIcon;
 }
 
 export class BlockchainSecurityService extends _Security {
-  protected static override _iconDataUrl = blockchain_security_serviceIcon;
+  protected static _iconDataUrl = blockchain_security_serviceIcon;
 }
 
 export class DataSecurity extends _Security {
-  protected static override _iconDataUrl = data_securityIcon;
+  protected static _iconDataUrl = data_securityIcon;
 }
 
 export class Firewall extends _Security {
-  protected static override _iconDataUrl = firewallIcon;
+  protected static _iconDataUrl = firewallIcon;
 }
 
 export class Gateway extends _Security {
-  protected static override _iconDataUrl = gatewayIcon;
+  protected static _iconDataUrl = gatewayIcon;
 }
 
 export class GovernanceRiskCompliance extends _Security {
-  protected static override _iconDataUrl = governance_risk_complianceIcon;
+  protected static _iconDataUrl = governance_risk_complianceIcon;
 }
 
 export class IdentityAccessManagement extends _Security {
-  protected static override _iconDataUrl = identity_access_managementIcon;
+  protected static _iconDataUrl = identity_access_managementIcon;
 }
 
 export class IdentityProvider extends _Security {
-  protected static override _iconDataUrl = identity_providerIcon;
+  protected static _iconDataUrl = identity_providerIcon;
 }
 
 export class InfrastructureSecurity extends _Security {
-  protected static override _iconDataUrl = infrastructure_securityIcon;
+  protected static _iconDataUrl = infrastructure_securityIcon;
 }
 
 export class PhysicalSecurity extends _Security {
-  protected static override _iconDataUrl = physical_securityIcon;
+  protected static _iconDataUrl = physical_securityIcon;
 }
 
 export class SecurityMonitoringIntelligence extends _Security {
-  protected static override _iconDataUrl = security_monitoring_intelligenceIcon;
+  protected static _iconDataUrl = security_monitoring_intelligenceIcon;
 }
 
 export class SecurityServices extends _Security {
-  protected static override _iconDataUrl = security_servicesIcon;
+  protected static _iconDataUrl = security_servicesIcon;
 }
 
 export class TrustendComputing extends _Security {
-  protected static override _iconDataUrl = trustend_computingIcon;
+  protected static _iconDataUrl = trustend_computingIcon;
 }
 
 export class Vpn extends _Security {
-  protected static override _iconDataUrl = vpnIcon;
+  protected static _iconDataUrl = vpnIcon;
 }

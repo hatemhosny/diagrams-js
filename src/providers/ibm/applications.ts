@@ -24,77 +24,77 @@ class _Applications extends _Ibm {
 }
 
 export class ActionableInsight extends _Applications {
-  protected static override _iconDataUrl = actionable_insightIcon;
+  protected static _iconDataUrl = actionable_insightIcon;
 }
 
 export class Annotate extends _Applications {
-  protected static override _iconDataUrl = annotateIcon;
+  protected static _iconDataUrl = annotateIcon;
 }
 
 export class ApiDeveloperPortal extends _Applications {
-  protected static override _iconDataUrl = api_developer_portalIcon;
+  protected static _iconDataUrl = api_developer_portalIcon;
 }
 
 export class ApiPolyglotRuntimes extends _Applications {
-  protected static override _iconDataUrl = api_polyglot_runtimesIcon;
+  protected static _iconDataUrl = api_polyglot_runtimesIcon;
 }
 
 export class AppServer extends _Applications {
-  protected static override _iconDataUrl = app_serverIcon;
+  protected static _iconDataUrl = app_serverIcon;
 }
 
 export class ApplicationLogic extends _Applications {
-  protected static override _iconDataUrl = application_logicIcon;
+  protected static _iconDataUrl = application_logicIcon;
 }
 
 export class EnterpriseApplications extends _Applications {
-  protected static override _iconDataUrl = enterprise_applicationsIcon;
+  protected static _iconDataUrl = enterprise_applicationsIcon;
 }
 
 export class Index extends _Applications {
-  protected static override _iconDataUrl = indexIcon;
+  protected static _iconDataUrl = indexIcon;
 }
 
 export class IotApplication extends _Applications {
-  protected static override _iconDataUrl = iot_applicationIcon;
+  protected static _iconDataUrl = iot_applicationIcon;
 }
 
 export class Microservice extends _Applications {
-  protected static override _iconDataUrl = microserviceIcon;
+  protected static _iconDataUrl = microserviceIcon;
 }
 
 export class MobileApp extends _Applications {
-  protected static override _iconDataUrl = mobile_appIcon;
+  protected static _iconDataUrl = mobile_appIcon;
 }
 
 export class Ontology extends _Applications {
-  protected static override _iconDataUrl = ontologyIcon;
+  protected static _iconDataUrl = ontologyIcon;
 }
 
 export class OpenSourceTools extends _Applications {
-  protected static override _iconDataUrl = open_source_toolsIcon;
+  protected static _iconDataUrl = open_source_toolsIcon;
 }
 
 export class RuntimeServices extends _Applications {
-  protected static override _iconDataUrl = runtime_servicesIcon;
+  protected static _iconDataUrl = runtime_servicesIcon;
 }
 
 export class SaasApplications extends _Applications {
-  protected static override _iconDataUrl = saas_applicationsIcon;
+  protected static _iconDataUrl = saas_applicationsIcon;
 }
 
 export class ServiceBroker extends _Applications {
-  protected static override _iconDataUrl = service_brokerIcon;
+  protected static _iconDataUrl = service_brokerIcon;
 }
 
 export class SpeechToText extends _Applications {
-  protected static override _iconDataUrl = speech_to_textIcon;
+  protected static _iconDataUrl = speech_to_textIcon;
 }
 
 export class VisualRecognition extends _Applications {
-  protected static override _iconDataUrl = visual_recognitionIcon;
+  protected static _iconDataUrl = visual_recognitionIcon;
 }
 
 export class Visualization extends _Applications {
-  protected static override _iconDataUrl = visualizationIcon;
+  protected static _iconDataUrl = visualizationIcon;
 }

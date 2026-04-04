@@ -25,81 +25,81 @@ class _Analytics extends _Azure {
 }
 
 export class AnalysisServices extends _Analytics {
-  protected static override _iconDataUrl = analysis_servicesIcon;
+  protected static _iconDataUrl = analysis_servicesIcon;
 }
 
 export class AzureDataExplorerClusters extends _Analytics {
-  protected static override _iconDataUrl = azure_data_explorer_clustersIcon;
+  protected static _iconDataUrl = azure_data_explorer_clustersIcon;
 }
 
 export class AzureDatabricks extends _Analytics {
-  protected static override _iconDataUrl = azure_databricksIcon;
+  protected static _iconDataUrl = azure_databricksIcon;
 }
 
 export class AzureSynapseAnalytics extends _Analytics {
-  protected static override _iconDataUrl = azure_synapse_analyticsIcon;
+  protected static _iconDataUrl = azure_synapse_analyticsIcon;
 }
 
 export class AzureWorkbooks extends _Analytics {
-  protected static override _iconDataUrl = azure_workbooksIcon;
+  protected static _iconDataUrl = azure_workbooksIcon;
 }
 
 export class DataExplorerClusters extends _Analytics {
-  protected static override _iconDataUrl = data_explorer_clustersIcon;
+  protected static _iconDataUrl = data_explorer_clustersIcon;
 }
 
 export class DataFactories extends _Analytics {
-  protected static override _iconDataUrl = data_factoriesIcon;
+  protected static _iconDataUrl = data_factoriesIcon;
 }
 
 export class DataLakeAnalytics extends _Analytics {
-  protected static override _iconDataUrl = data_lake_analyticsIcon;
+  protected static _iconDataUrl = data_lake_analyticsIcon;
 }
 
 export class DataLakeStoreGen1 extends _Analytics {
-  protected static override _iconDataUrl = data_lake_store_gen1Icon;
+  protected static _iconDataUrl = data_lake_store_gen1Icon;
 }
 
 export class Databricks extends _Analytics {
-  protected static override _iconDataUrl = databricksIcon;
+  protected static _iconDataUrl = databricksIcon;
 }
 
 export class EndpointAnalytics extends _Analytics {
-  protected static override _iconDataUrl = endpoint_analyticsIcon;
+  protected static _iconDataUrl = endpoint_analyticsIcon;
 }
 
 export class EventHubClusters extends _Analytics {
-  protected static override _iconDataUrl = event_hub_clustersIcon;
+  protected static _iconDataUrl = event_hub_clustersIcon;
 }
 
 export class EventHubs extends _Analytics {
-  protected static override _iconDataUrl = event_hubsIcon;
+  protected static _iconDataUrl = event_hubsIcon;
 }
 
 export class HDInsightClusters extends _Analytics {
-  protected static override _iconDataUrl = hd_insight_clustersIcon;
+  protected static _iconDataUrl = hd_insight_clustersIcon;
 }
 
 export class LogAnalyticsWorkspaces extends _Analytics {
-  protected static override _iconDataUrl = log_analytics_workspacesIcon;
+  protected static _iconDataUrl = log_analytics_workspacesIcon;
 }
 
 export class PowerBiEmbedded extends _Analytics {
-  protected static override _iconDataUrl = power_bi_embeddedIcon;
+  protected static _iconDataUrl = power_bi_embeddedIcon;
 }
 
 export class PowerPlatform extends _Analytics {
-  protected static override _iconDataUrl = power_platformIcon;
+  protected static _iconDataUrl = power_platformIcon;
 }
 
 export class PrivateLinkServices extends _Analytics {
-  protected static override _iconDataUrl = private_link_servicesIcon;
+  protected static _iconDataUrl = private_link_servicesIcon;
 }
 
 export class StreamAnalyticsJobs extends _Analytics {
-  protected static override _iconDataUrl = stream_analytics_jobsIcon;
+  protected static _iconDataUrl = stream_analytics_jobsIcon;
 }
 
 export class SynapseAnalytics extends _Analytics {
-  protected static override _iconDataUrl = synapse_analyticsIcon;
+  protected static _iconDataUrl = synapse_analyticsIcon;
 }

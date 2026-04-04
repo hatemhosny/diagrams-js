@@ -58,215 +58,215 @@ class _Compute extends _Azure {
 }
 
 export class AppServices extends _Compute {
-  protected static override _iconDataUrl = app_servicesIcon;
+  protected static _iconDataUrl = app_servicesIcon;
 }
 
 export class ApplicationGroup extends _Compute {
-  protected static override _iconDataUrl = application_groupIcon;
+  protected static _iconDataUrl = application_groupIcon;
 }
 
 export class AutomanagedVM extends _Compute {
-  protected static override _iconDataUrl = automanaged_vmIcon;
+  protected static _iconDataUrl = automanaged_vmIcon;
 }
 
 export class AvailabilitySets extends _Compute {
-  protected static override _iconDataUrl = availability_setsIcon;
+  protected static _iconDataUrl = availability_setsIcon;
 }
 
 export class AzureComputeGalleries extends _Compute {
-  protected static override _iconDataUrl = azure_compute_galleriesIcon;
+  protected static _iconDataUrl = azure_compute_galleriesIcon;
 }
 
 export class AzureSpringApps extends _Compute {
-  protected static override _iconDataUrl = azure_spring_appsIcon;
+  protected static _iconDataUrl = azure_spring_appsIcon;
 }
 
 export class BatchAccounts extends _Compute {
-  protected static override _iconDataUrl = batch_accountsIcon;
+  protected static _iconDataUrl = batch_accountsIcon;
 }
 
 export class CitrixVirtualDesktopsEssentials extends _Compute {
-  protected static override _iconDataUrl = citrix_virtual_desktops_essentialsIcon;
+  protected static _iconDataUrl = citrix_virtual_desktops_essentialsIcon;
 }
 
 export class CloudServicesClassic extends _Compute {
-  protected static override _iconDataUrl = cloud_services_classicIcon;
+  protected static _iconDataUrl = cloud_services_classicIcon;
 }
 
 export class CloudServices extends _Compute {
-  protected static override _iconDataUrl = cloud_servicesIcon;
+  protected static _iconDataUrl = cloud_servicesIcon;
 }
 
 export class CloudsimpleVirtualMachines extends _Compute {
-  protected static override _iconDataUrl = cloudsimple_virtual_machinesIcon;
+  protected static _iconDataUrl = cloudsimple_virtual_machinesIcon;
 }
 
 export class ContainerApps extends _Compute {
-  protected static override _iconDataUrl = container_appsIcon;
+  protected static _iconDataUrl = container_appsIcon;
 }
 
 export class ContainerInstances extends _Compute {
-  protected static override _iconDataUrl = container_instancesIcon;
+  protected static _iconDataUrl = container_instancesIcon;
 }
 
 export class ContainerRegistries extends _Compute {
-  protected static override _iconDataUrl = container_registriesIcon;
+  protected static _iconDataUrl = container_registriesIcon;
 }
 
 export class ContainerServicesDeprecated extends _Compute {
-  protected static override _iconDataUrl = container_services_deprecatedIcon;
+  protected static _iconDataUrl = container_services_deprecatedIcon;
 }
 
 export class DiskEncryptionSets extends _Compute {
-  protected static override _iconDataUrl = disk_encryption_setsIcon;
+  protected static _iconDataUrl = disk_encryption_setsIcon;
 }
 
 export class DiskSnapshots extends _Compute {
-  protected static override _iconDataUrl = disk_snapshotsIcon;
+  protected static _iconDataUrl = disk_snapshotsIcon;
 }
 
 export class DisksClassic extends _Compute {
-  protected static override _iconDataUrl = disks_classicIcon;
+  protected static _iconDataUrl = disks_classicIcon;
 }
 
 export class DisksSnapshots extends _Compute {
-  protected static override _iconDataUrl = disks_snapshotsIcon;
+  protected static _iconDataUrl = disks_snapshotsIcon;
 }
 
 export class Disks extends _Compute {
-  protected static override _iconDataUrl = disksIcon;
+  protected static _iconDataUrl = disksIcon;
 }
 
 export class FunctionApps extends _Compute {
-  protected static override _iconDataUrl = function_appsIcon;
+  protected static _iconDataUrl = function_appsIcon;
 }
 
 export class HostGroups extends _Compute {
-  protected static override _iconDataUrl = host_groupsIcon;
+  protected static _iconDataUrl = host_groupsIcon;
 }
 
 export class HostPools extends _Compute {
-  protected static override _iconDataUrl = host_poolsIcon;
+  protected static _iconDataUrl = host_poolsIcon;
 }
 
 export class Hosts extends _Compute {
-  protected static override _iconDataUrl = hostsIcon;
+  protected static _iconDataUrl = hostsIcon;
 }
 
 export class ImageDefinitions extends _Compute {
-  protected static override _iconDataUrl = image_definitionsIcon;
+  protected static _iconDataUrl = image_definitionsIcon;
 }
 
 export class ImageTemplates extends _Compute {
-  protected static override _iconDataUrl = image_templatesIcon;
+  protected static _iconDataUrl = image_templatesIcon;
 }
 
 export class ImageVersions extends _Compute {
-  protected static override _iconDataUrl = image_versionsIcon;
+  protected static _iconDataUrl = image_versionsIcon;
 }
 
 export class Images extends _Compute {
-  protected static override _iconDataUrl = imagesIcon;
+  protected static _iconDataUrl = imagesIcon;
 }
 
 export class KubernetesServices extends _Compute {
-  protected static override _iconDataUrl = kubernetes_servicesIcon;
+  protected static _iconDataUrl = kubernetes_servicesIcon;
 }
 
 export class MaintenanceConfiguration extends _Compute {
-  protected static override _iconDataUrl = maintenance_configurationIcon;
+  protected static _iconDataUrl = maintenance_configurationIcon;
 }
 
 export class ManagedServiceFabric extends _Compute {
-  protected static override _iconDataUrl = managed_service_fabricIcon;
+  protected static _iconDataUrl = managed_service_fabricIcon;
 }
 
 export class MeshApplications extends _Compute {
-  protected static override _iconDataUrl = mesh_applicationsIcon;
+  protected static _iconDataUrl = mesh_applicationsIcon;
 }
 
 export class MetricsAdvisor extends _Compute {
-  protected static override _iconDataUrl = metrics_advisorIcon;
+  protected static _iconDataUrl = metrics_advisorIcon;
 }
 
 export class OsImagesClassic extends _Compute {
-  protected static override _iconDataUrl = os_images_classicIcon;
+  protected static _iconDataUrl = os_images_classicIcon;
 }
 
 export class OsImages extends _Compute {
-  protected static override _iconDataUrl = os_imagesIcon;
+  protected static _iconDataUrl = os_imagesIcon;
 }
 
 export class RestorePointsCollections extends _Compute {
-  protected static override _iconDataUrl = restore_points_collectionsIcon;
+  protected static _iconDataUrl = restore_points_collectionsIcon;
 }
 
 export class RestorePoints extends _Compute {
-  protected static override _iconDataUrl = restore_pointsIcon;
+  protected static _iconDataUrl = restore_pointsIcon;
 }
 
 export class SAPHANAOnAzure extends _Compute {
-  protected static override _iconDataUrl = sap_hana_on_azureIcon;
+  protected static _iconDataUrl = sap_hana_on_azureIcon;
 }
 
 export class ServiceFabricClusters extends _Compute {
-  protected static override _iconDataUrl = service_fabric_clustersIcon;
+  protected static _iconDataUrl = service_fabric_clustersIcon;
 }
 
 export class SharedImageGalleries extends _Compute {
-  protected static override _iconDataUrl = shared_image_galleriesIcon;
+  protected static _iconDataUrl = shared_image_galleriesIcon;
 }
 
 export class SpringCloud extends _Compute {
-  protected static override _iconDataUrl = spring_cloudIcon;
+  protected static _iconDataUrl = spring_cloudIcon;
 }
 
 export class VirtualMachine extends _Compute {
-  protected static override _iconDataUrl = virtual_machineIcon;
+  protected static _iconDataUrl = virtual_machineIcon;
 }
 
 export class VirtualMachinesClassic extends _Compute {
-  protected static override _iconDataUrl = virtual_machines_classicIcon;
+  protected static _iconDataUrl = virtual_machines_classicIcon;
 }
 
 export class VMClassic extends _Compute {
-  protected static override _iconDataUrl = vm_classicIcon;
+  protected static _iconDataUrl = vm_classicIcon;
 }
 
 export class VMImagesClassic extends _Compute {
-  protected static override _iconDataUrl = vm_images_classicIcon;
+  protected static _iconDataUrl = vm_images_classicIcon;
 }
 
 export class VMImages extends _Compute {
-  protected static override _iconDataUrl = vm_imagesIcon;
+  protected static _iconDataUrl = vm_imagesIcon;
 }
 
 export class VMLinux extends _Compute {
-  protected static override _iconDataUrl = vm_linuxIcon;
+  protected static _iconDataUrl = vm_linuxIcon;
 }
 
 export class VMScaleSet extends _Compute {
-  protected static override _iconDataUrl = vm_scale_setIcon;
+  protected static _iconDataUrl = vm_scale_setIcon;
 }
 
 export class VMScaleSets extends _Compute {
-  protected static override _iconDataUrl = vm_scale_setsIcon;
+  protected static _iconDataUrl = vm_scale_setsIcon;
 }
 
 export class VMWindows extends _Compute {
-  protected static override _iconDataUrl = vm_windowsIcon;
+  protected static _iconDataUrl = vm_windowsIcon;
 }
 
 export class VM extends _Compute {
-  protected static override _iconDataUrl = vmIcon;
+  protected static _iconDataUrl = vmIcon;
 }
 
 export class Workspaces2 extends _Compute {
-  protected static override _iconDataUrl = workspaces_2Icon;
+  protected static _iconDataUrl = workspaces_2Icon;
 }
 
 export class Workspaces extends _Compute {
-  protected static override _iconDataUrl = workspacesIcon;
+  protected static _iconDataUrl = workspacesIcon;
 }
 
 // Aliases

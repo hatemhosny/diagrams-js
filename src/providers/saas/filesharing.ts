@@ -6,5 +6,5 @@ class _Filesharing extends _Saas {
 }
 
 export class Nextcloud extends _Filesharing {
-  protected static override _iconDataUrl = nextcloudIcon;
+  protected static _iconDataUrl = nextcloudIcon;
 }

@@ -8,13 +8,13 @@ class _Cd extends _Onprem {
 }
 
 export class Spinnaker extends _Cd {
-  protected static override _iconDataUrl = spinnakerIcon;
+  protected static _iconDataUrl = spinnakerIcon;
 }
 
 export class TektonCli extends _Cd {
-  protected static override _iconDataUrl = tekton_cliIcon;
+  protected static _iconDataUrl = tekton_cliIcon;
 }
 
 export class Tekton extends _Cd {
-  protected static override _iconDataUrl = tektonIcon;
+  protected static _iconDataUrl = tektonIcon;
 }

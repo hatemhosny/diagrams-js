@@ -12,29 +12,29 @@ class _Azurestack extends _Azure {
 }
 
 export class Capacity extends _Azurestack {
-  protected static override _iconDataUrl = capacityIcon;
+  protected static _iconDataUrl = capacityIcon;
 }
 
 export class InfrastructureBackup extends _Azurestack {
-  protected static override _iconDataUrl = infrastructure_backupIcon;
+  protected static _iconDataUrl = infrastructure_backupIcon;
 }
 
 export class MultiTenancy extends _Azurestack {
-  protected static override _iconDataUrl = multi_tenancyIcon;
+  protected static _iconDataUrl = multi_tenancyIcon;
 }
 
 export class Offers extends _Azurestack {
-  protected static override _iconDataUrl = offersIcon;
+  protected static _iconDataUrl = offersIcon;
 }
 
 export class Plans extends _Azurestack {
-  protected static override _iconDataUrl = plansIcon;
+  protected static _iconDataUrl = plansIcon;
 }
 
 export class Updates extends _Azurestack {
-  protected static override _iconDataUrl = updatesIcon;
+  protected static _iconDataUrl = updatesIcon;
 }
 
 export class UserSubscriptions extends _Azurestack {
-  protected static override _iconDataUrl = user_subscriptionsIcon;
+  protected static _iconDataUrl = user_subscriptionsIcon;
 }

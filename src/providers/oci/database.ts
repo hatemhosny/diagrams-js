@@ -23,75 +23,75 @@ class _Database extends _Oci {
 }
 
 export class AutonomousWhite extends _Database {
-  protected static override _iconDataUrl = autonomous_whiteIcon;
+  protected static _iconDataUrl = autonomous_whiteIcon;
 }
 
 export class Autonomous extends _Database {
-  protected static override _iconDataUrl = autonomousIcon;
+  protected static _iconDataUrl = autonomousIcon;
 }
 
 export class BigdataServiceWhite extends _Database {
-  protected static override _iconDataUrl = bigdata_service_whiteIcon;
+  protected static _iconDataUrl = bigdata_service_whiteIcon;
 }
 
 export class BigdataService extends _Database {
-  protected static override _iconDataUrl = bigdata_serviceIcon;
+  protected static _iconDataUrl = bigdata_serviceIcon;
 }
 
 export class DatabaseServiceWhite extends _Database {
-  protected static override _iconDataUrl = database_service_whiteIcon;
+  protected static _iconDataUrl = database_service_whiteIcon;
 }
 
 export class DatabaseService extends _Database {
-  protected static override _iconDataUrl = database_serviceIcon;
+  protected static _iconDataUrl = database_serviceIcon;
 }
 
 export class DataflowApacheWhite extends _Database {
-  protected static override _iconDataUrl = dataflow_apache_whiteIcon;
+  protected static _iconDataUrl = dataflow_apache_whiteIcon;
 }
 
 export class DataflowApache extends _Database {
-  protected static override _iconDataUrl = dataflow_apacheIcon;
+  protected static _iconDataUrl = dataflow_apacheIcon;
 }
 
 export class DcatWhite extends _Database {
-  protected static override _iconDataUrl = dcat_whiteIcon;
+  protected static _iconDataUrl = dcat_whiteIcon;
 }
 
 export class Dcat extends _Database {
-  protected static override _iconDataUrl = dcatIcon;
+  protected static _iconDataUrl = dcatIcon;
 }
 
 export class DisWhite extends _Database {
-  protected static override _iconDataUrl = dis_whiteIcon;
+  protected static _iconDataUrl = dis_whiteIcon;
 }
 
 export class Dis extends _Database {
-  protected static override _iconDataUrl = disIcon;
+  protected static _iconDataUrl = disIcon;
 }
 
 export class DMSWhite extends _Database {
-  protected static override _iconDataUrl = dms_whiteIcon;
+  protected static _iconDataUrl = dms_whiteIcon;
 }
 
 export class DMS extends _Database {
-  protected static override _iconDataUrl = dmsIcon;
+  protected static _iconDataUrl = dmsIcon;
 }
 
 export class ScienceWhite extends _Database {
-  protected static override _iconDataUrl = science_whiteIcon;
+  protected static _iconDataUrl = science_whiteIcon;
 }
 
 export class Science extends _Database {
-  protected static override _iconDataUrl = scienceIcon;
+  protected static _iconDataUrl = scienceIcon;
 }
 
 export class StreamWhite extends _Database {
-  protected static override _iconDataUrl = stream_whiteIcon;
+  protected static _iconDataUrl = stream_whiteIcon;
 }
 
 export class Stream extends _Database {
-  protected static override _iconDataUrl = streamIcon;
+  protected static _iconDataUrl = streamIcon;
 }
 
 // Aliases

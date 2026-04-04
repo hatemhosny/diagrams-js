@@ -9,17 +9,17 @@ class _Ecosystem extends _K8s {
 }
 
 export class ExternalDns extends _Ecosystem {
-  protected static override _iconDataUrl = external_dnsIcon;
+  protected static _iconDataUrl = external_dnsIcon;
 }
 
 export class Helm extends _Ecosystem {
-  protected static override _iconDataUrl = helmIcon;
+  protected static _iconDataUrl = helmIcon;
 }
 
 export class Krew extends _Ecosystem {
-  protected static override _iconDataUrl = krewIcon;
+  protected static _iconDataUrl = krewIcon;
 }
 
 export class Kustomize extends _Ecosystem {
-  protected static override _iconDataUrl = kustomizeIcon;
+  protected static _iconDataUrl = kustomizeIcon;
 }

@@ -7,9 +7,9 @@ class _Storage extends _Ibm {
 }
 
 export class BlockStorage extends _Storage {
-  protected static override _iconDataUrl = block_storageIcon;
+  protected static _iconDataUrl = block_storageIcon;
 }
 
 export class ObjectStorage extends _Storage {
-  protected static override _iconDataUrl = object_storageIcon;
+  protected static _iconDataUrl = object_storageIcon;
 }

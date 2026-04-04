@@ -8,13 +8,13 @@ class _Packaging extends _Openstack {
 }
 
 export class LOCI extends _Packaging {
-  protected static override _iconDataUrl = lociIcon;
+  protected static _iconDataUrl = lociIcon;
 }
 
 export class Puppet extends _Packaging {
-  protected static override _iconDataUrl = puppetIcon;
+  protected static _iconDataUrl = puppetIcon;
 }
 
 export class RPM extends _Packaging {
-  protected static override _iconDataUrl = rpmIcon;
+  protected static _iconDataUrl = rpmIcon;
 }

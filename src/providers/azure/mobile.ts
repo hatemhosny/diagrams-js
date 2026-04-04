@@ -10,21 +10,21 @@ class _Mobile extends _Azure {
 }
 
 export class AppServiceMobile extends _Mobile {
-  protected static override _iconDataUrl = app_service_mobileIcon;
+  protected static _iconDataUrl = app_service_mobileIcon;
 }
 
 export class AppServices extends _Mobile {
-  protected static override _iconDataUrl = app_servicesIcon;
+  protected static _iconDataUrl = app_servicesIcon;
 }
 
 export class MobileEngagement extends _Mobile {
-  protected static override _iconDataUrl = mobile_engagementIcon;
+  protected static _iconDataUrl = mobile_engagementIcon;
 }
 
 export class NotificationHubs extends _Mobile {
-  protected static override _iconDataUrl = notification_hubsIcon;
+  protected static _iconDataUrl = notification_hubsIcon;
 }
 
 export class PowerPlatform extends _Mobile {
-  protected static override _iconDataUrl = power_platformIcon;
+  protected static _iconDataUrl = power_platformIcon;
 }

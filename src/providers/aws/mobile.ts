@@ -12,29 +12,29 @@ class _Mobile extends _Aws {
 }
 
 export class Amplify extends _Mobile {
-  protected static override _iconDataUrl = amplifyIcon;
+  protected static _iconDataUrl = amplifyIcon;
 }
 
 export class APIGatewayEndpoint extends _Mobile {
-  protected static override _iconDataUrl = api_gateway_endpointIcon;
+  protected static _iconDataUrl = api_gateway_endpointIcon;
 }
 
 export class APIGateway extends _Mobile {
-  protected static override _iconDataUrl = api_gatewayIcon;
+  protected static _iconDataUrl = api_gatewayIcon;
 }
 
 export class Appsync extends _Mobile {
-  protected static override _iconDataUrl = appsyncIcon;
+  protected static _iconDataUrl = appsyncIcon;
 }
 
 export class DeviceFarm extends _Mobile {
-  protected static override _iconDataUrl = device_farmIcon;
+  protected static _iconDataUrl = device_farmIcon;
 }
 
 export class Mobile extends _Mobile {
-  protected static override _iconDataUrl = mobileIcon;
+  protected static _iconDataUrl = mobileIcon;
 }
 
 export class Pinpoint extends _Mobile {
-  protected static override _iconDataUrl = pinpointIcon;
+  protected static _iconDataUrl = pinpointIcon;
 }

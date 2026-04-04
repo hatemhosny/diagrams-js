@@ -6,5 +6,5 @@ class _Storage extends _Generic {
 }
 
 export class Storage extends _Storage {
-  protected static override _iconDataUrl = storageIcon;
+  protected static _iconDataUrl = storageIcon;
 }

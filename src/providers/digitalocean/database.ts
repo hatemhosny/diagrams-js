@@ -9,17 +9,17 @@ class _Database extends _Digitalocean {
 }
 
 export class DbaasPrimaryStandbyMore extends _Database {
-  protected static override _iconDataUrl = dbaas_primary_standby_moreIcon;
+  protected static _iconDataUrl = dbaas_primary_standby_moreIcon;
 }
 
 export class DbaasPrimary extends _Database {
-  protected static override _iconDataUrl = dbaas_primaryIcon;
+  protected static _iconDataUrl = dbaas_primaryIcon;
 }
 
 export class DbaasReadOnly extends _Database {
-  protected static override _iconDataUrl = dbaas_read_onlyIcon;
+  protected static _iconDataUrl = dbaas_read_onlyIcon;
 }
 
 export class DbaasStandby extends _Database {
-  protected static override _iconDataUrl = dbaas_standbyIcon;
+  protected static _iconDataUrl = dbaas_standbyIcon;
 }

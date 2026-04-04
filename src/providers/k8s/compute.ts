@@ -12,31 +12,31 @@ class _Compute extends _K8s {
 }
 
 export class Cronjob extends _Compute {
-  protected static override _iconDataUrl = cronjobIcon;
+  protected static _iconDataUrl = cronjobIcon;
 }
 
 export class Deploy extends _Compute {
-  protected static override _iconDataUrl = deployIcon;
+  protected static _iconDataUrl = deployIcon;
 }
 
 export class DS extends _Compute {
-  protected static override _iconDataUrl = dsIcon;
+  protected static _iconDataUrl = dsIcon;
 }
 
 export class Job extends _Compute {
-  protected static override _iconDataUrl = jobIcon;
+  protected static _iconDataUrl = jobIcon;
 }
 
 export class Pod extends _Compute {
-  protected static override _iconDataUrl = podIcon;
+  protected static _iconDataUrl = podIcon;
 }
 
 export class RS extends _Compute {
-  protected static override _iconDataUrl = rsIcon;
+  protected static _iconDataUrl = rsIcon;
 }
 
 export class STS extends _Compute {
-  protected static override _iconDataUrl = stsIcon;
+  protected static _iconDataUrl = stsIcon;
 }
 
 // Aliases

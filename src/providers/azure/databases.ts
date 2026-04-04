@@ -32,109 +32,109 @@ class _Databases extends _Azure {
 }
 
 export class AzureCosmosDb extends _Databases {
-  protected static override _iconDataUrl = azure_cosmos_dbIcon;
+  protected static _iconDataUrl = azure_cosmos_dbIcon;
 }
 
 export class AzureDataExplorerClusters extends _Databases {
-  protected static override _iconDataUrl = azure_data_explorer_clustersIcon;
+  protected static _iconDataUrl = azure_data_explorer_clustersIcon;
 }
 
 export class AzureDatabaseMariadbServer extends _Databases {
-  protected static override _iconDataUrl = azure_database_mariadb_serverIcon;
+  protected static _iconDataUrl = azure_database_mariadb_serverIcon;
 }
 
 export class AzureDatabaseMigrationServices extends _Databases {
-  protected static override _iconDataUrl = azure_database_migration_servicesIcon;
+  protected static _iconDataUrl = azure_database_migration_servicesIcon;
 }
 
 export class AzureDatabaseMysqlServer extends _Databases {
-  protected static override _iconDataUrl = azure_database_mysql_serverIcon;
+  protected static _iconDataUrl = azure_database_mysql_serverIcon;
 }
 
 export class AzureDatabasePostgresqlServerGroup extends _Databases {
-  protected static override _iconDataUrl = azure_database_postgresql_server_groupIcon;
+  protected static _iconDataUrl = azure_database_postgresql_server_groupIcon;
 }
 
 export class AzureDatabasePostgresqlServer extends _Databases {
-  protected static override _iconDataUrl = azure_database_postgresql_serverIcon;
+  protected static _iconDataUrl = azure_database_postgresql_serverIcon;
 }
 
 export class AzurePurviewAccounts extends _Databases {
-  protected static override _iconDataUrl = azure_purview_accountsIcon;
+  protected static _iconDataUrl = azure_purview_accountsIcon;
 }
 
 export class AzureSQLEdge extends _Databases {
-  protected static override _iconDataUrl = azure_sql_edgeIcon;
+  protected static _iconDataUrl = azure_sql_edgeIcon;
 }
 
 export class AzureSQLServerStretchDatabases extends _Databases {
-  protected static override _iconDataUrl = azure_sql_server_stretch_databasesIcon;
+  protected static _iconDataUrl = azure_sql_server_stretch_databasesIcon;
 }
 
 export class AzureSQLVM extends _Databases {
-  protected static override _iconDataUrl = azure_sql_vmIcon;
+  protected static _iconDataUrl = azure_sql_vmIcon;
 }
 
 export class AzureSQL extends _Databases {
-  protected static override _iconDataUrl = azure_sqlIcon;
+  protected static _iconDataUrl = azure_sqlIcon;
 }
 
 export class AzureSynapseAnalytics extends _Databases {
-  protected static override _iconDataUrl = azure_synapse_analyticsIcon;
+  protected static _iconDataUrl = azure_synapse_analyticsIcon;
 }
 
 export class CacheRedis extends _Databases {
-  protected static override _iconDataUrl = cache_redisIcon;
+  protected static _iconDataUrl = cache_redisIcon;
 }
 
 export class DataFactories extends _Databases {
-  protected static override _iconDataUrl = data_factoriesIcon;
+  protected static _iconDataUrl = data_factoriesIcon;
 }
 
 export class ElasticJobAgents extends _Databases {
-  protected static override _iconDataUrl = elastic_job_agentsIcon;
+  protected static _iconDataUrl = elastic_job_agentsIcon;
 }
 
 export class InstancePools extends _Databases {
-  protected static override _iconDataUrl = instance_poolsIcon;
+  protected static _iconDataUrl = instance_poolsIcon;
 }
 
 export class ManagedDatabase extends _Databases {
-  protected static override _iconDataUrl = managed_databaseIcon;
+  protected static _iconDataUrl = managed_databaseIcon;
 }
 
 export class OracleDatabase extends _Databases {
-  protected static override _iconDataUrl = oracle_databaseIcon;
+  protected static _iconDataUrl = oracle_databaseIcon;
 }
 
 export class SQLDataWarehouses extends _Databases {
-  protected static override _iconDataUrl = sql_data_warehousesIcon;
+  protected static _iconDataUrl = sql_data_warehousesIcon;
 }
 
 export class SQLDatabase extends _Databases {
-  protected static override _iconDataUrl = sql_databaseIcon;
+  protected static _iconDataUrl = sql_databaseIcon;
 }
 
 export class SQLElasticPools extends _Databases {
-  protected static override _iconDataUrl = sql_elastic_poolsIcon;
+  protected static _iconDataUrl = sql_elastic_poolsIcon;
 }
 
 export class SQLManagedInstance extends _Databases {
-  protected static override _iconDataUrl = sql_managed_instanceIcon;
+  protected static _iconDataUrl = sql_managed_instanceIcon;
 }
 
 export class SQLServerRegistries extends _Databases {
-  protected static override _iconDataUrl = sql_server_registriesIcon;
+  protected static _iconDataUrl = sql_server_registriesIcon;
 }
 
 export class SQLServer extends _Databases {
-  protected static override _iconDataUrl = sql_serverIcon;
+  protected static _iconDataUrl = sql_serverIcon;
 }
 
 export class SsisLiftAndShiftIr extends _Databases {
-  protected static override _iconDataUrl = ssis_lift_and_shift_irIcon;
+  protected static _iconDataUrl = ssis_lift_and_shift_irIcon;
 }
 
 export class VirtualClusters extends _Databases {
-  protected static override _iconDataUrl = virtual_clustersIcon;
+  protected static _iconDataUrl = virtual_clustersIcon;
 }

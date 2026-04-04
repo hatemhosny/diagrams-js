@@ -11,25 +11,25 @@ class _Cost extends _Aws {
 }
 
 export class Budgets extends _Cost {
-  protected static override _iconDataUrl = budgetsIcon;
+  protected static _iconDataUrl = budgetsIcon;
 }
 
 export class CostAndUsageReport extends _Cost {
-  protected static override _iconDataUrl = cost_and_usage_reportIcon;
+  protected static _iconDataUrl = cost_and_usage_reportIcon;
 }
 
 export class CostExplorer extends _Cost {
-  protected static override _iconDataUrl = cost_explorerIcon;
+  protected static _iconDataUrl = cost_explorerIcon;
 }
 
 export class CostManagement extends _Cost {
-  protected static override _iconDataUrl = cost_managementIcon;
+  protected static _iconDataUrl = cost_managementIcon;
 }
 
 export class ReservedInstanceReporting extends _Cost {
-  protected static override _iconDataUrl = reserved_instance_reportingIcon;
+  protected static _iconDataUrl = reserved_instance_reportingIcon;
 }
 
 export class SavingsPlans extends _Cost {
-  protected static override _iconDataUrl = savings_plansIcon;
+  protected static _iconDataUrl = savings_plansIcon;
 }

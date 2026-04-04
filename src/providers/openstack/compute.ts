@@ -8,13 +8,13 @@ class _Compute extends _Openstack {
 }
 
 export class Nova extends _Compute {
-  protected static override _iconDataUrl = novaIcon;
+  protected static _iconDataUrl = novaIcon;
 }
 
 export class Qinling extends _Compute {
-  protected static override _iconDataUrl = qinlingIcon;
+  protected static _iconDataUrl = qinlingIcon;
 }
 
 export class Zun extends _Compute {
-  protected static override _iconDataUrl = zunIcon;
+  protected static _iconDataUrl = zunIcon;
 }

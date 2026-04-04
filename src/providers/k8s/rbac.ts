@@ -12,31 +12,31 @@ class _Rbac extends _K8s {
 }
 
 export class CRole extends _Rbac {
-  protected static override _iconDataUrl = c_roleIcon;
+  protected static _iconDataUrl = c_roleIcon;
 }
 
 export class CRB extends _Rbac {
-  protected static override _iconDataUrl = crbIcon;
+  protected static _iconDataUrl = crbIcon;
 }
 
 export class Group extends _Rbac {
-  protected static override _iconDataUrl = groupIcon;
+  protected static _iconDataUrl = groupIcon;
 }
 
 export class RB extends _Rbac {
-  protected static override _iconDataUrl = rbIcon;
+  protected static _iconDataUrl = rbIcon;
 }
 
 export class Role extends _Rbac {
-  protected static override _iconDataUrl = roleIcon;
+  protected static _iconDataUrl = roleIcon;
 }
 
 export class SA extends _Rbac {
-  protected static override _iconDataUrl = saIcon;
+  protected static _iconDataUrl = saIcon;
 }
 
 export class User extends _Rbac {
-  protected static override _iconDataUrl = userIcon;
+  protected static _iconDataUrl = userIcon;
 }
 
 // Aliases

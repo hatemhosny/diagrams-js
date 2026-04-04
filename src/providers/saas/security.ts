@@ -7,9 +7,9 @@ class _Security extends _Saas {
 }
 
 export class Crowdstrike extends _Security {
-  protected static override _iconDataUrl = crowdstrikeIcon;
+  protected static _iconDataUrl = crowdstrikeIcon;
 }
 
 export class Sonarqube extends _Security {
-  protected static override _iconDataUrl = sonarqubeIcon;
+  protected static _iconDataUrl = sonarqubeIcon;
 }

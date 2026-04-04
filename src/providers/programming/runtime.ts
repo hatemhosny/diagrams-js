@@ -6,5 +6,5 @@ class _Runtime extends _Programming {
 }
 
 export class Dapr extends _Runtime {
-  protected static override _iconDataUrl = daprIcon;
+  protected static _iconDataUrl = daprIcon;
 }

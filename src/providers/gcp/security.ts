@@ -18,55 +18,55 @@ class _Security extends _Gcp {
 }
 
 export class AccessContextManager extends _Security {
-  protected static override _iconDataUrl = access_context_managerIcon;
+  protected static _iconDataUrl = access_context_managerIcon;
 }
 
 export class AssuredWorkloads extends _Security {
-  protected static override _iconDataUrl = assured_workloadsIcon;
+  protected static _iconDataUrl = assured_workloadsIcon;
 }
 
 export class CertificateAuthorityService extends _Security {
-  protected static override _iconDataUrl = certificate_authority_serviceIcon;
+  protected static _iconDataUrl = certificate_authority_serviceIcon;
 }
 
 export class CertificateManager extends _Security {
-  protected static override _iconDataUrl = certificate_managerIcon;
+  protected static _iconDataUrl = certificate_managerIcon;
 }
 
 export class CloudAssetInventory extends _Security {
-  protected static override _iconDataUrl = cloud_asset_inventoryIcon;
+  protected static _iconDataUrl = cloud_asset_inventoryIcon;
 }
 
 export class Iam extends _Security {
-  protected static override _iconDataUrl = iamIcon;
+  protected static _iconDataUrl = iamIcon;
 }
 
 export class IAP extends _Security {
-  protected static override _iconDataUrl = iapIcon;
+  protected static _iconDataUrl = iapIcon;
 }
 
 export class KeyManagementService extends _Security {
-  protected static override _iconDataUrl = key_management_serviceIcon;
+  protected static _iconDataUrl = key_management_serviceIcon;
 }
 
 export class ResourceManager extends _Security {
-  protected static override _iconDataUrl = resource_managerIcon;
+  protected static _iconDataUrl = resource_managerIcon;
 }
 
 export class SecretManager extends _Security {
-  protected static override _iconDataUrl = secret_managerIcon;
+  protected static _iconDataUrl = secret_managerIcon;
 }
 
 export class SecurityCommandCenter extends _Security {
-  protected static override _iconDataUrl = security_command_centerIcon;
+  protected static _iconDataUrl = security_command_centerIcon;
 }
 
 export class SecurityHealthAdvisor extends _Security {
-  protected static override _iconDataUrl = security_health_advisorIcon;
+  protected static _iconDataUrl = security_health_advisorIcon;
 }
 
 export class SecurityScanner extends _Security {
-  protected static override _iconDataUrl = security_scannerIcon;
+  protected static _iconDataUrl = security_scannerIcon;
 }
 
 // Aliases

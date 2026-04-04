@@ -41,7 +41,7 @@ function generateClassName(provider: string, filename: string): string {
 function generateProviderIndex(provider: string): string {
   const pascalProvider = toPascalCase(provider);
 
-  return `import { Node } from "../../core/Node.js";
+  return `import { Node } from "../../Node.js";
 
 export class _${pascalProvider} extends Node {
   protected static override _provider = "${provider}";
@@ -86,7 +86,7 @@ class _${pascalServiceType} extends _${pascalProvider} {
 
   for (const meta of classMetas) {
     code += `export class ${meta.name} extends _${pascalServiceType} {
-  protected static override _iconDataUrl = ${meta.importName}Icon;
+  protected static _iconDataUrl = ${meta.importName}Icon;
 }
 
 `;

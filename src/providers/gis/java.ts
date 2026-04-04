@@ -6,5 +6,5 @@ class _Java extends _Gis {
 }
 
 export class Geotools extends _Java {
-  protected static override _iconDataUrl = geotoolsIcon;
+  protected static _iconDataUrl = geotoolsIcon;
 }

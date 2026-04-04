@@ -46,7 +46,7 @@ export interface DiagramOptions {
 }
 
 export interface EdgeOptions {
-  node?: Node;
+  node?: import("./Node.js").Node;
   forward?: boolean;
   reverse?: boolean;
   label?: string;

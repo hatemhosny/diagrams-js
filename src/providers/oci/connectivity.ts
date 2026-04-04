@@ -23,73 +23,73 @@ class _Connectivity extends _Oci {
 }
 
 export class BackboneWhite extends _Connectivity {
-  protected static override _iconDataUrl = backbone_whiteIcon;
+  protected static _iconDataUrl = backbone_whiteIcon;
 }
 
 export class Backbone extends _Connectivity {
-  protected static override _iconDataUrl = backboneIcon;
+  protected static _iconDataUrl = backboneIcon;
 }
 
 export class CDNWhite extends _Connectivity {
-  protected static override _iconDataUrl = cdn_whiteIcon;
+  protected static _iconDataUrl = cdn_whiteIcon;
 }
 
 export class CDN extends _Connectivity {
-  protected static override _iconDataUrl = cdnIcon;
+  protected static _iconDataUrl = cdnIcon;
 }
 
 export class CustomerDatacenter extends _Connectivity {
-  protected static override _iconDataUrl = customer_datacenterIcon;
+  protected static _iconDataUrl = customer_datacenterIcon;
 }
 
 export class CustomerDatacntrWhite extends _Connectivity {
-  protected static override _iconDataUrl = customer_datacntr_whiteIcon;
+  protected static _iconDataUrl = customer_datacntr_whiteIcon;
 }
 
 export class CustomerPremisesWhite extends _Connectivity {
-  protected static override _iconDataUrl = customer_premises_whiteIcon;
+  protected static _iconDataUrl = customer_premises_whiteIcon;
 }
 
 export class CustomerPremises extends _Connectivity {
-  protected static override _iconDataUrl = customer_premisesIcon;
+  protected static _iconDataUrl = customer_premisesIcon;
 }
 
 export class DisconnectedRegionsWhite extends _Connectivity {
-  protected static override _iconDataUrl = disconnected_regions_whiteIcon;
+  protected static _iconDataUrl = disconnected_regions_whiteIcon;
 }
 
 export class DisconnectedRegions extends _Connectivity {
-  protected static override _iconDataUrl = disconnected_regionsIcon;
+  protected static _iconDataUrl = disconnected_regionsIcon;
 }
 
 export class DNSWhite extends _Connectivity {
-  protected static override _iconDataUrl = dns_whiteIcon;
+  protected static _iconDataUrl = dns_whiteIcon;
 }
 
 export class DNS extends _Connectivity {
-  protected static override _iconDataUrl = dnsIcon;
+  protected static _iconDataUrl = dnsIcon;
 }
 
 export class FastConnectWhite extends _Connectivity {
-  protected static override _iconDataUrl = fast_connect_whiteIcon;
+  protected static _iconDataUrl = fast_connect_whiteIcon;
 }
 
 export class FastConnect extends _Connectivity {
-  protected static override _iconDataUrl = fast_connectIcon;
+  protected static _iconDataUrl = fast_connectIcon;
 }
 
 export class NATGatewayWhite extends _Connectivity {
-  protected static override _iconDataUrl = nat_gateway_whiteIcon;
+  protected static _iconDataUrl = nat_gateway_whiteIcon;
 }
 
 export class NATGateway extends _Connectivity {
-  protected static override _iconDataUrl = nat_gatewayIcon;
+  protected static _iconDataUrl = nat_gatewayIcon;
 }
 
 export class VPNWhite extends _Connectivity {
-  protected static override _iconDataUrl = vpn_whiteIcon;
+  protected static _iconDataUrl = vpn_whiteIcon;
 }
 
 export class VPN extends _Connectivity {
-  protected static override _iconDataUrl = vpnIcon;
+  protected static _iconDataUrl = vpnIcon;
 }

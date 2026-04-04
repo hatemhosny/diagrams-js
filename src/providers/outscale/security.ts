@@ -7,9 +7,9 @@ class _Security extends _Outscale {
 }
 
 export class Firewall extends _Security {
-  protected static override _iconDataUrl = firewallIcon;
+  protected static _iconDataUrl = firewallIcon;
 }
 
 export class IdentityAndAccessManagement extends _Security {
-  protected static override _iconDataUrl = identity_and_access_managementIcon;
+  protected static _iconDataUrl = identity_and_access_managementIcon;
 }

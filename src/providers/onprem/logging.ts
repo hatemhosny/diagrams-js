@@ -10,23 +10,23 @@ class _Logging extends _Onprem {
 }
 
 export class Fluentbit extends _Logging {
-  protected static override _iconDataUrl = fluentbitIcon;
+  protected static _iconDataUrl = fluentbitIcon;
 }
 
 export class Graylog extends _Logging {
-  protected static override _iconDataUrl = graylogIcon;
+  protected static _iconDataUrl = graylogIcon;
 }
 
 export class Loki extends _Logging {
-  protected static override _iconDataUrl = lokiIcon;
+  protected static _iconDataUrl = lokiIcon;
 }
 
 export class Rsyslog extends _Logging {
-  protected static override _iconDataUrl = rsyslogIcon;
+  protected static _iconDataUrl = rsyslogIcon;
 }
 
 export class SyslogNg extends _Logging {
-  protected static override _iconDataUrl = syslog_ngIcon;
+  protected static _iconDataUrl = syslog_ngIcon;
 }
 
 // Aliases

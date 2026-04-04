@@ -119,457 +119,457 @@ class _General extends _Azure {
 }
 
 export class AllResources extends _General {
-  protected static override _iconDataUrl = all_resourcesIcon;
+  protected static _iconDataUrl = all_resourcesIcon;
 }
 
 export class Allresources extends _General {
-  protected static override _iconDataUrl = allresourcesIcon;
+  protected static _iconDataUrl = allresourcesIcon;
 }
 
 export class Azurehome extends _General {
-  protected static override _iconDataUrl = azurehomeIcon;
+  protected static _iconDataUrl = azurehomeIcon;
 }
 
 export class Backlog extends _General {
-  protected static override _iconDataUrl = backlogIcon;
+  protected static _iconDataUrl = backlogIcon;
 }
 
 export class BizTalk extends _General {
-  protected static override _iconDataUrl = biz_talkIcon;
+  protected static _iconDataUrl = biz_talkIcon;
 }
 
 export class BlobBlock extends _General {
-  protected static override _iconDataUrl = blob_blockIcon;
+  protected static _iconDataUrl = blob_blockIcon;
 }
 
 export class BlobPage extends _General {
-  protected static override _iconDataUrl = blob_pageIcon;
+  protected static _iconDataUrl = blob_pageIcon;
 }
 
 export class Branch extends _General {
-  protected static override _iconDataUrl = branchIcon;
+  protected static _iconDataUrl = branchIcon;
 }
 
 export class Browser extends _General {
-  protected static override _iconDataUrl = browserIcon;
+  protected static _iconDataUrl = browserIcon;
 }
 
 export class Bug extends _General {
-  protected static override _iconDataUrl = bugIcon;
+  protected static _iconDataUrl = bugIcon;
 }
 
 export class Builds extends _General {
-  protected static override _iconDataUrl = buildsIcon;
+  protected static _iconDataUrl = buildsIcon;
 }
 
 export class Cache extends _General {
-  protected static override _iconDataUrl = cacheIcon;
+  protected static _iconDataUrl = cacheIcon;
 }
 
 export class Code extends _General {
-  protected static override _iconDataUrl = codeIcon;
+  protected static _iconDataUrl = codeIcon;
 }
 
 export class Commit extends _General {
-  protected static override _iconDataUrl = commitIcon;
+  protected static _iconDataUrl = commitIcon;
 }
 
 export class ControlsHorizontal extends _General {
-  protected static override _iconDataUrl = controls_horizontalIcon;
+  protected static _iconDataUrl = controls_horizontalIcon;
 }
 
 export class Controls extends _General {
-  protected static override _iconDataUrl = controlsIcon;
+  protected static _iconDataUrl = controlsIcon;
 }
 
 export class CostAlerts extends _General {
-  protected static override _iconDataUrl = cost_alertsIcon;
+  protected static _iconDataUrl = cost_alertsIcon;
 }
 
 export class CostAnalysis extends _General {
-  protected static override _iconDataUrl = cost_analysisIcon;
+  protected static _iconDataUrl = cost_analysisIcon;
 }
 
 export class CostBudgets extends _General {
-  protected static override _iconDataUrl = cost_budgetsIcon;
+  protected static _iconDataUrl = cost_budgetsIcon;
 }
 
 export class CostManagementAndBilling extends _General {
-  protected static override _iconDataUrl = cost_management_and_billingIcon;
+  protected static _iconDataUrl = cost_management_and_billingIcon;
 }
 
 export class CostManagement extends _General {
-  protected static override _iconDataUrl = cost_managementIcon;
+  protected static _iconDataUrl = cost_managementIcon;
 }
 
 export class Counter extends _General {
-  protected static override _iconDataUrl = counterIcon;
+  protected static _iconDataUrl = counterIcon;
 }
 
 export class Cubes extends _General {
-  protected static override _iconDataUrl = cubesIcon;
+  protected static _iconDataUrl = cubesIcon;
 }
 
 export class Dashboard extends _General {
-  protected static override _iconDataUrl = dashboardIcon;
+  protected static _iconDataUrl = dashboardIcon;
 }
 
 export class DevConsole extends _General {
-  protected static override _iconDataUrl = dev_consoleIcon;
+  protected static _iconDataUrl = dev_consoleIcon;
 }
 
 export class Developertools extends _General {
-  protected static override _iconDataUrl = developertoolsIcon;
+  protected static _iconDataUrl = developertoolsIcon;
 }
 
 export class Download extends _General {
-  protected static override _iconDataUrl = downloadIcon;
+  protected static _iconDataUrl = downloadIcon;
 }
 
 export class Error extends _General {
-  protected static override _iconDataUrl = errorIcon;
+  protected static _iconDataUrl = errorIcon;
 }
 
 export class Extensions extends _General {
-  protected static override _iconDataUrl = extensionsIcon;
+  protected static _iconDataUrl = extensionsIcon;
 }
 
 export class FeaturePreviews extends _General {
-  protected static override _iconDataUrl = feature_previewsIcon;
+  protected static _iconDataUrl = feature_previewsIcon;
 }
 
 export class File extends _General {
-  protected static override _iconDataUrl = fileIcon;
+  protected static _iconDataUrl = fileIcon;
 }
 
 export class Files extends _General {
-  protected static override _iconDataUrl = filesIcon;
+  protected static _iconDataUrl = filesIcon;
 }
 
 export class FolderBlank extends _General {
-  protected static override _iconDataUrl = folder_blankIcon;
+  protected static _iconDataUrl = folder_blankIcon;
 }
 
 export class FolderWebsite extends _General {
-  protected static override _iconDataUrl = folder_websiteIcon;
+  protected static _iconDataUrl = folder_websiteIcon;
 }
 
 export class FreeServices extends _General {
-  protected static override _iconDataUrl = free_servicesIcon;
+  protected static _iconDataUrl = free_servicesIcon;
 }
 
 export class Ftp extends _General {
-  protected static override _iconDataUrl = ftpIcon;
+  protected static _iconDataUrl = ftpIcon;
 }
 
 export class Gear extends _General {
-  protected static override _iconDataUrl = gearIcon;
+  protected static _iconDataUrl = gearIcon;
 }
 
 export class GlobeError extends _General {
-  protected static override _iconDataUrl = globe_errorIcon;
+  protected static _iconDataUrl = globe_errorIcon;
 }
 
 export class GlobeSuccess extends _General {
-  protected static override _iconDataUrl = globe_successIcon;
+  protected static _iconDataUrl = globe_successIcon;
 }
 
 export class GlobeWarning extends _General {
-  protected static override _iconDataUrl = globe_warningIcon;
+  protected static _iconDataUrl = globe_warningIcon;
 }
 
 export class Guide extends _General {
-  protected static override _iconDataUrl = guideIcon;
+  protected static _iconDataUrl = guideIcon;
 }
 
 export class Heart extends _General {
-  protected static override _iconDataUrl = heartIcon;
+  protected static _iconDataUrl = heartIcon;
 }
 
 export class HelpAndSupport extends _General {
-  protected static override _iconDataUrl = help_and_supportIcon;
+  protected static _iconDataUrl = help_and_supportIcon;
 }
 
 export class Helpsupport extends _General {
-  protected static override _iconDataUrl = helpsupportIcon;
+  protected static _iconDataUrl = helpsupportIcon;
 }
 
 export class Image extends _General {
-  protected static override _iconDataUrl = imageIcon;
+  protected static _iconDataUrl = imageIcon;
 }
 
 export class Information extends _General {
-  protected static override _iconDataUrl = informationIcon;
+  protected static _iconDataUrl = informationIcon;
 }
 
 export class InputOutput extends _General {
-  protected static override _iconDataUrl = input_outputIcon;
+  protected static _iconDataUrl = input_outputIcon;
 }
 
 export class JourneyHub extends _General {
-  protected static override _iconDataUrl = journey_hubIcon;
+  protected static _iconDataUrl = journey_hubIcon;
 }
 
 export class LaunchPortal extends _General {
-  protected static override _iconDataUrl = launch_portalIcon;
+  protected static _iconDataUrl = launch_portalIcon;
 }
 
 export class Learn extends _General {
-  protected static override _iconDataUrl = learnIcon;
+  protected static _iconDataUrl = learnIcon;
 }
 
 export class LoadTest extends _General {
-  protected static override _iconDataUrl = load_testIcon;
+  protected static _iconDataUrl = load_testIcon;
 }
 
 export class Location extends _General {
-  protected static override _iconDataUrl = locationIcon;
+  protected static _iconDataUrl = locationIcon;
 }
 
 export class LogStreaming extends _General {
-  protected static override _iconDataUrl = log_streamingIcon;
+  protected static _iconDataUrl = log_streamingIcon;
 }
 
 export class ManagementGroups extends _General {
-  protected static override _iconDataUrl = management_groupsIcon;
+  protected static _iconDataUrl = management_groupsIcon;
 }
 
 export class ManagementPortal extends _General {
-  protected static override _iconDataUrl = management_portalIcon;
+  protected static _iconDataUrl = management_portalIcon;
 }
 
 export class Managementgroups extends _General {
-  protected static override _iconDataUrl = managementgroupsIcon;
+  protected static _iconDataUrl = managementgroupsIcon;
 }
 
 export class MarketplaceManagement extends _General {
-  protected static override _iconDataUrl = marketplace_managementIcon;
+  protected static _iconDataUrl = marketplace_managementIcon;
 }
 
 export class Marketplace extends _General {
-  protected static override _iconDataUrl = marketplaceIcon;
+  protected static _iconDataUrl = marketplaceIcon;
 }
 
 export class MediaFile extends _General {
-  protected static override _iconDataUrl = media_fileIcon;
+  protected static _iconDataUrl = media_fileIcon;
 }
 
 export class Media extends _General {
-  protected static override _iconDataUrl = mediaIcon;
+  protected static _iconDataUrl = mediaIcon;
 }
 
 export class MobileEngagement extends _General {
-  protected static override _iconDataUrl = mobile_engagementIcon;
+  protected static _iconDataUrl = mobile_engagementIcon;
 }
 
 export class Mobile extends _General {
-  protected static override _iconDataUrl = mobileIcon;
+  protected static _iconDataUrl = mobileIcon;
 }
 
 export class Module extends _General {
-  protected static override _iconDataUrl = moduleIcon;
+  protected static _iconDataUrl = moduleIcon;
 }
 
 export class PowerUp extends _General {
-  protected static override _iconDataUrl = power_upIcon;
+  protected static _iconDataUrl = power_upIcon;
 }
 
 export class Power extends _General {
-  protected static override _iconDataUrl = powerIcon;
+  protected static _iconDataUrl = powerIcon;
 }
 
 export class Powershell extends _General {
-  protected static override _iconDataUrl = powershellIcon;
+  protected static _iconDataUrl = powershellIcon;
 }
 
 export class PreviewFeatures extends _General {
-  protected static override _iconDataUrl = preview_featuresIcon;
+  protected static _iconDataUrl = preview_featuresIcon;
 }
 
 export class ProcessExplorer extends _General {
-  protected static override _iconDataUrl = process_explorerIcon;
+  protected static _iconDataUrl = process_explorerIcon;
 }
 
 export class ProductionReadyDatabase extends _General {
-  protected static override _iconDataUrl = production_ready_databaseIcon;
+  protected static _iconDataUrl = production_ready_databaseIcon;
 }
 
 export class QuickstartCenter extends _General {
-  protected static override _iconDataUrl = quickstart_centerIcon;
+  protected static _iconDataUrl = quickstart_centerIcon;
 }
 
 export class Quickstartcenter extends _General {
-  protected static override _iconDataUrl = quickstartcenterIcon;
+  protected static _iconDataUrl = quickstartcenterIcon;
 }
 
 export class Recent extends _General {
-  protected static override _iconDataUrl = recentIcon;
+  protected static _iconDataUrl = recentIcon;
 }
 
 export class RegionManagement extends _General {
-  protected static override _iconDataUrl = region_managementIcon;
+  protected static _iconDataUrl = region_managementIcon;
 }
 
 export class Reservations extends _General {
-  protected static override _iconDataUrl = reservationsIcon;
+  protected static _iconDataUrl = reservationsIcon;
 }
 
 export class ResourceExplorer extends _General {
-  protected static override _iconDataUrl = resource_explorerIcon;
+  protected static _iconDataUrl = resource_explorerIcon;
 }
 
 export class ResourceGroupList extends _General {
-  protected static override _iconDataUrl = resource_group_listIcon;
+  protected static _iconDataUrl = resource_group_listIcon;
 }
 
 export class ResourceGroups extends _General {
-  protected static override _iconDataUrl = resource_groupsIcon;
+  protected static _iconDataUrl = resource_groupsIcon;
 }
 
 export class ResourceLinked extends _General {
-  protected static override _iconDataUrl = resource_linkedIcon;
+  protected static _iconDataUrl = resource_linkedIcon;
 }
 
 export class Resource extends _General {
-  protected static override _iconDataUrl = resourceIcon;
+  protected static _iconDataUrl = resourceIcon;
 }
 
 export class Resourcegroups extends _General {
-  protected static override _iconDataUrl = resourcegroupsIcon;
+  protected static _iconDataUrl = resourcegroupsIcon;
 }
 
 export class Scheduler extends _General {
-  protected static override _iconDataUrl = schedulerIcon;
+  protected static _iconDataUrl = schedulerIcon;
 }
 
 export class SearchGrid extends _General {
-  protected static override _iconDataUrl = search_gridIcon;
+  protected static _iconDataUrl = search_gridIcon;
 }
 
 export class Search extends _General {
-  protected static override _iconDataUrl = searchIcon;
+  protected static _iconDataUrl = searchIcon;
 }
 
 export class ServerFarm extends _General {
-  protected static override _iconDataUrl = server_farmIcon;
+  protected static _iconDataUrl = server_farmIcon;
 }
 
 export class ServiceHealth extends _General {
-  protected static override _iconDataUrl = service_healthIcon;
+  protected static _iconDataUrl = service_healthIcon;
 }
 
 export class Servicehealth extends _General {
-  protected static override _iconDataUrl = servicehealthIcon;
+  protected static _iconDataUrl = servicehealthIcon;
 }
 
 export class Shareddashboard extends _General {
-  protected static override _iconDataUrl = shareddashboardIcon;
+  protected static _iconDataUrl = shareddashboardIcon;
 }
 
 export class Ssd extends _General {
-  protected static override _iconDataUrl = ssdIcon;
+  protected static _iconDataUrl = ssdIcon;
 }
 
 export class StorageAzureFiles extends _General {
-  protected static override _iconDataUrl = storage_azure_filesIcon;
+  protected static _iconDataUrl = storage_azure_filesIcon;
 }
 
 export class StorageContainer extends _General {
-  protected static override _iconDataUrl = storage_containerIcon;
+  protected static _iconDataUrl = storage_containerIcon;
 }
 
 export class StorageQueue extends _General {
-  protected static override _iconDataUrl = storage_queueIcon;
+  protected static _iconDataUrl = storage_queueIcon;
 }
 
 export class Subscriptions extends _General {
-  protected static override _iconDataUrl = subscriptionsIcon;
+  protected static _iconDataUrl = subscriptionsIcon;
 }
 
 export class Support extends _General {
-  protected static override _iconDataUrl = supportIcon;
+  protected static _iconDataUrl = supportIcon;
 }
 
 export class Supportrequests extends _General {
-  protected static override _iconDataUrl = supportrequestsIcon;
+  protected static _iconDataUrl = supportrequestsIcon;
 }
 
 export class Table extends _General {
-  protected static override _iconDataUrl = tableIcon;
+  protected static _iconDataUrl = tableIcon;
 }
 
 export class Tag extends _General {
-  protected static override _iconDataUrl = tagIcon;
+  protected static _iconDataUrl = tagIcon;
 }
 
 export class Tags extends _General {
-  protected static override _iconDataUrl = tagsIcon;
+  protected static _iconDataUrl = tagsIcon;
 }
 
 export class Templates extends _General {
-  protected static override _iconDataUrl = templatesIcon;
+  protected static _iconDataUrl = templatesIcon;
 }
 
 export class TfsVcRepository extends _General {
-  protected static override _iconDataUrl = tfs_vc_repositoryIcon;
+  protected static _iconDataUrl = tfs_vc_repositoryIcon;
 }
 
 export class Toolbox extends _General {
-  protected static override _iconDataUrl = toolboxIcon;
+  protected static _iconDataUrl = toolboxIcon;
 }
 
 export class Troubleshoot extends _General {
-  protected static override _iconDataUrl = troubleshootIcon;
+  protected static _iconDataUrl = troubleshootIcon;
 }
 
 export class Twousericon extends _General {
-  protected static override _iconDataUrl = twousericonIcon;
+  protected static _iconDataUrl = twousericonIcon;
 }
 
 export class Userhealthicon extends _General {
-  protected static override _iconDataUrl = userhealthiconIcon;
+  protected static _iconDataUrl = userhealthiconIcon;
 }
 
 export class Usericon extends _General {
-  protected static override _iconDataUrl = usericonIcon;
+  protected static _iconDataUrl = usericonIcon;
 }
 
 export class Userprivacy extends _General {
-  protected static override _iconDataUrl = userprivacyIcon;
+  protected static _iconDataUrl = userprivacyIcon;
 }
 
 export class Userresource extends _General {
-  protected static override _iconDataUrl = userresourceIcon;
+  protected static _iconDataUrl = userresourceIcon;
 }
 
 export class Versions extends _General {
-  protected static override _iconDataUrl = versionsIcon;
+  protected static _iconDataUrl = versionsIcon;
 }
 
 export class WebSlots extends _General {
-  protected static override _iconDataUrl = web_slotsIcon;
+  protected static _iconDataUrl = web_slotsIcon;
 }
 
 export class WebTest extends _General {
-  protected static override _iconDataUrl = web_testIcon;
+  protected static _iconDataUrl = web_testIcon;
 }
 
 export class WebsitePower extends _General {
-  protected static override _iconDataUrl = website_powerIcon;
+  protected static _iconDataUrl = website_powerIcon;
 }
 
 export class WebsiteStaging extends _General {
-  protected static override _iconDataUrl = website_stagingIcon;
+  protected static _iconDataUrl = website_stagingIcon;
 }
 
 export class Whatsnew extends _General {
-  protected static override _iconDataUrl = whatsnewIcon;
+  protected static _iconDataUrl = whatsnewIcon;
 }
 
 export class Workbooks extends _General {
-  protected static override _iconDataUrl = workbooksIcon;
+  protected static _iconDataUrl = workbooksIcon;
 }
 
 export class Workflow extends _General {
-  protected static override _iconDataUrl = workflowIcon;
+  protected static _iconDataUrl = workflowIcon;
 }

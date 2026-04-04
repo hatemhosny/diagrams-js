@@ -11,25 +11,25 @@ class _User extends _Ibm {
 }
 
 export class Browser extends _User {
-  protected static override _iconDataUrl = browserIcon;
+  protected static _iconDataUrl = browserIcon;
 }
 
 export class Device extends _User {
-  protected static override _iconDataUrl = deviceIcon;
+  protected static _iconDataUrl = deviceIcon;
 }
 
 export class IntegratedDigitalExperiences extends _User {
-  protected static override _iconDataUrl = integrated_digital_experiencesIcon;
+  protected static _iconDataUrl = integrated_digital_experiencesIcon;
 }
 
 export class PhysicalEntity extends _User {
-  protected static override _iconDataUrl = physical_entityIcon;
+  protected static _iconDataUrl = physical_entityIcon;
 }
 
 export class Sensor extends _User {
-  protected static override _iconDataUrl = sensorIcon;
+  protected static _iconDataUrl = sensorIcon;
 }
 
 export class User extends _User {
-  protected static override _iconDataUrl = userIcon;
+  protected static _iconDataUrl = userIcon;
 }

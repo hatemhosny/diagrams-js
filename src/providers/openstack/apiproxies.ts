@@ -6,5 +6,5 @@ class _Apiproxies extends _Openstack {
 }
 
 export class EC2API extends _Apiproxies {
-  protected static override _iconDataUrl = ec2apiIcon;
+  protected static _iconDataUrl = ec2apiIcon;
 }

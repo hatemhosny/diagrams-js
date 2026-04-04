@@ -30,103 +30,103 @@ class _Network extends _Gcp {
 }
 
 export class Armor extends _Network {
-  protected static override _iconDataUrl = armorIcon;
+  protected static _iconDataUrl = armorIcon;
 }
 
 export class CDN extends _Network {
-  protected static override _iconDataUrl = cdnIcon;
+  protected static _iconDataUrl = cdnIcon;
 }
 
 export class CloudIDS extends _Network {
-  protected static override _iconDataUrl = cloud_idsIcon;
+  protected static _iconDataUrl = cloud_idsIcon;
 }
 
 export class DedicatedInterconnect extends _Network {
-  protected static override _iconDataUrl = dedicated_interconnectIcon;
+  protected static _iconDataUrl = dedicated_interconnectIcon;
 }
 
 export class DNS extends _Network {
-  protected static override _iconDataUrl = dnsIcon;
+  protected static _iconDataUrl = dnsIcon;
 }
 
 export class ExternalIpAddresses extends _Network {
-  protected static override _iconDataUrl = external_ip_addressesIcon;
+  protected static _iconDataUrl = external_ip_addressesIcon;
 }
 
 export class FirewallRules extends _Network {
-  protected static override _iconDataUrl = firewall_rulesIcon;
+  protected static _iconDataUrl = firewall_rulesIcon;
 }
 
 export class LoadBalancing extends _Network {
-  protected static override _iconDataUrl = load_balancingIcon;
+  protected static _iconDataUrl = load_balancingIcon;
 }
 
 export class NAT extends _Network {
-  protected static override _iconDataUrl = natIcon;
+  protected static _iconDataUrl = natIcon;
 }
 
 export class NetworkConnectivityCenter extends _Network {
-  protected static override _iconDataUrl = network_connectivity_centerIcon;
+  protected static _iconDataUrl = network_connectivity_centerIcon;
 }
 
 export class NetworkIntelligenceCenter extends _Network {
-  protected static override _iconDataUrl = network_intelligence_centerIcon;
+  protected static _iconDataUrl = network_intelligence_centerIcon;
 }
 
 export class NetworkSecurity extends _Network {
-  protected static override _iconDataUrl = network_securityIcon;
+  protected static _iconDataUrl = network_securityIcon;
 }
 
 export class NetworkTiers extends _Network {
-  protected static override _iconDataUrl = network_tiersIcon;
+  protected static _iconDataUrl = network_tiersIcon;
 }
 
 export class NetworkTopology extends _Network {
-  protected static override _iconDataUrl = network_topologyIcon;
+  protected static _iconDataUrl = network_topologyIcon;
 }
 
 export class Network extends _Network {
-  protected static override _iconDataUrl = networkIcon;
+  protected static _iconDataUrl = networkIcon;
 }
 
 export class PartnerInterconnect extends _Network {
-  protected static override _iconDataUrl = partner_interconnectIcon;
+  protected static _iconDataUrl = partner_interconnectIcon;
 }
 
 export class PremiumNetworkTier extends _Network {
-  protected static override _iconDataUrl = premium_network_tierIcon;
+  protected static _iconDataUrl = premium_network_tierIcon;
 }
 
 export class PrivateServiceConnect extends _Network {
-  protected static override _iconDataUrl = private_service_connectIcon;
+  protected static _iconDataUrl = private_service_connectIcon;
 }
 
 export class Router extends _Network {
-  protected static override _iconDataUrl = routerIcon;
+  protected static _iconDataUrl = routerIcon;
 }
 
 export class Routes extends _Network {
-  protected static override _iconDataUrl = routesIcon;
+  protected static _iconDataUrl = routesIcon;
 }
 
 export class ServiceMesh extends _Network {
-  protected static override _iconDataUrl = service_meshIcon;
+  protected static _iconDataUrl = service_meshIcon;
 }
 
 export class StandardNetworkTier extends _Network {
-  protected static override _iconDataUrl = standard_network_tierIcon;
+  protected static _iconDataUrl = standard_network_tierIcon;
 }
 
 export class TrafficDirector extends _Network {
-  protected static override _iconDataUrl = traffic_directorIcon;
+  protected static _iconDataUrl = traffic_directorIcon;
 }
 
 export class VirtualPrivateCloud extends _Network {
-  protected static override _iconDataUrl = virtual_private_cloudIcon;
+  protected static _iconDataUrl = virtual_private_cloudIcon;
 }
 
 export class VPN extends _Network {
-  protected static override _iconDataUrl = vpnIcon;
+  protected static _iconDataUrl = vpnIcon;
 }
 
 // Aliases

@@ -8,13 +8,13 @@ class _Azureecosystem extends _Azure {
 }
 
 export class Applens extends _Azureecosystem {
-  protected static override _iconDataUrl = applensIcon;
+  protected static _iconDataUrl = applensIcon;
 }
 
 export class AzureHybridCenter extends _Azureecosystem {
-  protected static override _iconDataUrl = azure_hybrid_centerIcon;
+  protected static _iconDataUrl = azure_hybrid_centerIcon;
 }
 
 export class CollaborativeService extends _Azureecosystem {
-  protected static override _iconDataUrl = collaborative_serviceIcon;
+  protected static _iconDataUrl = collaborative_serviceIcon;
 }

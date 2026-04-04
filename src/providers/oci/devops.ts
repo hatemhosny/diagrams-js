@@ -11,25 +11,25 @@ class _Devops extends _Oci {
 }
 
 export class APIGatewayWhite extends _Devops {
-  protected static override _iconDataUrl = api_gateway_whiteIcon;
+  protected static _iconDataUrl = api_gateway_whiteIcon;
 }
 
 export class APIGateway extends _Devops {
-  protected static override _iconDataUrl = api_gatewayIcon;
+  protected static _iconDataUrl = api_gatewayIcon;
 }
 
 export class APIServiceWhite extends _Devops {
-  protected static override _iconDataUrl = api_service_whiteIcon;
+  protected static _iconDataUrl = api_service_whiteIcon;
 }
 
 export class APIService extends _Devops {
-  protected static override _iconDataUrl = api_serviceIcon;
+  protected static _iconDataUrl = api_serviceIcon;
 }
 
 export class ResourceMgmtWhite extends _Devops {
-  protected static override _iconDataUrl = resource_mgmt_whiteIcon;
+  protected static _iconDataUrl = resource_mgmt_whiteIcon;
 }
 
 export class ResourceMgmt extends _Devops {
-  protected static override _iconDataUrl = resource_mgmtIcon;
+  protected static _iconDataUrl = resource_mgmtIcon;
 }

@@ -7,9 +7,9 @@ class _Mixedreality extends _Azure {
 }
 
 export class RemoteRendering extends _Mixedreality {
-  protected static override _iconDataUrl = remote_renderingIcon;
+  protected static _iconDataUrl = remote_renderingIcon;
 }
 
 export class SpatialAnchorAccounts extends _Mixedreality {
-  protected static override _iconDataUrl = spatial_anchor_accountsIcon;
+  protected static _iconDataUrl = spatial_anchor_accountsIcon;
 }

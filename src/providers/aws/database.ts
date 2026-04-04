@@ -39,140 +39,139 @@ class _Database extends _Aws {
 }
 
 export class AuroraInstance extends _Database {
-  protected static override _iconDataUrl = aurora_instanceIcon;
+  protected static _iconDataUrl = aurora_instanceIcon;
 }
 
 export class Aurora extends _Database {
-  protected static override _iconDataUrl = auroraIcon;
+  protected static _iconDataUrl = auroraIcon;
 }
 
 export class DatabaseMigrationServiceDatabaseMigrationWorkflow extends _Database {
-  protected static override _iconDataUrl =
-    database_migration_service_database_migration_workflowIcon;
+  protected static _iconDataUrl = database_migration_service_database_migration_workflowIcon;
 }
 
 export class DatabaseMigrationService extends _Database {
-  protected static override _iconDataUrl = database_migration_serviceIcon;
+  protected static _iconDataUrl = database_migration_serviceIcon;
 }
 
 export class Database extends _Database {
-  protected static override _iconDataUrl = databaseIcon;
+  protected static _iconDataUrl = databaseIcon;
 }
 
 export class DocumentdbMongodbCompatibility extends _Database {
-  protected static override _iconDataUrl = documentdb_mongodb_compatibilityIcon;
+  protected static _iconDataUrl = documentdb_mongodb_compatibilityIcon;
 }
 
 export class DynamodbAttribute extends _Database {
-  protected static override _iconDataUrl = dynamodb_attributeIcon;
+  protected static _iconDataUrl = dynamodb_attributeIcon;
 }
 
 export class DynamodbAttributes extends _Database {
-  protected static override _iconDataUrl = dynamodb_attributesIcon;
+  protected static _iconDataUrl = dynamodb_attributesIcon;
 }
 
 export class DynamodbDax extends _Database {
-  protected static override _iconDataUrl = dynamodb_daxIcon;
+  protected static _iconDataUrl = dynamodb_daxIcon;
 }
 
 export class DynamodbGlobalSecondaryIndex extends _Database {
-  protected static override _iconDataUrl = dynamodb_global_secondary_indexIcon;
+  protected static _iconDataUrl = dynamodb_global_secondary_indexIcon;
 }
 
 export class DynamodbItem extends _Database {
-  protected static override _iconDataUrl = dynamodb_itemIcon;
+  protected static _iconDataUrl = dynamodb_itemIcon;
 }
 
 export class DynamodbItems extends _Database {
-  protected static override _iconDataUrl = dynamodb_itemsIcon;
+  protected static _iconDataUrl = dynamodb_itemsIcon;
 }
 
 export class DynamodbStreams extends _Database {
-  protected static override _iconDataUrl = dynamodb_streamsIcon;
+  protected static _iconDataUrl = dynamodb_streamsIcon;
 }
 
 export class DynamodbTable extends _Database {
-  protected static override _iconDataUrl = dynamodb_tableIcon;
+  protected static _iconDataUrl = dynamodb_tableIcon;
 }
 
 export class Dynamodb extends _Database {
-  protected static override _iconDataUrl = dynamodbIcon;
+  protected static _iconDataUrl = dynamodbIcon;
 }
 
 export class ElasticacheCacheNode extends _Database {
-  protected static override _iconDataUrl = elasticache_cache_nodeIcon;
+  protected static _iconDataUrl = elasticache_cache_nodeIcon;
 }
 
 export class ElasticacheForMemcached extends _Database {
-  protected static override _iconDataUrl = elasticache_for_memcachedIcon;
+  protected static _iconDataUrl = elasticache_for_memcachedIcon;
 }
 
 export class ElasticacheForRedis extends _Database {
-  protected static override _iconDataUrl = elasticache_for_redisIcon;
+  protected static _iconDataUrl = elasticache_for_redisIcon;
 }
 
 export class Elasticache extends _Database {
-  protected static override _iconDataUrl = elasticacheIcon;
+  protected static _iconDataUrl = elasticacheIcon;
 }
 
 export class KeyspacesManagedApacheCassandraService extends _Database {
-  protected static override _iconDataUrl = keyspaces_managed_apache_cassandra_serviceIcon;
+  protected static _iconDataUrl = keyspaces_managed_apache_cassandra_serviceIcon;
 }
 
 export class Neptune extends _Database {
-  protected static override _iconDataUrl = neptuneIcon;
+  protected static _iconDataUrl = neptuneIcon;
 }
 
 export class QuantumLedgerDatabaseQldb extends _Database {
-  protected static override _iconDataUrl = quantum_ledger_database_qldbIcon;
+  protected static _iconDataUrl = quantum_ledger_database_qldbIcon;
 }
 
 export class RDSInstance extends _Database {
-  protected static override _iconDataUrl = rds_instanceIcon;
+  protected static _iconDataUrl = rds_instanceIcon;
 }
 
 export class RDSMariadbInstance extends _Database {
-  protected static override _iconDataUrl = rds_mariadb_instanceIcon;
+  protected static _iconDataUrl = rds_mariadb_instanceIcon;
 }
 
 export class RDSMysqlInstance extends _Database {
-  protected static override _iconDataUrl = rds_mysql_instanceIcon;
+  protected static _iconDataUrl = rds_mysql_instanceIcon;
 }
 
 export class RDSOnVmware extends _Database {
-  protected static override _iconDataUrl = rds_on_vmwareIcon;
+  protected static _iconDataUrl = rds_on_vmwareIcon;
 }
 
 export class RDSOracleInstance extends _Database {
-  protected static override _iconDataUrl = rds_oracle_instanceIcon;
+  protected static _iconDataUrl = rds_oracle_instanceIcon;
 }
 
 export class RDSPostgresqlInstance extends _Database {
-  protected static override _iconDataUrl = rds_postgresql_instanceIcon;
+  protected static _iconDataUrl = rds_postgresql_instanceIcon;
 }
 
 export class RDSSqlServerInstance extends _Database {
-  protected static override _iconDataUrl = rds_sql_server_instanceIcon;
+  protected static _iconDataUrl = rds_sql_server_instanceIcon;
 }
 
 export class RDS extends _Database {
-  protected static override _iconDataUrl = rdsIcon;
+  protected static _iconDataUrl = rdsIcon;
 }
 
 export class RedshiftDenseComputeNode extends _Database {
-  protected static override _iconDataUrl = redshift_dense_compute_nodeIcon;
+  protected static _iconDataUrl = redshift_dense_compute_nodeIcon;
 }
 
 export class RedshiftDenseStorageNode extends _Database {
-  protected static override _iconDataUrl = redshift_dense_storage_nodeIcon;
+  protected static _iconDataUrl = redshift_dense_storage_nodeIcon;
 }
 
 export class Redshift extends _Database {
-  protected static override _iconDataUrl = redshiftIcon;
+  protected static _iconDataUrl = redshiftIcon;
 }
 
 export class Timestream extends _Database {
-  protected static override _iconDataUrl = timestreamIcon;
+  protected static _iconDataUrl = timestreamIcon;
 }
 
 // Aliases

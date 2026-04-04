@@ -6,5 +6,5 @@ class _Messaging extends _Onprem {
 }
 
 export class Centrifugo extends _Messaging {
-  protected static override _iconDataUrl = centrifugoIcon;
+  protected static _iconDataUrl = centrifugoIcon;
 }

@@ -8,13 +8,13 @@ class _Client extends _Onprem {
 }
 
 export class Client extends _Client {
-  protected static override _iconDataUrl = clientIcon;
+  protected static _iconDataUrl = clientIcon;
 }
 
 export class User extends _Client {
-  protected static override _iconDataUrl = userIcon;
+  protected static _iconDataUrl = userIcon;
 }
 
 export class Users extends _Client {
-  protected static override _iconDataUrl = usersIcon;
+  protected static _iconDataUrl = usersIcon;
 }

@@ -64,239 +64,239 @@ class _Management extends _Aws {
 }
 
 export class AmazonDevopsGuru extends _Management {
-  protected static override _iconDataUrl = amazon_devops_guruIcon;
+  protected static _iconDataUrl = amazon_devops_guruIcon;
 }
 
 export class AmazonManagedGrafana extends _Management {
-  protected static override _iconDataUrl = amazon_managed_grafanaIcon;
+  protected static _iconDataUrl = amazon_managed_grafanaIcon;
 }
 
 export class AmazonManagedPrometheus extends _Management {
-  protected static override _iconDataUrl = amazon_managed_prometheusIcon;
+  protected static _iconDataUrl = amazon_managed_prometheusIcon;
 }
 
 export class AmazonManagedWorkflowsApacheAirflow extends _Management {
-  protected static override _iconDataUrl = amazon_managed_workflows_apache_airflowIcon;
+  protected static _iconDataUrl = amazon_managed_workflows_apache_airflowIcon;
 }
 
 export class AutoScaling extends _Management {
-  protected static override _iconDataUrl = auto_scalingIcon;
+  protected static _iconDataUrl = auto_scalingIcon;
 }
 
 export class Chatbot extends _Management {
-  protected static override _iconDataUrl = chatbotIcon;
+  protected static _iconDataUrl = chatbotIcon;
 }
 
 export class CloudformationChangeSet extends _Management {
-  protected static override _iconDataUrl = cloudformation_change_setIcon;
+  protected static _iconDataUrl = cloudformation_change_setIcon;
 }
 
 export class CloudformationStack extends _Management {
-  protected static override _iconDataUrl = cloudformation_stackIcon;
+  protected static _iconDataUrl = cloudformation_stackIcon;
 }
 
 export class CloudformationTemplate extends _Management {
-  protected static override _iconDataUrl = cloudformation_templateIcon;
+  protected static _iconDataUrl = cloudformation_templateIcon;
 }
 
 export class Cloudformation extends _Management {
-  protected static override _iconDataUrl = cloudformationIcon;
+  protected static _iconDataUrl = cloudformationIcon;
 }
 
 export class Cloudtrail extends _Management {
-  protected static override _iconDataUrl = cloudtrailIcon;
+  protected static _iconDataUrl = cloudtrailIcon;
 }
 
 export class CloudwatchAlarm extends _Management {
-  protected static override _iconDataUrl = cloudwatch_alarmIcon;
+  protected static _iconDataUrl = cloudwatch_alarmIcon;
 }
 
 export class CloudwatchEventEventBased extends _Management {
-  protected static override _iconDataUrl = cloudwatch_event_event_basedIcon;
+  protected static _iconDataUrl = cloudwatch_event_event_basedIcon;
 }
 
 export class CloudwatchEventTimeBased extends _Management {
-  protected static override _iconDataUrl = cloudwatch_event_time_basedIcon;
+  protected static _iconDataUrl = cloudwatch_event_time_basedIcon;
 }
 
 export class CloudwatchLogs extends _Management {
-  protected static override _iconDataUrl = cloudwatch_logsIcon;
+  protected static _iconDataUrl = cloudwatch_logsIcon;
 }
 
 export class CloudwatchRule extends _Management {
-  protected static override _iconDataUrl = cloudwatch_ruleIcon;
+  protected static _iconDataUrl = cloudwatch_ruleIcon;
 }
 
 export class Cloudwatch extends _Management {
-  protected static override _iconDataUrl = cloudwatchIcon;
+  protected static _iconDataUrl = cloudwatchIcon;
 }
 
 export class Codeguru extends _Management {
-  protected static override _iconDataUrl = codeguruIcon;
+  protected static _iconDataUrl = codeguruIcon;
 }
 
 export class CommandLineInterface extends _Management {
-  protected static override _iconDataUrl = command_line_interfaceIcon;
+  protected static _iconDataUrl = command_line_interfaceIcon;
 }
 
 export class Config extends _Management {
-  protected static override _iconDataUrl = configIcon;
+  protected static _iconDataUrl = configIcon;
 }
 
 export class ControlTower extends _Management {
-  protected static override _iconDataUrl = control_towerIcon;
+  protected static _iconDataUrl = control_towerIcon;
 }
 
 export class LicenseManager extends _Management {
-  protected static override _iconDataUrl = license_managerIcon;
+  protected static _iconDataUrl = license_managerIcon;
 }
 
 export class ManagedServices extends _Management {
-  protected static override _iconDataUrl = managed_servicesIcon;
+  protected static _iconDataUrl = managed_servicesIcon;
 }
 
 export class ManagementAndGovernance extends _Management {
-  protected static override _iconDataUrl = management_and_governanceIcon;
+  protected static _iconDataUrl = management_and_governanceIcon;
 }
 
 export class ManagementConsole extends _Management {
-  protected static override _iconDataUrl = management_consoleIcon;
+  protected static _iconDataUrl = management_consoleIcon;
 }
 
 export class OpsworksApps extends _Management {
-  protected static override _iconDataUrl = opsworks_appsIcon;
+  protected static _iconDataUrl = opsworks_appsIcon;
 }
 
 export class OpsworksDeployments extends _Management {
-  protected static override _iconDataUrl = opsworks_deploymentsIcon;
+  protected static _iconDataUrl = opsworks_deploymentsIcon;
 }
 
 export class OpsworksInstances extends _Management {
-  protected static override _iconDataUrl = opsworks_instancesIcon;
+  protected static _iconDataUrl = opsworks_instancesIcon;
 }
 
 export class OpsworksLayers extends _Management {
-  protected static override _iconDataUrl = opsworks_layersIcon;
+  protected static _iconDataUrl = opsworks_layersIcon;
 }
 
 export class OpsworksMonitoring extends _Management {
-  protected static override _iconDataUrl = opsworks_monitoringIcon;
+  protected static _iconDataUrl = opsworks_monitoringIcon;
 }
 
 export class OpsworksPermissions extends _Management {
-  protected static override _iconDataUrl = opsworks_permissionsIcon;
+  protected static _iconDataUrl = opsworks_permissionsIcon;
 }
 
 export class OpsworksResources extends _Management {
-  protected static override _iconDataUrl = opsworks_resourcesIcon;
+  protected static _iconDataUrl = opsworks_resourcesIcon;
 }
 
 export class OpsworksStack extends _Management {
-  protected static override _iconDataUrl = opsworks_stackIcon;
+  protected static _iconDataUrl = opsworks_stackIcon;
 }
 
 export class Opsworks extends _Management {
-  protected static override _iconDataUrl = opsworksIcon;
+  protected static _iconDataUrl = opsworksIcon;
 }
 
 export class OrganizationsAccount extends _Management {
-  protected static override _iconDataUrl = organizations_accountIcon;
+  protected static _iconDataUrl = organizations_accountIcon;
 }
 
 export class OrganizationsOrganizationalUnit extends _Management {
-  protected static override _iconDataUrl = organizations_organizational_unitIcon;
+  protected static _iconDataUrl = organizations_organizational_unitIcon;
 }
 
 export class Organizations extends _Management {
-  protected static override _iconDataUrl = organizationsIcon;
+  protected static _iconDataUrl = organizationsIcon;
 }
 
 export class PersonalHealthDashboard extends _Management {
-  protected static override _iconDataUrl = personal_health_dashboardIcon;
+  protected static _iconDataUrl = personal_health_dashboardIcon;
 }
 
 export class Proton extends _Management {
-  protected static override _iconDataUrl = protonIcon;
+  protected static _iconDataUrl = protonIcon;
 }
 
 export class ServiceCatalog extends _Management {
-  protected static override _iconDataUrl = service_catalogIcon;
+  protected static _iconDataUrl = service_catalogIcon;
 }
 
 export class SystemsManagerAppConfig extends _Management {
-  protected static override _iconDataUrl = systems_manager_app_configIcon;
+  protected static _iconDataUrl = systems_manager_app_configIcon;
 }
 
 export class SystemsManagerAutomation extends _Management {
-  protected static override _iconDataUrl = systems_manager_automationIcon;
+  protected static _iconDataUrl = systems_manager_automationIcon;
 }
 
 export class SystemsManagerDocuments extends _Management {
-  protected static override _iconDataUrl = systems_manager_documentsIcon;
+  protected static _iconDataUrl = systems_manager_documentsIcon;
 }
 
 export class SystemsManagerInventory extends _Management {
-  protected static override _iconDataUrl = systems_manager_inventoryIcon;
+  protected static _iconDataUrl = systems_manager_inventoryIcon;
 }
 
 export class SystemsManagerMaintenanceWindows extends _Management {
-  protected static override _iconDataUrl = systems_manager_maintenance_windowsIcon;
+  protected static _iconDataUrl = systems_manager_maintenance_windowsIcon;
 }
 
 export class SystemsManagerOpscenter extends _Management {
-  protected static override _iconDataUrl = systems_manager_opscenterIcon;
+  protected static _iconDataUrl = systems_manager_opscenterIcon;
 }
 
 export class SystemsManagerParameterStore extends _Management {
-  protected static override _iconDataUrl = systems_manager_parameter_storeIcon;
+  protected static _iconDataUrl = systems_manager_parameter_storeIcon;
 }
 
 export class SystemsManagerPatchManager extends _Management {
-  protected static override _iconDataUrl = systems_manager_patch_managerIcon;
+  protected static _iconDataUrl = systems_manager_patch_managerIcon;
 }
 
 export class SystemsManagerRunCommand extends _Management {
-  protected static override _iconDataUrl = systems_manager_run_commandIcon;
+  protected static _iconDataUrl = systems_manager_run_commandIcon;
 }
 
 export class SystemsManagerStateManager extends _Management {
-  protected static override _iconDataUrl = systems_manager_state_managerIcon;
+  protected static _iconDataUrl = systems_manager_state_managerIcon;
 }
 
 export class SystemsManager extends _Management {
-  protected static override _iconDataUrl = systems_managerIcon;
+  protected static _iconDataUrl = systems_managerIcon;
 }
 
 export class TrustedAdvisorChecklistCost extends _Management {
-  protected static override _iconDataUrl = trusted_advisor_checklist_costIcon;
+  protected static _iconDataUrl = trusted_advisor_checklist_costIcon;
 }
 
 export class TrustedAdvisorChecklistFaultTolerant extends _Management {
-  protected static override _iconDataUrl = trusted_advisor_checklist_fault_tolerantIcon;
+  protected static _iconDataUrl = trusted_advisor_checklist_fault_tolerantIcon;
 }
 
 export class TrustedAdvisorChecklistPerformance extends _Management {
-  protected static override _iconDataUrl = trusted_advisor_checklist_performanceIcon;
+  protected static _iconDataUrl = trusted_advisor_checklist_performanceIcon;
 }
 
 export class TrustedAdvisorChecklistSecurity extends _Management {
-  protected static override _iconDataUrl = trusted_advisor_checklist_securityIcon;
+  protected static _iconDataUrl = trusted_advisor_checklist_securityIcon;
 }
 
 export class TrustedAdvisorChecklist extends _Management {
-  protected static override _iconDataUrl = trusted_advisor_checklistIcon;
+  protected static _iconDataUrl = trusted_advisor_checklistIcon;
 }
 
 export class TrustedAdvisor extends _Management {
-  protected static override _iconDataUrl = trusted_advisorIcon;
+  protected static _iconDataUrl = trusted_advisorIcon;
 }
 
 export class UserNotifications extends _Management {
-  protected static override _iconDataUrl = user_notificationsIcon;
+  protected static _iconDataUrl = user_notificationsIcon;
 }
 
 export class WellArchitectedTool extends _Management {
-  protected static override _iconDataUrl = well_architected_toolIcon;
+  protected static _iconDataUrl = well_architected_toolIcon;
 }
 
 // Aliases

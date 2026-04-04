@@ -10,21 +10,21 @@ class _Data extends _Gis {
 }
 
 export class BAN extends _Data {
-  protected static override _iconDataUrl = banIcon;
+  protected static _iconDataUrl = banIcon;
 }
 
 export class Here extends _Data {
-  protected static override _iconDataUrl = hereIcon;
+  protected static _iconDataUrl = hereIcon;
 }
 
 export class IGN extends _Data {
-  protected static override _iconDataUrl = ignIcon;
+  protected static _iconDataUrl = ignIcon;
 }
 
 export class Openstreetmap extends _Data {
-  protected static override _iconDataUrl = openstreetmapIcon;
+  protected static _iconDataUrl = openstreetmapIcon;
 }
 
 export class Overturemaps extends _Data {
-  protected static override _iconDataUrl = overturemapsIcon;
+  protected static _iconDataUrl = overturemapsIcon;
 }

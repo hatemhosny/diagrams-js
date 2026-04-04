@@ -7,9 +7,9 @@ class _Others extends _K8s {
 }
 
 export class CRD extends _Others {
-  protected static override _iconDataUrl = crdIcon;
+  protected static _iconDataUrl = crdIcon;
 }
 
 export class PSP extends _Others {
-  protected static override _iconDataUrl = pspIcon;
+  protected static _iconDataUrl = pspIcon;
 }

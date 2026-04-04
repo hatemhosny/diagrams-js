@@ -17,49 +17,49 @@ class _Monitor extends _Azure {
 }
 
 export class ActivityLog extends _Monitor {
-  protected static override _iconDataUrl = activity_logIcon;
+  protected static _iconDataUrl = activity_logIcon;
 }
 
 export class ApplicationInsights extends _Monitor {
-  protected static override _iconDataUrl = application_insightsIcon;
+  protected static _iconDataUrl = application_insightsIcon;
 }
 
 export class AutoScale extends _Monitor {
-  protected static override _iconDataUrl = auto_scaleIcon;
+  protected static _iconDataUrl = auto_scaleIcon;
 }
 
 export class AzureMonitorsForSAPSolutions extends _Monitor {
-  protected static override _iconDataUrl = azure_monitors_for_sap_solutionsIcon;
+  protected static _iconDataUrl = azure_monitors_for_sap_solutionsIcon;
 }
 
 export class AzureWorkbooks extends _Monitor {
-  protected static override _iconDataUrl = azure_workbooksIcon;
+  protected static _iconDataUrl = azure_workbooksIcon;
 }
 
 export class ChangeAnalysis extends _Monitor {
-  protected static override _iconDataUrl = change_analysisIcon;
+  protected static _iconDataUrl = change_analysisIcon;
 }
 
 export class DiagnosticsSettings extends _Monitor {
-  protected static override _iconDataUrl = diagnostics_settingsIcon;
+  protected static _iconDataUrl = diagnostics_settingsIcon;
 }
 
 export class LogAnalyticsWorkspaces extends _Monitor {
-  protected static override _iconDataUrl = log_analytics_workspacesIcon;
+  protected static _iconDataUrl = log_analytics_workspacesIcon;
 }
 
 export class Logs extends _Monitor {
-  protected static override _iconDataUrl = logsIcon;
+  protected static _iconDataUrl = logsIcon;
 }
 
 export class Metrics extends _Monitor {
-  protected static override _iconDataUrl = metricsIcon;
+  protected static _iconDataUrl = metricsIcon;
 }
 
 export class Monitor extends _Monitor {
-  protected static override _iconDataUrl = monitorIcon;
+  protected static _iconDataUrl = monitorIcon;
 }
 
 export class NetworkWatcher extends _Monitor {
-  protected static override _iconDataUrl = network_watcherIcon;
+  protected static _iconDataUrl = network_watcherIcon;
 }

@@ -8,13 +8,13 @@ class _Auth extends _Onprem {
 }
 
 export class Boundary extends _Auth {
-  protected static override _iconDataUrl = boundaryIcon;
+  protected static _iconDataUrl = boundaryIcon;
 }
 
 export class BuzzfeedSso extends _Auth {
-  protected static override _iconDataUrl = buzzfeed_ssoIcon;
+  protected static _iconDataUrl = buzzfeed_ssoIcon;
 }
 
 export class Oauth2Proxy extends _Auth {
-  protected static override _iconDataUrl = oauth2_proxyIcon;
+  protected static _iconDataUrl = oauth2_proxyIcon;
 }

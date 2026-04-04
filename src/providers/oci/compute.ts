@@ -21,67 +21,67 @@ class _Compute extends _Oci {
 }
 
 export class AutoscaleWhite extends _Compute {
-  protected static override _iconDataUrl = autoscale_whiteIcon;
+  protected static _iconDataUrl = autoscale_whiteIcon;
 }
 
 export class Autoscale extends _Compute {
-  protected static override _iconDataUrl = autoscaleIcon;
+  protected static _iconDataUrl = autoscaleIcon;
 }
 
 export class BMWhite extends _Compute {
-  protected static override _iconDataUrl = bm_whiteIcon;
+  protected static _iconDataUrl = bm_whiteIcon;
 }
 
 export class BM extends _Compute {
-  protected static override _iconDataUrl = bmIcon;
+  protected static _iconDataUrl = bmIcon;
 }
 
 export class ContainerWhite extends _Compute {
-  protected static override _iconDataUrl = container_whiteIcon;
+  protected static _iconDataUrl = container_whiteIcon;
 }
 
 export class Container extends _Compute {
-  protected static override _iconDataUrl = containerIcon;
+  protected static _iconDataUrl = containerIcon;
 }
 
 export class FunctionsWhite extends _Compute {
-  protected static override _iconDataUrl = functions_whiteIcon;
+  protected static _iconDataUrl = functions_whiteIcon;
 }
 
 export class Functions extends _Compute {
-  protected static override _iconDataUrl = functionsIcon;
+  protected static _iconDataUrl = functionsIcon;
 }
 
 export class InstancePoolsWhite extends _Compute {
-  protected static override _iconDataUrl = instance_pools_whiteIcon;
+  protected static _iconDataUrl = instance_pools_whiteIcon;
 }
 
 export class InstancePools extends _Compute {
-  protected static override _iconDataUrl = instance_poolsIcon;
+  protected static _iconDataUrl = instance_poolsIcon;
 }
 
 export class OCIRWhite extends _Compute {
-  protected static override _iconDataUrl = ocir_whiteIcon;
+  protected static _iconDataUrl = ocir_whiteIcon;
 }
 
 export class OCIR extends _Compute {
-  protected static override _iconDataUrl = ocirIcon;
+  protected static _iconDataUrl = ocirIcon;
 }
 
 export class OKEWhite extends _Compute {
-  protected static override _iconDataUrl = oke_whiteIcon;
+  protected static _iconDataUrl = oke_whiteIcon;
 }
 
 export class OKE extends _Compute {
-  protected static override _iconDataUrl = okeIcon;
+  protected static _iconDataUrl = okeIcon;
 }
 
 export class VMWhite extends _Compute {
-  protected static override _iconDataUrl = vm_whiteIcon;
+  protected static _iconDataUrl = vm_whiteIcon;
 }
 
 export class VM extends _Compute {
-  protected static override _iconDataUrl = vmIcon;
+  protected static _iconDataUrl = vmIcon;
 }
 
 // Aliases

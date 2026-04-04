@@ -7,9 +7,9 @@ class _Format extends _Gis {
 }
 
 export class Geopackage extends _Format {
-  protected static override _iconDataUrl = geopackageIcon;
+  protected static _iconDataUrl = geopackageIcon;
 }
 
 export class Geoparquet extends _Format {
-  protected static override _iconDataUrl = geoparquetIcon;
+  protected static _iconDataUrl = geoparquetIcon;
 }

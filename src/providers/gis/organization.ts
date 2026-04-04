@@ -6,5 +6,5 @@ class _Organization extends _Gis {
 }
 
 export class Osgeo extends _Organization {
-  protected static override _iconDataUrl = osgeoIcon;
+  protected static _iconDataUrl = osgeoIcon;
 }

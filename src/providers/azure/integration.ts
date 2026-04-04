@@ -39,137 +39,137 @@ class _Integration extends _Azure {
 }
 
 export class APIConnections extends _Integration {
-  protected static override _iconDataUrl = api_connectionsIcon;
+  protected static _iconDataUrl = api_connectionsIcon;
 }
 
 export class APIForFhir extends _Integration {
-  protected static override _iconDataUrl = api_for_fhirIcon;
+  protected static _iconDataUrl = api_for_fhirIcon;
 }
 
 export class APIManagementServices extends _Integration {
-  protected static override _iconDataUrl = api_management_servicesIcon;
+  protected static _iconDataUrl = api_management_servicesIcon;
 }
 
 export class APIManagement extends _Integration {
-  protected static override _iconDataUrl = api_managementIcon;
+  protected static _iconDataUrl = api_managementIcon;
 }
 
 export class AppConfiguration extends _Integration {
-  protected static override _iconDataUrl = app_configurationIcon;
+  protected static _iconDataUrl = app_configurationIcon;
 }
 
 export class AzureAPIForFhir extends _Integration {
-  protected static override _iconDataUrl = azure_api_for_fhirIcon;
+  protected static _iconDataUrl = azure_api_for_fhirIcon;
 }
 
 export class AzureDataCatalog extends _Integration {
-  protected static override _iconDataUrl = azure_data_catalogIcon;
+  protected static _iconDataUrl = azure_data_catalogIcon;
 }
 
 export class AzureDataboxGateway extends _Integration {
-  protected static override _iconDataUrl = azure_databox_gatewayIcon;
+  protected static _iconDataUrl = azure_databox_gatewayIcon;
 }
 
 export class AzureServiceBus extends _Integration {
-  protected static override _iconDataUrl = azure_service_busIcon;
+  protected static _iconDataUrl = azure_service_busIcon;
 }
 
 export class AzureSQLServerStretchDatabases extends _Integration {
-  protected static override _iconDataUrl = azure_sql_server_stretch_databasesIcon;
+  protected static _iconDataUrl = azure_sql_server_stretch_databasesIcon;
 }
 
 export class AzureStackEdge extends _Integration {
-  protected static override _iconDataUrl = azure_stack_edgeIcon;
+  protected static _iconDataUrl = azure_stack_edgeIcon;
 }
 
 export class DataCatalog extends _Integration {
-  protected static override _iconDataUrl = data_catalogIcon;
+  protected static _iconDataUrl = data_catalogIcon;
 }
 
 export class DataFactories extends _Integration {
-  protected static override _iconDataUrl = data_factoriesIcon;
+  protected static _iconDataUrl = data_factoriesIcon;
 }
 
 export class EventGridDomains extends _Integration {
-  protected static override _iconDataUrl = event_grid_domainsIcon;
+  protected static _iconDataUrl = event_grid_domainsIcon;
 }
 
 export class EventGridSubscriptions extends _Integration {
-  protected static override _iconDataUrl = event_grid_subscriptionsIcon;
+  protected static _iconDataUrl = event_grid_subscriptionsIcon;
 }
 
 export class EventGridTopics extends _Integration {
-  protected static override _iconDataUrl = event_grid_topicsIcon;
+  protected static _iconDataUrl = event_grid_topicsIcon;
 }
 
 export class IntegrationAccounts extends _Integration {
-  protected static override _iconDataUrl = integration_accountsIcon;
+  protected static _iconDataUrl = integration_accountsIcon;
 }
 
 export class IntegrationEnvironments extends _Integration {
-  protected static override _iconDataUrl = integration_environmentsIcon;
+  protected static _iconDataUrl = integration_environmentsIcon;
 }
 
 export class IntegrationServiceEnvironments extends _Integration {
-  protected static override _iconDataUrl = integration_service_environmentsIcon;
+  protected static _iconDataUrl = integration_service_environmentsIcon;
 }
 
 export class LogicAppsCustomConnector extends _Integration {
-  protected static override _iconDataUrl = logic_apps_custom_connectorIcon;
+  protected static _iconDataUrl = logic_apps_custom_connectorIcon;
 }
 
 export class LogicApps extends _Integration {
-  protected static override _iconDataUrl = logic_appsIcon;
+  protected static _iconDataUrl = logic_appsIcon;
 }
 
 export class PartnerNamespace extends _Integration {
-  protected static override _iconDataUrl = partner_namespaceIcon;
+  protected static _iconDataUrl = partner_namespaceIcon;
 }
 
 export class PartnerRegistration extends _Integration {
-  protected static override _iconDataUrl = partner_registrationIcon;
+  protected static _iconDataUrl = partner_registrationIcon;
 }
 
 export class PartnerTopic extends _Integration {
-  protected static override _iconDataUrl = partner_topicIcon;
+  protected static _iconDataUrl = partner_topicIcon;
 }
 
 export class PowerPlatform extends _Integration {
-  protected static override _iconDataUrl = power_platformIcon;
+  protected static _iconDataUrl = power_platformIcon;
 }
 
 export class Relays extends _Integration {
-  protected static override _iconDataUrl = relaysIcon;
+  protected static _iconDataUrl = relaysIcon;
 }
 
 export class SendgridAccounts extends _Integration {
-  protected static override _iconDataUrl = sendgrid_accountsIcon;
+  protected static _iconDataUrl = sendgrid_accountsIcon;
 }
 
 export class ServiceBusRelays extends _Integration {
-  protected static override _iconDataUrl = service_bus_relaysIcon;
+  protected static _iconDataUrl = service_bus_relaysIcon;
 }
 
 export class ServiceBus extends _Integration {
-  protected static override _iconDataUrl = service_busIcon;
+  protected static _iconDataUrl = service_busIcon;
 }
 
 export class ServiceCatalogManagedApplicationDefinitions extends _Integration {
-  protected static override _iconDataUrl = service_catalog_managed_application_definitionsIcon;
+  protected static _iconDataUrl = service_catalog_managed_application_definitionsIcon;
 }
 
 export class SoftwareAsAService extends _Integration {
-  protected static override _iconDataUrl = software_as_a_serviceIcon;
+  protected static _iconDataUrl = software_as_a_serviceIcon;
 }
 
 export class SQLDataWarehouses extends _Integration {
-  protected static override _iconDataUrl = sql_data_warehousesIcon;
+  protected static _iconDataUrl = sql_data_warehousesIcon;
 }
 
 export class StorsimpleDeviceManagers extends _Integration {
-  protected static override _iconDataUrl = storsimple_device_managersIcon;
+  protected static _iconDataUrl = storsimple_device_managersIcon;
 }
 
 export class SystemTopic extends _Integration {
-  protected static override _iconDataUrl = system_topicIcon;
+  protected static _iconDataUrl = system_topicIcon;
 }

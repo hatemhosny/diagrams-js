@@ -10,21 +10,21 @@ class _Analytics extends _Ibm {
 }
 
 export class Analytics extends _Analytics {
-  protected static override _iconDataUrl = analyticsIcon;
+  protected static _iconDataUrl = analyticsIcon;
 }
 
 export class DataIntegration extends _Analytics {
-  protected static override _iconDataUrl = data_integrationIcon;
+  protected static _iconDataUrl = data_integrationIcon;
 }
 
 export class DataRepositories extends _Analytics {
-  protected static override _iconDataUrl = data_repositoriesIcon;
+  protected static _iconDataUrl = data_repositoriesIcon;
 }
 
 export class DeviceAnalytics extends _Analytics {
-  protected static override _iconDataUrl = device_analyticsIcon;
+  protected static _iconDataUrl = device_analyticsIcon;
 }
 
 export class StreamingComputing extends _Analytics {
-  protected static override _iconDataUrl = streaming_computingIcon;
+  protected static _iconDataUrl = streaming_computingIcon;
 }

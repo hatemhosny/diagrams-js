@@ -27,89 +27,89 @@ class _Server extends _Gis {
 }
 
 export class Actinia extends _Server {
-  protected static override _iconDataUrl = actiniaIcon;
+  protected static _iconDataUrl = actiniaIcon;
 }
 
 export class Baremaps extends _Server {
-  protected static override _iconDataUrl = baremapsIcon;
+  protected static _iconDataUrl = baremapsIcon;
 }
 
 export class Deegree extends _Server {
-  protected static override _iconDataUrl = deegreeIcon;
+  protected static _iconDataUrl = deegreeIcon;
 }
 
 export class G3wSuite extends _Server {
-  protected static override _iconDataUrl = g3w_suiteIcon;
+  protected static _iconDataUrl = g3w_suiteIcon;
 }
 
 export class Geohealthcheck extends _Server {
-  protected static override _iconDataUrl = geohealthcheckIcon;
+  protected static _iconDataUrl = geohealthcheckIcon;
 }
 
 export class Geomapfish extends _Server {
-  protected static override _iconDataUrl = geomapfishIcon;
+  protected static _iconDataUrl = geomapfishIcon;
 }
 
 export class Geomesa extends _Server {
-  protected static override _iconDataUrl = geomesaIcon;
+  protected static _iconDataUrl = geomesaIcon;
 }
 
 export class Geonetwork extends _Server {
-  protected static override _iconDataUrl = geonetworkIcon;
+  protected static _iconDataUrl = geonetworkIcon;
 }
 
 export class Geonode extends _Server {
-  protected static override _iconDataUrl = geonodeIcon;
+  protected static _iconDataUrl = geonodeIcon;
 }
 
 export class Georchestra extends _Server {
-  protected static override _iconDataUrl = georchestraIcon;
+  protected static _iconDataUrl = georchestraIcon;
 }
 
 export class Geoserver extends _Server {
-  protected static override _iconDataUrl = geoserverIcon;
+  protected static _iconDataUrl = geoserverIcon;
 }
 
 export class Geowebcache extends _Server {
-  protected static override _iconDataUrl = geowebcacheIcon;
+  protected static _iconDataUrl = geowebcacheIcon;
 }
 
 export class Kepler extends _Server {
-  protected static override _iconDataUrl = keplerIcon;
+  protected static _iconDataUrl = keplerIcon;
 }
 
 export class Mapproxy extends _Server {
-  protected static override _iconDataUrl = mapproxyIcon;
+  protected static _iconDataUrl = mapproxyIcon;
 }
 
 export class Mapserver extends _Server {
-  protected static override _iconDataUrl = mapserverIcon;
+  protected static _iconDataUrl = mapserverIcon;
 }
 
 export class Mapstore extends _Server {
-  protected static override _iconDataUrl = mapstoreIcon;
+  protected static _iconDataUrl = mapstoreIcon;
 }
 
 export class Mviewer extends _Server {
-  protected static override _iconDataUrl = mviewerIcon;
+  protected static _iconDataUrl = mviewerIcon;
 }
 
 export class Pg_tileserv extends _Server {
-  protected static override _iconDataUrl = pg_tileservIcon;
+  protected static _iconDataUrl = pg_tileservIcon;
 }
 
 export class Pycsw extends _Server {
-  protected static override _iconDataUrl = pycswIcon;
+  protected static _iconDataUrl = pycswIcon;
 }
 
 export class Pygeoapi extends _Server {
-  protected static override _iconDataUrl = pygeoapiIcon;
+  protected static _iconDataUrl = pygeoapiIcon;
 }
 
 export class QGISServer extends _Server {
-  protected static override _iconDataUrl = qgis_serverIcon;
+  protected static _iconDataUrl = qgis_serverIcon;
 }
 
 export class Zooproject extends _Server {
-  protected static override _iconDataUrl = zooprojectIcon;
+  protected static _iconDataUrl = zooprojectIcon;
 }

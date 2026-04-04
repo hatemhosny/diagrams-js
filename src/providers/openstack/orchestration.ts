@@ -10,21 +10,21 @@ class _Orchestration extends _Openstack {
 }
 
 export class Blazar extends _Orchestration {
-  protected static override _iconDataUrl = blazarIcon;
+  protected static _iconDataUrl = blazarIcon;
 }
 
 export class Heat extends _Orchestration {
-  protected static override _iconDataUrl = heatIcon;
+  protected static _iconDataUrl = heatIcon;
 }
 
 export class Mistral extends _Orchestration {
-  protected static override _iconDataUrl = mistralIcon;
+  protected static _iconDataUrl = mistralIcon;
 }
 
 export class Senlin extends _Orchestration {
-  protected static override _iconDataUrl = senlinIcon;
+  protected static _iconDataUrl = senlinIcon;
 }
 
 export class Zaqar extends _Orchestration {
-  protected static override _iconDataUrl = zaqarIcon;
+  protected static _iconDataUrl = zaqarIcon;
 }

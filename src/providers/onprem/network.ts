@@ -39,139 +39,139 @@ class _Network extends _Onprem {
 }
 
 export class Ambassador extends _Network {
-  protected static override _iconDataUrl = ambassadorIcon;
+  protected static _iconDataUrl = ambassadorIcon;
 }
 
 export class Apache extends _Network {
-  protected static override _iconDataUrl = apacheIcon;
+  protected static _iconDataUrl = apacheIcon;
 }
 
 export class Bind9 extends _Network {
-  protected static override _iconDataUrl = bind_9Icon;
+  protected static _iconDataUrl = bind_9Icon;
 }
 
 export class Caddy extends _Network {
-  protected static override _iconDataUrl = caddyIcon;
+  protected static _iconDataUrl = caddyIcon;
 }
 
 export class CiscoRouter extends _Network {
-  protected static override _iconDataUrl = cisco_routerIcon;
+  protected static _iconDataUrl = cisco_routerIcon;
 }
 
 export class CiscoSwitchL2 extends _Network {
-  protected static override _iconDataUrl = cisco_switch_l2Icon;
+  protected static _iconDataUrl = cisco_switch_l2Icon;
 }
 
 export class CiscoSwitchL3 extends _Network {
-  protected static override _iconDataUrl = cisco_switch_l3Icon;
+  protected static _iconDataUrl = cisco_switch_l3Icon;
 }
 
 export class Consul extends _Network {
-  protected static override _iconDataUrl = consulIcon;
+  protected static _iconDataUrl = consulIcon;
 }
 
 export class Envoy extends _Network {
-  protected static override _iconDataUrl = envoyIcon;
+  protected static _iconDataUrl = envoyIcon;
 }
 
 export class Etcd extends _Network {
-  protected static override _iconDataUrl = etcdIcon;
+  protected static _iconDataUrl = etcdIcon;
 }
 
 export class Glassfish extends _Network {
-  protected static override _iconDataUrl = glassfishIcon;
+  protected static _iconDataUrl = glassfishIcon;
 }
 
 export class Gunicorn extends _Network {
-  protected static override _iconDataUrl = gunicornIcon;
+  protected static _iconDataUrl = gunicornIcon;
 }
 
 export class Haproxy extends _Network {
-  protected static override _iconDataUrl = haproxyIcon;
+  protected static _iconDataUrl = haproxyIcon;
 }
 
 export class Internet extends _Network {
-  protected static override _iconDataUrl = internetIcon;
+  protected static _iconDataUrl = internetIcon;
 }
 
 export class Istio extends _Network {
-  protected static override _iconDataUrl = istioIcon;
+  protected static _iconDataUrl = istioIcon;
 }
 
 export class Jbossas extends _Network {
-  protected static override _iconDataUrl = jbossasIcon;
+  protected static _iconDataUrl = jbossasIcon;
 }
 
 export class Jetty extends _Network {
-  protected static override _iconDataUrl = jettyIcon;
+  protected static _iconDataUrl = jettyIcon;
 }
 
 export class Kong extends _Network {
-  protected static override _iconDataUrl = kongIcon;
+  protected static _iconDataUrl = kongIcon;
 }
 
 export class Linkerd extends _Network {
-  protected static override _iconDataUrl = linkerdIcon;
+  protected static _iconDataUrl = linkerdIcon;
 }
 
 export class Mikrotik extends _Network {
-  protected static override _iconDataUrl = mikrotikIcon;
+  protected static _iconDataUrl = mikrotikIcon;
 }
 
 export class Nginx extends _Network {
-  protected static override _iconDataUrl = nginxIcon;
+  protected static _iconDataUrl = nginxIcon;
 }
 
 export class Ocelot extends _Network {
-  protected static override _iconDataUrl = ocelotIcon;
+  protected static _iconDataUrl = ocelotIcon;
 }
 
 export class OpenServiceMesh extends _Network {
-  protected static override _iconDataUrl = open_service_meshIcon;
+  protected static _iconDataUrl = open_service_meshIcon;
 }
 
 export class Opnsense extends _Network {
-  protected static override _iconDataUrl = opnsenseIcon;
+  protected static _iconDataUrl = opnsenseIcon;
 }
 
 export class Pfsense extends _Network {
-  protected static override _iconDataUrl = pfsenseIcon;
+  protected static _iconDataUrl = pfsenseIcon;
 }
 
 export class Pomerium extends _Network {
-  protected static override _iconDataUrl = pomeriumIcon;
+  protected static _iconDataUrl = pomeriumIcon;
 }
 
 export class Powerdns extends _Network {
-  protected static override _iconDataUrl = powerdnsIcon;
+  protected static _iconDataUrl = powerdnsIcon;
 }
 
 export class Tomcat extends _Network {
-  protected static override _iconDataUrl = tomcatIcon;
+  protected static _iconDataUrl = tomcatIcon;
 }
 
 export class Traefik extends _Network {
-  protected static override _iconDataUrl = traefikIcon;
+  protected static _iconDataUrl = traefikIcon;
 }
 
 export class Tyk extends _Network {
-  protected static override _iconDataUrl = tykIcon;
+  protected static _iconDataUrl = tykIcon;
 }
 
 export class Vyos extends _Network {
-  protected static override _iconDataUrl = vyosIcon;
+  protected static _iconDataUrl = vyosIcon;
 }
 
 export class Wildfly extends _Network {
-  protected static override _iconDataUrl = wildflyIcon;
+  protected static _iconDataUrl = wildflyIcon;
 }
 
 export class Yarp extends _Network {
-  protected static override _iconDataUrl = yarpIcon;
+  protected static _iconDataUrl = yarpIcon;
 }
 
 export class Zookeeper extends _Network {
-  protected static override _iconDataUrl = zookeeperIcon;
+  protected static _iconDataUrl = zookeeperIcon;
 }
 
 // Aliases

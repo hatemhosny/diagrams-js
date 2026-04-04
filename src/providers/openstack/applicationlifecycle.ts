@@ -9,17 +9,17 @@ class _Applicationlifecycle extends _Openstack {
 }
 
 export class Freezer extends _Applicationlifecycle {
-  protected static override _iconDataUrl = freezerIcon;
+  protected static _iconDataUrl = freezerIcon;
 }
 
 export class Masakari extends _Applicationlifecycle {
-  protected static override _iconDataUrl = masakariIcon;
+  protected static _iconDataUrl = masakariIcon;
 }
 
 export class Murano extends _Applicationlifecycle {
-  protected static override _iconDataUrl = muranoIcon;
+  protected static _iconDataUrl = muranoIcon;
 }
 
 export class Solum extends _Applicationlifecycle {
-  protected static override _iconDataUrl = solumIcon;
+  protected static _iconDataUrl = solumIcon;
 }

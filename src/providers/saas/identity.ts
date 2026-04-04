@@ -7,9 +7,9 @@ class _Identity extends _Saas {
 }
 
 export class Auth0 extends _Identity {
-  protected static override _iconDataUrl = auth0Icon;
+  protected static _iconDataUrl = auth0Icon;
 }
 
 export class Okta extends _Identity {
-  protected static override _iconDataUrl = oktaIcon;
+  protected static _iconDataUrl = oktaIcon;
 }

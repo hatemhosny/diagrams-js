@@ -6,5 +6,5 @@ class _Database extends _Gis {
 }
 
 export class Postgis extends _Database {
-  protected static override _iconDataUrl = postgisIcon;
+  protected static _iconDataUrl = postgisIcon;
 }

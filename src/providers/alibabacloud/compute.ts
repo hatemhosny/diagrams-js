@@ -20,63 +20,63 @@ class _Compute extends _Alibabacloud {
 }
 
 export class AutoScaling extends _Compute {
-  protected static override _iconDataUrl = auto_scalingIcon;
+  protected static _iconDataUrl = auto_scalingIcon;
 }
 
 export class BatchCompute extends _Compute {
-  protected static override _iconDataUrl = batch_computeIcon;
+  protected static _iconDataUrl = batch_computeIcon;
 }
 
 export class ContainerRegistry extends _Compute {
-  protected static override _iconDataUrl = container_registryIcon;
+  protected static _iconDataUrl = container_registryIcon;
 }
 
 export class ContainerService extends _Compute {
-  protected static override _iconDataUrl = container_serviceIcon;
+  protected static _iconDataUrl = container_serviceIcon;
 }
 
 export class ElasticComputeService extends _Compute {
-  protected static override _iconDataUrl = elastic_compute_serviceIcon;
+  protected static _iconDataUrl = elastic_compute_serviceIcon;
 }
 
 export class ElasticContainerInstance extends _Compute {
-  protected static override _iconDataUrl = elastic_container_instanceIcon;
+  protected static _iconDataUrl = elastic_container_instanceIcon;
 }
 
 export class ElasticHighPerformanceComputing extends _Compute {
-  protected static override _iconDataUrl = elastic_high_performance_computingIcon;
+  protected static _iconDataUrl = elastic_high_performance_computingIcon;
 }
 
 export class ElasticSearch extends _Compute {
-  protected static override _iconDataUrl = elastic_searchIcon;
+  protected static _iconDataUrl = elastic_searchIcon;
 }
 
 export class FunctionCompute extends _Compute {
-  protected static override _iconDataUrl = function_computeIcon;
+  protected static _iconDataUrl = function_computeIcon;
 }
 
 export class OperationOrchestrationService extends _Compute {
-  protected static override _iconDataUrl = operation_orchestration_serviceIcon;
+  protected static _iconDataUrl = operation_orchestration_serviceIcon;
 }
 
 export class ResourceOrchestrationService extends _Compute {
-  protected static override _iconDataUrl = resource_orchestration_serviceIcon;
+  protected static _iconDataUrl = resource_orchestration_serviceIcon;
 }
 
 export class ServerLoadBalancer extends _Compute {
-  protected static override _iconDataUrl = server_load_balancerIcon;
+  protected static _iconDataUrl = server_load_balancerIcon;
 }
 
 export class ServerlessAppEngine extends _Compute {
-  protected static override _iconDataUrl = serverless_app_engineIcon;
+  protected static _iconDataUrl = serverless_app_engineIcon;
 }
 
 export class SimpleApplicationServer extends _Compute {
-  protected static override _iconDataUrl = simple_application_serverIcon;
+  protected static _iconDataUrl = simple_application_serverIcon;
 }
 
 export class WebAppService extends _Compute {
-  protected static override _iconDataUrl = web_app_serviceIcon;
+  protected static _iconDataUrl = web_app_serviceIcon;
 }
 
 // Aliases

@@ -15,41 +15,41 @@ class _Os extends _Generic {
 }
 
 export class Android extends _Os {
-  protected static override _iconDataUrl = androidIcon;
+  protected static _iconDataUrl = androidIcon;
 }
 
 export class Centos extends _Os {
-  protected static override _iconDataUrl = centosIcon;
+  protected static _iconDataUrl = centosIcon;
 }
 
 export class Debian extends _Os {
-  protected static override _iconDataUrl = debianIcon;
+  protected static _iconDataUrl = debianIcon;
 }
 
 export class IOS extends _Os {
-  protected static override _iconDataUrl = iosIcon;
+  protected static _iconDataUrl = iosIcon;
 }
 
 export class LinuxGeneral extends _Os {
-  protected static override _iconDataUrl = linux_generalIcon;
+  protected static _iconDataUrl = linux_generalIcon;
 }
 
 export class Raspbian extends _Os {
-  protected static override _iconDataUrl = raspbianIcon;
+  protected static _iconDataUrl = raspbianIcon;
 }
 
 export class RedHat extends _Os {
-  protected static override _iconDataUrl = red_hatIcon;
+  protected static _iconDataUrl = red_hatIcon;
 }
 
 export class Suse extends _Os {
-  protected static override _iconDataUrl = suseIcon;
+  protected static _iconDataUrl = suseIcon;
 }
 
 export class Ubuntu extends _Os {
-  protected static override _iconDataUrl = ubuntuIcon;
+  protected static _iconDataUrl = ubuntuIcon;
 }
 
 export class Windows extends _Os {
-  protected static override _iconDataUrl = windowsIcon;
+  protected static _iconDataUrl = windowsIcon;
 }

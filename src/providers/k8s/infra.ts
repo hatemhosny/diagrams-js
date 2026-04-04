@@ -8,13 +8,13 @@ class _Infra extends _K8s {
 }
 
 export class ETCD extends _Infra {
-  protected static override _iconDataUrl = etcdIcon;
+  protected static _iconDataUrl = etcdIcon;
 }
 
 export class Master extends _Infra {
-  protected static override _iconDataUrl = masterIcon;
+  protected static _iconDataUrl = masterIcon;
 }
 
 export class Node extends _Infra {
-  protected static override _iconDataUrl = nodeIcon;
+  protected static _iconDataUrl = nodeIcon;
 }

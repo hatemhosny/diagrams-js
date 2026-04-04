@@ -7,9 +7,9 @@ class _Python extends _Gis {
 }
 
 export class Geopandas extends _Python {
-  protected static override _iconDataUrl = geopandasIcon;
+  protected static _iconDataUrl = geopandasIcon;
 }
 
 export class Pysal extends _Python {
-  protected static override _iconDataUrl = pysalIcon;
+  protected static _iconDataUrl = pysalIcon;
 }

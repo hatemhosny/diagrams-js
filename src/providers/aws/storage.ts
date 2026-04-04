@@ -36,127 +36,127 @@ class _Storage extends _Aws {
 }
 
 export class Backup extends _Storage {
-  protected static override _iconDataUrl = backupIcon;
+  protected static _iconDataUrl = backupIcon;
 }
 
 export class CloudendureDisasterRecovery extends _Storage {
-  protected static override _iconDataUrl = cloudendure_disaster_recoveryIcon;
+  protected static _iconDataUrl = cloudendure_disaster_recoveryIcon;
 }
 
 export class EFSInfrequentaccessPrimaryBg extends _Storage {
-  protected static override _iconDataUrl = efs_infrequentaccess_primary_bgIcon;
+  protected static _iconDataUrl = efs_infrequentaccess_primary_bgIcon;
 }
 
 export class EFSStandardPrimaryBg extends _Storage {
-  protected static override _iconDataUrl = efs_standard_primary_bgIcon;
+  protected static _iconDataUrl = efs_standard_primary_bgIcon;
 }
 
 export class ElasticBlockStoreEBSSnapshot extends _Storage {
-  protected static override _iconDataUrl = elastic_block_store_ebs_snapshotIcon;
+  protected static _iconDataUrl = elastic_block_store_ebs_snapshotIcon;
 }
 
 export class ElasticBlockStoreEBSVolume extends _Storage {
-  protected static override _iconDataUrl = elastic_block_store_ebs_volumeIcon;
+  protected static _iconDataUrl = elastic_block_store_ebs_volumeIcon;
 }
 
 export class ElasticBlockStoreEBS extends _Storage {
-  protected static override _iconDataUrl = elastic_block_store_ebsIcon;
+  protected static _iconDataUrl = elastic_block_store_ebsIcon;
 }
 
 export class ElasticFileSystemEFSFileSystem extends _Storage {
-  protected static override _iconDataUrl = elastic_file_system_efs_file_systemIcon;
+  protected static _iconDataUrl = elastic_file_system_efs_file_systemIcon;
 }
 
 export class ElasticFileSystemEFS extends _Storage {
-  protected static override _iconDataUrl = elastic_file_system_efsIcon;
+  protected static _iconDataUrl = elastic_file_system_efsIcon;
 }
 
 export class FsxForLustre extends _Storage {
-  protected static override _iconDataUrl = fsx_for_lustreIcon;
+  protected static _iconDataUrl = fsx_for_lustreIcon;
 }
 
 export class FsxForWindowsFileServer extends _Storage {
-  protected static override _iconDataUrl = fsx_for_windows_file_serverIcon;
+  protected static _iconDataUrl = fsx_for_windows_file_serverIcon;
 }
 
 export class Fsx extends _Storage {
-  protected static override _iconDataUrl = fsxIcon;
+  protected static _iconDataUrl = fsxIcon;
 }
 
 export class MultipleVolumesResource extends _Storage {
-  protected static override _iconDataUrl = multiple_volumes_resourceIcon;
+  protected static _iconDataUrl = multiple_volumes_resourceIcon;
 }
 
 export class S3AccessPoints extends _Storage {
-  protected static override _iconDataUrl = s3_access_pointsIcon;
+  protected static _iconDataUrl = s3_access_pointsIcon;
 }
 
 export class S3GlacierArchive extends _Storage {
-  protected static override _iconDataUrl = s3_glacier_archiveIcon;
+  protected static _iconDataUrl = s3_glacier_archiveIcon;
 }
 
 export class S3GlacierVault extends _Storage {
-  protected static override _iconDataUrl = s3_glacier_vaultIcon;
+  protected static _iconDataUrl = s3_glacier_vaultIcon;
 }
 
 export class S3Glacier extends _Storage {
-  protected static override _iconDataUrl = s3_glacierIcon;
+  protected static _iconDataUrl = s3_glacierIcon;
 }
 
 export class S3ObjectLambdaAccessPoints extends _Storage {
-  protected static override _iconDataUrl = s3_object_lambda_access_pointsIcon;
+  protected static _iconDataUrl = s3_object_lambda_access_pointsIcon;
 }
 
 export class SimpleStorageServiceS3BucketWithObjects extends _Storage {
-  protected static override _iconDataUrl = simple_storage_service_s3_bucket_with_objectsIcon;
+  protected static _iconDataUrl = simple_storage_service_s3_bucket_with_objectsIcon;
 }
 
 export class SimpleStorageServiceS3Bucket extends _Storage {
-  protected static override _iconDataUrl = simple_storage_service_s3_bucketIcon;
+  protected static _iconDataUrl = simple_storage_service_s3_bucketIcon;
 }
 
 export class SimpleStorageServiceS3Object extends _Storage {
-  protected static override _iconDataUrl = simple_storage_service_s3_objectIcon;
+  protected static _iconDataUrl = simple_storage_service_s3_objectIcon;
 }
 
 export class SimpleStorageServiceS3 extends _Storage {
-  protected static override _iconDataUrl = simple_storage_service_s3Icon;
+  protected static _iconDataUrl = simple_storage_service_s3Icon;
 }
 
 export class SnowFamilySnowballImportExport extends _Storage {
-  protected static override _iconDataUrl = snow_family_snowball_import_exportIcon;
+  protected static _iconDataUrl = snow_family_snowball_import_exportIcon;
 }
 
 export class SnowballEdge extends _Storage {
-  protected static override _iconDataUrl = snowball_edgeIcon;
+  protected static _iconDataUrl = snowball_edgeIcon;
 }
 
 export class Snowball extends _Storage {
-  protected static override _iconDataUrl = snowballIcon;
+  protected static _iconDataUrl = snowballIcon;
 }
 
 export class Snowmobile extends _Storage {
-  protected static override _iconDataUrl = snowmobileIcon;
+  protected static _iconDataUrl = snowmobileIcon;
 }
 
 export class StorageGatewayCachedVolume extends _Storage {
-  protected static override _iconDataUrl = storage_gateway_cached_volumeIcon;
+  protected static _iconDataUrl = storage_gateway_cached_volumeIcon;
 }
 
 export class StorageGatewayNonCachedVolume extends _Storage {
-  protected static override _iconDataUrl = storage_gateway_non_cached_volumeIcon;
+  protected static _iconDataUrl = storage_gateway_non_cached_volumeIcon;
 }
 
 export class StorageGatewayVirtualTapeLibrary extends _Storage {
-  protected static override _iconDataUrl = storage_gateway_virtual_tape_libraryIcon;
+  protected static _iconDataUrl = storage_gateway_virtual_tape_libraryIcon;
 }
 
 export class StorageGateway extends _Storage {
-  protected static override _iconDataUrl = storage_gatewayIcon;
+  protected static _iconDataUrl = storage_gatewayIcon;
 }
 
 export class Storage extends _Storage {
-  protected static override _iconDataUrl = storageIcon;
+  protected static _iconDataUrl = storageIcon;
 }
 
 // Aliases

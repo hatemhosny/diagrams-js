@@ -11,25 +11,25 @@ class _Migrate extends _Azure {
 }
 
 export class AzureDataboxGateway extends _Migrate {
-  protected static override _iconDataUrl = azure_databox_gatewayIcon;
+  protected static _iconDataUrl = azure_databox_gatewayIcon;
 }
 
 export class AzureMigrate extends _Migrate {
-  protected static override _iconDataUrl = azure_migrateIcon;
+  protected static _iconDataUrl = azure_migrateIcon;
 }
 
 export class AzureStackEdge extends _Migrate {
-  protected static override _iconDataUrl = azure_stack_edgeIcon;
+  protected static _iconDataUrl = azure_stack_edgeIcon;
 }
 
 export class CostManagementAndBilling extends _Migrate {
-  protected static override _iconDataUrl = cost_management_and_billingIcon;
+  protected static _iconDataUrl = cost_management_and_billingIcon;
 }
 
 export class DataBox extends _Migrate {
-  protected static override _iconDataUrl = data_boxIcon;
+  protected static _iconDataUrl = data_boxIcon;
 }
 
 export class RecoveryServicesVaults extends _Migrate {
-  protected static override _iconDataUrl = recovery_services_vaultsIcon;
+  protected static _iconDataUrl = recovery_services_vaultsIcon;
 }

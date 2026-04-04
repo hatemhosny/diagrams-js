@@ -7,9 +7,9 @@ class _Satellite extends _Aws {
 }
 
 export class GroundStation extends _Satellite {
-  protected static override _iconDataUrl = ground_stationIcon;
+  protected static _iconDataUrl = ground_stationIcon;
 }
 
 export class Satellite extends _Satellite {
-  protected static override _iconDataUrl = satelliteIcon;
+  protected static _iconDataUrl = satelliteIcon;
 }

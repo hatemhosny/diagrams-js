@@ -23,73 +23,73 @@ class _Infrastructure extends _Ibm {
 }
 
 export class Channels extends _Infrastructure {
-  protected static override _iconDataUrl = channelsIcon;
+  protected static _iconDataUrl = channelsIcon;
 }
 
 export class CloudMessaging extends _Infrastructure {
-  protected static override _iconDataUrl = cloud_messagingIcon;
+  protected static _iconDataUrl = cloud_messagingIcon;
 }
 
 export class Dashboard extends _Infrastructure {
-  protected static override _iconDataUrl = dashboardIcon;
+  protected static _iconDataUrl = dashboardIcon;
 }
 
 export class Diagnostics extends _Infrastructure {
-  protected static override _iconDataUrl = diagnosticsIcon;
+  protected static _iconDataUrl = diagnosticsIcon;
 }
 
 export class EdgeServices extends _Infrastructure {
-  protected static override _iconDataUrl = edge_servicesIcon;
+  protected static _iconDataUrl = edge_servicesIcon;
 }
 
 export class EnterpriseMessaging extends _Infrastructure {
-  protected static override _iconDataUrl = enterprise_messagingIcon;
+  protected static _iconDataUrl = enterprise_messagingIcon;
 }
 
 export class EventFeed extends _Infrastructure {
-  protected static override _iconDataUrl = event_feedIcon;
+  protected static _iconDataUrl = event_feedIcon;
 }
 
 export class InfrastructureServices extends _Infrastructure {
-  protected static override _iconDataUrl = infrastructure_servicesIcon;
+  protected static _iconDataUrl = infrastructure_servicesIcon;
 }
 
 export class InterserviceCommunication extends _Infrastructure {
-  protected static override _iconDataUrl = interservice_communicationIcon;
+  protected static _iconDataUrl = interservice_communicationIcon;
 }
 
 export class LoadBalancingRouting extends _Infrastructure {
-  protected static override _iconDataUrl = load_balancing_routingIcon;
+  protected static _iconDataUrl = load_balancing_routingIcon;
 }
 
 export class MicroservicesMesh extends _Infrastructure {
-  protected static override _iconDataUrl = microservices_meshIcon;
+  protected static _iconDataUrl = microservices_meshIcon;
 }
 
 export class MobileBackend extends _Infrastructure {
-  protected static override _iconDataUrl = mobile_backendIcon;
+  protected static _iconDataUrl = mobile_backendIcon;
 }
 
 export class MobileProviderNetwork extends _Infrastructure {
-  protected static override _iconDataUrl = mobile_provider_networkIcon;
+  protected static _iconDataUrl = mobile_provider_networkIcon;
 }
 
 export class MonitoringLogging extends _Infrastructure {
-  protected static override _iconDataUrl = monitoring_loggingIcon;
+  protected static _iconDataUrl = monitoring_loggingIcon;
 }
 
 export class Monitoring extends _Infrastructure {
-  protected static override _iconDataUrl = monitoringIcon;
+  protected static _iconDataUrl = monitoringIcon;
 }
 
 export class PeerServices extends _Infrastructure {
-  protected static override _iconDataUrl = peer_servicesIcon;
+  protected static _iconDataUrl = peer_servicesIcon;
 }
 
 export class ServiceDiscoveryConfiguration extends _Infrastructure {
-  protected static override _iconDataUrl = service_discovery_configurationIcon;
+  protected static _iconDataUrl = service_discovery_configurationIcon;
 }
 
 export class TransformationConnectivity extends _Infrastructure {
-  protected static override _iconDataUrl = transformation_connectivityIcon;
+  protected static _iconDataUrl = transformation_connectivityIcon;
 }

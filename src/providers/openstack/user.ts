@@ -6,7 +6,7 @@ class _User extends _Openstack {
 }
 
 export class Openstackclient extends _User {
-  protected static override _iconDataUrl = openstackclientIcon;
+  protected static _iconDataUrl = openstackclientIcon;
 }
 
 // Aliases

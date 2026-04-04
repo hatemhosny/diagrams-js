@@ -49,10 +49,6 @@ export class Node {
       }
     }
 
-    // Calculate height based on label newlines
-    const padding = 0.4 * (this.label.split("\n").length - 1);
-    const height = (this.constructor as typeof Node)._height + padding;
-
     // Check if this node has an icon data URL (embedded via esbuild dataurl loader)
     const iconDataUrl = (this.constructor as typeof Node)._iconDataUrl;
     if (iconDataUrl) {
@@ -170,10 +166,10 @@ export class Node {
    */
   connect(target: Node, edge: Edge): Node {
     if (!(target instanceof Node)) {
-      throw new Error(`${target} is not a valid Node`);
+      throw new Error(`${String(target)} is not a valid Node`);
     }
     if (!(edge instanceof Edge)) {
-      throw new Error(`${edge} is not a valid Edge`);
+      throw new Error(`${String(edge)} is not a valid Edge`);
     }
     this._diagram.connect(this, target, edge);
     return target;

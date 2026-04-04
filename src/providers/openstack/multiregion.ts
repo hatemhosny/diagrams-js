@@ -6,5 +6,5 @@ class _Multiregion extends _Openstack {
 }
 
 export class Tricircle extends _Multiregion {
-  protected static override _iconDataUrl = tricircleIcon;
+  protected static _iconDataUrl = tricircleIcon;
 }

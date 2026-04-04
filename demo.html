@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>diagrams-ts - Demo</title>
+    <title>diagrams-ts - Examples</title>
     <style>
       * {
         margin: 0;
@@ -12,9 +12,9 @@
       }
       body {
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        background: #f5f5f5;
         min-height: 100vh;
-        padding: 20px;
+        padding: 40px 20px;
       }
       .container {
         max-width: 1400px;
@@ -22,556 +22,230 @@
       }
       header {
         text-align: center;
-        color: white;
-        margin-bottom: 40px;
+        margin-bottom: 60px;
       }
       h1 {
-        font-size: 3em;
+        font-size: 2.5em;
         margin-bottom: 10px;
+        color: #333;
       }
       .subtitle {
         font-size: 1.2em;
-        opacity: 0.9;
+        color: #666;
       }
-      .main-content {
+      .example {
+        background: white;
+        border-radius: 12px;
+        padding: 30px;
+        margin-bottom: 40px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+      .example h2 {
+        color: #333;
+        margin-bottom: 20px;
+        font-size: 1.5em;
+      }
+      .example-content {
         display: grid;
-        grid-template-columns: 280px 1fr;
-        gap: 20px;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+        align-items: start;
       }
       @media (max-width: 900px) {
-        .main-content {
+        .example-content {
           grid-template-columns: 1fr;
         }
       }
-
-      .sidebar {
-        background: white;
-        border-radius: 12px;
-        padding: 20px;
-        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
-        height: fit-content;
-      }
-      .sidebar h2 {
-        color: #333;
-        margin-bottom: 15px;
-        font-size: 1.1em;
-        border-bottom: 2px solid #667eea;
-        padding-bottom: 10px;
-      }
-      .example-btn {
-        display: block;
-        width: 100%;
-        background: #667eea;
-        color: white;
-        border: none;
-        padding: 12px;
-        border-radius: 6px;
-        cursor: pointer;
-        margin-bottom: 10px;
-        font-size: 14px;
-        transition: all 0.3s;
-        text-align: left;
-      }
-      .example-btn:hover {
-        background: #5568d3;
-        transform: translateX(5px);
-      }
-      .example-btn.active {
-        background: #764ba2;
-      }
-
-      .content-area {
-        background: white;
-        border-radius: 12px;
-        padding: 30px;
-        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
-      }
-      .diagram-output {
-        background: #f8f9fa;
-        border: 2px solid #e0e0e0;
-        border-radius: 8px;
-        padding: 30px;
-        min-height: 500px;
+      .code-section {
         display: flex;
         flex-direction: column;
+        gap: 10px;
+      }
+      .code-header {
+        font-size: 12px;
+        color: #666;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+      pre {
+        background: #1e1e1e;
+        color: #d4d4d4;
+        padding: 20px;
+        border-radius: 8px;
+        overflow-x: auto;
+        font-family: "Monaco", "Menlo", "Consolas", monospace;
+        font-size: 13px;
+        line-height: 1.6;
+        margin: 0;
+      }
+      code {
+        font-family: inherit;
+      }
+      .keyword {
+        color: #c586c0;
+      }
+      .string {
+        color: #ce9178;
+      }
+      .comment {
+        color: #6a9955;
+      }
+      .diagram-section {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      .diagram-header {
+        font-size: 12px;
+        color: #666;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+      .diagram-container {
+        background: white;
+        border: 1px solid #e0e0e0;
+        border-radius: 8px;
+        padding: 20px;
+        text-align: center;
+        min-height: 300px;
+        display: flex;
         align-items: center;
         justify-content: center;
-        margin-bottom: 20px;
+        overflow: auto;
       }
-      .diagram-output svg {
+      .diagram-container svg {
         max-width: 100%;
         height: auto;
       }
-      .placeholder {
+      .loading {
         color: #999;
         font-style: italic;
-        text-align: center;
-        font-size: 1.1em;
       }
-
-      .code-section {
-        background: #1e1e1e;
-        border-radius: 8px;
+      .error {
+        color: #d32f2f;
         padding: 20px;
-        overflow-x: auto;
-      }
-      .code-section h3 {
-        color: #fff;
-        margin-bottom: 15px;
-        font-size: 1em;
-      }
-      pre {
-        margin: 0;
-        color: #d4d4d4;
-        font-family: "Consolas", "Monaco", monospace;
-        font-size: 13px;
-        line-height: 1.5;
-      }
-
-      .loading {
-        display: none;
-        text-align: center;
-        color: #667eea;
-        padding: 40px;
-      }
-      .loading.active {
-        display: block;
-      }
-      .spinner {
-        border: 4px solid #f3f3f3;
-        border-top: 4px solid #667eea;
-        border-radius: 50%;
-        width: 50px;
-        height: 50px;
-        animation: spin 1s linear infinite;
-        margin: 0 auto 15px;
-      }
-      @keyframes spin {
-        0% {
-          transform: rotate(0deg);
-        }
-        100% {
-          transform: rotate(360deg);
-        }
-      }
-
-      .features {
-        margin-top: 20px;
-        padding-top: 20px;
-        border-top: 1px solid #eee;
-      }
-      .features h3 {
-        color: #667eea;
-        margin-bottom: 10px;
-        font-size: 1em;
-      }
-      .features ul {
-        color: #666;
-        font-size: 14px;
-        line-height: 1.8;
-        padding-left: 20px;
+        background: #ffebee;
+        border-radius: 8px;
       }
     </style>
   </head>
   <body>
     <div class="container">
       <header>
-        <h1>diagrams-ts</h1>
-        <p class="subtitle">Draw cloud architecture diagrams with icons in your browser</p>
+        <h1>diagrams-ts Examples</h1>
+        <p class="subtitle">Draw cloud system architecture diagrams as code in TypeScript</p>
       </header>
 
-      <div class="main-content">
-        <aside class="sidebar">
-          <h2>Examples</h2>
-          <button class="example-btn" onclick="loadExample('simple')">Simple Flow</button>
-          <button class="example-btn" onclick="loadExample('web-service')">Web Service</button>
-          <button class="example-btn" onclick="loadExample('clustered')">Clustered Services</button>
-          <button class="example-btn" onclick="loadExample('database')">
-            Database Architecture
-          </button>
-          <button class="example-btn" onclick="loadExample('microservices')">Microservices</button>
-          <button class="example-btn" onclick="loadExample('aws')" style="background: #ff9900">
-            AWS with Icons
-          </button>
-          <button class="example-btn" onclick="loadExample('png')">Export as PNG</button>
-
-          <div class="features">
-            <h3>Features</h3>
-            <ul>
-              <li>17 Cloud Providers</li>
-              <li>1000+ Node Classes</li>
-              <li>Automatic Icon Injection</li>
-              <li>TypeScript Support</li>
-              <li>SVG Output</li>
-            </ul>
-          </div>
-        </aside>
-
-        <main class="content-area">
-          <div class="loading" id="loading">
-            <div class="spinner"></div>
-            <p>Generating diagram...</p>
-          </div>
-
-          <div class="diagram-output" id="diagram-output">
-            <p class="placeholder">Click an example to render a diagram</p>
-          </div>
-
+      <!-- Example 1: Simple Flow -->
+      <div class="example">
+        <h2>Example 1: Simple Flow</h2>
+        <div class="example-content">
           <div class="code-section">
-            <h3>Code</h3>
-            <pre
-              id="code-display"
-            ><code class="placeholder">// Select an example to see the code</code></pre>
+            <div class="code-header">TypeScript Code</div>
+            <pre><code><span class="keyword">import</span> { Diagram, Node } <span class="keyword">from</span> <span class="string">"diagrams-ts"</span>;
+
+<span class="keyword">const</span> diagram = <span class="keyword">new</span> Diagram(<span class="string">"Simple Flow"</span>, {
+  direction: <span class="string">"TB"</span>,
+  outformat: <span class="string">"svg"</span>,
+});
+
+<span class="keyword">const</span> web = diagram.add(<span class="keyword">new</span> Node(<span class="string">"Web"</span>));
+<span class="keyword">const</span> app = diagram.add(<span class="keyword">new</span> Node(<span class="string">"App"</span>));
+<span class="keyword">const</span> db = diagram.add(<span class="keyword">new</span> Node(<span class="string">"DB"</span>));
+
+web.to(app).to(db);
+
+<span class="keyword">const</span> svg = <span class="keyword">await</span> diagram.render();
+diagram.destroy();</code></pre>
           </div>
-        </main>
+          <div class="diagram-section">
+            <div class="diagram-header">Rendered Diagram</div>
+            <div class="diagram-container" id="diagram1">
+              <div class="loading">Loading...</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Example 2: AWS Architecture -->
+      <div class="example">
+        <h2>Example 2: AWS Architecture</h2>
+        <div class="example-content">
+          <div class="code-section">
+            <div class="code-header">TypeScript Code</div>
+            <pre><code><span class="keyword">import</span> { Diagram } <span class="keyword">from</span> <span class="string">"diagrams-ts"</span>;
+<span class="keyword">import</span> { EC2 } <span class="keyword">from</span> <span class="string">"diagrams-ts/providers/aws/compute"</span>;
+<span class="keyword">import</span> { RDS } <span class="keyword">from</span> <span class="string">"diagrams-ts/providers/aws/database"</span>;
+
+<span class="keyword">const</span> diagram = <span class="keyword">new</span> Diagram(<span class="string">"AWS"</span>, {
+  direction: <span class="string">"TB"</span>,
+});
+
+<span class="keyword">const</span> web = diagram.add(<span class="keyword">new</span> EC2(<span class="string">"Web"</span>));
+<span class="keyword">const</span> db = diagram.add(<span class="string">"new</span> RDS(<span class="string">"DB"</span>));
+
+web.to(db);
+
+<span class="keyword">const</span> svg = <span class="keyword">await</span> diagram.render();</code></pre>
+          </div>
+          <div class="diagram-section">
+            <div class="diagram-header">Rendered Diagram</div>
+            <div class="diagram-container" id="diagram2">
+              <div class="loading">Loading...</div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
     <script type="module">
-      const examples = {
-        simple: {
-          name: "Simple Flow",
-          code: `import { Diagram, Node } from 'diagrams-ts';
+      import { Diagram, Node } from "./dist/index.mjs";
+      import { EC2 } from "./dist/providers/aws/compute.js";
+      import { RDS } from "./dist/providers/aws/database.js";
 
-const diagram = new Diagram('Simple Flow', {
-  direction: 'LR',
-  outformat: 'svg'
-});
-
-const start = diagram.add(new Node('Start'));
-const process = diagram.add(new Node('Process'));
-const end = diagram.add(new Node('End'));
-
-start.to(process).to(end);
-
-await diagram.render();`,
-          generate: async (Diagram, Cluster, Node) => {
-            const diagram = new Diagram("Simple Flow", { direction: "LR", outformat: "svg" });
-            const start = diagram.add(new Node("Start"));
-            const process = diagram.add(new Node("Process"));
-            const end = diagram.add(new Node("End"));
-            start.to(process).to(end);
-            return { diagram };
-          },
-        },
-
-        "web-service": {
-          name: "Web Service",
-          code: `import { Diagram, Node } from 'diagrams-ts';
-
-const diagram = new Diagram('Web Service', {
-  direction: 'TB',
-  outformat: 'svg'
-});
-
-const lb = diagram.add(new Node('Load Balancer'));
-const web1 = diagram.add(new Node('Web Server 1'));
-const web2 = diagram.add(new Node('Web Server 2'));
-const db = diagram.add(new Node('Database'));
-
-lb.to([web1, web2]);
-web1.to(db);
-web2.to(db);
-
-await diagram.render();`,
-          generate: async (Diagram, Cluster, Node) => {
-            const diagram = new Diagram("Web Service", { direction: "TB", outformat: "svg" });
-            const lb = diagram.add(new Node("Load Balancer"));
-            const web1 = diagram.add(new Node("Web Server 1"));
-            const web2 = diagram.add(new Node("Web Server 2"));
-            const db = diagram.add(new Node("Database"));
-            lb.to([web1, web2]);
-            web1.to(db);
-            web2.to(db);
-            return { diagram };
-          },
-        },
-
-        clustered: {
-          name: "Clustered Services",
-          code: `import { Diagram, Cluster, Node } from 'diagrams-ts';
-
-const diagram = new Diagram('Clustered Services', {
-  direction: 'LR',
-  outformat: 'svg'
-});
-
-const lb = diagram.add(new Node('LB'));
-
-diagram.cluster('Web Tier', (c) => {
-  const web1 = c.add(new Node('Web 1'));
-  const web2 = c.add(new Node('Web 2'));
-  lb.to([web1, web2]);
-});
-
-await diagram.render();`,
-          generate: async (Diagram, Cluster, Node) => {
-            const diagram = new Diagram("Clustered Services", {
-              direction: "LR",
-              outformat: "svg",
-            });
-            const lb = diagram.add(new Node("Load Balancer"));
-            diagram.cluster("Web Tier", (c) => {
-              const web1 = c.add(new Node("Web 1"));
-              const web2 = c.add(new Node("Web 2"));
-              lb.to([web1, web2]);
-            });
-            diagram.cluster("Database Tier", (c) => {
-              c.add(new Node("DB Primary"));
-              c.add(new Node("DB Replica"));
-            });
-            return { diagram };
-          },
-        },
-
-        database: {
-          name: "Database Architecture",
-          code: `import { Diagram, Node } from 'diagrams-ts';
-
-const diagram = new Diagram('Database Architecture', {
-  direction: 'TB',
-  outformat: 'svg'
-});
-
-const app = diagram.add(new Node('Application'));
-const cache = diagram.add(new Node('Redis Cache'));
-const primary = diagram.add(new Node('Primary DB'));
-const replica1 = diagram.add(new Node('Replica 1'));
-const replica2 = diagram.add(new Node('Replica 2'));
-
-app.to(cache);
-app.to(primary);
-primary.to([replica1, replica2]);
-
-await diagram.render();`,
-          generate: async (Diagram, Cluster, Node) => {
-            const diagram = new Diagram("Database Architecture", {
-              direction: "TB",
-              outformat: "svg",
-            });
-            const app = diagram.add(new Node("Application"));
-            const cache = diagram.add(new Node("Redis Cache"));
-            const primary = diagram.add(new Node("Primary DB"));
-            const replica1 = diagram.add(new Node("Replica 1"));
-            const replica2 = diagram.add(new Node("Replica 2"));
-            app.to(cache);
-            app.to(primary);
-            primary.to([replica1, replica2]);
-            return { diagram };
-          },
-        },
-
-        microservices: {
-          name: "Microservices",
-          code: `import { Diagram, Node } from 'diagrams-ts';
-
-const diagram = new Diagram('Microservices', {
-  direction: 'LR',
-  outformat: 'svg'
-});
-
-const gateway = diagram.add(new Node('API Gateway'));
-const auth = diagram.add(new Node('Auth Service'));
-const user = diagram.add(new Node('User Service'));
-const order = diagram.add(new Node('Order Service'));
-const payment = diagram.add(new Node('Payment Service'));
-
-gateway.to([auth, user, order]);
-order.to(payment);
-
-await diagram.render();`,
-          generate: async (Diagram, Cluster, Node) => {
-            const diagram = new Diagram("Microservices Architecture", {
-              direction: "LR",
-              outformat: "svg",
-            });
-            const gateway = diagram.add(new Node("API Gateway"));
-            const auth = diagram.add(new Node("Auth Service"));
-            const user = diagram.add(new Node("User Service"));
-            const order = diagram.add(new Node("Order Service"));
-            const payment = diagram.add(new Node("Payment Service"));
-            gateway.to([auth, user, order]);
-            order.to(payment);
-            return { diagram };
-          },
-        },
-
-        aws: {
-          name: "AWS Architecture with Icons",
-          code: `import { Diagram, Cluster } from 'diagrams-ts';
-import { EC2 } from 'diagrams-ts/providers/aws/compute';
-import { CloudFront, ElasticLoadBalancing } from 'diagrams-ts/providers/aws/network';
-import { RDS, Dynamodb } from 'diagrams-ts/providers/aws/database';
-import { SimpleStorageServiceS3 } from 'diagrams-ts/providers/aws/storage';
-
-const diagram = new Diagram('AWS Architecture', {
-  direction: 'TB',
-  outformat: 'svg'
-});
-
-const cdn = diagram.add(new CloudFront('CDN'));
-const lb = diagram.add(new ElasticLoadBalancing('ALB'));
-
-let web1, web2, web3;
-diagram.cluster('Web Tier', (c) => {
-  web1 = c.add(new EC2('Web 1'));
-  web2 = c.add(new EC2('Web 2'));
-  web3 = c.add(new EC2('Web 3'));
-});
-
-let rds, dynamo;
-diagram.cluster('Database Tier', (c) => {
-  rds = c.add(new RDS('RDS'));
-  dynamo = c.add(new Dynamodb('DynamoDB'));
-});
-
-const s3 = diagram.add(new SimpleStorageServiceS3('S3'));
-
-cdn.to(lb);
-lb.to([web1, web2, web3]);
-web1.to([rds, dynamo, s3]);
-web2.to([rds, dynamo, s3]);
-web3.to([rds, dynamo, s3]);
-
-const svg = await diagram.render();  // Icons auto-injected!`,
-          generate: async (Diagram, Cluster, Node, Edge) => {
-            const { EC2 } = await import("./dist/providers/aws/compute.js");
-            const { CloudFront, ElasticLoadBalancing } =
-              await import("./dist/providers/aws/network.js");
-            const { RDS, Dynamodb } = await import("./dist/providers/aws/database.js");
-            const { SimpleStorageServiceS3 } = await import("./dist/providers/aws/storage.js");
-
-            const diagram = new Diagram("AWS Architecture", { direction: "TB", outformat: "svg" });
-            const cdn = diagram.add(new CloudFront("CDN"));
-            const lb = diagram.add(new ElasticLoadBalancing("ALB"));
-
-            let web1, web2, web3;
-            diagram.cluster("Web Tier", (c) => {
-              web1 = c.add(new EC2("Web 1"));
-              web2 = c.add(new EC2("Web 2"));
-              web3 = c.add(new EC2("Web 3"));
-            });
-
-            let rds, dynamo;
-            diagram.cluster("Database Tier", (c) => {
-              rds = c.add(new RDS("RDS"));
-              dynamo = c.add(new Dynamodb("DynamoDB"));
-            });
-
-            const s3 = diagram.add(new SimpleStorageServiceS3("S3"));
-
-            cdn.to(lb);
-            lb.to([web1, web2, web3]);
-            web1.to([rds, dynamo, s3]);
-            web2.to([rds, dynamo, s3]);
-            web3.to([rds, dynamo, s3]);
-
-            return { diagram };
-          },
-        },
-
-        png: {
-          name: "Export as PNG",
-          code: `import { Diagram, setIconBaseDir } from 'diagrams-ts';
-import { EC2 } from 'diagrams-ts/providers/aws/compute';
-
-setIconBaseDir('resources');
-
-const diagram = new Diagram('AWS Servers', {
-  direction: 'TB',
-  outformat: 'png'  // Set to PNG!
-});
-
-const server1 = diagram.add(new EC2('Server 1'));
-const server2 = diagram.add(new EC2('Server 2'));
-
-server1.to(server2);
-
-const pngData = await diagram.render();  // Returns Uint8Array
-
-// Create blob and download
-const blob = new Blob([pngData], { type: 'image/png' });
-const url = URL.createObjectURL(blob);
-const a = document.createElement('a');
-a.href = url;
-a.download = 'diagram.png';
-a.click();`,
-          generate: async (Diagram, Cluster, Node, Edge, setIconBaseDir) => {
-            const { EC2 } = await import("./dist/providers/aws/compute.js");
-
-            setIconBaseDir("resources");
-
-            const diagram = new Diagram("AWS Servers", { direction: "TB", outformat: "png" });
-            const server1 = diagram.add(new EC2("Server 1"));
-            const server2 = diagram.add(new EC2("Server 2"));
-            server1.to(server2);
-
-            return { diagram, isPng: true };
-          },
-        },
-      };
-
-      window.loadExample = async (exampleKey) => {
-        const loading = document.getElementById("loading");
-        const output = document.getElementById("diagram-output");
-        const codeDisplay = document.getElementById("code-display");
-        const buttons = document.querySelectorAll(".example-btn");
-
-        buttons.forEach((btn) => btn.classList.remove("active"));
-        event.target.classList.add("active");
-        loading.classList.add("active");
-
+      async function renderExample1() {
         try {
-          const module = await import("./dist/index.mjs");
-          const { Diagram, Cluster, Node, Edge, setIconBaseDir } = module;
+          const diagram = new Diagram("Simple Flow", {
+            direction: "TB",
+            outformat: "svg",
+          });
 
-          setIconBaseDir("resources");
+          const web = diagram.add(new Node("Web"));
+          const app = diagram.add(new Node("App"));
+          const db = diagram.add(new Node("DB"));
+          web.to(app).to(db);
 
-          const example = examples[exampleKey];
-          if (!example) throw new Error("Unknown example");
-
-          codeDisplay.innerHTML = `<code>${escapeHtml(example.code)}</code>`;
-          const result = await example.generate(Diagram, Cluster, Node, Edge, setIconBaseDir);
-
-          const renderOutput = await result.diagram.render();
-
-          // Check if it's PNG (Uint8Array) or SVG (string)
-          if (renderOutput instanceof Uint8Array || result.isPng) {
-            // It's PNG binary data
-            const blob = new Blob([renderOutput], { type: "image/png" });
-            const url = URL.createObjectURL(blob);
-            output.innerHTML = `<img src="${url}" style="max-width: 100%; border: 1px solid #ddd;"><br><button onclick="downloadPNG()" style="margin-top: 10px; padding: 10px 20px; background: #4caf50; color: white; border: none; border-radius: 6px; cursor: pointer;">Download PNG</button>`;
-            window.currentPngBlob = blob; // Store for download
-          } else {
-            // It's SVG string
-            output.innerHTML = renderOutput;
-          }
-        } catch (err) {
-          output.innerHTML = `<p style="color: red;">Error: ${err.message}</p>`;
-          console.error(err);
-        } finally {
-          loading.classList.remove("active");
+          const svg = await diagram.render();
+          document.getElementById("diagram1").innerHTML = svg;
+          diagram.destroy();
+        } catch (e) {
+          document.getElementById("diagram1").innerHTML =
+            '<div class="error">' + e.message + "</div>";
         }
-      };
-
-      window.downloadPNG = function () {
-        if (window.currentPngBlob) {
-          const url = URL.createObjectURL(window.currentPngBlob);
-          const a = document.createElement("a");
-          a.href = url;
-          a.download = "diagram.png";
-          document.body.appendChild(a);
-          a.click();
-          document.body.removeChild(a);
-          URL.revokeObjectURL(url);
-        }
-      };
-
-      function escapeHtml(text) {
-        const div = document.createElement("div");
-        div.textContent = text;
-        return div.innerHTML;
       }
+
+      async function renderExample2() {
+        try {
+          const diagram = new Diagram("AWS", {
+            direction: "TB",
+            outformat: "svg",
+          });
+
+          const web = diagram.add(new EC2("Web"));
+          const db = diagram.add(new RDS("DB"));
+          web.to(db);
+
+          const svg = await diagram.render();
+          document.getElementById("diagram2").innerHTML = svg;
+          diagram.destroy();
+        } catch (e) {
+          document.getElementById("diagram2").innerHTML =
+            '<div class="error">' + e.message + "</div>";
+        }
+      }
+
+      renderExample1();
+      renderExample2();
     </script>
   </body>
 </html>

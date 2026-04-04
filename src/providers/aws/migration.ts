@@ -17,51 +17,51 @@ class _Migration extends _Aws {
 }
 
 export class ApplicationDiscoveryService extends _Migration {
-  protected static override _iconDataUrl = application_discovery_serviceIcon;
+  protected static _iconDataUrl = application_discovery_serviceIcon;
 }
 
 export class CloudendureMigration extends _Migration {
-  protected static override _iconDataUrl = cloudendure_migrationIcon;
+  protected static _iconDataUrl = cloudendure_migrationIcon;
 }
 
 export class DatabaseMigrationService extends _Migration {
-  protected static override _iconDataUrl = database_migration_serviceIcon;
+  protected static _iconDataUrl = database_migration_serviceIcon;
 }
 
 export class DatasyncAgent extends _Migration {
-  protected static override _iconDataUrl = datasync_agentIcon;
+  protected static _iconDataUrl = datasync_agentIcon;
 }
 
 export class Datasync extends _Migration {
-  protected static override _iconDataUrl = datasyncIcon;
+  protected static _iconDataUrl = datasyncIcon;
 }
 
 export class MigrationAndTransfer extends _Migration {
-  protected static override _iconDataUrl = migration_and_transferIcon;
+  protected static _iconDataUrl = migration_and_transferIcon;
 }
 
 export class MigrationHub extends _Migration {
-  protected static override _iconDataUrl = migration_hubIcon;
+  protected static _iconDataUrl = migration_hubIcon;
 }
 
 export class ServerMigrationService extends _Migration {
-  protected static override _iconDataUrl = server_migration_serviceIcon;
+  protected static _iconDataUrl = server_migration_serviceIcon;
 }
 
 export class SnowballEdge extends _Migration {
-  protected static override _iconDataUrl = snowball_edgeIcon;
+  protected static _iconDataUrl = snowball_edgeIcon;
 }
 
 export class Snowball extends _Migration {
-  protected static override _iconDataUrl = snowballIcon;
+  protected static _iconDataUrl = snowballIcon;
 }
 
 export class Snowmobile extends _Migration {
-  protected static override _iconDataUrl = snowmobileIcon;
+  protected static _iconDataUrl = snowmobileIcon;
 }
 
 export class TransferForSftp extends _Migration {
-  protected static override _iconDataUrl = transfer_for_sftpIcon;
+  protected static _iconDataUrl = transfer_for_sftpIcon;
 }
 
 // Aliases

@@ -7,9 +7,9 @@ class _Baremetal extends _Openstack {
 }
 
 export class Cyborg extends _Baremetal {
-  protected static override _iconDataUrl = cyborgIcon;
+  protected static _iconDataUrl = cyborgIcon;
 }
 
 export class Ironic extends _Baremetal {
-  protected static override _iconDataUrl = ironicIcon;
+  protected static _iconDataUrl = ironicIcon;
 }

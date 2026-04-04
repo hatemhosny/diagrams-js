@@ -8,15 +8,15 @@ class _Gitops extends _Onprem {
 }
 
 export class Argocd extends _Gitops {
-  protected static override _iconDataUrl = argocdIcon;
+  protected static _iconDataUrl = argocdIcon;
 }
 
 export class Flagger extends _Gitops {
-  protected static override _iconDataUrl = flaggerIcon;
+  protected static _iconDataUrl = flaggerIcon;
 }
 
 export class Flux extends _Gitops {
-  protected static override _iconDataUrl = fluxIcon;
+  protected static _iconDataUrl = fluxIcon;
 }
 
 // Aliases

@@ -10,21 +10,21 @@ class _Vcs extends _Onprem {
 }
 
 export class Git extends _Vcs {
-  protected static override _iconDataUrl = gitIcon;
+  protected static _iconDataUrl = gitIcon;
 }
 
 export class Gitea extends _Vcs {
-  protected static override _iconDataUrl = giteaIcon;
+  protected static _iconDataUrl = giteaIcon;
 }
 
 export class Github extends _Vcs {
-  protected static override _iconDataUrl = githubIcon;
+  protected static _iconDataUrl = githubIcon;
 }
 
 export class Gitlab extends _Vcs {
-  protected static override _iconDataUrl = gitlabIcon;
+  protected static _iconDataUrl = gitlabIcon;
 }
 
 export class Svn extends _Vcs {
-  protected static override _iconDataUrl = svnIcon;
+  protected static _iconDataUrl = svnIcon;
 }

@@ -34,119 +34,119 @@ class _Analytics extends _Aws {
 }
 
 export class AmazonOpensearchService extends _Analytics {
-  protected static override _iconDataUrl = amazon_opensearch_serviceIcon;
+  protected static _iconDataUrl = amazon_opensearch_serviceIcon;
 }
 
 export class Analytics extends _Analytics {
-  protected static override _iconDataUrl = analyticsIcon;
+  protected static _iconDataUrl = analyticsIcon;
 }
 
 export class Athena extends _Analytics {
-  protected static override _iconDataUrl = athenaIcon;
+  protected static _iconDataUrl = athenaIcon;
 }
 
 export class CloudsearchSearchDocuments extends _Analytics {
-  protected static override _iconDataUrl = cloudsearch_search_documentsIcon;
+  protected static _iconDataUrl = cloudsearch_search_documentsIcon;
 }
 
 export class Cloudsearch extends _Analytics {
-  protected static override _iconDataUrl = cloudsearchIcon;
+  protected static _iconDataUrl = cloudsearchIcon;
 }
 
 export class DataLakeResource extends _Analytics {
-  protected static override _iconDataUrl = data_lake_resourceIcon;
+  protected static _iconDataUrl = data_lake_resourceIcon;
 }
 
 export class DataPipeline extends _Analytics {
-  protected static override _iconDataUrl = data_pipelineIcon;
+  protected static _iconDataUrl = data_pipelineIcon;
 }
 
 export class ElasticsearchService extends _Analytics {
-  protected static override _iconDataUrl = elasticsearch_serviceIcon;
+  protected static _iconDataUrl = elasticsearch_serviceIcon;
 }
 
 export class EMRCluster extends _Analytics {
-  protected static override _iconDataUrl = emr_clusterIcon;
+  protected static _iconDataUrl = emr_clusterIcon;
 }
 
 export class EMREngineMaprM3 extends _Analytics {
-  protected static override _iconDataUrl = emr_engine_mapr_m3Icon;
+  protected static _iconDataUrl = emr_engine_mapr_m3Icon;
 }
 
 export class EMREngineMaprM5 extends _Analytics {
-  protected static override _iconDataUrl = emr_engine_mapr_m5Icon;
+  protected static _iconDataUrl = emr_engine_mapr_m5Icon;
 }
 
 export class EMREngineMaprM7 extends _Analytics {
-  protected static override _iconDataUrl = emr_engine_mapr_m7Icon;
+  protected static _iconDataUrl = emr_engine_mapr_m7Icon;
 }
 
 export class EMREngine extends _Analytics {
-  protected static override _iconDataUrl = emr_engineIcon;
+  protected static _iconDataUrl = emr_engineIcon;
 }
 
 export class EMRHdfsCluster extends _Analytics {
-  protected static override _iconDataUrl = emr_hdfs_clusterIcon;
+  protected static _iconDataUrl = emr_hdfs_clusterIcon;
 }
 
 export class EMR extends _Analytics {
-  protected static override _iconDataUrl = emrIcon;
+  protected static _iconDataUrl = emrIcon;
 }
 
 export class GlueCrawlers extends _Analytics {
-  protected static override _iconDataUrl = glue_crawlersIcon;
+  protected static _iconDataUrl = glue_crawlersIcon;
 }
 
 export class GlueDataCatalog extends _Analytics {
-  protected static override _iconDataUrl = glue_data_catalogIcon;
+  protected static _iconDataUrl = glue_data_catalogIcon;
 }
 
 export class Glue extends _Analytics {
-  protected static override _iconDataUrl = glueIcon;
+  protected static _iconDataUrl = glueIcon;
 }
 
 export class KinesisDataAnalytics extends _Analytics {
-  protected static override _iconDataUrl = kinesis_data_analyticsIcon;
+  protected static _iconDataUrl = kinesis_data_analyticsIcon;
 }
 
 export class KinesisDataFirehose extends _Analytics {
-  protected static override _iconDataUrl = kinesis_data_firehoseIcon;
+  protected static _iconDataUrl = kinesis_data_firehoseIcon;
 }
 
 export class KinesisDataStreams extends _Analytics {
-  protected static override _iconDataUrl = kinesis_data_streamsIcon;
+  protected static _iconDataUrl = kinesis_data_streamsIcon;
 }
 
 export class KinesisVideoStreams extends _Analytics {
-  protected static override _iconDataUrl = kinesis_video_streamsIcon;
+  protected static _iconDataUrl = kinesis_video_streamsIcon;
 }
 
 export class Kinesis extends _Analytics {
-  protected static override _iconDataUrl = kinesisIcon;
+  protected static _iconDataUrl = kinesisIcon;
 }
 
 export class LakeFormation extends _Analytics {
-  protected static override _iconDataUrl = lake_formationIcon;
+  protected static _iconDataUrl = lake_formationIcon;
 }
 
 export class ManagedStreamingForKafka extends _Analytics {
-  protected static override _iconDataUrl = managed_streaming_for_kafkaIcon;
+  protected static _iconDataUrl = managed_streaming_for_kafkaIcon;
 }
 
 export class Quicksight extends _Analytics {
-  protected static override _iconDataUrl = quicksightIcon;
+  protected static _iconDataUrl = quicksightIcon;
 }
 
 export class RedshiftDenseComputeNode extends _Analytics {
-  protected static override _iconDataUrl = redshift_dense_compute_nodeIcon;
+  protected static _iconDataUrl = redshift_dense_compute_nodeIcon;
 }
 
 export class RedshiftDenseStorageNode extends _Analytics {
-  protected static override _iconDataUrl = redshift_dense_storage_nodeIcon;
+  protected static _iconDataUrl = redshift_dense_storage_nodeIcon;
 }
 
 export class Redshift extends _Analytics {
-  protected static override _iconDataUrl = redshiftIcon;
+  protected static _iconDataUrl = redshiftIcon;
 }
 
 // Aliases

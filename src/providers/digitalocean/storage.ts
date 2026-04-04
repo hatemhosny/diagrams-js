@@ -9,17 +9,17 @@ class _Storage extends _Digitalocean {
 }
 
 export class Folder extends _Storage {
-  protected static override _iconDataUrl = folderIcon;
+  protected static _iconDataUrl = folderIcon;
 }
 
 export class Space extends _Storage {
-  protected static override _iconDataUrl = spaceIcon;
+  protected static _iconDataUrl = spaceIcon;
 }
 
 export class VolumeSnapshot extends _Storage {
-  protected static override _iconDataUrl = volume_snapshotIcon;
+  protected static _iconDataUrl = volume_snapshotIcon;
 }
 
 export class Volume extends _Storage {
-  protected static override _iconDataUrl = volumeIcon;
+  protected static _iconDataUrl = volumeIcon;
 }

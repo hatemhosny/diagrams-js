@@ -10,21 +10,21 @@ class _Observability extends _Elastic {
 }
 
 export class APM extends _Observability {
-  protected static override _iconDataUrl = apmIcon;
+  protected static _iconDataUrl = apmIcon;
 }
 
 export class Logs extends _Observability {
-  protected static override _iconDataUrl = logsIcon;
+  protected static _iconDataUrl = logsIcon;
 }
 
 export class Metrics extends _Observability {
-  protected static override _iconDataUrl = metricsIcon;
+  protected static _iconDataUrl = metricsIcon;
 }
 
 export class Observability extends _Observability {
-  protected static override _iconDataUrl = observabilityIcon;
+  protected static _iconDataUrl = observabilityIcon;
 }
 
 export class Uptime extends _Observability {
-  protected static override _iconDataUrl = uptimeIcon;
+  protected static _iconDataUrl = uptimeIcon;
 }

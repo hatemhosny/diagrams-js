@@ -8,13 +8,13 @@ class _Security extends _Onprem {
 }
 
 export class Bitwarden extends _Security {
-  protected static override _iconDataUrl = bitwardenIcon;
+  protected static _iconDataUrl = bitwardenIcon;
 }
 
 export class Trivy extends _Security {
-  protected static override _iconDataUrl = trivyIcon;
+  protected static _iconDataUrl = trivyIcon;
 }
 
 export class Vault extends _Security {
-  protected static override _iconDataUrl = vaultIcon;
+  protected static _iconDataUrl = vaultIcon;
 }

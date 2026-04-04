@@ -6,5 +6,5 @@ class _Place extends _Generic {
 }
 
 export class Datacenter extends _Place {
-  protected static override _iconDataUrl = datacenterIcon;
+  protected static _iconDataUrl = datacenterIcon;
 }

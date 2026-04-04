@@ -9,19 +9,19 @@ class _Storage extends _Onprem {
 }
 
 export class CephOsd extends _Storage {
-  protected static override _iconDataUrl = ceph_osdIcon;
+  protected static _iconDataUrl = ceph_osdIcon;
 }
 
 export class Ceph extends _Storage {
-  protected static override _iconDataUrl = cephIcon;
+  protected static _iconDataUrl = cephIcon;
 }
 
 export class Glusterfs extends _Storage {
-  protected static override _iconDataUrl = glusterfsIcon;
+  protected static _iconDataUrl = glusterfsIcon;
 }
 
 export class Portworx extends _Storage {
-  protected static override _iconDataUrl = portworxIcon;
+  protected static _iconDataUrl = portworxIcon;
 }
 
 // Aliases

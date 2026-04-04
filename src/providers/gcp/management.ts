@@ -9,17 +9,17 @@ class _Management extends _Gcp {
 }
 
 export class Billing extends _Management {
-  protected static override _iconDataUrl = billingIcon;
+  protected static _iconDataUrl = billingIcon;
 }
 
 export class Project extends _Management {
-  protected static override _iconDataUrl = projectIcon;
+  protected static _iconDataUrl = projectIcon;
 }
 
 export class Quotas extends _Management {
-  protected static override _iconDataUrl = quotasIcon;
+  protected static _iconDataUrl = quotasIcon;
 }
 
 export class Support extends _Management {
-  protected static override _iconDataUrl = supportIcon;
+  protected static _iconDataUrl = supportIcon;
 }

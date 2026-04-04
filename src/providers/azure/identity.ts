@@ -46,165 +46,165 @@ class _Identity extends _Azure {
 }
 
 export class AadLicenses extends _Identity {
-  protected static override _iconDataUrl = aad_licensesIcon;
+  protected static _iconDataUrl = aad_licensesIcon;
 }
 
 export class AccessReview extends _Identity {
-  protected static override _iconDataUrl = access_reviewIcon;
+  protected static _iconDataUrl = access_reviewIcon;
 }
 
 export class ActiveDirectoryConnectHealth extends _Identity {
-  protected static override _iconDataUrl = active_directory_connect_healthIcon;
+  protected static _iconDataUrl = active_directory_connect_healthIcon;
 }
 
 export class ActiveDirectory extends _Identity {
-  protected static override _iconDataUrl = active_directoryIcon;
+  protected static _iconDataUrl = active_directoryIcon;
 }
 
 export class ADB2C extends _Identity {
-  protected static override _iconDataUrl = ad_b2cIcon;
+  protected static _iconDataUrl = ad_b2cIcon;
 }
 
 export class ADDomainServices extends _Identity {
-  protected static override _iconDataUrl = ad_domain_servicesIcon;
+  protected static _iconDataUrl = ad_domain_servicesIcon;
 }
 
 export class ADIdentityProtection extends _Identity {
-  protected static override _iconDataUrl = ad_identity_protectionIcon;
+  protected static _iconDataUrl = ad_identity_protectionIcon;
 }
 
 export class ADPrivilegedIdentityManagement extends _Identity {
-  protected static override _iconDataUrl = ad_privileged_identity_managementIcon;
+  protected static _iconDataUrl = ad_privileged_identity_managementIcon;
 }
 
 export class AdministrativeUnits extends _Identity {
-  protected static override _iconDataUrl = administrative_unitsIcon;
+  protected static _iconDataUrl = administrative_unitsIcon;
 }
 
 export class APIProxy extends _Identity {
-  protected static override _iconDataUrl = api_proxyIcon;
+  protected static _iconDataUrl = api_proxyIcon;
 }
 
 export class AppRegistrations extends _Identity {
-  protected static override _iconDataUrl = app_registrationsIcon;
+  protected static _iconDataUrl = app_registrationsIcon;
 }
 
 export class AzureActiveDirectory extends _Identity {
-  protected static override _iconDataUrl = azure_active_directoryIcon;
+  protected static _iconDataUrl = azure_active_directoryIcon;
 }
 
 export class AzureADB2C extends _Identity {
-  protected static override _iconDataUrl = azure_ad_b2cIcon;
+  protected static _iconDataUrl = azure_ad_b2cIcon;
 }
 
 export class AzureADDomainServices extends _Identity {
-  protected static override _iconDataUrl = azure_ad_domain_servicesIcon;
+  protected static _iconDataUrl = azure_ad_domain_servicesIcon;
 }
 
 export class AzureADIdentityProtection extends _Identity {
-  protected static override _iconDataUrl = azure_ad_identity_protectionIcon;
+  protected static _iconDataUrl = azure_ad_identity_protectionIcon;
 }
 
 export class AzureADPrivilegeIdentityManagement extends _Identity {
-  protected static override _iconDataUrl = azure_ad_privilege_identity_managementIcon;
+  protected static _iconDataUrl = azure_ad_privilege_identity_managementIcon;
 }
 
 export class AzureADPrivlegedIdentityManagement extends _Identity {
-  protected static override _iconDataUrl = azure_ad_privleged_identity_managementIcon;
+  protected static _iconDataUrl = azure_ad_privleged_identity_managementIcon;
 }
 
 export class AzureADRolesAndAdministrators extends _Identity {
-  protected static override _iconDataUrl = azure_ad_roles_and_administratorsIcon;
+  protected static _iconDataUrl = azure_ad_roles_and_administratorsIcon;
 }
 
 export class AzureInformationProtection extends _Identity {
-  protected static override _iconDataUrl = azure_information_protectionIcon;
+  protected static _iconDataUrl = azure_information_protectionIcon;
 }
 
 export class ConditionalAccess extends _Identity {
-  protected static override _iconDataUrl = conditional_accessIcon;
+  protected static _iconDataUrl = conditional_accessIcon;
 }
 
 export class CustomAzureADRoles extends _Identity {
-  protected static override _iconDataUrl = custom_azure_ad_rolesIcon;
+  protected static _iconDataUrl = custom_azure_ad_rolesIcon;
 }
 
 export class EnterpriseApplications extends _Identity {
-  protected static override _iconDataUrl = enterprise_applicationsIcon;
+  protected static _iconDataUrl = enterprise_applicationsIcon;
 }
 
 export class EntraConnect extends _Identity {
-  protected static override _iconDataUrl = entra_connectIcon;
+  protected static _iconDataUrl = entra_connectIcon;
 }
 
 export class EntraDomainServices extends _Identity {
-  protected static override _iconDataUrl = entra_domain_servicesIcon;
+  protected static _iconDataUrl = entra_domain_servicesIcon;
 }
 
 export class EntraIDProtection extends _Identity {
-  protected static override _iconDataUrl = entra_id_protectionIcon;
+  protected static _iconDataUrl = entra_id_protectionIcon;
 }
 
 export class EntraManagedIdentities extends _Identity {
-  protected static override _iconDataUrl = entra_managed_identitiesIcon;
+  protected static _iconDataUrl = entra_managed_identitiesIcon;
 }
 
 export class EntraPrivlegedIdentityManagement extends _Identity {
-  protected static override _iconDataUrl = entra_privleged_identity_managementIcon;
+  protected static _iconDataUrl = entra_privleged_identity_managementIcon;
 }
 
 export class EntraVerifiedID extends _Identity {
-  protected static override _iconDataUrl = entra_verified_idIcon;
+  protected static _iconDataUrl = entra_verified_idIcon;
 }
 
 export class ExternalIdentities extends _Identity {
-  protected static override _iconDataUrl = external_identitiesIcon;
+  protected static _iconDataUrl = external_identitiesIcon;
 }
 
 export class GlobalSecureAccess extends _Identity {
-  protected static override _iconDataUrl = global_secure_accessIcon;
+  protected static _iconDataUrl = global_secure_accessIcon;
 }
 
 export class Groups extends _Identity {
-  protected static override _iconDataUrl = groupsIcon;
+  protected static _iconDataUrl = groupsIcon;
 }
 
 export class IdentityGovernance extends _Identity {
-  protected static override _iconDataUrl = identity_governanceIcon;
+  protected static _iconDataUrl = identity_governanceIcon;
 }
 
 export class InformationProtection extends _Identity {
-  protected static override _iconDataUrl = information_protectionIcon;
+  protected static _iconDataUrl = information_protectionIcon;
 }
 
 export class InternetAccess extends _Identity {
-  protected static override _iconDataUrl = internet_accessIcon;
+  protected static _iconDataUrl = internet_accessIcon;
 }
 
 export class ManagedIdentities extends _Identity {
-  protected static override _iconDataUrl = managed_identitiesIcon;
+  protected static _iconDataUrl = managed_identitiesIcon;
 }
 
 export class PrivateAccess extends _Identity {
-  protected static override _iconDataUrl = private_accessIcon;
+  protected static _iconDataUrl = private_accessIcon;
 }
 
 export class Security extends _Identity {
-  protected static override _iconDataUrl = securityIcon;
+  protected static _iconDataUrl = securityIcon;
 }
 
 export class TenantProperties extends _Identity {
-  protected static override _iconDataUrl = tenant_propertiesIcon;
+  protected static _iconDataUrl = tenant_propertiesIcon;
 }
 
 export class UserSettings extends _Identity {
-  protected static override _iconDataUrl = user_settingsIcon;
+  protected static _iconDataUrl = user_settingsIcon;
 }
 
 export class Users extends _Identity {
-  protected static override _iconDataUrl = usersIcon;
+  protected static _iconDataUrl = usersIcon;
 }
 
 export class VerifiableCredentials extends _Identity {
-  protected static override _iconDataUrl = verifiable_credentialsIcon;
+  protected static _iconDataUrl = verifiable_credentialsIcon;
 }

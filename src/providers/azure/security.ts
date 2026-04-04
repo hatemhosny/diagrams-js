@@ -27,89 +27,89 @@ class _Security extends _Azure {
 }
 
 export class ApplicationSecurityGroups extends _Security {
-  protected static override _iconDataUrl = application_security_groupsIcon;
+  protected static _iconDataUrl = application_security_groupsIcon;
 }
 
 export class AzureADAuthenticationMethods extends _Security {
-  protected static override _iconDataUrl = azure_ad_authentication_methodsIcon;
+  protected static _iconDataUrl = azure_ad_authentication_methodsIcon;
 }
 
 export class AzureADIdentityProtection extends _Security {
-  protected static override _iconDataUrl = azure_ad_identity_protectionIcon;
+  protected static _iconDataUrl = azure_ad_identity_protectionIcon;
 }
 
 export class AzureADPrivlegedIdentityManagement extends _Security {
-  protected static override _iconDataUrl = azure_ad_privleged_identity_managementIcon;
+  protected static _iconDataUrl = azure_ad_privleged_identity_managementIcon;
 }
 
 export class AzureADRiskySignins extends _Security {
-  protected static override _iconDataUrl = azure_ad_risky_signinsIcon;
+  protected static _iconDataUrl = azure_ad_risky_signinsIcon;
 }
 
 export class AzureADRiskyUsers extends _Security {
-  protected static override _iconDataUrl = azure_ad_risky_usersIcon;
+  protected static _iconDataUrl = azure_ad_risky_usersIcon;
 }
 
 export class AzureInformationProtection extends _Security {
-  protected static override _iconDataUrl = azure_information_protectionIcon;
+  protected static _iconDataUrl = azure_information_protectionIcon;
 }
 
 export class AzureSentinel extends _Security {
-  protected static override _iconDataUrl = azure_sentinelIcon;
+  protected static _iconDataUrl = azure_sentinelIcon;
 }
 
 export class ConditionalAccess extends _Security {
-  protected static override _iconDataUrl = conditional_accessIcon;
+  protected static _iconDataUrl = conditional_accessIcon;
 }
 
 export class Defender extends _Security {
-  protected static override _iconDataUrl = defenderIcon;
+  protected static _iconDataUrl = defenderIcon;
 }
 
 export class Detonation extends _Security {
-  protected static override _iconDataUrl = detonationIcon;
+  protected static _iconDataUrl = detonationIcon;
 }
 
 export class ExtendedSecurityUpdates extends _Security {
-  protected static override _iconDataUrl = extended_security_updatesIcon;
+  protected static _iconDataUrl = extended_security_updatesIcon;
 }
 
 export class Extendedsecurityupdates extends _Security {
-  protected static override _iconDataUrl = extendedsecurityupdatesIcon;
+  protected static _iconDataUrl = extendedsecurityupdatesIcon;
 }
 
 export class IdentitySecureScore extends _Security {
-  protected static override _iconDataUrl = identity_secure_scoreIcon;
+  protected static _iconDataUrl = identity_secure_scoreIcon;
 }
 
 export class KeyVaults extends _Security {
-  protected static override _iconDataUrl = key_vaultsIcon;
+  protected static _iconDataUrl = key_vaultsIcon;
 }
 
 export class MicrosoftDefenderEasm extends _Security {
-  protected static override _iconDataUrl = microsoft_defender_easmIcon;
+  protected static _iconDataUrl = microsoft_defender_easmIcon;
 }
 
 export class MicrosoftDefenderForCloud extends _Security {
-  protected static override _iconDataUrl = microsoft_defender_for_cloudIcon;
+  protected static _iconDataUrl = microsoft_defender_for_cloudIcon;
 }
 
 export class MicrosoftDefenderForIot extends _Security {
-  protected static override _iconDataUrl = microsoft_defender_for_iotIcon;
+  protected static _iconDataUrl = microsoft_defender_for_iotIcon;
 }
 
 export class MultifactorAuthentication extends _Security {
-  protected static override _iconDataUrl = multifactor_authenticationIcon;
+  protected static _iconDataUrl = multifactor_authenticationIcon;
 }
 
 export class SecurityCenter extends _Security {
-  protected static override _iconDataUrl = security_centerIcon;
+  protected static _iconDataUrl = security_centerIcon;
 }
 
 export class Sentinel extends _Security {
-  protected static override _iconDataUrl = sentinelIcon;
+  protected static _iconDataUrl = sentinelIcon;
 }
 
 export class UserSettings extends _Security {
-  protected static override _iconDataUrl = user_settingsIcon;
+  protected static _iconDataUrl = user_settingsIcon;
 }

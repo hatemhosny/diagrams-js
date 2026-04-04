@@ -21,65 +21,65 @@ class _Security extends _Oci {
 }
 
 export class CloudGuardWhite extends _Security {
-  protected static override _iconDataUrl = cloud_guard_whiteIcon;
+  protected static _iconDataUrl = cloud_guard_whiteIcon;
 }
 
 export class CloudGuard extends _Security {
-  protected static override _iconDataUrl = cloud_guardIcon;
+  protected static _iconDataUrl = cloud_guardIcon;
 }
 
 export class DDOSWhite extends _Security {
-  protected static override _iconDataUrl = ddos_whiteIcon;
+  protected static _iconDataUrl = ddos_whiteIcon;
 }
 
 export class DDOS extends _Security {
-  protected static override _iconDataUrl = ddosIcon;
+  protected static _iconDataUrl = ddosIcon;
 }
 
 export class EncryptionWhite extends _Security {
-  protected static override _iconDataUrl = encryption_whiteIcon;
+  protected static _iconDataUrl = encryption_whiteIcon;
 }
 
 export class Encryption extends _Security {
-  protected static override _iconDataUrl = encryptionIcon;
+  protected static _iconDataUrl = encryptionIcon;
 }
 
 export class IDAccessWhite extends _Security {
-  protected static override _iconDataUrl = id_access_whiteIcon;
+  protected static _iconDataUrl = id_access_whiteIcon;
 }
 
 export class IDAccess extends _Security {
-  protected static override _iconDataUrl = id_accessIcon;
+  protected static _iconDataUrl = id_accessIcon;
 }
 
 export class KeyManagementWhite extends _Security {
-  protected static override _iconDataUrl = key_management_whiteIcon;
+  protected static _iconDataUrl = key_management_whiteIcon;
 }
 
 export class KeyManagement extends _Security {
-  protected static override _iconDataUrl = key_managementIcon;
+  protected static _iconDataUrl = key_managementIcon;
 }
 
 export class MaxSecurityZoneWhite extends _Security {
-  protected static override _iconDataUrl = max_security_zone_whiteIcon;
+  protected static _iconDataUrl = max_security_zone_whiteIcon;
 }
 
 export class MaxSecurityZone extends _Security {
-  protected static override _iconDataUrl = max_security_zoneIcon;
+  protected static _iconDataUrl = max_security_zoneIcon;
 }
 
 export class VaultWhite extends _Security {
-  protected static override _iconDataUrl = vault_whiteIcon;
+  protected static _iconDataUrl = vault_whiteIcon;
 }
 
 export class Vault extends _Security {
-  protected static override _iconDataUrl = vaultIcon;
+  protected static _iconDataUrl = vaultIcon;
 }
 
 export class WAFWhite extends _Security {
-  protected static override _iconDataUrl = waf_whiteIcon;
+  protected static _iconDataUrl = waf_whiteIcon;
 }
 
 export class WAF extends _Security {
-  protected static override _iconDataUrl = wafIcon;
+  protected static _iconDataUrl = wafIcon;
 }

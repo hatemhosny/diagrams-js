@@ -10,21 +10,21 @@ class _Quality extends _Firebase {
 }
 
 export class AppDistribution extends _Quality {
-  protected static override _iconDataUrl = app_distributionIcon;
+  protected static _iconDataUrl = app_distributionIcon;
 }
 
 export class CrashReporting extends _Quality {
-  protected static override _iconDataUrl = crash_reportingIcon;
+  protected static _iconDataUrl = crash_reportingIcon;
 }
 
 export class Crashlytics extends _Quality {
-  protected static override _iconDataUrl = crashlyticsIcon;
+  protected static _iconDataUrl = crashlyticsIcon;
 }
 
 export class PerformanceMonitoring extends _Quality {
-  protected static override _iconDataUrl = performance_monitoringIcon;
+  protected static _iconDataUrl = performance_monitoringIcon;
 }
 
 export class TestLab extends _Quality {
-  protected static override _iconDataUrl = test_labIcon;
+  protected static _iconDataUrl = test_labIcon;
 }

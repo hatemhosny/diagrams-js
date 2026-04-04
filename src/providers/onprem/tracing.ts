@@ -7,9 +7,9 @@ class _Tracing extends _Onprem {
 }
 
 export class Jaeger extends _Tracing {
-  protected static override _iconDataUrl = jaegerIcon;
+  protected static _iconDataUrl = jaegerIcon;
 }
 
 export class Tempo extends _Tracing {
-  protected static override _iconDataUrl = tempoIcon;
+  protected static _iconDataUrl = tempoIcon;
 }

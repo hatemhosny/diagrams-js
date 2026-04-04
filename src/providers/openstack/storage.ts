@@ -8,13 +8,13 @@ class _Storage extends _Openstack {
 }
 
 export class Cinder extends _Storage {
-  protected static override _iconDataUrl = cinderIcon;
+  protected static _iconDataUrl = cinderIcon;
 }
 
 export class Manila extends _Storage {
-  protected static override _iconDataUrl = manilaIcon;
+  protected static _iconDataUrl = manilaIcon;
 }
 
 export class Swift extends _Storage {
-  protected static override _iconDataUrl = swiftIcon;
+  protected static _iconDataUrl = swiftIcon;
 }

@@ -32,109 +32,109 @@ class _General extends _Ibm {
 }
 
 export class CloudMessaging extends _General {
-  protected static override _iconDataUrl = cloud_messagingIcon;
+  protected static _iconDataUrl = cloud_messagingIcon;
 }
 
 export class CloudServices extends _General {
-  protected static override _iconDataUrl = cloud_servicesIcon;
+  protected static _iconDataUrl = cloud_servicesIcon;
 }
 
 export class Cloudant extends _General {
-  protected static override _iconDataUrl = cloudantIcon;
+  protected static _iconDataUrl = cloudantIcon;
 }
 
 export class CognitiveServices extends _General {
-  protected static override _iconDataUrl = cognitive_servicesIcon;
+  protected static _iconDataUrl = cognitive_servicesIcon;
 }
 
 export class DataSecurity extends _General {
-  protected static override _iconDataUrl = data_securityIcon;
+  protected static _iconDataUrl = data_securityIcon;
 }
 
 export class Enterprise extends _General {
-  protected static override _iconDataUrl = enterpriseIcon;
+  protected static _iconDataUrl = enterpriseIcon;
 }
 
 export class GovernanceRiskCompliance extends _General {
-  protected static override _iconDataUrl = governance_risk_complianceIcon;
+  protected static _iconDataUrl = governance_risk_complianceIcon;
 }
 
 export class IBMContainers extends _General {
-  protected static override _iconDataUrl = ibm_containersIcon;
+  protected static _iconDataUrl = ibm_containersIcon;
 }
 
 export class IBMPublicCloud extends _General {
-  protected static override _iconDataUrl = ibm_public_cloudIcon;
+  protected static _iconDataUrl = ibm_public_cloudIcon;
 }
 
 export class IdentityAccessManagement extends _General {
-  protected static override _iconDataUrl = identity_access_managementIcon;
+  protected static _iconDataUrl = identity_access_managementIcon;
 }
 
 export class IdentityProvider extends _General {
-  protected static override _iconDataUrl = identity_providerIcon;
+  protected static _iconDataUrl = identity_providerIcon;
 }
 
 export class InfrastructureSecurity extends _General {
-  protected static override _iconDataUrl = infrastructure_securityIcon;
+  protected static _iconDataUrl = infrastructure_securityIcon;
 }
 
 export class Internet extends _General {
-  protected static override _iconDataUrl = internetIcon;
+  protected static _iconDataUrl = internetIcon;
 }
 
 export class IotCloud extends _General {
-  protected static override _iconDataUrl = iot_cloudIcon;
+  protected static _iconDataUrl = iot_cloudIcon;
 }
 
 export class MicroservicesApplication extends _General {
-  protected static override _iconDataUrl = microservices_applicationIcon;
+  protected static _iconDataUrl = microservices_applicationIcon;
 }
 
 export class MicroservicesMesh extends _General {
-  protected static override _iconDataUrl = microservices_meshIcon;
+  protected static _iconDataUrl = microservices_meshIcon;
 }
 
 export class MonitoringLogging extends _General {
-  protected static override _iconDataUrl = monitoring_loggingIcon;
+  protected static _iconDataUrl = monitoring_loggingIcon;
 }
 
 export class Monitoring extends _General {
-  protected static override _iconDataUrl = monitoringIcon;
+  protected static _iconDataUrl = monitoringIcon;
 }
 
 export class ObjectStorage extends _General {
-  protected static override _iconDataUrl = object_storageIcon;
+  protected static _iconDataUrl = object_storageIcon;
 }
 
 export class OfflineCapabilities extends _General {
-  protected static override _iconDataUrl = offline_capabilitiesIcon;
+  protected static _iconDataUrl = offline_capabilitiesIcon;
 }
 
 export class Openwhisk extends _General {
-  protected static override _iconDataUrl = openwhiskIcon;
+  protected static _iconDataUrl = openwhiskIcon;
 }
 
 export class PeerCloud extends _General {
-  protected static override _iconDataUrl = peer_cloudIcon;
+  protected static _iconDataUrl = peer_cloudIcon;
 }
 
 export class RetrieveRank extends _General {
-  protected static override _iconDataUrl = retrieve_rankIcon;
+  protected static _iconDataUrl = retrieve_rankIcon;
 }
 
 export class Scalable extends _General {
-  protected static override _iconDataUrl = scalableIcon;
+  protected static _iconDataUrl = scalableIcon;
 }
 
 export class ServiceDiscoveryConfiguration extends _General {
-  protected static override _iconDataUrl = service_discovery_configurationIcon;
+  protected static _iconDataUrl = service_discovery_configurationIcon;
 }
 
 export class TextToSpeech extends _General {
-  protected static override _iconDataUrl = text_to_speechIcon;
+  protected static _iconDataUrl = text_to_speechIcon;
 }
 
 export class TransformationConnectivity extends _General {
-  protected static override _iconDataUrl = transformation_connectivityIcon;
+  protected static _iconDataUrl = transformation_connectivityIcon;
 }

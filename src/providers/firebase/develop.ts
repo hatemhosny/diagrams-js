@@ -12,29 +12,29 @@ class _Develop extends _Firebase {
 }
 
 export class Authentication extends _Develop {
-  protected static override _iconDataUrl = authenticationIcon;
+  protected static _iconDataUrl = authenticationIcon;
 }
 
 export class Firestore extends _Develop {
-  protected static override _iconDataUrl = firestoreIcon;
+  protected static _iconDataUrl = firestoreIcon;
 }
 
 export class Functions extends _Develop {
-  protected static override _iconDataUrl = functionsIcon;
+  protected static _iconDataUrl = functionsIcon;
 }
 
 export class Hosting extends _Develop {
-  protected static override _iconDataUrl = hostingIcon;
+  protected static _iconDataUrl = hostingIcon;
 }
 
 export class MLKit extends _Develop {
-  protected static override _iconDataUrl = ml_kitIcon;
+  protected static _iconDataUrl = ml_kitIcon;
 }
 
 export class RealtimeDatabase extends _Develop {
-  protected static override _iconDataUrl = realtime_databaseIcon;
+  protected static _iconDataUrl = realtime_databaseIcon;
 }
 
 export class Storage extends _Develop {
-  protected static override _iconDataUrl = storageIcon;
+  protected static _iconDataUrl = storageIcon;
 }

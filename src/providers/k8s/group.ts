@@ -6,7 +6,7 @@ class _Group extends _K8s {
 }
 
 export class NS extends _Group {
-  protected static override _iconDataUrl = nsIcon;
+  protected static _iconDataUrl = nsIcon;
 }
 
 // Aliases

@@ -10,21 +10,21 @@ class _Social extends _Ibm {
 }
 
 export class Communities extends _Social {
-  protected static override _iconDataUrl = communitiesIcon;
+  protected static _iconDataUrl = communitiesIcon;
 }
 
 export class FileSync extends _Social {
-  protected static override _iconDataUrl = file_syncIcon;
+  protected static _iconDataUrl = file_syncIcon;
 }
 
 export class LiveCollaboration extends _Social {
-  protected static override _iconDataUrl = live_collaborationIcon;
+  protected static _iconDataUrl = live_collaborationIcon;
 }
 
 export class Messaging extends _Social {
-  protected static override _iconDataUrl = messagingIcon;
+  protected static _iconDataUrl = messagingIcon;
 }
 
 export class Networking extends _Social {
-  protected static override _iconDataUrl = networkingIcon;
+  protected static _iconDataUrl = networkingIcon;
 }

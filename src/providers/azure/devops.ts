@@ -23,73 +23,73 @@ class _Devops extends _Azure {
 }
 
 export class APIConnections extends _Devops {
-  protected static override _iconDataUrl = api_connectionsIcon;
+  protected static _iconDataUrl = api_connectionsIcon;
 }
 
 export class APIManagementServices extends _Devops {
-  protected static override _iconDataUrl = api_management_servicesIcon;
+  protected static _iconDataUrl = api_management_servicesIcon;
 }
 
 export class ApplicationInsights extends _Devops {
-  protected static override _iconDataUrl = application_insightsIcon;
+  protected static _iconDataUrl = application_insightsIcon;
 }
 
 export class Artifacts extends _Devops {
-  protected static override _iconDataUrl = artifactsIcon;
+  protected static _iconDataUrl = artifactsIcon;
 }
 
 export class AzureDevops extends _Devops {
-  protected static override _iconDataUrl = azure_devopsIcon;
+  protected static _iconDataUrl = azure_devopsIcon;
 }
 
 export class Boards extends _Devops {
-  protected static override _iconDataUrl = boardsIcon;
+  protected static _iconDataUrl = boardsIcon;
 }
 
 export class ChangeAnalysis extends _Devops {
-  protected static override _iconDataUrl = change_analysisIcon;
+  protected static _iconDataUrl = change_analysisIcon;
 }
 
 export class Cloudtest extends _Devops {
-  protected static override _iconDataUrl = cloudtestIcon;
+  protected static _iconDataUrl = cloudtestIcon;
 }
 
 export class CodeOptimization extends _Devops {
-  protected static override _iconDataUrl = code_optimizationIcon;
+  protected static _iconDataUrl = code_optimizationIcon;
 }
 
 export class DevopsStarter extends _Devops {
-  protected static override _iconDataUrl = devops_starterIcon;
+  protected static _iconDataUrl = devops_starterIcon;
 }
 
 export class Devops extends _Devops {
-  protected static override _iconDataUrl = devopsIcon;
+  protected static _iconDataUrl = devopsIcon;
 }
 
 export class DevtestLabs extends _Devops {
-  protected static override _iconDataUrl = devtest_labsIcon;
+  protected static _iconDataUrl = devtest_labsIcon;
 }
 
 export class LabAccounts extends _Devops {
-  protected static override _iconDataUrl = lab_accountsIcon;
+  protected static _iconDataUrl = lab_accountsIcon;
 }
 
 export class LabServices extends _Devops {
-  protected static override _iconDataUrl = lab_servicesIcon;
+  protected static _iconDataUrl = lab_servicesIcon;
 }
 
 export class LoadTesting extends _Devops {
-  protected static override _iconDataUrl = load_testingIcon;
+  protected static _iconDataUrl = load_testingIcon;
 }
 
 export class Pipelines extends _Devops {
-  protected static override _iconDataUrl = pipelinesIcon;
+  protected static _iconDataUrl = pipelinesIcon;
 }
 
 export class Repos extends _Devops {
-  protected static override _iconDataUrl = reposIcon;
+  protected static _iconDataUrl = reposIcon;
 }
 
 export class TestPlans extends _Devops {
-  protected static override _iconDataUrl = test_plansIcon;
+  protected static _iconDataUrl = test_plansIcon;
 }

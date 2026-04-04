@@ -12,29 +12,29 @@ class _Newicons extends _Azure {
 }
 
 export class AzureSustainability extends _Newicons {
-  protected static override _iconDataUrl = azure_sustainabilityIcon;
+  protected static _iconDataUrl = azure_sustainabilityIcon;
 }
 
 export class ConnectedVehiclePlatform extends _Newicons {
-  protected static override _iconDataUrl = connected_vehicle_platformIcon;
+  protected static _iconDataUrl = connected_vehicle_platformIcon;
 }
 
 export class EntraConnectHealth extends _Newicons {
-  protected static override _iconDataUrl = entra_connect_healthIcon;
+  protected static _iconDataUrl = entra_connect_healthIcon;
 }
 
 export class EntraConnectSync extends _Newicons {
-  protected static override _iconDataUrl = entra_connect_syncIcon;
+  protected static _iconDataUrl = entra_connect_syncIcon;
 }
 
 export class IcmTroubleshooting extends _Newicons {
-  protected static override _iconDataUrl = icm_troubleshootingIcon;
+  protected static _iconDataUrl = icm_troubleshootingIcon;
 }
 
 export class Osconfig extends _Newicons {
-  protected static override _iconDataUrl = osconfigIcon;
+  protected static _iconDataUrl = osconfigIcon;
 }
 
 export class StorageActions extends _Newicons {
-  protected static override _iconDataUrl = storage_actionsIcon;
+  protected static _iconDataUrl = storage_actionsIcon;
 }

@@ -8,15 +8,15 @@ class _Logging extends _Saas {
 }
 
 export class Datadog extends _Logging {
-  protected static override _iconDataUrl = datadogIcon;
+  protected static _iconDataUrl = datadogIcon;
 }
 
 export class Newrelic extends _Logging {
-  protected static override _iconDataUrl = newrelicIcon;
+  protected static _iconDataUrl = newrelicIcon;
 }
 
 export class Papertrail extends _Logging {
-  protected static override _iconDataUrl = papertrailIcon;
+  protected static _iconDataUrl = papertrailIcon;
 }
 
 // Aliases

@@ -7,9 +7,9 @@ class _Ar extends _Aws {
 }
 
 export class ArVr extends _Ar {
-  protected static override _iconDataUrl = ar_vrIcon;
+  protected static _iconDataUrl = ar_vrIcon;
 }
 
 export class Sumerian extends _Ar {
-  protected static override _iconDataUrl = sumerianIcon;
+  protected static _iconDataUrl = sumerianIcon;
 }

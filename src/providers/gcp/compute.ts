@@ -17,51 +17,51 @@ class _Compute extends _Gcp {
 }
 
 export class AppEngine extends _Compute {
-  protected static override _iconDataUrl = app_engineIcon;
+  protected static _iconDataUrl = app_engineIcon;
 }
 
 export class BinaryAuthorization extends _Compute {
-  protected static override _iconDataUrl = binary_authorizationIcon;
+  protected static _iconDataUrl = binary_authorizationIcon;
 }
 
 export class ComputeEngine extends _Compute {
-  protected static override _iconDataUrl = compute_engineIcon;
+  protected static _iconDataUrl = compute_engineIcon;
 }
 
 export class ContainerOptimizedOS extends _Compute {
-  protected static override _iconDataUrl = container_optimized_osIcon;
+  protected static _iconDataUrl = container_optimized_osIcon;
 }
 
 export class Functions extends _Compute {
-  protected static override _iconDataUrl = functionsIcon;
+  protected static _iconDataUrl = functionsIcon;
 }
 
 export class GKEOnPrem extends _Compute {
-  protected static override _iconDataUrl = gke_on_premIcon;
+  protected static _iconDataUrl = gke_on_premIcon;
 }
 
 export class GPU extends _Compute {
-  protected static override _iconDataUrl = gpuIcon;
+  protected static _iconDataUrl = gpuIcon;
 }
 
 export class KubernetesEngine extends _Compute {
-  protected static override _iconDataUrl = kubernetes_engineIcon;
+  protected static _iconDataUrl = kubernetes_engineIcon;
 }
 
 export class OSConfigurationManagement extends _Compute {
-  protected static override _iconDataUrl = os_configuration_managementIcon;
+  protected static _iconDataUrl = os_configuration_managementIcon;
 }
 
 export class OSInventoryManagement extends _Compute {
-  protected static override _iconDataUrl = os_inventory_managementIcon;
+  protected static _iconDataUrl = os_inventory_managementIcon;
 }
 
 export class OSPatchManagement extends _Compute {
-  protected static override _iconDataUrl = os_patch_managementIcon;
+  protected static _iconDataUrl = os_patch_managementIcon;
 }
 
 export class Run extends _Compute {
-  protected static override _iconDataUrl = runIcon;
+  protected static _iconDataUrl = runIcon;
 }
 
 // Aliases

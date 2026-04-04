@@ -11,25 +11,25 @@ class _Cli extends _Gis {
 }
 
 export class Gdal extends _Cli {
-  protected static override _iconDataUrl = gdalIcon;
+  protected static _iconDataUrl = gdalIcon;
 }
 
 export class Imposm extends _Cli {
-  protected static override _iconDataUrl = imposmIcon;
+  protected static _iconDataUrl = imposmIcon;
 }
 
 export class Lastools extends _Cli {
-  protected static override _iconDataUrl = lastoolsIcon;
+  protected static _iconDataUrl = lastoolsIcon;
 }
 
 export class Mapnik extends _Cli {
-  protected static override _iconDataUrl = mapnikIcon;
+  protected static _iconDataUrl = mapnikIcon;
 }
 
 export class Mdal extends _Cli {
-  protected static override _iconDataUrl = mdalIcon;
+  protected static _iconDataUrl = mdalIcon;
 }
 
 export class Pdal extends _Cli {
-  protected static override _iconDataUrl = pdalIcon;
+  protected static _iconDataUrl = pdalIcon;
 }

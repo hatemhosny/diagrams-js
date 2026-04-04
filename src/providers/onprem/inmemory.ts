@@ -9,17 +9,17 @@ class _Inmemory extends _Onprem {
 }
 
 export class Aerospike extends _Inmemory {
-  protected static override _iconDataUrl = aerospikeIcon;
+  protected static _iconDataUrl = aerospikeIcon;
 }
 
 export class Hazelcast extends _Inmemory {
-  protected static override _iconDataUrl = hazelcastIcon;
+  protected static _iconDataUrl = hazelcastIcon;
 }
 
 export class Memcached extends _Inmemory {
-  protected static override _iconDataUrl = memcachedIcon;
+  protected static _iconDataUrl = memcachedIcon;
 }
 
 export class Redis extends _Inmemory {
-  protected static override _iconDataUrl = redisIcon;
+  protected static _iconDataUrl = redisIcon;
 }

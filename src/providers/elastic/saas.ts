@@ -7,9 +7,9 @@ class _Saas extends _Elastic {
 }
 
 export class Cloud extends _Saas {
-  protected static override _iconDataUrl = cloudIcon;
+  protected static _iconDataUrl = cloudIcon;
 }
 
 export class Elastic extends _Saas {
-  protected static override _iconDataUrl = elasticIcon;
+  protected static _iconDataUrl = elasticIcon;
 }

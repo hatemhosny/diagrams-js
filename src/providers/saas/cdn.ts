@@ -9,17 +9,17 @@ class _Cdn extends _Saas {
 }
 
 export class Akamai extends _Cdn {
-  protected static override _iconDataUrl = akamaiIcon;
+  protected static _iconDataUrl = akamaiIcon;
 }
 
 export class Cloudflare extends _Cdn {
-  protected static override _iconDataUrl = cloudflareIcon;
+  protected static _iconDataUrl = cloudflareIcon;
 }
 
 export class Fastly extends _Cdn {
-  protected static override _iconDataUrl = fastlyIcon;
+  protected static _iconDataUrl = fastlyIcon;
 }
 
 export class Imperva extends _Cdn {
-  protected static override _iconDataUrl = impervaIcon;
+  protected static _iconDataUrl = impervaIcon;
 }

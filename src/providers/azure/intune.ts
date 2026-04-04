@@ -23,73 +23,73 @@ class _Intune extends _Azure {
 }
 
 export class AzureADRolesAndAdministrators extends _Intune {
-  protected static override _iconDataUrl = azure_ad_roles_and_administratorsIcon;
+  protected static _iconDataUrl = azure_ad_roles_and_administratorsIcon;
 }
 
 export class ClientApps extends _Intune {
-  protected static override _iconDataUrl = client_appsIcon;
+  protected static _iconDataUrl = client_appsIcon;
 }
 
 export class DeviceCompliance extends _Intune {
-  protected static override _iconDataUrl = device_complianceIcon;
+  protected static _iconDataUrl = device_complianceIcon;
 }
 
 export class DeviceConfiguration extends _Intune {
-  protected static override _iconDataUrl = device_configurationIcon;
+  protected static _iconDataUrl = device_configurationIcon;
 }
 
 export class DeviceEnrollment extends _Intune {
-  protected static override _iconDataUrl = device_enrollmentIcon;
+  protected static _iconDataUrl = device_enrollmentIcon;
 }
 
 export class DeviceSecurityApple extends _Intune {
-  protected static override _iconDataUrl = device_security_appleIcon;
+  protected static _iconDataUrl = device_security_appleIcon;
 }
 
 export class DeviceSecurityGoogle extends _Intune {
-  protected static override _iconDataUrl = device_security_googleIcon;
+  protected static _iconDataUrl = device_security_googleIcon;
 }
 
 export class DeviceSecurityWindows extends _Intune {
-  protected static override _iconDataUrl = device_security_windowsIcon;
+  protected static _iconDataUrl = device_security_windowsIcon;
 }
 
 export class Devices extends _Intune {
-  protected static override _iconDataUrl = devicesIcon;
+  protected static _iconDataUrl = devicesIcon;
 }
 
 export class Ebooks extends _Intune {
-  protected static override _iconDataUrl = ebooksIcon;
+  protected static _iconDataUrl = ebooksIcon;
 }
 
 export class ExchangeAccess extends _Intune {
-  protected static override _iconDataUrl = exchange_accessIcon;
+  protected static _iconDataUrl = exchange_accessIcon;
 }
 
 export class IntuneAppProtection extends _Intune {
-  protected static override _iconDataUrl = intune_app_protectionIcon;
+  protected static _iconDataUrl = intune_app_protectionIcon;
 }
 
 export class IntuneForEducation extends _Intune {
-  protected static override _iconDataUrl = intune_for_educationIcon;
+  protected static _iconDataUrl = intune_for_educationIcon;
 }
 
 export class Intune extends _Intune {
-  protected static override _iconDataUrl = intuneIcon;
+  protected static _iconDataUrl = intuneIcon;
 }
 
 export class Mindaro extends _Intune {
-  protected static override _iconDataUrl = mindaroIcon;
+  protected static _iconDataUrl = mindaroIcon;
 }
 
 export class SecurityBaselines extends _Intune {
-  protected static override _iconDataUrl = security_baselinesIcon;
+  protected static _iconDataUrl = security_baselinesIcon;
 }
 
 export class SoftwareUpdates extends _Intune {
-  protected static override _iconDataUrl = software_updatesIcon;
+  protected static _iconDataUrl = software_updatesIcon;
 }
 
 export class TenantStatus extends _Intune {
-  protected static override _iconDataUrl = tenant_statusIcon;
+  protected static _iconDataUrl = tenant_statusIcon;
 }

@@ -10,21 +10,21 @@ class _Hybridmulticloud extends _Azure {
 }
 
 export class AzureOperator5gCore extends _Hybridmulticloud {
-  protected static override _iconDataUrl = azure_operator_5g_coreIcon;
+  protected static _iconDataUrl = azure_operator_5g_coreIcon;
 }
 
 export class AzureOperatorInsights extends _Hybridmulticloud {
-  protected static override _iconDataUrl = azure_operator_insightsIcon;
+  protected static _iconDataUrl = azure_operator_insightsIcon;
 }
 
 export class AzureOperatorNexus extends _Hybridmulticloud {
-  protected static override _iconDataUrl = azure_operator_nexusIcon;
+  protected static _iconDataUrl = azure_operator_nexusIcon;
 }
 
 export class AzureOperatorServiceManager extends _Hybridmulticloud {
-  protected static override _iconDataUrl = azure_operator_service_managerIcon;
+  protected static _iconDataUrl = azure_operator_service_managerIcon;
 }
 
 export class AzureProgrammableConnectivity extends _Hybridmulticloud {
-  protected static override _iconDataUrl = azure_programmable_connectivityIcon;
+  protected static _iconDataUrl = azure_programmable_connectivityIcon;
 }

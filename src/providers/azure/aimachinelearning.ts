@@ -37,129 +37,129 @@ class _Aimachinelearning extends _Azure {
 }
 
 export class AIStudio extends _Aimachinelearning {
-  protected static override _iconDataUrl = ai_studioIcon;
+  protected static _iconDataUrl = ai_studioIcon;
 }
 
 export class AnomalyDetector extends _Aimachinelearning {
-  protected static override _iconDataUrl = anomaly_detectorIcon;
+  protected static _iconDataUrl = anomaly_detectorIcon;
 }
 
 export class AzureAppliedAIServices extends _Aimachinelearning {
-  protected static override _iconDataUrl = azure_applied_ai_servicesIcon;
+  protected static _iconDataUrl = azure_applied_ai_servicesIcon;
 }
 
 export class AzureExperimentationStudio extends _Aimachinelearning {
-  protected static override _iconDataUrl = azure_experimentation_studioIcon;
+  protected static _iconDataUrl = azure_experimentation_studioIcon;
 }
 
 export class AzureObjectUnderstanding extends _Aimachinelearning {
-  protected static override _iconDataUrl = azure_object_understandingIcon;
+  protected static _iconDataUrl = azure_object_understandingIcon;
 }
 
 export class AzureOpenai extends _Aimachinelearning {
-  protected static override _iconDataUrl = azure_openaiIcon;
+  protected static _iconDataUrl = azure_openaiIcon;
 }
 
 export class BatchAI extends _Aimachinelearning {
-  protected static override _iconDataUrl = batch_aiIcon;
+  protected static _iconDataUrl = batch_aiIcon;
 }
 
 export class Bonsai extends _Aimachinelearning {
-  protected static override _iconDataUrl = bonsaiIcon;
+  protected static _iconDataUrl = bonsaiIcon;
 }
 
 export class BotServices extends _Aimachinelearning {
-  protected static override _iconDataUrl = bot_servicesIcon;
+  protected static _iconDataUrl = bot_servicesIcon;
 }
 
 export class CognitiveSearch extends _Aimachinelearning {
-  protected static override _iconDataUrl = cognitive_searchIcon;
+  protected static _iconDataUrl = cognitive_searchIcon;
 }
 
 export class CognitiveServicesDecisions extends _Aimachinelearning {
-  protected static override _iconDataUrl = cognitive_services_decisionsIcon;
+  protected static _iconDataUrl = cognitive_services_decisionsIcon;
 }
 
 export class CognitiveServices extends _Aimachinelearning {
-  protected static override _iconDataUrl = cognitive_servicesIcon;
+  protected static _iconDataUrl = cognitive_servicesIcon;
 }
 
 export class ComputerVision extends _Aimachinelearning {
-  protected static override _iconDataUrl = computer_visionIcon;
+  protected static _iconDataUrl = computer_visionIcon;
 }
 
 export class ContentModerators extends _Aimachinelearning {
-  protected static override _iconDataUrl = content_moderatorsIcon;
+  protected static _iconDataUrl = content_moderatorsIcon;
 }
 
 export class CustomVision extends _Aimachinelearning {
-  protected static override _iconDataUrl = custom_visionIcon;
+  protected static _iconDataUrl = custom_visionIcon;
 }
 
 export class FaceApis extends _Aimachinelearning {
-  protected static override _iconDataUrl = face_apisIcon;
+  protected static _iconDataUrl = face_apisIcon;
 }
 
 export class FormRecognizers extends _Aimachinelearning {
-  protected static override _iconDataUrl = form_recognizersIcon;
+  protected static _iconDataUrl = form_recognizersIcon;
 }
 
 export class GenomicsAccounts extends _Aimachinelearning {
-  protected static override _iconDataUrl = genomics_accountsIcon;
+  protected static _iconDataUrl = genomics_accountsIcon;
 }
 
 export class Genomics extends _Aimachinelearning {
-  protected static override _iconDataUrl = genomicsIcon;
+  protected static _iconDataUrl = genomicsIcon;
 }
 
 export class ImmersiveReaders extends _Aimachinelearning {
-  protected static override _iconDataUrl = immersive_readersIcon;
+  protected static _iconDataUrl = immersive_readersIcon;
 }
 
 export class LanguageUnderstanding extends _Aimachinelearning {
-  protected static override _iconDataUrl = language_understandingIcon;
+  protected static _iconDataUrl = language_understandingIcon;
 }
 
 export class Language extends _Aimachinelearning {
-  protected static override _iconDataUrl = languageIcon;
+  protected static _iconDataUrl = languageIcon;
 }
 
 export class MachineLearningStudioClassicWebServices extends _Aimachinelearning {
-  protected static override _iconDataUrl = machine_learning_studio_classic_web_servicesIcon;
+  protected static _iconDataUrl = machine_learning_studio_classic_web_servicesIcon;
 }
 
 export class MachineLearningStudioWebServicePlans extends _Aimachinelearning {
-  protected static override _iconDataUrl = machine_learning_studio_web_service_plansIcon;
+  protected static _iconDataUrl = machine_learning_studio_web_service_plansIcon;
 }
 
 export class MachineLearningStudioWorkspaces extends _Aimachinelearning {
-  protected static override _iconDataUrl = machine_learning_studio_workspacesIcon;
+  protected static _iconDataUrl = machine_learning_studio_workspacesIcon;
 }
 
 export class MachineLearning extends _Aimachinelearning {
-  protected static override _iconDataUrl = machine_learningIcon;
+  protected static _iconDataUrl = machine_learningIcon;
 }
 
 export class MetricsAdvisor extends _Aimachinelearning {
-  protected static override _iconDataUrl = metrics_advisorIcon;
+  protected static _iconDataUrl = metrics_advisorIcon;
 }
 
 export class Personalizers extends _Aimachinelearning {
-  protected static override _iconDataUrl = personalizersIcon;
+  protected static _iconDataUrl = personalizersIcon;
 }
 
 export class QnaMakers extends _Aimachinelearning {
-  protected static override _iconDataUrl = qna_makersIcon;
+  protected static _iconDataUrl = qna_makersIcon;
 }
 
 export class ServerlessSearch extends _Aimachinelearning {
-  protected static override _iconDataUrl = serverless_searchIcon;
+  protected static _iconDataUrl = serverless_searchIcon;
 }
 
 export class SpeechServices extends _Aimachinelearning {
-  protected static override _iconDataUrl = speech_servicesIcon;
+  protected static _iconDataUrl = speech_servicesIcon;
 }
 
 export class TranslatorText extends _Aimachinelearning {
-  protected static override _iconDataUrl = translator_textIcon;
+  protected static _iconDataUrl = translator_textIcon;
 }

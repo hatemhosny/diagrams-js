@@ -6,5 +6,5 @@ class _Etl extends _Onprem {
 }
 
 export class Embulk extends _Etl {
-  protected static override _iconDataUrl = embulkIcon;
+  protected static _iconDataUrl = embulkIcon;
 }

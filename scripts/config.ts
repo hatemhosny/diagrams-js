@@ -243,7 +243,7 @@ export const ALIASES: Record<string, Record<string, Record<string, string>>> = {
       SimpleEmailServiceSes: "SES",
     },
     general: {
-      GenericOfficeBuilding: "OfficeBuilding",
+      // Note: OfficeBuilding class already exists, no alias needed
     },
     integration: {
       SimpleNotificationServiceSns: "SNS",
@@ -505,6 +505,8 @@ export const ALIASES: Record<string, Record<string, Record<string, string>>> = {
     },
   },
   outscale: {
-    Osc: "OSC",
+    compute: {
+      Compute: "OSC",
+    },
   },
 };

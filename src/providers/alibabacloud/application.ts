@@ -19,59 +19,59 @@ class _Application extends _Alibabacloud {
 }
 
 export class ApiGateway extends _Application {
-  protected static override _iconDataUrl = api_gatewayIcon;
+  protected static _iconDataUrl = api_gatewayIcon;
 }
 
 export class BeeBot extends _Application {
-  protected static override _iconDataUrl = bee_botIcon;
+  protected static _iconDataUrl = bee_botIcon;
 }
 
 export class BlockchainAsAService extends _Application {
-  protected static override _iconDataUrl = blockchain_as_a_serviceIcon;
+  protected static _iconDataUrl = blockchain_as_a_serviceIcon;
 }
 
 export class CloudCallCenter extends _Application {
-  protected static override _iconDataUrl = cloud_call_centerIcon;
+  protected static _iconDataUrl = cloud_call_centerIcon;
 }
 
 export class CodePipeline extends _Application {
-  protected static override _iconDataUrl = code_pipelineIcon;
+  protected static _iconDataUrl = code_pipelineIcon;
 }
 
 export class DirectMail extends _Application {
-  protected static override _iconDataUrl = direct_mailIcon;
+  protected static _iconDataUrl = direct_mailIcon;
 }
 
 export class LogService extends _Application {
-  protected static override _iconDataUrl = log_serviceIcon;
+  protected static _iconDataUrl = log_serviceIcon;
 }
 
 export class MessageNotificationService extends _Application {
-  protected static override _iconDataUrl = message_notification_serviceIcon;
+  protected static _iconDataUrl = message_notification_serviceIcon;
 }
 
 export class NodeJsPerformancePlatform extends _Application {
-  protected static override _iconDataUrl = node_js_performance_platformIcon;
+  protected static _iconDataUrl = node_js_performance_platformIcon;
 }
 
 export class OpenSearch extends _Application {
-  protected static override _iconDataUrl = open_searchIcon;
+  protected static _iconDataUrl = open_searchIcon;
 }
 
 export class PerformanceTestingService extends _Application {
-  protected static override _iconDataUrl = performance_testing_serviceIcon;
+  protected static _iconDataUrl = performance_testing_serviceIcon;
 }
 
 export class RdCloud extends _Application {
-  protected static override _iconDataUrl = rd_cloudIcon;
+  protected static _iconDataUrl = rd_cloudIcon;
 }
 
 export class SmartConversationAnalysis extends _Application {
-  protected static override _iconDataUrl = smart_conversation_analysisIcon;
+  protected static _iconDataUrl = smart_conversation_analysisIcon;
 }
 
 export class Yida extends _Application {
-  protected static override _iconDataUrl = yidaIcon;
+  protected static _iconDataUrl = yidaIcon;
 }
 
 // Aliases

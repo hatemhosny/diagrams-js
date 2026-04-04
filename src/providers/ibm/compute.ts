@@ -10,21 +10,21 @@ class _Compute extends _Ibm {
 }
 
 export class BareMetalServer extends _Compute {
-  protected static override _iconDataUrl = bare_metal_serverIcon;
+  protected static _iconDataUrl = bare_metal_serverIcon;
 }
 
 export class ImageService extends _Compute {
-  protected static override _iconDataUrl = image_serviceIcon;
+  protected static _iconDataUrl = image_serviceIcon;
 }
 
 export class Instance extends _Compute {
-  protected static override _iconDataUrl = instanceIcon;
+  protected static _iconDataUrl = instanceIcon;
 }
 
 export class Key extends _Compute {
-  protected static override _iconDataUrl = keyIcon;
+  protected static _iconDataUrl = keyIcon;
 }
 
 export class PowerInstance extends _Compute {
-  protected static override _iconDataUrl = power_instanceIcon;
+  protected static _iconDataUrl = power_instanceIcon;
 }

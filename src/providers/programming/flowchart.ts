@@ -29,97 +29,97 @@ class _Flowchart extends _Programming {
 }
 
 export class Action extends _Flowchart {
-  protected static override _iconDataUrl = actionIcon;
+  protected static _iconDataUrl = actionIcon;
 }
 
 export class Collate extends _Flowchart {
-  protected static override _iconDataUrl = collateIcon;
+  protected static _iconDataUrl = collateIcon;
 }
 
 export class Database extends _Flowchart {
-  protected static override _iconDataUrl = databaseIcon;
+  protected static _iconDataUrl = databaseIcon;
 }
 
 export class Decision extends _Flowchart {
-  protected static override _iconDataUrl = decisionIcon;
+  protected static _iconDataUrl = decisionIcon;
 }
 
 export class Delay extends _Flowchart {
-  protected static override _iconDataUrl = delayIcon;
+  protected static _iconDataUrl = delayIcon;
 }
 
 export class Display extends _Flowchart {
-  protected static override _iconDataUrl = displayIcon;
+  protected static _iconDataUrl = displayIcon;
 }
 
 export class Document extends _Flowchart {
-  protected static override _iconDataUrl = documentIcon;
+  protected static _iconDataUrl = documentIcon;
 }
 
 export class InputOutput extends _Flowchart {
-  protected static override _iconDataUrl = input_outputIcon;
+  protected static _iconDataUrl = input_outputIcon;
 }
 
 export class Inspection extends _Flowchart {
-  protected static override _iconDataUrl = inspectionIcon;
+  protected static _iconDataUrl = inspectionIcon;
 }
 
 export class InternalStorage extends _Flowchart {
-  protected static override _iconDataUrl = internal_storageIcon;
+  protected static _iconDataUrl = internal_storageIcon;
 }
 
 export class LoopLimit extends _Flowchart {
-  protected static override _iconDataUrl = loop_limitIcon;
+  protected static _iconDataUrl = loop_limitIcon;
 }
 
 export class ManualInput extends _Flowchart {
-  protected static override _iconDataUrl = manual_inputIcon;
+  protected static _iconDataUrl = manual_inputIcon;
 }
 
 export class ManualLoop extends _Flowchart {
-  protected static override _iconDataUrl = manual_loopIcon;
+  protected static _iconDataUrl = manual_loopIcon;
 }
 
 export class Merge extends _Flowchart {
-  protected static override _iconDataUrl = mergeIcon;
+  protected static _iconDataUrl = mergeIcon;
 }
 
 export class MultipleDocuments extends _Flowchart {
-  protected static override _iconDataUrl = multiple_documentsIcon;
+  protected static _iconDataUrl = multiple_documentsIcon;
 }
 
 export class OffPageConnectorLeft extends _Flowchart {
-  protected static override _iconDataUrl = off_page_connector_leftIcon;
+  protected static _iconDataUrl = off_page_connector_leftIcon;
 }
 
 export class OffPageConnectorRight extends _Flowchart {
-  protected static override _iconDataUrl = off_page_connector_rightIcon;
+  protected static _iconDataUrl = off_page_connector_rightIcon;
 }
 
 export class Or extends _Flowchart {
-  protected static override _iconDataUrl = orIcon;
+  protected static _iconDataUrl = orIcon;
 }
 
 export class PredefinedProcess extends _Flowchart {
-  protected static override _iconDataUrl = predefined_processIcon;
+  protected static _iconDataUrl = predefined_processIcon;
 }
 
 export class Preparation extends _Flowchart {
-  protected static override _iconDataUrl = preparationIcon;
+  protected static _iconDataUrl = preparationIcon;
 }
 
 export class Sort extends _Flowchart {
-  protected static override _iconDataUrl = sortIcon;
+  protected static _iconDataUrl = sortIcon;
 }
 
 export class StartEnd extends _Flowchart {
-  protected static override _iconDataUrl = start_endIcon;
+  protected static _iconDataUrl = start_endIcon;
 }
 
 export class StoredData extends _Flowchart {
-  protected static override _iconDataUrl = stored_dataIcon;
+  protected static _iconDataUrl = stored_dataIcon;
 }
 
 export class SummingJunction extends _Flowchart {
-  protected static override _iconDataUrl = summing_junctionIcon;
+  protected static _iconDataUrl = summing_junctionIcon;
 }

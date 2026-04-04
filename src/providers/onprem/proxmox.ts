@@ -6,7 +6,7 @@ class _Proxmox extends _Onprem {
 }
 
 export class Pve extends _Proxmox {
-  protected static override _iconDataUrl = pveIcon;
+  protected static _iconDataUrl = pveIcon;
 }
 
 // Aliases

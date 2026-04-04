@@ -66,247 +66,247 @@ class _Iot extends _Aws {
 }
 
 export class Freertos extends _Iot {
-  protected static override _iconDataUrl = freertosIcon;
+  protected static _iconDataUrl = freertosIcon;
 }
 
 export class InternetOfThings extends _Iot {
-  protected static override _iconDataUrl = internet_of_thingsIcon;
+  protected static _iconDataUrl = internet_of_thingsIcon;
 }
 
 export class Iot1Click extends _Iot {
-  protected static override _iconDataUrl = iot_1_clickIcon;
+  protected static _iconDataUrl = iot_1_clickIcon;
 }
 
 export class IotAction extends _Iot {
-  protected static override _iconDataUrl = iot_actionIcon;
+  protected static _iconDataUrl = iot_actionIcon;
 }
 
 export class IotActuator extends _Iot {
-  protected static override _iconDataUrl = iot_actuatorIcon;
+  protected static _iconDataUrl = iot_actuatorIcon;
 }
 
 export class IotAlexaEcho extends _Iot {
-  protected static override _iconDataUrl = iot_alexa_echoIcon;
+  protected static _iconDataUrl = iot_alexa_echoIcon;
 }
 
 export class IotAlexaEnabledDevice extends _Iot {
-  protected static override _iconDataUrl = iot_alexa_enabled_deviceIcon;
+  protected static _iconDataUrl = iot_alexa_enabled_deviceIcon;
 }
 
 export class IotAlexaSkill extends _Iot {
-  protected static override _iconDataUrl = iot_alexa_skillIcon;
+  protected static _iconDataUrl = iot_alexa_skillIcon;
 }
 
 export class IotAlexaVoiceService extends _Iot {
-  protected static override _iconDataUrl = iot_alexa_voice_serviceIcon;
+  protected static _iconDataUrl = iot_alexa_voice_serviceIcon;
 }
 
 export class IotAnalyticsChannel extends _Iot {
-  protected static override _iconDataUrl = iot_analytics_channelIcon;
+  protected static _iconDataUrl = iot_analytics_channelIcon;
 }
 
 export class IotAnalyticsDataSet extends _Iot {
-  protected static override _iconDataUrl = iot_analytics_data_setIcon;
+  protected static _iconDataUrl = iot_analytics_data_setIcon;
 }
 
 export class IotAnalyticsDataStore extends _Iot {
-  protected static override _iconDataUrl = iot_analytics_data_storeIcon;
+  protected static _iconDataUrl = iot_analytics_data_storeIcon;
 }
 
 export class IotAnalyticsNotebook extends _Iot {
-  protected static override _iconDataUrl = iot_analytics_notebookIcon;
+  protected static _iconDataUrl = iot_analytics_notebookIcon;
 }
 
 export class IotAnalyticsPipeline extends _Iot {
-  protected static override _iconDataUrl = iot_analytics_pipelineIcon;
+  protected static _iconDataUrl = iot_analytics_pipelineIcon;
 }
 
 export class IotAnalytics extends _Iot {
-  protected static override _iconDataUrl = iot_analyticsIcon;
+  protected static _iconDataUrl = iot_analyticsIcon;
 }
 
 export class IotBank extends _Iot {
-  protected static override _iconDataUrl = iot_bankIcon;
+  protected static _iconDataUrl = iot_bankIcon;
 }
 
 export class IotBicycle extends _Iot {
-  protected static override _iconDataUrl = iot_bicycleIcon;
+  protected static _iconDataUrl = iot_bicycleIcon;
 }
 
 export class IotButton extends _Iot {
-  protected static override _iconDataUrl = iot_buttonIcon;
+  protected static _iconDataUrl = iot_buttonIcon;
 }
 
 export class IotCamera extends _Iot {
-  protected static override _iconDataUrl = iot_cameraIcon;
+  protected static _iconDataUrl = iot_cameraIcon;
 }
 
 export class IotCar extends _Iot {
-  protected static override _iconDataUrl = iot_carIcon;
+  protected static _iconDataUrl = iot_carIcon;
 }
 
 export class IotCart extends _Iot {
-  protected static override _iconDataUrl = iot_cartIcon;
+  protected static _iconDataUrl = iot_cartIcon;
 }
 
 export class IotCertificate extends _Iot {
-  protected static override _iconDataUrl = iot_certificateIcon;
+  protected static _iconDataUrl = iot_certificateIcon;
 }
 
 export class IotCoffeePot extends _Iot {
-  protected static override _iconDataUrl = iot_coffee_potIcon;
+  protected static _iconDataUrl = iot_coffee_potIcon;
 }
 
 export class IotCore extends _Iot {
-  protected static override _iconDataUrl = iot_coreIcon;
+  protected static _iconDataUrl = iot_coreIcon;
 }
 
 export class IotDesiredState extends _Iot {
-  protected static override _iconDataUrl = iot_desired_stateIcon;
+  protected static _iconDataUrl = iot_desired_stateIcon;
 }
 
 export class IotDeviceDefender extends _Iot {
-  protected static override _iconDataUrl = iot_device_defenderIcon;
+  protected static _iconDataUrl = iot_device_defenderIcon;
 }
 
 export class IotDeviceGateway extends _Iot {
-  protected static override _iconDataUrl = iot_device_gatewayIcon;
+  protected static _iconDataUrl = iot_device_gatewayIcon;
 }
 
 export class IotDeviceManagement extends _Iot {
-  protected static override _iconDataUrl = iot_device_managementIcon;
+  protected static _iconDataUrl = iot_device_managementIcon;
 }
 
 export class IotDoorLock extends _Iot {
-  protected static override _iconDataUrl = iot_door_lockIcon;
+  protected static _iconDataUrl = iot_door_lockIcon;
 }
 
 export class IotEvents extends _Iot {
-  protected static override _iconDataUrl = iot_eventsIcon;
+  protected static _iconDataUrl = iot_eventsIcon;
 }
 
 export class IotFactory extends _Iot {
-  protected static override _iconDataUrl = iot_factoryIcon;
+  protected static _iconDataUrl = iot_factoryIcon;
 }
 
 export class IotFireTvStick extends _Iot {
-  protected static override _iconDataUrl = iot_fire_tv_stickIcon;
+  protected static _iconDataUrl = iot_fire_tv_stickIcon;
 }
 
 export class IotFireTv extends _Iot {
-  protected static override _iconDataUrl = iot_fire_tvIcon;
+  protected static _iconDataUrl = iot_fire_tvIcon;
 }
 
 export class IotGeneric extends _Iot {
-  protected static override _iconDataUrl = iot_genericIcon;
+  protected static _iconDataUrl = iot_genericIcon;
 }
 
 export class IotGreengrassConnector extends _Iot {
-  protected static override _iconDataUrl = iot_greengrass_connectorIcon;
+  protected static _iconDataUrl = iot_greengrass_connectorIcon;
 }
 
 export class IotGreengrass extends _Iot {
-  protected static override _iconDataUrl = iot_greengrassIcon;
+  protected static _iconDataUrl = iot_greengrassIcon;
 }
 
 export class IotHardwareBoard extends _Iot {
-  protected static override _iconDataUrl = iot_hardware_boardIcon;
+  protected static _iconDataUrl = iot_hardware_boardIcon;
 }
 
 export class IotHouse extends _Iot {
-  protected static override _iconDataUrl = iot_houseIcon;
+  protected static _iconDataUrl = iot_houseIcon;
 }
 
 export class IotHttp extends _Iot {
-  protected static override _iconDataUrl = iot_httpIcon;
+  protected static _iconDataUrl = iot_httpIcon;
 }
 
 export class IotHttp2 extends _Iot {
-  protected static override _iconDataUrl = iot_http2Icon;
+  protected static _iconDataUrl = iot_http2Icon;
 }
 
 export class IotJobs extends _Iot {
-  protected static override _iconDataUrl = iot_jobsIcon;
+  protected static _iconDataUrl = iot_jobsIcon;
 }
 
 export class IotLambda extends _Iot {
-  protected static override _iconDataUrl = iot_lambdaIcon;
+  protected static _iconDataUrl = iot_lambdaIcon;
 }
 
 export class IotLightbulb extends _Iot {
-  protected static override _iconDataUrl = iot_lightbulbIcon;
+  protected static _iconDataUrl = iot_lightbulbIcon;
 }
 
 export class IotMedicalEmergency extends _Iot {
-  protected static override _iconDataUrl = iot_medical_emergencyIcon;
+  protected static _iconDataUrl = iot_medical_emergencyIcon;
 }
 
 export class IotMqtt extends _Iot {
-  protected static override _iconDataUrl = iot_mqttIcon;
+  protected static _iconDataUrl = iot_mqttIcon;
 }
 
 export class IotOverTheAirUpdate extends _Iot {
-  protected static override _iconDataUrl = iot_over_the_air_updateIcon;
+  protected static _iconDataUrl = iot_over_the_air_updateIcon;
 }
 
 export class IotPolicyEmergency extends _Iot {
-  protected static override _iconDataUrl = iot_policy_emergencyIcon;
+  protected static _iconDataUrl = iot_policy_emergencyIcon;
 }
 
 export class IotPolicy extends _Iot {
-  protected static override _iconDataUrl = iot_policyIcon;
+  protected static _iconDataUrl = iot_policyIcon;
 }
 
 export class IotReportedState extends _Iot {
-  protected static override _iconDataUrl = iot_reported_stateIcon;
+  protected static _iconDataUrl = iot_reported_stateIcon;
 }
 
 export class IotRule extends _Iot {
-  protected static override _iconDataUrl = iot_ruleIcon;
+  protected static _iconDataUrl = iot_ruleIcon;
 }
 
 export class IotSensor extends _Iot {
-  protected static override _iconDataUrl = iot_sensorIcon;
+  protected static _iconDataUrl = iot_sensorIcon;
 }
 
 export class IotServo extends _Iot {
-  protected static override _iconDataUrl = iot_servoIcon;
+  protected static _iconDataUrl = iot_servoIcon;
 }
 
 export class IotShadow extends _Iot {
-  protected static override _iconDataUrl = iot_shadowIcon;
+  protected static _iconDataUrl = iot_shadowIcon;
 }
 
 export class IotSimulator extends _Iot {
-  protected static override _iconDataUrl = iot_simulatorIcon;
+  protected static _iconDataUrl = iot_simulatorIcon;
 }
 
 export class IotSitewise extends _Iot {
-  protected static override _iconDataUrl = iot_sitewiseIcon;
+  protected static _iconDataUrl = iot_sitewiseIcon;
 }
 
 export class IotThermostat extends _Iot {
-  protected static override _iconDataUrl = iot_thermostatIcon;
+  protected static _iconDataUrl = iot_thermostatIcon;
 }
 
 export class IotThingsGraph extends _Iot {
-  protected static override _iconDataUrl = iot_things_graphIcon;
+  protected static _iconDataUrl = iot_things_graphIcon;
 }
 
 export class IotTopic extends _Iot {
-  protected static override _iconDataUrl = iot_topicIcon;
+  protected static _iconDataUrl = iot_topicIcon;
 }
 
 export class IotTravel extends _Iot {
-  protected static override _iconDataUrl = iot_travelIcon;
+  protected static _iconDataUrl = iot_travelIcon;
 }
 
 export class IotUtility extends _Iot {
-  protected static override _iconDataUrl = iot_utilityIcon;
+  protected static _iconDataUrl = iot_utilityIcon;
 }
 
 export class IotWindfarm extends _Iot {
-  protected static override _iconDataUrl = iot_windfarmIcon;
+  protected static _iconDataUrl = iot_windfarmIcon;
 }
 
 // Aliases

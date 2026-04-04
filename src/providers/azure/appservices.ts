@@ -13,33 +13,33 @@ class _Appservices extends _Azure {
 }
 
 export class AppServiceCertificates extends _Appservices {
-  protected static override _iconDataUrl = app_service_certificatesIcon;
+  protected static _iconDataUrl = app_service_certificatesIcon;
 }
 
 export class AppServiceDomains extends _Appservices {
-  protected static override _iconDataUrl = app_service_domainsIcon;
+  protected static _iconDataUrl = app_service_domainsIcon;
 }
 
 export class AppServiceEnvironments extends _Appservices {
-  protected static override _iconDataUrl = app_service_environmentsIcon;
+  protected static _iconDataUrl = app_service_environmentsIcon;
 }
 
 export class AppServicePlans extends _Appservices {
-  protected static override _iconDataUrl = app_service_plansIcon;
+  protected static _iconDataUrl = app_service_plansIcon;
 }
 
 export class AppServices extends _Appservices {
-  protected static override _iconDataUrl = app_servicesIcon;
+  protected static _iconDataUrl = app_servicesIcon;
 }
 
 export class CDNProfiles extends _Appservices {
-  protected static override _iconDataUrl = cdn_profilesIcon;
+  protected static _iconDataUrl = cdn_profilesIcon;
 }
 
 export class CognitiveSearch extends _Appservices {
-  protected static override _iconDataUrl = cognitive_searchIcon;
+  protected static _iconDataUrl = cognitive_searchIcon;
 }
 
 export class NotificationHubs extends _Appservices {
-  protected static override _iconDataUrl = notification_hubsIcon;
+  protected static _iconDataUrl = notification_hubsIcon;
 }

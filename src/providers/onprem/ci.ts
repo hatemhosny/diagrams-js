@@ -14,39 +14,39 @@ class _Ci extends _Onprem {
 }
 
 export class Circleci extends _Ci {
-  protected static override _iconDataUrl = circleciIcon;
+  protected static _iconDataUrl = circleciIcon;
 }
 
 export class Concourseci extends _Ci {
-  protected static override _iconDataUrl = concourseciIcon;
+  protected static _iconDataUrl = concourseciIcon;
 }
 
 export class Droneci extends _Ci {
-  protected static override _iconDataUrl = droneciIcon;
+  protected static _iconDataUrl = droneciIcon;
 }
 
 export class GithubActions extends _Ci {
-  protected static override _iconDataUrl = github_actionsIcon;
+  protected static _iconDataUrl = github_actionsIcon;
 }
 
 export class Gitlabci extends _Ci {
-  protected static override _iconDataUrl = gitlabciIcon;
+  protected static _iconDataUrl = gitlabciIcon;
 }
 
 export class Jenkins extends _Ci {
-  protected static override _iconDataUrl = jenkinsIcon;
+  protected static _iconDataUrl = jenkinsIcon;
 }
 
 export class Teamcity extends _Ci {
-  protected static override _iconDataUrl = teamcityIcon;
+  protected static _iconDataUrl = teamcityIcon;
 }
 
 export class Travisci extends _Ci {
-  protected static override _iconDataUrl = travisciIcon;
+  protected static _iconDataUrl = travisciIcon;
 }
 
 export class Zuulci extends _Ci {
-  protected static override _iconDataUrl = zuulciIcon;
+  protected static _iconDataUrl = zuulciIcon;
 }
 
 // Aliases

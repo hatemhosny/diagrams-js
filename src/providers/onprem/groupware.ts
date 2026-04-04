@@ -6,5 +6,5 @@ class _Groupware extends _Onprem {
 }
 
 export class Nextcloud extends _Groupware {
-  protected static override _iconDataUrl = nextcloudIcon;
+  protected static _iconDataUrl = nextcloudIcon;
 }

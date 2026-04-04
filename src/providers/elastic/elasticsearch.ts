@@ -19,59 +19,59 @@ class _Elasticsearch extends _Elastic {
 }
 
 export class Alerting extends _Elasticsearch {
-  protected static override _iconDataUrl = alertingIcon;
+  protected static _iconDataUrl = alertingIcon;
 }
 
 export class Beats extends _Elasticsearch {
-  protected static override _iconDataUrl = beatsIcon;
+  protected static _iconDataUrl = beatsIcon;
 }
 
 export class Elasticsearch extends _Elasticsearch {
-  protected static override _iconDataUrl = elasticsearchIcon;
+  protected static _iconDataUrl = elasticsearchIcon;
 }
 
 export class Kibana extends _Elasticsearch {
-  protected static override _iconDataUrl = kibanaIcon;
+  protected static _iconDataUrl = kibanaIcon;
 }
 
 export class LogstashPipeline extends _Elasticsearch {
-  protected static override _iconDataUrl = logstash_pipelineIcon;
+  protected static _iconDataUrl = logstash_pipelineIcon;
 }
 
 export class Logstash extends _Elasticsearch {
-  protected static override _iconDataUrl = logstashIcon;
+  protected static _iconDataUrl = logstashIcon;
 }
 
 export class MachineLearning extends _Elasticsearch {
-  protected static override _iconDataUrl = machine_learningIcon;
+  protected static _iconDataUrl = machine_learningIcon;
 }
 
 export class MapServices extends _Elasticsearch {
-  protected static override _iconDataUrl = map_servicesIcon;
+  protected static _iconDataUrl = map_servicesIcon;
 }
 
 export class Maps extends _Elasticsearch {
-  protected static override _iconDataUrl = mapsIcon;
+  protected static _iconDataUrl = mapsIcon;
 }
 
 export class Monitoring extends _Elasticsearch {
-  protected static override _iconDataUrl = monitoringIcon;
+  protected static _iconDataUrl = monitoringIcon;
 }
 
 export class SearchableSnapshots extends _Elasticsearch {
-  protected static override _iconDataUrl = searchable_snapshotsIcon;
+  protected static _iconDataUrl = searchable_snapshotsIcon;
 }
 
 export class SecuritySettings extends _Elasticsearch {
-  protected static override _iconDataUrl = security_settingsIcon;
+  protected static _iconDataUrl = security_settingsIcon;
 }
 
 export class SQL extends _Elasticsearch {
-  protected static override _iconDataUrl = sqlIcon;
+  protected static _iconDataUrl = sqlIcon;
 }
 
 export class Stack extends _Elasticsearch {
-  protected static override _iconDataUrl = stackIcon;
+  protected static _iconDataUrl = stackIcon;
 }
 
 // Aliases

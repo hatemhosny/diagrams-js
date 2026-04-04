@@ -7,9 +7,9 @@ class _Orchestration extends _Elastic {
 }
 
 export class ECE extends _Orchestration {
-  protected static override _iconDataUrl = eceIcon;
+  protected static _iconDataUrl = eceIcon;
 }
 
 export class ECK extends _Orchestration {
-  protected static override _iconDataUrl = eckIcon;
+  protected static _iconDataUrl = eckIcon;
 }

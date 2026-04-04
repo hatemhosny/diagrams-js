@@ -14,37 +14,37 @@ class _Network extends _Digitalocean {
 }
 
 export class Certificate extends _Network {
-  protected static override _iconDataUrl = certificateIcon;
+  protected static _iconDataUrl = certificateIcon;
 }
 
 export class DomainRegistration extends _Network {
-  protected static override _iconDataUrl = domain_registrationIcon;
+  protected static _iconDataUrl = domain_registrationIcon;
 }
 
 export class Domain extends _Network {
-  protected static override _iconDataUrl = domainIcon;
+  protected static _iconDataUrl = domainIcon;
 }
 
 export class Firewall extends _Network {
-  protected static override _iconDataUrl = firewallIcon;
+  protected static _iconDataUrl = firewallIcon;
 }
 
 export class FloatingIp extends _Network {
-  protected static override _iconDataUrl = floating_ipIcon;
+  protected static _iconDataUrl = floating_ipIcon;
 }
 
 export class InternetGateway extends _Network {
-  protected static override _iconDataUrl = internet_gatewayIcon;
+  protected static _iconDataUrl = internet_gatewayIcon;
 }
 
 export class LoadBalancer extends _Network {
-  protected static override _iconDataUrl = load_balancerIcon;
+  protected static _iconDataUrl = load_balancerIcon;
 }
 
 export class ManagedVpn extends _Network {
-  protected static override _iconDataUrl = managed_vpnIcon;
+  protected static _iconDataUrl = managed_vpnIcon;
 }
 
 export class Vpc extends _Network {
-  protected static override _iconDataUrl = vpcIcon;
+  protected static _iconDataUrl = vpcIcon;
 }

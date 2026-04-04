@@ -99,7 +99,6 @@ export class Diagram {
     this.themeConfig = THEMES[theme];
 
     this.autolabel = options.autolabel ?? false;
-    this.show = options.show ?? true;
     this.strict = options.strict ?? false;
 
     // Initialize attributes with defaults
@@ -269,7 +268,7 @@ export class Diagram {
     for (const [id, { label, attrs }] of this._nodes) {
       dot += `  "${id}" [label="${label}"`;
       for (const [key, value] of Object.entries(attrs)) {
-        dot += `, ${key}="${value}"`;
+        dot += `, ${key}="${String(value)}"`;
       }
       dot += "];\n";
     }
@@ -308,7 +307,7 @@ export class Diagram {
     for (const [id, { label, attrs }] of cluster.getNodes()) {
       dot += `${spaces}  "${id}" [label="${label}"`;
       for (const [key, value] of Object.entries(attrs)) {
-        dot += `, ${key}="${value}"`;
+        dot += `, ${key}="${String(value)}"`;
       }
       dot += "];\n";
     }
@@ -326,7 +325,7 @@ export class Diagram {
    * Render the diagram
    * @param options - Optional render options
    */
-  async render(options?: { injectIcons?: boolean }): Promise<Uint8Array | string> {
+  async render(_options?: { injectIcons?: boolean }): Promise<Uint8Array | string> {
     if (!this._viz) {
       this._viz = await instance();
     }
@@ -347,7 +346,7 @@ export class Diagram {
       );
     }
 
-    let output = result.output as string;
+    let output: string | Uint8Array = result.output as string;
 
     // Auto-inject icons if nodes with icons were created
     if (needsIconInjection) {
@@ -356,13 +355,13 @@ export class Diagram {
 
       if (Object.keys(this._iconData).length > 0 && this._nodeIconMap.length > 0) {
         const { injectIcons } = await import("./icons.js");
-        output = injectIcons(output, this._nodeIconMap, this._iconData);
+        output = injectIcons(output as string, this._nodeIconMap, this._iconData);
       }
     }
 
     // If PNG format was requested, convert SVG to PNG
     if (format === "png") {
-      output = await this._svgToPng(output);
+      output = await this._svgToPng(output as string);
     }
 
     return output;
@@ -511,7 +510,7 @@ export class Diagram {
       return new Uint8Array(pngBuffer);
     } catch (error) {
       throw new Error(
-        `Failed to convert SVG to PNG. Make sure 'sharp' is installed: npm install sharp. Error: ${error}`,
+        `Failed to convert SVG to PNG. Make sure 'sharp' is installed: npm install sharp. Error: ${error instanceof Error ? error.message : String(error)}`,
       );
     }
   }
@@ -566,7 +565,7 @@ export class Diagram {
 
     if (typeof globalThis !== "undefined" && "document" in globalThis) {
       // Browser environment - download file
-      const blob = new Blob([output as Uint8Array], { type: "image/png" });
+      const blob = new Blob([output as Uint8Array] as BlobPart[], { type: "image/png" });
       const url = URL.createObjectURL(blob);
       const a = globalThis.document.createElement("a");
       a.href = url;

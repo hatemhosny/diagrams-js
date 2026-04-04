@@ -11,27 +11,27 @@ class _Controlplane extends _K8s {
 }
 
 export class API extends _Controlplane {
-  protected static override _iconDataUrl = apiIcon;
+  protected static _iconDataUrl = apiIcon;
 }
 
 export class CCM extends _Controlplane {
-  protected static override _iconDataUrl = c_c_mIcon;
+  protected static _iconDataUrl = c_c_mIcon;
 }
 
 export class CM extends _Controlplane {
-  protected static override _iconDataUrl = c_mIcon;
+  protected static _iconDataUrl = c_mIcon;
 }
 
 export class KProxy extends _Controlplane {
-  protected static override _iconDataUrl = k_proxyIcon;
+  protected static _iconDataUrl = k_proxyIcon;
 }
 
 export class Kubelet extends _Controlplane {
-  protected static override _iconDataUrl = kubeletIcon;
+  protected static _iconDataUrl = kubeletIcon;
 }
 
 export class Sched extends _Controlplane {
-  protected static override _iconDataUrl = schedIcon;
+  protected static _iconDataUrl = schedIcon;
 }
 
 // Aliases

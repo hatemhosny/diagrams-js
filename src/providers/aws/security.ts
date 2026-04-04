@@ -45,166 +45,165 @@ class _Security extends _Aws {
 }
 
 export class AdConnector extends _Security {
-  protected static override _iconDataUrl = ad_connectorIcon;
+  protected static _iconDataUrl = ad_connectorIcon;
 }
 
 export class Artifact extends _Security {
-  protected static override _iconDataUrl = artifactIcon;
+  protected static _iconDataUrl = artifactIcon;
 }
 
 export class CertificateAuthority extends _Security {
-  protected static override _iconDataUrl = certificate_authorityIcon;
+  protected static _iconDataUrl = certificate_authorityIcon;
 }
 
 export class CertificateManager extends _Security {
-  protected static override _iconDataUrl = certificate_managerIcon;
+  protected static _iconDataUrl = certificate_managerIcon;
 }
 
 export class CloudDirectory extends _Security {
-  protected static override _iconDataUrl = cloud_directoryIcon;
+  protected static _iconDataUrl = cloud_directoryIcon;
 }
 
 export class Cloudhsm extends _Security {
-  protected static override _iconDataUrl = cloudhsmIcon;
+  protected static _iconDataUrl = cloudhsmIcon;
 }
 
 export class Cognito extends _Security {
-  protected static override _iconDataUrl = cognitoIcon;
+  protected static _iconDataUrl = cognitoIcon;
 }
 
 export class Detective extends _Security {
-  protected static override _iconDataUrl = detectiveIcon;
+  protected static _iconDataUrl = detectiveIcon;
 }
 
 export class DirectoryService extends _Security {
-  protected static override _iconDataUrl = directory_serviceIcon;
+  protected static _iconDataUrl = directory_serviceIcon;
 }
 
 export class FirewallManager extends _Security {
-  protected static override _iconDataUrl = firewall_managerIcon;
+  protected static _iconDataUrl = firewall_managerIcon;
 }
 
 export class Guardduty extends _Security {
-  protected static override _iconDataUrl = guarddutyIcon;
+  protected static _iconDataUrl = guarddutyIcon;
 }
 
 export class IdentityAndAccessManagementIamAccessAnalyzer extends _Security {
-  protected static override _iconDataUrl = identity_and_access_management_iam_access_analyzerIcon;
+  protected static _iconDataUrl = identity_and_access_management_iam_access_analyzerIcon;
 }
 
 export class IdentityAndAccessManagementIamAddOn extends _Security {
-  protected static override _iconDataUrl = identity_and_access_management_iam_add_onIcon;
+  protected static _iconDataUrl = identity_and_access_management_iam_add_onIcon;
 }
 
 export class IdentityAndAccessManagementIamAWSStsAlternate extends _Security {
-  protected static override _iconDataUrl = identity_and_access_management_iam_aws_sts_alternateIcon;
+  protected static _iconDataUrl = identity_and_access_management_iam_aws_sts_alternateIcon;
 }
 
 export class IdentityAndAccessManagementIamAWSSts extends _Security {
-  protected static override _iconDataUrl = identity_and_access_management_iam_aws_stsIcon;
+  protected static _iconDataUrl = identity_and_access_management_iam_aws_stsIcon;
 }
 
 export class IdentityAndAccessManagementIamDataEncryptionKey extends _Security {
-  protected static override _iconDataUrl =
-    identity_and_access_management_iam_data_encryption_keyIcon;
+  protected static _iconDataUrl = identity_and_access_management_iam_data_encryption_keyIcon;
 }
 
 export class IdentityAndAccessManagementIamEncryptedData extends _Security {
-  protected static override _iconDataUrl = identity_and_access_management_iam_encrypted_dataIcon;
+  protected static _iconDataUrl = identity_and_access_management_iam_encrypted_dataIcon;
 }
 
 export class IdentityAndAccessManagementIamLongTermSecurityCredential extends _Security {
-  protected static override _iconDataUrl =
+  protected static _iconDataUrl =
     identity_and_access_management_iam_long_term_security_credentialIcon;
 }
 
 export class IdentityAndAccessManagementIamMfaToken extends _Security {
-  protected static override _iconDataUrl = identity_and_access_management_iam_mfa_tokenIcon;
+  protected static _iconDataUrl = identity_and_access_management_iam_mfa_tokenIcon;
 }
 
 export class IdentityAndAccessManagementIamPermissions extends _Security {
-  protected static override _iconDataUrl = identity_and_access_management_iam_permissionsIcon;
+  protected static _iconDataUrl = identity_and_access_management_iam_permissionsIcon;
 }
 
 export class IdentityAndAccessManagementIamRole extends _Security {
-  protected static override _iconDataUrl = identity_and_access_management_iam_roleIcon;
+  protected static _iconDataUrl = identity_and_access_management_iam_roleIcon;
 }
 
 export class IdentityAndAccessManagementIamTemporarySecurityCredential extends _Security {
-  protected static override _iconDataUrl =
+  protected static _iconDataUrl =
     identity_and_access_management_iam_temporary_security_credentialIcon;
 }
 
 export class IdentityAndAccessManagementIam extends _Security {
-  protected static override _iconDataUrl = identity_and_access_management_iamIcon;
+  protected static _iconDataUrl = identity_and_access_management_iamIcon;
 }
 
 export class InspectorAgent extends _Security {
-  protected static override _iconDataUrl = inspector_agentIcon;
+  protected static _iconDataUrl = inspector_agentIcon;
 }
 
 export class Inspector extends _Security {
-  protected static override _iconDataUrl = inspectorIcon;
+  protected static _iconDataUrl = inspectorIcon;
 }
 
 export class KeyManagementService extends _Security {
-  protected static override _iconDataUrl = key_management_serviceIcon;
+  protected static _iconDataUrl = key_management_serviceIcon;
 }
 
 export class Macie extends _Security {
-  protected static override _iconDataUrl = macieIcon;
+  protected static _iconDataUrl = macieIcon;
 }
 
 export class ManagedMicrosoftAd extends _Security {
-  protected static override _iconDataUrl = managed_microsoft_adIcon;
+  protected static _iconDataUrl = managed_microsoft_adIcon;
 }
 
 export class ResourceAccessManager extends _Security {
-  protected static override _iconDataUrl = resource_access_managerIcon;
+  protected static _iconDataUrl = resource_access_managerIcon;
 }
 
 export class SecretsManager extends _Security {
-  protected static override _iconDataUrl = secrets_managerIcon;
+  protected static _iconDataUrl = secrets_managerIcon;
 }
 
 export class SecurityHubFinding extends _Security {
-  protected static override _iconDataUrl = security_hub_findingIcon;
+  protected static _iconDataUrl = security_hub_findingIcon;
 }
 
 export class SecurityHub extends _Security {
-  protected static override _iconDataUrl = security_hubIcon;
+  protected static _iconDataUrl = security_hubIcon;
 }
 
 export class SecurityIdentityAndCompliance extends _Security {
-  protected static override _iconDataUrl = security_identity_and_complianceIcon;
+  protected static _iconDataUrl = security_identity_and_complianceIcon;
 }
 
 export class SecurityLake extends _Security {
-  protected static override _iconDataUrl = security_lakeIcon;
+  protected static _iconDataUrl = security_lakeIcon;
 }
 
 export class ShieldAdvanced extends _Security {
-  protected static override _iconDataUrl = shield_advancedIcon;
+  protected static _iconDataUrl = shield_advancedIcon;
 }
 
 export class Shield extends _Security {
-  protected static override _iconDataUrl = shieldIcon;
+  protected static _iconDataUrl = shieldIcon;
 }
 
 export class SimpleAd extends _Security {
-  protected static override _iconDataUrl = simple_adIcon;
+  protected static _iconDataUrl = simple_adIcon;
 }
 
 export class SingleSignOn extends _Security {
-  protected static override _iconDataUrl = single_sign_onIcon;
+  protected static _iconDataUrl = single_sign_onIcon;
 }
 
 export class WAFFilteringRule extends _Security {
-  protected static override _iconDataUrl = waf_filtering_ruleIcon;
+  protected static _iconDataUrl = waf_filtering_ruleIcon;
 }
 
 export class WAF extends _Security {
-  protected static override _iconDataUrl = wafIcon;
+  protected static _iconDataUrl = wafIcon;
 }
 
 // Aliases

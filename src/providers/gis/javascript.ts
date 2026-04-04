@@ -13,33 +13,33 @@ class _Javascript extends _Gis {
 }
 
 export class Cesium extends _Javascript {
-  protected static override _iconDataUrl = cesiumIcon;
+  protected static _iconDataUrl = cesiumIcon;
 }
 
 export class Geostyler extends _Javascript {
-  protected static override _iconDataUrl = geostylerIcon;
+  protected static _iconDataUrl = geostylerIcon;
 }
 
 export class Keplerjs extends _Javascript {
-  protected static override _iconDataUrl = keplerjsIcon;
+  protected static _iconDataUrl = keplerjsIcon;
 }
 
 export class Leaflet extends _Javascript {
-  protected static override _iconDataUrl = leafletIcon;
+  protected static _iconDataUrl = leafletIcon;
 }
 
 export class Maplibre extends _Javascript {
-  protected static override _iconDataUrl = maplibreIcon;
+  protected static _iconDataUrl = maplibreIcon;
 }
 
 export class OlExt extends _Javascript {
-  protected static override _iconDataUrl = ol_extIcon;
+  protected static _iconDataUrl = ol_extIcon;
 }
 
 export class Openlayers extends _Javascript {
-  protected static override _iconDataUrl = openlayersIcon;
+  protected static _iconDataUrl = openlayersIcon;
 }
 
 export class Turfjs extends _Javascript {
-  protected static override _iconDataUrl = turfjsIcon;
+  protected static _iconDataUrl = turfjsIcon;
 }

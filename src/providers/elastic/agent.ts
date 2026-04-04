@@ -9,17 +9,17 @@ class _Agent extends _Elastic {
 }
 
 export class Agent extends _Agent {
-  protected static override _iconDataUrl = agentIcon;
+  protected static _iconDataUrl = agentIcon;
 }
 
 export class Endpoint extends _Agent {
-  protected static override _iconDataUrl = endpointIcon;
+  protected static _iconDataUrl = endpointIcon;
 }
 
 export class Fleet extends _Agent {
-  protected static override _iconDataUrl = fleetIcon;
+  protected static _iconDataUrl = fleetIcon;
 }
 
 export class Integrations extends _Agent {
-  protected static override _iconDataUrl = integrationsIcon;
+  protected static _iconDataUrl = integrationsIcon;
 }

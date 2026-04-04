@@ -28,95 +28,95 @@ class _Integration extends _Aws {
 }
 
 export class ApplicationIntegration extends _Integration {
-  protected static override _iconDataUrl = application_integrationIcon;
+  protected static _iconDataUrl = application_integrationIcon;
 }
 
 export class Appsync extends _Integration {
-  protected static override _iconDataUrl = appsyncIcon;
+  protected static _iconDataUrl = appsyncIcon;
 }
 
 export class ConsoleMobileApplication extends _Integration {
-  protected static override _iconDataUrl = console_mobile_applicationIcon;
+  protected static _iconDataUrl = console_mobile_applicationIcon;
 }
 
 export class EventResource extends _Integration {
-  protected static override _iconDataUrl = event_resourceIcon;
+  protected static _iconDataUrl = event_resourceIcon;
 }
 
 export class EventbridgeCustomEventBusResource extends _Integration {
-  protected static override _iconDataUrl = eventbridge_custom_event_bus_resourceIcon;
+  protected static _iconDataUrl = eventbridge_custom_event_bus_resourceIcon;
 }
 
 export class EventbridgeDefaultEventBusResource extends _Integration {
-  protected static override _iconDataUrl = eventbridge_default_event_bus_resourceIcon;
+  protected static _iconDataUrl = eventbridge_default_event_bus_resourceIcon;
 }
 
 export class EventbridgeEvent extends _Integration {
-  protected static override _iconDataUrl = eventbridge_eventIcon;
+  protected static _iconDataUrl = eventbridge_eventIcon;
 }
 
 export class EventbridgePipes extends _Integration {
-  protected static override _iconDataUrl = eventbridge_pipesIcon;
+  protected static _iconDataUrl = eventbridge_pipesIcon;
 }
 
 export class EventbridgeRule extends _Integration {
-  protected static override _iconDataUrl = eventbridge_ruleIcon;
+  protected static _iconDataUrl = eventbridge_ruleIcon;
 }
 
 export class EventbridgeSaasPartnerEventBusResource extends _Integration {
-  protected static override _iconDataUrl = eventbridge_saas_partner_event_bus_resourceIcon;
+  protected static _iconDataUrl = eventbridge_saas_partner_event_bus_resourceIcon;
 }
 
 export class EventbridgeScheduler extends _Integration {
-  protected static override _iconDataUrl = eventbridge_schedulerIcon;
+  protected static _iconDataUrl = eventbridge_schedulerIcon;
 }
 
 export class EventbridgeSchema extends _Integration {
-  protected static override _iconDataUrl = eventbridge_schemaIcon;
+  protected static _iconDataUrl = eventbridge_schemaIcon;
 }
 
 export class Eventbridge extends _Integration {
-  protected static override _iconDataUrl = eventbridgeIcon;
+  protected static _iconDataUrl = eventbridgeIcon;
 }
 
 export class ExpressWorkflows extends _Integration {
-  protected static override _iconDataUrl = express_workflowsIcon;
+  protected static _iconDataUrl = express_workflowsIcon;
 }
 
 export class MQ extends _Integration {
-  protected static override _iconDataUrl = mqIcon;
+  protected static _iconDataUrl = mqIcon;
 }
 
 export class SimpleNotificationServiceSnsEmailNotification extends _Integration {
-  protected static override _iconDataUrl = simple_notification_service_sns_email_notificationIcon;
+  protected static _iconDataUrl = simple_notification_service_sns_email_notificationIcon;
 }
 
 export class SimpleNotificationServiceSnsHttpNotification extends _Integration {
-  protected static override _iconDataUrl = simple_notification_service_sns_http_notificationIcon;
+  protected static _iconDataUrl = simple_notification_service_sns_http_notificationIcon;
 }
 
 export class SimpleNotificationServiceSnsTopic extends _Integration {
-  protected static override _iconDataUrl = simple_notification_service_sns_topicIcon;
+  protected static _iconDataUrl = simple_notification_service_sns_topicIcon;
 }
 
 export class SimpleNotificationServiceSns extends _Integration {
-  protected static override _iconDataUrl = simple_notification_service_snsIcon;
+  protected static _iconDataUrl = simple_notification_service_snsIcon;
 }
 
 export class SimpleQueueServiceSqsMessage extends _Integration {
-  protected static override _iconDataUrl = simple_queue_service_sqs_messageIcon;
+  protected static _iconDataUrl = simple_queue_service_sqs_messageIcon;
 }
 
 export class SimpleQueueServiceSqsQueue extends _Integration {
-  protected static override _iconDataUrl = simple_queue_service_sqs_queueIcon;
+  protected static _iconDataUrl = simple_queue_service_sqs_queueIcon;
 }
 
 export class SimpleQueueServiceSqs extends _Integration {
-  protected static override _iconDataUrl = simple_queue_service_sqsIcon;
+  protected static _iconDataUrl = simple_queue_service_sqsIcon;
 }
 
 export class StepFunctions extends _Integration {
-  protected static override _iconDataUrl = step_functionsIcon;
+  protected static _iconDataUrl = step_functionsIcon;
 }
 
 // Aliases

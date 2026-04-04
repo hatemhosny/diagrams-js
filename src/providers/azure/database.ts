@@ -29,97 +29,97 @@ class _Database extends _Azure {
 }
 
 export class BlobStorage extends _Database {
-  protected static override _iconDataUrl = blob_storageIcon;
+  protected static _iconDataUrl = blob_storageIcon;
 }
 
 export class CacheForRedis extends _Database {
-  protected static override _iconDataUrl = cache_for_redisIcon;
+  protected static _iconDataUrl = cache_for_redisIcon;
 }
 
 export class CosmosDb extends _Database {
-  protected static override _iconDataUrl = cosmos_dbIcon;
+  protected static _iconDataUrl = cosmos_dbIcon;
 }
 
 export class DataExplorerClusters extends _Database {
-  protected static override _iconDataUrl = data_explorer_clustersIcon;
+  protected static _iconDataUrl = data_explorer_clustersIcon;
 }
 
 export class DataFactory extends _Database {
-  protected static override _iconDataUrl = data_factoryIcon;
+  protected static _iconDataUrl = data_factoryIcon;
 }
 
 export class DataLake extends _Database {
-  protected static override _iconDataUrl = data_lakeIcon;
+  protected static _iconDataUrl = data_lakeIcon;
 }
 
 export class DatabaseForMariadbServers extends _Database {
-  protected static override _iconDataUrl = database_for_mariadb_serversIcon;
+  protected static _iconDataUrl = database_for_mariadb_serversIcon;
 }
 
 export class DatabaseForMysqlServers extends _Database {
-  protected static override _iconDataUrl = database_for_mysql_serversIcon;
+  protected static _iconDataUrl = database_for_mysql_serversIcon;
 }
 
 export class DatabaseForPostgresqlServers extends _Database {
-  protected static override _iconDataUrl = database_for_postgresql_serversIcon;
+  protected static _iconDataUrl = database_for_postgresql_serversIcon;
 }
 
 export class ElasticDatabasePools extends _Database {
-  protected static override _iconDataUrl = elastic_database_poolsIcon;
+  protected static _iconDataUrl = elastic_database_poolsIcon;
 }
 
 export class ElasticJobAgents extends _Database {
-  protected static override _iconDataUrl = elastic_job_agentsIcon;
+  protected static _iconDataUrl = elastic_job_agentsIcon;
 }
 
 export class InstancePools extends _Database {
-  protected static override _iconDataUrl = instance_poolsIcon;
+  protected static _iconDataUrl = instance_poolsIcon;
 }
 
 export class ManagedDatabases extends _Database {
-  protected static override _iconDataUrl = managed_databasesIcon;
+  protected static _iconDataUrl = managed_databasesIcon;
 }
 
 export class SQLDatabases extends _Database {
-  protected static override _iconDataUrl = sql_databasesIcon;
+  protected static _iconDataUrl = sql_databasesIcon;
 }
 
 export class SQLDatawarehouse extends _Database {
-  protected static override _iconDataUrl = sql_datawarehouseIcon;
+  protected static _iconDataUrl = sql_datawarehouseIcon;
 }
 
 export class SQLManagedInstances extends _Database {
-  protected static override _iconDataUrl = sql_managed_instancesIcon;
+  protected static _iconDataUrl = sql_managed_instancesIcon;
 }
 
 export class SQLServerStretchDatabases extends _Database {
-  protected static override _iconDataUrl = sql_server_stretch_databasesIcon;
+  protected static _iconDataUrl = sql_server_stretch_databasesIcon;
 }
 
 export class SQLServers extends _Database {
-  protected static override _iconDataUrl = sql_serversIcon;
+  protected static _iconDataUrl = sql_serversIcon;
 }
 
 export class SQLVM extends _Database {
-  protected static override _iconDataUrl = sql_vmIcon;
+  protected static _iconDataUrl = sql_vmIcon;
 }
 
 export class SQL extends _Database {
-  protected static override _iconDataUrl = sqlIcon;
+  protected static _iconDataUrl = sqlIcon;
 }
 
 export class SsisLiftAndShiftIr extends _Database {
-  protected static override _iconDataUrl = ssis_lift_and_shift_irIcon;
+  protected static _iconDataUrl = ssis_lift_and_shift_irIcon;
 }
 
 export class SynapseAnalytics extends _Database {
-  protected static override _iconDataUrl = synapse_analyticsIcon;
+  protected static _iconDataUrl = synapse_analyticsIcon;
 }
 
 export class VirtualClusters extends _Database {
-  protected static override _iconDataUrl = virtual_clustersIcon;
+  protected static _iconDataUrl = virtual_clustersIcon;
 }
 
 export class VirtualDatacenter extends _Database {
-  protected static override _iconDataUrl = virtual_datacenterIcon;
+  protected static _iconDataUrl = virtual_datacenterIcon;
 }

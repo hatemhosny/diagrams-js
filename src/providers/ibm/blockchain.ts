@@ -25,81 +25,81 @@ class _Blockchain extends _Ibm {
 }
 
 export class BlockchainDeveloper extends _Blockchain {
-  protected static override _iconDataUrl = blockchain_developerIcon;
+  protected static _iconDataUrl = blockchain_developerIcon;
 }
 
 export class Blockchain extends _Blockchain {
-  protected static override _iconDataUrl = blockchainIcon;
+  protected static _iconDataUrl = blockchainIcon;
 }
 
 export class CertificateAuthority extends _Blockchain {
-  protected static override _iconDataUrl = certificate_authorityIcon;
+  protected static _iconDataUrl = certificate_authorityIcon;
 }
 
 export class ClientApplication extends _Blockchain {
-  protected static override _iconDataUrl = client_applicationIcon;
+  protected static _iconDataUrl = client_applicationIcon;
 }
 
 export class Communication extends _Blockchain {
-  protected static override _iconDataUrl = communicationIcon;
+  protected static _iconDataUrl = communicationIcon;
 }
 
 export class Consensus extends _Blockchain {
-  protected static override _iconDataUrl = consensusIcon;
+  protected static _iconDataUrl = consensusIcon;
 }
 
 export class EventListener extends _Blockchain {
-  protected static override _iconDataUrl = event_listenerIcon;
+  protected static _iconDataUrl = event_listenerIcon;
 }
 
 export class Event extends _Blockchain {
-  protected static override _iconDataUrl = eventIcon;
+  protected static _iconDataUrl = eventIcon;
 }
 
 export class ExistingEnterpriseSystems extends _Blockchain {
-  protected static override _iconDataUrl = existing_enterprise_systemsIcon;
+  protected static _iconDataUrl = existing_enterprise_systemsIcon;
 }
 
 export class HyperledgerFabric extends _Blockchain {
-  protected static override _iconDataUrl = hyperledger_fabricIcon;
+  protected static _iconDataUrl = hyperledger_fabricIcon;
 }
 
 export class KeyManagement extends _Blockchain {
-  protected static override _iconDataUrl = key_managementIcon;
+  protected static _iconDataUrl = key_managementIcon;
 }
 
 export class Ledger extends _Blockchain {
-  protected static override _iconDataUrl = ledgerIcon;
+  protected static _iconDataUrl = ledgerIcon;
 }
 
 export class MembershipServicesProviderApi extends _Blockchain {
-  protected static override _iconDataUrl = membership_services_provider_apiIcon;
+  protected static _iconDataUrl = membership_services_provider_apiIcon;
 }
 
 export class Membership extends _Blockchain {
-  protected static override _iconDataUrl = membershipIcon;
+  protected static _iconDataUrl = membershipIcon;
 }
 
 export class MessageBus extends _Blockchain {
-  protected static override _iconDataUrl = message_busIcon;
+  protected static _iconDataUrl = message_busIcon;
 }
 
 export class Node extends _Blockchain {
-  protected static override _iconDataUrl = nodeIcon;
+  protected static _iconDataUrl = nodeIcon;
 }
 
 export class Services extends _Blockchain {
-  protected static override _iconDataUrl = servicesIcon;
+  protected static _iconDataUrl = servicesIcon;
 }
 
 export class SmartContract extends _Blockchain {
-  protected static override _iconDataUrl = smart_contractIcon;
+  protected static _iconDataUrl = smart_contractIcon;
 }
 
 export class TransactionManager extends _Blockchain {
-  protected static override _iconDataUrl = transaction_managerIcon;
+  protected static _iconDataUrl = transaction_managerIcon;
 }
 
 export class Wallet extends _Blockchain {
-  protected static override _iconDataUrl = walletIcon;
+  protected static _iconDataUrl = walletIcon;
 }

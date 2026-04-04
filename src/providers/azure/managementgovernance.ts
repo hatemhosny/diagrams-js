@@ -38,133 +38,133 @@ class _Managementgovernance extends _Azure {
 }
 
 export class ActivityLog extends _Managementgovernance {
-  protected static override _iconDataUrl = activity_logIcon;
+  protected static _iconDataUrl = activity_logIcon;
 }
 
 export class Advisor extends _Managementgovernance {
-  protected static override _iconDataUrl = advisorIcon;
+  protected static _iconDataUrl = advisorIcon;
 }
 
 export class Alerts extends _Managementgovernance {
-  protected static override _iconDataUrl = alertsIcon;
+  protected static _iconDataUrl = alertsIcon;
 }
 
 export class ApplicationInsights extends _Managementgovernance {
-  protected static override _iconDataUrl = application_insightsIcon;
+  protected static _iconDataUrl = application_insightsIcon;
 }
 
 export class ArcMachines extends _Managementgovernance {
-  protected static override _iconDataUrl = arc_machinesIcon;
+  protected static _iconDataUrl = arc_machinesIcon;
 }
 
 export class AutomationAccounts extends _Managementgovernance {
-  protected static override _iconDataUrl = automation_accountsIcon;
+  protected static _iconDataUrl = automation_accountsIcon;
 }
 
 export class AzureArc extends _Managementgovernance {
-  protected static override _iconDataUrl = azure_arcIcon;
+  protected static _iconDataUrl = azure_arcIcon;
 }
 
 export class AzureLighthouse extends _Managementgovernance {
-  protected static override _iconDataUrl = azure_lighthouseIcon;
+  protected static _iconDataUrl = azure_lighthouseIcon;
 }
 
 export class Blueprints extends _Managementgovernance {
-  protected static override _iconDataUrl = blueprintsIcon;
+  protected static _iconDataUrl = blueprintsIcon;
 }
 
 export class Compliance extends _Managementgovernance {
-  protected static override _iconDataUrl = complianceIcon;
+  protected static _iconDataUrl = complianceIcon;
 }
 
 export class CostManagementAndBilling extends _Managementgovernance {
-  protected static override _iconDataUrl = cost_management_and_billingIcon;
+  protected static _iconDataUrl = cost_management_and_billingIcon;
 }
 
 export class CustomerLockboxForMicrosoftAzure extends _Managementgovernance {
-  protected static override _iconDataUrl = customer_lockbox_for_microsoft_azureIcon;
+  protected static _iconDataUrl = customer_lockbox_for_microsoft_azureIcon;
 }
 
 export class DiagnosticsSettings extends _Managementgovernance {
-  protected static override _iconDataUrl = diagnostics_settingsIcon;
+  protected static _iconDataUrl = diagnostics_settingsIcon;
 }
 
 export class Education extends _Managementgovernance {
-  protected static override _iconDataUrl = educationIcon;
+  protected static _iconDataUrl = educationIcon;
 }
 
 export class IntuneTrends extends _Managementgovernance {
-  protected static override _iconDataUrl = intune_trendsIcon;
+  protected static _iconDataUrl = intune_trendsIcon;
 }
 
 export class LogAnalyticsWorkspaces extends _Managementgovernance {
-  protected static override _iconDataUrl = log_analytics_workspacesIcon;
+  protected static _iconDataUrl = log_analytics_workspacesIcon;
 }
 
 export class Machinesazurearc extends _Managementgovernance {
-  protected static override _iconDataUrl = machinesazurearcIcon;
+  protected static _iconDataUrl = machinesazurearcIcon;
 }
 
 export class ManagedApplicationsCenter extends _Managementgovernance {
-  protected static override _iconDataUrl = managed_applications_centerIcon;
+  protected static _iconDataUrl = managed_applications_centerIcon;
 }
 
 export class ManagedDesktop extends _Managementgovernance {
-  protected static override _iconDataUrl = managed_desktopIcon;
+  protected static _iconDataUrl = managed_desktopIcon;
 }
 
 export class Metrics extends _Managementgovernance {
-  protected static override _iconDataUrl = metricsIcon;
+  protected static _iconDataUrl = metricsIcon;
 }
 
 export class Monitor extends _Managementgovernance {
-  protected static override _iconDataUrl = monitorIcon;
+  protected static _iconDataUrl = monitorIcon;
 }
 
 export class MyCustomers extends _Managementgovernance {
-  protected static override _iconDataUrl = my_customersIcon;
+  protected static _iconDataUrl = my_customersIcon;
 }
 
 export class OperationLogClassic extends _Managementgovernance {
-  protected static override _iconDataUrl = operation_log_classicIcon;
+  protected static _iconDataUrl = operation_log_classicIcon;
 }
 
 export class Policy extends _Managementgovernance {
-  protected static override _iconDataUrl = policyIcon;
+  protected static _iconDataUrl = policyIcon;
 }
 
 export class RecoveryServicesVaults extends _Managementgovernance {
-  protected static override _iconDataUrl = recovery_services_vaultsIcon;
+  protected static _iconDataUrl = recovery_services_vaultsIcon;
 }
 
 export class ResourceGraphExplorer extends _Managementgovernance {
-  protected static override _iconDataUrl = resource_graph_explorerIcon;
+  protected static _iconDataUrl = resource_graph_explorerIcon;
 }
 
 export class ResourcesProvider extends _Managementgovernance {
-  protected static override _iconDataUrl = resources_providerIcon;
+  protected static _iconDataUrl = resources_providerIcon;
 }
 
 export class SchedulerJobCollections extends _Managementgovernance {
-  protected static override _iconDataUrl = scheduler_job_collectionsIcon;
+  protected static _iconDataUrl = scheduler_job_collectionsIcon;
 }
 
 export class ServiceCatalogMad extends _Managementgovernance {
-  protected static override _iconDataUrl = service_catalog_madIcon;
+  protected static _iconDataUrl = service_catalog_madIcon;
 }
 
 export class ServiceProviders extends _Managementgovernance {
-  protected static override _iconDataUrl = service_providersIcon;
+  protected static _iconDataUrl = service_providersIcon;
 }
 
 export class Solutions extends _Managementgovernance {
-  protected static override _iconDataUrl = solutionsIcon;
+  protected static _iconDataUrl = solutionsIcon;
 }
 
 export class UniversalPrint extends _Managementgovernance {
-  protected static override _iconDataUrl = universal_printIcon;
+  protected static _iconDataUrl = universal_printIcon;
 }
 
 export class UserPrivacy extends _Managementgovernance {
-  protected static override _iconDataUrl = user_privacyIcon;
+  protected static _iconDataUrl = user_privacyIcon;
 }

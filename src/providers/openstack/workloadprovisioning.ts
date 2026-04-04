@@ -8,13 +8,13 @@ class _Workloadprovisioning extends _Openstack {
 }
 
 export class Magnum extends _Workloadprovisioning {
-  protected static override _iconDataUrl = magnumIcon;
+  protected static _iconDataUrl = magnumIcon;
 }
 
 export class Sahara extends _Workloadprovisioning {
-  protected static override _iconDataUrl = saharaIcon;
+  protected static _iconDataUrl = saharaIcon;
 }
 
 export class Trove extends _Workloadprovisioning {
-  protected static override _iconDataUrl = troveIcon;
+  protected static _iconDataUrl = troveIcon;
 }

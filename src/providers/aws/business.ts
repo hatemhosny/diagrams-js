@@ -9,19 +9,19 @@ class _Business extends _Aws {
 }
 
 export class AlexaForBusiness extends _Business {
-  protected static override _iconDataUrl = alexa_for_businessIcon;
+  protected static _iconDataUrl = alexa_for_businessIcon;
 }
 
 export class BusinessApplications extends _Business {
-  protected static override _iconDataUrl = business_applicationsIcon;
+  protected static _iconDataUrl = business_applicationsIcon;
 }
 
 export class Chime extends _Business {
-  protected static override _iconDataUrl = chimeIcon;
+  protected static _iconDataUrl = chimeIcon;
 }
 
 export class Workmail extends _Business {
-  protected static override _iconDataUrl = workmailIcon;
+  protected static _iconDataUrl = workmailIcon;
 }
 
 // Aliases

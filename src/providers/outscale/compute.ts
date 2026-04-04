@@ -7,9 +7,12 @@ class _Compute extends _Outscale {
 }
 
 export class Compute extends _Compute {
-  protected static override _iconDataUrl = computeIcon;
+  protected static _iconDataUrl = computeIcon;
 }
 
 export class DirectConnect extends _Compute {
-  protected static override _iconDataUrl = direct_connectIcon;
+  protected static _iconDataUrl = direct_connectIcon;
 }
+
+// Aliases
+export const OSC = Compute;

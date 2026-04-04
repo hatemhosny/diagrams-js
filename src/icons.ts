@@ -360,7 +360,7 @@ export class IconManager {
   register(node: Node, iconKey: string, iconPath?: string): void {
     this.nodeMap.push({
       node,
-      icon,
+      icon: iconKey,
       iconPath,
     });
   }

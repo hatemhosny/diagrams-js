@@ -23,73 +23,73 @@ class _Monitoring extends _Oci {
 }
 
 export class AlarmWhite extends _Monitoring {
-  protected static override _iconDataUrl = alarm_whiteIcon;
+  protected static _iconDataUrl = alarm_whiteIcon;
 }
 
 export class Alarm extends _Monitoring {
-  protected static override _iconDataUrl = alarmIcon;
+  protected static _iconDataUrl = alarmIcon;
 }
 
 export class EmailWhite extends _Monitoring {
-  protected static override _iconDataUrl = email_whiteIcon;
+  protected static _iconDataUrl = email_whiteIcon;
 }
 
 export class Email extends _Monitoring {
-  protected static override _iconDataUrl = emailIcon;
+  protected static _iconDataUrl = emailIcon;
 }
 
 export class EventsWhite extends _Monitoring {
-  protected static override _iconDataUrl = events_whiteIcon;
+  protected static _iconDataUrl = events_whiteIcon;
 }
 
 export class Events extends _Monitoring {
-  protected static override _iconDataUrl = eventsIcon;
+  protected static _iconDataUrl = eventsIcon;
 }
 
 export class HealthCheckWhite extends _Monitoring {
-  protected static override _iconDataUrl = health_check_whiteIcon;
+  protected static _iconDataUrl = health_check_whiteIcon;
 }
 
 export class HealthCheck extends _Monitoring {
-  protected static override _iconDataUrl = health_checkIcon;
+  protected static _iconDataUrl = health_checkIcon;
 }
 
 export class NotificationsWhite extends _Monitoring {
-  protected static override _iconDataUrl = notifications_whiteIcon;
+  protected static _iconDataUrl = notifications_whiteIcon;
 }
 
 export class Notifications extends _Monitoring {
-  protected static override _iconDataUrl = notificationsIcon;
+  protected static _iconDataUrl = notificationsIcon;
 }
 
 export class QueueWhite extends _Monitoring {
-  protected static override _iconDataUrl = queue_whiteIcon;
+  protected static _iconDataUrl = queue_whiteIcon;
 }
 
 export class Queue extends _Monitoring {
-  protected static override _iconDataUrl = queueIcon;
+  protected static _iconDataUrl = queueIcon;
 }
 
 export class SearchWhite extends _Monitoring {
-  protected static override _iconDataUrl = search_whiteIcon;
+  protected static _iconDataUrl = search_whiteIcon;
 }
 
 export class Search extends _Monitoring {
-  protected static override _iconDataUrl = searchIcon;
+  protected static _iconDataUrl = searchIcon;
 }
 
 export class TelemetryWhite extends _Monitoring {
-  protected static override _iconDataUrl = telemetry_whiteIcon;
+  protected static _iconDataUrl = telemetry_whiteIcon;
 }
 
 export class Telemetry extends _Monitoring {
-  protected static override _iconDataUrl = telemetryIcon;
+  protected static _iconDataUrl = telemetryIcon;
 }
 
 export class WorkflowWhite extends _Monitoring {
-  protected static override _iconDataUrl = workflow_whiteIcon;
+  protected static _iconDataUrl = workflow_whiteIcon;
 }
 
 export class Workflow extends _Monitoring {
-  protected static override _iconDataUrl = workflowIcon;
+  protected static _iconDataUrl = workflowIcon;
 }

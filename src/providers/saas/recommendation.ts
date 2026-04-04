@@ -6,5 +6,5 @@ class _Recommendation extends _Saas {
 }
 
 export class Recombee extends _Recommendation {
-  protected static override _iconDataUrl = recombeeIcon;
+  protected static _iconDataUrl = recombeeIcon;
 }

@@ -6,5 +6,5 @@ class _Compute extends _Generic {
 }
 
 export class Rack extends _Compute {
-  protected static override _iconDataUrl = rackIcon;
+  protected static _iconDataUrl = rackIcon;
 }
