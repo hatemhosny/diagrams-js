@@ -3,6 +3,10 @@ import { defineConfig } from "vite-plus";
 export default defineConfig({
   pack: {
     entry: "src/index.ts",
+    outExtensions: () => ({
+      js: ".js",
+      dts: ".d.ts",
+    }),
     dts: {
       tsgo: true,
     },

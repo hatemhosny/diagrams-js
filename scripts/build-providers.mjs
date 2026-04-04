@@ -67,9 +67,9 @@ async function buildProvider(provider) {
           "../../Node.js",
           "../../../Node.js",
           "../../../../Node.js",
-          "../*.mjs",
-          "../../*.mjs",
-          "../../../*.mjs",
+          "../../index.js",
+          "../../../index.js",
+          "../../../../index.js",
         ],
       });
 
@@ -78,18 +78,18 @@ async function buildProvider(provider) {
       let content = fs.readFileSync(outFile, "utf-8");
 
       // Replace imports from ../../Node.js to point to the main bundle
-      content = content.replace(/from\s+["']\.\.\/\.\.\/Node\.js["']/g, 'from "../../index.mjs"');
+      content = content.replace(/from\s+["']\.\.\/\.\.\/Node\.js["']/g, 'from "../../index.js"');
 
       // Replace imports from ../../../Node.js to point to main bundle
       content = content.replace(
         /from\s+["']\.\.\/\.\.\/\.\.\/Node\.js["']/g,
-        'from "../../../index.mjs"',
+        'from "../../../index.js"',
       );
 
       // Replace imports from ../../../../Node.js to point to main bundle
       content = content.replace(
         /from\s+["']\.\.\/\.\.\/\.\.\/\.\.\/Node\.js["']/g,
-        'from "../../../../index.mjs"',
+        'from "../../../../index.js"',
       );
 
       fs.writeFileSync(outFile, content);
@@ -130,15 +130,19 @@ async function buildProvidersIndex() {
 }
 
 /**
- * Generate package.json exports
+ * Update package.json exports
  */
-function generateExports() {
-  console.log("Generating package.json exports...\n");
+function updatePackageExports() {
+  console.log("Updating package.json exports...\n");
 
+  const packageJsonPath = path.join(ROOT_DIR, "package.json");
+  const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, "utf-8"));
+
+  // Start with core exports
   const exports = {
     ".": {
-      import: "./dist/index.mjs",
-      types: "./dist/index.d.mts",
+      import: "./dist/index.js",
+      types: "./dist/index.d.ts",
     },
     "./package.json": "./package.json",
   };
@@ -168,12 +172,12 @@ function generateExports() {
     }
   }
 
-  const output = JSON.stringify({ exports }, null, 2);
-  fs.writeFileSync(path.join(ROOT_DIR, "package-exports.json"), output);
+  // Update package.json
+  packageJson.exports = exports;
+  fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2) + "\n");
 
-  console.log("✓ Exports written to package-exports.json");
-  console.log("\nCopy the 'exports' field into your package.json to enable:");
-  console.log('  import { EC2 } from "diagrams-ts/providers/aws/compute"');
+  console.log("✓ package.json exports updated");
+  console.log(`  Added ${Object.keys(exports).length - 2} provider exports`);
 }
 
 /**
@@ -197,11 +201,11 @@ async function main() {
   // Build index
   await buildProvidersIndex();
 
-  // Generate exports
-  generateExports();
+  // Update package.json exports
+  updatePackageExports();
 
   console.log("\n✓ All providers built successfully!");
-  console.log(`\nBuilt files are in: ${DIST_PROVIDERS_DIR}`);
+  console.log(`  Output: ${DIST_PROVIDERS_DIR}`);
 }
 
 main().catch(console.error);

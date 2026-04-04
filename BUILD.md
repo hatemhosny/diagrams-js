@@ -154,13 +154,9 @@ After running `vp run build`:
 
 ```
 dist/
-├── index.mjs              # Core library (~1.5 MB)
+├── index.js               # Compiled core library
 ├── index.d.mts            # Type definitions
-└── providers/             # Compiled providers
-    ├── aws/index.js
-    ├── aws/compute.js
-    ├── aws/storage.js
-    └── ...
+└── providers/             # Provider files
 ```
 
 ## Next Steps
@@ -176,7 +172,7 @@ dist/
 ✅ **Core Framework** - Diagram, Node, Edge, Cluster
 ✅ **Cross-Platform** - Node.js, Deno, Bun, Browsers
 ✅ **17 Providers** - 1000+ generated classes
-✅ **Build System** - Vite+ + esbuild for fast compilation
+✅ **Build System** - Vite+ + esbuild for fast compilation and assets inlining
 ✅ **Tree-Shaking** - Import only what you need
 ✅ **TypeScript** - Full type support
 ✅ **Tests** - 18 passing tests

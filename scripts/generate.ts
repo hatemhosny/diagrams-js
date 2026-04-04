@@ -73,7 +73,7 @@ function generateModule(provider: string, serviceType: string, iconFiles: string
 `;
 
   for (const meta of classMetas) {
-    code += `import ${meta.importName}Icon from "../../../resources/${provider}/${serviceType}/${meta.icon}";
+    code += `import ${meta.importName}Icon from "../../../resources/${provider}/${serviceType}/${meta.icon}?inline";
 `;
   }
 
