@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>diagrams-ts - Examples</title>
+    <title>diagrams-ts - Examples from Python diagrams</title>
     <style>
       * {
         margin: 0;
@@ -74,9 +74,11 @@
         border-radius: 8px;
         overflow-x: auto;
         font-family: "Monaco", "Menlo", "Consolas", monospace;
-        font-size: 13px;
-        line-height: 1.6;
+        font-size: 12px;
+        line-height: 1.5;
         margin: 0;
+        max-height: 400px;
+        overflow-y: auto;
       }
       code {
         font-family: inherit;
@@ -89,6 +91,9 @@
       }
       .comment {
         color: #6a9955;
+      }
+      .function {
+        color: #dcdcaa;
       }
       .diagram-section {
         display: flex;
@@ -133,30 +138,41 @@
     <div class="container">
       <header>
         <h1>diagrams-ts Examples</h1>
-        <p class="subtitle">Draw cloud system architecture diagrams as code in TypeScript</p>
+        <p class="subtitle">
+          All examples from diagrams-py documentation, rendered in your browser
+        </p>
       </header>
 
-      <!-- Example 1: Simple Flow -->
+      <!-- Example 1: Grouped Workers on AWS -->
       <div class="example">
-        <h2>Example 1: Simple Flow</h2>
+        <h2>Example 1: Grouped Workers on AWS</h2>
         <div class="example-content">
           <div class="code-section">
             <div class="code-header">TypeScript Code</div>
-            <pre><code><span class="keyword">import</span> { Diagram, Node } <span class="keyword">from</span> <span class="string">"diagrams-ts"</span>;
+            <pre><code><span class="keyword">import</span> { Diagram } <span class="keyword">from</span> <span class="string">"diagrams-ts"</span>;
+<span class="keyword">import</span> { EC2 } <span class="keyword">from</span> <span class="string">"diagrams-ts/providers/aws/compute"</span>;
+<span class="keyword">import</span> { RDS } <span class="keyword">from</span> <span class="string">"diagrams-ts/providers/aws/database"</span>;
+<span class="keyword">import</span> { ALB } <span class="keyword">from</span> <span class="string">"diagrams-ts/providers/aws/network"</span>;
 
-<span class="keyword">const</span> diagram = <span class="keyword">new</span> Diagram(<span class="string">"Simple Flow"</span>, {
+<span class="keyword">const</span> diagram = <span class="keyword">new</span> Diagram(<span class="string">"Grouped Workers"</span>, {
   direction: <span class="string">"TB"</span>,
   outformat: <span class="string">"svg"</span>,
 });
 
-<span class="keyword">const</span> web = diagram.add(<span class="keyword">new</span> Node(<span class="string">"Web"</span>));
-<span class="keyword">const</span> app = diagram.add(<span class="keyword">new</span> Node(<span class="string">"App"</span>));
-<span class="keyword">const</span> db = diagram.add(<span class="keyword">new</span> Node(<span class="string">"DB"</span>));
+<span class="keyword">const</span> lb = diagram.add(<span class="keyword">new</span> ALB(<span class="string">"lb"</span>));
+<span class="keyword">const</span> workers = [
+  diagram.add(<span class="keyword">new</span> EC2(<span class="string">"worker1"</span>)),
+  diagram.add(<span class="keyword">new</span> EC2(<span class="string">"worker2"</span>)),
+  diagram.add(<span class="keyword">new</span> EC2(<span class="string">"worker3"</span>)),
+  diagram.add(<span class="keyword">new</span> EC2(<span class="string">"worker4"</span>)),
+  diagram.add(<span class="keyword">new</span> EC2(<span class="string">"worker5"</span>)),
+];
+<span class="keyword">const</span> events = diagram.add(<span class="keyword">new</span> RDS(<span class="string">"events"</span>));
 
-web.to(app).to(db);
+lb.to(workers);
+workers.forEach(w => w.to(events));
 
-<span class="keyword">const</span> svg = <span class="keyword">await</span> diagram.render();
-diagram.destroy();</code></pre>
+<span class="keyword">const</span> svg = <span class="keyword">await</span> diagram.render();</code></pre>
           </div>
           <div class="diagram-section">
             <div class="diagram-header">Rendered Diagram</div>
@@ -167,24 +183,40 @@ diagram.destroy();</code></pre>
         </div>
       </div>
 
-      <!-- Example 2: AWS Architecture -->
+      <!-- Example 2: Clustered Web Services -->
       <div class="example">
-        <h2>Example 2: AWS Architecture</h2>
+        <h2>Example 2: Clustered Web Services</h2>
         <div class="example-content">
           <div class="code-section">
             <div class="code-header">TypeScript Code</div>
-            <pre><code><span class="keyword">import</span> { Diagram } <span class="keyword">from</span> <span class="string">"diagrams-ts"</span>;
-<span class="keyword">import</span> { EC2 } <span class="keyword">from</span> <span class="string">"diagrams-ts/providers/aws/compute"</span>;
-<span class="keyword">import</span> { RDS } <span class="keyword">from</span> <span class="string">"diagrams-ts/providers/aws/database"</span>;
+            <pre><code><span class="keyword">import</span> { Diagram, Cluster } <span class="keyword">from</span> <span class="string">"diagrams-ts"</span>;
+<span class="keyword">import</span> { ECS } <span class="keyword">from</span> <span class="string">"diagrams-ts/providers/aws/compute"</span>;
+<span class="keyword">import</span> { RDS, ElastiCache } <span class="keyword">from</span> <span class="string">"diagrams-ts/providers/aws/database"</span>;
+<span class="keyword">import</span> { ALB, Route53 } <span class="keyword">from</span> <span class="string">"diagrams-ts/providers/aws/network"</span>;
 
-<span class="keyword">const</span> diagram = <span class="keyword">new</span> Diagram(<span class="string">"AWS"</span>, {
-  direction: <span class="string">"TB"</span>,
+<span class="keyword">const</span> diagram = <span class="keyword">new</span> Diagram(<span class="string">"Clustered Web Services"</span>);
+
+<span class="keyword">const</span> dns = diagram.add(<span class="keyword">new</span> Route53(<span class="string">"dns"</span>));
+<span class="keyword">const</span> lb = diagram.add(<span class="keyword">new</span> ALB(<span class="string">"lb"</span>));
+
+<span class="keyword">const</span> memcached = diagram.add(<span class="keyword">new</span> ElastiCache(<span class="string">"memcached"</span>));
+
+diagram.cluster(<span class="string">"Services"</span>, (svc) => {
+  <span class="keyword">const</span> svcGroup = [
+    svc.add(<span class="keyword">new</span> ECS(<span class="string">"web1"</span>)),
+    svc.add(<span class="keyword">new</span> ECS(<span class="string">"web2"</span>)),
+    svc.add(<span class="keyword">new</span> ECS(<span class="string">"web3"</span>)),
+  ];
+  lb.to(svcGroup);
+  svcGroup.forEach(s => s.to(memcached));
+  
+  svc.cluster(<span class="string">"DB Cluster"</span>, (db) => {
+    <span class="keyword">const</span> dbPrimary = db.add(<span class="keyword">new</span> RDS(<span class="string">"userdb"</span>));
+    svcGroup.forEach(s => s.to(dbPrimary));
+  });
 });
 
-<span class="keyword">const</span> web = diagram.add(<span class="keyword">new</span> EC2(<span class="string">"Web"</span>));
-<span class="keyword">const</span> db = diagram.add(<span class="string">"new</span> RDS(<span class="string">"DB"</span>));
-
-web.to(db);
+dns.to(lb);
 
 <span class="keyword">const</span> svg = <span class="keyword">await</span> diagram.render();</code></pre>
           </div>
@@ -196,25 +228,201 @@ web.to(db);
           </div>
         </div>
       </div>
+
+      <!-- Example 3: Event Processing on AWS -->
+      <div class="example">
+        <h2>Example 3: Event Processing on AWS</h2>
+        <div class="example-content">
+          <div class="code-section">
+            <div class="code-header">TypeScript Code</div>
+            <pre><code><span class="keyword">import</span> { Diagram, Cluster } <span class="keyword">from</span> <span class="string">"diagrams-ts"</span>;
+<span class="keyword">import</span> { ECS, EKS, Lambda } <span class="keyword">from</span> <span class="string">"diagrams-ts/providers/aws/compute"</span>;
+<span class="keyword">import</span> { Redshift } <span class="keyword">from</span> <span class="string">"diagrams-ts/providers/aws/database"</span>;
+<span class="keyword">import</span> { SQS } <span class="keyword">from</span> <span class="string">"diagrams-ts/providers/aws/integration"</span>;
+<span class="keyword">import</span> { S3 } <span class="keyword">from</span> <span class="string">"diagrams-ts/providers/aws/storage"</span>;
+
+<span class="keyword">const</span> diagram = <span class="keyword">new</span> Diagram(<span class="string">"Event Processing"</span>);
+
+<span class="keyword">const</span> source = diagram.add(<span class="keyword">new</span> EKS(<span class="string">"k8s source"</span>));
+<span class="keyword">const</span> store = diagram.add(<span class="keyword">new</span> S3(<span class="string">"events store"</span>));
+<span class="keyword">const</span> dw = diagram.add(<span class="keyword">new</span> Redshift(<span class="string">"analytics"</span>));
+
+diagram.cluster(<span class="string">"Event Flows"</span>, (flows) => {
+  flows.cluster(<span class="string">"Event Workers"</span>, (workers) => {
+    <span class="keyword">const</span> workerNodes = [
+      workers.add(<span class="keyword">new</span> ECS(<span class="string">"worker1"</span>)),
+      workers.add(<span class="keyword">new</span> ECS(<span class="string">"worker2"</span>)),
+      workers.add(<span class="keyword">new</span> ECS(<span class="string">"worker3"</span>)),
+    ];
+    source.to(workerNodes);
+    
+    <span class="keyword">const</span> queue = flows.add(<span class="keyword">new</span> SQS(<span class="string">"event queue"</span>));
+    workerNodes.forEach(w => w.to(queue));
+    
+    flows.cluster(<span class="string">"Processing"</span>, (proc) => {
+      <span class="keyword">const</span> handlers = [
+        proc.add(<span class="keyword">new</span> Lambda(<span class="string">"proc1"</span>)),
+        proc.add(<span class="keyword">new</span> Lambda(<span class="string">"proc2"</span>)),
+        proc.add(<span class="keyword">new</span> Lambda(<span class="string">"proc3"</span>)),
+      ];
+      queue.to(handlers);
+      handlers.forEach(h => {
+        h.to(store);
+        h.to(dw);
+      });
+    });
+  });
+});
+
+<span class="keyword">const</span> svg = <span class="keyword">await</span> diagram.render();</code></pre>
+          </div>
+          <div class="diagram-section">
+            <div class="diagram-header">Rendered Diagram</div>
+            <div class="diagram-container" id="diagram3">
+              <div class="loading">Loading...</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Example 4: Message Collecting System on GCP -->
+      <div class="example">
+        <h2>Example 4: Message Collecting System on GCP</h2>
+        <div class="example-content">
+          <div class="code-section">
+            <div class="code-header">TypeScript Code</div>
+            <pre><code><span class="keyword">import</span> { Diagram, Cluster } <span class="keyword">from</span> <span class="string">"diagrams-ts"</span>;
+<span class="keyword">import</span> { BigQuery, Dataflow, PubSub } <span class="keyword">from</span> <span class="string">"diagrams-ts/providers/gcp/analytics"</span>;
+<span class="keyword">import</span> { AppEngine, Functions } <span class="keyword">from</span> <span class="string">"diagrams-ts/providers/gcp/compute"</span>;
+<span class="keyword">import</span> { BigTable } <span class="keyword">from</span> <span class="string">"diagrams-ts/providers/gcp/database"</span>;
+<span class="keyword">import</span> { IotCore } <span class="keyword">from</span> <span class="string">"diagrams-ts/providers/gcp/iot"</span>;
+<span class="keyword">import</span> { GCS } <span class="keyword">from</span> <span class="string">"diagrams-ts/providers/gcp/storage"</span>;
+
+<span class="keyword">const</span> diagram = <span class="keyword">new</span> Diagram(<span class="string">"Message Collecting"</span>);
+
+<span class="keyword">const</span> pubsub = diagram.add(<span class="keyword">new</span> PubSub(<span class="string">"pubsub"</span>));
+
+diagram.cluster(<span class="string">"Source of Data"</span>, (source) => {
+  <span class="keyword">const</span> sources = [
+    source.add(<span class="keyword">new</span> IotCore(<span class="string">"core1"</span>)),
+    source.add(<span class="keyword">new</span> IotCore(<span class="string">"core2"</span>)),
+    source.add(<span class="keyword">new</span> IotCore(<span class="string">"core3"</span>)),
+  ];
+  sources.forEach(s => s.to(pubsub));
+});
+
+diagram.cluster(<span class="string">"Targets"</span>, (targets) => {
+  targets.cluster(<span class="string">"Data Flow"</span>, (flow) => {
+    <span class="keyword">const</span> dataflow = flow.add(<span class="keyword">new</span> Dataflow(<span class="string">"data flow"</span>));
+    pubsub.to(dataflow);
+    
+    targets.cluster(<span class="string">"Data Lake"</span>, (lake) => {
+      <span class="keyword">const</span> bq = lake.add(<span class="keyword">new</span> BigQuery(<span class="string">"bq"</span>));
+      <span class="keyword">const</span> gcs = lake.add(<span class="keyword">new</span> GCS(<span class="string">"storage"</span>));
+      dataflow.to([bq, gcs]);
+    });
+    
+    targets.cluster(<span class="string">"Event Driven"</span>, (event) => {
+      event.cluster(<span class="string">"Processing"</span>, (proc) => {
+        <span class="keyword">const</span> engine = proc.add(<span class="keyword">new</span> AppEngine(<span class="string">"engine"</span>));
+        <span class="keyword">const</span> bigtable = proc.add(<span class="keyword">new</span> BigTable(<span class="string">"bigtable"</span>));
+        dataflow.to(engine).to(bigtable);
+      });
+      
+      event.cluster(<span class="string">"Serverless"</span>, (serverless) => {
+        <span class="keyword">const</span> func = serverless.add(<span class="keyword">new</span> Functions(<span class="string">"func"</span>));
+        <span class="keyword">const</span> appengine = serverless.add(<span class="keyword">new</span> AppEngine(<span class="string">"appengine"</span>));
+        dataflow.to(func).to(appengine);
+      });
+    });
+  });
+});
+
+<span class="keyword">const</span> svg = <span class="keyword">await</span> diagram.render();</code></pre>
+          </div>
+          <div class="diagram-section">
+            <div class="diagram-header">Rendered Diagram</div>
+            <div class="diagram-container" id="diagram4">
+              <div class="loading">Loading...</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Example 5: Exposed Pod with 3 Replicas on Kubernetes -->
+      <div class="example">
+        <h2>Example 5: Exposed Pod with 3 Replicas on Kubernetes</h2>
+        <div class="example-content">
+          <div class="code-section">
+            <div class="code-header">TypeScript Code</div>
+            <pre><code><span class="keyword">import</span> { Diagram } <span class="keyword">from</span> <span class="string">"diagrams-ts"</span>;
+<span class="keyword">import</span> { HPA } <span class="keyword">from</span> <span class="string">"diagrams-ts/providers/k8s/clusterconfig"</span>;
+<span class="keyword">import</span> { Deployment, Pod, ReplicaSet } <span class="keyword">from</span> <span class="string">"diagrams-ts/providers/k8s/compute"</span>;
+<span class="keyword">import</span> { Ingress, Service } <span class="keyword">from</span> <span class="string">"diagrams-ts/providers/k8s/network"</span>;
+
+<span class="keyword">const</span> diagram = <span class="keyword">new</span> Diagram(<span class="string">"Exposed Pod with 3 Replicas"</span>);
+
+<span class="keyword">const</span> ingress = diagram.add(<span class="keyword">new</span> Ingress(<span class="string">"domain.com"</span>));
+<span class="keyword">const</span> svc = diagram.add(<span class="keyword">new</span> Service(<span class="string">"svc"</span>));
+<span class="keyword">const</span> pods = [
+  diagram.add(<span class="keyword">new</span> Pod(<span class="string">"pod1"</span>)),
+  diagram.add(<span class="keyword">new</span> Pod(<span class="string">"pod2"</span>)),
+  diagram.add(<span class="keyword">new</span> Pod(<span class="string">"pod3"</span>)),
+];
+<span class="keyword">const</span> rs = diagram.add(<span class="keyword">new</span> ReplicaSet(<span class="string">"rs"</span>));
+<span class="keyword">const</span> dp = diagram.add(<span class="keyword">new</span> Deployment(<span class="string">"dp"</span>));
+<span class="keyword">const</span> hpa = diagram.add(<span class="keyword">new</span> HPA(<span class="string">"hpa"</span>));
+
+<span class="comment">// Forward: ingress >> svc >> pods</span>
+<span class="comment">// Reverse: pods << rs << dp << hpa</span>
+ingress.to(svc);
+svc.to(pods);
+pods.forEach(p => p.from(rs));
+rs.from(dp);
+dp.from(hpa);
+
+<span class="keyword">const</span> svg = <span class="keyword">await</span> diagram.render();</code></pre>
+          </div>
+          <div class="diagram-section">
+            <div class="diagram-header">Rendered Diagram</div>
+            <div class="diagram-container" id="diagram5">
+              <div class="loading">Loading...</div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <script type="module">
-      import { Diagram, Node } from "./dist/index.mjs";
-      import { EC2 } from "./dist/providers/aws/compute.js";
-      import { RDS } from "./dist/providers/aws/database.js";
+      import { Diagram, Cluster, Node } from "./dist/index.mjs";
+      import { EC2, ECS, EKS, Lambda } from "./dist/providers/aws/compute.js";
+      import { RDS, ElastiCache, Redshift } from "./dist/providers/aws/database.js";
+      import { ALB, Route53 } from "./dist/providers/aws/network.js";
+      import { SQS } from "./dist/providers/aws/integration.js";
+      import { S3 } from "./dist/providers/aws/storage.js";
+      import { PubSub, BigQuery, Dataflow } from "./dist/providers/gcp/analytics.js";
+      import { AppEngine, Functions } from "./dist/providers/gcp/compute.js";
+      import { BigTable } from "./dist/providers/gcp/database.js";
+      import { IotCore } from "./dist/providers/gcp/iot.js";
+      import { GCS } from "./dist/providers/gcp/storage.js";
+      import { HPA } from "./dist/providers/k8s/clusterconfig.js";
+      import { Deployment, Pod, ReplicaSet } from "./dist/providers/k8s/compute.js";
+      import { Ingress, Service } from "./dist/providers/k8s/network.js";
 
-      async function renderExample1() {
+      async function renderDiagram1() {
         try {
-          const diagram = new Diagram("Simple Flow", {
-            direction: "TB",
-            outformat: "svg",
-          });
-
-          const web = diagram.add(new Node("Web"));
-          const app = diagram.add(new Node("App"));
-          const db = diagram.add(new Node("DB"));
-          web.to(app).to(db);
-
+          const diagram = new Diagram("Grouped Workers", { direction: "TB", outformat: "svg" });
+          const lb = diagram.add(new ALB("lb"));
+          const workers = [
+            diagram.add(new EC2("worker1")),
+            diagram.add(new EC2("worker2")),
+            diagram.add(new EC2("worker3")),
+            diagram.add(new EC2("worker4")),
+            diagram.add(new EC2("worker5")),
+          ];
+          const events = diagram.add(new RDS("events"));
+          lb.to(workers);
+          workers.forEach((w) => w.to(events));
           const svg = await diagram.render();
           document.getElementById("diagram1").innerHTML = svg;
           diagram.destroy();
@@ -224,17 +432,29 @@ web.to(db);
         }
       }
 
-      async function renderExample2() {
+      async function renderDiagram2() {
         try {
-          const diagram = new Diagram("AWS", {
-            direction: "TB",
-            outformat: "svg",
+          const diagram = new Diagram("Clustered Web Services", { outformat: "svg" });
+          const dns = diagram.add(new Route53("dns"));
+          const lb = diagram.add(new ALB("lb"));
+          const memcached = diagram.add(new ElastiCache("memcached"));
+
+          diagram.cluster("Services", (svc) => {
+            const svcGroup = [
+              svc.add(new ECS("web1")),
+              svc.add(new ECS("web2")),
+              svc.add(new ECS("web3")),
+            ];
+            lb.to(svcGroup);
+            svcGroup.forEach((s) => s.to(memcached));
+
+            svc.cluster("DB Cluster", (db) => {
+              const dbPrimary = db.add(new RDS("userdb"));
+              svcGroup.forEach((s) => s.to(dbPrimary));
+            });
           });
 
-          const web = diagram.add(new EC2("Web"));
-          const db = diagram.add(new RDS("DB"));
-          web.to(db);
-
+          dns.to(lb);
           const svg = await diagram.render();
           document.getElementById("diagram2").innerHTML = svg;
           diagram.destroy();
@@ -244,8 +464,133 @@ web.to(db);
         }
       }
 
-      renderExample1();
-      renderExample2();
+      async function renderDiagram3() {
+        try {
+          const diagram = new Diagram("Event Processing", { outformat: "svg" });
+          const source = diagram.add(new EKS("k8s source"));
+          const store = diagram.add(new S3("events store"));
+          const dw = diagram.add(new Redshift("analytics"));
+
+          diagram.cluster("Event Flows", (flows) => {
+            flows.cluster("Event Workers", (workers) => {
+              const workerNodes = [
+                workers.add(new ECS("worker1")),
+                workers.add(new ECS("worker2")),
+                workers.add(new ECS("worker3")),
+              ];
+              source.to(workerNodes);
+
+              const queue = flows.add(new SQS("event queue"));
+              workerNodes.forEach((w) => w.to(queue));
+
+              flows.cluster("Processing", (proc) => {
+                const handlers = [
+                  proc.add(new Lambda("proc1")),
+                  proc.add(new Lambda("proc2")),
+                  proc.add(new Lambda("proc3")),
+                ];
+                queue.to(handlers);
+                handlers.forEach((h) => {
+                  h.to(store);
+                  h.to(dw);
+                });
+              });
+            });
+          });
+
+          const svg = await diagram.render();
+          document.getElementById("diagram3").innerHTML = svg;
+          diagram.destroy();
+        } catch (e) {
+          document.getElementById("diagram3").innerHTML =
+            '<div class="error">' + e.message + "</div>";
+        }
+      }
+
+      async function renderDiagram4() {
+        try {
+          const diagram = new Diagram("Message Collecting", { outformat: "svg" });
+          const pubsub = diagram.add(new PubSub("pubsub"));
+
+          diagram.cluster("Source of Data", (source) => {
+            const sources = [
+              source.add(new IotCore("core1")),
+              source.add(new IotCore("core2")),
+              source.add(new IotCore("core3")),
+            ];
+            sources.forEach((s) => s.to(pubsub));
+          });
+
+          diagram.cluster("Targets", (targets) => {
+            targets.cluster("Data Flow", (flow) => {
+              const dataflow = flow.add(new Dataflow("data flow"));
+              pubsub.to(dataflow);
+
+              targets.cluster("Data Lake", (lake) => {
+                const bq = lake.add(new BigQuery("bq"));
+                const gcs = lake.add(new GCS("storage"));
+                dataflow.to([bq, gcs]);
+              });
+
+              targets.cluster("Event Driven", (event) => {
+                event.cluster("Processing", (proc) => {
+                  const engine = proc.add(new AppEngine("engine"));
+                  const bigtable = proc.add(new BigTable("bigtable"));
+                  dataflow.to(engine).to(bigtable);
+                });
+
+                event.cluster("Serverless", (serverless) => {
+                  const func = serverless.add(new Functions("func"));
+                  const appengine = serverless.add(new AppEngine("appengine"));
+                  dataflow.to(func).to(appengine);
+                });
+              });
+            });
+          });
+
+          const svg = await diagram.render();
+          document.getElementById("diagram4").innerHTML = svg;
+          diagram.destroy();
+        } catch (e) {
+          document.getElementById("diagram4").innerHTML =
+            '<div class="error">' + e.message + "</div>";
+        }
+      }
+
+      async function renderDiagram5() {
+        try {
+          const diagram = new Diagram("Exposed Pod with 3 Replicas", { outformat: "svg" });
+          const ingress = diagram.add(new Ingress("domain.com"));
+          const svc = diagram.add(new Service("svc"));
+          const pods = [
+            diagram.add(new Pod("pod1")),
+            diagram.add(new Pod("pod2")),
+            diagram.add(new Pod("pod3")),
+          ];
+          const rs = diagram.add(new ReplicaSet("rs"));
+          const dp = diagram.add(new Deployment("dp"));
+          const hpa = diagram.add(new HPA("hpa"));
+
+          ingress.to(svc);
+          svc.to(pods);
+          pods.forEach((p) => p.from(rs));
+          rs.from(dp);
+          dp.from(hpa);
+
+          const svg = await diagram.render();
+          document.getElementById("diagram5").innerHTML = svg;
+          diagram.destroy();
+        } catch (e) {
+          document.getElementById("diagram5").innerHTML =
+            '<div class="error">' + e.message + "</div>";
+        }
+      }
+
+      renderDiagram1();
+      renderDiagram2();
+      renderDiagram3();
+      renderDiagram4();
+      renderDiagram5();
     </script>
   </body>
 </html>
