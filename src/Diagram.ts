@@ -1,6 +1,6 @@
 import { instance } from "@viz-js/viz";
 import type { Viz } from "@viz-js/viz";
-import { setDiagram, setCluster, clearCluster } from "./context.js";
+import { setDiagram } from "./context.js";
 import { Cluster } from "./Cluster.js";
 import type { Node } from "./Node.js";
 import { Edge } from "./Edge.js";

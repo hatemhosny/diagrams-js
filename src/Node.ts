@@ -24,7 +24,7 @@ export class Node {
   private _id: string;
   label: string;
   private _diagram: Diagram;
-  private _cluster: Cluster | undefined;
+  private _cluster?: Cluster;
   private _attrs: Record<string, string | number> = {};
 
   constructor(label = "", options: NodeOptions = {}) {
@@ -61,7 +61,7 @@ export class Node {
   _register(parent: Diagram | Cluster): void {
     if (parent instanceof Cluster) {
       this._cluster = parent;
-      this._diagram = parent._diagram;
+      this._diagram = parent.diagram;
       parent.node(this._id, this.label, this._attrs);
     } else {
       this._diagram = parent;
@@ -87,6 +87,13 @@ export class Node {
 
   get nodeId(): string {
     return this._id;
+  }
+
+  /**
+   * Get the cluster this node belongs to, if any
+   */
+  get cluster(): Cluster | undefined {
+    return this._cluster;
   }
 
   /**

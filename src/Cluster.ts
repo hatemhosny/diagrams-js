@@ -62,6 +62,14 @@ export class Cluster {
   }
 
   /**
+   * Get the diagram this cluster belongs to
+   * @internal
+   */
+  get diagram(): Diagram {
+    return this._diagram;
+  }
+
+  /**
    * Add a node to this cluster (internal method)
    */
   node(nodeId: string, label: string, attrs: Record<string, unknown>): void {

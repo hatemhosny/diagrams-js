@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vite-plus/test";
-import { Diagram, Node, Edge, Cluster } from "../src/index.js";
+import { Diagram, Node, Edge } from "../src/index.js";
 
 describe("Diagram", () => {
   it("should create a diagram with default options", () => {
