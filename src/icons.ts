@@ -177,7 +177,26 @@ function extractTitle(groupHtml: string): string | null {
 }
 
 /**
- * Inject icons into an SVG string
+ * Generate a unique ID for an icon based on its data
+ */
+function generateIconId(iconData: string): string {
+  // Simple hash of the full icon data to create a unique ID
+  // Using a subset from middle of the data to avoid common PNG headers
+  const sampleStart = Math.min(100, Math.floor(iconData.length * 0.1));
+  const sampleEnd = Math.min(sampleStart + 200, iconData.length);
+  const str = iconData.slice(sampleStart, sampleEnd);
+
+  let hash = 0;
+  for (let i = 0; i < str.length; i++) {
+    const char = str.charCodeAt(i);
+    hash = (hash << 5) - hash + char;
+    hash = hash & hash;
+  }
+  return `icon-${Math.abs(hash).toString(36)}`;
+}
+
+/**
+ * Inject icons into an SVG string using <use> tags for deduplication
  * Works in both browser and Node.js environments
  * @param svgString - The SVG string to inject icons into
  * @param nodeMap - Map of nodes to their icon keys
@@ -199,7 +218,7 @@ export function injectIcons(svgString: string, nodeMap: NodeIconMap[], iconData:
 }
 
 /**
- * Browser version using DOM APIs
+ * Browser version using DOM APIs with <use> tags for deduplication
  */
 function injectIconsBrowser(svgString: string, nodeMap: NodeIconMap[], iconData: IconData): string {
   const parser = new DOMParser();
@@ -211,6 +230,16 @@ function injectIconsBrowser(svgString: string, nodeMap: NodeIconMap[], iconData:
     return svgString;
   }
 
+  // Create defs section for icon definitions
+  let defs = svg.querySelector("defs");
+  if (!defs) {
+    defs = document.createElementNS("http://www.w3.org/2000/svg", "defs");
+    svg.insertBefore(defs, svg.firstChild);
+  }
+
+  // Track which icons have been defined
+  const definedIcons = new Map<string, string>();
+
   const nodeGroups = svg.querySelectorAll("g.node");
 
   nodeGroups.forEach((group) => {
@@ -221,6 +250,33 @@ function injectIconsBrowser(svgString: string, nodeMap: NodeIconMap[], iconData:
     const nodeInfo = nodeMap.find((nm) => nm.node.nodeId === nodeId);
 
     if (!nodeInfo || !iconData[nodeInfo.icon]) return;
+
+    const iconDataUri = iconData[nodeInfo.icon];
+    let iconRefId: string;
+
+    // Check if this icon is already defined
+    if (definedIcons.has(iconDataUri)) {
+      iconRefId = definedIcons.get(iconDataUri)!;
+    } else {
+      // Create new icon definition
+      iconRefId = generateIconId(iconDataUri);
+      definedIcons.set(iconDataUri, iconRefId);
+
+      // Create the icon definition in defs
+      const iconGroup = document.createElementNS("http://www.w3.org/2000/svg", "g");
+      iconGroup.setAttribute("id", iconRefId);
+
+      const image = document.createElementNS("http://www.w3.org/2000/svg", "image");
+      image.setAttribute("x", "-24");
+      image.setAttribute("y", "-24");
+      image.setAttribute("width", "48");
+      image.setAttribute("height", "48");
+      image.setAttribute("href", iconDataUri);
+      image.setAttribute("preserveAspectRatio", "xMidYMid meet");
+
+      iconGroup.appendChild(image);
+      defs!.appendChild(iconGroup);
+    }
 
     let x: number;
     let y: number;
@@ -292,15 +348,13 @@ function injectIconsBrowser(svgString: string, nodeMap: NodeIconMap[], iconData:
       }
     }
 
-    const image = document.createElementNS("http://www.w3.org/2000/svg", "image");
-    image.setAttribute("x", String(x - 24));
-    image.setAttribute("y", String(y - 24));
-    image.setAttribute("width", "48");
-    image.setAttribute("height", "48");
-    image.setAttribute("href", iconData[nodeInfo.icon]);
-    image.setAttribute("preserveAspectRatio", "xMidYMid meet");
+    // Use <use> tag to reference the icon definition
+    const use = document.createElementNS("http://www.w3.org/2000/svg", "use");
+    use.setAttribute("href", `#${iconRefId}`);
+    use.setAttribute("x", String(x));
+    use.setAttribute("y", String(y));
 
-    group.appendChild(image);
+    group.appendChild(use);
   });
 
   const serializer = new XMLSerializer();
@@ -308,13 +362,20 @@ function injectIconsBrowser(svgString: string, nodeMap: NodeIconMap[], iconData:
 }
 
 /**
- * Node.js version using regex
+ * Node.js version using regex with <use> tags for deduplication
  */
 function injectIconsNode(svgString: string, nodeMap: NodeIconMap[], iconData: IconData): string {
+  // Track which icons have been defined
+  const definedIcons = new Map<string, string>();
+  const defsElements: string[] = [];
+
   // Find all node groups
   const nodeGroupRegex = /<g[^>]*class="node"[^>]*>([\s\S]*?)<\/g>/g;
   let result = svgString;
   let match;
+
+  // First pass: collect all unique icons and generate use elements
+  const replacements: Array<{ original: string; replacement: string }> = [];
 
   while ((match = nodeGroupRegex.exec(svgString)) !== null) {
     const groupHtml = match[0];
@@ -325,15 +386,43 @@ function injectIconsNode(svgString: string, nodeMap: NodeIconMap[], iconData: Ic
     const nodeInfo = nodeMap.find((nm) => nm.node.nodeId === title);
     if (!nodeInfo || !iconData[nodeInfo.icon]) continue;
 
+    const iconDataUri = iconData[nodeInfo.icon];
+    let iconRefId: string;
+
+    // Check if this icon is already defined
+    if (definedIcons.has(iconDataUri)) {
+      iconRefId = definedIcons.get(iconDataUri)!;
+    } else {
+      // Create new icon definition
+      iconRefId = generateIconId(iconDataUri);
+      definedIcons.set(iconDataUri, iconRefId);
+
+      // Create the icon definition for defs
+      const iconDef = `<g id="${iconRefId}"><image x="-24" y="-24" width="48" height="48" href="${iconDataUri}" preserveAspectRatio="xMidYMid meet"/></g>`;
+      defsElements.push(iconDef);
+    }
+
     const pos = extractPosition(groupHtml);
     if (!pos) continue;
 
-    // Create image element
-    const imageElement = `<image x="${pos.x - 24}" y="${pos.y - 24}" width="48" height="48" href="${iconData[nodeInfo.icon]}" preserveAspectRatio="xMidYMid meet"/>`;
+    // Create use element referencing the icon
+    const useElement = `<use href="#${iconRefId}" x="${pos.x}" y="${pos.y}"/>`;
 
-    // Insert image before closing </g>
-    const newGroupHtml = groupHtml.replace(/<\/g>$/, `${imageElement}</g>`);
-    result = result.replace(groupHtml, newGroupHtml);
+    // Insert use element before closing </g>
+    const newGroupHtml = groupHtml.replace(/<\/g>$/, `${useElement}</g>`);
+    replacements.push({ original: groupHtml, replacement: newGroupHtml });
+  }
+
+  // Apply all replacements
+  for (const { original, replacement } of replacements) {
+    result = result.replace(original, replacement);
+  }
+
+  // Insert defs section if we have icons
+  if (defsElements.length > 0) {
+    const defsSection = `<defs>\n${defsElements.join("\n")}\n</defs>`;
+    // Insert defs after the opening <svg> tag
+    result = result.replace(/(<svg[^>]*>)/, `$1\n${defsSection}`);
   }
 
   return result;
