@@ -11,7 +11,7 @@ Clusters allow you to group related nodes together visually.
 
 ```typescript
 import { Diagram } from "ts-diagrams";
-import { ECS } from "ts-diagrams/providers/aws/compute";
+import { ECS } from "ts-diagrams/aws/compute";
 
 const diagram = new Diagram("Clustered Services");
 
@@ -44,9 +44,9 @@ web.to(api);
 
 ```typescript
 import { Diagram } from "ts-diagrams";
-import { ECS } from "ts-diagrams/providers/aws/compute";
-import { RDS } from "ts-diagrams/providers/aws/database";
-import { ALB } from "ts-diagrams/providers/aws/network";
+import { ECS } from "ts-diagrams/aws/compute";
+import { RDS } from "ts-diagrams/aws/database";
+import { ALB } from "ts-diagrams/aws/network";
 
 const diagram = new Diagram("Full Architecture");
 

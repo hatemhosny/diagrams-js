@@ -138,9 +138,9 @@
           <div class="code-section">
             <div class="code-header">TypeScript Code</div>
             <pre><code class="language-typescript">import { Diagram } from "ts-diagrams";
-import { EC2 } from "ts-diagrams/providers/aws/compute";
-import { RDS } from "ts-diagrams/providers/aws/database";
-import { ALB } from "ts-diagrams/providers/aws/network";
+import { EC2 } from "ts-diagrams/aws/compute";
+import { RDS } from "ts-diagrams/aws/database";
+import { ALB } from "ts-diagrams/aws/network";
 
 const diagram = new Diagram("Grouped Workers", {
   direction: "TB",
@@ -177,9 +177,9 @@ const svg = await diagram.render();</code></pre>
           <div class="code-section">
             <div class="code-header">TypeScript Code</div>
             <pre><code class="language-typescript">import { Diagram } from "ts-diagrams";
-import { ECS } from "ts-diagrams/providers/aws/compute";
-import { RDS, ElastiCache } from "ts-diagrams/providers/aws/database";
-import { ALB, Route53 } from "ts-diagrams/providers/aws/network";
+import { ECS } from "ts-diagrams/aws/compute";
+import { RDS, ElastiCache } from "ts-diagrams/aws/database";
+import { ALB, Route53 } from "ts-diagrams/aws/network";
 
 const diagram = new Diagram("Clustered Web Services");
 
@@ -223,10 +223,10 @@ const svg = await diagram.render();</code></pre>
           <div class="code-section">
             <div class="code-header">TypeScript Code</div>
             <pre><code class="language-typescript">import { Diagram } from "ts-diagrams";
-import { ECS, EKS, Lambda } from "ts-diagrams/providers/aws/compute";
-import { Redshift } from "ts-diagrams/providers/aws/database";
-import { SQS } from "ts-diagrams/providers/aws/integration";
-import { S3 } from "ts-diagrams/providers/aws/storage";
+import { ECS, EKS, Lambda } from "ts-diagrams/aws/compute";
+import { Redshift } from "ts-diagrams/aws/database";
+import { SQS } from "ts-diagrams/aws/integration";
+import { S3 } from "ts-diagrams/aws/storage";
 
 const diagram = new Diagram("Event Processing");
 
@@ -277,11 +277,11 @@ const svg = await diagram.render();</code></pre>
           <div class="code-section">
             <div class="code-header">TypeScript Code</div>
             <pre><code class="language-typescript">import { Diagram } from "ts-diagrams";
-import { BigQuery, Dataflow, PubSub } from "ts-diagrams/providers/gcp/analytics";
-import { AppEngine, Functions } from "ts-diagrams/providers/gcp/compute";
-import { BigTable } from "ts-diagrams/providers/gcp/database";
-import { IotCore } from "ts-diagrams/providers/gcp/iot";
-import { GCS } from "ts-diagrams/providers/gcp/storage";
+import { BigQuery, Dataflow, PubSub } from "ts-diagrams/gcp/analytics";
+import { AppEngine, Functions } from "ts-diagrams/gcp/compute";
+import { BigTable } from "ts-diagrams/gcp/database";
+import { IotCore } from "ts-diagrams/gcp/iot";
+import { GCS } from "ts-diagrams/gcp/storage";
 
 const diagram = new Diagram("Message Collecting");
 
@@ -335,9 +335,9 @@ const svg = await diagram.render();</code></pre>
           <div class="code-section">
             <div class="code-header">TypeScript Code</div>
             <pre><code class="language-typescript">import { Diagram } from "ts-diagrams";
-import { HPA } from "ts-diagrams/providers/k8s/clusterconfig";
-import { Deployment, Pod, ReplicaSet } from "ts-diagrams/providers/k8s/compute";
-import { Ingress, Service } from "ts-diagrams/providers/k8s/network";
+import { HPA } from "ts-diagrams/k8s/clusterconfig";
+import { Deployment, Pod, ReplicaSet } from "ts-diagrams/k8s/compute";
+import { Ingress, Service } from "ts-diagrams/k8s/network";
 
 const diagram = new Diagram("Exposed Pod with 3 Replicas");
 

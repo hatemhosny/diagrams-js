@@ -76,8 +76,8 @@ ts-diagrams/
 
 ```typescript
 import { Diagram, setIconBaseDir } from "ts-diagrams";
-import { EC2, S3, Lambda } from "ts-diagrams/providers/aws/compute";
-import { RDS } from "ts-diagrams/providers/aws/database";
+import { EC2, S3, Lambda } from "ts-diagrams/aws/compute";
+import { RDS } from "ts-diagrams/aws/database";
 
 setIconBaseDir("resources");
 
@@ -101,7 +101,7 @@ Only the providers you import are included in your bundle:
 
 ```typescript
 // ✅ Good - Only AWS compute classes bundled
-import { EC2 } from "ts-diagrams/providers/aws/compute";
+import { EC2 } from "ts-diagrams/aws/compute";
 
 // ❌ Bad - Would bundle entire library
 import * as providers from "ts-diagrams/providers";
@@ -145,7 +145,7 @@ npm install ts-diagrams
 ```typescript
 // Works out of the box
 import { Diagram } from "ts-diagrams";
-import { EC2 } from "ts-diagrams/providers/aws/compute";
+import { EC2 } from "ts-diagrams/aws/compute";
 ```
 
 ## Build Output

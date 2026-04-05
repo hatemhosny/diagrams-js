@@ -9,32 +9,32 @@ ts-diagrams includes 17 providers with over 1000 node classes.
 
 ## Available Providers
 
-| Provider          | Import Path                            | Services                     |
-| ----------------- | -------------------------------------- | ---------------------------- |
-| **AWS**           | `ts-diagrams/providers/aws/*`          | 500+ services                |
-| **Azure**         | `ts-diagrams/providers/azure/*`        | 400+ services                |
-| **GCP**           | `ts-diagrams/providers/gcp/*`          | 100+ services                |
-| **Kubernetes**    | `ts-diagrams/providers/k8s/*`          | Pods, Deployments, Services  |
-| **Alibaba Cloud** | `ts-diagrams/providers/alibabacloud/*` | Compute, Database, Network   |
-| **DigitalOcean**  | `ts-diagrams/providers/digitalocean/*` | Compute, Database, Network   |
-| **Elastic**       | `ts-diagrams/providers/elastic/*`      | Elasticsearch, Kibana, Beats |
-| **Firebase**      | `ts-diagrams/providers/firebase/*`     | Develop, Grow, Quality       |
-| **Generic**       | `ts-diagrams/providers/generic/*`      | VPN, OS, Storage             |
-| **GIS**           | `ts-diagrams/providers/gis/*`          | Data, Desktop, Mobile        |
-| **IBM**           | `ts-diagrams/providers/ibm/*`          | Compute, Data, Network       |
-| **OCI**           | `ts-diagrams/providers/oci/*`          | Oracle Cloud Infrastructure  |
-| **On-Premises**   | `ts-diagrams/providers/onprem/*`       | Docker, Kubernetes, DBs      |
-| **OpenStack**     | `ts-diagrams/providers/openstack/*`    | Compute, Networking          |
-| **Outscale**      | `ts-diagrams/providers/outscale/*`     | Compute, Network             |
-| **Programming**   | `ts-diagrams/providers/programming/*`  | Languages, Frameworks        |
-| **SaaS**          | `ts-diagrams/providers/saas/*`         | Third-party services         |
+| Provider          | Import Path                  | Services                     |
+| ----------------- | ---------------------------- | ---------------------------- |
+| **AWS**           | `ts-diagrams/aws/*`          | 500+ services                |
+| **Azure**         | `ts-diagrams/azure/*`        | 400+ services                |
+| **GCP**           | `ts-diagrams/gcp/*`          | 100+ services                |
+| **Kubernetes**    | `ts-diagrams/k8s/*`          | Pods, Deployments, Services  |
+| **Alibaba Cloud** | `ts-diagrams/alibabacloud/*` | Compute, Database, Network   |
+| **DigitalOcean**  | `ts-diagrams/digitalocean/*` | Compute, Database, Network   |
+| **Elastic**       | `ts-diagrams/elastic/*`      | Elasticsearch, Kibana, Beats |
+| **Firebase**      | `ts-diagrams/firebase/*`     | Develop, Grow, Quality       |
+| **Generic**       | `ts-diagrams/generic/*`      | VPN, OS, Storage             |
+| **GIS**           | `ts-diagrams/gis/*`          | Data, Desktop, Mobile        |
+| **IBM**           | `ts-diagrams/ibm/*`          | Compute, Data, Network       |
+| **OCI**           | `ts-diagrams/oci/*`          | Oracle Cloud Infrastructure  |
+| **On-Premises**   | `ts-diagrams/onprem/*`       | Docker, Kubernetes, DBs      |
+| **OpenStack**     | `ts-diagrams/openstack/*`    | Compute, Networking          |
+| **Outscale**      | `ts-diagrams/outscale/*`     | Compute, Network             |
+| **Programming**   | `ts-diagrams/programming/*`  | Languages, Frameworks        |
+| **SaaS**          | `ts-diagrams/saas/*`         | Third-party services         |
 
 ## Usage
 
 ```typescript
-import { EC2, Lambda } from "ts-diagrams/providers/aws/compute";
-import { RDS } from "ts-diagrams/providers/aws/database";
-import { GCE } from "ts-diagrams/providers/gcp/compute";
+import { EC2, Lambda } from "ts-diagrams/aws/compute";
+import { RDS } from "ts-diagrams/aws/database";
+import { GCE } from "ts-diagrams/gcp/compute";
 ```
 
 ## Provider Structure

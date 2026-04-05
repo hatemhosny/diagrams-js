@@ -21,9 +21,9 @@ A TypeScript port of the [diagrams](https://github.com/mingrammer/diagrams) Pyth
 
 ```typescript
 import { Diagram } from "ts-diagrams";
-import { EC2, Lambda } from "ts-diagrams/providers/aws/compute";
-import { RDS } from "ts-diagrams/providers/aws/database";
-import { S3 } from "ts-diagrams/providers/aws/storage";
+import { EC2, Lambda } from "ts-diagrams/aws/compute";
+import { RDS } from "ts-diagrams/aws/database";
+import { S3 } from "ts-diagrams/aws/storage";
 
 const diagram = new Diagram("Web Architecture");
 

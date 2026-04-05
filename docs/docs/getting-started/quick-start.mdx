@@ -11,7 +11,7 @@ Let's create your first diagram!
 
 ```typescript
 import { Diagram } from "ts-diagrams";
-import { EC2 } from "ts-diagrams/providers/aws/compute";
+import { EC2 } from "ts-diagrams/aws/compute";
 
 const diagram = new Diagram("My First Diagram");
 const server = diagram.add(new EC2("Web Server"));
@@ -24,8 +24,8 @@ console.log(svg);
 
 ```typescript
 import { Diagram } from "ts-diagrams";
-import { EC2 } from "ts-diagrams/providers/aws/compute";
-import { RDS } from "ts-diagrams/providers/aws/database";
+import { EC2 } from "ts-diagrams/aws/compute";
+import { RDS } from "ts-diagrams/aws/database";
 
 const diagram = new Diagram("Web Architecture");
 
@@ -42,9 +42,9 @@ const svg = await diagram.render();
 
 ```typescript
 import { Diagram } from "ts-diagrams";
-import { EC2 } from "ts-diagrams/providers/aws/compute";
-import { RDS } from "ts-diagrams/providers/aws/database";
-import { S3 } from "ts-diagrams/providers/aws/storage";
+import { EC2 } from "ts-diagrams/aws/compute";
+import { RDS } from "ts-diagrams/aws/database";
+import { S3 } from "ts-diagrams/aws/storage";
 
 const diagram = new Diagram("Full Stack");
 
