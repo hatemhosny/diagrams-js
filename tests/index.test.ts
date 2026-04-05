@@ -543,6 +543,15 @@ describe("Custom Nodes", () => {
     const iconDefMatches = resultStr.match(/<g id="icon-/g);
     expect(iconDefMatches?.length).toBe(2);
 
+    // Extract the icon IDs and verify they are different
+    const idMatches = resultStr.match(/<g id="(icon-[^"]+)"/g);
+    expect(idMatches?.length).toBe(2);
+    if (idMatches) {
+      const id1 = idMatches[0].replace('<g id="', "").replace('"', "");
+      const id2 = idMatches[1].replace('<g id="', "").replace('"', "");
+      expect(id1).not.toBe(id2);
+    }
+
     diagram.destroy();
   });
 });

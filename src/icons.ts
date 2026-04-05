@@ -181,14 +181,11 @@ function extractTitle(groupHtml: string): string | null {
  */
 function generateIconId(iconData: string): string {
   // Simple hash of the full icon data to create a unique ID
-  // Using a subset from middle of the data to avoid common PNG headers
-  const sampleStart = Math.min(100, Math.floor(iconData.length * 0.1));
-  const sampleEnd = Math.min(sampleStart + 200, iconData.length);
-  const str = iconData.slice(sampleStart, sampleEnd);
+  // Use the entire data URL to ensure uniqueness
 
   let hash = 0;
-  for (let i = 0; i < str.length; i++) {
-    const char = str.charCodeAt(i);
+  for (let i = 0; i < iconData.length; i++) {
+    const char = iconData.charCodeAt(i);
     hash = (hash << 5) - hash + char;
     hash = hash & hash;
   }
