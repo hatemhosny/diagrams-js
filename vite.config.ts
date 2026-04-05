@@ -21,6 +21,7 @@ export default defineConfig({
       typeAware: true,
       typeCheck: true,
     },
+    ignorePatterns: ["**/docs/**"],
   },
   fmt: {},
   resolve: {

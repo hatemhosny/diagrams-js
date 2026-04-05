@@ -134,7 +134,7 @@ async function buildTypes() {
   console.log("Building types...");
 
   try {
-    execSync("npx tsgo --rootDir src --outDir temp");
+    execSync("npx tsgo");
     await fs.promises.cp(path.join("temp", "providers"), path.join("dist", "providers"), {
       recursive: true,
     });
