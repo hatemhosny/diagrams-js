@@ -22,96 +22,142 @@ import vertex_aiIcon from "../../../resources/gcp/ml/vertex-ai.png";
 import video_intelligence_apiIcon from "../../../resources/gcp/ml/video-intelligence-api.png";
 import vision_apiIcon from "../../../resources/gcp/ml/vision-api.png";
 
-class _Ml extends _Gcp {
-  protected static override _type = "ml";
+function _Ml(label?: string, options?: Record<string, unknown>) {
+  const node = _Gcp(label, options);
+  (node as unknown as Record<string, unknown>)._type = "ml";
+  return node;
 }
 
-export class AdvancedSolutionsLab extends _Ml {
-  protected static _iconDataUrl = advanced_solutions_labIcon;
+export function AdvancedSolutionsLab(label?: string, options?: Record<string, unknown>) {
+  const node = _Ml(label ?? "AdvancedSolutionsLab", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = advanced_solutions_labIcon;
+  return node;
 }
 
-export class AIHub extends _Ml {
-  protected static _iconDataUrl = ai_hubIcon;
+export function AIHub(label?: string, options?: Record<string, unknown>) {
+  const node = _Ml(label ?? "AIHub", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = ai_hubIcon;
+  return node;
 }
 
-export class AIPlatformDataLabelingService extends _Ml {
-  protected static _iconDataUrl = ai_platform_data_labeling_serviceIcon;
+export function AIPlatformDataLabelingService(label?: string, options?: Record<string, unknown>) {
+  const node = _Ml(label ?? "AIPlatformDataLabelingService", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = ai_platform_data_labeling_serviceIcon;
+  return node;
 }
 
-export class AIPlatform extends _Ml {
-  protected static _iconDataUrl = ai_platformIcon;
+export function AIPlatform(label?: string, options?: Record<string, unknown>) {
+  const node = _Ml(label ?? "AIPlatform", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = ai_platformIcon;
+  return node;
 }
 
-export class AutomlNaturalLanguage extends _Ml {
-  protected static _iconDataUrl = automl_natural_languageIcon;
+export function AutomlNaturalLanguage(label?: string, options?: Record<string, unknown>) {
+  const node = _Ml(label ?? "AutomlNaturalLanguage", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = automl_natural_languageIcon;
+  return node;
 }
 
-export class AutomlTables extends _Ml {
-  protected static _iconDataUrl = automl_tablesIcon;
+export function AutomlTables(label?: string, options?: Record<string, unknown>) {
+  const node = _Ml(label ?? "AutomlTables", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = automl_tablesIcon;
+  return node;
 }
 
-export class AutomlTranslation extends _Ml {
-  protected static _iconDataUrl = automl_translationIcon;
+export function AutomlTranslation(label?: string, options?: Record<string, unknown>) {
+  const node = _Ml(label ?? "AutomlTranslation", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = automl_translationIcon;
+  return node;
 }
 
-export class AutomlVideoIntelligence extends _Ml {
-  protected static _iconDataUrl = automl_video_intelligenceIcon;
+export function AutomlVideoIntelligence(label?: string, options?: Record<string, unknown>) {
+  const node = _Ml(label ?? "AutomlVideoIntelligence", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = automl_video_intelligenceIcon;
+  return node;
 }
 
-export class AutomlVision extends _Ml {
-  protected static _iconDataUrl = automl_visionIcon;
+export function AutomlVision(label?: string, options?: Record<string, unknown>) {
+  const node = _Ml(label ?? "AutomlVision", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = automl_visionIcon;
+  return node;
 }
 
-export class Automl extends _Ml {
-  protected static _iconDataUrl = automlIcon;
+export function Automl(label?: string, options?: Record<string, unknown>) {
+  const node = _Ml(label ?? "Automl", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = automlIcon;
+  return node;
 }
 
-export class DialogFlowEnterpriseEdition extends _Ml {
-  protected static _iconDataUrl = dialog_flow_enterprise_editionIcon;
+export function DialogFlowEnterpriseEdition(label?: string, options?: Record<string, unknown>) {
+  const node = _Ml(label ?? "DialogFlowEnterpriseEdition", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = dialog_flow_enterprise_editionIcon;
+  return node;
 }
 
-export class InferenceAPI extends _Ml {
-  protected static _iconDataUrl = inference_apiIcon;
+export function InferenceAPI(label?: string, options?: Record<string, unknown>) {
+  const node = _Ml(label ?? "InferenceAPI", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = inference_apiIcon;
+  return node;
 }
 
-export class JobsAPI extends _Ml {
-  protected static _iconDataUrl = jobs_apiIcon;
+export function JobsAPI(label?: string, options?: Record<string, unknown>) {
+  const node = _Ml(label ?? "JobsAPI", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = jobs_apiIcon;
+  return node;
 }
 
-export class NaturalLanguageAPI extends _Ml {
-  protected static _iconDataUrl = natural_language_apiIcon;
+export function NaturalLanguageAPI(label?: string, options?: Record<string, unknown>) {
+  const node = _Ml(label ?? "NaturalLanguageAPI", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = natural_language_apiIcon;
+  return node;
 }
 
-export class RecommendationsAI extends _Ml {
-  protected static _iconDataUrl = recommendations_aiIcon;
+export function RecommendationsAI(label?: string, options?: Record<string, unknown>) {
+  const node = _Ml(label ?? "RecommendationsAI", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = recommendations_aiIcon;
+  return node;
 }
 
-export class SpeechToText extends _Ml {
-  protected static _iconDataUrl = speech_to_textIcon;
+export function SpeechToText(label?: string, options?: Record<string, unknown>) {
+  const node = _Ml(label ?? "SpeechToText", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = speech_to_textIcon;
+  return node;
 }
 
-export class TextToSpeech extends _Ml {
-  protected static _iconDataUrl = text_to_speechIcon;
+export function TextToSpeech(label?: string, options?: Record<string, unknown>) {
+  const node = _Ml(label ?? "TextToSpeech", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = text_to_speechIcon;
+  return node;
 }
 
-export class TPU extends _Ml {
-  protected static _iconDataUrl = tpuIcon;
+export function TPU(label?: string, options?: Record<string, unknown>) {
+  const node = _Ml(label ?? "TPU", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = tpuIcon;
+  return node;
 }
 
-export class TranslationAPI extends _Ml {
-  protected static _iconDataUrl = translation_apiIcon;
+export function TranslationAPI(label?: string, options?: Record<string, unknown>) {
+  const node = _Ml(label ?? "TranslationAPI", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = translation_apiIcon;
+  return node;
 }
 
-export class VertexAI extends _Ml {
-  protected static _iconDataUrl = vertex_aiIcon;
+export function VertexAI(label?: string, options?: Record<string, unknown>) {
+  const node = _Ml(label ?? "VertexAI", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = vertex_aiIcon;
+  return node;
 }
 
-export class VideoIntelligenceAPI extends _Ml {
-  protected static _iconDataUrl = video_intelligence_apiIcon;
+export function VideoIntelligenceAPI(label?: string, options?: Record<string, unknown>) {
+  const node = _Ml(label ?? "VideoIntelligenceAPI", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = video_intelligence_apiIcon;
+  return node;
 }
 
-export class VisionAPI extends _Ml {
-  protected static _iconDataUrl = vision_apiIcon;
+export function VisionAPI(label?: string, options?: Record<string, unknown>) {
+  const node = _Ml(label ?? "VisionAPI", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = vision_apiIcon;
+  return node;
 }
 
 // Aliases

@@ -1,10 +1,14 @@
 import { _Openstack } from "./index.js";
 import kuryrIcon from "../../../resources/openstack/containerservices/kuryr.png";
 
-class _Containerservices extends _Openstack {
-  protected static override _type = "containerservices";
+function _Containerservices(label?: string, options?: Record<string, unknown>) {
+  const node = _Openstack(label, options);
+  (node as unknown as Record<string, unknown>)._type = "containerservices";
+  return node;
 }
 
-export class Kuryr extends _Containerservices {
-  protected static _iconDataUrl = kuryrIcon;
+export function Kuryr(label?: string, options?: Record<string, unknown>) {
+  const node = _Containerservices(label ?? "Kuryr", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = kuryrIcon;
+  return node;
 }

@@ -6,30 +6,44 @@ import api_serviceIcon from "../../../resources/oci/devops/api-service.png";
 import resource_mgmt_whiteIcon from "../../../resources/oci/devops/resource-mgmt-white.png";
 import resource_mgmtIcon from "../../../resources/oci/devops/resource-mgmt.png";
 
-class _Devops extends _Oci {
-  protected static override _type = "devops";
+function _Devops(label?: string, options?: Record<string, unknown>) {
+  const node = _Oci(label, options);
+  (node as unknown as Record<string, unknown>)._type = "devops";
+  return node;
 }
 
-export class APIGatewayWhite extends _Devops {
-  protected static _iconDataUrl = api_gateway_whiteIcon;
+export function APIGatewayWhite(label?: string, options?: Record<string, unknown>) {
+  const node = _Devops(label ?? "APIGatewayWhite", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = api_gateway_whiteIcon;
+  return node;
 }
 
-export class APIGateway extends _Devops {
-  protected static _iconDataUrl = api_gatewayIcon;
+export function APIGateway(label?: string, options?: Record<string, unknown>) {
+  const node = _Devops(label ?? "APIGateway", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = api_gatewayIcon;
+  return node;
 }
 
-export class APIServiceWhite extends _Devops {
-  protected static _iconDataUrl = api_service_whiteIcon;
+export function APIServiceWhite(label?: string, options?: Record<string, unknown>) {
+  const node = _Devops(label ?? "APIServiceWhite", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = api_service_whiteIcon;
+  return node;
 }
 
-export class APIService extends _Devops {
-  protected static _iconDataUrl = api_serviceIcon;
+export function APIService(label?: string, options?: Record<string, unknown>) {
+  const node = _Devops(label ?? "APIService", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = api_serviceIcon;
+  return node;
 }
 
-export class ResourceMgmtWhite extends _Devops {
-  protected static _iconDataUrl = resource_mgmt_whiteIcon;
+export function ResourceMgmtWhite(label?: string, options?: Record<string, unknown>) {
+  const node = _Devops(label ?? "ResourceMgmtWhite", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = resource_mgmt_whiteIcon;
+  return node;
 }
 
-export class ResourceMgmt extends _Devops {
-  protected static _iconDataUrl = resource_mgmtIcon;
+export function ResourceMgmt(label?: string, options?: Record<string, unknown>) {
+  const node = _Devops(label ?? "ResourceMgmt", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = resource_mgmtIcon;
+  return node;
 }

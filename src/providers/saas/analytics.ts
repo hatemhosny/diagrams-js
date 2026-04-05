@@ -3,18 +3,26 @@ import dataformIcon from "../../../resources/saas/analytics/dataform.png";
 import snowflakeIcon from "../../../resources/saas/analytics/snowflake.png";
 import stitchIcon from "../../../resources/saas/analytics/stitch.png";
 
-class _Analytics extends _Saas {
-  protected static override _type = "analytics";
+function _Analytics(label?: string, options?: Record<string, unknown>) {
+  const node = _Saas(label, options);
+  (node as unknown as Record<string, unknown>)._type = "analytics";
+  return node;
 }
 
-export class Dataform extends _Analytics {
-  protected static _iconDataUrl = dataformIcon;
+export function Dataform(label?: string, options?: Record<string, unknown>) {
+  const node = _Analytics(label ?? "Dataform", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = dataformIcon;
+  return node;
 }
 
-export class Snowflake extends _Analytics {
-  protected static _iconDataUrl = snowflakeIcon;
+export function Snowflake(label?: string, options?: Record<string, unknown>) {
+  const node = _Analytics(label ?? "Snowflake", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = snowflakeIcon;
+  return node;
 }
 
-export class Stitch extends _Analytics {
-  protected static _iconDataUrl = stitchIcon;
+export function Stitch(label?: string, options?: Record<string, unknown>) {
+  const node = _Analytics(label ?? "Stitch", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = stitchIcon;
+  return node;
 }

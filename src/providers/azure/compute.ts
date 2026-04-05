@@ -53,220 +53,329 @@ import vmIcon from "../../../resources/azure/compute/vm.png";
 import workspaces_2Icon from "../../../resources/azure/compute/workspaces-2.png";
 import workspacesIcon from "../../../resources/azure/compute/workspaces.png";
 
-class _Compute extends _Azure {
-  protected static override _type = "compute";
+function _Compute(label?: string, options?: Record<string, unknown>) {
+  const node = _Azure(label, options);
+  (node as unknown as Record<string, unknown>)._type = "compute";
+  return node;
 }
 
-export class AppServices extends _Compute {
-  protected static _iconDataUrl = app_servicesIcon;
+export function AppServices(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "AppServices", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = app_servicesIcon;
+  return node;
 }
 
-export class ApplicationGroup extends _Compute {
-  protected static _iconDataUrl = application_groupIcon;
+export function ApplicationGroup(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "ApplicationGroup", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = application_groupIcon;
+  return node;
 }
 
-export class AutomanagedVM extends _Compute {
-  protected static _iconDataUrl = automanaged_vmIcon;
+export function AutomanagedVM(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "AutomanagedVM", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = automanaged_vmIcon;
+  return node;
 }
 
-export class AvailabilitySets extends _Compute {
-  protected static _iconDataUrl = availability_setsIcon;
+export function AvailabilitySets(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "AvailabilitySets", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = availability_setsIcon;
+  return node;
 }
 
-export class AzureComputeGalleries extends _Compute {
-  protected static _iconDataUrl = azure_compute_galleriesIcon;
+export function AzureComputeGalleries(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "AzureComputeGalleries", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_compute_galleriesIcon;
+  return node;
 }
 
-export class AzureSpringApps extends _Compute {
-  protected static _iconDataUrl = azure_spring_appsIcon;
+export function AzureSpringApps(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "AzureSpringApps", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_spring_appsIcon;
+  return node;
 }
 
-export class BatchAccounts extends _Compute {
-  protected static _iconDataUrl = batch_accountsIcon;
+export function BatchAccounts(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "BatchAccounts", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = batch_accountsIcon;
+  return node;
 }
 
-export class CitrixVirtualDesktopsEssentials extends _Compute {
-  protected static _iconDataUrl = citrix_virtual_desktops_essentialsIcon;
+export function CitrixVirtualDesktopsEssentials(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "CitrixVirtualDesktopsEssentials", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl =
+    citrix_virtual_desktops_essentialsIcon;
+  return node;
 }
 
-export class CloudServicesClassic extends _Compute {
-  protected static _iconDataUrl = cloud_services_classicIcon;
+export function CloudServicesClassic(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "CloudServicesClassic", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = cloud_services_classicIcon;
+  return node;
 }
 
-export class CloudServices extends _Compute {
-  protected static _iconDataUrl = cloud_servicesIcon;
+export function CloudServices(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "CloudServices", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = cloud_servicesIcon;
+  return node;
 }
 
-export class CloudsimpleVirtualMachines extends _Compute {
-  protected static _iconDataUrl = cloudsimple_virtual_machinesIcon;
+export function CloudsimpleVirtualMachines(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "CloudsimpleVirtualMachines", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = cloudsimple_virtual_machinesIcon;
+  return node;
 }
 
-export class ContainerApps extends _Compute {
-  protected static _iconDataUrl = container_appsIcon;
+export function ContainerApps(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "ContainerApps", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = container_appsIcon;
+  return node;
 }
 
-export class ContainerInstances extends _Compute {
-  protected static _iconDataUrl = container_instancesIcon;
+export function ContainerInstances(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "ContainerInstances", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = container_instancesIcon;
+  return node;
 }
 
-export class ContainerRegistries extends _Compute {
-  protected static _iconDataUrl = container_registriesIcon;
+export function ContainerRegistries(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "ContainerRegistries", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = container_registriesIcon;
+  return node;
 }
 
-export class ContainerServicesDeprecated extends _Compute {
-  protected static _iconDataUrl = container_services_deprecatedIcon;
+export function ContainerServicesDeprecated(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "ContainerServicesDeprecated", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = container_services_deprecatedIcon;
+  return node;
 }
 
-export class DiskEncryptionSets extends _Compute {
-  protected static _iconDataUrl = disk_encryption_setsIcon;
+export function DiskEncryptionSets(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "DiskEncryptionSets", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = disk_encryption_setsIcon;
+  return node;
 }
 
-export class DiskSnapshots extends _Compute {
-  protected static _iconDataUrl = disk_snapshotsIcon;
+export function DiskSnapshots(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "DiskSnapshots", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = disk_snapshotsIcon;
+  return node;
 }
 
-export class DisksClassic extends _Compute {
-  protected static _iconDataUrl = disks_classicIcon;
+export function DisksClassic(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "DisksClassic", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = disks_classicIcon;
+  return node;
 }
 
-export class DisksSnapshots extends _Compute {
-  protected static _iconDataUrl = disks_snapshotsIcon;
+export function DisksSnapshots(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "DisksSnapshots", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = disks_snapshotsIcon;
+  return node;
 }
 
-export class Disks extends _Compute {
-  protected static _iconDataUrl = disksIcon;
+export function Disks(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "Disks", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = disksIcon;
+  return node;
 }
 
-export class FunctionApps extends _Compute {
-  protected static _iconDataUrl = function_appsIcon;
+export function FunctionApps(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "FunctionApps", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = function_appsIcon;
+  return node;
 }
 
-export class HostGroups extends _Compute {
-  protected static _iconDataUrl = host_groupsIcon;
+export function HostGroups(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "HostGroups", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = host_groupsIcon;
+  return node;
 }
 
-export class HostPools extends _Compute {
-  protected static _iconDataUrl = host_poolsIcon;
+export function HostPools(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "HostPools", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = host_poolsIcon;
+  return node;
 }
 
-export class Hosts extends _Compute {
-  protected static _iconDataUrl = hostsIcon;
+export function Hosts(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "Hosts", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = hostsIcon;
+  return node;
 }
 
-export class ImageDefinitions extends _Compute {
-  protected static _iconDataUrl = image_definitionsIcon;
+export function ImageDefinitions(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "ImageDefinitions", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = image_definitionsIcon;
+  return node;
 }
 
-export class ImageTemplates extends _Compute {
-  protected static _iconDataUrl = image_templatesIcon;
+export function ImageTemplates(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "ImageTemplates", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = image_templatesIcon;
+  return node;
 }
 
-export class ImageVersions extends _Compute {
-  protected static _iconDataUrl = image_versionsIcon;
+export function ImageVersions(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "ImageVersions", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = image_versionsIcon;
+  return node;
 }
 
-export class Images extends _Compute {
-  protected static _iconDataUrl = imagesIcon;
+export function Images(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "Images", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = imagesIcon;
+  return node;
 }
 
-export class KubernetesServices extends _Compute {
-  protected static _iconDataUrl = kubernetes_servicesIcon;
+export function KubernetesServices(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "KubernetesServices", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = kubernetes_servicesIcon;
+  return node;
 }
 
-export class MaintenanceConfiguration extends _Compute {
-  protected static _iconDataUrl = maintenance_configurationIcon;
+export function MaintenanceConfiguration(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "MaintenanceConfiguration", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = maintenance_configurationIcon;
+  return node;
 }
 
-export class ManagedServiceFabric extends _Compute {
-  protected static _iconDataUrl = managed_service_fabricIcon;
+export function ManagedServiceFabric(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "ManagedServiceFabric", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = managed_service_fabricIcon;
+  return node;
 }
 
-export class MeshApplications extends _Compute {
-  protected static _iconDataUrl = mesh_applicationsIcon;
+export function MeshApplications(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "MeshApplications", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = mesh_applicationsIcon;
+  return node;
 }
 
-export class MetricsAdvisor extends _Compute {
-  protected static _iconDataUrl = metrics_advisorIcon;
+export function MetricsAdvisor(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "MetricsAdvisor", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = metrics_advisorIcon;
+  return node;
 }
 
-export class OsImagesClassic extends _Compute {
-  protected static _iconDataUrl = os_images_classicIcon;
+export function OsImagesClassic(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "OsImagesClassic", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = os_images_classicIcon;
+  return node;
 }
 
-export class OsImages extends _Compute {
-  protected static _iconDataUrl = os_imagesIcon;
+export function OsImages(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "OsImages", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = os_imagesIcon;
+  return node;
 }
 
-export class RestorePointsCollections extends _Compute {
-  protected static _iconDataUrl = restore_points_collectionsIcon;
+export function RestorePointsCollections(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "RestorePointsCollections", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = restore_points_collectionsIcon;
+  return node;
 }
 
-export class RestorePoints extends _Compute {
-  protected static _iconDataUrl = restore_pointsIcon;
+export function RestorePoints(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "RestorePoints", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = restore_pointsIcon;
+  return node;
 }
 
-export class SAPHANAOnAzure extends _Compute {
-  protected static _iconDataUrl = sap_hana_on_azureIcon;
+export function SAPHANAOnAzure(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "SAPHANAOnAzure", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = sap_hana_on_azureIcon;
+  return node;
 }
 
-export class ServiceFabricClusters extends _Compute {
-  protected static _iconDataUrl = service_fabric_clustersIcon;
+export function ServiceFabricClusters(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "ServiceFabricClusters", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = service_fabric_clustersIcon;
+  return node;
 }
 
-export class SharedImageGalleries extends _Compute {
-  protected static _iconDataUrl = shared_image_galleriesIcon;
+export function SharedImageGalleries(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "SharedImageGalleries", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = shared_image_galleriesIcon;
+  return node;
 }
 
-export class SpringCloud extends _Compute {
-  protected static _iconDataUrl = spring_cloudIcon;
+export function SpringCloud(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "SpringCloud", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = spring_cloudIcon;
+  return node;
 }
 
-export class VirtualMachine extends _Compute {
-  protected static _iconDataUrl = virtual_machineIcon;
+export function VirtualMachine(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "VirtualMachine", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = virtual_machineIcon;
+  return node;
 }
 
-export class VirtualMachinesClassic extends _Compute {
-  protected static _iconDataUrl = virtual_machines_classicIcon;
+export function VirtualMachinesClassic(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "VirtualMachinesClassic", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = virtual_machines_classicIcon;
+  return node;
 }
 
-export class VMClassic extends _Compute {
-  protected static _iconDataUrl = vm_classicIcon;
+export function VMClassic(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "VMClassic", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = vm_classicIcon;
+  return node;
 }
 
-export class VMImagesClassic extends _Compute {
-  protected static _iconDataUrl = vm_images_classicIcon;
+export function VMImagesClassic(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "VMImagesClassic", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = vm_images_classicIcon;
+  return node;
 }
 
-export class VMImages extends _Compute {
-  protected static _iconDataUrl = vm_imagesIcon;
+export function VMImages(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "VMImages", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = vm_imagesIcon;
+  return node;
 }
 
-export class VMLinux extends _Compute {
-  protected static _iconDataUrl = vm_linuxIcon;
+export function VMLinux(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "VMLinux", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = vm_linuxIcon;
+  return node;
 }
 
-export class VMScaleSet extends _Compute {
-  protected static _iconDataUrl = vm_scale_setIcon;
+export function VMScaleSet(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "VMScaleSet", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = vm_scale_setIcon;
+  return node;
 }
 
-export class VMScaleSets extends _Compute {
-  protected static _iconDataUrl = vm_scale_setsIcon;
+export function VMScaleSets(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "VMScaleSets", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = vm_scale_setsIcon;
+  return node;
 }
 
-export class VMWindows extends _Compute {
-  protected static _iconDataUrl = vm_windowsIcon;
+export function VMWindows(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "VMWindows", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = vm_windowsIcon;
+  return node;
 }
 
-export class VM extends _Compute {
-  protected static _iconDataUrl = vmIcon;
+export function VM(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "VM", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = vmIcon;
+  return node;
 }
 
-export class Workspaces2 extends _Compute {
-  protected static _iconDataUrl = workspaces_2Icon;
+export function Workspaces2(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "Workspaces2", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = workspaces_2Icon;
+  return node;
 }
 
-export class Workspaces extends _Compute {
-  protected static _iconDataUrl = workspacesIcon;
+export function Workspaces(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "Workspaces", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = workspacesIcon;
+  return node;
 }
 
 // Aliases

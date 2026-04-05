@@ -14,64 +14,94 @@ import rd_cloudIcon from "../../../resources/alibabacloud/application/rd-cloud.p
 import smart_conversation_analysisIcon from "../../../resources/alibabacloud/application/smart-conversation-analysis.png";
 import yidaIcon from "../../../resources/alibabacloud/application/yida.png";
 
-class _Application extends _Alibabacloud {
-  protected static override _type = "application";
+function _Application(label?: string, options?: Record<string, unknown>) {
+  const node = _Alibabacloud(label, options);
+  (node as unknown as Record<string, unknown>)._type = "application";
+  return node;
 }
 
-export class ApiGateway extends _Application {
-  protected static _iconDataUrl = api_gatewayIcon;
+export function ApiGateway(label?: string, options?: Record<string, unknown>) {
+  const node = _Application(label ?? "ApiGateway", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = api_gatewayIcon;
+  return node;
 }
 
-export class BeeBot extends _Application {
-  protected static _iconDataUrl = bee_botIcon;
+export function BeeBot(label?: string, options?: Record<string, unknown>) {
+  const node = _Application(label ?? "BeeBot", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = bee_botIcon;
+  return node;
 }
 
-export class BlockchainAsAService extends _Application {
-  protected static _iconDataUrl = blockchain_as_a_serviceIcon;
+export function BlockchainAsAService(label?: string, options?: Record<string, unknown>) {
+  const node = _Application(label ?? "BlockchainAsAService", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = blockchain_as_a_serviceIcon;
+  return node;
 }
 
-export class CloudCallCenter extends _Application {
-  protected static _iconDataUrl = cloud_call_centerIcon;
+export function CloudCallCenter(label?: string, options?: Record<string, unknown>) {
+  const node = _Application(label ?? "CloudCallCenter", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = cloud_call_centerIcon;
+  return node;
 }
 
-export class CodePipeline extends _Application {
-  protected static _iconDataUrl = code_pipelineIcon;
+export function CodePipeline(label?: string, options?: Record<string, unknown>) {
+  const node = _Application(label ?? "CodePipeline", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = code_pipelineIcon;
+  return node;
 }
 
-export class DirectMail extends _Application {
-  protected static _iconDataUrl = direct_mailIcon;
+export function DirectMail(label?: string, options?: Record<string, unknown>) {
+  const node = _Application(label ?? "DirectMail", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = direct_mailIcon;
+  return node;
 }
 
-export class LogService extends _Application {
-  protected static _iconDataUrl = log_serviceIcon;
+export function LogService(label?: string, options?: Record<string, unknown>) {
+  const node = _Application(label ?? "LogService", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = log_serviceIcon;
+  return node;
 }
 
-export class MessageNotificationService extends _Application {
-  protected static _iconDataUrl = message_notification_serviceIcon;
+export function MessageNotificationService(label?: string, options?: Record<string, unknown>) {
+  const node = _Application(label ?? "MessageNotificationService", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = message_notification_serviceIcon;
+  return node;
 }
 
-export class NodeJsPerformancePlatform extends _Application {
-  protected static _iconDataUrl = node_js_performance_platformIcon;
+export function NodeJsPerformancePlatform(label?: string, options?: Record<string, unknown>) {
+  const node = _Application(label ?? "NodeJsPerformancePlatform", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = node_js_performance_platformIcon;
+  return node;
 }
 
-export class OpenSearch extends _Application {
-  protected static _iconDataUrl = open_searchIcon;
+export function OpenSearch(label?: string, options?: Record<string, unknown>) {
+  const node = _Application(label ?? "OpenSearch", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = open_searchIcon;
+  return node;
 }
 
-export class PerformanceTestingService extends _Application {
-  protected static _iconDataUrl = performance_testing_serviceIcon;
+export function PerformanceTestingService(label?: string, options?: Record<string, unknown>) {
+  const node = _Application(label ?? "PerformanceTestingService", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = performance_testing_serviceIcon;
+  return node;
 }
 
-export class RdCloud extends _Application {
-  protected static _iconDataUrl = rd_cloudIcon;
+export function RdCloud(label?: string, options?: Record<string, unknown>) {
+  const node = _Application(label ?? "RdCloud", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = rd_cloudIcon;
+  return node;
 }
 
-export class SmartConversationAnalysis extends _Application {
-  protected static _iconDataUrl = smart_conversation_analysisIcon;
+export function SmartConversationAnalysis(label?: string, options?: Record<string, unknown>) {
+  const node = _Application(label ?? "SmartConversationAnalysis", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = smart_conversation_analysisIcon;
+  return node;
 }
 
-export class Yida extends _Application {
-  protected static _iconDataUrl = yidaIcon;
+export function Yida(label?: string, options?: Record<string, unknown>) {
+  const node = _Application(label ?? "Yida", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = yidaIcon;
+  return node;
 }
 
 // Aliases

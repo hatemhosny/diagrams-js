@@ -1,12 +1,16 @@
 import { _Openstack } from "./index.js";
 import cloudkittyIcon from "../../../resources/openstack/billing/cloudkitty.png";
 
-class _Billing extends _Openstack {
-  protected static override _type = "billing";
+function _Billing(label?: string, options?: Record<string, unknown>) {
+  const node = _Openstack(label, options);
+  (node as unknown as Record<string, unknown>)._type = "billing";
+  return node;
 }
 
-export class Cloudkitty extends _Billing {
-  protected static _iconDataUrl = cloudkittyIcon;
+export function Cloudkitty(label?: string, options?: Record<string, unknown>) {
+  const node = _Billing(label ?? "Cloudkitty", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = cloudkittyIcon;
+  return node;
 }
 
 // Aliases

@@ -6,30 +6,44 @@ import cost_managementIcon from "../../../resources/aws/cost/cost-management.png
 import reserved_instance_reportingIcon from "../../../resources/aws/cost/reserved-instance-reporting.png";
 import savings_plansIcon from "../../../resources/aws/cost/savings-plans.png";
 
-class _Cost extends _Aws {
-  protected static override _type = "cost";
+function _Cost(label?: string, options?: Record<string, unknown>) {
+  const node = _Aws(label, options);
+  (node as unknown as Record<string, unknown>)._type = "cost";
+  return node;
 }
 
-export class Budgets extends _Cost {
-  protected static _iconDataUrl = budgetsIcon;
+export function Budgets(label?: string, options?: Record<string, unknown>) {
+  const node = _Cost(label ?? "Budgets", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = budgetsIcon;
+  return node;
 }
 
-export class CostAndUsageReport extends _Cost {
-  protected static _iconDataUrl = cost_and_usage_reportIcon;
+export function CostAndUsageReport(label?: string, options?: Record<string, unknown>) {
+  const node = _Cost(label ?? "CostAndUsageReport", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = cost_and_usage_reportIcon;
+  return node;
 }
 
-export class CostExplorer extends _Cost {
-  protected static _iconDataUrl = cost_explorerIcon;
+export function CostExplorer(label?: string, options?: Record<string, unknown>) {
+  const node = _Cost(label ?? "CostExplorer", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = cost_explorerIcon;
+  return node;
 }
 
-export class CostManagement extends _Cost {
-  protected static _iconDataUrl = cost_managementIcon;
+export function CostManagement(label?: string, options?: Record<string, unknown>) {
+  const node = _Cost(label ?? "CostManagement", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = cost_managementIcon;
+  return node;
 }
 
-export class ReservedInstanceReporting extends _Cost {
-  protected static _iconDataUrl = reserved_instance_reportingIcon;
+export function ReservedInstanceReporting(label?: string, options?: Record<string, unknown>) {
+  const node = _Cost(label ?? "ReservedInstanceReporting", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = reserved_instance_reportingIcon;
+  return node;
 }
 
-export class SavingsPlans extends _Cost {
-  protected static _iconDataUrl = savings_plansIcon;
+export function SavingsPlans(label?: string, options?: Record<string, unknown>) {
+  const node = _Cost(label ?? "SavingsPlans", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = savings_plansIcon;
+  return node;
 }

@@ -4,24 +4,34 @@ import local_ssdIcon from "../../../resources/gcp/storage/local-ssd.png";
 import persistent_diskIcon from "../../../resources/gcp/storage/persistent-disk.png";
 import storageIcon from "../../../resources/gcp/storage/storage.png";
 
-class _Storage extends _Gcp {
-  protected static override _type = "storage";
+function _Storage(label?: string, options?: Record<string, unknown>) {
+  const node = _Gcp(label, options);
+  (node as unknown as Record<string, unknown>)._type = "storage";
+  return node;
 }
 
-export class Filestore extends _Storage {
-  protected static _iconDataUrl = filestoreIcon;
+export function Filestore(label?: string, options?: Record<string, unknown>) {
+  const node = _Storage(label ?? "Filestore", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = filestoreIcon;
+  return node;
 }
 
-export class LocalSSD extends _Storage {
-  protected static _iconDataUrl = local_ssdIcon;
+export function LocalSSD(label?: string, options?: Record<string, unknown>) {
+  const node = _Storage(label ?? "LocalSSD", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = local_ssdIcon;
+  return node;
 }
 
-export class PersistentDisk extends _Storage {
-  protected static _iconDataUrl = persistent_diskIcon;
+export function PersistentDisk(label?: string, options?: Record<string, unknown>) {
+  const node = _Storage(label ?? "PersistentDisk", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = persistent_diskIcon;
+  return node;
 }
 
-export class Storage extends _Storage {
-  protected static _iconDataUrl = storageIcon;
+export function Storage(label?: string, options?: Record<string, unknown>) {
+  const node = _Storage(label ?? "Storage", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = storageIcon;
+  return node;
 }
 
 // Aliases

@@ -4,22 +4,32 @@ import cloudflareIcon from "../../../resources/saas/cdn/cloudflare.png";
 import fastlyIcon from "../../../resources/saas/cdn/fastly.png";
 import impervaIcon from "../../../resources/saas/cdn/imperva.png";
 
-class _Cdn extends _Saas {
-  protected static override _type = "cdn";
+function _Cdn(label?: string, options?: Record<string, unknown>) {
+  const node = _Saas(label, options);
+  (node as unknown as Record<string, unknown>)._type = "cdn";
+  return node;
 }
 
-export class Akamai extends _Cdn {
-  protected static _iconDataUrl = akamaiIcon;
+export function Akamai(label?: string, options?: Record<string, unknown>) {
+  const node = _Cdn(label ?? "Akamai", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = akamaiIcon;
+  return node;
 }
 
-export class Cloudflare extends _Cdn {
-  protected static _iconDataUrl = cloudflareIcon;
+export function Cloudflare(label?: string, options?: Record<string, unknown>) {
+  const node = _Cdn(label ?? "Cloudflare", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = cloudflareIcon;
+  return node;
 }
 
-export class Fastly extends _Cdn {
-  protected static _iconDataUrl = fastlyIcon;
+export function Fastly(label?: string, options?: Record<string, unknown>) {
+  const node = _Cdn(label ?? "Fastly", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = fastlyIcon;
+  return node;
 }
 
-export class Imperva extends _Cdn {
-  protected static _iconDataUrl = impervaIcon;
+export function Imperva(label?: string, options?: Record<string, unknown>) {
+  const node = _Cdn(label ?? "Imperva", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = impervaIcon;
+  return node;
 }

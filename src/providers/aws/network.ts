@@ -40,168 +40,250 @@ import vpcIcon from "../../../resources/aws/network/vpc.png";
 import vpn_connectionIcon from "../../../resources/aws/network/vpn-connection.png";
 import vpn_gatewayIcon from "../../../resources/aws/network/vpn-gateway.png";
 
-class _Network extends _Aws {
-  protected static override _type = "network";
+function _Network(label?: string, options?: Record<string, unknown>) {
+  const node = _Aws(label, options);
+  (node as unknown as Record<string, unknown>)._type = "network";
+  return node;
 }
 
-export class APIGatewayEndpoint extends _Network {
-  protected static _iconDataUrl = api_gateway_endpointIcon;
+export function APIGatewayEndpoint(label?: string, options?: Record<string, unknown>) {
+  const node = _Network(label ?? "APIGatewayEndpoint", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = api_gateway_endpointIcon;
+  return node;
 }
 
-export class APIGateway extends _Network {
-  protected static _iconDataUrl = api_gatewayIcon;
+export function APIGateway(label?: string, options?: Record<string, unknown>) {
+  const node = _Network(label ?? "APIGateway", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = api_gatewayIcon;
+  return node;
 }
 
-export class AppMesh extends _Network {
-  protected static _iconDataUrl = app_meshIcon;
+export function AppMesh(label?: string, options?: Record<string, unknown>) {
+  const node = _Network(label ?? "AppMesh", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = app_meshIcon;
+  return node;
 }
 
-export class ClientVpn extends _Network {
-  protected static _iconDataUrl = client_vpnIcon;
+export function ClientVpn(label?: string, options?: Record<string, unknown>) {
+  const node = _Network(label ?? "ClientVpn", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = client_vpnIcon;
+  return node;
 }
 
-export class CloudMap extends _Network {
-  protected static _iconDataUrl = cloud_mapIcon;
+export function CloudMap(label?: string, options?: Record<string, unknown>) {
+  const node = _Network(label ?? "CloudMap", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = cloud_mapIcon;
+  return node;
 }
 
-export class CloudFrontDownloadDistribution extends _Network {
-  protected static _iconDataUrl = cloudfront_download_distributionIcon;
+export function CloudFrontDownloadDistribution(label?: string, options?: Record<string, unknown>) {
+  const node = _Network(label ?? "CloudFrontDownloadDistribution", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = cloudfront_download_distributionIcon;
+  return node;
 }
 
-export class CloudFrontEdgeLocation extends _Network {
-  protected static _iconDataUrl = cloudfront_edge_locationIcon;
+export function CloudFrontEdgeLocation(label?: string, options?: Record<string, unknown>) {
+  const node = _Network(label ?? "CloudFrontEdgeLocation", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = cloudfront_edge_locationIcon;
+  return node;
 }
 
-export class CloudFrontStreamingDistribution extends _Network {
-  protected static _iconDataUrl = cloudfront_streaming_distributionIcon;
+export function CloudFrontStreamingDistribution(label?: string, options?: Record<string, unknown>) {
+  const node = _Network(label ?? "CloudFrontStreamingDistribution", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = cloudfront_streaming_distributionIcon;
+  return node;
 }
 
-export class CloudFront extends _Network {
-  protected static _iconDataUrl = cloudfrontIcon;
+export function CloudFront(label?: string, options?: Record<string, unknown>) {
+  const node = _Network(label ?? "CloudFront", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = cloudfrontIcon;
+  return node;
 }
 
-export class DirectConnect extends _Network {
-  protected static _iconDataUrl = direct_connectIcon;
+export function DirectConnect(label?: string, options?: Record<string, unknown>) {
+  const node = _Network(label ?? "DirectConnect", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = direct_connectIcon;
+  return node;
 }
 
-export class ElasticLoadBalancing extends _Network {
-  protected static _iconDataUrl = elastic_load_balancingIcon;
+export function ElasticLoadBalancing(label?: string, options?: Record<string, unknown>) {
+  const node = _Network(label ?? "ElasticLoadBalancing", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = elastic_load_balancingIcon;
+  return node;
 }
 
-export class ElbApplicationLoadBalancer extends _Network {
-  protected static _iconDataUrl = elb_application_load_balancerIcon;
+export function ElbApplicationLoadBalancer(label?: string, options?: Record<string, unknown>) {
+  const node = _Network(label ?? "ElbApplicationLoadBalancer", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = elb_application_load_balancerIcon;
+  return node;
 }
 
-export class ElbClassicLoadBalancer extends _Network {
-  protected static _iconDataUrl = elb_classic_load_balancerIcon;
+export function ElbClassicLoadBalancer(label?: string, options?: Record<string, unknown>) {
+  const node = _Network(label ?? "ElbClassicLoadBalancer", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = elb_classic_load_balancerIcon;
+  return node;
 }
 
-export class ElbNetworkLoadBalancer extends _Network {
-  protected static _iconDataUrl = elb_network_load_balancerIcon;
+export function ElbNetworkLoadBalancer(label?: string, options?: Record<string, unknown>) {
+  const node = _Network(label ?? "ElbNetworkLoadBalancer", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = elb_network_load_balancerIcon;
+  return node;
 }
 
-export class Endpoint extends _Network {
-  protected static _iconDataUrl = endpointIcon;
+export function Endpoint(label?: string, options?: Record<string, unknown>) {
+  const node = _Network(label ?? "Endpoint", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = endpointIcon;
+  return node;
 }
 
-export class GlobalAccelerator extends _Network {
-  protected static _iconDataUrl = global_acceleratorIcon;
+export function GlobalAccelerator(label?: string, options?: Record<string, unknown>) {
+  const node = _Network(label ?? "GlobalAccelerator", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = global_acceleratorIcon;
+  return node;
 }
 
-export class InternetGateway extends _Network {
-  protected static _iconDataUrl = internet_gatewayIcon;
+export function InternetGateway(label?: string, options?: Record<string, unknown>) {
+  const node = _Network(label ?? "InternetGateway", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = internet_gatewayIcon;
+  return node;
 }
 
-export class Nacl extends _Network {
-  protected static _iconDataUrl = naclIcon;
+export function Nacl(label?: string, options?: Record<string, unknown>) {
+  const node = _Network(label ?? "Nacl", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = naclIcon;
+  return node;
 }
 
-export class NATGateway extends _Network {
-  protected static _iconDataUrl = nat_gatewayIcon;
+export function NATGateway(label?: string, options?: Record<string, unknown>) {
+  const node = _Network(label ?? "NATGateway", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = nat_gatewayIcon;
+  return node;
 }
 
-export class NetworkFirewall extends _Network {
-  protected static _iconDataUrl = network_firewallIcon;
+export function NetworkFirewall(label?: string, options?: Record<string, unknown>) {
+  const node = _Network(label ?? "NetworkFirewall", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = network_firewallIcon;
+  return node;
 }
 
-export class NetworkingAndContentDelivery extends _Network {
-  protected static _iconDataUrl = networking_and_content_deliveryIcon;
+export function NetworkingAndContentDelivery(label?: string, options?: Record<string, unknown>) {
+  const node = _Network(label ?? "NetworkingAndContentDelivery", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = networking_and_content_deliveryIcon;
+  return node;
 }
 
-export class PrivateSubnet extends _Network {
-  protected static _iconDataUrl = private_subnetIcon;
+export function PrivateSubnet(label?: string, options?: Record<string, unknown>) {
+  const node = _Network(label ?? "PrivateSubnet", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = private_subnetIcon;
+  return node;
 }
 
-export class Privatelink extends _Network {
-  protected static _iconDataUrl = privatelinkIcon;
+export function Privatelink(label?: string, options?: Record<string, unknown>) {
+  const node = _Network(label ?? "Privatelink", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = privatelinkIcon;
+  return node;
 }
 
-export class PublicSubnet extends _Network {
-  protected static _iconDataUrl = public_subnetIcon;
+export function PublicSubnet(label?: string, options?: Record<string, unknown>) {
+  const node = _Network(label ?? "PublicSubnet", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = public_subnetIcon;
+  return node;
 }
 
-export class Route53HostedZone extends _Network {
-  protected static _iconDataUrl = route_53_hosted_zoneIcon;
+export function Route53HostedZone(label?: string, options?: Record<string, unknown>) {
+  const node = _Network(label ?? "Route53HostedZone", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = route_53_hosted_zoneIcon;
+  return node;
 }
 
-export class Route53 extends _Network {
-  protected static _iconDataUrl = route_53Icon;
+export function Route53(label?: string, options?: Record<string, unknown>) {
+  const node = _Network(label ?? "Route53", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = route_53Icon;
+  return node;
 }
 
-export class RouteTable extends _Network {
-  protected static _iconDataUrl = route_tableIcon;
+export function RouteTable(label?: string, options?: Record<string, unknown>) {
+  const node = _Network(label ?? "RouteTable", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = route_tableIcon;
+  return node;
 }
 
-export class SiteToSiteVpn extends _Network {
-  protected static _iconDataUrl = site_to_site_vpnIcon;
+export function SiteToSiteVpn(label?: string, options?: Record<string, unknown>) {
+  const node = _Network(label ?? "SiteToSiteVpn", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = site_to_site_vpnIcon;
+  return node;
 }
 
-export class TransitGatewayAttachment extends _Network {
-  protected static _iconDataUrl = transit_gateway_attachmentIcon;
+export function TransitGatewayAttachment(label?: string, options?: Record<string, unknown>) {
+  const node = _Network(label ?? "TransitGatewayAttachment", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = transit_gateway_attachmentIcon;
+  return node;
 }
 
-export class TransitGateway extends _Network {
-  protected static _iconDataUrl = transit_gatewayIcon;
+export function TransitGateway(label?: string, options?: Record<string, unknown>) {
+  const node = _Network(label ?? "TransitGateway", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = transit_gatewayIcon;
+  return node;
 }
 
-export class VPCCustomerGateway extends _Network {
-  protected static _iconDataUrl = vpc_customer_gatewayIcon;
+export function VPCCustomerGateway(label?: string, options?: Record<string, unknown>) {
+  const node = _Network(label ?? "VPCCustomerGateway", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = vpc_customer_gatewayIcon;
+  return node;
 }
 
-export class VPCElasticNetworkAdapter extends _Network {
-  protected static _iconDataUrl = vpc_elastic_network_adapterIcon;
+export function VPCElasticNetworkAdapter(label?: string, options?: Record<string, unknown>) {
+  const node = _Network(label ?? "VPCElasticNetworkAdapter", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = vpc_elastic_network_adapterIcon;
+  return node;
 }
 
-export class VPCElasticNetworkInterface extends _Network {
-  protected static _iconDataUrl = vpc_elastic_network_interfaceIcon;
+export function VPCElasticNetworkInterface(label?: string, options?: Record<string, unknown>) {
+  const node = _Network(label ?? "VPCElasticNetworkInterface", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = vpc_elastic_network_interfaceIcon;
+  return node;
 }
 
-export class VPCFlowLogs extends _Network {
-  protected static _iconDataUrl = vpc_flow_logsIcon;
+export function VPCFlowLogs(label?: string, options?: Record<string, unknown>) {
+  const node = _Network(label ?? "VPCFlowLogs", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = vpc_flow_logsIcon;
+  return node;
 }
 
-export class VPCPeering extends _Network {
-  protected static _iconDataUrl = vpc_peeringIcon;
+export function VPCPeering(label?: string, options?: Record<string, unknown>) {
+  const node = _Network(label ?? "VPCPeering", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = vpc_peeringIcon;
+  return node;
 }
 
-export class VPCRouter extends _Network {
-  protected static _iconDataUrl = vpc_routerIcon;
+export function VPCRouter(label?: string, options?: Record<string, unknown>) {
+  const node = _Network(label ?? "VPCRouter", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = vpc_routerIcon;
+  return node;
 }
 
-export class VPCTrafficMirroring extends _Network {
-  protected static _iconDataUrl = vpc_traffic_mirroringIcon;
+export function VPCTrafficMirroring(label?: string, options?: Record<string, unknown>) {
+  const node = _Network(label ?? "VPCTrafficMirroring", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = vpc_traffic_mirroringIcon;
+  return node;
 }
 
-export class VPC extends _Network {
-  protected static _iconDataUrl = vpcIcon;
+export function VPC(label?: string, options?: Record<string, unknown>) {
+  const node = _Network(label ?? "VPC", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = vpcIcon;
+  return node;
 }
 
-export class VpnConnection extends _Network {
-  protected static _iconDataUrl = vpn_connectionIcon;
+export function VpnConnection(label?: string, options?: Record<string, unknown>) {
+  const node = _Network(label ?? "VpnConnection", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = vpn_connectionIcon;
+  return node;
 }
 
-export class VpnGateway extends _Network {
-  protected static _iconDataUrl = vpn_gatewayIcon;
+export function VpnGateway(label?: string, options?: Record<string, unknown>) {
+  const node = _Network(label ?? "VpnGateway", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = vpn_gatewayIcon;
+  return node;
 }
 
 // Aliases

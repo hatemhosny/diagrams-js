@@ -8,40 +8,58 @@ import immIcon from "../../../resources/alibabacloud/storage/imm.png";
 import object_storage_serviceIcon from "../../../resources/alibabacloud/storage/object-storage-service.png";
 import object_table_storeIcon from "../../../resources/alibabacloud/storage/object-table-store.png";
 
-class _Storage extends _Alibabacloud {
-  protected static override _type = "storage";
+function _Storage(label?: string, options?: Record<string, unknown>) {
+  const node = _Alibabacloud(label, options);
+  (node as unknown as Record<string, unknown>)._type = "storage";
+  return node;
 }
 
-export class CloudStorageGateway extends _Storage {
-  protected static _iconDataUrl = cloud_storage_gatewayIcon;
+export function CloudStorageGateway(label?: string, options?: Record<string, unknown>) {
+  const node = _Storage(label ?? "CloudStorageGateway", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = cloud_storage_gatewayIcon;
+  return node;
 }
 
-export class FileStorageHdfs extends _Storage {
-  protected static _iconDataUrl = file_storage_hdfsIcon;
+export function FileStorageHdfs(label?: string, options?: Record<string, unknown>) {
+  const node = _Storage(label ?? "FileStorageHdfs", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = file_storage_hdfsIcon;
+  return node;
 }
 
-export class FileStorageNas extends _Storage {
-  protected static _iconDataUrl = file_storage_nasIcon;
+export function FileStorageNas(label?: string, options?: Record<string, unknown>) {
+  const node = _Storage(label ?? "FileStorageNas", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = file_storage_nasIcon;
+  return node;
 }
 
-export class HybridBackupRecovery extends _Storage {
-  protected static _iconDataUrl = hybrid_backup_recoveryIcon;
+export function HybridBackupRecovery(label?: string, options?: Record<string, unknown>) {
+  const node = _Storage(label ?? "HybridBackupRecovery", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = hybrid_backup_recoveryIcon;
+  return node;
 }
 
-export class HybridCloudDisasterRecovery extends _Storage {
-  protected static _iconDataUrl = hybrid_cloud_disaster_recoveryIcon;
+export function HybridCloudDisasterRecovery(label?: string, options?: Record<string, unknown>) {
+  const node = _Storage(label ?? "HybridCloudDisasterRecovery", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = hybrid_cloud_disaster_recoveryIcon;
+  return node;
 }
 
-export class Imm extends _Storage {
-  protected static _iconDataUrl = immIcon;
+export function Imm(label?: string, options?: Record<string, unknown>) {
+  const node = _Storage(label ?? "Imm", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = immIcon;
+  return node;
 }
 
-export class ObjectStorageService extends _Storage {
-  protected static _iconDataUrl = object_storage_serviceIcon;
+export function ObjectStorageService(label?: string, options?: Record<string, unknown>) {
+  const node = _Storage(label ?? "ObjectStorageService", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = object_storage_serviceIcon;
+  return node;
 }
 
-export class ObjectTableStore extends _Storage {
-  protected static _iconDataUrl = object_table_storeIcon;
+export function ObjectTableStore(label?: string, options?: Record<string, unknown>) {
+  const node = _Storage(label ?? "ObjectTableStore", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = object_table_storeIcon;
+  return node;
 }
 
 // Aliases

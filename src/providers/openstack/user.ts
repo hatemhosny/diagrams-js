@@ -1,12 +1,16 @@
 import { _Openstack } from "./index.js";
 import openstackclientIcon from "../../../resources/openstack/user/openstackclient.png";
 
-class _User extends _Openstack {
-  protected static override _type = "user";
+function _User(label?: string, options?: Record<string, unknown>) {
+  const node = _Openstack(label, options);
+  (node as unknown as Record<string, unknown>)._type = "user";
+  return node;
 }
 
-export class Openstackclient extends _User {
-  protected static _iconDataUrl = openstackclientIcon;
+export function Openstackclient(label?: string, options?: Record<string, unknown>) {
+  const node = _User(label ?? "Openstackclient", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = openstackclientIcon;
+  return node;
 }
 
 // Aliases

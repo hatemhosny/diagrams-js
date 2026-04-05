@@ -5,26 +5,38 @@ import workdocsIcon from "../../../resources/aws/enduser/workdocs.png";
 import worklinkIcon from "../../../resources/aws/enduser/worklink.png";
 import workspacesIcon from "../../../resources/aws/enduser/workspaces.png";
 
-class _Enduser extends _Aws {
-  protected static override _type = "enduser";
+function _Enduser(label?: string, options?: Record<string, unknown>) {
+  const node = _Aws(label, options);
+  (node as unknown as Record<string, unknown>)._type = "enduser";
+  return node;
 }
 
-export class Appstream20 extends _Enduser {
-  protected static _iconDataUrl = appstream_2_0Icon;
+export function Appstream20(label?: string, options?: Record<string, unknown>) {
+  const node = _Enduser(label ?? "Appstream20", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = appstream_2_0Icon;
+  return node;
 }
 
-export class DesktopAndAppStreaming extends _Enduser {
-  protected static _iconDataUrl = desktop_and_app_streamingIcon;
+export function DesktopAndAppStreaming(label?: string, options?: Record<string, unknown>) {
+  const node = _Enduser(label ?? "DesktopAndAppStreaming", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = desktop_and_app_streamingIcon;
+  return node;
 }
 
-export class Workdocs extends _Enduser {
-  protected static _iconDataUrl = workdocsIcon;
+export function Workdocs(label?: string, options?: Record<string, unknown>) {
+  const node = _Enduser(label ?? "Workdocs", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = workdocsIcon;
+  return node;
 }
 
-export class Worklink extends _Enduser {
-  protected static _iconDataUrl = worklinkIcon;
+export function Worklink(label?: string, options?: Record<string, unknown>) {
+  const node = _Enduser(label ?? "Worklink", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = worklinkIcon;
+  return node;
 }
 
-export class Workspaces extends _Enduser {
-  protected static _iconDataUrl = workspacesIcon;
+export function Workspaces(label?: string, options?: Record<string, unknown>) {
+  const node = _Enduser(label ?? "Workspaces", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = workspacesIcon;
+  return node;
 }

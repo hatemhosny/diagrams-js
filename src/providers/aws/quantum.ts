@@ -2,14 +2,20 @@ import { _Aws } from "./index.js";
 import braketIcon from "../../../resources/aws/quantum/braket.png";
 import quantum_technologiesIcon from "../../../resources/aws/quantum/quantum-technologies.png";
 
-class _Quantum extends _Aws {
-  protected static override _type = "quantum";
+function _Quantum(label?: string, options?: Record<string, unknown>) {
+  const node = _Aws(label, options);
+  (node as unknown as Record<string, unknown>)._type = "quantum";
+  return node;
 }
 
-export class Braket extends _Quantum {
-  protected static _iconDataUrl = braketIcon;
+export function Braket(label?: string, options?: Record<string, unknown>) {
+  const node = _Quantum(label ?? "Braket", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = braketIcon;
+  return node;
 }
 
-export class QuantumTechnologies extends _Quantum {
-  protected static _iconDataUrl = quantum_technologiesIcon;
+export function QuantumTechnologies(label?: string, options?: Record<string, unknown>) {
+  const node = _Quantum(label ?? "QuantumTechnologies", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = quantum_technologiesIcon;
+  return node;
 }

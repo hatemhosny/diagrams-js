@@ -8,40 +8,58 @@ import messagingIcon from "../../../resources/firebase/grow/messaging.png";
 import predictionsIcon from "../../../resources/firebase/grow/predictions.png";
 import remote_configIcon from "../../../resources/firebase/grow/remote-config.png";
 
-class _Grow extends _Firebase {
-  protected static override _type = "grow";
+function _Grow(label?: string, options?: Record<string, unknown>) {
+  const node = _Firebase(label, options);
+  (node as unknown as Record<string, unknown>)._type = "grow";
+  return node;
 }
 
-export class ABTesting extends _Grow {
-  protected static _iconDataUrl = ab_testingIcon;
+export function ABTesting(label?: string, options?: Record<string, unknown>) {
+  const node = _Grow(label ?? "ABTesting", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = ab_testingIcon;
+  return node;
 }
 
-export class AppIndexing extends _Grow {
-  protected static _iconDataUrl = app_indexingIcon;
+export function AppIndexing(label?: string, options?: Record<string, unknown>) {
+  const node = _Grow(label ?? "AppIndexing", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = app_indexingIcon;
+  return node;
 }
 
-export class DynamicLinks extends _Grow {
-  protected static _iconDataUrl = dynamic_linksIcon;
+export function DynamicLinks(label?: string, options?: Record<string, unknown>) {
+  const node = _Grow(label ?? "DynamicLinks", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = dynamic_linksIcon;
+  return node;
 }
 
-export class InAppMessaging extends _Grow {
-  protected static _iconDataUrl = in_app_messagingIcon;
+export function InAppMessaging(label?: string, options?: Record<string, unknown>) {
+  const node = _Grow(label ?? "InAppMessaging", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = in_app_messagingIcon;
+  return node;
 }
 
-export class Invites extends _Grow {
-  protected static _iconDataUrl = invitesIcon;
+export function Invites(label?: string, options?: Record<string, unknown>) {
+  const node = _Grow(label ?? "Invites", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = invitesIcon;
+  return node;
 }
 
-export class Messaging extends _Grow {
-  protected static _iconDataUrl = messagingIcon;
+export function Messaging(label?: string, options?: Record<string, unknown>) {
+  const node = _Grow(label ?? "Messaging", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = messagingIcon;
+  return node;
 }
 
-export class Predictions extends _Grow {
-  protected static _iconDataUrl = predictionsIcon;
+export function Predictions(label?: string, options?: Record<string, unknown>) {
+  const node = _Grow(label ?? "Predictions", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = predictionsIcon;
+  return node;
 }
 
-export class RemoteConfig extends _Grow {
-  protected static _iconDataUrl = remote_configIcon;
+export function RemoteConfig(label?: string, options?: Record<string, unknown>) {
+  const node = _Grow(label ?? "RemoteConfig", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = remote_configIcon;
+  return node;
 }
 
 // Aliases

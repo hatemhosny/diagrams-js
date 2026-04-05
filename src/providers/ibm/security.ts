@@ -14,62 +14,92 @@ import security_servicesIcon from "../../../resources/ibm/security/security-serv
 import trustend_computingIcon from "../../../resources/ibm/security/trustend-computing.png";
 import vpnIcon from "../../../resources/ibm/security/vpn.png";
 
-class _Security extends _Ibm {
-  protected static override _type = "security";
+function _Security(label?: string, options?: Record<string, unknown>) {
+  const node = _Ibm(label, options);
+  (node as unknown as Record<string, unknown>)._type = "security";
+  return node;
 }
 
-export class ApiSecurity extends _Security {
-  protected static _iconDataUrl = api_securityIcon;
+export function ApiSecurity(label?: string, options?: Record<string, unknown>) {
+  const node = _Security(label ?? "ApiSecurity", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = api_securityIcon;
+  return node;
 }
 
-export class BlockchainSecurityService extends _Security {
-  protected static _iconDataUrl = blockchain_security_serviceIcon;
+export function BlockchainSecurityService(label?: string, options?: Record<string, unknown>) {
+  const node = _Security(label ?? "BlockchainSecurityService", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = blockchain_security_serviceIcon;
+  return node;
 }
 
-export class DataSecurity extends _Security {
-  protected static _iconDataUrl = data_securityIcon;
+export function DataSecurity(label?: string, options?: Record<string, unknown>) {
+  const node = _Security(label ?? "DataSecurity", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = data_securityIcon;
+  return node;
 }
 
-export class Firewall extends _Security {
-  protected static _iconDataUrl = firewallIcon;
+export function Firewall(label?: string, options?: Record<string, unknown>) {
+  const node = _Security(label ?? "Firewall", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = firewallIcon;
+  return node;
 }
 
-export class Gateway extends _Security {
-  protected static _iconDataUrl = gatewayIcon;
+export function Gateway(label?: string, options?: Record<string, unknown>) {
+  const node = _Security(label ?? "Gateway", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = gatewayIcon;
+  return node;
 }
 
-export class GovernanceRiskCompliance extends _Security {
-  protected static _iconDataUrl = governance_risk_complianceIcon;
+export function GovernanceRiskCompliance(label?: string, options?: Record<string, unknown>) {
+  const node = _Security(label ?? "GovernanceRiskCompliance", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = governance_risk_complianceIcon;
+  return node;
 }
 
-export class IdentityAccessManagement extends _Security {
-  protected static _iconDataUrl = identity_access_managementIcon;
+export function IdentityAccessManagement(label?: string, options?: Record<string, unknown>) {
+  const node = _Security(label ?? "IdentityAccessManagement", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = identity_access_managementIcon;
+  return node;
 }
 
-export class IdentityProvider extends _Security {
-  protected static _iconDataUrl = identity_providerIcon;
+export function IdentityProvider(label?: string, options?: Record<string, unknown>) {
+  const node = _Security(label ?? "IdentityProvider", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = identity_providerIcon;
+  return node;
 }
 
-export class InfrastructureSecurity extends _Security {
-  protected static _iconDataUrl = infrastructure_securityIcon;
+export function InfrastructureSecurity(label?: string, options?: Record<string, unknown>) {
+  const node = _Security(label ?? "InfrastructureSecurity", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = infrastructure_securityIcon;
+  return node;
 }
 
-export class PhysicalSecurity extends _Security {
-  protected static _iconDataUrl = physical_securityIcon;
+export function PhysicalSecurity(label?: string, options?: Record<string, unknown>) {
+  const node = _Security(label ?? "PhysicalSecurity", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = physical_securityIcon;
+  return node;
 }
 
-export class SecurityMonitoringIntelligence extends _Security {
-  protected static _iconDataUrl = security_monitoring_intelligenceIcon;
+export function SecurityMonitoringIntelligence(label?: string, options?: Record<string, unknown>) {
+  const node = _Security(label ?? "SecurityMonitoringIntelligence", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = security_monitoring_intelligenceIcon;
+  return node;
 }
 
-export class SecurityServices extends _Security {
-  protected static _iconDataUrl = security_servicesIcon;
+export function SecurityServices(label?: string, options?: Record<string, unknown>) {
+  const node = _Security(label ?? "SecurityServices", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = security_servicesIcon;
+  return node;
 }
 
-export class TrustendComputing extends _Security {
-  protected static _iconDataUrl = trustend_computingIcon;
+export function TrustendComputing(label?: string, options?: Record<string, unknown>) {
+  const node = _Security(label ?? "TrustendComputing", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = trustend_computingIcon;
+  return node;
 }
 
-export class Vpn extends _Security {
-  protected static _iconDataUrl = vpnIcon;
+export function Vpn(label?: string, options?: Record<string, unknown>) {
+  const node = _Security(label ?? "Vpn", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = vpnIcon;
+  return node;
 }

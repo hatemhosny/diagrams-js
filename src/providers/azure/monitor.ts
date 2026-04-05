@@ -12,54 +12,80 @@ import metricsIcon from "../../../resources/azure/monitor/metrics.png";
 import monitorIcon from "../../../resources/azure/monitor/monitor.png";
 import network_watcherIcon from "../../../resources/azure/monitor/network-watcher.png";
 
-class _Monitor extends _Azure {
-  protected static override _type = "monitor";
+function _Monitor(label?: string, options?: Record<string, unknown>) {
+  const node = _Azure(label, options);
+  (node as unknown as Record<string, unknown>)._type = "monitor";
+  return node;
 }
 
-export class ActivityLog extends _Monitor {
-  protected static _iconDataUrl = activity_logIcon;
+export function ActivityLog(label?: string, options?: Record<string, unknown>) {
+  const node = _Monitor(label ?? "ActivityLog", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = activity_logIcon;
+  return node;
 }
 
-export class ApplicationInsights extends _Monitor {
-  protected static _iconDataUrl = application_insightsIcon;
+export function ApplicationInsights(label?: string, options?: Record<string, unknown>) {
+  const node = _Monitor(label ?? "ApplicationInsights", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = application_insightsIcon;
+  return node;
 }
 
-export class AutoScale extends _Monitor {
-  protected static _iconDataUrl = auto_scaleIcon;
+export function AutoScale(label?: string, options?: Record<string, unknown>) {
+  const node = _Monitor(label ?? "AutoScale", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = auto_scaleIcon;
+  return node;
 }
 
-export class AzureMonitorsForSAPSolutions extends _Monitor {
-  protected static _iconDataUrl = azure_monitors_for_sap_solutionsIcon;
+export function AzureMonitorsForSAPSolutions(label?: string, options?: Record<string, unknown>) {
+  const node = _Monitor(label ?? "AzureMonitorsForSAPSolutions", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_monitors_for_sap_solutionsIcon;
+  return node;
 }
 
-export class AzureWorkbooks extends _Monitor {
-  protected static _iconDataUrl = azure_workbooksIcon;
+export function AzureWorkbooks(label?: string, options?: Record<string, unknown>) {
+  const node = _Monitor(label ?? "AzureWorkbooks", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_workbooksIcon;
+  return node;
 }
 
-export class ChangeAnalysis extends _Monitor {
-  protected static _iconDataUrl = change_analysisIcon;
+export function ChangeAnalysis(label?: string, options?: Record<string, unknown>) {
+  const node = _Monitor(label ?? "ChangeAnalysis", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = change_analysisIcon;
+  return node;
 }
 
-export class DiagnosticsSettings extends _Monitor {
-  protected static _iconDataUrl = diagnostics_settingsIcon;
+export function DiagnosticsSettings(label?: string, options?: Record<string, unknown>) {
+  const node = _Monitor(label ?? "DiagnosticsSettings", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = diagnostics_settingsIcon;
+  return node;
 }
 
-export class LogAnalyticsWorkspaces extends _Monitor {
-  protected static _iconDataUrl = log_analytics_workspacesIcon;
+export function LogAnalyticsWorkspaces(label?: string, options?: Record<string, unknown>) {
+  const node = _Monitor(label ?? "LogAnalyticsWorkspaces", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = log_analytics_workspacesIcon;
+  return node;
 }
 
-export class Logs extends _Monitor {
-  protected static _iconDataUrl = logsIcon;
+export function Logs(label?: string, options?: Record<string, unknown>) {
+  const node = _Monitor(label ?? "Logs", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = logsIcon;
+  return node;
 }
 
-export class Metrics extends _Monitor {
-  protected static _iconDataUrl = metricsIcon;
+export function Metrics(label?: string, options?: Record<string, unknown>) {
+  const node = _Monitor(label ?? "Metrics", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = metricsIcon;
+  return node;
 }
 
-export class Monitor extends _Monitor {
-  protected static _iconDataUrl = monitorIcon;
+export function Monitor(label?: string, options?: Record<string, unknown>) {
+  const node = _Monitor(label ?? "Monitor", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = monitorIcon;
+  return node;
 }
 
-export class NetworkWatcher extends _Monitor {
-  protected static _iconDataUrl = network_watcherIcon;
+export function NetworkWatcher(label?: string, options?: Record<string, unknown>) {
+  const node = _Monitor(label ?? "NetworkWatcher", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = network_watcherIcon;
+  return node;
 }

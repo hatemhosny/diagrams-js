@@ -18,78 +18,116 @@ import telemetryIcon from "../../../resources/oci/monitoring/telemetry.png";
 import workflow_whiteIcon from "../../../resources/oci/monitoring/workflow-white.png";
 import workflowIcon from "../../../resources/oci/monitoring/workflow.png";
 
-class _Monitoring extends _Oci {
-  protected static override _type = "monitoring";
+function _Monitoring(label?: string, options?: Record<string, unknown>) {
+  const node = _Oci(label, options);
+  (node as unknown as Record<string, unknown>)._type = "monitoring";
+  return node;
 }
 
-export class AlarmWhite extends _Monitoring {
-  protected static _iconDataUrl = alarm_whiteIcon;
+export function AlarmWhite(label?: string, options?: Record<string, unknown>) {
+  const node = _Monitoring(label ?? "AlarmWhite", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = alarm_whiteIcon;
+  return node;
 }
 
-export class Alarm extends _Monitoring {
-  protected static _iconDataUrl = alarmIcon;
+export function Alarm(label?: string, options?: Record<string, unknown>) {
+  const node = _Monitoring(label ?? "Alarm", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = alarmIcon;
+  return node;
 }
 
-export class EmailWhite extends _Monitoring {
-  protected static _iconDataUrl = email_whiteIcon;
+export function EmailWhite(label?: string, options?: Record<string, unknown>) {
+  const node = _Monitoring(label ?? "EmailWhite", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = email_whiteIcon;
+  return node;
 }
 
-export class Email extends _Monitoring {
-  protected static _iconDataUrl = emailIcon;
+export function Email(label?: string, options?: Record<string, unknown>) {
+  const node = _Monitoring(label ?? "Email", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = emailIcon;
+  return node;
 }
 
-export class EventsWhite extends _Monitoring {
-  protected static _iconDataUrl = events_whiteIcon;
+export function EventsWhite(label?: string, options?: Record<string, unknown>) {
+  const node = _Monitoring(label ?? "EventsWhite", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = events_whiteIcon;
+  return node;
 }
 
-export class Events extends _Monitoring {
-  protected static _iconDataUrl = eventsIcon;
+export function Events(label?: string, options?: Record<string, unknown>) {
+  const node = _Monitoring(label ?? "Events", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = eventsIcon;
+  return node;
 }
 
-export class HealthCheckWhite extends _Monitoring {
-  protected static _iconDataUrl = health_check_whiteIcon;
+export function HealthCheckWhite(label?: string, options?: Record<string, unknown>) {
+  const node = _Monitoring(label ?? "HealthCheckWhite", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = health_check_whiteIcon;
+  return node;
 }
 
-export class HealthCheck extends _Monitoring {
-  protected static _iconDataUrl = health_checkIcon;
+export function HealthCheck(label?: string, options?: Record<string, unknown>) {
+  const node = _Monitoring(label ?? "HealthCheck", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = health_checkIcon;
+  return node;
 }
 
-export class NotificationsWhite extends _Monitoring {
-  protected static _iconDataUrl = notifications_whiteIcon;
+export function NotificationsWhite(label?: string, options?: Record<string, unknown>) {
+  const node = _Monitoring(label ?? "NotificationsWhite", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = notifications_whiteIcon;
+  return node;
 }
 
-export class Notifications extends _Monitoring {
-  protected static _iconDataUrl = notificationsIcon;
+export function Notifications(label?: string, options?: Record<string, unknown>) {
+  const node = _Monitoring(label ?? "Notifications", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = notificationsIcon;
+  return node;
 }
 
-export class QueueWhite extends _Monitoring {
-  protected static _iconDataUrl = queue_whiteIcon;
+export function QueueWhite(label?: string, options?: Record<string, unknown>) {
+  const node = _Monitoring(label ?? "QueueWhite", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = queue_whiteIcon;
+  return node;
 }
 
-export class Queue extends _Monitoring {
-  protected static _iconDataUrl = queueIcon;
+export function Queue(label?: string, options?: Record<string, unknown>) {
+  const node = _Monitoring(label ?? "Queue", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = queueIcon;
+  return node;
 }
 
-export class SearchWhite extends _Monitoring {
-  protected static _iconDataUrl = search_whiteIcon;
+export function SearchWhite(label?: string, options?: Record<string, unknown>) {
+  const node = _Monitoring(label ?? "SearchWhite", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = search_whiteIcon;
+  return node;
 }
 
-export class Search extends _Monitoring {
-  protected static _iconDataUrl = searchIcon;
+export function Search(label?: string, options?: Record<string, unknown>) {
+  const node = _Monitoring(label ?? "Search", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = searchIcon;
+  return node;
 }
 
-export class TelemetryWhite extends _Monitoring {
-  protected static _iconDataUrl = telemetry_whiteIcon;
+export function TelemetryWhite(label?: string, options?: Record<string, unknown>) {
+  const node = _Monitoring(label ?? "TelemetryWhite", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = telemetry_whiteIcon;
+  return node;
 }
 
-export class Telemetry extends _Monitoring {
-  protected static _iconDataUrl = telemetryIcon;
+export function Telemetry(label?: string, options?: Record<string, unknown>) {
+  const node = _Monitoring(label ?? "Telemetry", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = telemetryIcon;
+  return node;
 }
 
-export class WorkflowWhite extends _Monitoring {
-  protected static _iconDataUrl = workflow_whiteIcon;
+export function WorkflowWhite(label?: string, options?: Record<string, unknown>) {
+  const node = _Monitoring(label ?? "WorkflowWhite", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = workflow_whiteIcon;
+  return node;
 }
 
-export class Workflow extends _Monitoring {
-  protected static _iconDataUrl = workflowIcon;
+export function Workflow(label?: string, options?: Record<string, unknown>) {
+  const node = _Monitoring(label ?? "Workflow", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = workflowIcon;
+  return node;
 }

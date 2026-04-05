@@ -2,14 +2,20 @@ import { _Onprem } from "./index.js";
 import cert_managerIcon from "../../../resources/onprem/certificates/cert-manager.png";
 import lets_encryptIcon from "../../../resources/onprem/certificates/lets-encrypt.png";
 
-class _Certificates extends _Onprem {
-  protected static override _type = "certificates";
+function _Certificates(label?: string, options?: Record<string, unknown>) {
+  const node = _Onprem(label, options);
+  (node as unknown as Record<string, unknown>)._type = "certificates";
+  return node;
 }
 
-export class CertManager extends _Certificates {
-  protected static _iconDataUrl = cert_managerIcon;
+export function CertManager(label?: string, options?: Record<string, unknown>) {
+  const node = _Certificates(label ?? "CertManager", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = cert_managerIcon;
+  return node;
 }
 
-export class LetsEncrypt extends _Certificates {
-  protected static _iconDataUrl = lets_encryptIcon;
+export function LetsEncrypt(label?: string, options?: Record<string, unknown>) {
+  const node = _Certificates(label ?? "LetsEncrypt", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = lets_encryptIcon;
+  return node;
 }

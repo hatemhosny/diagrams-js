@@ -5,26 +5,38 @@ import instanceIcon from "../../../resources/ibm/compute/instance.png";
 import keyIcon from "../../../resources/ibm/compute/key.png";
 import power_instanceIcon from "../../../resources/ibm/compute/power-instance.png";
 
-class _Compute extends _Ibm {
-  protected static override _type = "compute";
+function _Compute(label?: string, options?: Record<string, unknown>) {
+  const node = _Ibm(label, options);
+  (node as unknown as Record<string, unknown>)._type = "compute";
+  return node;
 }
 
-export class BareMetalServer extends _Compute {
-  protected static _iconDataUrl = bare_metal_serverIcon;
+export function BareMetalServer(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "BareMetalServer", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = bare_metal_serverIcon;
+  return node;
 }
 
-export class ImageService extends _Compute {
-  protected static _iconDataUrl = image_serviceIcon;
+export function ImageService(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "ImageService", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = image_serviceIcon;
+  return node;
 }
 
-export class Instance extends _Compute {
-  protected static _iconDataUrl = instanceIcon;
+export function Instance(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "Instance", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = instanceIcon;
+  return node;
 }
 
-export class Key extends _Compute {
-  protected static _iconDataUrl = keyIcon;
+export function Key(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "Key", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = keyIcon;
+  return node;
 }
 
-export class PowerInstance extends _Compute {
-  protected static _iconDataUrl = power_instanceIcon;
+export function PowerInstance(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "PowerInstance", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = power_instanceIcon;
+  return node;
 }

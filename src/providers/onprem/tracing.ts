@@ -2,14 +2,20 @@ import { _Onprem } from "./index.js";
 import jaegerIcon from "../../../resources/onprem/tracing/jaeger.png";
 import tempoIcon from "../../../resources/onprem/tracing/tempo.png";
 
-class _Tracing extends _Onprem {
-  protected static override _type = "tracing";
+function _Tracing(label?: string, options?: Record<string, unknown>) {
+  const node = _Onprem(label, options);
+  (node as unknown as Record<string, unknown>)._type = "tracing";
+  return node;
 }
 
-export class Jaeger extends _Tracing {
-  protected static _iconDataUrl = jaegerIcon;
+export function Jaeger(label?: string, options?: Record<string, unknown>) {
+  const node = _Tracing(label ?? "Jaeger", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = jaegerIcon;
+  return node;
 }
 
-export class Tempo extends _Tracing {
-  protected static _iconDataUrl = tempoIcon;
+export function Tempo(label?: string, options?: Record<string, unknown>) {
+  const node = _Tracing(label ?? "Tempo", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = tempoIcon;
+  return node;
 }

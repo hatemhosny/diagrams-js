@@ -5,26 +5,38 @@ import live_collaborationIcon from "../../../resources/ibm/social/live-collabora
 import messagingIcon from "../../../resources/ibm/social/messaging.png";
 import networkingIcon from "../../../resources/ibm/social/networking.png";
 
-class _Social extends _Ibm {
-  protected static override _type = "social";
+function _Social(label?: string, options?: Record<string, unknown>) {
+  const node = _Ibm(label, options);
+  (node as unknown as Record<string, unknown>)._type = "social";
+  return node;
 }
 
-export class Communities extends _Social {
-  protected static _iconDataUrl = communitiesIcon;
+export function Communities(label?: string, options?: Record<string, unknown>) {
+  const node = _Social(label ?? "Communities", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = communitiesIcon;
+  return node;
 }
 
-export class FileSync extends _Social {
-  protected static _iconDataUrl = file_syncIcon;
+export function FileSync(label?: string, options?: Record<string, unknown>) {
+  const node = _Social(label ?? "FileSync", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = file_syncIcon;
+  return node;
 }
 
-export class LiveCollaboration extends _Social {
-  protected static _iconDataUrl = live_collaborationIcon;
+export function LiveCollaboration(label?: string, options?: Record<string, unknown>) {
+  const node = _Social(label ?? "LiveCollaboration", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = live_collaborationIcon;
+  return node;
 }
 
-export class Messaging extends _Social {
-  protected static _iconDataUrl = messagingIcon;
+export function Messaging(label?: string, options?: Record<string, unknown>) {
+  const node = _Social(label ?? "Messaging", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = messagingIcon;
+  return node;
 }
 
-export class Networking extends _Social {
-  protected static _iconDataUrl = networkingIcon;
+export function Networking(label?: string, options?: Record<string, unknown>) {
+  const node = _Social(label ?? "Networking", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = networkingIcon;
+  return node;
 }

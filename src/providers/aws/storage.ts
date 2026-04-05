@@ -31,132 +31,206 @@ import storage_gateway_virtual_tape_libraryIcon from "../../../resources/aws/sto
 import storage_gatewayIcon from "../../../resources/aws/storage/storage-gateway.png";
 import storageIcon from "../../../resources/aws/storage/storage.png";
 
-class _Storage extends _Aws {
-  protected static override _type = "storage";
+function _Storage(label?: string, options?: Record<string, unknown>) {
+  const node = _Aws(label, options);
+  (node as unknown as Record<string, unknown>)._type = "storage";
+  return node;
 }
 
-export class Backup extends _Storage {
-  protected static _iconDataUrl = backupIcon;
+export function Backup(label?: string, options?: Record<string, unknown>) {
+  const node = _Storage(label ?? "Backup", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = backupIcon;
+  return node;
 }
 
-export class CloudendureDisasterRecovery extends _Storage {
-  protected static _iconDataUrl = cloudendure_disaster_recoveryIcon;
+export function CloudendureDisasterRecovery(label?: string, options?: Record<string, unknown>) {
+  const node = _Storage(label ?? "CloudendureDisasterRecovery", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = cloudendure_disaster_recoveryIcon;
+  return node;
 }
 
-export class EFSInfrequentaccessPrimaryBg extends _Storage {
-  protected static _iconDataUrl = efs_infrequentaccess_primary_bgIcon;
+export function EFSInfrequentaccessPrimaryBg(label?: string, options?: Record<string, unknown>) {
+  const node = _Storage(label ?? "EFSInfrequentaccessPrimaryBg", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = efs_infrequentaccess_primary_bgIcon;
+  return node;
 }
 
-export class EFSStandardPrimaryBg extends _Storage {
-  protected static _iconDataUrl = efs_standard_primary_bgIcon;
+export function EFSStandardPrimaryBg(label?: string, options?: Record<string, unknown>) {
+  const node = _Storage(label ?? "EFSStandardPrimaryBg", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = efs_standard_primary_bgIcon;
+  return node;
 }
 
-export class ElasticBlockStoreEBSSnapshot extends _Storage {
-  protected static _iconDataUrl = elastic_block_store_ebs_snapshotIcon;
+export function ElasticBlockStoreEBSSnapshot(label?: string, options?: Record<string, unknown>) {
+  const node = _Storage(label ?? "ElasticBlockStoreEBSSnapshot", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = elastic_block_store_ebs_snapshotIcon;
+  return node;
 }
 
-export class ElasticBlockStoreEBSVolume extends _Storage {
-  protected static _iconDataUrl = elastic_block_store_ebs_volumeIcon;
+export function ElasticBlockStoreEBSVolume(label?: string, options?: Record<string, unknown>) {
+  const node = _Storage(label ?? "ElasticBlockStoreEBSVolume", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = elastic_block_store_ebs_volumeIcon;
+  return node;
 }
 
-export class ElasticBlockStoreEBS extends _Storage {
-  protected static _iconDataUrl = elastic_block_store_ebsIcon;
+export function ElasticBlockStoreEBS(label?: string, options?: Record<string, unknown>) {
+  const node = _Storage(label ?? "ElasticBlockStoreEBS", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = elastic_block_store_ebsIcon;
+  return node;
 }
 
-export class ElasticFileSystemEFSFileSystem extends _Storage {
-  protected static _iconDataUrl = elastic_file_system_efs_file_systemIcon;
+export function ElasticFileSystemEFSFileSystem(label?: string, options?: Record<string, unknown>) {
+  const node = _Storage(label ?? "ElasticFileSystemEFSFileSystem", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl =
+    elastic_file_system_efs_file_systemIcon;
+  return node;
 }
 
-export class ElasticFileSystemEFS extends _Storage {
-  protected static _iconDataUrl = elastic_file_system_efsIcon;
+export function ElasticFileSystemEFS(label?: string, options?: Record<string, unknown>) {
+  const node = _Storage(label ?? "ElasticFileSystemEFS", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = elastic_file_system_efsIcon;
+  return node;
 }
 
-export class FsxForLustre extends _Storage {
-  protected static _iconDataUrl = fsx_for_lustreIcon;
+export function FsxForLustre(label?: string, options?: Record<string, unknown>) {
+  const node = _Storage(label ?? "FsxForLustre", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = fsx_for_lustreIcon;
+  return node;
 }
 
-export class FsxForWindowsFileServer extends _Storage {
-  protected static _iconDataUrl = fsx_for_windows_file_serverIcon;
+export function FsxForWindowsFileServer(label?: string, options?: Record<string, unknown>) {
+  const node = _Storage(label ?? "FsxForWindowsFileServer", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = fsx_for_windows_file_serverIcon;
+  return node;
 }
 
-export class Fsx extends _Storage {
-  protected static _iconDataUrl = fsxIcon;
+export function Fsx(label?: string, options?: Record<string, unknown>) {
+  const node = _Storage(label ?? "Fsx", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = fsxIcon;
+  return node;
 }
 
-export class MultipleVolumesResource extends _Storage {
-  protected static _iconDataUrl = multiple_volumes_resourceIcon;
+export function MultipleVolumesResource(label?: string, options?: Record<string, unknown>) {
+  const node = _Storage(label ?? "MultipleVolumesResource", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = multiple_volumes_resourceIcon;
+  return node;
 }
 
-export class S3AccessPoints extends _Storage {
-  protected static _iconDataUrl = s3_access_pointsIcon;
+export function S3AccessPoints(label?: string, options?: Record<string, unknown>) {
+  const node = _Storage(label ?? "S3AccessPoints", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = s3_access_pointsIcon;
+  return node;
 }
 
-export class S3GlacierArchive extends _Storage {
-  protected static _iconDataUrl = s3_glacier_archiveIcon;
+export function S3GlacierArchive(label?: string, options?: Record<string, unknown>) {
+  const node = _Storage(label ?? "S3GlacierArchive", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = s3_glacier_archiveIcon;
+  return node;
 }
 
-export class S3GlacierVault extends _Storage {
-  protected static _iconDataUrl = s3_glacier_vaultIcon;
+export function S3GlacierVault(label?: string, options?: Record<string, unknown>) {
+  const node = _Storage(label ?? "S3GlacierVault", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = s3_glacier_vaultIcon;
+  return node;
 }
 
-export class S3Glacier extends _Storage {
-  protected static _iconDataUrl = s3_glacierIcon;
+export function S3Glacier(label?: string, options?: Record<string, unknown>) {
+  const node = _Storage(label ?? "S3Glacier", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = s3_glacierIcon;
+  return node;
 }
 
-export class S3ObjectLambdaAccessPoints extends _Storage {
-  protected static _iconDataUrl = s3_object_lambda_access_pointsIcon;
+export function S3ObjectLambdaAccessPoints(label?: string, options?: Record<string, unknown>) {
+  const node = _Storage(label ?? "S3ObjectLambdaAccessPoints", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = s3_object_lambda_access_pointsIcon;
+  return node;
 }
 
-export class SimpleStorageServiceS3BucketWithObjects extends _Storage {
-  protected static _iconDataUrl = simple_storage_service_s3_bucket_with_objectsIcon;
+export function SimpleStorageServiceS3BucketWithObjects(
+  label?: string,
+  options?: Record<string, unknown>,
+) {
+  const node = _Storage(label ?? "SimpleStorageServiceS3BucketWithObjects", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl =
+    simple_storage_service_s3_bucket_with_objectsIcon;
+  return node;
 }
 
-export class SimpleStorageServiceS3Bucket extends _Storage {
-  protected static _iconDataUrl = simple_storage_service_s3_bucketIcon;
+export function SimpleStorageServiceS3Bucket(label?: string, options?: Record<string, unknown>) {
+  const node = _Storage(label ?? "SimpleStorageServiceS3Bucket", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = simple_storage_service_s3_bucketIcon;
+  return node;
 }
 
-export class SimpleStorageServiceS3Object extends _Storage {
-  protected static _iconDataUrl = simple_storage_service_s3_objectIcon;
+export function SimpleStorageServiceS3Object(label?: string, options?: Record<string, unknown>) {
+  const node = _Storage(label ?? "SimpleStorageServiceS3Object", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = simple_storage_service_s3_objectIcon;
+  return node;
 }
 
-export class SimpleStorageServiceS3 extends _Storage {
-  protected static _iconDataUrl = simple_storage_service_s3Icon;
+export function SimpleStorageServiceS3(label?: string, options?: Record<string, unknown>) {
+  const node = _Storage(label ?? "SimpleStorageServiceS3", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = simple_storage_service_s3Icon;
+  return node;
 }
 
-export class SnowFamilySnowballImportExport extends _Storage {
-  protected static _iconDataUrl = snow_family_snowball_import_exportIcon;
+export function SnowFamilySnowballImportExport(label?: string, options?: Record<string, unknown>) {
+  const node = _Storage(label ?? "SnowFamilySnowballImportExport", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl =
+    snow_family_snowball_import_exportIcon;
+  return node;
 }
 
-export class SnowballEdge extends _Storage {
-  protected static _iconDataUrl = snowball_edgeIcon;
+export function SnowballEdge(label?: string, options?: Record<string, unknown>) {
+  const node = _Storage(label ?? "SnowballEdge", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = snowball_edgeIcon;
+  return node;
 }
 
-export class Snowball extends _Storage {
-  protected static _iconDataUrl = snowballIcon;
+export function Snowball(label?: string, options?: Record<string, unknown>) {
+  const node = _Storage(label ?? "Snowball", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = snowballIcon;
+  return node;
 }
 
-export class Snowmobile extends _Storage {
-  protected static _iconDataUrl = snowmobileIcon;
+export function Snowmobile(label?: string, options?: Record<string, unknown>) {
+  const node = _Storage(label ?? "Snowmobile", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = snowmobileIcon;
+  return node;
 }
 
-export class StorageGatewayCachedVolume extends _Storage {
-  protected static _iconDataUrl = storage_gateway_cached_volumeIcon;
+export function StorageGatewayCachedVolume(label?: string, options?: Record<string, unknown>) {
+  const node = _Storage(label ?? "StorageGatewayCachedVolume", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = storage_gateway_cached_volumeIcon;
+  return node;
 }
 
-export class StorageGatewayNonCachedVolume extends _Storage {
-  protected static _iconDataUrl = storage_gateway_non_cached_volumeIcon;
+export function StorageGatewayNonCachedVolume(label?: string, options?: Record<string, unknown>) {
+  const node = _Storage(label ?? "StorageGatewayNonCachedVolume", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = storage_gateway_non_cached_volumeIcon;
+  return node;
 }
 
-export class StorageGatewayVirtualTapeLibrary extends _Storage {
-  protected static _iconDataUrl = storage_gateway_virtual_tape_libraryIcon;
+export function StorageGatewayVirtualTapeLibrary(
+  label?: string,
+  options?: Record<string, unknown>,
+) {
+  const node = _Storage(label ?? "StorageGatewayVirtualTapeLibrary", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl =
+    storage_gateway_virtual_tape_libraryIcon;
+  return node;
 }
 
-export class StorageGateway extends _Storage {
-  protected static _iconDataUrl = storage_gatewayIcon;
+export function StorageGateway(label?: string, options?: Record<string, unknown>) {
+  const node = _Storage(label ?? "StorageGateway", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = storage_gatewayIcon;
+  return node;
 }
 
-export class Storage extends _Storage {
-  protected static _iconDataUrl = storageIcon;
+export function Storage(label?: string, options?: Record<string, unknown>) {
+  const node = _Storage(label ?? "Storage", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = storageIcon;
+  return node;
 }
 
 // Aliases

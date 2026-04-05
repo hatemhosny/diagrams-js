@@ -34,144 +34,222 @@ import redshift_dense_storage_nodeIcon from "../../../resources/aws/database/red
 import redshiftIcon from "../../../resources/aws/database/redshift.png";
 import timestreamIcon from "../../../resources/aws/database/timestream.png";
 
-class _Database extends _Aws {
-  protected static override _type = "database";
+function _Database(label?: string, options?: Record<string, unknown>) {
+  const node = _Aws(label, options);
+  (node as unknown as Record<string, unknown>)._type = "database";
+  return node;
 }
 
-export class AuroraInstance extends _Database {
-  protected static _iconDataUrl = aurora_instanceIcon;
+export function AuroraInstance(label?: string, options?: Record<string, unknown>) {
+  const node = _Database(label ?? "AuroraInstance", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = aurora_instanceIcon;
+  return node;
 }
 
-export class Aurora extends _Database {
-  protected static _iconDataUrl = auroraIcon;
+export function Aurora(label?: string, options?: Record<string, unknown>) {
+  const node = _Database(label ?? "Aurora", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = auroraIcon;
+  return node;
 }
 
-export class DatabaseMigrationServiceDatabaseMigrationWorkflow extends _Database {
-  protected static _iconDataUrl = database_migration_service_database_migration_workflowIcon;
+export function DatabaseMigrationServiceDatabaseMigrationWorkflow(
+  label?: string,
+  options?: Record<string, unknown>,
+) {
+  const node = _Database(label ?? "DatabaseMigrationServiceDatabaseMigrationWorkflow", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl =
+    database_migration_service_database_migration_workflowIcon;
+  return node;
 }
 
-export class DatabaseMigrationService extends _Database {
-  protected static _iconDataUrl = database_migration_serviceIcon;
+export function DatabaseMigrationService(label?: string, options?: Record<string, unknown>) {
+  const node = _Database(label ?? "DatabaseMigrationService", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = database_migration_serviceIcon;
+  return node;
 }
 
-export class Database extends _Database {
-  protected static _iconDataUrl = databaseIcon;
+export function Database(label?: string, options?: Record<string, unknown>) {
+  const node = _Database(label ?? "Database", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = databaseIcon;
+  return node;
 }
 
-export class DocumentdbMongodbCompatibility extends _Database {
-  protected static _iconDataUrl = documentdb_mongodb_compatibilityIcon;
+export function DocumentdbMongodbCompatibility(label?: string, options?: Record<string, unknown>) {
+  const node = _Database(label ?? "DocumentdbMongodbCompatibility", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = documentdb_mongodb_compatibilityIcon;
+  return node;
 }
 
-export class DynamodbAttribute extends _Database {
-  protected static _iconDataUrl = dynamodb_attributeIcon;
+export function DynamodbAttribute(label?: string, options?: Record<string, unknown>) {
+  const node = _Database(label ?? "DynamodbAttribute", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = dynamodb_attributeIcon;
+  return node;
 }
 
-export class DynamodbAttributes extends _Database {
-  protected static _iconDataUrl = dynamodb_attributesIcon;
+export function DynamodbAttributes(label?: string, options?: Record<string, unknown>) {
+  const node = _Database(label ?? "DynamodbAttributes", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = dynamodb_attributesIcon;
+  return node;
 }
 
-export class DynamodbDax extends _Database {
-  protected static _iconDataUrl = dynamodb_daxIcon;
+export function DynamodbDax(label?: string, options?: Record<string, unknown>) {
+  const node = _Database(label ?? "DynamodbDax", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = dynamodb_daxIcon;
+  return node;
 }
 
-export class DynamodbGlobalSecondaryIndex extends _Database {
-  protected static _iconDataUrl = dynamodb_global_secondary_indexIcon;
+export function DynamodbGlobalSecondaryIndex(label?: string, options?: Record<string, unknown>) {
+  const node = _Database(label ?? "DynamodbGlobalSecondaryIndex", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = dynamodb_global_secondary_indexIcon;
+  return node;
 }
 
-export class DynamodbItem extends _Database {
-  protected static _iconDataUrl = dynamodb_itemIcon;
+export function DynamodbItem(label?: string, options?: Record<string, unknown>) {
+  const node = _Database(label ?? "DynamodbItem", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = dynamodb_itemIcon;
+  return node;
 }
 
-export class DynamodbItems extends _Database {
-  protected static _iconDataUrl = dynamodb_itemsIcon;
+export function DynamodbItems(label?: string, options?: Record<string, unknown>) {
+  const node = _Database(label ?? "DynamodbItems", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = dynamodb_itemsIcon;
+  return node;
 }
 
-export class DynamodbStreams extends _Database {
-  protected static _iconDataUrl = dynamodb_streamsIcon;
+export function DynamodbStreams(label?: string, options?: Record<string, unknown>) {
+  const node = _Database(label ?? "DynamodbStreams", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = dynamodb_streamsIcon;
+  return node;
 }
 
-export class DynamodbTable extends _Database {
-  protected static _iconDataUrl = dynamodb_tableIcon;
+export function DynamodbTable(label?: string, options?: Record<string, unknown>) {
+  const node = _Database(label ?? "DynamodbTable", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = dynamodb_tableIcon;
+  return node;
 }
 
-export class Dynamodb extends _Database {
-  protected static _iconDataUrl = dynamodbIcon;
+export function Dynamodb(label?: string, options?: Record<string, unknown>) {
+  const node = _Database(label ?? "Dynamodb", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = dynamodbIcon;
+  return node;
 }
 
-export class ElasticacheCacheNode extends _Database {
-  protected static _iconDataUrl = elasticache_cache_nodeIcon;
+export function ElasticacheCacheNode(label?: string, options?: Record<string, unknown>) {
+  const node = _Database(label ?? "ElasticacheCacheNode", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = elasticache_cache_nodeIcon;
+  return node;
 }
 
-export class ElasticacheForMemcached extends _Database {
-  protected static _iconDataUrl = elasticache_for_memcachedIcon;
+export function ElasticacheForMemcached(label?: string, options?: Record<string, unknown>) {
+  const node = _Database(label ?? "ElasticacheForMemcached", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = elasticache_for_memcachedIcon;
+  return node;
 }
 
-export class ElasticacheForRedis extends _Database {
-  protected static _iconDataUrl = elasticache_for_redisIcon;
+export function ElasticacheForRedis(label?: string, options?: Record<string, unknown>) {
+  const node = _Database(label ?? "ElasticacheForRedis", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = elasticache_for_redisIcon;
+  return node;
 }
 
-export class Elasticache extends _Database {
-  protected static _iconDataUrl = elasticacheIcon;
+export function Elasticache(label?: string, options?: Record<string, unknown>) {
+  const node = _Database(label ?? "Elasticache", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = elasticacheIcon;
+  return node;
 }
 
-export class KeyspacesManagedApacheCassandraService extends _Database {
-  protected static _iconDataUrl = keyspaces_managed_apache_cassandra_serviceIcon;
+export function KeyspacesManagedApacheCassandraService(
+  label?: string,
+  options?: Record<string, unknown>,
+) {
+  const node = _Database(label ?? "KeyspacesManagedApacheCassandraService", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl =
+    keyspaces_managed_apache_cassandra_serviceIcon;
+  return node;
 }
 
-export class Neptune extends _Database {
-  protected static _iconDataUrl = neptuneIcon;
+export function Neptune(label?: string, options?: Record<string, unknown>) {
+  const node = _Database(label ?? "Neptune", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = neptuneIcon;
+  return node;
 }
 
-export class QuantumLedgerDatabaseQldb extends _Database {
-  protected static _iconDataUrl = quantum_ledger_database_qldbIcon;
+export function QuantumLedgerDatabaseQldb(label?: string, options?: Record<string, unknown>) {
+  const node = _Database(label ?? "QuantumLedgerDatabaseQldb", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = quantum_ledger_database_qldbIcon;
+  return node;
 }
 
-export class RDSInstance extends _Database {
-  protected static _iconDataUrl = rds_instanceIcon;
+export function RDSInstance(label?: string, options?: Record<string, unknown>) {
+  const node = _Database(label ?? "RDSInstance", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = rds_instanceIcon;
+  return node;
 }
 
-export class RDSMariadbInstance extends _Database {
-  protected static _iconDataUrl = rds_mariadb_instanceIcon;
+export function RDSMariadbInstance(label?: string, options?: Record<string, unknown>) {
+  const node = _Database(label ?? "RDSMariadbInstance", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = rds_mariadb_instanceIcon;
+  return node;
 }
 
-export class RDSMysqlInstance extends _Database {
-  protected static _iconDataUrl = rds_mysql_instanceIcon;
+export function RDSMysqlInstance(label?: string, options?: Record<string, unknown>) {
+  const node = _Database(label ?? "RDSMysqlInstance", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = rds_mysql_instanceIcon;
+  return node;
 }
 
-export class RDSOnVmware extends _Database {
-  protected static _iconDataUrl = rds_on_vmwareIcon;
+export function RDSOnVmware(label?: string, options?: Record<string, unknown>) {
+  const node = _Database(label ?? "RDSOnVmware", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = rds_on_vmwareIcon;
+  return node;
 }
 
-export class RDSOracleInstance extends _Database {
-  protected static _iconDataUrl = rds_oracle_instanceIcon;
+export function RDSOracleInstance(label?: string, options?: Record<string, unknown>) {
+  const node = _Database(label ?? "RDSOracleInstance", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = rds_oracle_instanceIcon;
+  return node;
 }
 
-export class RDSPostgresqlInstance extends _Database {
-  protected static _iconDataUrl = rds_postgresql_instanceIcon;
+export function RDSPostgresqlInstance(label?: string, options?: Record<string, unknown>) {
+  const node = _Database(label ?? "RDSPostgresqlInstance", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = rds_postgresql_instanceIcon;
+  return node;
 }
 
-export class RDSSqlServerInstance extends _Database {
-  protected static _iconDataUrl = rds_sql_server_instanceIcon;
+export function RDSSqlServerInstance(label?: string, options?: Record<string, unknown>) {
+  const node = _Database(label ?? "RDSSqlServerInstance", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = rds_sql_server_instanceIcon;
+  return node;
 }
 
-export class RDS extends _Database {
-  protected static _iconDataUrl = rdsIcon;
+export function RDS(label?: string, options?: Record<string, unknown>) {
+  const node = _Database(label ?? "RDS", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = rdsIcon;
+  return node;
 }
 
-export class RedshiftDenseComputeNode extends _Database {
-  protected static _iconDataUrl = redshift_dense_compute_nodeIcon;
+export function RedshiftDenseComputeNode(label?: string, options?: Record<string, unknown>) {
+  const node = _Database(label ?? "RedshiftDenseComputeNode", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = redshift_dense_compute_nodeIcon;
+  return node;
 }
 
-export class RedshiftDenseStorageNode extends _Database {
-  protected static _iconDataUrl = redshift_dense_storage_nodeIcon;
+export function RedshiftDenseStorageNode(label?: string, options?: Record<string, unknown>) {
+  const node = _Database(label ?? "RedshiftDenseStorageNode", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = redshift_dense_storage_nodeIcon;
+  return node;
 }
 
-export class Redshift extends _Database {
-  protected static _iconDataUrl = redshiftIcon;
+export function Redshift(label?: string, options?: Record<string, unknown>) {
+  const node = _Database(label ?? "Redshift", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = redshiftIcon;
+  return node;
 }
 
-export class Timestream extends _Database {
-  protected static _iconDataUrl = timestreamIcon;
+export function Timestream(label?: string, options?: Record<string, unknown>) {
+  const node = _Database(label ?? "Timestream", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = timestreamIcon;
+  return node;
 }
 
 // Aliases

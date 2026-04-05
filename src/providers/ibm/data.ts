@@ -13,58 +13,86 @@ import ground_truthIcon from "../../../resources/ibm/data/ground-truth.png";
 import modelIcon from "../../../resources/ibm/data/model.png";
 import tms_data_interfaceIcon from "../../../resources/ibm/data/tms-data-interface.png";
 
-class _Data extends _Ibm {
-  protected static override _type = "data";
+function _Data(label?: string, options?: Record<string, unknown>) {
+  const node = _Ibm(label, options);
+  (node as unknown as Record<string, unknown>)._type = "data";
+  return node;
 }
 
-export class Caches extends _Data {
-  protected static _iconDataUrl = cachesIcon;
+export function Caches(label?: string, options?: Record<string, unknown>) {
+  const node = _Data(label ?? "Caches", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = cachesIcon;
+  return node;
 }
 
-export class Cloud extends _Data {
-  protected static _iconDataUrl = cloudIcon;
+export function Cloud(label?: string, options?: Record<string, unknown>) {
+  const node = _Data(label ?? "Cloud", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = cloudIcon;
+  return node;
 }
 
-export class ConversationTrainedDeployed extends _Data {
-  protected static _iconDataUrl = conversation_trained_deployedIcon;
+export function ConversationTrainedDeployed(label?: string, options?: Record<string, unknown>) {
+  const node = _Data(label ?? "ConversationTrainedDeployed", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = conversation_trained_deployedIcon;
+  return node;
 }
 
-export class DataServices extends _Data {
-  protected static _iconDataUrl = data_servicesIcon;
+export function DataServices(label?: string, options?: Record<string, unknown>) {
+  const node = _Data(label ?? "DataServices", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = data_servicesIcon;
+  return node;
 }
 
-export class DataSources extends _Data {
-  protected static _iconDataUrl = data_sourcesIcon;
+export function DataSources(label?: string, options?: Record<string, unknown>) {
+  const node = _Data(label ?? "DataSources", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = data_sourcesIcon;
+  return node;
 }
 
-export class DeviceIdentityService extends _Data {
-  protected static _iconDataUrl = device_identity_serviceIcon;
+export function DeviceIdentityService(label?: string, options?: Record<string, unknown>) {
+  const node = _Data(label ?? "DeviceIdentityService", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = device_identity_serviceIcon;
+  return node;
 }
 
-export class DeviceRegistry extends _Data {
-  protected static _iconDataUrl = device_registryIcon;
+export function DeviceRegistry(label?: string, options?: Record<string, unknown>) {
+  const node = _Data(label ?? "DeviceRegistry", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = device_registryIcon;
+  return node;
 }
 
-export class EnterpriseData extends _Data {
-  protected static _iconDataUrl = enterprise_dataIcon;
+export function EnterpriseData(label?: string, options?: Record<string, unknown>) {
+  const node = _Data(label ?? "EnterpriseData", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = enterprise_dataIcon;
+  return node;
 }
 
-export class EnterpriseUserDirectory extends _Data {
-  protected static _iconDataUrl = enterprise_user_directoryIcon;
+export function EnterpriseUserDirectory(label?: string, options?: Record<string, unknown>) {
+  const node = _Data(label ?? "EnterpriseUserDirectory", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = enterprise_user_directoryIcon;
+  return node;
 }
 
-export class FileRepository extends _Data {
-  protected static _iconDataUrl = file_repositoryIcon;
+export function FileRepository(label?: string, options?: Record<string, unknown>) {
+  const node = _Data(label ?? "FileRepository", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = file_repositoryIcon;
+  return node;
 }
 
-export class GroundTruth extends _Data {
-  protected static _iconDataUrl = ground_truthIcon;
+export function GroundTruth(label?: string, options?: Record<string, unknown>) {
+  const node = _Data(label ?? "GroundTruth", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = ground_truthIcon;
+  return node;
 }
 
-export class Model extends _Data {
-  protected static _iconDataUrl = modelIcon;
+export function Model(label?: string, options?: Record<string, unknown>) {
+  const node = _Data(label ?? "Model", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = modelIcon;
+  return node;
 }
 
-export class TmsDataInterface extends _Data {
-  protected static _iconDataUrl = tms_data_interfaceIcon;
+export function TmsDataInterface(label?: string, options?: Record<string, unknown>) {
+  const node = _Data(label ?? "TmsDataInterface", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = tms_data_interfaceIcon;
+  return node;
 }

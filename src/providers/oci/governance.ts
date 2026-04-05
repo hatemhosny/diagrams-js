@@ -14,62 +14,92 @@ import policiesIcon from "../../../resources/oci/governance/policies.png";
 import tagging_whiteIcon from "../../../resources/oci/governance/tagging-white.png";
 import taggingIcon from "../../../resources/oci/governance/tagging.png";
 
-class _Governance extends _Oci {
-  protected static override _type = "governance";
+function _Governance(label?: string, options?: Record<string, unknown>) {
+  const node = _Oci(label, options);
+  (node as unknown as Record<string, unknown>)._type = "governance";
+  return node;
 }
 
-export class AuditWhite extends _Governance {
-  protected static _iconDataUrl = audit_whiteIcon;
+export function AuditWhite(label?: string, options?: Record<string, unknown>) {
+  const node = _Governance(label ?? "AuditWhite", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = audit_whiteIcon;
+  return node;
 }
 
-export class Audit extends _Governance {
-  protected static _iconDataUrl = auditIcon;
+export function Audit(label?: string, options?: Record<string, unknown>) {
+  const node = _Governance(label ?? "Audit", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = auditIcon;
+  return node;
 }
 
-export class CompartmentsWhite extends _Governance {
-  protected static _iconDataUrl = compartments_whiteIcon;
+export function CompartmentsWhite(label?: string, options?: Record<string, unknown>) {
+  const node = _Governance(label ?? "CompartmentsWhite", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = compartments_whiteIcon;
+  return node;
 }
 
-export class Compartments extends _Governance {
-  protected static _iconDataUrl = compartmentsIcon;
+export function Compartments(label?: string, options?: Record<string, unknown>) {
+  const node = _Governance(label ?? "Compartments", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = compartmentsIcon;
+  return node;
 }
 
-export class GroupsWhite extends _Governance {
-  protected static _iconDataUrl = groups_whiteIcon;
+export function GroupsWhite(label?: string, options?: Record<string, unknown>) {
+  const node = _Governance(label ?? "GroupsWhite", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = groups_whiteIcon;
+  return node;
 }
 
-export class Groups extends _Governance {
-  protected static _iconDataUrl = groupsIcon;
+export function Groups(label?: string, options?: Record<string, unknown>) {
+  const node = _Governance(label ?? "Groups", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = groupsIcon;
+  return node;
 }
 
-export class LoggingWhite extends _Governance {
-  protected static _iconDataUrl = logging_whiteIcon;
+export function LoggingWhite(label?: string, options?: Record<string, unknown>) {
+  const node = _Governance(label ?? "LoggingWhite", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = logging_whiteIcon;
+  return node;
 }
 
-export class Logging extends _Governance {
-  protected static _iconDataUrl = loggingIcon;
+export function Logging(label?: string, options?: Record<string, unknown>) {
+  const node = _Governance(label ?? "Logging", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = loggingIcon;
+  return node;
 }
 
-export class OCIDWhite extends _Governance {
-  protected static _iconDataUrl = ocid_whiteIcon;
+export function OCIDWhite(label?: string, options?: Record<string, unknown>) {
+  const node = _Governance(label ?? "OCIDWhite", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = ocid_whiteIcon;
+  return node;
 }
 
-export class OCID extends _Governance {
-  protected static _iconDataUrl = ocidIcon;
+export function OCID(label?: string, options?: Record<string, unknown>) {
+  const node = _Governance(label ?? "OCID", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = ocidIcon;
+  return node;
 }
 
-export class PoliciesWhite extends _Governance {
-  protected static _iconDataUrl = policies_whiteIcon;
+export function PoliciesWhite(label?: string, options?: Record<string, unknown>) {
+  const node = _Governance(label ?? "PoliciesWhite", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = policies_whiteIcon;
+  return node;
 }
 
-export class Policies extends _Governance {
-  protected static _iconDataUrl = policiesIcon;
+export function Policies(label?: string, options?: Record<string, unknown>) {
+  const node = _Governance(label ?? "Policies", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = policiesIcon;
+  return node;
 }
 
-export class TaggingWhite extends _Governance {
-  protected static _iconDataUrl = tagging_whiteIcon;
+export function TaggingWhite(label?: string, options?: Record<string, unknown>) {
+  const node = _Governance(label ?? "TaggingWhite", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = tagging_whiteIcon;
+  return node;
 }
 
-export class Tagging extends _Governance {
-  protected static _iconDataUrl = taggingIcon;
+export function Tagging(label?: string, options?: Record<string, unknown>) {
+  const node = _Governance(label ?? "Tagging", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = taggingIcon;
+  return node;
 }

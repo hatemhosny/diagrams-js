@@ -7,34 +7,50 @@ import container_registriesIcon from "../../../resources/azure/containers/contai
 import kubernetes_servicesIcon from "../../../resources/azure/containers/kubernetes-services.png";
 import service_fabric_clustersIcon from "../../../resources/azure/containers/service-fabric-clusters.png";
 
-class _Containers extends _Azure {
-  protected static override _type = "containers";
+function _Containers(label?: string, options?: Record<string, unknown>) {
+  const node = _Azure(label, options);
+  (node as unknown as Record<string, unknown>)._type = "containers";
+  return node;
 }
 
-export class AppServices extends _Containers {
-  protected static _iconDataUrl = app_servicesIcon;
+export function AppServices(label?: string, options?: Record<string, unknown>) {
+  const node = _Containers(label ?? "AppServices", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = app_servicesIcon;
+  return node;
 }
 
-export class AzureRedHatOpenshift extends _Containers {
-  protected static _iconDataUrl = azure_red_hat_openshiftIcon;
+export function AzureRedHatOpenshift(label?: string, options?: Record<string, unknown>) {
+  const node = _Containers(label ?? "AzureRedHatOpenshift", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_red_hat_openshiftIcon;
+  return node;
 }
 
-export class BatchAccounts extends _Containers {
-  protected static _iconDataUrl = batch_accountsIcon;
+export function BatchAccounts(label?: string, options?: Record<string, unknown>) {
+  const node = _Containers(label ?? "BatchAccounts", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = batch_accountsIcon;
+  return node;
 }
 
-export class ContainerInstances extends _Containers {
-  protected static _iconDataUrl = container_instancesIcon;
+export function ContainerInstances(label?: string, options?: Record<string, unknown>) {
+  const node = _Containers(label ?? "ContainerInstances", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = container_instancesIcon;
+  return node;
 }
 
-export class ContainerRegistries extends _Containers {
-  protected static _iconDataUrl = container_registriesIcon;
+export function ContainerRegistries(label?: string, options?: Record<string, unknown>) {
+  const node = _Containers(label ?? "ContainerRegistries", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = container_registriesIcon;
+  return node;
 }
 
-export class KubernetesServices extends _Containers {
-  protected static _iconDataUrl = kubernetes_servicesIcon;
+export function KubernetesServices(label?: string, options?: Record<string, unknown>) {
+  const node = _Containers(label ?? "KubernetesServices", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = kubernetes_servicesIcon;
+  return node;
 }
 
-export class ServiceFabricClusters extends _Containers {
-  protected static _iconDataUrl = service_fabric_clustersIcon;
+export function ServiceFabricClusters(label?: string, options?: Record<string, unknown>) {
+  const node = _Containers(label ?? "ServiceFabricClusters", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = service_fabric_clustersIcon;
+  return node;
 }

@@ -32,134 +32,209 @@ import serverless_searchIcon from "../../../resources/azure/aimachinelearning/se
 import speech_servicesIcon from "../../../resources/azure/aimachinelearning/speech-services.png";
 import translator_textIcon from "../../../resources/azure/aimachinelearning/translator-text.png";
 
-class _Aimachinelearning extends _Azure {
-  protected static override _type = "aimachinelearning";
+function _Aimachinelearning(label?: string, options?: Record<string, unknown>) {
+  const node = _Azure(label, options);
+  (node as unknown as Record<string, unknown>)._type = "aimachinelearning";
+  return node;
 }
 
-export class AIStudio extends _Aimachinelearning {
-  protected static _iconDataUrl = ai_studioIcon;
+export function AIStudio(label?: string, options?: Record<string, unknown>) {
+  const node = _Aimachinelearning(label ?? "AIStudio", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = ai_studioIcon;
+  return node;
 }
 
-export class AnomalyDetector extends _Aimachinelearning {
-  protected static _iconDataUrl = anomaly_detectorIcon;
+export function AnomalyDetector(label?: string, options?: Record<string, unknown>) {
+  const node = _Aimachinelearning(label ?? "AnomalyDetector", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = anomaly_detectorIcon;
+  return node;
 }
 
-export class AzureAppliedAIServices extends _Aimachinelearning {
-  protected static _iconDataUrl = azure_applied_ai_servicesIcon;
+export function AzureAppliedAIServices(label?: string, options?: Record<string, unknown>) {
+  const node = _Aimachinelearning(label ?? "AzureAppliedAIServices", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_applied_ai_servicesIcon;
+  return node;
 }
 
-export class AzureExperimentationStudio extends _Aimachinelearning {
-  protected static _iconDataUrl = azure_experimentation_studioIcon;
+export function AzureExperimentationStudio(label?: string, options?: Record<string, unknown>) {
+  const node = _Aimachinelearning(label ?? "AzureExperimentationStudio", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_experimentation_studioIcon;
+  return node;
 }
 
-export class AzureObjectUnderstanding extends _Aimachinelearning {
-  protected static _iconDataUrl = azure_object_understandingIcon;
+export function AzureObjectUnderstanding(label?: string, options?: Record<string, unknown>) {
+  const node = _Aimachinelearning(label ?? "AzureObjectUnderstanding", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_object_understandingIcon;
+  return node;
 }
 
-export class AzureOpenai extends _Aimachinelearning {
-  protected static _iconDataUrl = azure_openaiIcon;
+export function AzureOpenai(label?: string, options?: Record<string, unknown>) {
+  const node = _Aimachinelearning(label ?? "AzureOpenai", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_openaiIcon;
+  return node;
 }
 
-export class BatchAI extends _Aimachinelearning {
-  protected static _iconDataUrl = batch_aiIcon;
+export function BatchAI(label?: string, options?: Record<string, unknown>) {
+  const node = _Aimachinelearning(label ?? "BatchAI", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = batch_aiIcon;
+  return node;
 }
 
-export class Bonsai extends _Aimachinelearning {
-  protected static _iconDataUrl = bonsaiIcon;
+export function Bonsai(label?: string, options?: Record<string, unknown>) {
+  const node = _Aimachinelearning(label ?? "Bonsai", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = bonsaiIcon;
+  return node;
 }
 
-export class BotServices extends _Aimachinelearning {
-  protected static _iconDataUrl = bot_servicesIcon;
+export function BotServices(label?: string, options?: Record<string, unknown>) {
+  const node = _Aimachinelearning(label ?? "BotServices", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = bot_servicesIcon;
+  return node;
 }
 
-export class CognitiveSearch extends _Aimachinelearning {
-  protected static _iconDataUrl = cognitive_searchIcon;
+export function CognitiveSearch(label?: string, options?: Record<string, unknown>) {
+  const node = _Aimachinelearning(label ?? "CognitiveSearch", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = cognitive_searchIcon;
+  return node;
 }
 
-export class CognitiveServicesDecisions extends _Aimachinelearning {
-  protected static _iconDataUrl = cognitive_services_decisionsIcon;
+export function CognitiveServicesDecisions(label?: string, options?: Record<string, unknown>) {
+  const node = _Aimachinelearning(label ?? "CognitiveServicesDecisions", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = cognitive_services_decisionsIcon;
+  return node;
 }
 
-export class CognitiveServices extends _Aimachinelearning {
-  protected static _iconDataUrl = cognitive_servicesIcon;
+export function CognitiveServices(label?: string, options?: Record<string, unknown>) {
+  const node = _Aimachinelearning(label ?? "CognitiveServices", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = cognitive_servicesIcon;
+  return node;
 }
 
-export class ComputerVision extends _Aimachinelearning {
-  protected static _iconDataUrl = computer_visionIcon;
+export function ComputerVision(label?: string, options?: Record<string, unknown>) {
+  const node = _Aimachinelearning(label ?? "ComputerVision", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = computer_visionIcon;
+  return node;
 }
 
-export class ContentModerators extends _Aimachinelearning {
-  protected static _iconDataUrl = content_moderatorsIcon;
+export function ContentModerators(label?: string, options?: Record<string, unknown>) {
+  const node = _Aimachinelearning(label ?? "ContentModerators", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = content_moderatorsIcon;
+  return node;
 }
 
-export class CustomVision extends _Aimachinelearning {
-  protected static _iconDataUrl = custom_visionIcon;
+export function CustomVision(label?: string, options?: Record<string, unknown>) {
+  const node = _Aimachinelearning(label ?? "CustomVision", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = custom_visionIcon;
+  return node;
 }
 
-export class FaceApis extends _Aimachinelearning {
-  protected static _iconDataUrl = face_apisIcon;
+export function FaceApis(label?: string, options?: Record<string, unknown>) {
+  const node = _Aimachinelearning(label ?? "FaceApis", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = face_apisIcon;
+  return node;
 }
 
-export class FormRecognizers extends _Aimachinelearning {
-  protected static _iconDataUrl = form_recognizersIcon;
+export function FormRecognizers(label?: string, options?: Record<string, unknown>) {
+  const node = _Aimachinelearning(label ?? "FormRecognizers", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = form_recognizersIcon;
+  return node;
 }
 
-export class GenomicsAccounts extends _Aimachinelearning {
-  protected static _iconDataUrl = genomics_accountsIcon;
+export function GenomicsAccounts(label?: string, options?: Record<string, unknown>) {
+  const node = _Aimachinelearning(label ?? "GenomicsAccounts", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = genomics_accountsIcon;
+  return node;
 }
 
-export class Genomics extends _Aimachinelearning {
-  protected static _iconDataUrl = genomicsIcon;
+export function Genomics(label?: string, options?: Record<string, unknown>) {
+  const node = _Aimachinelearning(label ?? "Genomics", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = genomicsIcon;
+  return node;
 }
 
-export class ImmersiveReaders extends _Aimachinelearning {
-  protected static _iconDataUrl = immersive_readersIcon;
+export function ImmersiveReaders(label?: string, options?: Record<string, unknown>) {
+  const node = _Aimachinelearning(label ?? "ImmersiveReaders", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = immersive_readersIcon;
+  return node;
 }
 
-export class LanguageUnderstanding extends _Aimachinelearning {
-  protected static _iconDataUrl = language_understandingIcon;
+export function LanguageUnderstanding(label?: string, options?: Record<string, unknown>) {
+  const node = _Aimachinelearning(label ?? "LanguageUnderstanding", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = language_understandingIcon;
+  return node;
 }
 
-export class Language extends _Aimachinelearning {
-  protected static _iconDataUrl = languageIcon;
+export function Language(label?: string, options?: Record<string, unknown>) {
+  const node = _Aimachinelearning(label ?? "Language", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = languageIcon;
+  return node;
 }
 
-export class MachineLearningStudioClassicWebServices extends _Aimachinelearning {
-  protected static _iconDataUrl = machine_learning_studio_classic_web_servicesIcon;
+export function MachineLearningStudioClassicWebServices(
+  label?: string,
+  options?: Record<string, unknown>,
+) {
+  const node = _Aimachinelearning(label ?? "MachineLearningStudioClassicWebServices", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl =
+    machine_learning_studio_classic_web_servicesIcon;
+  return node;
 }
 
-export class MachineLearningStudioWebServicePlans extends _Aimachinelearning {
-  protected static _iconDataUrl = machine_learning_studio_web_service_plansIcon;
+export function MachineLearningStudioWebServicePlans(
+  label?: string,
+  options?: Record<string, unknown>,
+) {
+  const node = _Aimachinelearning(label ?? "MachineLearningStudioWebServicePlans", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl =
+    machine_learning_studio_web_service_plansIcon;
+  return node;
 }
 
-export class MachineLearningStudioWorkspaces extends _Aimachinelearning {
-  protected static _iconDataUrl = machine_learning_studio_workspacesIcon;
+export function MachineLearningStudioWorkspaces(label?: string, options?: Record<string, unknown>) {
+  const node = _Aimachinelearning(label ?? "MachineLearningStudioWorkspaces", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl =
+    machine_learning_studio_workspacesIcon;
+  return node;
 }
 
-export class MachineLearning extends _Aimachinelearning {
-  protected static _iconDataUrl = machine_learningIcon;
+export function MachineLearning(label?: string, options?: Record<string, unknown>) {
+  const node = _Aimachinelearning(label ?? "MachineLearning", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = machine_learningIcon;
+  return node;
 }
 
-export class MetricsAdvisor extends _Aimachinelearning {
-  protected static _iconDataUrl = metrics_advisorIcon;
+export function MetricsAdvisor(label?: string, options?: Record<string, unknown>) {
+  const node = _Aimachinelearning(label ?? "MetricsAdvisor", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = metrics_advisorIcon;
+  return node;
 }
 
-export class Personalizers extends _Aimachinelearning {
-  protected static _iconDataUrl = personalizersIcon;
+export function Personalizers(label?: string, options?: Record<string, unknown>) {
+  const node = _Aimachinelearning(label ?? "Personalizers", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = personalizersIcon;
+  return node;
 }
 
-export class QnaMakers extends _Aimachinelearning {
-  protected static _iconDataUrl = qna_makersIcon;
+export function QnaMakers(label?: string, options?: Record<string, unknown>) {
+  const node = _Aimachinelearning(label ?? "QnaMakers", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = qna_makersIcon;
+  return node;
 }
 
-export class ServerlessSearch extends _Aimachinelearning {
-  protected static _iconDataUrl = serverless_searchIcon;
+export function ServerlessSearch(label?: string, options?: Record<string, unknown>) {
+  const node = _Aimachinelearning(label ?? "ServerlessSearch", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = serverless_searchIcon;
+  return node;
 }
 
-export class SpeechServices extends _Aimachinelearning {
-  protected static _iconDataUrl = speech_servicesIcon;
+export function SpeechServices(label?: string, options?: Record<string, unknown>) {
+  const node = _Aimachinelearning(label ?? "SpeechServices", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = speech_servicesIcon;
+  return node;
 }
 
-export class TranslatorText extends _Aimachinelearning {
-  protected static _iconDataUrl = translator_textIcon;
+export function TranslatorText(label?: string, options?: Record<string, unknown>) {
+  const node = _Aimachinelearning(label ?? "TranslatorText", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = translator_textIcon;
+  return node;
 }

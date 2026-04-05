@@ -2,14 +2,20 @@ import { _Aws } from "./index.js";
 import ground_stationIcon from "../../../resources/aws/satellite/ground-station.png";
 import satelliteIcon from "../../../resources/aws/satellite/satellite.png";
 
-class _Satellite extends _Aws {
-  protected static override _type = "satellite";
+function _Satellite(label?: string, options?: Record<string, unknown>) {
+  const node = _Aws(label, options);
+  (node as unknown as Record<string, unknown>)._type = "satellite";
+  return node;
 }
 
-export class GroundStation extends _Satellite {
-  protected static _iconDataUrl = ground_stationIcon;
+export function GroundStation(label?: string, options?: Record<string, unknown>) {
+  const node = _Satellite(label ?? "GroundStation", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = ground_stationIcon;
+  return node;
 }
 
-export class Satellite extends _Satellite {
-  protected static _iconDataUrl = satelliteIcon;
+export function Satellite(label?: string, options?: Record<string, unknown>) {
+  const node = _Satellite(label ?? "Satellite", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = satelliteIcon;
+  return node;
 }

@@ -20,88 +20,130 @@ import postgresqlIcon from "../../../resources/onprem/database/postgresql.png";
 import qdrantIcon from "../../../resources/onprem/database/qdrant.png";
 import scyllaIcon from "../../../resources/onprem/database/scylla.png";
 
-class _Database extends _Onprem {
-  protected static override _type = "database";
+function _Database(label?: string, options?: Record<string, unknown>) {
+  const node = _Onprem(label, options);
+  (node as unknown as Record<string, unknown>)._type = "database";
+  return node;
 }
 
-export class Cassandra extends _Database {
-  protected static _iconDataUrl = cassandraIcon;
+export function Cassandra(label?: string, options?: Record<string, unknown>) {
+  const node = _Database(label ?? "Cassandra", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = cassandraIcon;
+  return node;
 }
 
-export class Clickhouse extends _Database {
-  protected static _iconDataUrl = clickhouseIcon;
+export function Clickhouse(label?: string, options?: Record<string, unknown>) {
+  const node = _Database(label ?? "Clickhouse", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = clickhouseIcon;
+  return node;
 }
 
-export class Cockroachdb extends _Database {
-  protected static _iconDataUrl = cockroachdbIcon;
+export function Cockroachdb(label?: string, options?: Record<string, unknown>) {
+  const node = _Database(label ?? "Cockroachdb", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = cockroachdbIcon;
+  return node;
 }
 
-export class Couchbase extends _Database {
-  protected static _iconDataUrl = couchbaseIcon;
+export function Couchbase(label?: string, options?: Record<string, unknown>) {
+  const node = _Database(label ?? "Couchbase", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = couchbaseIcon;
+  return node;
 }
 
-export class Couchdb extends _Database {
-  protected static _iconDataUrl = couchdbIcon;
+export function Couchdb(label?: string, options?: Record<string, unknown>) {
+  const node = _Database(label ?? "Couchdb", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = couchdbIcon;
+  return node;
 }
 
-export class Dgraph extends _Database {
-  protected static _iconDataUrl = dgraphIcon;
+export function Dgraph(label?: string, options?: Record<string, unknown>) {
+  const node = _Database(label ?? "Dgraph", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = dgraphIcon;
+  return node;
 }
 
-export class Druid extends _Database {
-  protected static _iconDataUrl = druidIcon;
+export function Druid(label?: string, options?: Record<string, unknown>) {
+  const node = _Database(label ?? "Druid", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = druidIcon;
+  return node;
 }
 
-export class Duckdb extends _Database {
-  protected static _iconDataUrl = duckdbIcon;
+export function Duckdb(label?: string, options?: Record<string, unknown>) {
+  const node = _Database(label ?? "Duckdb", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = duckdbIcon;
+  return node;
 }
 
-export class Hbase extends _Database {
-  protected static _iconDataUrl = hbaseIcon;
+export function Hbase(label?: string, options?: Record<string, unknown>) {
+  const node = _Database(label ?? "Hbase", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = hbaseIcon;
+  return node;
 }
 
-export class Influxdb extends _Database {
-  protected static _iconDataUrl = influxdbIcon;
+export function Influxdb(label?: string, options?: Record<string, unknown>) {
+  const node = _Database(label ?? "Influxdb", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = influxdbIcon;
+  return node;
 }
 
-export class Janusgraph extends _Database {
-  protected static _iconDataUrl = janusgraphIcon;
+export function Janusgraph(label?: string, options?: Record<string, unknown>) {
+  const node = _Database(label ?? "Janusgraph", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = janusgraphIcon;
+  return node;
 }
 
-export class Mariadb extends _Database {
-  protected static _iconDataUrl = mariadbIcon;
+export function Mariadb(label?: string, options?: Record<string, unknown>) {
+  const node = _Database(label ?? "Mariadb", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = mariadbIcon;
+  return node;
 }
 
-export class Mongodb extends _Database {
-  protected static _iconDataUrl = mongodbIcon;
+export function Mongodb(label?: string, options?: Record<string, unknown>) {
+  const node = _Database(label ?? "Mongodb", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = mongodbIcon;
+  return node;
 }
 
-export class Mssql extends _Database {
-  protected static _iconDataUrl = mssqlIcon;
+export function Mssql(label?: string, options?: Record<string, unknown>) {
+  const node = _Database(label ?? "Mssql", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = mssqlIcon;
+  return node;
 }
 
-export class Mysql extends _Database {
-  protected static _iconDataUrl = mysqlIcon;
+export function Mysql(label?: string, options?: Record<string, unknown>) {
+  const node = _Database(label ?? "Mysql", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = mysqlIcon;
+  return node;
 }
 
-export class Neo4j extends _Database {
-  protected static _iconDataUrl = neo4jIcon;
+export function Neo4j(label?: string, options?: Record<string, unknown>) {
+  const node = _Database(label ?? "Neo4j", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = neo4jIcon;
+  return node;
 }
 
-export class Oracle extends _Database {
-  protected static _iconDataUrl = oracleIcon;
+export function Oracle(label?: string, options?: Record<string, unknown>) {
+  const node = _Database(label ?? "Oracle", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = oracleIcon;
+  return node;
 }
 
-export class Postgresql extends _Database {
-  protected static _iconDataUrl = postgresqlIcon;
+export function Postgresql(label?: string, options?: Record<string, unknown>) {
+  const node = _Database(label ?? "Postgresql", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = postgresqlIcon;
+  return node;
 }
 
-export class Qdrant extends _Database {
-  protected static _iconDataUrl = qdrantIcon;
+export function Qdrant(label?: string, options?: Record<string, unknown>) {
+  const node = _Database(label ?? "Qdrant", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = qdrantIcon;
+  return node;
 }
 
-export class Scylla extends _Database {
-  protected static _iconDataUrl = scyllaIcon;
+export function Scylla(label?: string, options?: Record<string, unknown>) {
+  const node = _Database(label ?? "Scylla", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = scyllaIcon;
+  return node;
 }
 
 // Aliases

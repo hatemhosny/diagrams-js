@@ -6,30 +6,44 @@ import cost_management_and_billingIcon from "../../../resources/azure/migrate/co
 import data_boxIcon from "../../../resources/azure/migrate/data-box.png";
 import recovery_services_vaultsIcon from "../../../resources/azure/migrate/recovery-services-vaults.png";
 
-class _Migrate extends _Azure {
-  protected static override _type = "migrate";
+function _Migrate(label?: string, options?: Record<string, unknown>) {
+  const node = _Azure(label, options);
+  (node as unknown as Record<string, unknown>)._type = "migrate";
+  return node;
 }
 
-export class AzureDataboxGateway extends _Migrate {
-  protected static _iconDataUrl = azure_databox_gatewayIcon;
+export function AzureDataboxGateway(label?: string, options?: Record<string, unknown>) {
+  const node = _Migrate(label ?? "AzureDataboxGateway", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_databox_gatewayIcon;
+  return node;
 }
 
-export class AzureMigrate extends _Migrate {
-  protected static _iconDataUrl = azure_migrateIcon;
+export function AzureMigrate(label?: string, options?: Record<string, unknown>) {
+  const node = _Migrate(label ?? "AzureMigrate", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_migrateIcon;
+  return node;
 }
 
-export class AzureStackEdge extends _Migrate {
-  protected static _iconDataUrl = azure_stack_edgeIcon;
+export function AzureStackEdge(label?: string, options?: Record<string, unknown>) {
+  const node = _Migrate(label ?? "AzureStackEdge", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_stack_edgeIcon;
+  return node;
 }
 
-export class CostManagementAndBilling extends _Migrate {
-  protected static _iconDataUrl = cost_management_and_billingIcon;
+export function CostManagementAndBilling(label?: string, options?: Record<string, unknown>) {
+  const node = _Migrate(label ?? "CostManagementAndBilling", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = cost_management_and_billingIcon;
+  return node;
 }
 
-export class DataBox extends _Migrate {
-  protected static _iconDataUrl = data_boxIcon;
+export function DataBox(label?: string, options?: Record<string, unknown>) {
+  const node = _Migrate(label ?? "DataBox", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = data_boxIcon;
+  return node;
 }
 
-export class RecoveryServicesVaults extends _Migrate {
-  protected static _iconDataUrl = recovery_services_vaultsIcon;
+export function RecoveryServicesVaults(label?: string, options?: Record<string, unknown>) {
+  const node = _Migrate(label ?? "RecoveryServicesVaults", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = recovery_services_vaultsIcon;
+  return node;
 }

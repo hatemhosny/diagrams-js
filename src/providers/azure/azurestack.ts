@@ -7,34 +7,50 @@ import plansIcon from "../../../resources/azure/azurestack/plans.png";
 import updatesIcon from "../../../resources/azure/azurestack/updates.png";
 import user_subscriptionsIcon from "../../../resources/azure/azurestack/user-subscriptions.png";
 
-class _Azurestack extends _Azure {
-  protected static override _type = "azurestack";
+function _Azurestack(label?: string, options?: Record<string, unknown>) {
+  const node = _Azure(label, options);
+  (node as unknown as Record<string, unknown>)._type = "azurestack";
+  return node;
 }
 
-export class Capacity extends _Azurestack {
-  protected static _iconDataUrl = capacityIcon;
+export function Capacity(label?: string, options?: Record<string, unknown>) {
+  const node = _Azurestack(label ?? "Capacity", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = capacityIcon;
+  return node;
 }
 
-export class InfrastructureBackup extends _Azurestack {
-  protected static _iconDataUrl = infrastructure_backupIcon;
+export function InfrastructureBackup(label?: string, options?: Record<string, unknown>) {
+  const node = _Azurestack(label ?? "InfrastructureBackup", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = infrastructure_backupIcon;
+  return node;
 }
 
-export class MultiTenancy extends _Azurestack {
-  protected static _iconDataUrl = multi_tenancyIcon;
+export function MultiTenancy(label?: string, options?: Record<string, unknown>) {
+  const node = _Azurestack(label ?? "MultiTenancy", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = multi_tenancyIcon;
+  return node;
 }
 
-export class Offers extends _Azurestack {
-  protected static _iconDataUrl = offersIcon;
+export function Offers(label?: string, options?: Record<string, unknown>) {
+  const node = _Azurestack(label ?? "Offers", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = offersIcon;
+  return node;
 }
 
-export class Plans extends _Azurestack {
-  protected static _iconDataUrl = plansIcon;
+export function Plans(label?: string, options?: Record<string, unknown>) {
+  const node = _Azurestack(label ?? "Plans", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = plansIcon;
+  return node;
 }
 
-export class Updates extends _Azurestack {
-  protected static _iconDataUrl = updatesIcon;
+export function Updates(label?: string, options?: Record<string, unknown>) {
+  const node = _Azurestack(label ?? "Updates", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = updatesIcon;
+  return node;
 }
 
-export class UserSubscriptions extends _Azurestack {
-  protected static _iconDataUrl = user_subscriptionsIcon;
+export function UserSubscriptions(label?: string, options?: Record<string, unknown>) {
+  const node = _Azurestack(label ?? "UserSubscriptions", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = user_subscriptionsIcon;
+  return node;
 }

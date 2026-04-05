@@ -5,26 +5,38 @@ import karborIcon from "../../../resources/openstack/sharedservices/karbor.png";
 import keystoneIcon from "../../../resources/openstack/sharedservices/keystone.png";
 import searchlightIcon from "../../../resources/openstack/sharedservices/searchlight.png";
 
-class _Sharedservices extends _Openstack {
-  protected static override _type = "sharedservices";
+function _Sharedservices(label?: string, options?: Record<string, unknown>) {
+  const node = _Openstack(label, options);
+  (node as unknown as Record<string, unknown>)._type = "sharedservices";
+  return node;
 }
 
-export class Barbican extends _Sharedservices {
-  protected static _iconDataUrl = barbicanIcon;
+export function Barbican(label?: string, options?: Record<string, unknown>) {
+  const node = _Sharedservices(label ?? "Barbican", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = barbicanIcon;
+  return node;
 }
 
-export class Glance extends _Sharedservices {
-  protected static _iconDataUrl = glanceIcon;
+export function Glance(label?: string, options?: Record<string, unknown>) {
+  const node = _Sharedservices(label ?? "Glance", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = glanceIcon;
+  return node;
 }
 
-export class Karbor extends _Sharedservices {
-  protected static _iconDataUrl = karborIcon;
+export function Karbor(label?: string, options?: Record<string, unknown>) {
+  const node = _Sharedservices(label ?? "Karbor", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = karborIcon;
+  return node;
 }
 
-export class Keystone extends _Sharedservices {
-  protected static _iconDataUrl = keystoneIcon;
+export function Keystone(label?: string, options?: Record<string, unknown>) {
+  const node = _Sharedservices(label ?? "Keystone", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = keystoneIcon;
+  return node;
 }
 
-export class Searchlight extends _Sharedservices {
-  protected static _iconDataUrl = searchlightIcon;
+export function Searchlight(label?: string, options?: Record<string, unknown>) {
+  const node = _Sharedservices(label ?? "Searchlight", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = searchlightIcon;
+  return node;
 }

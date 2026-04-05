@@ -2,14 +2,20 @@ import { _K8s } from "./index.js";
 import crdIcon from "../../../resources/k8s/others/crd.png";
 import pspIcon from "../../../resources/k8s/others/psp.png";
 
-class _Others extends _K8s {
-  protected static override _type = "others";
+function _Others(label?: string, options?: Record<string, unknown>) {
+  const node = _K8s(label, options);
+  (node as unknown as Record<string, unknown>)._type = "others";
+  return node;
 }
 
-export class CRD extends _Others {
-  protected static _iconDataUrl = crdIcon;
+export function CRD(label?: string, options?: Record<string, unknown>) {
+  const node = _Others(label ?? "CRD", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = crdIcon;
+  return node;
 }
 
-export class PSP extends _Others {
-  protected static _iconDataUrl = pspIcon;
+export function PSP(label?: string, options?: Record<string, unknown>) {
+  const node = _Others(label ?? "PSP", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = pspIcon;
+  return node;
 }

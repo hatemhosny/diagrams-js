@@ -17,76 +17,116 @@ import graph_database_serviceIcon from "../../../resources/alibabacloud/database
 import hybriddb_for_mysqlIcon from "../../../resources/alibabacloud/database/hybriddb-for-mysql.png";
 import relational_database_serviceIcon from "../../../resources/alibabacloud/database/relational-database-service.png";
 
-class _Database extends _Alibabacloud {
-  protected static override _type = "database";
+function _Database(label?: string, options?: Record<string, unknown>) {
+  const node = _Alibabacloud(label, options);
+  (node as unknown as Record<string, unknown>)._type = "database";
+  return node;
 }
 
-export class ApsaradbCassandra extends _Database {
-  protected static _iconDataUrl = apsaradb_cassandraIcon;
+export function ApsaradbCassandra(label?: string, options?: Record<string, unknown>) {
+  const node = _Database(label ?? "ApsaradbCassandra", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = apsaradb_cassandraIcon;
+  return node;
 }
 
-export class ApsaradbHbase extends _Database {
-  protected static _iconDataUrl = apsaradb_hbaseIcon;
+export function ApsaradbHbase(label?: string, options?: Record<string, unknown>) {
+  const node = _Database(label ?? "ApsaradbHbase", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = apsaradb_hbaseIcon;
+  return node;
 }
 
-export class ApsaradbMemcache extends _Database {
-  protected static _iconDataUrl = apsaradb_memcacheIcon;
+export function ApsaradbMemcache(label?: string, options?: Record<string, unknown>) {
+  const node = _Database(label ?? "ApsaradbMemcache", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = apsaradb_memcacheIcon;
+  return node;
 }
 
-export class ApsaradbMongodb extends _Database {
-  protected static _iconDataUrl = apsaradb_mongodbIcon;
+export function ApsaradbMongodb(label?: string, options?: Record<string, unknown>) {
+  const node = _Database(label ?? "ApsaradbMongodb", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = apsaradb_mongodbIcon;
+  return node;
 }
 
-export class ApsaradbOceanbase extends _Database {
-  protected static _iconDataUrl = apsaradb_oceanbaseIcon;
+export function ApsaradbOceanbase(label?: string, options?: Record<string, unknown>) {
+  const node = _Database(label ?? "ApsaradbOceanbase", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = apsaradb_oceanbaseIcon;
+  return node;
 }
 
-export class ApsaradbPolardb extends _Database {
-  protected static _iconDataUrl = apsaradb_polardbIcon;
+export function ApsaradbPolardb(label?: string, options?: Record<string, unknown>) {
+  const node = _Database(label ?? "ApsaradbPolardb", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = apsaradb_polardbIcon;
+  return node;
 }
 
-export class ApsaradbPostgresql extends _Database {
-  protected static _iconDataUrl = apsaradb_postgresqlIcon;
+export function ApsaradbPostgresql(label?: string, options?: Record<string, unknown>) {
+  const node = _Database(label ?? "ApsaradbPostgresql", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = apsaradb_postgresqlIcon;
+  return node;
 }
 
-export class ApsaradbPpas extends _Database {
-  protected static _iconDataUrl = apsaradb_ppasIcon;
+export function ApsaradbPpas(label?: string, options?: Record<string, unknown>) {
+  const node = _Database(label ?? "ApsaradbPpas", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = apsaradb_ppasIcon;
+  return node;
 }
 
-export class ApsaradbRedis extends _Database {
-  protected static _iconDataUrl = apsaradb_redisIcon;
+export function ApsaradbRedis(label?: string, options?: Record<string, unknown>) {
+  const node = _Database(label ?? "ApsaradbRedis", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = apsaradb_redisIcon;
+  return node;
 }
 
-export class ApsaradbSqlserver extends _Database {
-  protected static _iconDataUrl = apsaradb_sqlserverIcon;
+export function ApsaradbSqlserver(label?: string, options?: Record<string, unknown>) {
+  const node = _Database(label ?? "ApsaradbSqlserver", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = apsaradb_sqlserverIcon;
+  return node;
 }
 
-export class DataManagementService extends _Database {
-  protected static _iconDataUrl = data_management_serviceIcon;
+export function DataManagementService(label?: string, options?: Record<string, unknown>) {
+  const node = _Database(label ?? "DataManagementService", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = data_management_serviceIcon;
+  return node;
 }
 
-export class DataTransmissionService extends _Database {
-  protected static _iconDataUrl = data_transmission_serviceIcon;
+export function DataTransmissionService(label?: string, options?: Record<string, unknown>) {
+  const node = _Database(label ?? "DataTransmissionService", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = data_transmission_serviceIcon;
+  return node;
 }
 
-export class DatabaseBackupService extends _Database {
-  protected static _iconDataUrl = database_backup_serviceIcon;
+export function DatabaseBackupService(label?: string, options?: Record<string, unknown>) {
+  const node = _Database(label ?? "DatabaseBackupService", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = database_backup_serviceIcon;
+  return node;
 }
 
-export class DisributeRelationalDatabaseService extends _Database {
-  protected static _iconDataUrl = disribute_relational_database_serviceIcon;
+export function DisributeRelationalDatabaseService(
+  label?: string,
+  options?: Record<string, unknown>,
+) {
+  const node = _Database(label ?? "DisributeRelationalDatabaseService", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl =
+    disribute_relational_database_serviceIcon;
+  return node;
 }
 
-export class GraphDatabaseService extends _Database {
-  protected static _iconDataUrl = graph_database_serviceIcon;
+export function GraphDatabaseService(label?: string, options?: Record<string, unknown>) {
+  const node = _Database(label ?? "GraphDatabaseService", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = graph_database_serviceIcon;
+  return node;
 }
 
-export class HybriddbForMysql extends _Database {
-  protected static _iconDataUrl = hybriddb_for_mysqlIcon;
+export function HybriddbForMysql(label?: string, options?: Record<string, unknown>) {
+  const node = _Database(label ?? "HybriddbForMysql", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = hybriddb_for_mysqlIcon;
+  return node;
 }
 
-export class RelationalDatabaseService extends _Database {
-  protected static _iconDataUrl = relational_database_serviceIcon;
+export function RelationalDatabaseService(label?: string, options?: Record<string, unknown>) {
+  const node = _Database(label ?? "RelationalDatabaseService", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = relational_database_serviceIcon;
+  return node;
 }
 
 // Aliases

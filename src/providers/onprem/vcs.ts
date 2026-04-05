@@ -5,26 +5,38 @@ import githubIcon from "../../../resources/onprem/vcs/github.png";
 import gitlabIcon from "../../../resources/onprem/vcs/gitlab.png";
 import svnIcon from "../../../resources/onprem/vcs/svn.png";
 
-class _Vcs extends _Onprem {
-  protected static override _type = "vcs";
+function _Vcs(label?: string, options?: Record<string, unknown>) {
+  const node = _Onprem(label, options);
+  (node as unknown as Record<string, unknown>)._type = "vcs";
+  return node;
 }
 
-export class Git extends _Vcs {
-  protected static _iconDataUrl = gitIcon;
+export function Git(label?: string, options?: Record<string, unknown>) {
+  const node = _Vcs(label ?? "Git", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = gitIcon;
+  return node;
 }
 
-export class Gitea extends _Vcs {
-  protected static _iconDataUrl = giteaIcon;
+export function Gitea(label?: string, options?: Record<string, unknown>) {
+  const node = _Vcs(label ?? "Gitea", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = giteaIcon;
+  return node;
 }
 
-export class Github extends _Vcs {
-  protected static _iconDataUrl = githubIcon;
+export function Github(label?: string, options?: Record<string, unknown>) {
+  const node = _Vcs(label ?? "Github", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = githubIcon;
+  return node;
 }
 
-export class Gitlab extends _Vcs {
-  protected static _iconDataUrl = gitlabIcon;
+export function Gitlab(label?: string, options?: Record<string, unknown>) {
+  const node = _Vcs(label ?? "Gitlab", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = gitlabIcon;
+  return node;
 }
 
-export class Svn extends _Vcs {
-  protected static _iconDataUrl = svnIcon;
+export function Svn(label?: string, options?: Record<string, unknown>) {
+  const node = _Vcs(label ?? "Svn", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = svnIcon;
+  return node;
 }

@@ -1,10 +1,14 @@
 import { _Generic } from "./index.js";
 import storageIcon from "../../../resources/generic/storage/storage.png";
 
-class _Storage extends _Generic {
-  protected static override _type = "storage";
+function _Storage(label?: string, options?: Record<string, unknown>) {
+  const node = _Generic(label, options);
+  (node as unknown as Record<string, unknown>)._type = "storage";
+  return node;
 }
 
-export class Storage extends _Storage {
-  protected static _iconDataUrl = storageIcon;
+export function Storage(label?: string, options?: Record<string, unknown>) {
+  const node = _Storage(label ?? "Storage", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = storageIcon;
+  return node;
 }

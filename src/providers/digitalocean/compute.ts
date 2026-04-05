@@ -8,38 +8,56 @@ import k8s_clusterIcon from "../../../resources/digitalocean/compute/k8s-cluster
 import k8s_node_poolIcon from "../../../resources/digitalocean/compute/k8s-node-pool.png";
 import k8s_nodeIcon from "../../../resources/digitalocean/compute/k8s-node.png";
 
-class _Compute extends _Digitalocean {
-  protected static override _type = "compute";
+function _Compute(label?: string, options?: Record<string, unknown>) {
+  const node = _Digitalocean(label, options);
+  (node as unknown as Record<string, unknown>)._type = "compute";
+  return node;
 }
 
-export class Containers extends _Compute {
-  protected static _iconDataUrl = containersIcon;
+export function Containers(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "Containers", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = containersIcon;
+  return node;
 }
 
-export class Docker extends _Compute {
-  protected static _iconDataUrl = dockerIcon;
+export function Docker(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "Docker", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = dockerIcon;
+  return node;
 }
 
-export class DropletConnect extends _Compute {
-  protected static _iconDataUrl = droplet_connectIcon;
+export function DropletConnect(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "DropletConnect", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = droplet_connectIcon;
+  return node;
 }
 
-export class DropletSnapshot extends _Compute {
-  protected static _iconDataUrl = droplet_snapshotIcon;
+export function DropletSnapshot(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "DropletSnapshot", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = droplet_snapshotIcon;
+  return node;
 }
 
-export class Droplet extends _Compute {
-  protected static _iconDataUrl = dropletIcon;
+export function Droplet(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "Droplet", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = dropletIcon;
+  return node;
 }
 
-export class K8sCluster extends _Compute {
-  protected static _iconDataUrl = k8s_clusterIcon;
+export function K8sCluster(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "K8sCluster", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = k8s_clusterIcon;
+  return node;
 }
 
-export class K8sNodePool extends _Compute {
-  protected static _iconDataUrl = k8s_node_poolIcon;
+export function K8sNodePool(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "K8sNodePool", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = k8s_node_poolIcon;
+  return node;
 }
 
-export class K8sNode extends _Compute {
-  protected static _iconDataUrl = k8s_nodeIcon;
+export function K8sNode(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "K8sNode", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = k8s_nodeIcon;
+  return node;
 }

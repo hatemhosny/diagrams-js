@@ -40,170 +40,301 @@ import single_sign_onIcon from "../../../resources/aws/security/single-sign-on.p
 import waf_filtering_ruleIcon from "../../../resources/aws/security/waf-filtering-rule.png";
 import wafIcon from "../../../resources/aws/security/waf.png";
 
-class _Security extends _Aws {
-  protected static override _type = "security";
+function _Security(label?: string, options?: Record<string, unknown>) {
+  const node = _Aws(label, options);
+  (node as unknown as Record<string, unknown>)._type = "security";
+  return node;
 }
 
-export class AdConnector extends _Security {
-  protected static _iconDataUrl = ad_connectorIcon;
+export function AdConnector(label?: string, options?: Record<string, unknown>) {
+  const node = _Security(label ?? "AdConnector", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = ad_connectorIcon;
+  return node;
 }
 
-export class Artifact extends _Security {
-  protected static _iconDataUrl = artifactIcon;
+export function Artifact(label?: string, options?: Record<string, unknown>) {
+  const node = _Security(label ?? "Artifact", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = artifactIcon;
+  return node;
 }
 
-export class CertificateAuthority extends _Security {
-  protected static _iconDataUrl = certificate_authorityIcon;
+export function CertificateAuthority(label?: string, options?: Record<string, unknown>) {
+  const node = _Security(label ?? "CertificateAuthority", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = certificate_authorityIcon;
+  return node;
 }
 
-export class CertificateManager extends _Security {
-  protected static _iconDataUrl = certificate_managerIcon;
+export function CertificateManager(label?: string, options?: Record<string, unknown>) {
+  const node = _Security(label ?? "CertificateManager", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = certificate_managerIcon;
+  return node;
 }
 
-export class CloudDirectory extends _Security {
-  protected static _iconDataUrl = cloud_directoryIcon;
+export function CloudDirectory(label?: string, options?: Record<string, unknown>) {
+  const node = _Security(label ?? "CloudDirectory", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = cloud_directoryIcon;
+  return node;
 }
 
-export class Cloudhsm extends _Security {
-  protected static _iconDataUrl = cloudhsmIcon;
+export function Cloudhsm(label?: string, options?: Record<string, unknown>) {
+  const node = _Security(label ?? "Cloudhsm", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = cloudhsmIcon;
+  return node;
 }
 
-export class Cognito extends _Security {
-  protected static _iconDataUrl = cognitoIcon;
+export function Cognito(label?: string, options?: Record<string, unknown>) {
+  const node = _Security(label ?? "Cognito", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = cognitoIcon;
+  return node;
 }
 
-export class Detective extends _Security {
-  protected static _iconDataUrl = detectiveIcon;
+export function Detective(label?: string, options?: Record<string, unknown>) {
+  const node = _Security(label ?? "Detective", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = detectiveIcon;
+  return node;
 }
 
-export class DirectoryService extends _Security {
-  protected static _iconDataUrl = directory_serviceIcon;
+export function DirectoryService(label?: string, options?: Record<string, unknown>) {
+  const node = _Security(label ?? "DirectoryService", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = directory_serviceIcon;
+  return node;
 }
 
-export class FirewallManager extends _Security {
-  protected static _iconDataUrl = firewall_managerIcon;
+export function FirewallManager(label?: string, options?: Record<string, unknown>) {
+  const node = _Security(label ?? "FirewallManager", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = firewall_managerIcon;
+  return node;
 }
 
-export class Guardduty extends _Security {
-  protected static _iconDataUrl = guarddutyIcon;
+export function Guardduty(label?: string, options?: Record<string, unknown>) {
+  const node = _Security(label ?? "Guardduty", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = guarddutyIcon;
+  return node;
 }
 
-export class IdentityAndAccessManagementIamAccessAnalyzer extends _Security {
-  protected static _iconDataUrl = identity_and_access_management_iam_access_analyzerIcon;
+export function IdentityAndAccessManagementIamAccessAnalyzer(
+  label?: string,
+  options?: Record<string, unknown>,
+) {
+  const node = _Security(label ?? "IdentityAndAccessManagementIamAccessAnalyzer", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl =
+    identity_and_access_management_iam_access_analyzerIcon;
+  return node;
 }
 
-export class IdentityAndAccessManagementIamAddOn extends _Security {
-  protected static _iconDataUrl = identity_and_access_management_iam_add_onIcon;
+export function IdentityAndAccessManagementIamAddOn(
+  label?: string,
+  options?: Record<string, unknown>,
+) {
+  const node = _Security(label ?? "IdentityAndAccessManagementIamAddOn", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl =
+    identity_and_access_management_iam_add_onIcon;
+  return node;
 }
 
-export class IdentityAndAccessManagementIamAWSStsAlternate extends _Security {
-  protected static _iconDataUrl = identity_and_access_management_iam_aws_sts_alternateIcon;
+export function IdentityAndAccessManagementIamAWSStsAlternate(
+  label?: string,
+  options?: Record<string, unknown>,
+) {
+  const node = _Security(label ?? "IdentityAndAccessManagementIamAWSStsAlternate", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl =
+    identity_and_access_management_iam_aws_sts_alternateIcon;
+  return node;
 }
 
-export class IdentityAndAccessManagementIamAWSSts extends _Security {
-  protected static _iconDataUrl = identity_and_access_management_iam_aws_stsIcon;
+export function IdentityAndAccessManagementIamAWSSts(
+  label?: string,
+  options?: Record<string, unknown>,
+) {
+  const node = _Security(label ?? "IdentityAndAccessManagementIamAWSSts", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl =
+    identity_and_access_management_iam_aws_stsIcon;
+  return node;
 }
 
-export class IdentityAndAccessManagementIamDataEncryptionKey extends _Security {
-  protected static _iconDataUrl = identity_and_access_management_iam_data_encryption_keyIcon;
+export function IdentityAndAccessManagementIamDataEncryptionKey(
+  label?: string,
+  options?: Record<string, unknown>,
+) {
+  const node = _Security(label ?? "IdentityAndAccessManagementIamDataEncryptionKey", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl =
+    identity_and_access_management_iam_data_encryption_keyIcon;
+  return node;
 }
 
-export class IdentityAndAccessManagementIamEncryptedData extends _Security {
-  protected static _iconDataUrl = identity_and_access_management_iam_encrypted_dataIcon;
+export function IdentityAndAccessManagementIamEncryptedData(
+  label?: string,
+  options?: Record<string, unknown>,
+) {
+  const node = _Security(label ?? "IdentityAndAccessManagementIamEncryptedData", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl =
+    identity_and_access_management_iam_encrypted_dataIcon;
+  return node;
 }
 
-export class IdentityAndAccessManagementIamLongTermSecurityCredential extends _Security {
-  protected static _iconDataUrl =
+export function IdentityAndAccessManagementIamLongTermSecurityCredential(
+  label?: string,
+  options?: Record<string, unknown>,
+) {
+  const node = _Security(
+    label ?? "IdentityAndAccessManagementIamLongTermSecurityCredential",
+    options,
+  );
+  (node as unknown as Record<string, unknown>)._iconDataUrl =
     identity_and_access_management_iam_long_term_security_credentialIcon;
+  return node;
 }
 
-export class IdentityAndAccessManagementIamMfaToken extends _Security {
-  protected static _iconDataUrl = identity_and_access_management_iam_mfa_tokenIcon;
+export function IdentityAndAccessManagementIamMfaToken(
+  label?: string,
+  options?: Record<string, unknown>,
+) {
+  const node = _Security(label ?? "IdentityAndAccessManagementIamMfaToken", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl =
+    identity_and_access_management_iam_mfa_tokenIcon;
+  return node;
 }
 
-export class IdentityAndAccessManagementIamPermissions extends _Security {
-  protected static _iconDataUrl = identity_and_access_management_iam_permissionsIcon;
+export function IdentityAndAccessManagementIamPermissions(
+  label?: string,
+  options?: Record<string, unknown>,
+) {
+  const node = _Security(label ?? "IdentityAndAccessManagementIamPermissions", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl =
+    identity_and_access_management_iam_permissionsIcon;
+  return node;
 }
 
-export class IdentityAndAccessManagementIamRole extends _Security {
-  protected static _iconDataUrl = identity_and_access_management_iam_roleIcon;
+export function IdentityAndAccessManagementIamRole(
+  label?: string,
+  options?: Record<string, unknown>,
+) {
+  const node = _Security(label ?? "IdentityAndAccessManagementIamRole", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl =
+    identity_and_access_management_iam_roleIcon;
+  return node;
 }
 
-export class IdentityAndAccessManagementIamTemporarySecurityCredential extends _Security {
-  protected static _iconDataUrl =
+export function IdentityAndAccessManagementIamTemporarySecurityCredential(
+  label?: string,
+  options?: Record<string, unknown>,
+) {
+  const node = _Security(
+    label ?? "IdentityAndAccessManagementIamTemporarySecurityCredential",
+    options,
+  );
+  (node as unknown as Record<string, unknown>)._iconDataUrl =
     identity_and_access_management_iam_temporary_security_credentialIcon;
+  return node;
 }
 
-export class IdentityAndAccessManagementIam extends _Security {
-  protected static _iconDataUrl = identity_and_access_management_iamIcon;
+export function IdentityAndAccessManagementIam(label?: string, options?: Record<string, unknown>) {
+  const node = _Security(label ?? "IdentityAndAccessManagementIam", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl =
+    identity_and_access_management_iamIcon;
+  return node;
 }
 
-export class InspectorAgent extends _Security {
-  protected static _iconDataUrl = inspector_agentIcon;
+export function InspectorAgent(label?: string, options?: Record<string, unknown>) {
+  const node = _Security(label ?? "InspectorAgent", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = inspector_agentIcon;
+  return node;
 }
 
-export class Inspector extends _Security {
-  protected static _iconDataUrl = inspectorIcon;
+export function Inspector(label?: string, options?: Record<string, unknown>) {
+  const node = _Security(label ?? "Inspector", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = inspectorIcon;
+  return node;
 }
 
-export class KeyManagementService extends _Security {
-  protected static _iconDataUrl = key_management_serviceIcon;
+export function KeyManagementService(label?: string, options?: Record<string, unknown>) {
+  const node = _Security(label ?? "KeyManagementService", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = key_management_serviceIcon;
+  return node;
 }
 
-export class Macie extends _Security {
-  protected static _iconDataUrl = macieIcon;
+export function Macie(label?: string, options?: Record<string, unknown>) {
+  const node = _Security(label ?? "Macie", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = macieIcon;
+  return node;
 }
 
-export class ManagedMicrosoftAd extends _Security {
-  protected static _iconDataUrl = managed_microsoft_adIcon;
+export function ManagedMicrosoftAd(label?: string, options?: Record<string, unknown>) {
+  const node = _Security(label ?? "ManagedMicrosoftAd", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = managed_microsoft_adIcon;
+  return node;
 }
 
-export class ResourceAccessManager extends _Security {
-  protected static _iconDataUrl = resource_access_managerIcon;
+export function ResourceAccessManager(label?: string, options?: Record<string, unknown>) {
+  const node = _Security(label ?? "ResourceAccessManager", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = resource_access_managerIcon;
+  return node;
 }
 
-export class SecretsManager extends _Security {
-  protected static _iconDataUrl = secrets_managerIcon;
+export function SecretsManager(label?: string, options?: Record<string, unknown>) {
+  const node = _Security(label ?? "SecretsManager", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = secrets_managerIcon;
+  return node;
 }
 
-export class SecurityHubFinding extends _Security {
-  protected static _iconDataUrl = security_hub_findingIcon;
+export function SecurityHubFinding(label?: string, options?: Record<string, unknown>) {
+  const node = _Security(label ?? "SecurityHubFinding", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = security_hub_findingIcon;
+  return node;
 }
 
-export class SecurityHub extends _Security {
-  protected static _iconDataUrl = security_hubIcon;
+export function SecurityHub(label?: string, options?: Record<string, unknown>) {
+  const node = _Security(label ?? "SecurityHub", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = security_hubIcon;
+  return node;
 }
 
-export class SecurityIdentityAndCompliance extends _Security {
-  protected static _iconDataUrl = security_identity_and_complianceIcon;
+export function SecurityIdentityAndCompliance(label?: string, options?: Record<string, unknown>) {
+  const node = _Security(label ?? "SecurityIdentityAndCompliance", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = security_identity_and_complianceIcon;
+  return node;
 }
 
-export class SecurityLake extends _Security {
-  protected static _iconDataUrl = security_lakeIcon;
+export function SecurityLake(label?: string, options?: Record<string, unknown>) {
+  const node = _Security(label ?? "SecurityLake", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = security_lakeIcon;
+  return node;
 }
 
-export class ShieldAdvanced extends _Security {
-  protected static _iconDataUrl = shield_advancedIcon;
+export function ShieldAdvanced(label?: string, options?: Record<string, unknown>) {
+  const node = _Security(label ?? "ShieldAdvanced", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = shield_advancedIcon;
+  return node;
 }
 
-export class Shield extends _Security {
-  protected static _iconDataUrl = shieldIcon;
+export function Shield(label?: string, options?: Record<string, unknown>) {
+  const node = _Security(label ?? "Shield", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = shieldIcon;
+  return node;
 }
 
-export class SimpleAd extends _Security {
-  protected static _iconDataUrl = simple_adIcon;
+export function SimpleAd(label?: string, options?: Record<string, unknown>) {
+  const node = _Security(label ?? "SimpleAd", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = simple_adIcon;
+  return node;
 }
 
-export class SingleSignOn extends _Security {
-  protected static _iconDataUrl = single_sign_onIcon;
+export function SingleSignOn(label?: string, options?: Record<string, unknown>) {
+  const node = _Security(label ?? "SingleSignOn", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = single_sign_onIcon;
+  return node;
 }
 
-export class WAFFilteringRule extends _Security {
-  protected static _iconDataUrl = waf_filtering_ruleIcon;
+export function WAFFilteringRule(label?: string, options?: Record<string, unknown>) {
+  const node = _Security(label ?? "WAFFilteringRule", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = waf_filtering_ruleIcon;
+  return node;
 }
 
-export class WAF extends _Security {
-  protected static _iconDataUrl = wafIcon;
+export function WAF(label?: string, options?: Record<string, unknown>) {
+  const node = _Security(label ?? "WAF", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = wafIcon;
+  return node;
 }
 
 // Aliases

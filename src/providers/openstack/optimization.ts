@@ -4,22 +4,32 @@ import rallyIcon from "../../../resources/openstack/optimization/rally.png";
 import vitrageIcon from "../../../resources/openstack/optimization/vitrage.png";
 import watcherIcon from "../../../resources/openstack/optimization/watcher.png";
 
-class _Optimization extends _Openstack {
-  protected static override _type = "optimization";
+function _Optimization(label?: string, options?: Record<string, unknown>) {
+  const node = _Openstack(label, options);
+  (node as unknown as Record<string, unknown>)._type = "optimization";
+  return node;
 }
 
-export class Congress extends _Optimization {
-  protected static _iconDataUrl = congressIcon;
+export function Congress(label?: string, options?: Record<string, unknown>) {
+  const node = _Optimization(label ?? "Congress", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = congressIcon;
+  return node;
 }
 
-export class Rally extends _Optimization {
-  protected static _iconDataUrl = rallyIcon;
+export function Rally(label?: string, options?: Record<string, unknown>) {
+  const node = _Optimization(label ?? "Rally", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = rallyIcon;
+  return node;
 }
 
-export class Vitrage extends _Optimization {
-  protected static _iconDataUrl = vitrageIcon;
+export function Vitrage(label?: string, options?: Record<string, unknown>) {
+  const node = _Optimization(label ?? "Vitrage", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = vitrageIcon;
+  return node;
 }
 
-export class Watcher extends _Optimization {
-  protected static _iconDataUrl = watcherIcon;
+export function Watcher(label?: string, options?: Record<string, unknown>) {
+  const node = _Optimization(label ?? "Watcher", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = watcherIcon;
+  return node;
 }

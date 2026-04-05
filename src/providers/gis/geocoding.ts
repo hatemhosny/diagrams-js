@@ -4,22 +4,32 @@ import gisgraphyIcon from "../../../resources/gis/geocoding/gisgraphy.png";
 import nominatimIcon from "../../../resources/gis/geocoding/nominatim.png";
 import peliasIcon from "../../../resources/gis/geocoding/pelias.png";
 
-class _Geocoding extends _Gis {
-  protected static override _type = "geocoding";
+function _Geocoding(label?: string, options?: Record<string, unknown>) {
+  const node = _Gis(label, options);
+  (node as unknown as Record<string, unknown>)._type = "geocoding";
+  return node;
 }
 
-export class Addok extends _Geocoding {
-  protected static _iconDataUrl = addokIcon;
+export function Addok(label?: string, options?: Record<string, unknown>) {
+  const node = _Geocoding(label ?? "Addok", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = addokIcon;
+  return node;
 }
 
-export class Gisgraphy extends _Geocoding {
-  protected static _iconDataUrl = gisgraphyIcon;
+export function Gisgraphy(label?: string, options?: Record<string, unknown>) {
+  const node = _Geocoding(label ?? "Gisgraphy", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = gisgraphyIcon;
+  return node;
 }
 
-export class Nominatim extends _Geocoding {
-  protected static _iconDataUrl = nominatimIcon;
+export function Nominatim(label?: string, options?: Record<string, unknown>) {
+  const node = _Geocoding(label ?? "Nominatim", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = nominatimIcon;
+  return node;
 }
 
-export class Pelias extends _Geocoding {
-  protected static _iconDataUrl = peliasIcon;
+export function Pelias(label?: string, options?: Record<string, unknown>) {
+  const node = _Geocoding(label ?? "Pelias", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = peliasIcon;
+  return node;
 }

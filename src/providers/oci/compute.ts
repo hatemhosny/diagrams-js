@@ -16,72 +16,106 @@ import okeIcon from "../../../resources/oci/compute/oke.png";
 import vm_whiteIcon from "../../../resources/oci/compute/vm-white.png";
 import vmIcon from "../../../resources/oci/compute/vm.png";
 
-class _Compute extends _Oci {
-  protected static override _type = "compute";
+function _Compute(label?: string, options?: Record<string, unknown>) {
+  const node = _Oci(label, options);
+  (node as unknown as Record<string, unknown>)._type = "compute";
+  return node;
 }
 
-export class AutoscaleWhite extends _Compute {
-  protected static _iconDataUrl = autoscale_whiteIcon;
+export function AutoscaleWhite(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "AutoscaleWhite", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = autoscale_whiteIcon;
+  return node;
 }
 
-export class Autoscale extends _Compute {
-  protected static _iconDataUrl = autoscaleIcon;
+export function Autoscale(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "Autoscale", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = autoscaleIcon;
+  return node;
 }
 
-export class BMWhite extends _Compute {
-  protected static _iconDataUrl = bm_whiteIcon;
+export function BMWhite(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "BMWhite", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = bm_whiteIcon;
+  return node;
 }
 
-export class BM extends _Compute {
-  protected static _iconDataUrl = bmIcon;
+export function BM(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "BM", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = bmIcon;
+  return node;
 }
 
-export class ContainerWhite extends _Compute {
-  protected static _iconDataUrl = container_whiteIcon;
+export function ContainerWhite(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "ContainerWhite", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = container_whiteIcon;
+  return node;
 }
 
-export class Container extends _Compute {
-  protected static _iconDataUrl = containerIcon;
+export function Container(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "Container", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = containerIcon;
+  return node;
 }
 
-export class FunctionsWhite extends _Compute {
-  protected static _iconDataUrl = functions_whiteIcon;
+export function FunctionsWhite(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "FunctionsWhite", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = functions_whiteIcon;
+  return node;
 }
 
-export class Functions extends _Compute {
-  protected static _iconDataUrl = functionsIcon;
+export function Functions(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "Functions", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = functionsIcon;
+  return node;
 }
 
-export class InstancePoolsWhite extends _Compute {
-  protected static _iconDataUrl = instance_pools_whiteIcon;
+export function InstancePoolsWhite(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "InstancePoolsWhite", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = instance_pools_whiteIcon;
+  return node;
 }
 
-export class InstancePools extends _Compute {
-  protected static _iconDataUrl = instance_poolsIcon;
+export function InstancePools(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "InstancePools", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = instance_poolsIcon;
+  return node;
 }
 
-export class OCIRWhite extends _Compute {
-  protected static _iconDataUrl = ocir_whiteIcon;
+export function OCIRWhite(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "OCIRWhite", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = ocir_whiteIcon;
+  return node;
 }
 
-export class OCIR extends _Compute {
-  protected static _iconDataUrl = ocirIcon;
+export function OCIR(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "OCIR", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = ocirIcon;
+  return node;
 }
 
-export class OKEWhite extends _Compute {
-  protected static _iconDataUrl = oke_whiteIcon;
+export function OKEWhite(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "OKEWhite", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = oke_whiteIcon;
+  return node;
 }
 
-export class OKE extends _Compute {
-  protected static _iconDataUrl = okeIcon;
+export function OKE(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "OKE", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = okeIcon;
+  return node;
 }
 
-export class VMWhite extends _Compute {
-  protected static _iconDataUrl = vm_whiteIcon;
+export function VMWhite(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "VMWhite", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = vm_whiteIcon;
+  return node;
 }
 
-export class VM extends _Compute {
-  protected static _iconDataUrl = vmIcon;
+export function VM(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "VM", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = vmIcon;
+  return node;
 }
 
 // Aliases

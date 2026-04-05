@@ -17,76 +17,112 @@ import supersetIcon from "../../../resources/onprem/analytics/superset.png";
 import tableauIcon from "../../../resources/onprem/analytics/tableau.png";
 import trinoIcon from "../../../resources/onprem/analytics/trino.png";
 
-class _Analytics extends _Onprem {
-  protected static override _type = "analytics";
+function _Analytics(label?: string, options?: Record<string, unknown>) {
+  const node = _Onprem(label, options);
+  (node as unknown as Record<string, unknown>)._type = "analytics";
+  return node;
 }
 
-export class Beam extends _Analytics {
-  protected static _iconDataUrl = beamIcon;
+export function Beam(label?: string, options?: Record<string, unknown>) {
+  const node = _Analytics(label ?? "Beam", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = beamIcon;
+  return node;
 }
 
-export class Databricks extends _Analytics {
-  protected static _iconDataUrl = databricksIcon;
+export function Databricks(label?: string, options?: Record<string, unknown>) {
+  const node = _Analytics(label ?? "Databricks", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = databricksIcon;
+  return node;
 }
 
-export class Dbt extends _Analytics {
-  protected static _iconDataUrl = dbtIcon;
+export function Dbt(label?: string, options?: Record<string, unknown>) {
+  const node = _Analytics(label ?? "Dbt", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = dbtIcon;
+  return node;
 }
 
-export class Dremio extends _Analytics {
-  protected static _iconDataUrl = dremioIcon;
+export function Dremio(label?: string, options?: Record<string, unknown>) {
+  const node = _Analytics(label ?? "Dremio", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = dremioIcon;
+  return node;
 }
 
-export class Flink extends _Analytics {
-  protected static _iconDataUrl = flinkIcon;
+export function Flink(label?: string, options?: Record<string, unknown>) {
+  const node = _Analytics(label ?? "Flink", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = flinkIcon;
+  return node;
 }
 
-export class Hadoop extends _Analytics {
-  protected static _iconDataUrl = hadoopIcon;
+export function Hadoop(label?: string, options?: Record<string, unknown>) {
+  const node = _Analytics(label ?? "Hadoop", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = hadoopIcon;
+  return node;
 }
 
-export class Hive extends _Analytics {
-  protected static _iconDataUrl = hiveIcon;
+export function Hive(label?: string, options?: Record<string, unknown>) {
+  const node = _Analytics(label ?? "Hive", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = hiveIcon;
+  return node;
 }
 
-export class Metabase extends _Analytics {
-  protected static _iconDataUrl = metabaseIcon;
+export function Metabase(label?: string, options?: Record<string, unknown>) {
+  const node = _Analytics(label ?? "Metabase", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = metabaseIcon;
+  return node;
 }
 
-export class Norikra extends _Analytics {
-  protected static _iconDataUrl = norikraIcon;
+export function Norikra(label?: string, options?: Record<string, unknown>) {
+  const node = _Analytics(label ?? "Norikra", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = norikraIcon;
+  return node;
 }
 
-export class Powerbi extends _Analytics {
-  protected static _iconDataUrl = powerbiIcon;
+export function Powerbi(label?: string, options?: Record<string, unknown>) {
+  const node = _Analytics(label ?? "Powerbi", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = powerbiIcon;
+  return node;
 }
 
-export class Presto extends _Analytics {
-  protected static _iconDataUrl = prestoIcon;
+export function Presto(label?: string, options?: Record<string, unknown>) {
+  const node = _Analytics(label ?? "Presto", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = prestoIcon;
+  return node;
 }
 
-export class Singer extends _Analytics {
-  protected static _iconDataUrl = singerIcon;
+export function Singer(label?: string, options?: Record<string, unknown>) {
+  const node = _Analytics(label ?? "Singer", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = singerIcon;
+  return node;
 }
 
-export class Spark extends _Analytics {
-  protected static _iconDataUrl = sparkIcon;
+export function Spark(label?: string, options?: Record<string, unknown>) {
+  const node = _Analytics(label ?? "Spark", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = sparkIcon;
+  return node;
 }
 
-export class Storm extends _Analytics {
-  protected static _iconDataUrl = stormIcon;
+export function Storm(label?: string, options?: Record<string, unknown>) {
+  const node = _Analytics(label ?? "Storm", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = stormIcon;
+  return node;
 }
 
-export class Superset extends _Analytics {
-  protected static _iconDataUrl = supersetIcon;
+export function Superset(label?: string, options?: Record<string, unknown>) {
+  const node = _Analytics(label ?? "Superset", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = supersetIcon;
+  return node;
 }
 
-export class Tableau extends _Analytics {
-  protected static _iconDataUrl = tableauIcon;
+export function Tableau(label?: string, options?: Record<string, unknown>) {
+  const node = _Analytics(label ?? "Tableau", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = tableauIcon;
+  return node;
 }
 
-export class Trino extends _Analytics {
-  protected static _iconDataUrl = trinoIcon;
+export function Trino(label?: string, options?: Record<string, unknown>) {
+  const node = _Analytics(label ?? "Trino", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = trinoIcon;
+  return node;
 }
 
 // Aliases

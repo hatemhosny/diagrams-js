@@ -1,10 +1,14 @@
 import { _Onprem } from "./index.js";
 import centrifugoIcon from "../../../resources/onprem/messaging/centrifugo.png";
 
-class _Messaging extends _Onprem {
-  protected static override _type = "messaging";
+function _Messaging(label?: string, options?: Record<string, unknown>) {
+  const node = _Onprem(label, options);
+  (node as unknown as Record<string, unknown>)._type = "messaging";
+  return node;
 }
 
-export class Centrifugo extends _Messaging {
-  protected static _iconDataUrl = centrifugoIcon;
+export function Centrifugo(label?: string, options?: Record<string, unknown>) {
+  const node = _Messaging(label ?? "Centrifugo", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = centrifugoIcon;
+  return node;
 }

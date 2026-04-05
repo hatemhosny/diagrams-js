@@ -6,32 +6,46 @@ import k_proxyIcon from "../../../resources/k8s/controlplane/k-proxy.png";
 import kubeletIcon from "../../../resources/k8s/controlplane/kubelet.png";
 import schedIcon from "../../../resources/k8s/controlplane/sched.png";
 
-class _Controlplane extends _K8s {
-  protected static override _type = "controlplane";
+function _Controlplane(label?: string, options?: Record<string, unknown>) {
+  const node = _K8s(label, options);
+  (node as unknown as Record<string, unknown>)._type = "controlplane";
+  return node;
 }
 
-export class API extends _Controlplane {
-  protected static _iconDataUrl = apiIcon;
+export function API(label?: string, options?: Record<string, unknown>) {
+  const node = _Controlplane(label ?? "API", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = apiIcon;
+  return node;
 }
 
-export class CCM extends _Controlplane {
-  protected static _iconDataUrl = c_c_mIcon;
+export function CCM(label?: string, options?: Record<string, unknown>) {
+  const node = _Controlplane(label ?? "CCM", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = c_c_mIcon;
+  return node;
 }
 
-export class CM extends _Controlplane {
-  protected static _iconDataUrl = c_mIcon;
+export function CM(label?: string, options?: Record<string, unknown>) {
+  const node = _Controlplane(label ?? "CM", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = c_mIcon;
+  return node;
 }
 
-export class KProxy extends _Controlplane {
-  protected static _iconDataUrl = k_proxyIcon;
+export function KProxy(label?: string, options?: Record<string, unknown>) {
+  const node = _Controlplane(label ?? "KProxy", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = k_proxyIcon;
+  return node;
 }
 
-export class Kubelet extends _Controlplane {
-  protected static _iconDataUrl = kubeletIcon;
+export function Kubelet(label?: string, options?: Record<string, unknown>) {
+  const node = _Controlplane(label ?? "Kubelet", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = kubeletIcon;
+  return node;
 }
 
-export class Sched extends _Controlplane {
-  protected static _iconDataUrl = schedIcon;
+export function Sched(label?: string, options?: Record<string, unknown>) {
+  const node = _Controlplane(label ?? "Sched", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = schedIcon;
+  return node;
 }
 
 // Aliases

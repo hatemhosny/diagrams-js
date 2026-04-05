@@ -4,22 +4,32 @@ import dbaas_primaryIcon from "../../../resources/digitalocean/database/dbaas-pr
 import dbaas_read_onlyIcon from "../../../resources/digitalocean/database/dbaas-read-only.png";
 import dbaas_standbyIcon from "../../../resources/digitalocean/database/dbaas-standby.png";
 
-class _Database extends _Digitalocean {
-  protected static override _type = "database";
+function _Database(label?: string, options?: Record<string, unknown>) {
+  const node = _Digitalocean(label, options);
+  (node as unknown as Record<string, unknown>)._type = "database";
+  return node;
 }
 
-export class DbaasPrimaryStandbyMore extends _Database {
-  protected static _iconDataUrl = dbaas_primary_standby_moreIcon;
+export function DbaasPrimaryStandbyMore(label?: string, options?: Record<string, unknown>) {
+  const node = _Database(label ?? "DbaasPrimaryStandbyMore", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = dbaas_primary_standby_moreIcon;
+  return node;
 }
 
-export class DbaasPrimary extends _Database {
-  protected static _iconDataUrl = dbaas_primaryIcon;
+export function DbaasPrimary(label?: string, options?: Record<string, unknown>) {
+  const node = _Database(label ?? "DbaasPrimary", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = dbaas_primaryIcon;
+  return node;
 }
 
-export class DbaasReadOnly extends _Database {
-  protected static _iconDataUrl = dbaas_read_onlyIcon;
+export function DbaasReadOnly(label?: string, options?: Record<string, unknown>) {
+  const node = _Database(label ?? "DbaasReadOnly", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = dbaas_read_onlyIcon;
+  return node;
 }
 
-export class DbaasStandby extends _Database {
-  protected static _iconDataUrl = dbaas_standbyIcon;
+export function DbaasStandby(label?: string, options?: Record<string, unknown>) {
+  const node = _Database(label ?? "DbaasStandby", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = dbaas_standbyIcon;
+  return node;
 }

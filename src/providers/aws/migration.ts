@@ -12,56 +12,82 @@ import snowballIcon from "../../../resources/aws/migration/snowball.png";
 import snowmobileIcon from "../../../resources/aws/migration/snowmobile.png";
 import transfer_for_sftpIcon from "../../../resources/aws/migration/transfer-for-sftp.png";
 
-class _Migration extends _Aws {
-  protected static override _type = "migration";
+function _Migration(label?: string, options?: Record<string, unknown>) {
+  const node = _Aws(label, options);
+  (node as unknown as Record<string, unknown>)._type = "migration";
+  return node;
 }
 
-export class ApplicationDiscoveryService extends _Migration {
-  protected static _iconDataUrl = application_discovery_serviceIcon;
+export function ApplicationDiscoveryService(label?: string, options?: Record<string, unknown>) {
+  const node = _Migration(label ?? "ApplicationDiscoveryService", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = application_discovery_serviceIcon;
+  return node;
 }
 
-export class CloudendureMigration extends _Migration {
-  protected static _iconDataUrl = cloudendure_migrationIcon;
+export function CloudendureMigration(label?: string, options?: Record<string, unknown>) {
+  const node = _Migration(label ?? "CloudendureMigration", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = cloudendure_migrationIcon;
+  return node;
 }
 
-export class DatabaseMigrationService extends _Migration {
-  protected static _iconDataUrl = database_migration_serviceIcon;
+export function DatabaseMigrationService(label?: string, options?: Record<string, unknown>) {
+  const node = _Migration(label ?? "DatabaseMigrationService", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = database_migration_serviceIcon;
+  return node;
 }
 
-export class DatasyncAgent extends _Migration {
-  protected static _iconDataUrl = datasync_agentIcon;
+export function DatasyncAgent(label?: string, options?: Record<string, unknown>) {
+  const node = _Migration(label ?? "DatasyncAgent", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = datasync_agentIcon;
+  return node;
 }
 
-export class Datasync extends _Migration {
-  protected static _iconDataUrl = datasyncIcon;
+export function Datasync(label?: string, options?: Record<string, unknown>) {
+  const node = _Migration(label ?? "Datasync", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = datasyncIcon;
+  return node;
 }
 
-export class MigrationAndTransfer extends _Migration {
-  protected static _iconDataUrl = migration_and_transferIcon;
+export function MigrationAndTransfer(label?: string, options?: Record<string, unknown>) {
+  const node = _Migration(label ?? "MigrationAndTransfer", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = migration_and_transferIcon;
+  return node;
 }
 
-export class MigrationHub extends _Migration {
-  protected static _iconDataUrl = migration_hubIcon;
+export function MigrationHub(label?: string, options?: Record<string, unknown>) {
+  const node = _Migration(label ?? "MigrationHub", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = migration_hubIcon;
+  return node;
 }
 
-export class ServerMigrationService extends _Migration {
-  protected static _iconDataUrl = server_migration_serviceIcon;
+export function ServerMigrationService(label?: string, options?: Record<string, unknown>) {
+  const node = _Migration(label ?? "ServerMigrationService", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = server_migration_serviceIcon;
+  return node;
 }
 
-export class SnowballEdge extends _Migration {
-  protected static _iconDataUrl = snowball_edgeIcon;
+export function SnowballEdge(label?: string, options?: Record<string, unknown>) {
+  const node = _Migration(label ?? "SnowballEdge", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = snowball_edgeIcon;
+  return node;
 }
 
-export class Snowball extends _Migration {
-  protected static _iconDataUrl = snowballIcon;
+export function Snowball(label?: string, options?: Record<string, unknown>) {
+  const node = _Migration(label ?? "Snowball", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = snowballIcon;
+  return node;
 }
 
-export class Snowmobile extends _Migration {
-  protected static _iconDataUrl = snowmobileIcon;
+export function Snowmobile(label?: string, options?: Record<string, unknown>) {
+  const node = _Migration(label ?? "Snowmobile", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = snowmobileIcon;
+  return node;
 }
 
-export class TransferForSftp extends _Migration {
-  protected static _iconDataUrl = transfer_for_sftpIcon;
+export function TransferForSftp(label?: string, options?: Record<string, unknown>) {
+  const node = _Migration(label ?? "TransferForSftp", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = transfer_for_sftpIcon;
+  return node;
 }
 
 // Aliases

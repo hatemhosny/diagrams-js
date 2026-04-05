@@ -4,24 +4,34 @@ import cephIcon from "../../../resources/onprem/storage/ceph.png";
 import glusterfsIcon from "../../../resources/onprem/storage/glusterfs.png";
 import portworxIcon from "../../../resources/onprem/storage/portworx.png";
 
-class _Storage extends _Onprem {
-  protected static override _type = "storage";
+function _Storage(label?: string, options?: Record<string, unknown>) {
+  const node = _Onprem(label, options);
+  (node as unknown as Record<string, unknown>)._type = "storage";
+  return node;
 }
 
-export class CephOsd extends _Storage {
-  protected static _iconDataUrl = ceph_osdIcon;
+export function CephOsd(label?: string, options?: Record<string, unknown>) {
+  const node = _Storage(label ?? "CephOsd", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = ceph_osdIcon;
+  return node;
 }
 
-export class Ceph extends _Storage {
-  protected static _iconDataUrl = cephIcon;
+export function Ceph(label?: string, options?: Record<string, unknown>) {
+  const node = _Storage(label ?? "Ceph", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = cephIcon;
+  return node;
 }
 
-export class Glusterfs extends _Storage {
-  protected static _iconDataUrl = glusterfsIcon;
+export function Glusterfs(label?: string, options?: Record<string, unknown>) {
+  const node = _Storage(label ?? "Glusterfs", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = glusterfsIcon;
+  return node;
 }
 
-export class Portworx extends _Storage {
-  protected static _iconDataUrl = portworxIcon;
+export function Portworx(label?: string, options?: Record<string, unknown>) {
+  const node = _Storage(label ?? "Portworx", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = portworxIcon;
+  return node;
 }
 
 // Aliases

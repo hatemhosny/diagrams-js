@@ -4,22 +4,32 @@ import amazon_payIcon from "../../../resources/saas/payment/amazon-pay.png";
 import paypalIcon from "../../../resources/saas/payment/paypal.png";
 import stripeIcon from "../../../resources/saas/payment/stripe.png";
 
-class _Payment extends _Saas {
-  protected static override _type = "payment";
+function _Payment(label?: string, options?: Record<string, unknown>) {
+  const node = _Saas(label, options);
+  (node as unknown as Record<string, unknown>)._type = "payment";
+  return node;
 }
 
-export class Adyen extends _Payment {
-  protected static _iconDataUrl = adyenIcon;
+export function Adyen(label?: string, options?: Record<string, unknown>) {
+  const node = _Payment(label ?? "Adyen", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = adyenIcon;
+  return node;
 }
 
-export class AmazonPay extends _Payment {
-  protected static _iconDataUrl = amazon_payIcon;
+export function AmazonPay(label?: string, options?: Record<string, unknown>) {
+  const node = _Payment(label ?? "AmazonPay", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = amazon_payIcon;
+  return node;
 }
 
-export class Paypal extends _Payment {
-  protected static _iconDataUrl = paypalIcon;
+export function Paypal(label?: string, options?: Record<string, unknown>) {
+  const node = _Payment(label ?? "Paypal", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = paypalIcon;
+  return node;
 }
 
-export class Stripe extends _Payment {
-  protected static _iconDataUrl = stripeIcon;
+export function Stripe(label?: string, options?: Record<string, unknown>) {
+  const node = _Payment(label ?? "Stripe", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = stripeIcon;
+  return node;
 }

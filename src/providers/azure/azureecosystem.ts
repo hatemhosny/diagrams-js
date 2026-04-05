@@ -3,18 +3,26 @@ import applensIcon from "../../../resources/azure/azureecosystem/applens.png";
 import azure_hybrid_centerIcon from "../../../resources/azure/azureecosystem/azure-hybrid-center.png";
 import collaborative_serviceIcon from "../../../resources/azure/azureecosystem/collaborative-service.png";
 
-class _Azureecosystem extends _Azure {
-  protected static override _type = "azureecosystem";
+function _Azureecosystem(label?: string, options?: Record<string, unknown>) {
+  const node = _Azure(label, options);
+  (node as unknown as Record<string, unknown>)._type = "azureecosystem";
+  return node;
 }
 
-export class Applens extends _Azureecosystem {
-  protected static _iconDataUrl = applensIcon;
+export function Applens(label?: string, options?: Record<string, unknown>) {
+  const node = _Azureecosystem(label ?? "Applens", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = applensIcon;
+  return node;
 }
 
-export class AzureHybridCenter extends _Azureecosystem {
-  protected static _iconDataUrl = azure_hybrid_centerIcon;
+export function AzureHybridCenter(label?: string, options?: Record<string, unknown>) {
+  const node = _Azureecosystem(label ?? "AzureHybridCenter", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_hybrid_centerIcon;
+  return node;
 }
 
-export class CollaborativeService extends _Azureecosystem {
-  protected static _iconDataUrl = collaborative_serviceIcon;
+export function CollaborativeService(label?: string, options?: Record<string, unknown>) {
+  const node = _Azureecosystem(label ?? "CollaborativeService", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = collaborative_serviceIcon;
+  return node;
 }

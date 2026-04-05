@@ -930,20 +930,20 @@ const svg = await diagram.render();</code></pre>
 import { Pod } from "diagrams-js/k8s/compute";
 import { Aurora } from "diagrams-js/aws/database";
 
-const diagram = new Diagram("Broker Consumers");
+const diagram = Diagram("Broker Consumers");
 
 const consumersCluster = diagram.cluster("Consumers");
 const consumers = [
-  consumersCluster.add(new Pod("worker")),
-  consumersCluster.add(new Pod("worker")),
-  consumersCluster.add(new Pod("worker")),
+  consumersCluster.add(Pod("worker")),
+  consumersCluster.add(Pod("worker")),
+  consumersCluster.add(Pod("worker")),
 ];
 
 const queue = diagram.add(
-  new Custom("Message queue", "https://jpadilla.github.io/rabbitmqapp/assets/img/icon.png")
+  Custom("Message queue", "https://jpadilla.github.io/rabbitmqapp/assets/img/icon.png")
 );
 
-const database = diagram.add(new Aurora("Database"));
+const database = diagram.add(Aurora("Database"));
 
 queue.to(consumers);
 consumers.forEach((consumer) => consumer.to(database));
@@ -963,20 +963,20 @@ const svg = await diagram.render();</code></pre>
         import { Pod } from "diagrams-js/k8s/compute.js";
         import { Aurora } from "diagrams-js/aws/database.js";
 
-        const diagram = new Diagram("Broker Consumers");
+        const diagram = Diagram("Broker Consumers");
 
         const consumersCluster = diagram.cluster("Consumers");
         const consumers = [
-          consumersCluster.add(new Pod("worker")),
-          consumersCluster.add(new Pod("worker")),
-          consumersCluster.add(new Pod("worker")),
+          consumersCluster.add(Pod("worker")),
+          consumersCluster.add(Pod("worker")),
+          consumersCluster.add(Pod("worker")),
         ];
 
         const queue = diagram.add(
-          new Custom("Message queue", "https://jpadilla.github.io/rabbitmqapp/assets/img/icon.png"),
+          Custom("Message queue", "https://jpadilla.github.io/rabbitmqapp/assets/img/icon.png"),
         );
 
-        const database = diagram.add(new Aurora("Database"));
+        const database = diagram.add(Aurora("Database"));
 
         queue.to(consumers);
         consumers.forEach((consumer) => consumer.to(database));

@@ -1,10 +1,14 @@
 import { _Programming } from "./index.js";
 import daprIcon from "../../../resources/programming/runtime/dapr.png";
 
-class _Runtime extends _Programming {
-  protected static override _type = "runtime";
+function _Runtime(label?: string, options?: Record<string, unknown>) {
+  const node = _Programming(label, options);
+  (node as unknown as Record<string, unknown>)._type = "runtime";
+  return node;
 }
 
-export class Dapr extends _Runtime {
-  protected static _iconDataUrl = daprIcon;
+export function Dapr(label?: string, options?: Record<string, unknown>) {
+  const node = _Runtime(label ?? "Dapr", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = daprIcon;
+  return node;
 }

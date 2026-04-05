@@ -12,56 +12,82 @@ import os_inventory_managementIcon from "../../../resources/gcp/compute/os-inven
 import os_patch_managementIcon from "../../../resources/gcp/compute/os-patch-management.png";
 import runIcon from "../../../resources/gcp/compute/run.png";
 
-class _Compute extends _Gcp {
-  protected static override _type = "compute";
+function _Compute(label?: string, options?: Record<string, unknown>) {
+  const node = _Gcp(label, options);
+  (node as unknown as Record<string, unknown>)._type = "compute";
+  return node;
 }
 
-export class AppEngine extends _Compute {
-  protected static _iconDataUrl = app_engineIcon;
+export function AppEngine(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "AppEngine", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = app_engineIcon;
+  return node;
 }
 
-export class BinaryAuthorization extends _Compute {
-  protected static _iconDataUrl = binary_authorizationIcon;
+export function BinaryAuthorization(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "BinaryAuthorization", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = binary_authorizationIcon;
+  return node;
 }
 
-export class ComputeEngine extends _Compute {
-  protected static _iconDataUrl = compute_engineIcon;
+export function ComputeEngine(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "ComputeEngine", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = compute_engineIcon;
+  return node;
 }
 
-export class ContainerOptimizedOS extends _Compute {
-  protected static _iconDataUrl = container_optimized_osIcon;
+export function ContainerOptimizedOS(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "ContainerOptimizedOS", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = container_optimized_osIcon;
+  return node;
 }
 
-export class Functions extends _Compute {
-  protected static _iconDataUrl = functionsIcon;
+export function Functions(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "Functions", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = functionsIcon;
+  return node;
 }
 
-export class GKEOnPrem extends _Compute {
-  protected static _iconDataUrl = gke_on_premIcon;
+export function GKEOnPrem(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "GKEOnPrem", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = gke_on_premIcon;
+  return node;
 }
 
-export class GPU extends _Compute {
-  protected static _iconDataUrl = gpuIcon;
+export function GPU(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "GPU", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = gpuIcon;
+  return node;
 }
 
-export class KubernetesEngine extends _Compute {
-  protected static _iconDataUrl = kubernetes_engineIcon;
+export function KubernetesEngine(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "KubernetesEngine", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = kubernetes_engineIcon;
+  return node;
 }
 
-export class OSConfigurationManagement extends _Compute {
-  protected static _iconDataUrl = os_configuration_managementIcon;
+export function OSConfigurationManagement(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "OSConfigurationManagement", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = os_configuration_managementIcon;
+  return node;
 }
 
-export class OSInventoryManagement extends _Compute {
-  protected static _iconDataUrl = os_inventory_managementIcon;
+export function OSInventoryManagement(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "OSInventoryManagement", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = os_inventory_managementIcon;
+  return node;
 }
 
-export class OSPatchManagement extends _Compute {
-  protected static _iconDataUrl = os_patch_managementIcon;
+export function OSPatchManagement(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "OSPatchManagement", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = os_patch_managementIcon;
+  return node;
 }
 
-export class Run extends _Compute {
-  protected static _iconDataUrl = runIcon;
+export function Run(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "Run", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = runIcon;
+  return node;
 }
 
 // Aliases

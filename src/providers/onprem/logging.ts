@@ -5,28 +5,40 @@ import lokiIcon from "../../../resources/onprem/logging/loki.png";
 import rsyslogIcon from "../../../resources/onprem/logging/rsyslog.png";
 import syslog_ngIcon from "../../../resources/onprem/logging/syslog-ng.png";
 
-class _Logging extends _Onprem {
-  protected static override _type = "logging";
+function _Logging(label?: string, options?: Record<string, unknown>) {
+  const node = _Onprem(label, options);
+  (node as unknown as Record<string, unknown>)._type = "logging";
+  return node;
 }
 
-export class Fluentbit extends _Logging {
-  protected static _iconDataUrl = fluentbitIcon;
+export function Fluentbit(label?: string, options?: Record<string, unknown>) {
+  const node = _Logging(label ?? "Fluentbit", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = fluentbitIcon;
+  return node;
 }
 
-export class Graylog extends _Logging {
-  protected static _iconDataUrl = graylogIcon;
+export function Graylog(label?: string, options?: Record<string, unknown>) {
+  const node = _Logging(label ?? "Graylog", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = graylogIcon;
+  return node;
 }
 
-export class Loki extends _Logging {
-  protected static _iconDataUrl = lokiIcon;
+export function Loki(label?: string, options?: Record<string, unknown>) {
+  const node = _Logging(label ?? "Loki", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = lokiIcon;
+  return node;
 }
 
-export class Rsyslog extends _Logging {
-  protected static _iconDataUrl = rsyslogIcon;
+export function Rsyslog(label?: string, options?: Record<string, unknown>) {
+  const node = _Logging(label ?? "Rsyslog", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = rsyslogIcon;
+  return node;
 }
 
-export class SyslogNg extends _Logging {
-  protected static _iconDataUrl = syslog_ngIcon;
+export function SyslogNg(label?: string, options?: Record<string, unknown>) {
+  const node = _Logging(label ?? "SyslogNg", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = syslog_ngIcon;
+  return node;
 }
 
 // Aliases

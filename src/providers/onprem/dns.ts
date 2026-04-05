@@ -2,14 +2,20 @@ import { _Onprem } from "./index.js";
 import corednsIcon from "../../../resources/onprem/dns/coredns.png";
 import powerdnsIcon from "../../../resources/onprem/dns/powerdns.png";
 
-class _Dns extends _Onprem {
-  protected static override _type = "dns";
+function _Dns(label?: string, options?: Record<string, unknown>) {
+  const node = _Onprem(label, options);
+  (node as unknown as Record<string, unknown>)._type = "dns";
+  return node;
 }
 
-export class Coredns extends _Dns {
-  protected static _iconDataUrl = corednsIcon;
+export function Coredns(label?: string, options?: Record<string, unknown>) {
+  const node = _Dns(label ?? "Coredns", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = corednsIcon;
+  return node;
 }
 
-export class Powerdns extends _Dns {
-  protected static _iconDataUrl = powerdnsIcon;
+export function Powerdns(label?: string, options?: Record<string, unknown>) {
+  const node = _Dns(label ?? "Powerdns", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = powerdnsIcon;
+  return node;
 }

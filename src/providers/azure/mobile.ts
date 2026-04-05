@@ -5,26 +5,38 @@ import mobile_engagementIcon from "../../../resources/azure/mobile/mobile-engage
 import notification_hubsIcon from "../../../resources/azure/mobile/notification-hubs.png";
 import power_platformIcon from "../../../resources/azure/mobile/power-platform.png";
 
-class _Mobile extends _Azure {
-  protected static override _type = "mobile";
+function _Mobile(label?: string, options?: Record<string, unknown>) {
+  const node = _Azure(label, options);
+  (node as unknown as Record<string, unknown>)._type = "mobile";
+  return node;
 }
 
-export class AppServiceMobile extends _Mobile {
-  protected static _iconDataUrl = app_service_mobileIcon;
+export function AppServiceMobile(label?: string, options?: Record<string, unknown>) {
+  const node = _Mobile(label ?? "AppServiceMobile", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = app_service_mobileIcon;
+  return node;
 }
 
-export class AppServices extends _Mobile {
-  protected static _iconDataUrl = app_servicesIcon;
+export function AppServices(label?: string, options?: Record<string, unknown>) {
+  const node = _Mobile(label ?? "AppServices", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = app_servicesIcon;
+  return node;
 }
 
-export class MobileEngagement extends _Mobile {
-  protected static _iconDataUrl = mobile_engagementIcon;
+export function MobileEngagement(label?: string, options?: Record<string, unknown>) {
+  const node = _Mobile(label ?? "MobileEngagement", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = mobile_engagementIcon;
+  return node;
 }
 
-export class NotificationHubs extends _Mobile {
-  protected static _iconDataUrl = notification_hubsIcon;
+export function NotificationHubs(label?: string, options?: Record<string, unknown>) {
+  const node = _Mobile(label ?? "NotificationHubs", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = notification_hubsIcon;
+  return node;
 }
 
-export class PowerPlatform extends _Mobile {
-  protected static _iconDataUrl = power_platformIcon;
+export function PowerPlatform(label?: string, options?: Record<string, unknown>) {
+  const node = _Mobile(label ?? "PowerPlatform", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = power_platformIcon;
+  return node;
 }

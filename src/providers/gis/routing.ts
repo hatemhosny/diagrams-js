@@ -4,22 +4,32 @@ import osrmIcon from "../../../resources/gis/routing/osrm.png";
 import pgroutingIcon from "../../../resources/gis/routing/pgrouting.png";
 import valhallaIcon from "../../../resources/gis/routing/valhalla.png";
 
-class _Routing extends _Gis {
-  protected static override _type = "routing";
+function _Routing(label?: string, options?: Record<string, unknown>) {
+  const node = _Gis(label, options);
+  (node as unknown as Record<string, unknown>)._type = "routing";
+  return node;
 }
 
-export class Graphhopper extends _Routing {
-  protected static _iconDataUrl = graphhopperIcon;
+export function Graphhopper(label?: string, options?: Record<string, unknown>) {
+  const node = _Routing(label ?? "Graphhopper", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = graphhopperIcon;
+  return node;
 }
 
-export class Osrm extends _Routing {
-  protected static _iconDataUrl = osrmIcon;
+export function Osrm(label?: string, options?: Record<string, unknown>) {
+  const node = _Routing(label ?? "Osrm", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = osrmIcon;
+  return node;
 }
 
-export class Pgrouting extends _Routing {
-  protected static _iconDataUrl = pgroutingIcon;
+export function Pgrouting(label?: string, options?: Record<string, unknown>) {
+  const node = _Routing(label ?? "Pgrouting", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = pgroutingIcon;
+  return node;
 }
 
-export class Valhalla extends _Routing {
-  protected static _iconDataUrl = valhallaIcon;
+export function Valhalla(label?: string, options?: Record<string, unknown>) {
+  const node = _Routing(label ?? "Valhalla", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = valhallaIcon;
+  return node;
 }

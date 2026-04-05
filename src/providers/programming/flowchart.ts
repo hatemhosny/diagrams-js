@@ -24,102 +24,152 @@ import start_endIcon from "../../../resources/programming/flowchart/start-end.pn
 import stored_dataIcon from "../../../resources/programming/flowchart/stored-data.png";
 import summing_junctionIcon from "../../../resources/programming/flowchart/summing-junction.png";
 
-class _Flowchart extends _Programming {
-  protected static override _type = "flowchart";
+function _Flowchart(label?: string, options?: Record<string, unknown>) {
+  const node = _Programming(label, options);
+  (node as unknown as Record<string, unknown>)._type = "flowchart";
+  return node;
 }
 
-export class Action extends _Flowchart {
-  protected static _iconDataUrl = actionIcon;
+export function Action(label?: string, options?: Record<string, unknown>) {
+  const node = _Flowchart(label ?? "Action", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = actionIcon;
+  return node;
 }
 
-export class Collate extends _Flowchart {
-  protected static _iconDataUrl = collateIcon;
+export function Collate(label?: string, options?: Record<string, unknown>) {
+  const node = _Flowchart(label ?? "Collate", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = collateIcon;
+  return node;
 }
 
-export class Database extends _Flowchart {
-  protected static _iconDataUrl = databaseIcon;
+export function Database(label?: string, options?: Record<string, unknown>) {
+  const node = _Flowchart(label ?? "Database", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = databaseIcon;
+  return node;
 }
 
-export class Decision extends _Flowchart {
-  protected static _iconDataUrl = decisionIcon;
+export function Decision(label?: string, options?: Record<string, unknown>) {
+  const node = _Flowchart(label ?? "Decision", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = decisionIcon;
+  return node;
 }
 
-export class Delay extends _Flowchart {
-  protected static _iconDataUrl = delayIcon;
+export function Delay(label?: string, options?: Record<string, unknown>) {
+  const node = _Flowchart(label ?? "Delay", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = delayIcon;
+  return node;
 }
 
-export class Display extends _Flowchart {
-  protected static _iconDataUrl = displayIcon;
+export function Display(label?: string, options?: Record<string, unknown>) {
+  const node = _Flowchart(label ?? "Display", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = displayIcon;
+  return node;
 }
 
-export class Document extends _Flowchart {
-  protected static _iconDataUrl = documentIcon;
+export function Document(label?: string, options?: Record<string, unknown>) {
+  const node = _Flowchart(label ?? "Document", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = documentIcon;
+  return node;
 }
 
-export class InputOutput extends _Flowchart {
-  protected static _iconDataUrl = input_outputIcon;
+export function InputOutput(label?: string, options?: Record<string, unknown>) {
+  const node = _Flowchart(label ?? "InputOutput", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = input_outputIcon;
+  return node;
 }
 
-export class Inspection extends _Flowchart {
-  protected static _iconDataUrl = inspectionIcon;
+export function Inspection(label?: string, options?: Record<string, unknown>) {
+  const node = _Flowchart(label ?? "Inspection", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = inspectionIcon;
+  return node;
 }
 
-export class InternalStorage extends _Flowchart {
-  protected static _iconDataUrl = internal_storageIcon;
+export function InternalStorage(label?: string, options?: Record<string, unknown>) {
+  const node = _Flowchart(label ?? "InternalStorage", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = internal_storageIcon;
+  return node;
 }
 
-export class LoopLimit extends _Flowchart {
-  protected static _iconDataUrl = loop_limitIcon;
+export function LoopLimit(label?: string, options?: Record<string, unknown>) {
+  const node = _Flowchart(label ?? "LoopLimit", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = loop_limitIcon;
+  return node;
 }
 
-export class ManualInput extends _Flowchart {
-  protected static _iconDataUrl = manual_inputIcon;
+export function ManualInput(label?: string, options?: Record<string, unknown>) {
+  const node = _Flowchart(label ?? "ManualInput", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = manual_inputIcon;
+  return node;
 }
 
-export class ManualLoop extends _Flowchart {
-  protected static _iconDataUrl = manual_loopIcon;
+export function ManualLoop(label?: string, options?: Record<string, unknown>) {
+  const node = _Flowchart(label ?? "ManualLoop", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = manual_loopIcon;
+  return node;
 }
 
-export class Merge extends _Flowchart {
-  protected static _iconDataUrl = mergeIcon;
+export function Merge(label?: string, options?: Record<string, unknown>) {
+  const node = _Flowchart(label ?? "Merge", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = mergeIcon;
+  return node;
 }
 
-export class MultipleDocuments extends _Flowchart {
-  protected static _iconDataUrl = multiple_documentsIcon;
+export function MultipleDocuments(label?: string, options?: Record<string, unknown>) {
+  const node = _Flowchart(label ?? "MultipleDocuments", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = multiple_documentsIcon;
+  return node;
 }
 
-export class OffPageConnectorLeft extends _Flowchart {
-  protected static _iconDataUrl = off_page_connector_leftIcon;
+export function OffPageConnectorLeft(label?: string, options?: Record<string, unknown>) {
+  const node = _Flowchart(label ?? "OffPageConnectorLeft", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = off_page_connector_leftIcon;
+  return node;
 }
 
-export class OffPageConnectorRight extends _Flowchart {
-  protected static _iconDataUrl = off_page_connector_rightIcon;
+export function OffPageConnectorRight(label?: string, options?: Record<string, unknown>) {
+  const node = _Flowchart(label ?? "OffPageConnectorRight", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = off_page_connector_rightIcon;
+  return node;
 }
 
-export class Or extends _Flowchart {
-  protected static _iconDataUrl = orIcon;
+export function Or(label?: string, options?: Record<string, unknown>) {
+  const node = _Flowchart(label ?? "Or", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = orIcon;
+  return node;
 }
 
-export class PredefinedProcess extends _Flowchart {
-  protected static _iconDataUrl = predefined_processIcon;
+export function PredefinedProcess(label?: string, options?: Record<string, unknown>) {
+  const node = _Flowchart(label ?? "PredefinedProcess", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = predefined_processIcon;
+  return node;
 }
 
-export class Preparation extends _Flowchart {
-  protected static _iconDataUrl = preparationIcon;
+export function Preparation(label?: string, options?: Record<string, unknown>) {
+  const node = _Flowchart(label ?? "Preparation", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = preparationIcon;
+  return node;
 }
 
-export class Sort extends _Flowchart {
-  protected static _iconDataUrl = sortIcon;
+export function Sort(label?: string, options?: Record<string, unknown>) {
+  const node = _Flowchart(label ?? "Sort", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = sortIcon;
+  return node;
 }
 
-export class StartEnd extends _Flowchart {
-  protected static _iconDataUrl = start_endIcon;
+export function StartEnd(label?: string, options?: Record<string, unknown>) {
+  const node = _Flowchart(label ?? "StartEnd", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = start_endIcon;
+  return node;
 }
 
-export class StoredData extends _Flowchart {
-  protected static _iconDataUrl = stored_dataIcon;
+export function StoredData(label?: string, options?: Record<string, unknown>) {
+  const node = _Flowchart(label ?? "StoredData", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = stored_dataIcon;
+  return node;
 }
 
-export class SummingJunction extends _Flowchart {
-  protected static _iconDataUrl = summing_junctionIcon;
+export function SummingJunction(label?: string, options?: Record<string, unknown>) {
+  const node = _Flowchart(label ?? "SummingJunction", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = summing_junctionIcon;
+  return node;
 }

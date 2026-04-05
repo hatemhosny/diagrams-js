@@ -14,64 +14,94 @@ import security_settingsIcon from "../../../resources/elastic/elasticsearch/secu
 import sqlIcon from "../../../resources/elastic/elasticsearch/sql.png";
 import stackIcon from "../../../resources/elastic/elasticsearch/stack.png";
 
-class _Elasticsearch extends _Elastic {
-  protected static override _type = "elasticsearch";
+function _Elasticsearch(label?: string, options?: Record<string, unknown>) {
+  const node = _Elastic(label, options);
+  (node as unknown as Record<string, unknown>)._type = "elasticsearch";
+  return node;
 }
 
-export class Alerting extends _Elasticsearch {
-  protected static _iconDataUrl = alertingIcon;
+export function Alerting(label?: string, options?: Record<string, unknown>) {
+  const node = _Elasticsearch(label ?? "Alerting", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = alertingIcon;
+  return node;
 }
 
-export class Beats extends _Elasticsearch {
-  protected static _iconDataUrl = beatsIcon;
+export function Beats(label?: string, options?: Record<string, unknown>) {
+  const node = _Elasticsearch(label ?? "Beats", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = beatsIcon;
+  return node;
 }
 
-export class Elasticsearch extends _Elasticsearch {
-  protected static _iconDataUrl = elasticsearchIcon;
+export function Elasticsearch(label?: string, options?: Record<string, unknown>) {
+  const node = _Elasticsearch(label ?? "Elasticsearch", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = elasticsearchIcon;
+  return node;
 }
 
-export class Kibana extends _Elasticsearch {
-  protected static _iconDataUrl = kibanaIcon;
+export function Kibana(label?: string, options?: Record<string, unknown>) {
+  const node = _Elasticsearch(label ?? "Kibana", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = kibanaIcon;
+  return node;
 }
 
-export class LogstashPipeline extends _Elasticsearch {
-  protected static _iconDataUrl = logstash_pipelineIcon;
+export function LogstashPipeline(label?: string, options?: Record<string, unknown>) {
+  const node = _Elasticsearch(label ?? "LogstashPipeline", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = logstash_pipelineIcon;
+  return node;
 }
 
-export class Logstash extends _Elasticsearch {
-  protected static _iconDataUrl = logstashIcon;
+export function Logstash(label?: string, options?: Record<string, unknown>) {
+  const node = _Elasticsearch(label ?? "Logstash", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = logstashIcon;
+  return node;
 }
 
-export class MachineLearning extends _Elasticsearch {
-  protected static _iconDataUrl = machine_learningIcon;
+export function MachineLearning(label?: string, options?: Record<string, unknown>) {
+  const node = _Elasticsearch(label ?? "MachineLearning", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = machine_learningIcon;
+  return node;
 }
 
-export class MapServices extends _Elasticsearch {
-  protected static _iconDataUrl = map_servicesIcon;
+export function MapServices(label?: string, options?: Record<string, unknown>) {
+  const node = _Elasticsearch(label ?? "MapServices", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = map_servicesIcon;
+  return node;
 }
 
-export class Maps extends _Elasticsearch {
-  protected static _iconDataUrl = mapsIcon;
+export function Maps(label?: string, options?: Record<string, unknown>) {
+  const node = _Elasticsearch(label ?? "Maps", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = mapsIcon;
+  return node;
 }
 
-export class Monitoring extends _Elasticsearch {
-  protected static _iconDataUrl = monitoringIcon;
+export function Monitoring(label?: string, options?: Record<string, unknown>) {
+  const node = _Elasticsearch(label ?? "Monitoring", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = monitoringIcon;
+  return node;
 }
 
-export class SearchableSnapshots extends _Elasticsearch {
-  protected static _iconDataUrl = searchable_snapshotsIcon;
+export function SearchableSnapshots(label?: string, options?: Record<string, unknown>) {
+  const node = _Elasticsearch(label ?? "SearchableSnapshots", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = searchable_snapshotsIcon;
+  return node;
 }
 
-export class SecuritySettings extends _Elasticsearch {
-  protected static _iconDataUrl = security_settingsIcon;
+export function SecuritySettings(label?: string, options?: Record<string, unknown>) {
+  const node = _Elasticsearch(label ?? "SecuritySettings", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = security_settingsIcon;
+  return node;
 }
 
-export class SQL extends _Elasticsearch {
-  protected static _iconDataUrl = sqlIcon;
+export function SQL(label?: string, options?: Record<string, unknown>) {
+  const node = _Elasticsearch(label ?? "SQL", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = sqlIcon;
+  return node;
 }
 
-export class Stack extends _Elasticsearch {
-  protected static _iconDataUrl = stackIcon;
+export function Stack(label?: string, options?: Record<string, unknown>) {
+  const node = _Elasticsearch(label ?? "Stack", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = stackIcon;
+  return node;
 }
 
 // Aliases

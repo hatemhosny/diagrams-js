@@ -4,22 +4,32 @@ import endpointIcon from "../../../resources/elastic/agent/endpoint.png";
 import fleetIcon from "../../../resources/elastic/agent/fleet.png";
 import integrationsIcon from "../../../resources/elastic/agent/integrations.png";
 
-class _Agent extends _Elastic {
-  protected static override _type = "agent";
+function _Agent(label?: string, options?: Record<string, unknown>) {
+  const node = _Elastic(label, options);
+  (node as unknown as Record<string, unknown>)._type = "agent";
+  return node;
 }
 
-export class Agent extends _Agent {
-  protected static _iconDataUrl = agentIcon;
+export function Agent(label?: string, options?: Record<string, unknown>) {
+  const node = _Agent(label ?? "Agent", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = agentIcon;
+  return node;
 }
 
-export class Endpoint extends _Agent {
-  protected static _iconDataUrl = endpointIcon;
+export function Endpoint(label?: string, options?: Record<string, unknown>) {
+  const node = _Agent(label ?? "Endpoint", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = endpointIcon;
+  return node;
 }
 
-export class Fleet extends _Agent {
-  protected static _iconDataUrl = fleetIcon;
+export function Fleet(label?: string, options?: Record<string, unknown>) {
+  const node = _Agent(label ?? "Fleet", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = fleetIcon;
+  return node;
 }
 
-export class Integrations extends _Agent {
-  protected static _iconDataUrl = integrationsIcon;
+export function Integrations(label?: string, options?: Record<string, unknown>) {
+  const node = _Agent(label ?? "Integrations", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = integrationsIcon;
+  return node;
 }

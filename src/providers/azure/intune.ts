@@ -18,78 +18,116 @@ import security_baselinesIcon from "../../../resources/azure/intune/security-bas
 import software_updatesIcon from "../../../resources/azure/intune/software-updates.png";
 import tenant_statusIcon from "../../../resources/azure/intune/tenant-status.png";
 
-class _Intune extends _Azure {
-  protected static override _type = "intune";
+function _Intune(label?: string, options?: Record<string, unknown>) {
+  const node = _Azure(label, options);
+  (node as unknown as Record<string, unknown>)._type = "intune";
+  return node;
 }
 
-export class AzureADRolesAndAdministrators extends _Intune {
-  protected static _iconDataUrl = azure_ad_roles_and_administratorsIcon;
+export function AzureADRolesAndAdministrators(label?: string, options?: Record<string, unknown>) {
+  const node = _Intune(label ?? "AzureADRolesAndAdministrators", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_ad_roles_and_administratorsIcon;
+  return node;
 }
 
-export class ClientApps extends _Intune {
-  protected static _iconDataUrl = client_appsIcon;
+export function ClientApps(label?: string, options?: Record<string, unknown>) {
+  const node = _Intune(label ?? "ClientApps", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = client_appsIcon;
+  return node;
 }
 
-export class DeviceCompliance extends _Intune {
-  protected static _iconDataUrl = device_complianceIcon;
+export function DeviceCompliance(label?: string, options?: Record<string, unknown>) {
+  const node = _Intune(label ?? "DeviceCompliance", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = device_complianceIcon;
+  return node;
 }
 
-export class DeviceConfiguration extends _Intune {
-  protected static _iconDataUrl = device_configurationIcon;
+export function DeviceConfiguration(label?: string, options?: Record<string, unknown>) {
+  const node = _Intune(label ?? "DeviceConfiguration", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = device_configurationIcon;
+  return node;
 }
 
-export class DeviceEnrollment extends _Intune {
-  protected static _iconDataUrl = device_enrollmentIcon;
+export function DeviceEnrollment(label?: string, options?: Record<string, unknown>) {
+  const node = _Intune(label ?? "DeviceEnrollment", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = device_enrollmentIcon;
+  return node;
 }
 
-export class DeviceSecurityApple extends _Intune {
-  protected static _iconDataUrl = device_security_appleIcon;
+export function DeviceSecurityApple(label?: string, options?: Record<string, unknown>) {
+  const node = _Intune(label ?? "DeviceSecurityApple", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = device_security_appleIcon;
+  return node;
 }
 
-export class DeviceSecurityGoogle extends _Intune {
-  protected static _iconDataUrl = device_security_googleIcon;
+export function DeviceSecurityGoogle(label?: string, options?: Record<string, unknown>) {
+  const node = _Intune(label ?? "DeviceSecurityGoogle", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = device_security_googleIcon;
+  return node;
 }
 
-export class DeviceSecurityWindows extends _Intune {
-  protected static _iconDataUrl = device_security_windowsIcon;
+export function DeviceSecurityWindows(label?: string, options?: Record<string, unknown>) {
+  const node = _Intune(label ?? "DeviceSecurityWindows", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = device_security_windowsIcon;
+  return node;
 }
 
-export class Devices extends _Intune {
-  protected static _iconDataUrl = devicesIcon;
+export function Devices(label?: string, options?: Record<string, unknown>) {
+  const node = _Intune(label ?? "Devices", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = devicesIcon;
+  return node;
 }
 
-export class Ebooks extends _Intune {
-  protected static _iconDataUrl = ebooksIcon;
+export function Ebooks(label?: string, options?: Record<string, unknown>) {
+  const node = _Intune(label ?? "Ebooks", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = ebooksIcon;
+  return node;
 }
 
-export class ExchangeAccess extends _Intune {
-  protected static _iconDataUrl = exchange_accessIcon;
+export function ExchangeAccess(label?: string, options?: Record<string, unknown>) {
+  const node = _Intune(label ?? "ExchangeAccess", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = exchange_accessIcon;
+  return node;
 }
 
-export class IntuneAppProtection extends _Intune {
-  protected static _iconDataUrl = intune_app_protectionIcon;
+export function IntuneAppProtection(label?: string, options?: Record<string, unknown>) {
+  const node = _Intune(label ?? "IntuneAppProtection", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = intune_app_protectionIcon;
+  return node;
 }
 
-export class IntuneForEducation extends _Intune {
-  protected static _iconDataUrl = intune_for_educationIcon;
+export function IntuneForEducation(label?: string, options?: Record<string, unknown>) {
+  const node = _Intune(label ?? "IntuneForEducation", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = intune_for_educationIcon;
+  return node;
 }
 
-export class Intune extends _Intune {
-  protected static _iconDataUrl = intuneIcon;
+export function Intune(label?: string, options?: Record<string, unknown>) {
+  const node = _Intune(label ?? "Intune", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = intuneIcon;
+  return node;
 }
 
-export class Mindaro extends _Intune {
-  protected static _iconDataUrl = mindaroIcon;
+export function Mindaro(label?: string, options?: Record<string, unknown>) {
+  const node = _Intune(label ?? "Mindaro", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = mindaroIcon;
+  return node;
 }
 
-export class SecurityBaselines extends _Intune {
-  protected static _iconDataUrl = security_baselinesIcon;
+export function SecurityBaselines(label?: string, options?: Record<string, unknown>) {
+  const node = _Intune(label ?? "SecurityBaselines", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = security_baselinesIcon;
+  return node;
 }
 
-export class SoftwareUpdates extends _Intune {
-  protected static _iconDataUrl = software_updatesIcon;
+export function SoftwareUpdates(label?: string, options?: Record<string, unknown>) {
+  const node = _Intune(label ?? "SoftwareUpdates", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = software_updatesIcon;
+  return node;
 }
 
-export class TenantStatus extends _Intune {
-  protected static _iconDataUrl = tenant_statusIcon;
+export function TenantStatus(label?: string, options?: Record<string, unknown>) {
+  const node = _Intune(label ?? "TenantStatus", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = tenant_statusIcon;
+  return node;
 }

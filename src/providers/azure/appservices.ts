@@ -8,38 +8,56 @@ import cdn_profilesIcon from "../../../resources/azure/appservices/cdn-profiles.
 import cognitive_searchIcon from "../../../resources/azure/appservices/cognitive-search.png";
 import notification_hubsIcon from "../../../resources/azure/appservices/notification-hubs.png";
 
-class _Appservices extends _Azure {
-  protected static override _type = "appservices";
+function _Appservices(label?: string, options?: Record<string, unknown>) {
+  const node = _Azure(label, options);
+  (node as unknown as Record<string, unknown>)._type = "appservices";
+  return node;
 }
 
-export class AppServiceCertificates extends _Appservices {
-  protected static _iconDataUrl = app_service_certificatesIcon;
+export function AppServiceCertificates(label?: string, options?: Record<string, unknown>) {
+  const node = _Appservices(label ?? "AppServiceCertificates", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = app_service_certificatesIcon;
+  return node;
 }
 
-export class AppServiceDomains extends _Appservices {
-  protected static _iconDataUrl = app_service_domainsIcon;
+export function AppServiceDomains(label?: string, options?: Record<string, unknown>) {
+  const node = _Appservices(label ?? "AppServiceDomains", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = app_service_domainsIcon;
+  return node;
 }
 
-export class AppServiceEnvironments extends _Appservices {
-  protected static _iconDataUrl = app_service_environmentsIcon;
+export function AppServiceEnvironments(label?: string, options?: Record<string, unknown>) {
+  const node = _Appservices(label ?? "AppServiceEnvironments", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = app_service_environmentsIcon;
+  return node;
 }
 
-export class AppServicePlans extends _Appservices {
-  protected static _iconDataUrl = app_service_plansIcon;
+export function AppServicePlans(label?: string, options?: Record<string, unknown>) {
+  const node = _Appservices(label ?? "AppServicePlans", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = app_service_plansIcon;
+  return node;
 }
 
-export class AppServices extends _Appservices {
-  protected static _iconDataUrl = app_servicesIcon;
+export function AppServices(label?: string, options?: Record<string, unknown>) {
+  const node = _Appservices(label ?? "AppServices", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = app_servicesIcon;
+  return node;
 }
 
-export class CDNProfiles extends _Appservices {
-  protected static _iconDataUrl = cdn_profilesIcon;
+export function CDNProfiles(label?: string, options?: Record<string, unknown>) {
+  const node = _Appservices(label ?? "CDNProfiles", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = cdn_profilesIcon;
+  return node;
 }
 
-export class CognitiveSearch extends _Appservices {
-  protected static _iconDataUrl = cognitive_searchIcon;
+export function CognitiveSearch(label?: string, options?: Record<string, unknown>) {
+  const node = _Appservices(label ?? "CognitiveSearch", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = cognitive_searchIcon;
+  return node;
 }
 
-export class NotificationHubs extends _Appservices {
-  protected static _iconDataUrl = notification_hubsIcon;
+export function NotificationHubs(label?: string, options?: Record<string, unknown>) {
+  const node = _Appservices(label ?? "NotificationHubs", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = notification_hubsIcon;
+  return node;
 }

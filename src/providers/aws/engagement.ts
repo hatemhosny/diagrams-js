@@ -5,28 +5,40 @@ import pinpointIcon from "../../../resources/aws/engagement/pinpoint.png";
 import simple_email_service_ses_emailIcon from "../../../resources/aws/engagement/simple-email-service-ses-email.png";
 import simple_email_service_sesIcon from "../../../resources/aws/engagement/simple-email-service-ses.png";
 
-class _Engagement extends _Aws {
-  protected static override _type = "engagement";
+function _Engagement(label?: string, options?: Record<string, unknown>) {
+  const node = _Aws(label, options);
+  (node as unknown as Record<string, unknown>)._type = "engagement";
+  return node;
 }
 
-export class Connect extends _Engagement {
-  protected static _iconDataUrl = connectIcon;
+export function Connect(label?: string, options?: Record<string, unknown>) {
+  const node = _Engagement(label ?? "Connect", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = connectIcon;
+  return node;
 }
 
-export class CustomerEngagement extends _Engagement {
-  protected static _iconDataUrl = customer_engagementIcon;
+export function CustomerEngagement(label?: string, options?: Record<string, unknown>) {
+  const node = _Engagement(label ?? "CustomerEngagement", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = customer_engagementIcon;
+  return node;
 }
 
-export class Pinpoint extends _Engagement {
-  protected static _iconDataUrl = pinpointIcon;
+export function Pinpoint(label?: string, options?: Record<string, unknown>) {
+  const node = _Engagement(label ?? "Pinpoint", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = pinpointIcon;
+  return node;
 }
 
-export class SimpleEmailServiceSesEmail extends _Engagement {
-  protected static _iconDataUrl = simple_email_service_ses_emailIcon;
+export function SimpleEmailServiceSesEmail(label?: string, options?: Record<string, unknown>) {
+  const node = _Engagement(label ?? "SimpleEmailServiceSesEmail", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = simple_email_service_ses_emailIcon;
+  return node;
 }
 
-export class SimpleEmailServiceSes extends _Engagement {
-  protected static _iconDataUrl = simple_email_service_sesIcon;
+export function SimpleEmailServiceSes(label?: string, options?: Record<string, unknown>) {
+  const node = _Engagement(label ?? "SimpleEmailServiceSes", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = simple_email_service_sesIcon;
+  return node;
 }
 
 // Aliases

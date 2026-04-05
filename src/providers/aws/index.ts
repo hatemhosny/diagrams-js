@@ -1,10 +1,14 @@
 import { Node } from "../../Node.js";
 
-export class _Aws extends Node {
-  protected static override _provider = "aws";
-  protected static override _iconDir = "aws";
+export function _Aws(label?: string, options?: Record<string, unknown>) {
+  const node = Node(label ?? "Aws", options);
+  (node as unknown as Record<string, unknown>)._provider = "aws";
+  (node as unknown as Record<string, unknown>)._iconDir = "aws";
+  return node;
 }
 
-export class Aws extends _Aws {
-  protected static override _icon = "aws.png";
+export function Aws(label?: string, options?: Record<string, unknown>) {
+  const node = _Aws(label ?? "Aws", options);
+  (node as unknown as Record<string, unknown>)._icon = "aws.png";
+  return node;
 }

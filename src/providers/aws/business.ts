@@ -4,24 +4,34 @@ import business_applicationsIcon from "../../../resources/aws/business/business-
 import chimeIcon from "../../../resources/aws/business/chime.png";
 import workmailIcon from "../../../resources/aws/business/workmail.png";
 
-class _Business extends _Aws {
-  protected static override _type = "business";
+function _Business(label?: string, options?: Record<string, unknown>) {
+  const node = _Aws(label, options);
+  (node as unknown as Record<string, unknown>)._type = "business";
+  return node;
 }
 
-export class AlexaForBusiness extends _Business {
-  protected static _iconDataUrl = alexa_for_businessIcon;
+export function AlexaForBusiness(label?: string, options?: Record<string, unknown>) {
+  const node = _Business(label ?? "AlexaForBusiness", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = alexa_for_businessIcon;
+  return node;
 }
 
-export class BusinessApplications extends _Business {
-  protected static _iconDataUrl = business_applicationsIcon;
+export function BusinessApplications(label?: string, options?: Record<string, unknown>) {
+  const node = _Business(label ?? "BusinessApplications", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = business_applicationsIcon;
+  return node;
 }
 
-export class Chime extends _Business {
-  protected static _iconDataUrl = chimeIcon;
+export function Chime(label?: string, options?: Record<string, unknown>) {
+  const node = _Business(label ?? "Chime", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = chimeIcon;
+  return node;
 }
 
-export class Workmail extends _Business {
-  protected static _iconDataUrl = workmailIcon;
+export function Workmail(label?: string, options?: Record<string, unknown>) {
+  const node = _Business(label ?? "Workmail", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = workmailIcon;
+  return node;
 }
 
 // Aliases

@@ -19,82 +19,122 @@ import speech_to_textIcon from "../../../resources/ibm/applications/speech-to-te
 import visual_recognitionIcon from "../../../resources/ibm/applications/visual-recognition.png";
 import visualizationIcon from "../../../resources/ibm/applications/visualization.png";
 
-class _Applications extends _Ibm {
-  protected static override _type = "applications";
+function _Applications(label?: string, options?: Record<string, unknown>) {
+  const node = _Ibm(label, options);
+  (node as unknown as Record<string, unknown>)._type = "applications";
+  return node;
 }
 
-export class ActionableInsight extends _Applications {
-  protected static _iconDataUrl = actionable_insightIcon;
+export function ActionableInsight(label?: string, options?: Record<string, unknown>) {
+  const node = _Applications(label ?? "ActionableInsight", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = actionable_insightIcon;
+  return node;
 }
 
-export class Annotate extends _Applications {
-  protected static _iconDataUrl = annotateIcon;
+export function Annotate(label?: string, options?: Record<string, unknown>) {
+  const node = _Applications(label ?? "Annotate", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = annotateIcon;
+  return node;
 }
 
-export class ApiDeveloperPortal extends _Applications {
-  protected static _iconDataUrl = api_developer_portalIcon;
+export function ApiDeveloperPortal(label?: string, options?: Record<string, unknown>) {
+  const node = _Applications(label ?? "ApiDeveloperPortal", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = api_developer_portalIcon;
+  return node;
 }
 
-export class ApiPolyglotRuntimes extends _Applications {
-  protected static _iconDataUrl = api_polyglot_runtimesIcon;
+export function ApiPolyglotRuntimes(label?: string, options?: Record<string, unknown>) {
+  const node = _Applications(label ?? "ApiPolyglotRuntimes", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = api_polyglot_runtimesIcon;
+  return node;
 }
 
-export class AppServer extends _Applications {
-  protected static _iconDataUrl = app_serverIcon;
+export function AppServer(label?: string, options?: Record<string, unknown>) {
+  const node = _Applications(label ?? "AppServer", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = app_serverIcon;
+  return node;
 }
 
-export class ApplicationLogic extends _Applications {
-  protected static _iconDataUrl = application_logicIcon;
+export function ApplicationLogic(label?: string, options?: Record<string, unknown>) {
+  const node = _Applications(label ?? "ApplicationLogic", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = application_logicIcon;
+  return node;
 }
 
-export class EnterpriseApplications extends _Applications {
-  protected static _iconDataUrl = enterprise_applicationsIcon;
+export function EnterpriseApplications(label?: string, options?: Record<string, unknown>) {
+  const node = _Applications(label ?? "EnterpriseApplications", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = enterprise_applicationsIcon;
+  return node;
 }
 
-export class Index extends _Applications {
-  protected static _iconDataUrl = indexIcon;
+export function Index(label?: string, options?: Record<string, unknown>) {
+  const node = _Applications(label ?? "Index", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = indexIcon;
+  return node;
 }
 
-export class IotApplication extends _Applications {
-  protected static _iconDataUrl = iot_applicationIcon;
+export function IotApplication(label?: string, options?: Record<string, unknown>) {
+  const node = _Applications(label ?? "IotApplication", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = iot_applicationIcon;
+  return node;
 }
 
-export class Microservice extends _Applications {
-  protected static _iconDataUrl = microserviceIcon;
+export function Microservice(label?: string, options?: Record<string, unknown>) {
+  const node = _Applications(label ?? "Microservice", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = microserviceIcon;
+  return node;
 }
 
-export class MobileApp extends _Applications {
-  protected static _iconDataUrl = mobile_appIcon;
+export function MobileApp(label?: string, options?: Record<string, unknown>) {
+  const node = _Applications(label ?? "MobileApp", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = mobile_appIcon;
+  return node;
 }
 
-export class Ontology extends _Applications {
-  protected static _iconDataUrl = ontologyIcon;
+export function Ontology(label?: string, options?: Record<string, unknown>) {
+  const node = _Applications(label ?? "Ontology", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = ontologyIcon;
+  return node;
 }
 
-export class OpenSourceTools extends _Applications {
-  protected static _iconDataUrl = open_source_toolsIcon;
+export function OpenSourceTools(label?: string, options?: Record<string, unknown>) {
+  const node = _Applications(label ?? "OpenSourceTools", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = open_source_toolsIcon;
+  return node;
 }
 
-export class RuntimeServices extends _Applications {
-  protected static _iconDataUrl = runtime_servicesIcon;
+export function RuntimeServices(label?: string, options?: Record<string, unknown>) {
+  const node = _Applications(label ?? "RuntimeServices", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = runtime_servicesIcon;
+  return node;
 }
 
-export class SaasApplications extends _Applications {
-  protected static _iconDataUrl = saas_applicationsIcon;
+export function SaasApplications(label?: string, options?: Record<string, unknown>) {
+  const node = _Applications(label ?? "SaasApplications", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = saas_applicationsIcon;
+  return node;
 }
 
-export class ServiceBroker extends _Applications {
-  protected static _iconDataUrl = service_brokerIcon;
+export function ServiceBroker(label?: string, options?: Record<string, unknown>) {
+  const node = _Applications(label ?? "ServiceBroker", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = service_brokerIcon;
+  return node;
 }
 
-export class SpeechToText extends _Applications {
-  protected static _iconDataUrl = speech_to_textIcon;
+export function SpeechToText(label?: string, options?: Record<string, unknown>) {
+  const node = _Applications(label ?? "SpeechToText", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = speech_to_textIcon;
+  return node;
 }
 
-export class VisualRecognition extends _Applications {
-  protected static _iconDataUrl = visual_recognitionIcon;
+export function VisualRecognition(label?: string, options?: Record<string, unknown>) {
+  const node = _Applications(label ?? "VisualRecognition", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = visual_recognitionIcon;
+  return node;
 }
 
-export class Visualization extends _Applications {
-  protected static _iconDataUrl = visualizationIcon;
+export function Visualization(label?: string, options?: Record<string, unknown>) {
+  const node = _Applications(label ?? "Visualization", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = visualizationIcon;
+  return node;
 }

@@ -1,10 +1,14 @@
 import { Node } from "../../Node.js";
 
-export class _Alibabacloud extends Node {
-  protected static override _provider = "alibabacloud";
-  protected static override _iconDir = "alibabacloud";
+export function _Alibabacloud(label?: string, options?: Record<string, unknown>) {
+  const node = Node(label ?? "Alibabacloud", options);
+  (node as unknown as Record<string, unknown>)._provider = "alibabacloud";
+  (node as unknown as Record<string, unknown>)._iconDir = "alibabacloud";
+  return node;
 }
 
-export class Alibabacloud extends _Alibabacloud {
-  protected static override _icon = "alibabacloud.png";
+export function Alibabacloud(label?: string, options?: Record<string, unknown>) {
+  const node = _Alibabacloud(label ?? "Alibabacloud", options);
+  (node as unknown as Record<string, unknown>)._icon = "alibabacloud.png";
+  return node;
 }

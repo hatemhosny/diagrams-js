@@ -33,138 +33,210 @@ import solutionsIcon from "../../../resources/azure/managementgovernance/solutio
 import universal_printIcon from "../../../resources/azure/managementgovernance/universal-print.png";
 import user_privacyIcon from "../../../resources/azure/managementgovernance/user-privacy.png";
 
-class _Managementgovernance extends _Azure {
-  protected static override _type = "managementgovernance";
+function _Managementgovernance(label?: string, options?: Record<string, unknown>) {
+  const node = _Azure(label, options);
+  (node as unknown as Record<string, unknown>)._type = "managementgovernance";
+  return node;
 }
 
-export class ActivityLog extends _Managementgovernance {
-  protected static _iconDataUrl = activity_logIcon;
+export function ActivityLog(label?: string, options?: Record<string, unknown>) {
+  const node = _Managementgovernance(label ?? "ActivityLog", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = activity_logIcon;
+  return node;
 }
 
-export class Advisor extends _Managementgovernance {
-  protected static _iconDataUrl = advisorIcon;
+export function Advisor(label?: string, options?: Record<string, unknown>) {
+  const node = _Managementgovernance(label ?? "Advisor", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = advisorIcon;
+  return node;
 }
 
-export class Alerts extends _Managementgovernance {
-  protected static _iconDataUrl = alertsIcon;
+export function Alerts(label?: string, options?: Record<string, unknown>) {
+  const node = _Managementgovernance(label ?? "Alerts", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = alertsIcon;
+  return node;
 }
 
-export class ApplicationInsights extends _Managementgovernance {
-  protected static _iconDataUrl = application_insightsIcon;
+export function ApplicationInsights(label?: string, options?: Record<string, unknown>) {
+  const node = _Managementgovernance(label ?? "ApplicationInsights", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = application_insightsIcon;
+  return node;
 }
 
-export class ArcMachines extends _Managementgovernance {
-  protected static _iconDataUrl = arc_machinesIcon;
+export function ArcMachines(label?: string, options?: Record<string, unknown>) {
+  const node = _Managementgovernance(label ?? "ArcMachines", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = arc_machinesIcon;
+  return node;
 }
 
-export class AutomationAccounts extends _Managementgovernance {
-  protected static _iconDataUrl = automation_accountsIcon;
+export function AutomationAccounts(label?: string, options?: Record<string, unknown>) {
+  const node = _Managementgovernance(label ?? "AutomationAccounts", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = automation_accountsIcon;
+  return node;
 }
 
-export class AzureArc extends _Managementgovernance {
-  protected static _iconDataUrl = azure_arcIcon;
+export function AzureArc(label?: string, options?: Record<string, unknown>) {
+  const node = _Managementgovernance(label ?? "AzureArc", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_arcIcon;
+  return node;
 }
 
-export class AzureLighthouse extends _Managementgovernance {
-  protected static _iconDataUrl = azure_lighthouseIcon;
+export function AzureLighthouse(label?: string, options?: Record<string, unknown>) {
+  const node = _Managementgovernance(label ?? "AzureLighthouse", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_lighthouseIcon;
+  return node;
 }
 
-export class Blueprints extends _Managementgovernance {
-  protected static _iconDataUrl = blueprintsIcon;
+export function Blueprints(label?: string, options?: Record<string, unknown>) {
+  const node = _Managementgovernance(label ?? "Blueprints", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = blueprintsIcon;
+  return node;
 }
 
-export class Compliance extends _Managementgovernance {
-  protected static _iconDataUrl = complianceIcon;
+export function Compliance(label?: string, options?: Record<string, unknown>) {
+  const node = _Managementgovernance(label ?? "Compliance", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = complianceIcon;
+  return node;
 }
 
-export class CostManagementAndBilling extends _Managementgovernance {
-  protected static _iconDataUrl = cost_management_and_billingIcon;
+export function CostManagementAndBilling(label?: string, options?: Record<string, unknown>) {
+  const node = _Managementgovernance(label ?? "CostManagementAndBilling", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = cost_management_and_billingIcon;
+  return node;
 }
 
-export class CustomerLockboxForMicrosoftAzure extends _Managementgovernance {
-  protected static _iconDataUrl = customer_lockbox_for_microsoft_azureIcon;
+export function CustomerLockboxForMicrosoftAzure(
+  label?: string,
+  options?: Record<string, unknown>,
+) {
+  const node = _Managementgovernance(label ?? "CustomerLockboxForMicrosoftAzure", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl =
+    customer_lockbox_for_microsoft_azureIcon;
+  return node;
 }
 
-export class DiagnosticsSettings extends _Managementgovernance {
-  protected static _iconDataUrl = diagnostics_settingsIcon;
+export function DiagnosticsSettings(label?: string, options?: Record<string, unknown>) {
+  const node = _Managementgovernance(label ?? "DiagnosticsSettings", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = diagnostics_settingsIcon;
+  return node;
 }
 
-export class Education extends _Managementgovernance {
-  protected static _iconDataUrl = educationIcon;
+export function Education(label?: string, options?: Record<string, unknown>) {
+  const node = _Managementgovernance(label ?? "Education", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = educationIcon;
+  return node;
 }
 
-export class IntuneTrends extends _Managementgovernance {
-  protected static _iconDataUrl = intune_trendsIcon;
+export function IntuneTrends(label?: string, options?: Record<string, unknown>) {
+  const node = _Managementgovernance(label ?? "IntuneTrends", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = intune_trendsIcon;
+  return node;
 }
 
-export class LogAnalyticsWorkspaces extends _Managementgovernance {
-  protected static _iconDataUrl = log_analytics_workspacesIcon;
+export function LogAnalyticsWorkspaces(label?: string, options?: Record<string, unknown>) {
+  const node = _Managementgovernance(label ?? "LogAnalyticsWorkspaces", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = log_analytics_workspacesIcon;
+  return node;
 }
 
-export class Machinesazurearc extends _Managementgovernance {
-  protected static _iconDataUrl = machinesazurearcIcon;
+export function Machinesazurearc(label?: string, options?: Record<string, unknown>) {
+  const node = _Managementgovernance(label ?? "Machinesazurearc", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = machinesazurearcIcon;
+  return node;
 }
 
-export class ManagedApplicationsCenter extends _Managementgovernance {
-  protected static _iconDataUrl = managed_applications_centerIcon;
+export function ManagedApplicationsCenter(label?: string, options?: Record<string, unknown>) {
+  const node = _Managementgovernance(label ?? "ManagedApplicationsCenter", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = managed_applications_centerIcon;
+  return node;
 }
 
-export class ManagedDesktop extends _Managementgovernance {
-  protected static _iconDataUrl = managed_desktopIcon;
+export function ManagedDesktop(label?: string, options?: Record<string, unknown>) {
+  const node = _Managementgovernance(label ?? "ManagedDesktop", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = managed_desktopIcon;
+  return node;
 }
 
-export class Metrics extends _Managementgovernance {
-  protected static _iconDataUrl = metricsIcon;
+export function Metrics(label?: string, options?: Record<string, unknown>) {
+  const node = _Managementgovernance(label ?? "Metrics", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = metricsIcon;
+  return node;
 }
 
-export class Monitor extends _Managementgovernance {
-  protected static _iconDataUrl = monitorIcon;
+export function Monitor(label?: string, options?: Record<string, unknown>) {
+  const node = _Managementgovernance(label ?? "Monitor", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = monitorIcon;
+  return node;
 }
 
-export class MyCustomers extends _Managementgovernance {
-  protected static _iconDataUrl = my_customersIcon;
+export function MyCustomers(label?: string, options?: Record<string, unknown>) {
+  const node = _Managementgovernance(label ?? "MyCustomers", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = my_customersIcon;
+  return node;
 }
 
-export class OperationLogClassic extends _Managementgovernance {
-  protected static _iconDataUrl = operation_log_classicIcon;
+export function OperationLogClassic(label?: string, options?: Record<string, unknown>) {
+  const node = _Managementgovernance(label ?? "OperationLogClassic", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = operation_log_classicIcon;
+  return node;
 }
 
-export class Policy extends _Managementgovernance {
-  protected static _iconDataUrl = policyIcon;
+export function Policy(label?: string, options?: Record<string, unknown>) {
+  const node = _Managementgovernance(label ?? "Policy", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = policyIcon;
+  return node;
 }
 
-export class RecoveryServicesVaults extends _Managementgovernance {
-  protected static _iconDataUrl = recovery_services_vaultsIcon;
+export function RecoveryServicesVaults(label?: string, options?: Record<string, unknown>) {
+  const node = _Managementgovernance(label ?? "RecoveryServicesVaults", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = recovery_services_vaultsIcon;
+  return node;
 }
 
-export class ResourceGraphExplorer extends _Managementgovernance {
-  protected static _iconDataUrl = resource_graph_explorerIcon;
+export function ResourceGraphExplorer(label?: string, options?: Record<string, unknown>) {
+  const node = _Managementgovernance(label ?? "ResourceGraphExplorer", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = resource_graph_explorerIcon;
+  return node;
 }
 
-export class ResourcesProvider extends _Managementgovernance {
-  protected static _iconDataUrl = resources_providerIcon;
+export function ResourcesProvider(label?: string, options?: Record<string, unknown>) {
+  const node = _Managementgovernance(label ?? "ResourcesProvider", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = resources_providerIcon;
+  return node;
 }
 
-export class SchedulerJobCollections extends _Managementgovernance {
-  protected static _iconDataUrl = scheduler_job_collectionsIcon;
+export function SchedulerJobCollections(label?: string, options?: Record<string, unknown>) {
+  const node = _Managementgovernance(label ?? "SchedulerJobCollections", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = scheduler_job_collectionsIcon;
+  return node;
 }
 
-export class ServiceCatalogMad extends _Managementgovernance {
-  protected static _iconDataUrl = service_catalog_madIcon;
+export function ServiceCatalogMad(label?: string, options?: Record<string, unknown>) {
+  const node = _Managementgovernance(label ?? "ServiceCatalogMad", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = service_catalog_madIcon;
+  return node;
 }
 
-export class ServiceProviders extends _Managementgovernance {
-  protected static _iconDataUrl = service_providersIcon;
+export function ServiceProviders(label?: string, options?: Record<string, unknown>) {
+  const node = _Managementgovernance(label ?? "ServiceProviders", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = service_providersIcon;
+  return node;
 }
 
-export class Solutions extends _Managementgovernance {
-  protected static _iconDataUrl = solutionsIcon;
+export function Solutions(label?: string, options?: Record<string, unknown>) {
+  const node = _Managementgovernance(label ?? "Solutions", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = solutionsIcon;
+  return node;
 }
 
-export class UniversalPrint extends _Managementgovernance {
-  protected static _iconDataUrl = universal_printIcon;
+export function UniversalPrint(label?: string, options?: Record<string, unknown>) {
+  const node = _Managementgovernance(label ?? "UniversalPrint", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = universal_printIcon;
+  return node;
 }
 
-export class UserPrivacy extends _Managementgovernance {
-  protected static _iconDataUrl = user_privacyIcon;
+export function UserPrivacy(label?: string, options?: Record<string, unknown>) {
+  const node = _Managementgovernance(label ?? "UserPrivacy", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = user_privacyIcon;
+  return node;
 }

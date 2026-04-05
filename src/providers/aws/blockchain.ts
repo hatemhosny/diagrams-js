@@ -4,24 +4,34 @@ import blockchainIcon from "../../../resources/aws/blockchain/blockchain.png";
 import managed_blockchainIcon from "../../../resources/aws/blockchain/managed-blockchain.png";
 import quantum_ledger_database_qldbIcon from "../../../resources/aws/blockchain/quantum-ledger-database-qldb.png";
 
-class _Blockchain extends _Aws {
-  protected static override _type = "blockchain";
+function _Blockchain(label?: string, options?: Record<string, unknown>) {
+  const node = _Aws(label, options);
+  (node as unknown as Record<string, unknown>)._type = "blockchain";
+  return node;
 }
 
-export class BlockchainResource extends _Blockchain {
-  protected static _iconDataUrl = blockchain_resourceIcon;
+export function BlockchainResource(label?: string, options?: Record<string, unknown>) {
+  const node = _Blockchain(label ?? "BlockchainResource", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = blockchain_resourceIcon;
+  return node;
 }
 
-export class Blockchain extends _Blockchain {
-  protected static _iconDataUrl = blockchainIcon;
+export function Blockchain(label?: string, options?: Record<string, unknown>) {
+  const node = _Blockchain(label ?? "Blockchain", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = blockchainIcon;
+  return node;
 }
 
-export class ManagedBlockchain extends _Blockchain {
-  protected static _iconDataUrl = managed_blockchainIcon;
+export function ManagedBlockchain(label?: string, options?: Record<string, unknown>) {
+  const node = _Blockchain(label ?? "ManagedBlockchain", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = managed_blockchainIcon;
+  return node;
 }
 
-export class QuantumLedgerDatabaseQldb extends _Blockchain {
-  protected static _iconDataUrl = quantum_ledger_database_qldbIcon;
+export function QuantumLedgerDatabaseQldb(label?: string, options?: Record<string, unknown>) {
+  const node = _Blockchain(label ?? "QuantumLedgerDatabaseQldb", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = quantum_ledger_database_qldbIcon;
+  return node;
 }
 
 // Aliases

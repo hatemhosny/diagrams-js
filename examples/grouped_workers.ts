@@ -3,18 +3,18 @@ import { Diagram, Node } from "../src/index.js";
 // Example: Grouped workers architecture
 // For provider examples with icons, see demo.html
 
-const diagram = new Diagram("Grouped Workers", {
+const diagram = Diagram("Grouped Workers", {
   direction: "TB",
 });
 
 // Create nodes
-const lb = diagram.add(new Node("Load Balancer"));
+const lb = diagram.add(Node("Load Balancer"));
 const workers = [
-  diagram.add(new Node("Worker 1")),
-  diagram.add(new Node("Worker 2")),
-  diagram.add(new Node("Worker 3")),
-  diagram.add(new Node("Worker 4")),
-  diagram.add(new Node("Worker 5")),
+  diagram.add(Node("Worker 1")),
+  diagram.add(Node("Worker 2")),
+  diagram.add(Node("Worker 3")),
+  diagram.add(Node("Worker 4")),
+  diagram.add(Node("Worker 5")),
 ];
 
 // Connect them: lb >> workers

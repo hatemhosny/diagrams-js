@@ -14,62 +14,92 @@ import splunkIcon from "../../../resources/onprem/monitoring/splunk.png";
 import thanosIcon from "../../../resources/onprem/monitoring/thanos.png";
 import zabbixIcon from "../../../resources/onprem/monitoring/zabbix.png";
 
-class _Monitoring extends _Onprem {
-  protected static override _type = "monitoring";
+function _Monitoring(label?: string, options?: Record<string, unknown>) {
+  const node = _Onprem(label, options);
+  (node as unknown as Record<string, unknown>)._type = "monitoring";
+  return node;
 }
 
-export class Cortex extends _Monitoring {
-  protected static _iconDataUrl = cortexIcon;
+export function Cortex(label?: string, options?: Record<string, unknown>) {
+  const node = _Monitoring(label ?? "Cortex", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = cortexIcon;
+  return node;
 }
 
-export class Datadog extends _Monitoring {
-  protected static _iconDataUrl = datadogIcon;
+export function Datadog(label?: string, options?: Record<string, unknown>) {
+  const node = _Monitoring(label ?? "Datadog", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = datadogIcon;
+  return node;
 }
 
-export class Dynatrace extends _Monitoring {
-  protected static _iconDataUrl = dynatraceIcon;
+export function Dynatrace(label?: string, options?: Record<string, unknown>) {
+  const node = _Monitoring(label ?? "Dynatrace", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = dynatraceIcon;
+  return node;
 }
 
-export class Grafana extends _Monitoring {
-  protected static _iconDataUrl = grafanaIcon;
+export function Grafana(label?: string, options?: Record<string, unknown>) {
+  const node = _Monitoring(label ?? "Grafana", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = grafanaIcon;
+  return node;
 }
 
-export class Humio extends _Monitoring {
-  protected static _iconDataUrl = humioIcon;
+export function Humio(label?: string, options?: Record<string, unknown>) {
+  const node = _Monitoring(label ?? "Humio", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = humioIcon;
+  return node;
 }
 
-export class Mimir extends _Monitoring {
-  protected static _iconDataUrl = mimirIcon;
+export function Mimir(label?: string, options?: Record<string, unknown>) {
+  const node = _Monitoring(label ?? "Mimir", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = mimirIcon;
+  return node;
 }
 
-export class Nagios extends _Monitoring {
-  protected static _iconDataUrl = nagiosIcon;
+export function Nagios(label?: string, options?: Record<string, unknown>) {
+  const node = _Monitoring(label ?? "Nagios", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = nagiosIcon;
+  return node;
 }
 
-export class Newrelic extends _Monitoring {
-  protected static _iconDataUrl = newrelicIcon;
+export function Newrelic(label?: string, options?: Record<string, unknown>) {
+  const node = _Monitoring(label ?? "Newrelic", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = newrelicIcon;
+  return node;
 }
 
-export class PrometheusOperator extends _Monitoring {
-  protected static _iconDataUrl = prometheus_operatorIcon;
+export function PrometheusOperator(label?: string, options?: Record<string, unknown>) {
+  const node = _Monitoring(label ?? "PrometheusOperator", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = prometheus_operatorIcon;
+  return node;
 }
 
-export class Prometheus extends _Monitoring {
-  protected static _iconDataUrl = prometheusIcon;
+export function Prometheus(label?: string, options?: Record<string, unknown>) {
+  const node = _Monitoring(label ?? "Prometheus", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = prometheusIcon;
+  return node;
 }
 
-export class Sentry extends _Monitoring {
-  protected static _iconDataUrl = sentryIcon;
+export function Sentry(label?: string, options?: Record<string, unknown>) {
+  const node = _Monitoring(label ?? "Sentry", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = sentryIcon;
+  return node;
 }
 
-export class Splunk extends _Monitoring {
-  protected static _iconDataUrl = splunkIcon;
+export function Splunk(label?: string, options?: Record<string, unknown>) {
+  const node = _Monitoring(label ?? "Splunk", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = splunkIcon;
+  return node;
 }
 
-export class Thanos extends _Monitoring {
-  protected static _iconDataUrl = thanosIcon;
+export function Thanos(label?: string, options?: Record<string, unknown>) {
+  const node = _Monitoring(label ?? "Thanos", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = thanosIcon;
+  return node;
 }
 
-export class Zabbix extends _Monitoring {
-  protected static _iconDataUrl = zabbixIcon;
+export function Zabbix(label?: string, options?: Record<string, unknown>) {
+  const node = _Monitoring(label ?? "Zabbix", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = zabbixIcon;
+  return node;
 }

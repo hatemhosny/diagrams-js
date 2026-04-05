@@ -10,46 +10,81 @@ import machine_learning_studio_web_service_plansIcon from "../../../resources/az
 import machine_learning_studio_web_servicesIcon from "../../../resources/azure/ml/machine-learning-studio-web-services.png";
 import machine_learning_studio_workspacesIcon from "../../../resources/azure/ml/machine-learning-studio-workspaces.png";
 
-class _Ml extends _Azure {
-  protected static override _type = "ml";
+function _Ml(label?: string, options?: Record<string, unknown>) {
+  const node = _Azure(label, options);
+  (node as unknown as Record<string, unknown>)._type = "ml";
+  return node;
 }
 
-export class AzureOpenAI extends _Ml {
-  protected static _iconDataUrl = azure_open_aiIcon;
+export function AzureOpenAI(label?: string, options?: Record<string, unknown>) {
+  const node = _Ml(label ?? "AzureOpenAI", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_open_aiIcon;
+  return node;
 }
 
-export class AzureSpeechService extends _Ml {
-  protected static _iconDataUrl = azure_speech_serviceIcon;
+export function AzureSpeechService(label?: string, options?: Record<string, unknown>) {
+  const node = _Ml(label ?? "AzureSpeechService", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_speech_serviceIcon;
+  return node;
 }
 
-export class BatchAI extends _Ml {
-  protected static _iconDataUrl = batch_aiIcon;
+export function BatchAI(label?: string, options?: Record<string, unknown>) {
+  const node = _Ml(label ?? "BatchAI", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = batch_aiIcon;
+  return node;
 }
 
-export class BotServices extends _Ml {
-  protected static _iconDataUrl = bot_servicesIcon;
+export function BotServices(label?: string, options?: Record<string, unknown>) {
+  const node = _Ml(label ?? "BotServices", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = bot_servicesIcon;
+  return node;
 }
 
-export class CognitiveServices extends _Ml {
-  protected static _iconDataUrl = cognitive_servicesIcon;
+export function CognitiveServices(label?: string, options?: Record<string, unknown>) {
+  const node = _Ml(label ?? "CognitiveServices", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = cognitive_servicesIcon;
+  return node;
 }
 
-export class GenomicsAccounts extends _Ml {
-  protected static _iconDataUrl = genomics_accountsIcon;
+export function GenomicsAccounts(label?: string, options?: Record<string, unknown>) {
+  const node = _Ml(label ?? "GenomicsAccounts", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = genomics_accountsIcon;
+  return node;
 }
 
-export class MachineLearningServiceWorkspaces extends _Ml {
-  protected static _iconDataUrl = machine_learning_service_workspacesIcon;
+export function MachineLearningServiceWorkspaces(
+  label?: string,
+  options?: Record<string, unknown>,
+) {
+  const node = _Ml(label ?? "MachineLearningServiceWorkspaces", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl =
+    machine_learning_service_workspacesIcon;
+  return node;
 }
 
-export class MachineLearningStudioWebServicePlans extends _Ml {
-  protected static _iconDataUrl = machine_learning_studio_web_service_plansIcon;
+export function MachineLearningStudioWebServicePlans(
+  label?: string,
+  options?: Record<string, unknown>,
+) {
+  const node = _Ml(label ?? "MachineLearningStudioWebServicePlans", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl =
+    machine_learning_studio_web_service_plansIcon;
+  return node;
 }
 
-export class MachineLearningStudioWebServices extends _Ml {
-  protected static _iconDataUrl = machine_learning_studio_web_servicesIcon;
+export function MachineLearningStudioWebServices(
+  label?: string,
+  options?: Record<string, unknown>,
+) {
+  const node = _Ml(label ?? "MachineLearningStudioWebServices", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl =
+    machine_learning_studio_web_servicesIcon;
+  return node;
 }
 
-export class MachineLearningStudioWorkspaces extends _Ml {
-  protected static _iconDataUrl = machine_learning_studio_workspacesIcon;
+export function MachineLearningStudioWorkspaces(label?: string, options?: Record<string, unknown>) {
+  const node = _Ml(label ?? "MachineLearningStudioWorkspaces", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl =
+    machine_learning_studio_workspacesIcon;
+  return node;
 }

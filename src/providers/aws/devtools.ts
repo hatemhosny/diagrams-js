@@ -14,64 +14,94 @@ import developer_toolsIcon from "../../../resources/aws/devtools/developer-tools
 import tools_and_sdksIcon from "../../../resources/aws/devtools/tools-and-sdks.png";
 import x_rayIcon from "../../../resources/aws/devtools/x-ray.png";
 
-class _Devtools extends _Aws {
-  protected static override _type = "devtools";
+function _Devtools(label?: string, options?: Record<string, unknown>) {
+  const node = _Aws(label, options);
+  (node as unknown as Record<string, unknown>)._type = "devtools";
+  return node;
 }
 
-export class CloudDevelopmentKit extends _Devtools {
-  protected static _iconDataUrl = cloud_development_kitIcon;
+export function CloudDevelopmentKit(label?: string, options?: Record<string, unknown>) {
+  const node = _Devtools(label ?? "CloudDevelopmentKit", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = cloud_development_kitIcon;
+  return node;
 }
 
-export class Cloud9Resource extends _Devtools {
-  protected static _iconDataUrl = cloud9_resourceIcon;
+export function Cloud9Resource(label?: string, options?: Record<string, unknown>) {
+  const node = _Devtools(label ?? "Cloud9Resource", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = cloud9_resourceIcon;
+  return node;
 }
 
-export class Cloud9 extends _Devtools {
-  protected static _iconDataUrl = cloud9Icon;
+export function Cloud9(label?: string, options?: Record<string, unknown>) {
+  const node = _Devtools(label ?? "Cloud9", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = cloud9Icon;
+  return node;
 }
 
-export class Cloudshell extends _Devtools {
-  protected static _iconDataUrl = cloudshellIcon;
+export function Cloudshell(label?: string, options?: Record<string, unknown>) {
+  const node = _Devtools(label ?? "Cloudshell", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = cloudshellIcon;
+  return node;
 }
 
-export class Codeartifact extends _Devtools {
-  protected static _iconDataUrl = codeartifactIcon;
+export function Codeartifact(label?: string, options?: Record<string, unknown>) {
+  const node = _Devtools(label ?? "Codeartifact", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = codeartifactIcon;
+  return node;
 }
 
-export class Codebuild extends _Devtools {
-  protected static _iconDataUrl = codebuildIcon;
+export function Codebuild(label?: string, options?: Record<string, unknown>) {
+  const node = _Devtools(label ?? "Codebuild", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = codebuildIcon;
+  return node;
 }
 
-export class Codecommit extends _Devtools {
-  protected static _iconDataUrl = codecommitIcon;
+export function Codecommit(label?: string, options?: Record<string, unknown>) {
+  const node = _Devtools(label ?? "Codecommit", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = codecommitIcon;
+  return node;
 }
 
-export class Codedeploy extends _Devtools {
-  protected static _iconDataUrl = codedeployIcon;
+export function Codedeploy(label?: string, options?: Record<string, unknown>) {
+  const node = _Devtools(label ?? "Codedeploy", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = codedeployIcon;
+  return node;
 }
 
-export class Codepipeline extends _Devtools {
-  protected static _iconDataUrl = codepipelineIcon;
+export function Codepipeline(label?: string, options?: Record<string, unknown>) {
+  const node = _Devtools(label ?? "Codepipeline", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = codepipelineIcon;
+  return node;
 }
 
-export class Codestar extends _Devtools {
-  protected static _iconDataUrl = codestarIcon;
+export function Codestar(label?: string, options?: Record<string, unknown>) {
+  const node = _Devtools(label ?? "Codestar", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = codestarIcon;
+  return node;
 }
 
-export class CommandLineInterface extends _Devtools {
-  protected static _iconDataUrl = command_line_interfaceIcon;
+export function CommandLineInterface(label?: string, options?: Record<string, unknown>) {
+  const node = _Devtools(label ?? "CommandLineInterface", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = command_line_interfaceIcon;
+  return node;
 }
 
-export class DeveloperTools extends _Devtools {
-  protected static _iconDataUrl = developer_toolsIcon;
+export function DeveloperTools(label?: string, options?: Record<string, unknown>) {
+  const node = _Devtools(label ?? "DeveloperTools", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = developer_toolsIcon;
+  return node;
 }
 
-export class ToolsAndSdks extends _Devtools {
-  protected static _iconDataUrl = tools_and_sdksIcon;
+export function ToolsAndSdks(label?: string, options?: Record<string, unknown>) {
+  const node = _Devtools(label ?? "ToolsAndSdks", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = tools_and_sdksIcon;
+  return node;
 }
 
-export class XRay extends _Devtools {
-  protected static _iconDataUrl = x_rayIcon;
+export function XRay(label?: string, options?: Record<string, unknown>) {
+  const node = _Devtools(label ?? "XRay", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = x_rayIcon;
+  return node;
 }
 
 // Aliases

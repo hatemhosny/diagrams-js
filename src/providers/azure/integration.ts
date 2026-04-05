@@ -34,142 +34,217 @@ import sql_data_warehousesIcon from "../../../resources/azure/integration/sql-da
 import storsimple_device_managersIcon from "../../../resources/azure/integration/storsimple-device-managers.png";
 import system_topicIcon from "../../../resources/azure/integration/system-topic.png";
 
-class _Integration extends _Azure {
-  protected static override _type = "integration";
+function _Integration(label?: string, options?: Record<string, unknown>) {
+  const node = _Azure(label, options);
+  (node as unknown as Record<string, unknown>)._type = "integration";
+  return node;
 }
 
-export class APIConnections extends _Integration {
-  protected static _iconDataUrl = api_connectionsIcon;
+export function APIConnections(label?: string, options?: Record<string, unknown>) {
+  const node = _Integration(label ?? "APIConnections", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = api_connectionsIcon;
+  return node;
 }
 
-export class APIForFhir extends _Integration {
-  protected static _iconDataUrl = api_for_fhirIcon;
+export function APIForFhir(label?: string, options?: Record<string, unknown>) {
+  const node = _Integration(label ?? "APIForFhir", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = api_for_fhirIcon;
+  return node;
 }
 
-export class APIManagementServices extends _Integration {
-  protected static _iconDataUrl = api_management_servicesIcon;
+export function APIManagementServices(label?: string, options?: Record<string, unknown>) {
+  const node = _Integration(label ?? "APIManagementServices", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = api_management_servicesIcon;
+  return node;
 }
 
-export class APIManagement extends _Integration {
-  protected static _iconDataUrl = api_managementIcon;
+export function APIManagement(label?: string, options?: Record<string, unknown>) {
+  const node = _Integration(label ?? "APIManagement", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = api_managementIcon;
+  return node;
 }
 
-export class AppConfiguration extends _Integration {
-  protected static _iconDataUrl = app_configurationIcon;
+export function AppConfiguration(label?: string, options?: Record<string, unknown>) {
+  const node = _Integration(label ?? "AppConfiguration", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = app_configurationIcon;
+  return node;
 }
 
-export class AzureAPIForFhir extends _Integration {
-  protected static _iconDataUrl = azure_api_for_fhirIcon;
+export function AzureAPIForFhir(label?: string, options?: Record<string, unknown>) {
+  const node = _Integration(label ?? "AzureAPIForFhir", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_api_for_fhirIcon;
+  return node;
 }
 
-export class AzureDataCatalog extends _Integration {
-  protected static _iconDataUrl = azure_data_catalogIcon;
+export function AzureDataCatalog(label?: string, options?: Record<string, unknown>) {
+  const node = _Integration(label ?? "AzureDataCatalog", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_data_catalogIcon;
+  return node;
 }
 
-export class AzureDataboxGateway extends _Integration {
-  protected static _iconDataUrl = azure_databox_gatewayIcon;
+export function AzureDataboxGateway(label?: string, options?: Record<string, unknown>) {
+  const node = _Integration(label ?? "AzureDataboxGateway", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_databox_gatewayIcon;
+  return node;
 }
 
-export class AzureServiceBus extends _Integration {
-  protected static _iconDataUrl = azure_service_busIcon;
+export function AzureServiceBus(label?: string, options?: Record<string, unknown>) {
+  const node = _Integration(label ?? "AzureServiceBus", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_service_busIcon;
+  return node;
 }
 
-export class AzureSQLServerStretchDatabases extends _Integration {
-  protected static _iconDataUrl = azure_sql_server_stretch_databasesIcon;
+export function AzureSQLServerStretchDatabases(label?: string, options?: Record<string, unknown>) {
+  const node = _Integration(label ?? "AzureSQLServerStretchDatabases", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl =
+    azure_sql_server_stretch_databasesIcon;
+  return node;
 }
 
-export class AzureStackEdge extends _Integration {
-  protected static _iconDataUrl = azure_stack_edgeIcon;
+export function AzureStackEdge(label?: string, options?: Record<string, unknown>) {
+  const node = _Integration(label ?? "AzureStackEdge", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_stack_edgeIcon;
+  return node;
 }
 
-export class DataCatalog extends _Integration {
-  protected static _iconDataUrl = data_catalogIcon;
+export function DataCatalog(label?: string, options?: Record<string, unknown>) {
+  const node = _Integration(label ?? "DataCatalog", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = data_catalogIcon;
+  return node;
 }
 
-export class DataFactories extends _Integration {
-  protected static _iconDataUrl = data_factoriesIcon;
+export function DataFactories(label?: string, options?: Record<string, unknown>) {
+  const node = _Integration(label ?? "DataFactories", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = data_factoriesIcon;
+  return node;
 }
 
-export class EventGridDomains extends _Integration {
-  protected static _iconDataUrl = event_grid_domainsIcon;
+export function EventGridDomains(label?: string, options?: Record<string, unknown>) {
+  const node = _Integration(label ?? "EventGridDomains", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = event_grid_domainsIcon;
+  return node;
 }
 
-export class EventGridSubscriptions extends _Integration {
-  protected static _iconDataUrl = event_grid_subscriptionsIcon;
+export function EventGridSubscriptions(label?: string, options?: Record<string, unknown>) {
+  const node = _Integration(label ?? "EventGridSubscriptions", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = event_grid_subscriptionsIcon;
+  return node;
 }
 
-export class EventGridTopics extends _Integration {
-  protected static _iconDataUrl = event_grid_topicsIcon;
+export function EventGridTopics(label?: string, options?: Record<string, unknown>) {
+  const node = _Integration(label ?? "EventGridTopics", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = event_grid_topicsIcon;
+  return node;
 }
 
-export class IntegrationAccounts extends _Integration {
-  protected static _iconDataUrl = integration_accountsIcon;
+export function IntegrationAccounts(label?: string, options?: Record<string, unknown>) {
+  const node = _Integration(label ?? "IntegrationAccounts", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = integration_accountsIcon;
+  return node;
 }
 
-export class IntegrationEnvironments extends _Integration {
-  protected static _iconDataUrl = integration_environmentsIcon;
+export function IntegrationEnvironments(label?: string, options?: Record<string, unknown>) {
+  const node = _Integration(label ?? "IntegrationEnvironments", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = integration_environmentsIcon;
+  return node;
 }
 
-export class IntegrationServiceEnvironments extends _Integration {
-  protected static _iconDataUrl = integration_service_environmentsIcon;
+export function IntegrationServiceEnvironments(label?: string, options?: Record<string, unknown>) {
+  const node = _Integration(label ?? "IntegrationServiceEnvironments", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = integration_service_environmentsIcon;
+  return node;
 }
 
-export class LogicAppsCustomConnector extends _Integration {
-  protected static _iconDataUrl = logic_apps_custom_connectorIcon;
+export function LogicAppsCustomConnector(label?: string, options?: Record<string, unknown>) {
+  const node = _Integration(label ?? "LogicAppsCustomConnector", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = logic_apps_custom_connectorIcon;
+  return node;
 }
 
-export class LogicApps extends _Integration {
-  protected static _iconDataUrl = logic_appsIcon;
+export function LogicApps(label?: string, options?: Record<string, unknown>) {
+  const node = _Integration(label ?? "LogicApps", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = logic_appsIcon;
+  return node;
 }
 
-export class PartnerNamespace extends _Integration {
-  protected static _iconDataUrl = partner_namespaceIcon;
+export function PartnerNamespace(label?: string, options?: Record<string, unknown>) {
+  const node = _Integration(label ?? "PartnerNamespace", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = partner_namespaceIcon;
+  return node;
 }
 
-export class PartnerRegistration extends _Integration {
-  protected static _iconDataUrl = partner_registrationIcon;
+export function PartnerRegistration(label?: string, options?: Record<string, unknown>) {
+  const node = _Integration(label ?? "PartnerRegistration", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = partner_registrationIcon;
+  return node;
 }
 
-export class PartnerTopic extends _Integration {
-  protected static _iconDataUrl = partner_topicIcon;
+export function PartnerTopic(label?: string, options?: Record<string, unknown>) {
+  const node = _Integration(label ?? "PartnerTopic", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = partner_topicIcon;
+  return node;
 }
 
-export class PowerPlatform extends _Integration {
-  protected static _iconDataUrl = power_platformIcon;
+export function PowerPlatform(label?: string, options?: Record<string, unknown>) {
+  const node = _Integration(label ?? "PowerPlatform", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = power_platformIcon;
+  return node;
 }
 
-export class Relays extends _Integration {
-  protected static _iconDataUrl = relaysIcon;
+export function Relays(label?: string, options?: Record<string, unknown>) {
+  const node = _Integration(label ?? "Relays", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = relaysIcon;
+  return node;
 }
 
-export class SendgridAccounts extends _Integration {
-  protected static _iconDataUrl = sendgrid_accountsIcon;
+export function SendgridAccounts(label?: string, options?: Record<string, unknown>) {
+  const node = _Integration(label ?? "SendgridAccounts", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = sendgrid_accountsIcon;
+  return node;
 }
 
-export class ServiceBusRelays extends _Integration {
-  protected static _iconDataUrl = service_bus_relaysIcon;
+export function ServiceBusRelays(label?: string, options?: Record<string, unknown>) {
+  const node = _Integration(label ?? "ServiceBusRelays", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = service_bus_relaysIcon;
+  return node;
 }
 
-export class ServiceBus extends _Integration {
-  protected static _iconDataUrl = service_busIcon;
+export function ServiceBus(label?: string, options?: Record<string, unknown>) {
+  const node = _Integration(label ?? "ServiceBus", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = service_busIcon;
+  return node;
 }
 
-export class ServiceCatalogManagedApplicationDefinitions extends _Integration {
-  protected static _iconDataUrl = service_catalog_managed_application_definitionsIcon;
+export function ServiceCatalogManagedApplicationDefinitions(
+  label?: string,
+  options?: Record<string, unknown>,
+) {
+  const node = _Integration(label ?? "ServiceCatalogManagedApplicationDefinitions", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl =
+    service_catalog_managed_application_definitionsIcon;
+  return node;
 }
 
-export class SoftwareAsAService extends _Integration {
-  protected static _iconDataUrl = software_as_a_serviceIcon;
+export function SoftwareAsAService(label?: string, options?: Record<string, unknown>) {
+  const node = _Integration(label ?? "SoftwareAsAService", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = software_as_a_serviceIcon;
+  return node;
 }
 
-export class SQLDataWarehouses extends _Integration {
-  protected static _iconDataUrl = sql_data_warehousesIcon;
+export function SQLDataWarehouses(label?: string, options?: Record<string, unknown>) {
+  const node = _Integration(label ?? "SQLDataWarehouses", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = sql_data_warehousesIcon;
+  return node;
 }
 
-export class StorsimpleDeviceManagers extends _Integration {
-  protected static _iconDataUrl = storsimple_device_managersIcon;
+export function StorsimpleDeviceManagers(label?: string, options?: Record<string, unknown>) {
+  const node = _Integration(label ?? "StorsimpleDeviceManagers", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = storsimple_device_managersIcon;
+  return node;
 }
 
-export class SystemTopic extends _Integration {
-  protected static _iconDataUrl = system_topicIcon;
+export function SystemTopic(label?: string, options?: Record<string, unknown>) {
+  const node = _Integration(label ?? "SystemTopic", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = system_topicIcon;
+  return node;
 }

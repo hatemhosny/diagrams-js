@@ -5,26 +5,38 @@ import ignIcon from "../../../resources/gis/data/ign.png";
 import openstreetmapIcon from "../../../resources/gis/data/openstreetmap.png";
 import overturemapsIcon from "../../../resources/gis/data/overturemaps.png";
 
-class _Data extends _Gis {
-  protected static override _type = "data";
+function _Data(label?: string, options?: Record<string, unknown>) {
+  const node = _Gis(label, options);
+  (node as unknown as Record<string, unknown>)._type = "data";
+  return node;
 }
 
-export class BAN extends _Data {
-  protected static _iconDataUrl = banIcon;
+export function BAN(label?: string, options?: Record<string, unknown>) {
+  const node = _Data(label ?? "BAN", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = banIcon;
+  return node;
 }
 
-export class Here extends _Data {
-  protected static _iconDataUrl = hereIcon;
+export function Here(label?: string, options?: Record<string, unknown>) {
+  const node = _Data(label ?? "Here", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = hereIcon;
+  return node;
 }
 
-export class IGN extends _Data {
-  protected static _iconDataUrl = ignIcon;
+export function IGN(label?: string, options?: Record<string, unknown>) {
+  const node = _Data(label ?? "IGN", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = ignIcon;
+  return node;
 }
 
-export class Openstreetmap extends _Data {
-  protected static _iconDataUrl = openstreetmapIcon;
+export function Openstreetmap(label?: string, options?: Record<string, unknown>) {
+  const node = _Data(label ?? "Openstreetmap", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = openstreetmapIcon;
+  return node;
 }
 
-export class Overturemaps extends _Data {
-  protected static _iconDataUrl = overturemapsIcon;
+export function Overturemaps(label?: string, options?: Record<string, unknown>) {
+  const node = _Data(label ?? "Overturemaps", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = overturemapsIcon;
+  return node;
 }

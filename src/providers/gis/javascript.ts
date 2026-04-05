@@ -8,38 +8,56 @@ import ol_extIcon from "../../../resources/gis/javascript/ol-ext.png";
 import openlayersIcon from "../../../resources/gis/javascript/openlayers.png";
 import turfjsIcon from "../../../resources/gis/javascript/turfjs.png";
 
-class _Javascript extends _Gis {
-  protected static override _type = "javascript";
+function _Javascript(label?: string, options?: Record<string, unknown>) {
+  const node = _Gis(label, options);
+  (node as unknown as Record<string, unknown>)._type = "javascript";
+  return node;
 }
 
-export class Cesium extends _Javascript {
-  protected static _iconDataUrl = cesiumIcon;
+export function Cesium(label?: string, options?: Record<string, unknown>) {
+  const node = _Javascript(label ?? "Cesium", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = cesiumIcon;
+  return node;
 }
 
-export class Geostyler extends _Javascript {
-  protected static _iconDataUrl = geostylerIcon;
+export function Geostyler(label?: string, options?: Record<string, unknown>) {
+  const node = _Javascript(label ?? "Geostyler", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = geostylerIcon;
+  return node;
 }
 
-export class Keplerjs extends _Javascript {
-  protected static _iconDataUrl = keplerjsIcon;
+export function Keplerjs(label?: string, options?: Record<string, unknown>) {
+  const node = _Javascript(label ?? "Keplerjs", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = keplerjsIcon;
+  return node;
 }
 
-export class Leaflet extends _Javascript {
-  protected static _iconDataUrl = leafletIcon;
+export function Leaflet(label?: string, options?: Record<string, unknown>) {
+  const node = _Javascript(label ?? "Leaflet", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = leafletIcon;
+  return node;
 }
 
-export class Maplibre extends _Javascript {
-  protected static _iconDataUrl = maplibreIcon;
+export function Maplibre(label?: string, options?: Record<string, unknown>) {
+  const node = _Javascript(label ?? "Maplibre", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = maplibreIcon;
+  return node;
 }
 
-export class OlExt extends _Javascript {
-  protected static _iconDataUrl = ol_extIcon;
+export function OlExt(label?: string, options?: Record<string, unknown>) {
+  const node = _Javascript(label ?? "OlExt", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = ol_extIcon;
+  return node;
 }
 
-export class Openlayers extends _Javascript {
-  protected static _iconDataUrl = openlayersIcon;
+export function Openlayers(label?: string, options?: Record<string, unknown>) {
+  const node = _Javascript(label ?? "Openlayers", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = openlayersIcon;
+  return node;
 }
 
-export class Turfjs extends _Javascript {
-  protected static _iconDataUrl = turfjsIcon;
+export function Turfjs(label?: string, options?: Record<string, unknown>) {
+  const node = _Javascript(label ?? "Turfjs", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = turfjsIcon;
+  return node;
 }

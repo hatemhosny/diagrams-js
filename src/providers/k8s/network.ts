@@ -4,24 +4,34 @@ import ingIcon from "../../../resources/k8s/network/ing.png";
 import netpolIcon from "../../../resources/k8s/network/netpol.png";
 import svcIcon from "../../../resources/k8s/network/svc.png";
 
-class _Network extends _K8s {
-  protected static override _type = "network";
+function _Network(label?: string, options?: Record<string, unknown>) {
+  const node = _K8s(label, options);
+  (node as unknown as Record<string, unknown>)._type = "network";
+  return node;
 }
 
-export class Ep extends _Network {
-  protected static _iconDataUrl = epIcon;
+export function Ep(label?: string, options?: Record<string, unknown>) {
+  const node = _Network(label ?? "Ep", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = epIcon;
+  return node;
 }
 
-export class Ing extends _Network {
-  protected static _iconDataUrl = ingIcon;
+export function Ing(label?: string, options?: Record<string, unknown>) {
+  const node = _Network(label ?? "Ing", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = ingIcon;
+  return node;
 }
 
-export class Netpol extends _Network {
-  protected static _iconDataUrl = netpolIcon;
+export function Netpol(label?: string, options?: Record<string, unknown>) {
+  const node = _Network(label ?? "Netpol", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = netpolIcon;
+  return node;
 }
 
-export class SVC extends _Network {
-  protected static _iconDataUrl = svcIcon;
+export function SVC(label?: string, options?: Record<string, unknown>) {
+  const node = _Network(label ?? "SVC", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = svcIcon;
+  return node;
 }
 
 // Aliases

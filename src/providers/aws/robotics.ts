@@ -6,30 +6,44 @@ import robomaker_simulatorIcon from "../../../resources/aws/robotics/robomaker-s
 import robomakerIcon from "../../../resources/aws/robotics/robomaker.png";
 import roboticsIcon from "../../../resources/aws/robotics/robotics.png";
 
-class _Robotics extends _Aws {
-  protected static override _type = "robotics";
+function _Robotics(label?: string, options?: Record<string, unknown>) {
+  const node = _Aws(label, options);
+  (node as unknown as Record<string, unknown>)._type = "robotics";
+  return node;
 }
 
-export class RobomakerCloudExtensionRos extends _Robotics {
-  protected static _iconDataUrl = robomaker_cloud_extension_rosIcon;
+export function RobomakerCloudExtensionRos(label?: string, options?: Record<string, unknown>) {
+  const node = _Robotics(label ?? "RobomakerCloudExtensionRos", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = robomaker_cloud_extension_rosIcon;
+  return node;
 }
 
-export class RobomakerDevelopmentEnvironment extends _Robotics {
-  protected static _iconDataUrl = robomaker_development_environmentIcon;
+export function RobomakerDevelopmentEnvironment(label?: string, options?: Record<string, unknown>) {
+  const node = _Robotics(label ?? "RobomakerDevelopmentEnvironment", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = robomaker_development_environmentIcon;
+  return node;
 }
 
-export class RobomakerFleetManagement extends _Robotics {
-  protected static _iconDataUrl = robomaker_fleet_managementIcon;
+export function RobomakerFleetManagement(label?: string, options?: Record<string, unknown>) {
+  const node = _Robotics(label ?? "RobomakerFleetManagement", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = robomaker_fleet_managementIcon;
+  return node;
 }
 
-export class RobomakerSimulator extends _Robotics {
-  protected static _iconDataUrl = robomaker_simulatorIcon;
+export function RobomakerSimulator(label?: string, options?: Record<string, unknown>) {
+  const node = _Robotics(label ?? "RobomakerSimulator", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = robomaker_simulatorIcon;
+  return node;
 }
 
-export class Robomaker extends _Robotics {
-  protected static _iconDataUrl = robomakerIcon;
+export function Robomaker(label?: string, options?: Record<string, unknown>) {
+  const node = _Robotics(label ?? "Robomaker", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = robomakerIcon;
+  return node;
 }
 
-export class Robotics extends _Robotics {
-  protected static _iconDataUrl = roboticsIcon;
+export function Robotics(label?: string, options?: Record<string, unknown>) {
+  const node = _Robotics(label ?? "Robotics", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = roboticsIcon;
+  return node;
 }

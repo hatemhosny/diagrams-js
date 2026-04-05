@@ -1,10 +1,14 @@
 import { Node } from "../../Node.js";
 
-export class _K8s extends Node {
-  protected static override _provider = "k8s";
-  protected static override _iconDir = "k8s";
+export function _K8s(label?: string, options?: Record<string, unknown>) {
+  const node = Node(label ?? "K8s", options);
+  (node as unknown as Record<string, unknown>)._provider = "k8s";
+  (node as unknown as Record<string, unknown>)._iconDir = "k8s";
+  return node;
 }
 
-export class K8s extends _K8s {
-  protected static override _icon = "k8s.png";
+export function K8s(label?: string, options?: Record<string, unknown>) {
+  const node = _K8s(label ?? "K8s", options);
+  (node as unknown as Record<string, unknown>)._icon = "k8s.png";
+  return node;
 }

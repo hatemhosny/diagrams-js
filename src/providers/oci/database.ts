@@ -18,80 +18,118 @@ import scienceIcon from "../../../resources/oci/database/science.png";
 import stream_whiteIcon from "../../../resources/oci/database/stream-white.png";
 import streamIcon from "../../../resources/oci/database/stream.png";
 
-class _Database extends _Oci {
-  protected static override _type = "database";
+function _Database(label?: string, options?: Record<string, unknown>) {
+  const node = _Oci(label, options);
+  (node as unknown as Record<string, unknown>)._type = "database";
+  return node;
 }
 
-export class AutonomousWhite extends _Database {
-  protected static _iconDataUrl = autonomous_whiteIcon;
+export function AutonomousWhite(label?: string, options?: Record<string, unknown>) {
+  const node = _Database(label ?? "AutonomousWhite", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = autonomous_whiteIcon;
+  return node;
 }
 
-export class Autonomous extends _Database {
-  protected static _iconDataUrl = autonomousIcon;
+export function Autonomous(label?: string, options?: Record<string, unknown>) {
+  const node = _Database(label ?? "Autonomous", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = autonomousIcon;
+  return node;
 }
 
-export class BigdataServiceWhite extends _Database {
-  protected static _iconDataUrl = bigdata_service_whiteIcon;
+export function BigdataServiceWhite(label?: string, options?: Record<string, unknown>) {
+  const node = _Database(label ?? "BigdataServiceWhite", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = bigdata_service_whiteIcon;
+  return node;
 }
 
-export class BigdataService extends _Database {
-  protected static _iconDataUrl = bigdata_serviceIcon;
+export function BigdataService(label?: string, options?: Record<string, unknown>) {
+  const node = _Database(label ?? "BigdataService", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = bigdata_serviceIcon;
+  return node;
 }
 
-export class DatabaseServiceWhite extends _Database {
-  protected static _iconDataUrl = database_service_whiteIcon;
+export function DatabaseServiceWhite(label?: string, options?: Record<string, unknown>) {
+  const node = _Database(label ?? "DatabaseServiceWhite", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = database_service_whiteIcon;
+  return node;
 }
 
-export class DatabaseService extends _Database {
-  protected static _iconDataUrl = database_serviceIcon;
+export function DatabaseService(label?: string, options?: Record<string, unknown>) {
+  const node = _Database(label ?? "DatabaseService", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = database_serviceIcon;
+  return node;
 }
 
-export class DataflowApacheWhite extends _Database {
-  protected static _iconDataUrl = dataflow_apache_whiteIcon;
+export function DataflowApacheWhite(label?: string, options?: Record<string, unknown>) {
+  const node = _Database(label ?? "DataflowApacheWhite", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = dataflow_apache_whiteIcon;
+  return node;
 }
 
-export class DataflowApache extends _Database {
-  protected static _iconDataUrl = dataflow_apacheIcon;
+export function DataflowApache(label?: string, options?: Record<string, unknown>) {
+  const node = _Database(label ?? "DataflowApache", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = dataflow_apacheIcon;
+  return node;
 }
 
-export class DcatWhite extends _Database {
-  protected static _iconDataUrl = dcat_whiteIcon;
+export function DcatWhite(label?: string, options?: Record<string, unknown>) {
+  const node = _Database(label ?? "DcatWhite", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = dcat_whiteIcon;
+  return node;
 }
 
-export class Dcat extends _Database {
-  protected static _iconDataUrl = dcatIcon;
+export function Dcat(label?: string, options?: Record<string, unknown>) {
+  const node = _Database(label ?? "Dcat", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = dcatIcon;
+  return node;
 }
 
-export class DisWhite extends _Database {
-  protected static _iconDataUrl = dis_whiteIcon;
+export function DisWhite(label?: string, options?: Record<string, unknown>) {
+  const node = _Database(label ?? "DisWhite", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = dis_whiteIcon;
+  return node;
 }
 
-export class Dis extends _Database {
-  protected static _iconDataUrl = disIcon;
+export function Dis(label?: string, options?: Record<string, unknown>) {
+  const node = _Database(label ?? "Dis", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = disIcon;
+  return node;
 }
 
-export class DMSWhite extends _Database {
-  protected static _iconDataUrl = dms_whiteIcon;
+export function DMSWhite(label?: string, options?: Record<string, unknown>) {
+  const node = _Database(label ?? "DMSWhite", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = dms_whiteIcon;
+  return node;
 }
 
-export class DMS extends _Database {
-  protected static _iconDataUrl = dmsIcon;
+export function DMS(label?: string, options?: Record<string, unknown>) {
+  const node = _Database(label ?? "DMS", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = dmsIcon;
+  return node;
 }
 
-export class ScienceWhite extends _Database {
-  protected static _iconDataUrl = science_whiteIcon;
+export function ScienceWhite(label?: string, options?: Record<string, unknown>) {
+  const node = _Database(label ?? "ScienceWhite", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = science_whiteIcon;
+  return node;
 }
 
-export class Science extends _Database {
-  protected static _iconDataUrl = scienceIcon;
+export function Science(label?: string, options?: Record<string, unknown>) {
+  const node = _Database(label ?? "Science", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = scienceIcon;
+  return node;
 }
 
-export class StreamWhite extends _Database {
-  protected static _iconDataUrl = stream_whiteIcon;
+export function StreamWhite(label?: string, options?: Record<string, unknown>) {
+  const node = _Database(label ?? "StreamWhite", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = stream_whiteIcon;
+  return node;
 }
 
-export class Stream extends _Database {
-  protected static _iconDataUrl = streamIcon;
+export function Stream(label?: string, options?: Record<string, unknown>) {
+  const node = _Database(label ?? "Stream", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = streamIcon;
+  return node;
 }
 
 // Aliases

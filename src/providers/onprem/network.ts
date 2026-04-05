@@ -34,144 +34,214 @@ import wildflyIcon from "../../../resources/onprem/network/wildfly.png";
 import yarpIcon from "../../../resources/onprem/network/yarp.png";
 import zookeeperIcon from "../../../resources/onprem/network/zookeeper.png";
 
-class _Network extends _Onprem {
-  protected static override _type = "network";
+function _Network(label?: string, options?: Record<string, unknown>) {
+  const node = _Onprem(label, options);
+  (node as unknown as Record<string, unknown>)._type = "network";
+  return node;
 }
 
-export class Ambassador extends _Network {
-  protected static _iconDataUrl = ambassadorIcon;
+export function Ambassador(label?: string, options?: Record<string, unknown>) {
+  const node = _Network(label ?? "Ambassador", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = ambassadorIcon;
+  return node;
 }
 
-export class Apache extends _Network {
-  protected static _iconDataUrl = apacheIcon;
+export function Apache(label?: string, options?: Record<string, unknown>) {
+  const node = _Network(label ?? "Apache", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = apacheIcon;
+  return node;
 }
 
-export class Bind9 extends _Network {
-  protected static _iconDataUrl = bind_9Icon;
+export function Bind9(label?: string, options?: Record<string, unknown>) {
+  const node = _Network(label ?? "Bind9", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = bind_9Icon;
+  return node;
 }
 
-export class Caddy extends _Network {
-  protected static _iconDataUrl = caddyIcon;
+export function Caddy(label?: string, options?: Record<string, unknown>) {
+  const node = _Network(label ?? "Caddy", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = caddyIcon;
+  return node;
 }
 
-export class CiscoRouter extends _Network {
-  protected static _iconDataUrl = cisco_routerIcon;
+export function CiscoRouter(label?: string, options?: Record<string, unknown>) {
+  const node = _Network(label ?? "CiscoRouter", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = cisco_routerIcon;
+  return node;
 }
 
-export class CiscoSwitchL2 extends _Network {
-  protected static _iconDataUrl = cisco_switch_l2Icon;
+export function CiscoSwitchL2(label?: string, options?: Record<string, unknown>) {
+  const node = _Network(label ?? "CiscoSwitchL2", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = cisco_switch_l2Icon;
+  return node;
 }
 
-export class CiscoSwitchL3 extends _Network {
-  protected static _iconDataUrl = cisco_switch_l3Icon;
+export function CiscoSwitchL3(label?: string, options?: Record<string, unknown>) {
+  const node = _Network(label ?? "CiscoSwitchL3", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = cisco_switch_l3Icon;
+  return node;
 }
 
-export class Consul extends _Network {
-  protected static _iconDataUrl = consulIcon;
+export function Consul(label?: string, options?: Record<string, unknown>) {
+  const node = _Network(label ?? "Consul", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = consulIcon;
+  return node;
 }
 
-export class Envoy extends _Network {
-  protected static _iconDataUrl = envoyIcon;
+export function Envoy(label?: string, options?: Record<string, unknown>) {
+  const node = _Network(label ?? "Envoy", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = envoyIcon;
+  return node;
 }
 
-export class Etcd extends _Network {
-  protected static _iconDataUrl = etcdIcon;
+export function Etcd(label?: string, options?: Record<string, unknown>) {
+  const node = _Network(label ?? "Etcd", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = etcdIcon;
+  return node;
 }
 
-export class Glassfish extends _Network {
-  protected static _iconDataUrl = glassfishIcon;
+export function Glassfish(label?: string, options?: Record<string, unknown>) {
+  const node = _Network(label ?? "Glassfish", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = glassfishIcon;
+  return node;
 }
 
-export class Gunicorn extends _Network {
-  protected static _iconDataUrl = gunicornIcon;
+export function Gunicorn(label?: string, options?: Record<string, unknown>) {
+  const node = _Network(label ?? "Gunicorn", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = gunicornIcon;
+  return node;
 }
 
-export class Haproxy extends _Network {
-  protected static _iconDataUrl = haproxyIcon;
+export function Haproxy(label?: string, options?: Record<string, unknown>) {
+  const node = _Network(label ?? "Haproxy", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = haproxyIcon;
+  return node;
 }
 
-export class Internet extends _Network {
-  protected static _iconDataUrl = internetIcon;
+export function Internet(label?: string, options?: Record<string, unknown>) {
+  const node = _Network(label ?? "Internet", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = internetIcon;
+  return node;
 }
 
-export class Istio extends _Network {
-  protected static _iconDataUrl = istioIcon;
+export function Istio(label?: string, options?: Record<string, unknown>) {
+  const node = _Network(label ?? "Istio", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = istioIcon;
+  return node;
 }
 
-export class Jbossas extends _Network {
-  protected static _iconDataUrl = jbossasIcon;
+export function Jbossas(label?: string, options?: Record<string, unknown>) {
+  const node = _Network(label ?? "Jbossas", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = jbossasIcon;
+  return node;
 }
 
-export class Jetty extends _Network {
-  protected static _iconDataUrl = jettyIcon;
+export function Jetty(label?: string, options?: Record<string, unknown>) {
+  const node = _Network(label ?? "Jetty", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = jettyIcon;
+  return node;
 }
 
-export class Kong extends _Network {
-  protected static _iconDataUrl = kongIcon;
+export function Kong(label?: string, options?: Record<string, unknown>) {
+  const node = _Network(label ?? "Kong", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = kongIcon;
+  return node;
 }
 
-export class Linkerd extends _Network {
-  protected static _iconDataUrl = linkerdIcon;
+export function Linkerd(label?: string, options?: Record<string, unknown>) {
+  const node = _Network(label ?? "Linkerd", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = linkerdIcon;
+  return node;
 }
 
-export class Mikrotik extends _Network {
-  protected static _iconDataUrl = mikrotikIcon;
+export function Mikrotik(label?: string, options?: Record<string, unknown>) {
+  const node = _Network(label ?? "Mikrotik", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = mikrotikIcon;
+  return node;
 }
 
-export class Nginx extends _Network {
-  protected static _iconDataUrl = nginxIcon;
+export function Nginx(label?: string, options?: Record<string, unknown>) {
+  const node = _Network(label ?? "Nginx", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = nginxIcon;
+  return node;
 }
 
-export class Ocelot extends _Network {
-  protected static _iconDataUrl = ocelotIcon;
+export function Ocelot(label?: string, options?: Record<string, unknown>) {
+  const node = _Network(label ?? "Ocelot", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = ocelotIcon;
+  return node;
 }
 
-export class OpenServiceMesh extends _Network {
-  protected static _iconDataUrl = open_service_meshIcon;
+export function OpenServiceMesh(label?: string, options?: Record<string, unknown>) {
+  const node = _Network(label ?? "OpenServiceMesh", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = open_service_meshIcon;
+  return node;
 }
 
-export class Opnsense extends _Network {
-  protected static _iconDataUrl = opnsenseIcon;
+export function Opnsense(label?: string, options?: Record<string, unknown>) {
+  const node = _Network(label ?? "Opnsense", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = opnsenseIcon;
+  return node;
 }
 
-export class Pfsense extends _Network {
-  protected static _iconDataUrl = pfsenseIcon;
+export function Pfsense(label?: string, options?: Record<string, unknown>) {
+  const node = _Network(label ?? "Pfsense", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = pfsenseIcon;
+  return node;
 }
 
-export class Pomerium extends _Network {
-  protected static _iconDataUrl = pomeriumIcon;
+export function Pomerium(label?: string, options?: Record<string, unknown>) {
+  const node = _Network(label ?? "Pomerium", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = pomeriumIcon;
+  return node;
 }
 
-export class Powerdns extends _Network {
-  protected static _iconDataUrl = powerdnsIcon;
+export function Powerdns(label?: string, options?: Record<string, unknown>) {
+  const node = _Network(label ?? "Powerdns", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = powerdnsIcon;
+  return node;
 }
 
-export class Tomcat extends _Network {
-  protected static _iconDataUrl = tomcatIcon;
+export function Tomcat(label?: string, options?: Record<string, unknown>) {
+  const node = _Network(label ?? "Tomcat", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = tomcatIcon;
+  return node;
 }
 
-export class Traefik extends _Network {
-  protected static _iconDataUrl = traefikIcon;
+export function Traefik(label?: string, options?: Record<string, unknown>) {
+  const node = _Network(label ?? "Traefik", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = traefikIcon;
+  return node;
 }
 
-export class Tyk extends _Network {
-  protected static _iconDataUrl = tykIcon;
+export function Tyk(label?: string, options?: Record<string, unknown>) {
+  const node = _Network(label ?? "Tyk", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = tykIcon;
+  return node;
 }
 
-export class Vyos extends _Network {
-  protected static _iconDataUrl = vyosIcon;
+export function Vyos(label?: string, options?: Record<string, unknown>) {
+  const node = _Network(label ?? "Vyos", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = vyosIcon;
+  return node;
 }
 
-export class Wildfly extends _Network {
-  protected static _iconDataUrl = wildflyIcon;
+export function Wildfly(label?: string, options?: Record<string, unknown>) {
+  const node = _Network(label ?? "Wildfly", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = wildflyIcon;
+  return node;
 }
 
-export class Yarp extends _Network {
-  protected static _iconDataUrl = yarpIcon;
+export function Yarp(label?: string, options?: Record<string, unknown>) {
+  const node = _Network(label ?? "Yarp", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = yarpIcon;
+  return node;
 }
 
-export class Zookeeper extends _Network {
-  protected static _iconDataUrl = zookeeperIcon;
+export function Zookeeper(label?: string, options?: Record<string, unknown>) {
+  const node = _Network(label ?? "Zookeeper", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = zookeeperIcon;
+  return node;
 }
 
 // Aliases

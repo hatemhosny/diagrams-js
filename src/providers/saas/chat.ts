@@ -8,38 +8,56 @@ import slackIcon from "../../../resources/saas/chat/slack.png";
 import teamsIcon from "../../../resources/saas/chat/teams.png";
 import telegramIcon from "../../../resources/saas/chat/telegram.png";
 
-class _Chat extends _Saas {
-  protected static override _type = "chat";
+function _Chat(label?: string, options?: Record<string, unknown>) {
+  const node = _Saas(label, options);
+  (node as unknown as Record<string, unknown>)._type = "chat";
+  return node;
 }
 
-export class Discord extends _Chat {
-  protected static _iconDataUrl = discordIcon;
+export function Discord(label?: string, options?: Record<string, unknown>) {
+  const node = _Chat(label ?? "Discord", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = discordIcon;
+  return node;
 }
 
-export class Line extends _Chat {
-  protected static _iconDataUrl = lineIcon;
+export function Line(label?: string, options?: Record<string, unknown>) {
+  const node = _Chat(label ?? "Line", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = lineIcon;
+  return node;
 }
 
-export class Mattermost extends _Chat {
-  protected static _iconDataUrl = mattermostIcon;
+export function Mattermost(label?: string, options?: Record<string, unknown>) {
+  const node = _Chat(label ?? "Mattermost", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = mattermostIcon;
+  return node;
 }
 
-export class Messenger extends _Chat {
-  protected static _iconDataUrl = messengerIcon;
+export function Messenger(label?: string, options?: Record<string, unknown>) {
+  const node = _Chat(label ?? "Messenger", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = messengerIcon;
+  return node;
 }
 
-export class RocketChat extends _Chat {
-  protected static _iconDataUrl = rocket_chatIcon;
+export function RocketChat(label?: string, options?: Record<string, unknown>) {
+  const node = _Chat(label ?? "RocketChat", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = rocket_chatIcon;
+  return node;
 }
 
-export class Slack extends _Chat {
-  protected static _iconDataUrl = slackIcon;
+export function Slack(label?: string, options?: Record<string, unknown>) {
+  const node = _Chat(label ?? "Slack", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = slackIcon;
+  return node;
 }
 
-export class Teams extends _Chat {
-  protected static _iconDataUrl = teamsIcon;
+export function Teams(label?: string, options?: Record<string, unknown>) {
+  const node = _Chat(label ?? "Teams", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = teamsIcon;
+  return node;
 }
 
-export class Telegram extends _Chat {
-  protected static _iconDataUrl = telegramIcon;
+export function Telegram(label?: string, options?: Record<string, unknown>) {
+  const node = _Chat(label ?? "Telegram", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = telegramIcon;
+  return node;
 }

@@ -7,34 +7,50 @@ import device_farmIcon from "../../../resources/aws/mobile/device-farm.png";
 import mobileIcon from "../../../resources/aws/mobile/mobile.png";
 import pinpointIcon from "../../../resources/aws/mobile/pinpoint.png";
 
-class _Mobile extends _Aws {
-  protected static override _type = "mobile";
+function _Mobile(label?: string, options?: Record<string, unknown>) {
+  const node = _Aws(label, options);
+  (node as unknown as Record<string, unknown>)._type = "mobile";
+  return node;
 }
 
-export class Amplify extends _Mobile {
-  protected static _iconDataUrl = amplifyIcon;
+export function Amplify(label?: string, options?: Record<string, unknown>) {
+  const node = _Mobile(label ?? "Amplify", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = amplifyIcon;
+  return node;
 }
 
-export class APIGatewayEndpoint extends _Mobile {
-  protected static _iconDataUrl = api_gateway_endpointIcon;
+export function APIGatewayEndpoint(label?: string, options?: Record<string, unknown>) {
+  const node = _Mobile(label ?? "APIGatewayEndpoint", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = api_gateway_endpointIcon;
+  return node;
 }
 
-export class APIGateway extends _Mobile {
-  protected static _iconDataUrl = api_gatewayIcon;
+export function APIGateway(label?: string, options?: Record<string, unknown>) {
+  const node = _Mobile(label ?? "APIGateway", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = api_gatewayIcon;
+  return node;
 }
 
-export class Appsync extends _Mobile {
-  protected static _iconDataUrl = appsyncIcon;
+export function Appsync(label?: string, options?: Record<string, unknown>) {
+  const node = _Mobile(label ?? "Appsync", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = appsyncIcon;
+  return node;
 }
 
-export class DeviceFarm extends _Mobile {
-  protected static _iconDataUrl = device_farmIcon;
+export function DeviceFarm(label?: string, options?: Record<string, unknown>) {
+  const node = _Mobile(label ?? "DeviceFarm", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = device_farmIcon;
+  return node;
 }
 
-export class Mobile extends _Mobile {
-  protected static _iconDataUrl = mobileIcon;
+export function Mobile(label?: string, options?: Record<string, unknown>) {
+  const node = _Mobile(label ?? "Mobile", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = mobileIcon;
+  return node;
 }
 
-export class Pinpoint extends _Mobile {
-  protected static _iconDataUrl = pinpointIcon;
+export function Pinpoint(label?: string, options?: Record<string, unknown>) {
+  const node = _Mobile(label ?? "Pinpoint", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = pinpointIcon;
+  return node;
 }

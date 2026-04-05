@@ -8,38 +8,56 @@ import metricbeatIcon from "../../../resources/elastic/beats/metricbeat.png";
 import packetbeatIcon from "../../../resources/elastic/beats/packetbeat.png";
 import winlogbeatIcon from "../../../resources/elastic/beats/winlogbeat.png";
 
-class _Beats extends _Elastic {
-  protected static override _type = "beats";
+function _Beats(label?: string, options?: Record<string, unknown>) {
+  const node = _Elastic(label, options);
+  (node as unknown as Record<string, unknown>)._type = "beats";
+  return node;
 }
 
-export class APM extends _Beats {
-  protected static _iconDataUrl = apmIcon;
+export function APM(label?: string, options?: Record<string, unknown>) {
+  const node = _Beats(label ?? "APM", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = apmIcon;
+  return node;
 }
 
-export class Auditbeat extends _Beats {
-  protected static _iconDataUrl = auditbeatIcon;
+export function Auditbeat(label?: string, options?: Record<string, unknown>) {
+  const node = _Beats(label ?? "Auditbeat", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = auditbeatIcon;
+  return node;
 }
 
-export class Filebeat extends _Beats {
-  protected static _iconDataUrl = filebeatIcon;
+export function Filebeat(label?: string, options?: Record<string, unknown>) {
+  const node = _Beats(label ?? "Filebeat", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = filebeatIcon;
+  return node;
 }
 
-export class Functionbeat extends _Beats {
-  protected static _iconDataUrl = functionbeatIcon;
+export function Functionbeat(label?: string, options?: Record<string, unknown>) {
+  const node = _Beats(label ?? "Functionbeat", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = functionbeatIcon;
+  return node;
 }
 
-export class Heartbeat extends _Beats {
-  protected static _iconDataUrl = heartbeatIcon;
+export function Heartbeat(label?: string, options?: Record<string, unknown>) {
+  const node = _Beats(label ?? "Heartbeat", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = heartbeatIcon;
+  return node;
 }
 
-export class Metricbeat extends _Beats {
-  protected static _iconDataUrl = metricbeatIcon;
+export function Metricbeat(label?: string, options?: Record<string, unknown>) {
+  const node = _Beats(label ?? "Metricbeat", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = metricbeatIcon;
+  return node;
 }
 
-export class Packetbeat extends _Beats {
-  protected static _iconDataUrl = packetbeatIcon;
+export function Packetbeat(label?: string, options?: Record<string, unknown>) {
+  const node = _Beats(label ?? "Packetbeat", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = packetbeatIcon;
+  return node;
 }
 
-export class Winlogbeat extends _Beats {
-  protected static _iconDataUrl = winlogbeatIcon;
+export function Winlogbeat(label?: string, options?: Record<string, unknown>) {
+  const node = _Beats(label ?? "Winlogbeat", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = winlogbeatIcon;
+  return node;
 }

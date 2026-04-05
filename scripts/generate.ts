@@ -43,13 +43,17 @@ function generateProviderIndex(provider: string): string {
 
   return `import { Node } from "../../Node.js";
 
-export class _${pascalProvider} extends Node {
-  protected static override _provider = "${provider}";
-  protected static override _iconDir = "${provider}";
+export function _${pascalProvider}(label?: string, options?: Record<string, unknown>) {
+  const node = Node(label ?? "${pascalProvider}", options);
+  (node as unknown as Record<string, unknown>)._provider = "${provider}";
+  (node as unknown as Record<string, unknown>)._iconDir = "${provider}";
+  return node;
 }
 
-export class ${pascalProvider} extends _${pascalProvider} {
-  protected static override _icon = "${provider}.png";
+export function ${pascalProvider}(label?: string, options?: Record<string, unknown>) {
+  const node = _${pascalProvider}(label ?? "${pascalProvider}", options);
+  (node as unknown as Record<string, unknown>)._icon = "${provider}.png";
+  return node;
 }
 `;
 }
@@ -73,20 +77,23 @@ function generateModule(provider: string, serviceType: string, iconFiles: string
 `;
 
   for (const meta of classMetas) {
-    code += `import ${meta.importName}Icon from "../../../resources/${provider}/${serviceType}/${meta.icon}?inline";
-`;
+    code += `import ${meta.importName}Icon from "../../../resources/${provider}/${serviceType}/${meta.icon}";\n`;
   }
 
   code += `
-class _${pascalServiceType} extends _${pascalProvider} {
-  protected static override _type = "${serviceType}";
+function _${pascalServiceType}(label?: string, options?: Record<string, unknown>) {
+  const node = _${pascalProvider}(label, options);
+  (node as unknown as Record<string, unknown>)._type = "${serviceType}";
+  return node;
 }
 
 `;
 
   for (const meta of classMetas) {
-    code += `export class ${meta.name} extends _${pascalServiceType} {
-  protected static _iconDataUrl = ${meta.importName}Icon;
+    code += `export function ${meta.name}(label?: string, options?: Record<string, unknown>) {
+  const node = _${pascalServiceType}(label ?? "${meta.name}", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = ${meta.importName}Icon;
+  return node;
 }
 
 `;

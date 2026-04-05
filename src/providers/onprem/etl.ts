@@ -1,10 +1,14 @@
 import { _Onprem } from "./index.js";
 import embulkIcon from "../../../resources/onprem/etl/embulk.png";
 
-class _Etl extends _Onprem {
-  protected static override _type = "etl";
+function _Etl(label?: string, options?: Record<string, unknown>) {
+  const node = _Onprem(label, options);
+  (node as unknown as Record<string, unknown>)._type = "etl";
+  return node;
 }
 
-export class Embulk extends _Etl {
-  protected static _iconDataUrl = embulkIcon;
+export function Embulk(label?: string, options?: Record<string, unknown>) {
+  const node = _Etl(label ?? "Embulk", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = embulkIcon;
+  return node;
 }

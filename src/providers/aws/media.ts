@@ -13,58 +13,86 @@ import elemental_serverIcon from "../../../resources/aws/media/elemental-server.
 import kinesis_video_streamsIcon from "../../../resources/aws/media/kinesis-video-streams.png";
 import media_servicesIcon from "../../../resources/aws/media/media-services.png";
 
-class _Media extends _Aws {
-  protected static override _type = "media";
+function _Media(label?: string, options?: Record<string, unknown>) {
+  const node = _Aws(label, options);
+  (node as unknown as Record<string, unknown>)._type = "media";
+  return node;
 }
 
-export class ElasticTranscoder extends _Media {
-  protected static _iconDataUrl = elastic_transcoderIcon;
+export function ElasticTranscoder(label?: string, options?: Record<string, unknown>) {
+  const node = _Media(label ?? "ElasticTranscoder", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = elastic_transcoderIcon;
+  return node;
 }
 
-export class ElementalConductor extends _Media {
-  protected static _iconDataUrl = elemental_conductorIcon;
+export function ElementalConductor(label?: string, options?: Record<string, unknown>) {
+  const node = _Media(label ?? "ElementalConductor", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = elemental_conductorIcon;
+  return node;
 }
 
-export class ElementalDelta extends _Media {
-  protected static _iconDataUrl = elemental_deltaIcon;
+export function ElementalDelta(label?: string, options?: Record<string, unknown>) {
+  const node = _Media(label ?? "ElementalDelta", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = elemental_deltaIcon;
+  return node;
 }
 
-export class ElementalLive extends _Media {
-  protected static _iconDataUrl = elemental_liveIcon;
+export function ElementalLive(label?: string, options?: Record<string, unknown>) {
+  const node = _Media(label ?? "ElementalLive", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = elemental_liveIcon;
+  return node;
 }
 
-export class ElementalMediaconnect extends _Media {
-  protected static _iconDataUrl = elemental_mediaconnectIcon;
+export function ElementalMediaconnect(label?: string, options?: Record<string, unknown>) {
+  const node = _Media(label ?? "ElementalMediaconnect", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = elemental_mediaconnectIcon;
+  return node;
 }
 
-export class ElementalMediaconvert extends _Media {
-  protected static _iconDataUrl = elemental_mediaconvertIcon;
+export function ElementalMediaconvert(label?: string, options?: Record<string, unknown>) {
+  const node = _Media(label ?? "ElementalMediaconvert", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = elemental_mediaconvertIcon;
+  return node;
 }
 
-export class ElementalMedialive extends _Media {
-  protected static _iconDataUrl = elemental_medialiveIcon;
+export function ElementalMedialive(label?: string, options?: Record<string, unknown>) {
+  const node = _Media(label ?? "ElementalMedialive", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = elemental_medialiveIcon;
+  return node;
 }
 
-export class ElementalMediapackage extends _Media {
-  protected static _iconDataUrl = elemental_mediapackageIcon;
+export function ElementalMediapackage(label?: string, options?: Record<string, unknown>) {
+  const node = _Media(label ?? "ElementalMediapackage", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = elemental_mediapackageIcon;
+  return node;
 }
 
-export class ElementalMediastore extends _Media {
-  protected static _iconDataUrl = elemental_mediastoreIcon;
+export function ElementalMediastore(label?: string, options?: Record<string, unknown>) {
+  const node = _Media(label ?? "ElementalMediastore", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = elemental_mediastoreIcon;
+  return node;
 }
 
-export class ElementalMediatailor extends _Media {
-  protected static _iconDataUrl = elemental_mediatailorIcon;
+export function ElementalMediatailor(label?: string, options?: Record<string, unknown>) {
+  const node = _Media(label ?? "ElementalMediatailor", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = elemental_mediatailorIcon;
+  return node;
 }
 
-export class ElementalServer extends _Media {
-  protected static _iconDataUrl = elemental_serverIcon;
+export function ElementalServer(label?: string, options?: Record<string, unknown>) {
+  const node = _Media(label ?? "ElementalServer", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = elemental_serverIcon;
+  return node;
 }
 
-export class KinesisVideoStreams extends _Media {
-  protected static _iconDataUrl = kinesis_video_streamsIcon;
+export function KinesisVideoStreams(label?: string, options?: Record<string, unknown>) {
+  const node = _Media(label ?? "KinesisVideoStreams", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = kinesis_video_streamsIcon;
+  return node;
 }
 
-export class MediaServices extends _Media {
-  protected static _iconDataUrl = media_servicesIcon;
+export function MediaServices(label?: string, options?: Record<string, unknown>) {
+  const node = _Media(label ?? "MediaServices", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = media_servicesIcon;
+  return node;
 }

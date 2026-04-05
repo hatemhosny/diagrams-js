@@ -4,22 +4,32 @@ import hazelcastIcon from "../../../resources/onprem/inmemory/hazelcast.png";
 import memcachedIcon from "../../../resources/onprem/inmemory/memcached.png";
 import redisIcon from "../../../resources/onprem/inmemory/redis.png";
 
-class _Inmemory extends _Onprem {
-  protected static override _type = "inmemory";
+function _Inmemory(label?: string, options?: Record<string, unknown>) {
+  const node = _Onprem(label, options);
+  (node as unknown as Record<string, unknown>)._type = "inmemory";
+  return node;
 }
 
-export class Aerospike extends _Inmemory {
-  protected static _iconDataUrl = aerospikeIcon;
+export function Aerospike(label?: string, options?: Record<string, unknown>) {
+  const node = _Inmemory(label ?? "Aerospike", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = aerospikeIcon;
+  return node;
 }
 
-export class Hazelcast extends _Inmemory {
-  protected static _iconDataUrl = hazelcastIcon;
+export function Hazelcast(label?: string, options?: Record<string, unknown>) {
+  const node = _Inmemory(label ?? "Hazelcast", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = hazelcastIcon;
+  return node;
 }
 
-export class Memcached extends _Inmemory {
-  protected static _iconDataUrl = memcachedIcon;
+export function Memcached(label?: string, options?: Record<string, unknown>) {
+  const node = _Inmemory(label ?? "Memcached", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = memcachedIcon;
+  return node;
 }
 
-export class Redis extends _Inmemory {
-  protected static _iconDataUrl = redisIcon;
+export function Redis(label?: string, options?: Record<string, unknown>) {
+  const node = _Inmemory(label ?? "Redis", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = redisIcon;
+  return node;
 }

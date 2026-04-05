@@ -1,12 +1,16 @@
 import { _K8s } from "./index.js";
 import nsIcon from "../../../resources/k8s/group/ns.png";
 
-class _Group extends _K8s {
-  protected static override _type = "group";
+function _Group(label?: string, options?: Record<string, unknown>) {
+  const node = _K8s(label, options);
+  (node as unknown as Record<string, unknown>)._type = "group";
+  return node;
 }
 
-export class NS extends _Group {
-  protected static _iconDataUrl = nsIcon;
+export function NS(label?: string, options?: Record<string, unknown>) {
+  const node = _Group(label ?? "NS", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = nsIcon;
+  return node;
 }
 
 // Aliases

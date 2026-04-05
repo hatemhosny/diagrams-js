@@ -1,10 +1,14 @@
 import { _Gis } from "./index.js";
 import geotoolsIcon from "../../../resources/gis/java/geotools.png";
 
-class _Java extends _Gis {
-  protected static override _type = "java";
+function _Java(label?: string, options?: Record<string, unknown>) {
+  const node = _Gis(label, options);
+  (node as unknown as Record<string, unknown>)._type = "java";
+  return node;
 }
 
-export class Geotools extends _Java {
-  protected static _iconDataUrl = geotoolsIcon;
+export function Geotools(label?: string, options?: Record<string, unknown>) {
+  const node = _Java(label ?? "Geotools", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = geotoolsIcon;
+  return node;
 }

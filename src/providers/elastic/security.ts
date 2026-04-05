@@ -4,22 +4,32 @@ import securityIcon from "../../../resources/elastic/security/security.png";
 import siemIcon from "../../../resources/elastic/security/siem.png";
 import xdrIcon from "../../../resources/elastic/security/xdr.png";
 
-class _Security extends _Elastic {
-  protected static override _type = "security";
+function _Security(label?: string, options?: Record<string, unknown>) {
+  const node = _Elastic(label, options);
+  (node as unknown as Record<string, unknown>)._type = "security";
+  return node;
 }
 
-export class Endpoint extends _Security {
-  protected static _iconDataUrl = endpointIcon;
+export function Endpoint(label?: string, options?: Record<string, unknown>) {
+  const node = _Security(label ?? "Endpoint", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = endpointIcon;
+  return node;
 }
 
-export class Security extends _Security {
-  protected static _iconDataUrl = securityIcon;
+export function Security(label?: string, options?: Record<string, unknown>) {
+  const node = _Security(label ?? "Security", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = securityIcon;
+  return node;
 }
 
-export class SIEM extends _Security {
-  protected static _iconDataUrl = siemIcon;
+export function SIEM(label?: string, options?: Record<string, unknown>) {
+  const node = _Security(label ?? "SIEM", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = siemIcon;
+  return node;
 }
 
-export class Xdr extends _Security {
-  protected static _iconDataUrl = xdrIcon;
+export function Xdr(label?: string, options?: Record<string, unknown>) {
+  const node = _Security(label ?? "Xdr", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = xdrIcon;
+  return node;
 }

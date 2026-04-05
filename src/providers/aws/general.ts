@@ -24,102 +24,152 @@ import traditional_serverIcon from "../../../resources/aws/general/traditional-s
 import userIcon from "../../../resources/aws/general/user.png";
 import usersIcon from "../../../resources/aws/general/users.png";
 
-class _General extends _Aws {
-  protected static override _type = "general";
+function _General(label?: string, options?: Record<string, unknown>) {
+  const node = _Aws(label, options);
+  (node as unknown as Record<string, unknown>)._type = "general";
+  return node;
 }
 
-export class Client extends _General {
-  protected static _iconDataUrl = clientIcon;
+export function Client(label?: string, options?: Record<string, unknown>) {
+  const node = _General(label ?? "Client", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = clientIcon;
+  return node;
 }
 
-export class Disk extends _General {
-  protected static _iconDataUrl = diskIcon;
+export function Disk(label?: string, options?: Record<string, unknown>) {
+  const node = _General(label ?? "Disk", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = diskIcon;
+  return node;
 }
 
-export class Forums extends _General {
-  protected static _iconDataUrl = forumsIcon;
+export function Forums(label?: string, options?: Record<string, unknown>) {
+  const node = _General(label ?? "Forums", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = forumsIcon;
+  return node;
 }
 
-export class General extends _General {
-  protected static _iconDataUrl = generalIcon;
+export function General(label?: string, options?: Record<string, unknown>) {
+  const node = _General(label ?? "General", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = generalIcon;
+  return node;
 }
 
-export class GenericDatabase extends _General {
-  protected static _iconDataUrl = generic_databaseIcon;
+export function GenericDatabase(label?: string, options?: Record<string, unknown>) {
+  const node = _General(label ?? "GenericDatabase", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = generic_databaseIcon;
+  return node;
 }
 
-export class GenericFirewall extends _General {
-  protected static _iconDataUrl = generic_firewallIcon;
+export function GenericFirewall(label?: string, options?: Record<string, unknown>) {
+  const node = _General(label ?? "GenericFirewall", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = generic_firewallIcon;
+  return node;
 }
 
-export class GenericOfficeBuilding extends _General {
-  protected static _iconDataUrl = generic_office_buildingIcon;
+export function GenericOfficeBuilding(label?: string, options?: Record<string, unknown>) {
+  const node = _General(label ?? "GenericOfficeBuilding", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = generic_office_buildingIcon;
+  return node;
 }
 
-export class GenericSamlToken extends _General {
-  protected static _iconDataUrl = generic_saml_tokenIcon;
+export function GenericSamlToken(label?: string, options?: Record<string, unknown>) {
+  const node = _General(label ?? "GenericSamlToken", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = generic_saml_tokenIcon;
+  return node;
 }
 
-export class GenericSDK extends _General {
-  protected static _iconDataUrl = generic_sdkIcon;
+export function GenericSDK(label?: string, options?: Record<string, unknown>) {
+  const node = _General(label ?? "GenericSDK", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = generic_sdkIcon;
+  return node;
 }
 
-export class InternetAlt1 extends _General {
-  protected static _iconDataUrl = internet_alt1Icon;
+export function InternetAlt1(label?: string, options?: Record<string, unknown>) {
+  const node = _General(label ?? "InternetAlt1", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = internet_alt1Icon;
+  return node;
 }
 
-export class InternetAlt2 extends _General {
-  protected static _iconDataUrl = internet_alt2Icon;
+export function InternetAlt2(label?: string, options?: Record<string, unknown>) {
+  const node = _General(label ?? "InternetAlt2", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = internet_alt2Icon;
+  return node;
 }
 
-export class InternetGateway extends _General {
-  protected static _iconDataUrl = internet_gatewayIcon;
+export function InternetGateway(label?: string, options?: Record<string, unknown>) {
+  const node = _General(label ?? "InternetGateway", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = internet_gatewayIcon;
+  return node;
 }
 
-export class Marketplace extends _General {
-  protected static _iconDataUrl = marketplaceIcon;
+export function Marketplace(label?: string, options?: Record<string, unknown>) {
+  const node = _General(label ?? "Marketplace", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = marketplaceIcon;
+  return node;
 }
 
-export class MobileClient extends _General {
-  protected static _iconDataUrl = mobile_clientIcon;
+export function MobileClient(label?: string, options?: Record<string, unknown>) {
+  const node = _General(label ?? "MobileClient", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = mobile_clientIcon;
+  return node;
 }
 
-export class Multimedia extends _General {
-  protected static _iconDataUrl = multimediaIcon;
+export function Multimedia(label?: string, options?: Record<string, unknown>) {
+  const node = _General(label ?? "Multimedia", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = multimediaIcon;
+  return node;
 }
 
-export class OfficeBuilding extends _General {
-  protected static _iconDataUrl = office_buildingIcon;
+export function OfficeBuilding(label?: string, options?: Record<string, unknown>) {
+  const node = _General(label ?? "OfficeBuilding", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = office_buildingIcon;
+  return node;
 }
 
-export class SamlToken extends _General {
-  protected static _iconDataUrl = saml_tokenIcon;
+export function SamlToken(label?: string, options?: Record<string, unknown>) {
+  const node = _General(label ?? "SamlToken", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = saml_tokenIcon;
+  return node;
 }
 
-export class SDK extends _General {
-  protected static _iconDataUrl = sdkIcon;
+export function SDK(label?: string, options?: Record<string, unknown>) {
+  const node = _General(label ?? "SDK", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = sdkIcon;
+  return node;
 }
 
-export class SslPadlock extends _General {
-  protected static _iconDataUrl = ssl_padlockIcon;
+export function SslPadlock(label?: string, options?: Record<string, unknown>) {
+  const node = _General(label ?? "SslPadlock", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = ssl_padlockIcon;
+  return node;
 }
 
-export class TapeStorage extends _General {
-  protected static _iconDataUrl = tape_storageIcon;
+export function TapeStorage(label?: string, options?: Record<string, unknown>) {
+  const node = _General(label ?? "TapeStorage", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = tape_storageIcon;
+  return node;
 }
 
-export class Toolkit extends _General {
-  protected static _iconDataUrl = toolkitIcon;
+export function Toolkit(label?: string, options?: Record<string, unknown>) {
+  const node = _General(label ?? "Toolkit", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = toolkitIcon;
+  return node;
 }
 
-export class TraditionalServer extends _General {
-  protected static _iconDataUrl = traditional_serverIcon;
+export function TraditionalServer(label?: string, options?: Record<string, unknown>) {
+  const node = _General(label ?? "TraditionalServer", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = traditional_serverIcon;
+  return node;
 }
 
-export class User extends _General {
-  protected static _iconDataUrl = userIcon;
+export function User(label?: string, options?: Record<string, unknown>) {
+  const node = _General(label ?? "User", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = userIcon;
+  return node;
 }
 
-export class Users extends _General {
-  protected static _iconDataUrl = usersIcon;
+export function Users(label?: string, options?: Record<string, unknown>) {
+  const node = _General(label ?? "Users", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = usersIcon;
+  return node;
 }

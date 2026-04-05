@@ -42,176 +42,270 @@ import thinkbox_xmeshIcon from "../../../resources/aws/compute/thinkbox-xmesh.pn
 import vmware_cloud_on_awsIcon from "../../../resources/aws/compute/vmware-cloud-on-aws.png";
 import wavelengthIcon from "../../../resources/aws/compute/wavelength.png";
 
-class _Compute extends _Aws {
-  protected static override _type = "compute";
+function _Compute(label?: string, options?: Record<string, unknown>) {
+  const node = _Aws(label, options);
+  (node as unknown as Record<string, unknown>)._type = "compute";
+  return node;
 }
 
-export class AppRunner extends _Compute {
-  protected static _iconDataUrl = app_runnerIcon;
+export function AppRunner(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "AppRunner", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = app_runnerIcon;
+  return node;
 }
 
-export class ApplicationAutoScaling extends _Compute {
-  protected static _iconDataUrl = application_auto_scalingIcon;
+export function ApplicationAutoScaling(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "ApplicationAutoScaling", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = application_auto_scalingIcon;
+  return node;
 }
 
-export class Batch extends _Compute {
-  protected static _iconDataUrl = batchIcon;
+export function Batch(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "Batch", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = batchIcon;
+  return node;
 }
 
-export class ComputeOptimizer extends _Compute {
-  protected static _iconDataUrl = compute_optimizerIcon;
+export function ComputeOptimizer(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "ComputeOptimizer", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = compute_optimizerIcon;
+  return node;
 }
 
-export class Compute extends _Compute {
-  protected static _iconDataUrl = computeIcon;
+export function Compute(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "Compute", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = computeIcon;
+  return node;
 }
 
-export class EC2Ami extends _Compute {
-  protected static _iconDataUrl = ec2_amiIcon;
+export function EC2Ami(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "EC2Ami", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = ec2_amiIcon;
+  return node;
 }
 
-export class EC2AutoScaling extends _Compute {
-  protected static _iconDataUrl = ec2_auto_scalingIcon;
+export function EC2AutoScaling(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "EC2AutoScaling", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = ec2_auto_scalingIcon;
+  return node;
 }
 
-export class EC2ContainerRegistryImage extends _Compute {
-  protected static _iconDataUrl = ec2_container_registry_imageIcon;
+export function EC2ContainerRegistryImage(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "EC2ContainerRegistryImage", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = ec2_container_registry_imageIcon;
+  return node;
 }
 
-export class EC2ContainerRegistryRegistry extends _Compute {
-  protected static _iconDataUrl = ec2_container_registry_registryIcon;
+export function EC2ContainerRegistryRegistry(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "EC2ContainerRegistryRegistry", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = ec2_container_registry_registryIcon;
+  return node;
 }
 
-export class EC2ContainerRegistry extends _Compute {
-  protected static _iconDataUrl = ec2_container_registryIcon;
+export function EC2ContainerRegistry(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "EC2ContainerRegistry", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = ec2_container_registryIcon;
+  return node;
 }
 
-export class EC2ElasticIpAddress extends _Compute {
-  protected static _iconDataUrl = ec2_elastic_ip_addressIcon;
+export function EC2ElasticIpAddress(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "EC2ElasticIpAddress", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = ec2_elastic_ip_addressIcon;
+  return node;
 }
 
-export class EC2ImageBuilder extends _Compute {
-  protected static _iconDataUrl = ec2_image_builderIcon;
+export function EC2ImageBuilder(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "EC2ImageBuilder", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = ec2_image_builderIcon;
+  return node;
 }
 
-export class EC2Instance extends _Compute {
-  protected static _iconDataUrl = ec2_instanceIcon;
+export function EC2Instance(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "EC2Instance", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = ec2_instanceIcon;
+  return node;
 }
 
-export class EC2Instances extends _Compute {
-  protected static _iconDataUrl = ec2_instancesIcon;
+export function EC2Instances(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "EC2Instances", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = ec2_instancesIcon;
+  return node;
 }
 
-export class EC2Rescue extends _Compute {
-  protected static _iconDataUrl = ec2_rescueIcon;
+export function EC2Rescue(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "EC2Rescue", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = ec2_rescueIcon;
+  return node;
 }
 
-export class EC2SpotInstance extends _Compute {
-  protected static _iconDataUrl = ec2_spot_instanceIcon;
+export function EC2SpotInstance(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "EC2SpotInstance", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = ec2_spot_instanceIcon;
+  return node;
 }
 
-export class EC2 extends _Compute {
-  protected static _iconDataUrl = ec2Icon;
+export function EC2(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "EC2", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = ec2Icon;
+  return node;
 }
 
-export class ElasticBeanstalkApplication extends _Compute {
-  protected static _iconDataUrl = elastic_beanstalk_applicationIcon;
+export function ElasticBeanstalkApplication(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "ElasticBeanstalkApplication", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = elastic_beanstalk_applicationIcon;
+  return node;
 }
 
-export class ElasticBeanstalkDeployment extends _Compute {
-  protected static _iconDataUrl = elastic_beanstalk_deploymentIcon;
+export function ElasticBeanstalkDeployment(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "ElasticBeanstalkDeployment", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = elastic_beanstalk_deploymentIcon;
+  return node;
 }
 
-export class ElasticBeanstalk extends _Compute {
-  protected static _iconDataUrl = elastic_beanstalkIcon;
+export function ElasticBeanstalk(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "ElasticBeanstalk", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = elastic_beanstalkIcon;
+  return node;
 }
 
-export class ElasticContainerServiceContainer extends _Compute {
-  protected static _iconDataUrl = elastic_container_service_containerIcon;
+export function ElasticContainerServiceContainer(
+  label?: string,
+  options?: Record<string, unknown>,
+) {
+  const node = _Compute(label ?? "ElasticContainerServiceContainer", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl =
+    elastic_container_service_containerIcon;
+  return node;
 }
 
-export class ElasticContainerServiceServiceConnect extends _Compute {
-  protected static _iconDataUrl = elastic_container_service_service_connectIcon;
+export function ElasticContainerServiceServiceConnect(
+  label?: string,
+  options?: Record<string, unknown>,
+) {
+  const node = _Compute(label ?? "ElasticContainerServiceServiceConnect", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl =
+    elastic_container_service_service_connectIcon;
+  return node;
 }
 
-export class ElasticContainerServiceService extends _Compute {
-  protected static _iconDataUrl = elastic_container_service_serviceIcon;
+export function ElasticContainerServiceService(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "ElasticContainerServiceService", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = elastic_container_service_serviceIcon;
+  return node;
 }
 
-export class ElasticContainerServiceTask extends _Compute {
-  protected static _iconDataUrl = elastic_container_service_taskIcon;
+export function ElasticContainerServiceTask(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "ElasticContainerServiceTask", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = elastic_container_service_taskIcon;
+  return node;
 }
 
-export class ElasticContainerService extends _Compute {
-  protected static _iconDataUrl = elastic_container_serviceIcon;
+export function ElasticContainerService(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "ElasticContainerService", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = elastic_container_serviceIcon;
+  return node;
 }
 
-export class ElasticKubernetesService extends _Compute {
-  protected static _iconDataUrl = elastic_kubernetes_serviceIcon;
+export function ElasticKubernetesService(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "ElasticKubernetesService", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = elastic_kubernetes_serviceIcon;
+  return node;
 }
 
-export class Fargate extends _Compute {
-  protected static _iconDataUrl = fargateIcon;
+export function Fargate(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "Fargate", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = fargateIcon;
+  return node;
 }
 
-export class LambdaFunction extends _Compute {
-  protected static _iconDataUrl = lambda_functionIcon;
+export function LambdaFunction(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "LambdaFunction", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = lambda_functionIcon;
+  return node;
 }
 
-export class Lambda extends _Compute {
-  protected static _iconDataUrl = lambdaIcon;
+export function Lambda(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "Lambda", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = lambdaIcon;
+  return node;
 }
 
-export class Lightsail extends _Compute {
-  protected static _iconDataUrl = lightsailIcon;
+export function Lightsail(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "Lightsail", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = lightsailIcon;
+  return node;
 }
 
-export class LocalZones extends _Compute {
-  protected static _iconDataUrl = local_zonesIcon;
+export function LocalZones(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "LocalZones", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = local_zonesIcon;
+  return node;
 }
 
-export class Outposts extends _Compute {
-  protected static _iconDataUrl = outpostsIcon;
+export function Outposts(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "Outposts", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = outpostsIcon;
+  return node;
 }
 
-export class ServerlessApplicationRepository extends _Compute {
-  protected static _iconDataUrl = serverless_application_repositoryIcon;
+export function ServerlessApplicationRepository(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "ServerlessApplicationRepository", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = serverless_application_repositoryIcon;
+  return node;
 }
 
-export class ThinkboxDeadline extends _Compute {
-  protected static _iconDataUrl = thinkbox_deadlineIcon;
+export function ThinkboxDeadline(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "ThinkboxDeadline", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = thinkbox_deadlineIcon;
+  return node;
 }
 
-export class ThinkboxDraft extends _Compute {
-  protected static _iconDataUrl = thinkbox_draftIcon;
+export function ThinkboxDraft(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "ThinkboxDraft", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = thinkbox_draftIcon;
+  return node;
 }
 
-export class ThinkboxFrost extends _Compute {
-  protected static _iconDataUrl = thinkbox_frostIcon;
+export function ThinkboxFrost(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "ThinkboxFrost", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = thinkbox_frostIcon;
+  return node;
 }
 
-export class ThinkboxKrakatoa extends _Compute {
-  protected static _iconDataUrl = thinkbox_krakatoaIcon;
+export function ThinkboxKrakatoa(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "ThinkboxKrakatoa", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = thinkbox_krakatoaIcon;
+  return node;
 }
 
-export class ThinkboxSequoia extends _Compute {
-  protected static _iconDataUrl = thinkbox_sequoiaIcon;
+export function ThinkboxSequoia(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "ThinkboxSequoia", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = thinkbox_sequoiaIcon;
+  return node;
 }
 
-export class ThinkboxStoke extends _Compute {
-  protected static _iconDataUrl = thinkbox_stokeIcon;
+export function ThinkboxStoke(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "ThinkboxStoke", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = thinkbox_stokeIcon;
+  return node;
 }
 
-export class ThinkboxXmesh extends _Compute {
-  protected static _iconDataUrl = thinkbox_xmeshIcon;
+export function ThinkboxXmesh(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "ThinkboxXmesh", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = thinkbox_xmeshIcon;
+  return node;
 }
 
-export class VmwareCloudOnAWS extends _Compute {
-  protected static _iconDataUrl = vmware_cloud_on_awsIcon;
+export function VmwareCloudOnAWS(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "VmwareCloudOnAWS", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = vmware_cloud_on_awsIcon;
+  return node;
 }
 
-export class Wavelength extends _Compute {
-  protected static _iconDataUrl = wavelengthIcon;
+export function Wavelength(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "Wavelength", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = wavelengthIcon;
+  return node;
 }
 
 // Aliases

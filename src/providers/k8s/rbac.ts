@@ -7,36 +7,52 @@ import roleIcon from "../../../resources/k8s/rbac/role.png";
 import saIcon from "../../../resources/k8s/rbac/sa.png";
 import userIcon from "../../../resources/k8s/rbac/user.png";
 
-class _Rbac extends _K8s {
-  protected static override _type = "rbac";
+function _Rbac(label?: string, options?: Record<string, unknown>) {
+  const node = _K8s(label, options);
+  (node as unknown as Record<string, unknown>)._type = "rbac";
+  return node;
 }
 
-export class CRole extends _Rbac {
-  protected static _iconDataUrl = c_roleIcon;
+export function CRole(label?: string, options?: Record<string, unknown>) {
+  const node = _Rbac(label ?? "CRole", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = c_roleIcon;
+  return node;
 }
 
-export class CRB extends _Rbac {
-  protected static _iconDataUrl = crbIcon;
+export function CRB(label?: string, options?: Record<string, unknown>) {
+  const node = _Rbac(label ?? "CRB", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = crbIcon;
+  return node;
 }
 
-export class Group extends _Rbac {
-  protected static _iconDataUrl = groupIcon;
+export function Group(label?: string, options?: Record<string, unknown>) {
+  const node = _Rbac(label ?? "Group", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = groupIcon;
+  return node;
 }
 
-export class RB extends _Rbac {
-  protected static _iconDataUrl = rbIcon;
+export function RB(label?: string, options?: Record<string, unknown>) {
+  const node = _Rbac(label ?? "RB", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = rbIcon;
+  return node;
 }
 
-export class Role extends _Rbac {
-  protected static _iconDataUrl = roleIcon;
+export function Role(label?: string, options?: Record<string, unknown>) {
+  const node = _Rbac(label ?? "Role", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = roleIcon;
+  return node;
 }
 
-export class SA extends _Rbac {
-  protected static _iconDataUrl = saIcon;
+export function SA(label?: string, options?: Record<string, unknown>) {
+  const node = _Rbac(label ?? "SA", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = saIcon;
+  return node;
 }
 
-export class User extends _Rbac {
-  protected static _iconDataUrl = userIcon;
+export function User(label?: string, options?: Record<string, unknown>) {
+  const node = _Rbac(label ?? "User", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = userIcon;
+  return node;
 }
 
 // Aliases

@@ -10,46 +10,68 @@ import suseIcon from "../../../resources/generic/os/suse.png";
 import ubuntuIcon from "../../../resources/generic/os/ubuntu.png";
 import windowsIcon from "../../../resources/generic/os/windows.png";
 
-class _Os extends _Generic {
-  protected static override _type = "os";
+function _Os(label?: string, options?: Record<string, unknown>) {
+  const node = _Generic(label, options);
+  (node as unknown as Record<string, unknown>)._type = "os";
+  return node;
 }
 
-export class Android extends _Os {
-  protected static _iconDataUrl = androidIcon;
+export function Android(label?: string, options?: Record<string, unknown>) {
+  const node = _Os(label ?? "Android", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = androidIcon;
+  return node;
 }
 
-export class Centos extends _Os {
-  protected static _iconDataUrl = centosIcon;
+export function Centos(label?: string, options?: Record<string, unknown>) {
+  const node = _Os(label ?? "Centos", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = centosIcon;
+  return node;
 }
 
-export class Debian extends _Os {
-  protected static _iconDataUrl = debianIcon;
+export function Debian(label?: string, options?: Record<string, unknown>) {
+  const node = _Os(label ?? "Debian", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = debianIcon;
+  return node;
 }
 
-export class IOS extends _Os {
-  protected static _iconDataUrl = iosIcon;
+export function IOS(label?: string, options?: Record<string, unknown>) {
+  const node = _Os(label ?? "IOS", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = iosIcon;
+  return node;
 }
 
-export class LinuxGeneral extends _Os {
-  protected static _iconDataUrl = linux_generalIcon;
+export function LinuxGeneral(label?: string, options?: Record<string, unknown>) {
+  const node = _Os(label ?? "LinuxGeneral", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = linux_generalIcon;
+  return node;
 }
 
-export class Raspbian extends _Os {
-  protected static _iconDataUrl = raspbianIcon;
+export function Raspbian(label?: string, options?: Record<string, unknown>) {
+  const node = _Os(label ?? "Raspbian", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = raspbianIcon;
+  return node;
 }
 
-export class RedHat extends _Os {
-  protected static _iconDataUrl = red_hatIcon;
+export function RedHat(label?: string, options?: Record<string, unknown>) {
+  const node = _Os(label ?? "RedHat", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = red_hatIcon;
+  return node;
 }
 
-export class Suse extends _Os {
-  protected static _iconDataUrl = suseIcon;
+export function Suse(label?: string, options?: Record<string, unknown>) {
+  const node = _Os(label ?? "Suse", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = suseIcon;
+  return node;
 }
 
-export class Ubuntu extends _Os {
-  protected static _iconDataUrl = ubuntuIcon;
+export function Ubuntu(label?: string, options?: Record<string, unknown>) {
+  const node = _Os(label ?? "Ubuntu", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = ubuntuIcon;
+  return node;
 }
 
-export class Windows extends _Os {
-  protected static _iconDataUrl = windowsIcon;
+export function Windows(label?: string, options?: Record<string, unknown>) {
+  const node = _Os(label ?? "Windows", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = windowsIcon;
+  return node;
 }

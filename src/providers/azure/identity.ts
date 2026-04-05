@@ -41,170 +41,266 @@ import user_settingsIcon from "../../../resources/azure/identity/user-settings.p
 import usersIcon from "../../../resources/azure/identity/users.png";
 import verifiable_credentialsIcon from "../../../resources/azure/identity/verifiable-credentials.png";
 
-class _Identity extends _Azure {
-  protected static override _type = "identity";
+function _Identity(label?: string, options?: Record<string, unknown>) {
+  const node = _Azure(label, options);
+  (node as unknown as Record<string, unknown>)._type = "identity";
+  return node;
 }
 
-export class AadLicenses extends _Identity {
-  protected static _iconDataUrl = aad_licensesIcon;
+export function AadLicenses(label?: string, options?: Record<string, unknown>) {
+  const node = _Identity(label ?? "AadLicenses", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = aad_licensesIcon;
+  return node;
 }
 
-export class AccessReview extends _Identity {
-  protected static _iconDataUrl = access_reviewIcon;
+export function AccessReview(label?: string, options?: Record<string, unknown>) {
+  const node = _Identity(label ?? "AccessReview", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = access_reviewIcon;
+  return node;
 }
 
-export class ActiveDirectoryConnectHealth extends _Identity {
-  protected static _iconDataUrl = active_directory_connect_healthIcon;
+export function ActiveDirectoryConnectHealth(label?: string, options?: Record<string, unknown>) {
+  const node = _Identity(label ?? "ActiveDirectoryConnectHealth", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = active_directory_connect_healthIcon;
+  return node;
 }
 
-export class ActiveDirectory extends _Identity {
-  protected static _iconDataUrl = active_directoryIcon;
+export function ActiveDirectory(label?: string, options?: Record<string, unknown>) {
+  const node = _Identity(label ?? "ActiveDirectory", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = active_directoryIcon;
+  return node;
 }
 
-export class ADB2C extends _Identity {
-  protected static _iconDataUrl = ad_b2cIcon;
+export function ADB2C(label?: string, options?: Record<string, unknown>) {
+  const node = _Identity(label ?? "ADB2C", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = ad_b2cIcon;
+  return node;
 }
 
-export class ADDomainServices extends _Identity {
-  protected static _iconDataUrl = ad_domain_servicesIcon;
+export function ADDomainServices(label?: string, options?: Record<string, unknown>) {
+  const node = _Identity(label ?? "ADDomainServices", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = ad_domain_servicesIcon;
+  return node;
 }
 
-export class ADIdentityProtection extends _Identity {
-  protected static _iconDataUrl = ad_identity_protectionIcon;
+export function ADIdentityProtection(label?: string, options?: Record<string, unknown>) {
+  const node = _Identity(label ?? "ADIdentityProtection", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = ad_identity_protectionIcon;
+  return node;
 }
 
-export class ADPrivilegedIdentityManagement extends _Identity {
-  protected static _iconDataUrl = ad_privileged_identity_managementIcon;
+export function ADPrivilegedIdentityManagement(label?: string, options?: Record<string, unknown>) {
+  const node = _Identity(label ?? "ADPrivilegedIdentityManagement", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = ad_privileged_identity_managementIcon;
+  return node;
 }
 
-export class AdministrativeUnits extends _Identity {
-  protected static _iconDataUrl = administrative_unitsIcon;
+export function AdministrativeUnits(label?: string, options?: Record<string, unknown>) {
+  const node = _Identity(label ?? "AdministrativeUnits", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = administrative_unitsIcon;
+  return node;
 }
 
-export class APIProxy extends _Identity {
-  protected static _iconDataUrl = api_proxyIcon;
+export function APIProxy(label?: string, options?: Record<string, unknown>) {
+  const node = _Identity(label ?? "APIProxy", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = api_proxyIcon;
+  return node;
 }
 
-export class AppRegistrations extends _Identity {
-  protected static _iconDataUrl = app_registrationsIcon;
+export function AppRegistrations(label?: string, options?: Record<string, unknown>) {
+  const node = _Identity(label ?? "AppRegistrations", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = app_registrationsIcon;
+  return node;
 }
 
-export class AzureActiveDirectory extends _Identity {
-  protected static _iconDataUrl = azure_active_directoryIcon;
+export function AzureActiveDirectory(label?: string, options?: Record<string, unknown>) {
+  const node = _Identity(label ?? "AzureActiveDirectory", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_active_directoryIcon;
+  return node;
 }
 
-export class AzureADB2C extends _Identity {
-  protected static _iconDataUrl = azure_ad_b2cIcon;
+export function AzureADB2C(label?: string, options?: Record<string, unknown>) {
+  const node = _Identity(label ?? "AzureADB2C", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_ad_b2cIcon;
+  return node;
 }
 
-export class AzureADDomainServices extends _Identity {
-  protected static _iconDataUrl = azure_ad_domain_servicesIcon;
+export function AzureADDomainServices(label?: string, options?: Record<string, unknown>) {
+  const node = _Identity(label ?? "AzureADDomainServices", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_ad_domain_servicesIcon;
+  return node;
 }
 
-export class AzureADIdentityProtection extends _Identity {
-  protected static _iconDataUrl = azure_ad_identity_protectionIcon;
+export function AzureADIdentityProtection(label?: string, options?: Record<string, unknown>) {
+  const node = _Identity(label ?? "AzureADIdentityProtection", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_ad_identity_protectionIcon;
+  return node;
 }
 
-export class AzureADPrivilegeIdentityManagement extends _Identity {
-  protected static _iconDataUrl = azure_ad_privilege_identity_managementIcon;
+export function AzureADPrivilegeIdentityManagement(
+  label?: string,
+  options?: Record<string, unknown>,
+) {
+  const node = _Identity(label ?? "AzureADPrivilegeIdentityManagement", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl =
+    azure_ad_privilege_identity_managementIcon;
+  return node;
 }
 
-export class AzureADPrivlegedIdentityManagement extends _Identity {
-  protected static _iconDataUrl = azure_ad_privleged_identity_managementIcon;
+export function AzureADPrivlegedIdentityManagement(
+  label?: string,
+  options?: Record<string, unknown>,
+) {
+  const node = _Identity(label ?? "AzureADPrivlegedIdentityManagement", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl =
+    azure_ad_privleged_identity_managementIcon;
+  return node;
 }
 
-export class AzureADRolesAndAdministrators extends _Identity {
-  protected static _iconDataUrl = azure_ad_roles_and_administratorsIcon;
+export function AzureADRolesAndAdministrators(label?: string, options?: Record<string, unknown>) {
+  const node = _Identity(label ?? "AzureADRolesAndAdministrators", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_ad_roles_and_administratorsIcon;
+  return node;
 }
 
-export class AzureInformationProtection extends _Identity {
-  protected static _iconDataUrl = azure_information_protectionIcon;
+export function AzureInformationProtection(label?: string, options?: Record<string, unknown>) {
+  const node = _Identity(label ?? "AzureInformationProtection", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_information_protectionIcon;
+  return node;
 }
 
-export class ConditionalAccess extends _Identity {
-  protected static _iconDataUrl = conditional_accessIcon;
+export function ConditionalAccess(label?: string, options?: Record<string, unknown>) {
+  const node = _Identity(label ?? "ConditionalAccess", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = conditional_accessIcon;
+  return node;
 }
 
-export class CustomAzureADRoles extends _Identity {
-  protected static _iconDataUrl = custom_azure_ad_rolesIcon;
+export function CustomAzureADRoles(label?: string, options?: Record<string, unknown>) {
+  const node = _Identity(label ?? "CustomAzureADRoles", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = custom_azure_ad_rolesIcon;
+  return node;
 }
 
-export class EnterpriseApplications extends _Identity {
-  protected static _iconDataUrl = enterprise_applicationsIcon;
+export function EnterpriseApplications(label?: string, options?: Record<string, unknown>) {
+  const node = _Identity(label ?? "EnterpriseApplications", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = enterprise_applicationsIcon;
+  return node;
 }
 
-export class EntraConnect extends _Identity {
-  protected static _iconDataUrl = entra_connectIcon;
+export function EntraConnect(label?: string, options?: Record<string, unknown>) {
+  const node = _Identity(label ?? "EntraConnect", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = entra_connectIcon;
+  return node;
 }
 
-export class EntraDomainServices extends _Identity {
-  protected static _iconDataUrl = entra_domain_servicesIcon;
+export function EntraDomainServices(label?: string, options?: Record<string, unknown>) {
+  const node = _Identity(label ?? "EntraDomainServices", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = entra_domain_servicesIcon;
+  return node;
 }
 
-export class EntraIDProtection extends _Identity {
-  protected static _iconDataUrl = entra_id_protectionIcon;
+export function EntraIDProtection(label?: string, options?: Record<string, unknown>) {
+  const node = _Identity(label ?? "EntraIDProtection", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = entra_id_protectionIcon;
+  return node;
 }
 
-export class EntraManagedIdentities extends _Identity {
-  protected static _iconDataUrl = entra_managed_identitiesIcon;
+export function EntraManagedIdentities(label?: string, options?: Record<string, unknown>) {
+  const node = _Identity(label ?? "EntraManagedIdentities", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = entra_managed_identitiesIcon;
+  return node;
 }
 
-export class EntraPrivlegedIdentityManagement extends _Identity {
-  protected static _iconDataUrl = entra_privleged_identity_managementIcon;
+export function EntraPrivlegedIdentityManagement(
+  label?: string,
+  options?: Record<string, unknown>,
+) {
+  const node = _Identity(label ?? "EntraPrivlegedIdentityManagement", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl =
+    entra_privleged_identity_managementIcon;
+  return node;
 }
 
-export class EntraVerifiedID extends _Identity {
-  protected static _iconDataUrl = entra_verified_idIcon;
+export function EntraVerifiedID(label?: string, options?: Record<string, unknown>) {
+  const node = _Identity(label ?? "EntraVerifiedID", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = entra_verified_idIcon;
+  return node;
 }
 
-export class ExternalIdentities extends _Identity {
-  protected static _iconDataUrl = external_identitiesIcon;
+export function ExternalIdentities(label?: string, options?: Record<string, unknown>) {
+  const node = _Identity(label ?? "ExternalIdentities", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = external_identitiesIcon;
+  return node;
 }
 
-export class GlobalSecureAccess extends _Identity {
-  protected static _iconDataUrl = global_secure_accessIcon;
+export function GlobalSecureAccess(label?: string, options?: Record<string, unknown>) {
+  const node = _Identity(label ?? "GlobalSecureAccess", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = global_secure_accessIcon;
+  return node;
 }
 
-export class Groups extends _Identity {
-  protected static _iconDataUrl = groupsIcon;
+export function Groups(label?: string, options?: Record<string, unknown>) {
+  const node = _Identity(label ?? "Groups", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = groupsIcon;
+  return node;
 }
 
-export class IdentityGovernance extends _Identity {
-  protected static _iconDataUrl = identity_governanceIcon;
+export function IdentityGovernance(label?: string, options?: Record<string, unknown>) {
+  const node = _Identity(label ?? "IdentityGovernance", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = identity_governanceIcon;
+  return node;
 }
 
-export class InformationProtection extends _Identity {
-  protected static _iconDataUrl = information_protectionIcon;
+export function InformationProtection(label?: string, options?: Record<string, unknown>) {
+  const node = _Identity(label ?? "InformationProtection", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = information_protectionIcon;
+  return node;
 }
 
-export class InternetAccess extends _Identity {
-  protected static _iconDataUrl = internet_accessIcon;
+export function InternetAccess(label?: string, options?: Record<string, unknown>) {
+  const node = _Identity(label ?? "InternetAccess", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = internet_accessIcon;
+  return node;
 }
 
-export class ManagedIdentities extends _Identity {
-  protected static _iconDataUrl = managed_identitiesIcon;
+export function ManagedIdentities(label?: string, options?: Record<string, unknown>) {
+  const node = _Identity(label ?? "ManagedIdentities", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = managed_identitiesIcon;
+  return node;
 }
 
-export class PrivateAccess extends _Identity {
-  protected static _iconDataUrl = private_accessIcon;
+export function PrivateAccess(label?: string, options?: Record<string, unknown>) {
+  const node = _Identity(label ?? "PrivateAccess", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = private_accessIcon;
+  return node;
 }
 
-export class Security extends _Identity {
-  protected static _iconDataUrl = securityIcon;
+export function Security(label?: string, options?: Record<string, unknown>) {
+  const node = _Identity(label ?? "Security", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = securityIcon;
+  return node;
 }
 
-export class TenantProperties extends _Identity {
-  protected static _iconDataUrl = tenant_propertiesIcon;
+export function TenantProperties(label?: string, options?: Record<string, unknown>) {
+  const node = _Identity(label ?? "TenantProperties", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = tenant_propertiesIcon;
+  return node;
 }
 
-export class UserSettings extends _Identity {
-  protected static _iconDataUrl = user_settingsIcon;
+export function UserSettings(label?: string, options?: Record<string, unknown>) {
+  const node = _Identity(label ?? "UserSettings", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = user_settingsIcon;
+  return node;
 }
 
-export class Users extends _Identity {
-  protected static _iconDataUrl = usersIcon;
+export function Users(label?: string, options?: Record<string, unknown>) {
+  const node = _Identity(label ?? "Users", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = usersIcon;
+  return node;
 }
 
-export class VerifiableCredentials extends _Identity {
-  protected static _iconDataUrl = verifiable_credentialsIcon;
+export function VerifiableCredentials(label?: string, options?: Record<string, unknown>) {
+  const node = _Identity(label ?? "VerifiableCredentials", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = verifiable_credentialsIcon;
+  return node;
 }

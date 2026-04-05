@@ -3,18 +3,26 @@ import cinderIcon from "../../../resources/openstack/storage/cinder.png";
 import manilaIcon from "../../../resources/openstack/storage/manila.png";
 import swiftIcon from "../../../resources/openstack/storage/swift.png";
 
-class _Storage extends _Openstack {
-  protected static override _type = "storage";
+function _Storage(label?: string, options?: Record<string, unknown>) {
+  const node = _Openstack(label, options);
+  (node as unknown as Record<string, unknown>)._type = "storage";
+  return node;
 }
 
-export class Cinder extends _Storage {
-  protected static _iconDataUrl = cinderIcon;
+export function Cinder(label?: string, options?: Record<string, unknown>) {
+  const node = _Storage(label ?? "Cinder", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = cinderIcon;
+  return node;
 }
 
-export class Manila extends _Storage {
-  protected static _iconDataUrl = manilaIcon;
+export function Manila(label?: string, options?: Record<string, unknown>) {
+  const node = _Storage(label ?? "Manila", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = manilaIcon;
+  return node;
 }
 
-export class Swift extends _Storage {
-  protected static _iconDataUrl = swiftIcon;
+export function Swift(label?: string, options?: Record<string, unknown>) {
+  const node = _Storage(label ?? "Swift", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = swiftIcon;
+  return node;
 }

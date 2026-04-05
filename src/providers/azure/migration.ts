@@ -6,30 +6,44 @@ import database_migration_servicesIcon from "../../../resources/azure/migration/
 import migration_projectsIcon from "../../../resources/azure/migration/migration-projects.png";
 import recovery_services_vaultsIcon from "../../../resources/azure/migration/recovery-services-vaults.png";
 
-class _Migration extends _Azure {
-  protected static override _type = "migration";
+function _Migration(label?: string, options?: Record<string, unknown>) {
+  const node = _Azure(label, options);
+  (node as unknown as Record<string, unknown>)._type = "migration";
+  return node;
 }
 
-export class AzureDatabaseMigrationServices extends _Migration {
-  protected static _iconDataUrl = azure_database_migration_servicesIcon;
+export function AzureDatabaseMigrationServices(label?: string, options?: Record<string, unknown>) {
+  const node = _Migration(label ?? "AzureDatabaseMigrationServices", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_database_migration_servicesIcon;
+  return node;
 }
 
-export class DataBoxEdge extends _Migration {
-  protected static _iconDataUrl = data_box_edgeIcon;
+export function DataBoxEdge(label?: string, options?: Record<string, unknown>) {
+  const node = _Migration(label ?? "DataBoxEdge", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = data_box_edgeIcon;
+  return node;
 }
 
-export class DataBox extends _Migration {
-  protected static _iconDataUrl = data_boxIcon;
+export function DataBox(label?: string, options?: Record<string, unknown>) {
+  const node = _Migration(label ?? "DataBox", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = data_boxIcon;
+  return node;
 }
 
-export class DatabaseMigrationServices extends _Migration {
-  protected static _iconDataUrl = database_migration_servicesIcon;
+export function DatabaseMigrationServices(label?: string, options?: Record<string, unknown>) {
+  const node = _Migration(label ?? "DatabaseMigrationServices", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = database_migration_servicesIcon;
+  return node;
 }
 
-export class MigrationProjects extends _Migration {
-  protected static _iconDataUrl = migration_projectsIcon;
+export function MigrationProjects(label?: string, options?: Record<string, unknown>) {
+  const node = _Migration(label ?? "MigrationProjects", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = migration_projectsIcon;
+  return node;
 }
 
-export class RecoveryServicesVaults extends _Migration {
-  protected static _iconDataUrl = recovery_services_vaultsIcon;
+export function RecoveryServicesVaults(label?: string, options?: Record<string, unknown>) {
+  const node = _Migration(label ?? "RecoveryServicesVaults", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = recovery_services_vaultsIcon;
+  return node;
 }

@@ -1,10 +1,14 @@
 import { Node } from "../../Node.js";
 
-export class _Programming extends Node {
-  protected static override _provider = "programming";
-  protected static override _iconDir = "programming";
+export function _Programming(label?: string, options?: Record<string, unknown>) {
+  const node = Node(label ?? "Programming", options);
+  (node as unknown as Record<string, unknown>)._provider = "programming";
+  (node as unknown as Record<string, unknown>)._iconDir = "programming";
+  return node;
 }
 
-export class Programming extends _Programming {
-  protected static override _icon = "programming.png";
+export function Programming(label?: string, options?: Record<string, unknown>) {
+  const node = _Programming(label ?? "Programming", options);
+  (node as unknown as Record<string, unknown>)._icon = "programming.png";
+  return node;
 }

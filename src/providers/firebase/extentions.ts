@@ -1,10 +1,14 @@
 import { _Firebase } from "./index.js";
 import extensionsIcon from "../../../resources/firebase/extentions/extensions.png";
 
-class _Extentions extends _Firebase {
-  protected static override _type = "extentions";
+function _Extentions(label?: string, options?: Record<string, unknown>) {
+  const node = _Firebase(label, options);
+  (node as unknown as Record<string, unknown>)._type = "extentions";
+  return node;
 }
 
-export class Extensions extends _Extentions {
-  protected static _iconDataUrl = extensionsIcon;
+export function Extensions(label?: string, options?: Record<string, unknown>) {
+  const node = _Extentions(label ?? "Extensions", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = extensionsIcon;
+  return node;
 }

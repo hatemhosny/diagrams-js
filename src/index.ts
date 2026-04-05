@@ -1,9 +1,9 @@
 // Core classes
-export { Diagram } from "./Diagram.js";
-export { Cluster } from "./Cluster.js";
-export { Node, setIconBaseDir, getIconBaseDir } from "./Node.js";
-export { Edge } from "./Edge.js";
-export { Custom } from "./Custom.js";
+export { Diagram, type Diagram as DiagramInterface } from "./Diagram.js";
+export { Cluster, type Cluster as ClusterInterface } from "./Cluster.js";
+export { Node, setIconBaseDir, getIconBaseDir, type Node as NodeInterface } from "./Node.js";
+export { Edge, type Edge as EdgeInterface } from "./Edge.js";
+export { Custom, type CustomNode } from "./Custom.js";
 
 // Context management
 export {

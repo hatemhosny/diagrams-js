@@ -25,108 +25,160 @@ import svelteIcon from "../../../resources/programming/framework/svelte.png";
 import vercelIcon from "../../../resources/programming/framework/vercel.png";
 import vueIcon from "../../../resources/programming/framework/vue.png";
 
-class _Framework extends _Programming {
-  protected static override _type = "framework";
+function _Framework(label?: string, options?: Record<string, unknown>) {
+  const node = _Programming(label, options);
+  (node as unknown as Record<string, unknown>)._type = "framework";
+  return node;
 }
 
-export class Angular extends _Framework {
-  protected static _iconDataUrl = angularIcon;
+export function Angular(label?: string, options?: Record<string, unknown>) {
+  const node = _Framework(label ?? "Angular", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = angularIcon;
+  return node;
 }
 
-export class Backbone extends _Framework {
-  protected static _iconDataUrl = backboneIcon;
+export function Backbone(label?: string, options?: Record<string, unknown>) {
+  const node = _Framework(label ?? "Backbone", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = backboneIcon;
+  return node;
 }
 
-export class Camel extends _Framework {
-  protected static _iconDataUrl = camelIcon;
+export function Camel(label?: string, options?: Record<string, unknown>) {
+  const node = _Framework(label ?? "Camel", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = camelIcon;
+  return node;
 }
 
-export class Django extends _Framework {
-  protected static _iconDataUrl = djangoIcon;
+export function Django(label?: string, options?: Record<string, unknown>) {
+  const node = _Framework(label ?? "Django", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = djangoIcon;
+  return node;
 }
 
-export class Dotnet extends _Framework {
-  protected static _iconDataUrl = dotnetIcon;
+export function Dotnet(label?: string, options?: Record<string, unknown>) {
+  const node = _Framework(label ?? "Dotnet", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = dotnetIcon;
+  return node;
 }
 
-export class Ember extends _Framework {
-  protected static _iconDataUrl = emberIcon;
+export function Ember(label?: string, options?: Record<string, unknown>) {
+  const node = _Framework(label ?? "Ember", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = emberIcon;
+  return node;
 }
 
-export class Fastapi extends _Framework {
-  protected static _iconDataUrl = fastapiIcon;
+export function Fastapi(label?: string, options?: Record<string, unknown>) {
+  const node = _Framework(label ?? "Fastapi", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = fastapiIcon;
+  return node;
 }
 
-export class Flask extends _Framework {
-  protected static _iconDataUrl = flaskIcon;
+export function Flask(label?: string, options?: Record<string, unknown>) {
+  const node = _Framework(label ?? "Flask", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = flaskIcon;
+  return node;
 }
 
-export class Flutter extends _Framework {
-  protected static _iconDataUrl = flutterIcon;
+export function Flutter(label?: string, options?: Record<string, unknown>) {
+  const node = _Framework(label ?? "Flutter", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = flutterIcon;
+  return node;
 }
 
-export class Graphql extends _Framework {
-  protected static _iconDataUrl = graphqlIcon;
+export function Graphql(label?: string, options?: Record<string, unknown>) {
+  const node = _Framework(label ?? "Graphql", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = graphqlIcon;
+  return node;
 }
 
-export class Hibernate extends _Framework {
-  protected static _iconDataUrl = hibernateIcon;
+export function Hibernate(label?: string, options?: Record<string, unknown>) {
+  const node = _Framework(label ?? "Hibernate", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = hibernateIcon;
+  return node;
 }
 
-export class Jhipster extends _Framework {
-  protected static _iconDataUrl = jhipsterIcon;
+export function Jhipster(label?: string, options?: Record<string, unknown>) {
+  const node = _Framework(label ?? "Jhipster", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = jhipsterIcon;
+  return node;
 }
 
-export class Laravel extends _Framework {
-  protected static _iconDataUrl = laravelIcon;
+export function Laravel(label?: string, options?: Record<string, unknown>) {
+  const node = _Framework(label ?? "Laravel", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = laravelIcon;
+  return node;
 }
 
-export class Micronaut extends _Framework {
-  protected static _iconDataUrl = micronautIcon;
+export function Micronaut(label?: string, options?: Record<string, unknown>) {
+  const node = _Framework(label ?? "Micronaut", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = micronautIcon;
+  return node;
 }
 
-export class Nextjs extends _Framework {
-  protected static _iconDataUrl = nextjsIcon;
+export function Nextjs(label?: string, options?: Record<string, unknown>) {
+  const node = _Framework(label ?? "Nextjs", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = nextjsIcon;
+  return node;
 }
 
-export class Phoenix extends _Framework {
-  protected static _iconDataUrl = phoenixIcon;
+export function Phoenix(label?: string, options?: Record<string, unknown>) {
+  const node = _Framework(label ?? "Phoenix", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = phoenixIcon;
+  return node;
 }
 
-export class Quarkus extends _Framework {
-  protected static _iconDataUrl = quarkusIcon;
+export function Quarkus(label?: string, options?: Record<string, unknown>) {
+  const node = _Framework(label ?? "Quarkus", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = quarkusIcon;
+  return node;
 }
 
-export class Rails extends _Framework {
-  protected static _iconDataUrl = railsIcon;
+export function Rails(label?: string, options?: Record<string, unknown>) {
+  const node = _Framework(label ?? "Rails", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = railsIcon;
+  return node;
 }
 
-export class React extends _Framework {
-  protected static _iconDataUrl = reactIcon;
+export function React(label?: string, options?: Record<string, unknown>) {
+  const node = _Framework(label ?? "React", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = reactIcon;
+  return node;
 }
 
-export class Spring extends _Framework {
-  protected static _iconDataUrl = springIcon;
+export function Spring(label?: string, options?: Record<string, unknown>) {
+  const node = _Framework(label ?? "Spring", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = springIcon;
+  return node;
 }
 
-export class Sqlpage extends _Framework {
-  protected static _iconDataUrl = sqlpageIcon;
+export function Sqlpage(label?: string, options?: Record<string, unknown>) {
+  const node = _Framework(label ?? "Sqlpage", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = sqlpageIcon;
+  return node;
 }
 
-export class Starlette extends _Framework {
-  protected static _iconDataUrl = starletteIcon;
+export function Starlette(label?: string, options?: Record<string, unknown>) {
+  const node = _Framework(label ?? "Starlette", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = starletteIcon;
+  return node;
 }
 
-export class Svelte extends _Framework {
-  protected static _iconDataUrl = svelteIcon;
+export function Svelte(label?: string, options?: Record<string, unknown>) {
+  const node = _Framework(label ?? "Svelte", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = svelteIcon;
+  return node;
 }
 
-export class Vercel extends _Framework {
-  protected static _iconDataUrl = vercelIcon;
+export function Vercel(label?: string, options?: Record<string, unknown>) {
+  const node = _Framework(label ?? "Vercel", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = vercelIcon;
+  return node;
 }
 
-export class Vue extends _Framework {
-  protected static _iconDataUrl = vueIcon;
+export function Vue(label?: string, options?: Record<string, unknown>) {
+  const node = _Framework(label ?? "Vue", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = vueIcon;
+  return node;
 }
 
 // Aliases

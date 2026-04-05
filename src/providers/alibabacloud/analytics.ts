@@ -5,26 +5,38 @@ import data_lake_analyticsIcon from "../../../resources/alibabacloud/analytics/d
 import elatic_map_reduceIcon from "../../../resources/alibabacloud/analytics/elatic-map-reduce.png";
 import open_searchIcon from "../../../resources/alibabacloud/analytics/open-search.png";
 
-class _Analytics extends _Alibabacloud {
-  protected static override _type = "analytics";
+function _Analytics(label?: string, options?: Record<string, unknown>) {
+  const node = _Alibabacloud(label, options);
+  (node as unknown as Record<string, unknown>)._type = "analytics";
+  return node;
 }
 
-export class AnalyticDb extends _Analytics {
-  protected static _iconDataUrl = analytic_dbIcon;
+export function AnalyticDb(label?: string, options?: Record<string, unknown>) {
+  const node = _Analytics(label ?? "AnalyticDb", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = analytic_dbIcon;
+  return node;
 }
 
-export class ClickHouse extends _Analytics {
-  protected static _iconDataUrl = click_houseIcon;
+export function ClickHouse(label?: string, options?: Record<string, unknown>) {
+  const node = _Analytics(label ?? "ClickHouse", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = click_houseIcon;
+  return node;
 }
 
-export class DataLakeAnalytics extends _Analytics {
-  protected static _iconDataUrl = data_lake_analyticsIcon;
+export function DataLakeAnalytics(label?: string, options?: Record<string, unknown>) {
+  const node = _Analytics(label ?? "DataLakeAnalytics", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = data_lake_analyticsIcon;
+  return node;
 }
 
-export class ElaticMapReduce extends _Analytics {
-  protected static _iconDataUrl = elatic_map_reduceIcon;
+export function ElaticMapReduce(label?: string, options?: Record<string, unknown>) {
+  const node = _Analytics(label ?? "ElaticMapReduce", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = elatic_map_reduceIcon;
+  return node;
 }
 
-export class OpenSearch extends _Analytics {
-  protected static _iconDataUrl = open_searchIcon;
+export function OpenSearch(label?: string, options?: Record<string, unknown>) {
+  const node = _Analytics(label ?? "OpenSearch", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = open_searchIcon;
+  return node;
 }

@@ -4,24 +4,34 @@ import pvcIcon from "../../../resources/k8s/storage/pvc.png";
 import scIcon from "../../../resources/k8s/storage/sc.png";
 import volIcon from "../../../resources/k8s/storage/vol.png";
 
-class _Storage extends _K8s {
-  protected static override _type = "storage";
+function _Storage(label?: string, options?: Record<string, unknown>) {
+  const node = _K8s(label, options);
+  (node as unknown as Record<string, unknown>)._type = "storage";
+  return node;
 }
 
-export class PV extends _Storage {
-  protected static _iconDataUrl = pvIcon;
+export function PV(label?: string, options?: Record<string, unknown>) {
+  const node = _Storage(label ?? "PV", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = pvIcon;
+  return node;
 }
 
-export class PVC extends _Storage {
-  protected static _iconDataUrl = pvcIcon;
+export function PVC(label?: string, options?: Record<string, unknown>) {
+  const node = _Storage(label ?? "PVC", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = pvcIcon;
+  return node;
 }
 
-export class SC extends _Storage {
-  protected static _iconDataUrl = scIcon;
+export function SC(label?: string, options?: Record<string, unknown>) {
+  const node = _Storage(label ?? "SC", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = scIcon;
+  return node;
 }
 
-export class Vol extends _Storage {
-  protected static _iconDataUrl = volIcon;
+export function Vol(label?: string, options?: Record<string, unknown>) {
+  const node = _Storage(label ?? "Vol", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = volIcon;
+  return node;
 }
 
 // Aliases

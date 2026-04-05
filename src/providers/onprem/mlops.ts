@@ -2,14 +2,20 @@ import { _Onprem } from "./index.js";
 import mlflowIcon from "../../../resources/onprem/mlops/mlflow.png";
 import polyaxonIcon from "../../../resources/onprem/mlops/polyaxon.png";
 
-class _Mlops extends _Onprem {
-  protected static override _type = "mlops";
+function _Mlops(label?: string, options?: Record<string, unknown>) {
+  const node = _Onprem(label, options);
+  (node as unknown as Record<string, unknown>)._type = "mlops";
+  return node;
 }
 
-export class Mlflow extends _Mlops {
-  protected static _iconDataUrl = mlflowIcon;
+export function Mlflow(label?: string, options?: Record<string, unknown>) {
+  const node = _Mlops(label ?? "Mlflow", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = mlflowIcon;
+  return node;
 }
 
-export class Polyaxon extends _Mlops {
-  protected static _iconDataUrl = polyaxonIcon;
+export function Polyaxon(label?: string, options?: Record<string, unknown>) {
+  const node = _Mlops(label ?? "Polyaxon", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = polyaxonIcon;
+  return node;
 }

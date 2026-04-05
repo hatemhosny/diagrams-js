@@ -5,26 +5,38 @@ import data_repositoriesIcon from "../../../resources/ibm/analytics/data-reposit
 import device_analyticsIcon from "../../../resources/ibm/analytics/device-analytics.png";
 import streaming_computingIcon from "../../../resources/ibm/analytics/streaming-computing.png";
 
-class _Analytics extends _Ibm {
-  protected static override _type = "analytics";
+function _Analytics(label?: string, options?: Record<string, unknown>) {
+  const node = _Ibm(label, options);
+  (node as unknown as Record<string, unknown>)._type = "analytics";
+  return node;
 }
 
-export class Analytics extends _Analytics {
-  protected static _iconDataUrl = analyticsIcon;
+export function Analytics(label?: string, options?: Record<string, unknown>) {
+  const node = _Analytics(label ?? "Analytics", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = analyticsIcon;
+  return node;
 }
 
-export class DataIntegration extends _Analytics {
-  protected static _iconDataUrl = data_integrationIcon;
+export function DataIntegration(label?: string, options?: Record<string, unknown>) {
+  const node = _Analytics(label ?? "DataIntegration", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = data_integrationIcon;
+  return node;
 }
 
-export class DataRepositories extends _Analytics {
-  protected static _iconDataUrl = data_repositoriesIcon;
+export function DataRepositories(label?: string, options?: Record<string, unknown>) {
+  const node = _Analytics(label ?? "DataRepositories", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = data_repositoriesIcon;
+  return node;
 }
 
-export class DeviceAnalytics extends _Analytics {
-  protected static _iconDataUrl = device_analyticsIcon;
+export function DeviceAnalytics(label?: string, options?: Record<string, unknown>) {
+  const node = _Analytics(label ?? "DeviceAnalytics", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = device_analyticsIcon;
+  return node;
 }
 
-export class StreamingComputing extends _Analytics {
-  protected static _iconDataUrl = streaming_computingIcon;
+export function StreamingComputing(label?: string, options?: Record<string, unknown>) {
+  const node = _Analytics(label ?? "StreamingComputing", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = streaming_computingIcon;
+  return node;
 }

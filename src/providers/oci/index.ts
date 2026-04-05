@@ -1,10 +1,14 @@
 import { Node } from "../../Node.js";
 
-export class _Oci extends Node {
-  protected static override _provider = "oci";
-  protected static override _iconDir = "oci";
+export function _Oci(label?: string, options?: Record<string, unknown>) {
+  const node = Node(label ?? "Oci", options);
+  (node as unknown as Record<string, unknown>)._provider = "oci";
+  (node as unknown as Record<string, unknown>)._iconDir = "oci";
+  return node;
 }
 
-export class Oci extends _Oci {
-  protected static override _icon = "oci.png";
+export function Oci(label?: string, options?: Record<string, unknown>) {
+  const node = _Oci(label ?? "Oci", options);
+  (node as unknown as Record<string, unknown>)._icon = "oci.png";
+  return node;
 }

@@ -11,52 +11,76 @@ import genomicsIcon from "../../../resources/gcp/analytics/genomics.png";
 import lookerIcon from "../../../resources/gcp/analytics/looker.png";
 import pubsubIcon from "../../../resources/gcp/analytics/pubsub.png";
 
-class _Analytics extends _Gcp {
-  protected static override _type = "analytics";
+function _Analytics(label?: string, options?: Record<string, unknown>) {
+  const node = _Gcp(label, options);
+  (node as unknown as Record<string, unknown>)._type = "analytics";
+  return node;
 }
 
-export class Bigquery extends _Analytics {
-  protected static _iconDataUrl = bigqueryIcon;
+export function Bigquery(label?: string, options?: Record<string, unknown>) {
+  const node = _Analytics(label ?? "Bigquery", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = bigqueryIcon;
+  return node;
 }
 
-export class Composer extends _Analytics {
-  protected static _iconDataUrl = composerIcon;
+export function Composer(label?: string, options?: Record<string, unknown>) {
+  const node = _Analytics(label ?? "Composer", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = composerIcon;
+  return node;
 }
 
-export class DataCatalog extends _Analytics {
-  protected static _iconDataUrl = data_catalogIcon;
+export function DataCatalog(label?: string, options?: Record<string, unknown>) {
+  const node = _Analytics(label ?? "DataCatalog", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = data_catalogIcon;
+  return node;
 }
 
-export class DataFusion extends _Analytics {
-  protected static _iconDataUrl = data_fusionIcon;
+export function DataFusion(label?: string, options?: Record<string, unknown>) {
+  const node = _Analytics(label ?? "DataFusion", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = data_fusionIcon;
+  return node;
 }
 
-export class Dataflow extends _Analytics {
-  protected static _iconDataUrl = dataflowIcon;
+export function Dataflow(label?: string, options?: Record<string, unknown>) {
+  const node = _Analytics(label ?? "Dataflow", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = dataflowIcon;
+  return node;
 }
 
-export class Datalab extends _Analytics {
-  protected static _iconDataUrl = datalabIcon;
+export function Datalab(label?: string, options?: Record<string, unknown>) {
+  const node = _Analytics(label ?? "Datalab", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = datalabIcon;
+  return node;
 }
 
-export class Dataprep extends _Analytics {
-  protected static _iconDataUrl = dataprepIcon;
+export function Dataprep(label?: string, options?: Record<string, unknown>) {
+  const node = _Analytics(label ?? "Dataprep", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = dataprepIcon;
+  return node;
 }
 
-export class Dataproc extends _Analytics {
-  protected static _iconDataUrl = dataprocIcon;
+export function Dataproc(label?: string, options?: Record<string, unknown>) {
+  const node = _Analytics(label ?? "Dataproc", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = dataprocIcon;
+  return node;
 }
 
-export class Genomics extends _Analytics {
-  protected static _iconDataUrl = genomicsIcon;
+export function Genomics(label?: string, options?: Record<string, unknown>) {
+  const node = _Analytics(label ?? "Genomics", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = genomicsIcon;
+  return node;
 }
 
-export class Looker extends _Analytics {
-  protected static _iconDataUrl = lookerIcon;
+export function Looker(label?: string, options?: Record<string, unknown>) {
+  const node = _Analytics(label ?? "Looker", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = lookerIcon;
+  return node;
 }
 
-export class Pubsub extends _Analytics {
-  protected static _iconDataUrl = pubsubIcon;
+export function Pubsub(label?: string, options?: Record<string, unknown>) {
+  const node = _Analytics(label ?? "Pubsub", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = pubsubIcon;
+  return node;
 }
 
 // Aliases

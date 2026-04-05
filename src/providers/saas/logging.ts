@@ -3,20 +3,28 @@ import datadogIcon from "../../../resources/saas/logging/datadog.png";
 import newrelicIcon from "../../../resources/saas/logging/newrelic.png";
 import papertrailIcon from "../../../resources/saas/logging/papertrail.png";
 
-class _Logging extends _Saas {
-  protected static override _type = "logging";
+function _Logging(label?: string, options?: Record<string, unknown>) {
+  const node = _Saas(label, options);
+  (node as unknown as Record<string, unknown>)._type = "logging";
+  return node;
 }
 
-export class Datadog extends _Logging {
-  protected static _iconDataUrl = datadogIcon;
+export function Datadog(label?: string, options?: Record<string, unknown>) {
+  const node = _Logging(label ?? "Datadog", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = datadogIcon;
+  return node;
 }
 
-export class Newrelic extends _Logging {
-  protected static _iconDataUrl = newrelicIcon;
+export function Newrelic(label?: string, options?: Record<string, unknown>) {
+  const node = _Logging(label ?? "Newrelic", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = newrelicIcon;
+  return node;
 }
 
-export class Papertrail extends _Logging {
-  protected static _iconDataUrl = papertrailIcon;
+export function Papertrail(label?: string, options?: Record<string, unknown>) {
+  const node = _Logging(label ?? "Papertrail", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = papertrailIcon;
+  return node;
 }
 
 // Aliases

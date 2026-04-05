@@ -27,114 +27,170 @@ import service_discovery_configurationIcon from "../../../resources/ibm/general/
 import text_to_speechIcon from "../../../resources/ibm/general/text-to-speech.png";
 import transformation_connectivityIcon from "../../../resources/ibm/general/transformation-connectivity.png";
 
-class _General extends _Ibm {
-  protected static override _type = "general";
+function _General(label?: string, options?: Record<string, unknown>) {
+  const node = _Ibm(label, options);
+  (node as unknown as Record<string, unknown>)._type = "general";
+  return node;
 }
 
-export class CloudMessaging extends _General {
-  protected static _iconDataUrl = cloud_messagingIcon;
+export function CloudMessaging(label?: string, options?: Record<string, unknown>) {
+  const node = _General(label ?? "CloudMessaging", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = cloud_messagingIcon;
+  return node;
 }
 
-export class CloudServices extends _General {
-  protected static _iconDataUrl = cloud_servicesIcon;
+export function CloudServices(label?: string, options?: Record<string, unknown>) {
+  const node = _General(label ?? "CloudServices", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = cloud_servicesIcon;
+  return node;
 }
 
-export class Cloudant extends _General {
-  protected static _iconDataUrl = cloudantIcon;
+export function Cloudant(label?: string, options?: Record<string, unknown>) {
+  const node = _General(label ?? "Cloudant", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = cloudantIcon;
+  return node;
 }
 
-export class CognitiveServices extends _General {
-  protected static _iconDataUrl = cognitive_servicesIcon;
+export function CognitiveServices(label?: string, options?: Record<string, unknown>) {
+  const node = _General(label ?? "CognitiveServices", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = cognitive_servicesIcon;
+  return node;
 }
 
-export class DataSecurity extends _General {
-  protected static _iconDataUrl = data_securityIcon;
+export function DataSecurity(label?: string, options?: Record<string, unknown>) {
+  const node = _General(label ?? "DataSecurity", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = data_securityIcon;
+  return node;
 }
 
-export class Enterprise extends _General {
-  protected static _iconDataUrl = enterpriseIcon;
+export function Enterprise(label?: string, options?: Record<string, unknown>) {
+  const node = _General(label ?? "Enterprise", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = enterpriseIcon;
+  return node;
 }
 
-export class GovernanceRiskCompliance extends _General {
-  protected static _iconDataUrl = governance_risk_complianceIcon;
+export function GovernanceRiskCompliance(label?: string, options?: Record<string, unknown>) {
+  const node = _General(label ?? "GovernanceRiskCompliance", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = governance_risk_complianceIcon;
+  return node;
 }
 
-export class IBMContainers extends _General {
-  protected static _iconDataUrl = ibm_containersIcon;
+export function IBMContainers(label?: string, options?: Record<string, unknown>) {
+  const node = _General(label ?? "IBMContainers", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = ibm_containersIcon;
+  return node;
 }
 
-export class IBMPublicCloud extends _General {
-  protected static _iconDataUrl = ibm_public_cloudIcon;
+export function IBMPublicCloud(label?: string, options?: Record<string, unknown>) {
+  const node = _General(label ?? "IBMPublicCloud", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = ibm_public_cloudIcon;
+  return node;
 }
 
-export class IdentityAccessManagement extends _General {
-  protected static _iconDataUrl = identity_access_managementIcon;
+export function IdentityAccessManagement(label?: string, options?: Record<string, unknown>) {
+  const node = _General(label ?? "IdentityAccessManagement", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = identity_access_managementIcon;
+  return node;
 }
 
-export class IdentityProvider extends _General {
-  protected static _iconDataUrl = identity_providerIcon;
+export function IdentityProvider(label?: string, options?: Record<string, unknown>) {
+  const node = _General(label ?? "IdentityProvider", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = identity_providerIcon;
+  return node;
 }
 
-export class InfrastructureSecurity extends _General {
-  protected static _iconDataUrl = infrastructure_securityIcon;
+export function InfrastructureSecurity(label?: string, options?: Record<string, unknown>) {
+  const node = _General(label ?? "InfrastructureSecurity", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = infrastructure_securityIcon;
+  return node;
 }
 
-export class Internet extends _General {
-  protected static _iconDataUrl = internetIcon;
+export function Internet(label?: string, options?: Record<string, unknown>) {
+  const node = _General(label ?? "Internet", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = internetIcon;
+  return node;
 }
 
-export class IotCloud extends _General {
-  protected static _iconDataUrl = iot_cloudIcon;
+export function IotCloud(label?: string, options?: Record<string, unknown>) {
+  const node = _General(label ?? "IotCloud", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = iot_cloudIcon;
+  return node;
 }
 
-export class MicroservicesApplication extends _General {
-  protected static _iconDataUrl = microservices_applicationIcon;
+export function MicroservicesApplication(label?: string, options?: Record<string, unknown>) {
+  const node = _General(label ?? "MicroservicesApplication", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = microservices_applicationIcon;
+  return node;
 }
 
-export class MicroservicesMesh extends _General {
-  protected static _iconDataUrl = microservices_meshIcon;
+export function MicroservicesMesh(label?: string, options?: Record<string, unknown>) {
+  const node = _General(label ?? "MicroservicesMesh", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = microservices_meshIcon;
+  return node;
 }
 
-export class MonitoringLogging extends _General {
-  protected static _iconDataUrl = monitoring_loggingIcon;
+export function MonitoringLogging(label?: string, options?: Record<string, unknown>) {
+  const node = _General(label ?? "MonitoringLogging", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = monitoring_loggingIcon;
+  return node;
 }
 
-export class Monitoring extends _General {
-  protected static _iconDataUrl = monitoringIcon;
+export function Monitoring(label?: string, options?: Record<string, unknown>) {
+  const node = _General(label ?? "Monitoring", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = monitoringIcon;
+  return node;
 }
 
-export class ObjectStorage extends _General {
-  protected static _iconDataUrl = object_storageIcon;
+export function ObjectStorage(label?: string, options?: Record<string, unknown>) {
+  const node = _General(label ?? "ObjectStorage", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = object_storageIcon;
+  return node;
 }
 
-export class OfflineCapabilities extends _General {
-  protected static _iconDataUrl = offline_capabilitiesIcon;
+export function OfflineCapabilities(label?: string, options?: Record<string, unknown>) {
+  const node = _General(label ?? "OfflineCapabilities", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = offline_capabilitiesIcon;
+  return node;
 }
 
-export class Openwhisk extends _General {
-  protected static _iconDataUrl = openwhiskIcon;
+export function Openwhisk(label?: string, options?: Record<string, unknown>) {
+  const node = _General(label ?? "Openwhisk", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = openwhiskIcon;
+  return node;
 }
 
-export class PeerCloud extends _General {
-  protected static _iconDataUrl = peer_cloudIcon;
+export function PeerCloud(label?: string, options?: Record<string, unknown>) {
+  const node = _General(label ?? "PeerCloud", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = peer_cloudIcon;
+  return node;
 }
 
-export class RetrieveRank extends _General {
-  protected static _iconDataUrl = retrieve_rankIcon;
+export function RetrieveRank(label?: string, options?: Record<string, unknown>) {
+  const node = _General(label ?? "RetrieveRank", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = retrieve_rankIcon;
+  return node;
 }
 
-export class Scalable extends _General {
-  protected static _iconDataUrl = scalableIcon;
+export function Scalable(label?: string, options?: Record<string, unknown>) {
+  const node = _General(label ?? "Scalable", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = scalableIcon;
+  return node;
 }
 
-export class ServiceDiscoveryConfiguration extends _General {
-  protected static _iconDataUrl = service_discovery_configurationIcon;
+export function ServiceDiscoveryConfiguration(label?: string, options?: Record<string, unknown>) {
+  const node = _General(label ?? "ServiceDiscoveryConfiguration", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = service_discovery_configurationIcon;
+  return node;
 }
 
-export class TextToSpeech extends _General {
-  protected static _iconDataUrl = text_to_speechIcon;
+export function TextToSpeech(label?: string, options?: Record<string, unknown>) {
+  const node = _General(label ?? "TextToSpeech", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = text_to_speechIcon;
+  return node;
 }
 
-export class TransformationConnectivity extends _General {
-  protected static _iconDataUrl = transformation_connectivityIcon;
+export function TransformationConnectivity(label?: string, options?: Record<string, unknown>) {
+  const node = _General(label ?? "TransformationConnectivity", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = transformation_connectivityIcon;
+  return node;
 }

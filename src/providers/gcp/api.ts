@@ -3,18 +3,26 @@ import api_gatewayIcon from "../../../resources/gcp/api/api-gateway.png";
 import apigeeIcon from "../../../resources/gcp/api/apigee.png";
 import endpointsIcon from "../../../resources/gcp/api/endpoints.png";
 
-class _Api extends _Gcp {
-  protected static override _type = "api";
+function _Api(label?: string, options?: Record<string, unknown>) {
+  const node = _Gcp(label, options);
+  (node as unknown as Record<string, unknown>)._type = "api";
+  return node;
 }
 
-export class APIGateway extends _Api {
-  protected static _iconDataUrl = api_gatewayIcon;
+export function APIGateway(label?: string, options?: Record<string, unknown>) {
+  const node = _Api(label ?? "APIGateway", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = api_gatewayIcon;
+  return node;
 }
 
-export class Apigee extends _Api {
-  protected static _iconDataUrl = apigeeIcon;
+export function Apigee(label?: string, options?: Record<string, unknown>) {
+  const node = _Api(label ?? "Apigee", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = apigeeIcon;
+  return node;
 }
 
-export class Endpoints extends _Api {
-  protected static _iconDataUrl = endpointsIcon;
+export function Endpoints(label?: string, options?: Record<string, unknown>) {
+  const node = _Api(label ?? "Endpoints", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = endpointsIcon;
+  return node;
 }

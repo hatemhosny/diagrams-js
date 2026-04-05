@@ -4,22 +4,32 @@ import iot_link_wanIcon from "../../../resources/alibabacloud/iot/iot-link-wan.p
 import iot_mobile_connection_packageIcon from "../../../resources/alibabacloud/iot/iot-mobile-connection-package.png";
 import iot_platformIcon from "../../../resources/alibabacloud/iot/iot-platform.png";
 
-class _Iot extends _Alibabacloud {
-  protected static override _type = "iot";
+function _Iot(label?: string, options?: Record<string, unknown>) {
+  const node = _Alibabacloud(label, options);
+  (node as unknown as Record<string, unknown>)._type = "iot";
+  return node;
 }
 
-export class IotInternetDeviceId extends _Iot {
-  protected static _iconDataUrl = iot_internet_device_idIcon;
+export function IotInternetDeviceId(label?: string, options?: Record<string, unknown>) {
+  const node = _Iot(label ?? "IotInternetDeviceId", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = iot_internet_device_idIcon;
+  return node;
 }
 
-export class IotLinkWan extends _Iot {
-  protected static _iconDataUrl = iot_link_wanIcon;
+export function IotLinkWan(label?: string, options?: Record<string, unknown>) {
+  const node = _Iot(label ?? "IotLinkWan", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = iot_link_wanIcon;
+  return node;
 }
 
-export class IotMobileConnectionPackage extends _Iot {
-  protected static _iconDataUrl = iot_mobile_connection_packageIcon;
+export function IotMobileConnectionPackage(label?: string, options?: Record<string, unknown>) {
+  const node = _Iot(label ?? "IotMobileConnectionPackage", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = iot_mobile_connection_packageIcon;
+  return node;
 }
 
-export class IotPlatform extends _Iot {
-  protected static _iconDataUrl = iot_platformIcon;
+export function IotPlatform(label?: string, options?: Record<string, unknown>) {
+  const node = _Iot(label ?? "IotPlatform", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = iot_platformIcon;
+  return node;
 }

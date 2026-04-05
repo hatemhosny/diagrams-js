@@ -2,14 +2,20 @@ import { _Elastic } from "./index.js";
 import eceIcon from "../../../resources/elastic/orchestration/ece.png";
 import eckIcon from "../../../resources/elastic/orchestration/eck.png";
 
-class _Orchestration extends _Elastic {
-  protected static override _type = "orchestration";
+function _Orchestration(label?: string, options?: Record<string, unknown>) {
+  const node = _Elastic(label, options);
+  (node as unknown as Record<string, unknown>)._type = "orchestration";
+  return node;
 }
 
-export class ECE extends _Orchestration {
-  protected static _iconDataUrl = eceIcon;
+export function ECE(label?: string, options?: Record<string, unknown>) {
+  const node = _Orchestration(label ?? "ECE", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = eceIcon;
+  return node;
 }
 
-export class ECK extends _Orchestration {
-  protected static _iconDataUrl = eckIcon;
+export function ECK(label?: string, options?: Record<string, unknown>) {
+  const node = _Orchestration(label ?? "ECK", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = eckIcon;
+  return node;
 }

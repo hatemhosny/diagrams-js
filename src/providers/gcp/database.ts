@@ -6,32 +6,46 @@ import memorystoreIcon from "../../../resources/gcp/database/memorystore.png";
 import spannerIcon from "../../../resources/gcp/database/spanner.png";
 import sqlIcon from "../../../resources/gcp/database/sql.png";
 
-class _Database extends _Gcp {
-  protected static override _type = "database";
+function _Database(label?: string, options?: Record<string, unknown>) {
+  const node = _Gcp(label, options);
+  (node as unknown as Record<string, unknown>)._type = "database";
+  return node;
 }
 
-export class Bigtable extends _Database {
-  protected static _iconDataUrl = bigtableIcon;
+export function Bigtable(label?: string, options?: Record<string, unknown>) {
+  const node = _Database(label ?? "Bigtable", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = bigtableIcon;
+  return node;
 }
 
-export class Datastore extends _Database {
-  protected static _iconDataUrl = datastoreIcon;
+export function Datastore(label?: string, options?: Record<string, unknown>) {
+  const node = _Database(label ?? "Datastore", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = datastoreIcon;
+  return node;
 }
 
-export class Firestore extends _Database {
-  protected static _iconDataUrl = firestoreIcon;
+export function Firestore(label?: string, options?: Record<string, unknown>) {
+  const node = _Database(label ?? "Firestore", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = firestoreIcon;
+  return node;
 }
 
-export class Memorystore extends _Database {
-  protected static _iconDataUrl = memorystoreIcon;
+export function Memorystore(label?: string, options?: Record<string, unknown>) {
+  const node = _Database(label ?? "Memorystore", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = memorystoreIcon;
+  return node;
 }
 
-export class Spanner extends _Database {
-  protected static _iconDataUrl = spannerIcon;
+export function Spanner(label?: string, options?: Record<string, unknown>) {
+  const node = _Database(label ?? "Spanner", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = spannerIcon;
+  return node;
 }
 
-export class SQL extends _Database {
-  protected static _iconDataUrl = sqlIcon;
+export function SQL(label?: string, options?: Record<string, unknown>) {
+  const node = _Database(label ?? "SQL", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = sqlIcon;
+  return node;
 }
 
 // Aliases

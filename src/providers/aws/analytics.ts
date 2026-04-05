@@ -29,124 +29,184 @@ import redshift_dense_compute_nodeIcon from "../../../resources/aws/analytics/re
 import redshift_dense_storage_nodeIcon from "../../../resources/aws/analytics/redshift-dense-storage-node.png";
 import redshiftIcon from "../../../resources/aws/analytics/redshift.png";
 
-class _Analytics extends _Aws {
-  protected static override _type = "analytics";
+function _Analytics(label?: string, options?: Record<string, unknown>) {
+  const node = _Aws(label, options);
+  (node as unknown as Record<string, unknown>)._type = "analytics";
+  return node;
 }
 
-export class AmazonOpensearchService extends _Analytics {
-  protected static _iconDataUrl = amazon_opensearch_serviceIcon;
+export function AmazonOpensearchService(label?: string, options?: Record<string, unknown>) {
+  const node = _Analytics(label ?? "AmazonOpensearchService", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = amazon_opensearch_serviceIcon;
+  return node;
 }
 
-export class Analytics extends _Analytics {
-  protected static _iconDataUrl = analyticsIcon;
+export function Analytics(label?: string, options?: Record<string, unknown>) {
+  const node = _Analytics(label ?? "Analytics", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = analyticsIcon;
+  return node;
 }
 
-export class Athena extends _Analytics {
-  protected static _iconDataUrl = athenaIcon;
+export function Athena(label?: string, options?: Record<string, unknown>) {
+  const node = _Analytics(label ?? "Athena", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = athenaIcon;
+  return node;
 }
 
-export class CloudsearchSearchDocuments extends _Analytics {
-  protected static _iconDataUrl = cloudsearch_search_documentsIcon;
+export function CloudsearchSearchDocuments(label?: string, options?: Record<string, unknown>) {
+  const node = _Analytics(label ?? "CloudsearchSearchDocuments", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = cloudsearch_search_documentsIcon;
+  return node;
 }
 
-export class Cloudsearch extends _Analytics {
-  protected static _iconDataUrl = cloudsearchIcon;
+export function Cloudsearch(label?: string, options?: Record<string, unknown>) {
+  const node = _Analytics(label ?? "Cloudsearch", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = cloudsearchIcon;
+  return node;
 }
 
-export class DataLakeResource extends _Analytics {
-  protected static _iconDataUrl = data_lake_resourceIcon;
+export function DataLakeResource(label?: string, options?: Record<string, unknown>) {
+  const node = _Analytics(label ?? "DataLakeResource", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = data_lake_resourceIcon;
+  return node;
 }
 
-export class DataPipeline extends _Analytics {
-  protected static _iconDataUrl = data_pipelineIcon;
+export function DataPipeline(label?: string, options?: Record<string, unknown>) {
+  const node = _Analytics(label ?? "DataPipeline", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = data_pipelineIcon;
+  return node;
 }
 
-export class ElasticsearchService extends _Analytics {
-  protected static _iconDataUrl = elasticsearch_serviceIcon;
+export function ElasticsearchService(label?: string, options?: Record<string, unknown>) {
+  const node = _Analytics(label ?? "ElasticsearchService", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = elasticsearch_serviceIcon;
+  return node;
 }
 
-export class EMRCluster extends _Analytics {
-  protected static _iconDataUrl = emr_clusterIcon;
+export function EMRCluster(label?: string, options?: Record<string, unknown>) {
+  const node = _Analytics(label ?? "EMRCluster", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = emr_clusterIcon;
+  return node;
 }
 
-export class EMREngineMaprM3 extends _Analytics {
-  protected static _iconDataUrl = emr_engine_mapr_m3Icon;
+export function EMREngineMaprM3(label?: string, options?: Record<string, unknown>) {
+  const node = _Analytics(label ?? "EMREngineMaprM3", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = emr_engine_mapr_m3Icon;
+  return node;
 }
 
-export class EMREngineMaprM5 extends _Analytics {
-  protected static _iconDataUrl = emr_engine_mapr_m5Icon;
+export function EMREngineMaprM5(label?: string, options?: Record<string, unknown>) {
+  const node = _Analytics(label ?? "EMREngineMaprM5", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = emr_engine_mapr_m5Icon;
+  return node;
 }
 
-export class EMREngineMaprM7 extends _Analytics {
-  protected static _iconDataUrl = emr_engine_mapr_m7Icon;
+export function EMREngineMaprM7(label?: string, options?: Record<string, unknown>) {
+  const node = _Analytics(label ?? "EMREngineMaprM7", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = emr_engine_mapr_m7Icon;
+  return node;
 }
 
-export class EMREngine extends _Analytics {
-  protected static _iconDataUrl = emr_engineIcon;
+export function EMREngine(label?: string, options?: Record<string, unknown>) {
+  const node = _Analytics(label ?? "EMREngine", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = emr_engineIcon;
+  return node;
 }
 
-export class EMRHdfsCluster extends _Analytics {
-  protected static _iconDataUrl = emr_hdfs_clusterIcon;
+export function EMRHdfsCluster(label?: string, options?: Record<string, unknown>) {
+  const node = _Analytics(label ?? "EMRHdfsCluster", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = emr_hdfs_clusterIcon;
+  return node;
 }
 
-export class EMR extends _Analytics {
-  protected static _iconDataUrl = emrIcon;
+export function EMR(label?: string, options?: Record<string, unknown>) {
+  const node = _Analytics(label ?? "EMR", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = emrIcon;
+  return node;
 }
 
-export class GlueCrawlers extends _Analytics {
-  protected static _iconDataUrl = glue_crawlersIcon;
+export function GlueCrawlers(label?: string, options?: Record<string, unknown>) {
+  const node = _Analytics(label ?? "GlueCrawlers", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = glue_crawlersIcon;
+  return node;
 }
 
-export class GlueDataCatalog extends _Analytics {
-  protected static _iconDataUrl = glue_data_catalogIcon;
+export function GlueDataCatalog(label?: string, options?: Record<string, unknown>) {
+  const node = _Analytics(label ?? "GlueDataCatalog", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = glue_data_catalogIcon;
+  return node;
 }
 
-export class Glue extends _Analytics {
-  protected static _iconDataUrl = glueIcon;
+export function Glue(label?: string, options?: Record<string, unknown>) {
+  const node = _Analytics(label ?? "Glue", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = glueIcon;
+  return node;
 }
 
-export class KinesisDataAnalytics extends _Analytics {
-  protected static _iconDataUrl = kinesis_data_analyticsIcon;
+export function KinesisDataAnalytics(label?: string, options?: Record<string, unknown>) {
+  const node = _Analytics(label ?? "KinesisDataAnalytics", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = kinesis_data_analyticsIcon;
+  return node;
 }
 
-export class KinesisDataFirehose extends _Analytics {
-  protected static _iconDataUrl = kinesis_data_firehoseIcon;
+export function KinesisDataFirehose(label?: string, options?: Record<string, unknown>) {
+  const node = _Analytics(label ?? "KinesisDataFirehose", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = kinesis_data_firehoseIcon;
+  return node;
 }
 
-export class KinesisDataStreams extends _Analytics {
-  protected static _iconDataUrl = kinesis_data_streamsIcon;
+export function KinesisDataStreams(label?: string, options?: Record<string, unknown>) {
+  const node = _Analytics(label ?? "KinesisDataStreams", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = kinesis_data_streamsIcon;
+  return node;
 }
 
-export class KinesisVideoStreams extends _Analytics {
-  protected static _iconDataUrl = kinesis_video_streamsIcon;
+export function KinesisVideoStreams(label?: string, options?: Record<string, unknown>) {
+  const node = _Analytics(label ?? "KinesisVideoStreams", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = kinesis_video_streamsIcon;
+  return node;
 }
 
-export class Kinesis extends _Analytics {
-  protected static _iconDataUrl = kinesisIcon;
+export function Kinesis(label?: string, options?: Record<string, unknown>) {
+  const node = _Analytics(label ?? "Kinesis", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = kinesisIcon;
+  return node;
 }
 
-export class LakeFormation extends _Analytics {
-  protected static _iconDataUrl = lake_formationIcon;
+export function LakeFormation(label?: string, options?: Record<string, unknown>) {
+  const node = _Analytics(label ?? "LakeFormation", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = lake_formationIcon;
+  return node;
 }
 
-export class ManagedStreamingForKafka extends _Analytics {
-  protected static _iconDataUrl = managed_streaming_for_kafkaIcon;
+export function ManagedStreamingForKafka(label?: string, options?: Record<string, unknown>) {
+  const node = _Analytics(label ?? "ManagedStreamingForKafka", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = managed_streaming_for_kafkaIcon;
+  return node;
 }
 
-export class Quicksight extends _Analytics {
-  protected static _iconDataUrl = quicksightIcon;
+export function Quicksight(label?: string, options?: Record<string, unknown>) {
+  const node = _Analytics(label ?? "Quicksight", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = quicksightIcon;
+  return node;
 }
 
-export class RedshiftDenseComputeNode extends _Analytics {
-  protected static _iconDataUrl = redshift_dense_compute_nodeIcon;
+export function RedshiftDenseComputeNode(label?: string, options?: Record<string, unknown>) {
+  const node = _Analytics(label ?? "RedshiftDenseComputeNode", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = redshift_dense_compute_nodeIcon;
+  return node;
 }
 
-export class RedshiftDenseStorageNode extends _Analytics {
-  protected static _iconDataUrl = redshift_dense_storage_nodeIcon;
+export function RedshiftDenseStorageNode(label?: string, options?: Record<string, unknown>) {
+  const node = _Analytics(label ?? "RedshiftDenseStorageNode", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = redshift_dense_storage_nodeIcon;
+  return node;
 }
 
-export class Redshift extends _Analytics {
-  protected static _iconDataUrl = redshiftIcon;
+export function Redshift(label?: string, options?: Record<string, unknown>) {
+  const node = _Analytics(label ?? "Redshift", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = redshiftIcon;
+  return node;
 }
 
 // Aliases

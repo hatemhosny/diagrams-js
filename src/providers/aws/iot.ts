@@ -61,252 +61,376 @@ import iot_travelIcon from "../../../resources/aws/iot/iot-travel.png";
 import iot_utilityIcon from "../../../resources/aws/iot/iot-utility.png";
 import iot_windfarmIcon from "../../../resources/aws/iot/iot-windfarm.png";
 
-class _Iot extends _Aws {
-  protected static override _type = "iot";
+function _Iot(label?: string, options?: Record<string, unknown>) {
+  const node = _Aws(label, options);
+  (node as unknown as Record<string, unknown>)._type = "iot";
+  return node;
 }
 
-export class Freertos extends _Iot {
-  protected static _iconDataUrl = freertosIcon;
+export function Freertos(label?: string, options?: Record<string, unknown>) {
+  const node = _Iot(label ?? "Freertos", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = freertosIcon;
+  return node;
 }
 
-export class InternetOfThings extends _Iot {
-  protected static _iconDataUrl = internet_of_thingsIcon;
+export function InternetOfThings(label?: string, options?: Record<string, unknown>) {
+  const node = _Iot(label ?? "InternetOfThings", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = internet_of_thingsIcon;
+  return node;
 }
 
-export class Iot1Click extends _Iot {
-  protected static _iconDataUrl = iot_1_clickIcon;
+export function Iot1Click(label?: string, options?: Record<string, unknown>) {
+  const node = _Iot(label ?? "Iot1Click", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = iot_1_clickIcon;
+  return node;
 }
 
-export class IotAction extends _Iot {
-  protected static _iconDataUrl = iot_actionIcon;
+export function IotAction(label?: string, options?: Record<string, unknown>) {
+  const node = _Iot(label ?? "IotAction", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = iot_actionIcon;
+  return node;
 }
 
-export class IotActuator extends _Iot {
-  protected static _iconDataUrl = iot_actuatorIcon;
+export function IotActuator(label?: string, options?: Record<string, unknown>) {
+  const node = _Iot(label ?? "IotActuator", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = iot_actuatorIcon;
+  return node;
 }
 
-export class IotAlexaEcho extends _Iot {
-  protected static _iconDataUrl = iot_alexa_echoIcon;
+export function IotAlexaEcho(label?: string, options?: Record<string, unknown>) {
+  const node = _Iot(label ?? "IotAlexaEcho", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = iot_alexa_echoIcon;
+  return node;
 }
 
-export class IotAlexaEnabledDevice extends _Iot {
-  protected static _iconDataUrl = iot_alexa_enabled_deviceIcon;
+export function IotAlexaEnabledDevice(label?: string, options?: Record<string, unknown>) {
+  const node = _Iot(label ?? "IotAlexaEnabledDevice", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = iot_alexa_enabled_deviceIcon;
+  return node;
 }
 
-export class IotAlexaSkill extends _Iot {
-  protected static _iconDataUrl = iot_alexa_skillIcon;
+export function IotAlexaSkill(label?: string, options?: Record<string, unknown>) {
+  const node = _Iot(label ?? "IotAlexaSkill", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = iot_alexa_skillIcon;
+  return node;
 }
 
-export class IotAlexaVoiceService extends _Iot {
-  protected static _iconDataUrl = iot_alexa_voice_serviceIcon;
+export function IotAlexaVoiceService(label?: string, options?: Record<string, unknown>) {
+  const node = _Iot(label ?? "IotAlexaVoiceService", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = iot_alexa_voice_serviceIcon;
+  return node;
 }
 
-export class IotAnalyticsChannel extends _Iot {
-  protected static _iconDataUrl = iot_analytics_channelIcon;
+export function IotAnalyticsChannel(label?: string, options?: Record<string, unknown>) {
+  const node = _Iot(label ?? "IotAnalyticsChannel", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = iot_analytics_channelIcon;
+  return node;
 }
 
-export class IotAnalyticsDataSet extends _Iot {
-  protected static _iconDataUrl = iot_analytics_data_setIcon;
+export function IotAnalyticsDataSet(label?: string, options?: Record<string, unknown>) {
+  const node = _Iot(label ?? "IotAnalyticsDataSet", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = iot_analytics_data_setIcon;
+  return node;
 }
 
-export class IotAnalyticsDataStore extends _Iot {
-  protected static _iconDataUrl = iot_analytics_data_storeIcon;
+export function IotAnalyticsDataStore(label?: string, options?: Record<string, unknown>) {
+  const node = _Iot(label ?? "IotAnalyticsDataStore", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = iot_analytics_data_storeIcon;
+  return node;
 }
 
-export class IotAnalyticsNotebook extends _Iot {
-  protected static _iconDataUrl = iot_analytics_notebookIcon;
+export function IotAnalyticsNotebook(label?: string, options?: Record<string, unknown>) {
+  const node = _Iot(label ?? "IotAnalyticsNotebook", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = iot_analytics_notebookIcon;
+  return node;
 }
 
-export class IotAnalyticsPipeline extends _Iot {
-  protected static _iconDataUrl = iot_analytics_pipelineIcon;
+export function IotAnalyticsPipeline(label?: string, options?: Record<string, unknown>) {
+  const node = _Iot(label ?? "IotAnalyticsPipeline", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = iot_analytics_pipelineIcon;
+  return node;
 }
 
-export class IotAnalytics extends _Iot {
-  protected static _iconDataUrl = iot_analyticsIcon;
+export function IotAnalytics(label?: string, options?: Record<string, unknown>) {
+  const node = _Iot(label ?? "IotAnalytics", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = iot_analyticsIcon;
+  return node;
 }
 
-export class IotBank extends _Iot {
-  protected static _iconDataUrl = iot_bankIcon;
+export function IotBank(label?: string, options?: Record<string, unknown>) {
+  const node = _Iot(label ?? "IotBank", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = iot_bankIcon;
+  return node;
 }
 
-export class IotBicycle extends _Iot {
-  protected static _iconDataUrl = iot_bicycleIcon;
+export function IotBicycle(label?: string, options?: Record<string, unknown>) {
+  const node = _Iot(label ?? "IotBicycle", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = iot_bicycleIcon;
+  return node;
 }
 
-export class IotButton extends _Iot {
-  protected static _iconDataUrl = iot_buttonIcon;
+export function IotButton(label?: string, options?: Record<string, unknown>) {
+  const node = _Iot(label ?? "IotButton", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = iot_buttonIcon;
+  return node;
 }
 
-export class IotCamera extends _Iot {
-  protected static _iconDataUrl = iot_cameraIcon;
+export function IotCamera(label?: string, options?: Record<string, unknown>) {
+  const node = _Iot(label ?? "IotCamera", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = iot_cameraIcon;
+  return node;
 }
 
-export class IotCar extends _Iot {
-  protected static _iconDataUrl = iot_carIcon;
+export function IotCar(label?: string, options?: Record<string, unknown>) {
+  const node = _Iot(label ?? "IotCar", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = iot_carIcon;
+  return node;
 }
 
-export class IotCart extends _Iot {
-  protected static _iconDataUrl = iot_cartIcon;
+export function IotCart(label?: string, options?: Record<string, unknown>) {
+  const node = _Iot(label ?? "IotCart", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = iot_cartIcon;
+  return node;
 }
 
-export class IotCertificate extends _Iot {
-  protected static _iconDataUrl = iot_certificateIcon;
+export function IotCertificate(label?: string, options?: Record<string, unknown>) {
+  const node = _Iot(label ?? "IotCertificate", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = iot_certificateIcon;
+  return node;
 }
 
-export class IotCoffeePot extends _Iot {
-  protected static _iconDataUrl = iot_coffee_potIcon;
+export function IotCoffeePot(label?: string, options?: Record<string, unknown>) {
+  const node = _Iot(label ?? "IotCoffeePot", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = iot_coffee_potIcon;
+  return node;
 }
 
-export class IotCore extends _Iot {
-  protected static _iconDataUrl = iot_coreIcon;
+export function IotCore(label?: string, options?: Record<string, unknown>) {
+  const node = _Iot(label ?? "IotCore", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = iot_coreIcon;
+  return node;
 }
 
-export class IotDesiredState extends _Iot {
-  protected static _iconDataUrl = iot_desired_stateIcon;
+export function IotDesiredState(label?: string, options?: Record<string, unknown>) {
+  const node = _Iot(label ?? "IotDesiredState", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = iot_desired_stateIcon;
+  return node;
 }
 
-export class IotDeviceDefender extends _Iot {
-  protected static _iconDataUrl = iot_device_defenderIcon;
+export function IotDeviceDefender(label?: string, options?: Record<string, unknown>) {
+  const node = _Iot(label ?? "IotDeviceDefender", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = iot_device_defenderIcon;
+  return node;
 }
 
-export class IotDeviceGateway extends _Iot {
-  protected static _iconDataUrl = iot_device_gatewayIcon;
+export function IotDeviceGateway(label?: string, options?: Record<string, unknown>) {
+  const node = _Iot(label ?? "IotDeviceGateway", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = iot_device_gatewayIcon;
+  return node;
 }
 
-export class IotDeviceManagement extends _Iot {
-  protected static _iconDataUrl = iot_device_managementIcon;
+export function IotDeviceManagement(label?: string, options?: Record<string, unknown>) {
+  const node = _Iot(label ?? "IotDeviceManagement", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = iot_device_managementIcon;
+  return node;
 }
 
-export class IotDoorLock extends _Iot {
-  protected static _iconDataUrl = iot_door_lockIcon;
+export function IotDoorLock(label?: string, options?: Record<string, unknown>) {
+  const node = _Iot(label ?? "IotDoorLock", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = iot_door_lockIcon;
+  return node;
 }
 
-export class IotEvents extends _Iot {
-  protected static _iconDataUrl = iot_eventsIcon;
+export function IotEvents(label?: string, options?: Record<string, unknown>) {
+  const node = _Iot(label ?? "IotEvents", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = iot_eventsIcon;
+  return node;
 }
 
-export class IotFactory extends _Iot {
-  protected static _iconDataUrl = iot_factoryIcon;
+export function IotFactory(label?: string, options?: Record<string, unknown>) {
+  const node = _Iot(label ?? "IotFactory", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = iot_factoryIcon;
+  return node;
 }
 
-export class IotFireTvStick extends _Iot {
-  protected static _iconDataUrl = iot_fire_tv_stickIcon;
+export function IotFireTvStick(label?: string, options?: Record<string, unknown>) {
+  const node = _Iot(label ?? "IotFireTvStick", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = iot_fire_tv_stickIcon;
+  return node;
 }
 
-export class IotFireTv extends _Iot {
-  protected static _iconDataUrl = iot_fire_tvIcon;
+export function IotFireTv(label?: string, options?: Record<string, unknown>) {
+  const node = _Iot(label ?? "IotFireTv", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = iot_fire_tvIcon;
+  return node;
 }
 
-export class IotGeneric extends _Iot {
-  protected static _iconDataUrl = iot_genericIcon;
+export function IotGeneric(label?: string, options?: Record<string, unknown>) {
+  const node = _Iot(label ?? "IotGeneric", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = iot_genericIcon;
+  return node;
 }
 
-export class IotGreengrassConnector extends _Iot {
-  protected static _iconDataUrl = iot_greengrass_connectorIcon;
+export function IotGreengrassConnector(label?: string, options?: Record<string, unknown>) {
+  const node = _Iot(label ?? "IotGreengrassConnector", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = iot_greengrass_connectorIcon;
+  return node;
 }
 
-export class IotGreengrass extends _Iot {
-  protected static _iconDataUrl = iot_greengrassIcon;
+export function IotGreengrass(label?: string, options?: Record<string, unknown>) {
+  const node = _Iot(label ?? "IotGreengrass", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = iot_greengrassIcon;
+  return node;
 }
 
-export class IotHardwareBoard extends _Iot {
-  protected static _iconDataUrl = iot_hardware_boardIcon;
+export function IotHardwareBoard(label?: string, options?: Record<string, unknown>) {
+  const node = _Iot(label ?? "IotHardwareBoard", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = iot_hardware_boardIcon;
+  return node;
 }
 
-export class IotHouse extends _Iot {
-  protected static _iconDataUrl = iot_houseIcon;
+export function IotHouse(label?: string, options?: Record<string, unknown>) {
+  const node = _Iot(label ?? "IotHouse", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = iot_houseIcon;
+  return node;
 }
 
-export class IotHttp extends _Iot {
-  protected static _iconDataUrl = iot_httpIcon;
+export function IotHttp(label?: string, options?: Record<string, unknown>) {
+  const node = _Iot(label ?? "IotHttp", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = iot_httpIcon;
+  return node;
 }
 
-export class IotHttp2 extends _Iot {
-  protected static _iconDataUrl = iot_http2Icon;
+export function IotHttp2(label?: string, options?: Record<string, unknown>) {
+  const node = _Iot(label ?? "IotHttp2", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = iot_http2Icon;
+  return node;
 }
 
-export class IotJobs extends _Iot {
-  protected static _iconDataUrl = iot_jobsIcon;
+export function IotJobs(label?: string, options?: Record<string, unknown>) {
+  const node = _Iot(label ?? "IotJobs", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = iot_jobsIcon;
+  return node;
 }
 
-export class IotLambda extends _Iot {
-  protected static _iconDataUrl = iot_lambdaIcon;
+export function IotLambda(label?: string, options?: Record<string, unknown>) {
+  const node = _Iot(label ?? "IotLambda", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = iot_lambdaIcon;
+  return node;
 }
 
-export class IotLightbulb extends _Iot {
-  protected static _iconDataUrl = iot_lightbulbIcon;
+export function IotLightbulb(label?: string, options?: Record<string, unknown>) {
+  const node = _Iot(label ?? "IotLightbulb", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = iot_lightbulbIcon;
+  return node;
 }
 
-export class IotMedicalEmergency extends _Iot {
-  protected static _iconDataUrl = iot_medical_emergencyIcon;
+export function IotMedicalEmergency(label?: string, options?: Record<string, unknown>) {
+  const node = _Iot(label ?? "IotMedicalEmergency", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = iot_medical_emergencyIcon;
+  return node;
 }
 
-export class IotMqtt extends _Iot {
-  protected static _iconDataUrl = iot_mqttIcon;
+export function IotMqtt(label?: string, options?: Record<string, unknown>) {
+  const node = _Iot(label ?? "IotMqtt", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = iot_mqttIcon;
+  return node;
 }
 
-export class IotOverTheAirUpdate extends _Iot {
-  protected static _iconDataUrl = iot_over_the_air_updateIcon;
+export function IotOverTheAirUpdate(label?: string, options?: Record<string, unknown>) {
+  const node = _Iot(label ?? "IotOverTheAirUpdate", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = iot_over_the_air_updateIcon;
+  return node;
 }
 
-export class IotPolicyEmergency extends _Iot {
-  protected static _iconDataUrl = iot_policy_emergencyIcon;
+export function IotPolicyEmergency(label?: string, options?: Record<string, unknown>) {
+  const node = _Iot(label ?? "IotPolicyEmergency", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = iot_policy_emergencyIcon;
+  return node;
 }
 
-export class IotPolicy extends _Iot {
-  protected static _iconDataUrl = iot_policyIcon;
+export function IotPolicy(label?: string, options?: Record<string, unknown>) {
+  const node = _Iot(label ?? "IotPolicy", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = iot_policyIcon;
+  return node;
 }
 
-export class IotReportedState extends _Iot {
-  protected static _iconDataUrl = iot_reported_stateIcon;
+export function IotReportedState(label?: string, options?: Record<string, unknown>) {
+  const node = _Iot(label ?? "IotReportedState", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = iot_reported_stateIcon;
+  return node;
 }
 
-export class IotRule extends _Iot {
-  protected static _iconDataUrl = iot_ruleIcon;
+export function IotRule(label?: string, options?: Record<string, unknown>) {
+  const node = _Iot(label ?? "IotRule", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = iot_ruleIcon;
+  return node;
 }
 
-export class IotSensor extends _Iot {
-  protected static _iconDataUrl = iot_sensorIcon;
+export function IotSensor(label?: string, options?: Record<string, unknown>) {
+  const node = _Iot(label ?? "IotSensor", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = iot_sensorIcon;
+  return node;
 }
 
-export class IotServo extends _Iot {
-  protected static _iconDataUrl = iot_servoIcon;
+export function IotServo(label?: string, options?: Record<string, unknown>) {
+  const node = _Iot(label ?? "IotServo", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = iot_servoIcon;
+  return node;
 }
 
-export class IotShadow extends _Iot {
-  protected static _iconDataUrl = iot_shadowIcon;
+export function IotShadow(label?: string, options?: Record<string, unknown>) {
+  const node = _Iot(label ?? "IotShadow", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = iot_shadowIcon;
+  return node;
 }
 
-export class IotSimulator extends _Iot {
-  protected static _iconDataUrl = iot_simulatorIcon;
+export function IotSimulator(label?: string, options?: Record<string, unknown>) {
+  const node = _Iot(label ?? "IotSimulator", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = iot_simulatorIcon;
+  return node;
 }
 
-export class IotSitewise extends _Iot {
-  protected static _iconDataUrl = iot_sitewiseIcon;
+export function IotSitewise(label?: string, options?: Record<string, unknown>) {
+  const node = _Iot(label ?? "IotSitewise", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = iot_sitewiseIcon;
+  return node;
 }
 
-export class IotThermostat extends _Iot {
-  protected static _iconDataUrl = iot_thermostatIcon;
+export function IotThermostat(label?: string, options?: Record<string, unknown>) {
+  const node = _Iot(label ?? "IotThermostat", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = iot_thermostatIcon;
+  return node;
 }
 
-export class IotThingsGraph extends _Iot {
-  protected static _iconDataUrl = iot_things_graphIcon;
+export function IotThingsGraph(label?: string, options?: Record<string, unknown>) {
+  const node = _Iot(label ?? "IotThingsGraph", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = iot_things_graphIcon;
+  return node;
 }
 
-export class IotTopic extends _Iot {
-  protected static _iconDataUrl = iot_topicIcon;
+export function IotTopic(label?: string, options?: Record<string, unknown>) {
+  const node = _Iot(label ?? "IotTopic", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = iot_topicIcon;
+  return node;
 }
 
-export class IotTravel extends _Iot {
-  protected static _iconDataUrl = iot_travelIcon;
+export function IotTravel(label?: string, options?: Record<string, unknown>) {
+  const node = _Iot(label ?? "IotTravel", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = iot_travelIcon;
+  return node;
 }
 
-export class IotUtility extends _Iot {
-  protected static _iconDataUrl = iot_utilityIcon;
+export function IotUtility(label?: string, options?: Record<string, unknown>) {
+  const node = _Iot(label ?? "IotUtility", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = iot_utilityIcon;
+  return node;
 }
 
-export class IotWindfarm extends _Iot {
-  protected static _iconDataUrl = iot_windfarmIcon;
+export function IotWindfarm(label?: string, options?: Record<string, unknown>) {
+  const node = _Iot(label ?? "IotWindfarm", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = iot_windfarmIcon;
+  return node;
 }
 
 // Aliases

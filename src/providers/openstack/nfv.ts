@@ -1,10 +1,14 @@
 import { _Openstack } from "./index.js";
 import tackerIcon from "../../../resources/openstack/nfv/tacker.png";
 
-class _Nfv extends _Openstack {
-  protected static override _type = "nfv";
+function _Nfv(label?: string, options?: Record<string, unknown>) {
+  const node = _Openstack(label, options);
+  (node as unknown as Record<string, unknown>)._type = "nfv";
+  return node;
 }
 
-export class Tacker extends _Nfv {
-  protected static _iconDataUrl = tackerIcon;
+export function Tacker(label?: string, options?: Record<string, unknown>) {
+  const node = _Nfv(label ?? "Tacker", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = tackerIcon;
+  return node;
 }

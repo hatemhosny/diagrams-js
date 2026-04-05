@@ -3,18 +3,26 @@ import bitwardenIcon from "../../../resources/onprem/security/bitwarden.png";
 import trivyIcon from "../../../resources/onprem/security/trivy.png";
 import vaultIcon from "../../../resources/onprem/security/vault.png";
 
-class _Security extends _Onprem {
-  protected static override _type = "security";
+function _Security(label?: string, options?: Record<string, unknown>) {
+  const node = _Onprem(label, options);
+  (node as unknown as Record<string, unknown>)._type = "security";
+  return node;
 }
 
-export class Bitwarden extends _Security {
-  protected static _iconDataUrl = bitwardenIcon;
+export function Bitwarden(label?: string, options?: Record<string, unknown>) {
+  const node = _Security(label ?? "Bitwarden", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = bitwardenIcon;
+  return node;
 }
 
-export class Trivy extends _Security {
-  protected static _iconDataUrl = trivyIcon;
+export function Trivy(label?: string, options?: Record<string, unknown>) {
+  const node = _Security(label ?? "Trivy", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = trivyIcon;
+  return node;
 }
 
-export class Vault extends _Security {
-  protected static _iconDataUrl = vaultIcon;
+export function Vault(label?: string, options?: Record<string, unknown>) {
+  const node = _Security(label ?? "Vault", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = vaultIcon;
+  return node;
 }

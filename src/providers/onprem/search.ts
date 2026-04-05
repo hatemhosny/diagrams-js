@@ -1,10 +1,14 @@
 import { _Onprem } from "./index.js";
 import solrIcon from "../../../resources/onprem/search/solr.png";
 
-class _Search extends _Onprem {
-  protected static override _type = "search";
+function _Search(label?: string, options?: Record<string, unknown>) {
+  const node = _Onprem(label, options);
+  (node as unknown as Record<string, unknown>)._type = "search";
+  return node;
 }
 
-export class Solr extends _Search {
-  protected static _iconDataUrl = solrIcon;
+export function Solr(label?: string, options?: Record<string, unknown>) {
+  const node = _Search(label ?? "Solr", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = solrIcon;
+  return node;
 }

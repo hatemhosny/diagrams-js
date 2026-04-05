@@ -1,10 +1,14 @@
 import { _Gis } from "./index.js";
 import postgisIcon from "../../../resources/gis/database/postgis.png";
 
-class _Database extends _Gis {
-  protected static override _type = "database";
+function _Database(label?: string, options?: Record<string, unknown>) {
+  const node = _Gis(label, options);
+  (node as unknown as Record<string, unknown>)._type = "database";
+  return node;
 }
 
-export class Postgis extends _Database {
-  protected static _iconDataUrl = postgisIcon;
+export function Postgis(label?: string, options?: Record<string, unknown>) {
+  const node = _Database(label ?? "Postgis", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = postgisIcon;
+  return node;
 }

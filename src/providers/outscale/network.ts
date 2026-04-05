@@ -6,30 +6,44 @@ import nat_serviceIcon from "../../../resources/outscale/network/nat-service.png
 import netIcon from "../../../resources/outscale/network/net.png";
 import site_to_site_vpngIcon from "../../../resources/outscale/network/site-to-site-vpng.png";
 
-class _Network extends _Outscale {
-  protected static override _type = "network";
+function _Network(label?: string, options?: Record<string, unknown>) {
+  const node = _Outscale(label, options);
+  (node as unknown as Record<string, unknown>)._type = "network";
+  return node;
 }
 
-export class ClientVpn extends _Network {
-  protected static _iconDataUrl = client_vpnIcon;
+export function ClientVpn(label?: string, options?: Record<string, unknown>) {
+  const node = _Network(label ?? "ClientVpn", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = client_vpnIcon;
+  return node;
 }
 
-export class InternetService extends _Network {
-  protected static _iconDataUrl = internet_serviceIcon;
+export function InternetService(label?: string, options?: Record<string, unknown>) {
+  const node = _Network(label ?? "InternetService", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = internet_serviceIcon;
+  return node;
 }
 
-export class LoadBalancer extends _Network {
-  protected static _iconDataUrl = load_balancerIcon;
+export function LoadBalancer(label?: string, options?: Record<string, unknown>) {
+  const node = _Network(label ?? "LoadBalancer", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = load_balancerIcon;
+  return node;
 }
 
-export class NatService extends _Network {
-  protected static _iconDataUrl = nat_serviceIcon;
+export function NatService(label?: string, options?: Record<string, unknown>) {
+  const node = _Network(label ?? "NatService", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = nat_serviceIcon;
+  return node;
 }
 
-export class Net extends _Network {
-  protected static _iconDataUrl = netIcon;
+export function Net(label?: string, options?: Record<string, unknown>) {
+  const node = _Network(label ?? "Net", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = netIcon;
+  return node;
 }
 
-export class SiteToSiteVpng extends _Network {
-  protected static _iconDataUrl = site_to_site_vpngIcon;
+export function SiteToSiteVpng(label?: string, options?: Record<string, unknown>) {
+  const node = _Network(label ?? "SiteToSiteVpng", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = site_to_site_vpngIcon;
+  return node;
 }

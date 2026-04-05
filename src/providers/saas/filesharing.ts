@@ -1,10 +1,14 @@
 import { _Saas } from "./index.js";
 import nextcloudIcon from "../../../resources/saas/filesharing/nextcloud.png";
 
-class _Filesharing extends _Saas {
-  protected static override _type = "filesharing";
+function _Filesharing(label?: string, options?: Record<string, unknown>) {
+  const node = _Saas(label, options);
+  (node as unknown as Record<string, unknown>)._type = "filesharing";
+  return node;
 }
 
-export class Nextcloud extends _Filesharing {
-  protected static _iconDataUrl = nextcloudIcon;
+export function Nextcloud(label?: string, options?: Record<string, unknown>) {
+  const node = _Filesharing(label ?? "Nextcloud", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = nextcloudIcon;
+  return node;
 }

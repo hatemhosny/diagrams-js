@@ -1,10 +1,14 @@
 import { Node } from "../../Node.js";
 
-export class _Firebase extends Node {
-  protected static override _provider = "firebase";
-  protected static override _iconDir = "firebase";
+export function _Firebase(label?: string, options?: Record<string, unknown>) {
+  const node = Node(label ?? "Firebase", options);
+  (node as unknown as Record<string, unknown>)._provider = "firebase";
+  (node as unknown as Record<string, unknown>)._iconDir = "firebase";
+  return node;
 }
 
-export class Firebase extends _Firebase {
-  protected static override _icon = "firebase.png";
+export function Firebase(label?: string, options?: Record<string, unknown>) {
+  const node = _Firebase(label ?? "Firebase", options);
+  (node as unknown as Record<string, unknown>)._icon = "firebase.png";
+  return node;
 }

@@ -2,16 +2,22 @@ import { _Outscale } from "./index.js";
 import computeIcon from "../../../resources/outscale/compute/compute.png";
 import direct_connectIcon from "../../../resources/outscale/compute/direct-connect.png";
 
-class _Compute extends _Outscale {
-  protected static override _type = "compute";
+function _Compute(label?: string, options?: Record<string, unknown>) {
+  const node = _Outscale(label, options);
+  (node as unknown as Record<string, unknown>)._type = "compute";
+  return node;
 }
 
-export class Compute extends _Compute {
-  protected static _iconDataUrl = computeIcon;
+export function Compute(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "Compute", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = computeIcon;
+  return node;
 }
 
-export class DirectConnect extends _Compute {
-  protected static _iconDataUrl = direct_connectIcon;
+export function DirectConnect(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "DirectConnect", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = direct_connectIcon;
+  return node;
 }
 
 // Aliases

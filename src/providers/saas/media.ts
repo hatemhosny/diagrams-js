@@ -1,10 +1,14 @@
 import { _Saas } from "./index.js";
 import cloudinaryIcon from "../../../resources/saas/media/cloudinary.png";
 
-class _Media extends _Saas {
-  protected static override _type = "media";
+function _Media(label?: string, options?: Record<string, unknown>) {
+  const node = _Saas(label, options);
+  (node as unknown as Record<string, unknown>)._type = "media";
+  return node;
 }
 
-export class Cloudinary extends _Media {
-  protected static _iconDataUrl = cloudinaryIcon;
+export function Cloudinary(label?: string, options?: Record<string, unknown>) {
+  const node = _Media(label ?? "Cloudinary", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = cloudinaryIcon;
+  return node;
 }

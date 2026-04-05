@@ -9,42 +9,62 @@ import load_balancerIcon from "../../../resources/digitalocean/network/load-bala
 import managed_vpnIcon from "../../../resources/digitalocean/network/managed-vpn.png";
 import vpcIcon from "../../../resources/digitalocean/network/vpc.png";
 
-class _Network extends _Digitalocean {
-  protected static override _type = "network";
+function _Network(label?: string, options?: Record<string, unknown>) {
+  const node = _Digitalocean(label, options);
+  (node as unknown as Record<string, unknown>)._type = "network";
+  return node;
 }
 
-export class Certificate extends _Network {
-  protected static _iconDataUrl = certificateIcon;
+export function Certificate(label?: string, options?: Record<string, unknown>) {
+  const node = _Network(label ?? "Certificate", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = certificateIcon;
+  return node;
 }
 
-export class DomainRegistration extends _Network {
-  protected static _iconDataUrl = domain_registrationIcon;
+export function DomainRegistration(label?: string, options?: Record<string, unknown>) {
+  const node = _Network(label ?? "DomainRegistration", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = domain_registrationIcon;
+  return node;
 }
 
-export class Domain extends _Network {
-  protected static _iconDataUrl = domainIcon;
+export function Domain(label?: string, options?: Record<string, unknown>) {
+  const node = _Network(label ?? "Domain", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = domainIcon;
+  return node;
 }
 
-export class Firewall extends _Network {
-  protected static _iconDataUrl = firewallIcon;
+export function Firewall(label?: string, options?: Record<string, unknown>) {
+  const node = _Network(label ?? "Firewall", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = firewallIcon;
+  return node;
 }
 
-export class FloatingIp extends _Network {
-  protected static _iconDataUrl = floating_ipIcon;
+export function FloatingIp(label?: string, options?: Record<string, unknown>) {
+  const node = _Network(label ?? "FloatingIp", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = floating_ipIcon;
+  return node;
 }
 
-export class InternetGateway extends _Network {
-  protected static _iconDataUrl = internet_gatewayIcon;
+export function InternetGateway(label?: string, options?: Record<string, unknown>) {
+  const node = _Network(label ?? "InternetGateway", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = internet_gatewayIcon;
+  return node;
 }
 
-export class LoadBalancer extends _Network {
-  protected static _iconDataUrl = load_balancerIcon;
+export function LoadBalancer(label?: string, options?: Record<string, unknown>) {
+  const node = _Network(label ?? "LoadBalancer", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = load_balancerIcon;
+  return node;
 }
 
-export class ManagedVpn extends _Network {
-  protected static _iconDataUrl = managed_vpnIcon;
+export function ManagedVpn(label?: string, options?: Record<string, unknown>) {
+  const node = _Network(label ?? "ManagedVpn", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = managed_vpnIcon;
+  return node;
 }
 
-export class Vpc extends _Network {
-  protected static _iconDataUrl = vpcIcon;
+export function Vpc(label?: string, options?: Record<string, unknown>) {
+  const node = _Network(label ?? "Vpc", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = vpcIcon;
+  return node;
 }

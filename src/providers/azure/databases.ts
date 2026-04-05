@@ -27,114 +27,175 @@ import sql_serverIcon from "../../../resources/azure/databases/sql-server.png";
 import ssis_lift_and_shift_irIcon from "../../../resources/azure/databases/ssis-lift-and-shift-ir.png";
 import virtual_clustersIcon from "../../../resources/azure/databases/virtual-clusters.png";
 
-class _Databases extends _Azure {
-  protected static override _type = "databases";
+function _Databases(label?: string, options?: Record<string, unknown>) {
+  const node = _Azure(label, options);
+  (node as unknown as Record<string, unknown>)._type = "databases";
+  return node;
 }
 
-export class AzureCosmosDb extends _Databases {
-  protected static _iconDataUrl = azure_cosmos_dbIcon;
+export function AzureCosmosDb(label?: string, options?: Record<string, unknown>) {
+  const node = _Databases(label ?? "AzureCosmosDb", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_cosmos_dbIcon;
+  return node;
 }
 
-export class AzureDataExplorerClusters extends _Databases {
-  protected static _iconDataUrl = azure_data_explorer_clustersIcon;
+export function AzureDataExplorerClusters(label?: string, options?: Record<string, unknown>) {
+  const node = _Databases(label ?? "AzureDataExplorerClusters", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_data_explorer_clustersIcon;
+  return node;
 }
 
-export class AzureDatabaseMariadbServer extends _Databases {
-  protected static _iconDataUrl = azure_database_mariadb_serverIcon;
+export function AzureDatabaseMariadbServer(label?: string, options?: Record<string, unknown>) {
+  const node = _Databases(label ?? "AzureDatabaseMariadbServer", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_database_mariadb_serverIcon;
+  return node;
 }
 
-export class AzureDatabaseMigrationServices extends _Databases {
-  protected static _iconDataUrl = azure_database_migration_servicesIcon;
+export function AzureDatabaseMigrationServices(label?: string, options?: Record<string, unknown>) {
+  const node = _Databases(label ?? "AzureDatabaseMigrationServices", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_database_migration_servicesIcon;
+  return node;
 }
 
-export class AzureDatabaseMysqlServer extends _Databases {
-  protected static _iconDataUrl = azure_database_mysql_serverIcon;
+export function AzureDatabaseMysqlServer(label?: string, options?: Record<string, unknown>) {
+  const node = _Databases(label ?? "AzureDatabaseMysqlServer", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_database_mysql_serverIcon;
+  return node;
 }
 
-export class AzureDatabasePostgresqlServerGroup extends _Databases {
-  protected static _iconDataUrl = azure_database_postgresql_server_groupIcon;
+export function AzureDatabasePostgresqlServerGroup(
+  label?: string,
+  options?: Record<string, unknown>,
+) {
+  const node = _Databases(label ?? "AzureDatabasePostgresqlServerGroup", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl =
+    azure_database_postgresql_server_groupIcon;
+  return node;
 }
 
-export class AzureDatabasePostgresqlServer extends _Databases {
-  protected static _iconDataUrl = azure_database_postgresql_serverIcon;
+export function AzureDatabasePostgresqlServer(label?: string, options?: Record<string, unknown>) {
+  const node = _Databases(label ?? "AzureDatabasePostgresqlServer", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_database_postgresql_serverIcon;
+  return node;
 }
 
-export class AzurePurviewAccounts extends _Databases {
-  protected static _iconDataUrl = azure_purview_accountsIcon;
+export function AzurePurviewAccounts(label?: string, options?: Record<string, unknown>) {
+  const node = _Databases(label ?? "AzurePurviewAccounts", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_purview_accountsIcon;
+  return node;
 }
 
-export class AzureSQLEdge extends _Databases {
-  protected static _iconDataUrl = azure_sql_edgeIcon;
+export function AzureSQLEdge(label?: string, options?: Record<string, unknown>) {
+  const node = _Databases(label ?? "AzureSQLEdge", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_sql_edgeIcon;
+  return node;
 }
 
-export class AzureSQLServerStretchDatabases extends _Databases {
-  protected static _iconDataUrl = azure_sql_server_stretch_databasesIcon;
+export function AzureSQLServerStretchDatabases(label?: string, options?: Record<string, unknown>) {
+  const node = _Databases(label ?? "AzureSQLServerStretchDatabases", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl =
+    azure_sql_server_stretch_databasesIcon;
+  return node;
 }
 
-export class AzureSQLVM extends _Databases {
-  protected static _iconDataUrl = azure_sql_vmIcon;
+export function AzureSQLVM(label?: string, options?: Record<string, unknown>) {
+  const node = _Databases(label ?? "AzureSQLVM", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_sql_vmIcon;
+  return node;
 }
 
-export class AzureSQL extends _Databases {
-  protected static _iconDataUrl = azure_sqlIcon;
+export function AzureSQL(label?: string, options?: Record<string, unknown>) {
+  const node = _Databases(label ?? "AzureSQL", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_sqlIcon;
+  return node;
 }
 
-export class AzureSynapseAnalytics extends _Databases {
-  protected static _iconDataUrl = azure_synapse_analyticsIcon;
+export function AzureSynapseAnalytics(label?: string, options?: Record<string, unknown>) {
+  const node = _Databases(label ?? "AzureSynapseAnalytics", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_synapse_analyticsIcon;
+  return node;
 }
 
-export class CacheRedis extends _Databases {
-  protected static _iconDataUrl = cache_redisIcon;
+export function CacheRedis(label?: string, options?: Record<string, unknown>) {
+  const node = _Databases(label ?? "CacheRedis", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = cache_redisIcon;
+  return node;
 }
 
-export class DataFactories extends _Databases {
-  protected static _iconDataUrl = data_factoriesIcon;
+export function DataFactories(label?: string, options?: Record<string, unknown>) {
+  const node = _Databases(label ?? "DataFactories", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = data_factoriesIcon;
+  return node;
 }
 
-export class ElasticJobAgents extends _Databases {
-  protected static _iconDataUrl = elastic_job_agentsIcon;
+export function ElasticJobAgents(label?: string, options?: Record<string, unknown>) {
+  const node = _Databases(label ?? "ElasticJobAgents", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = elastic_job_agentsIcon;
+  return node;
 }
 
-export class InstancePools extends _Databases {
-  protected static _iconDataUrl = instance_poolsIcon;
+export function InstancePools(label?: string, options?: Record<string, unknown>) {
+  const node = _Databases(label ?? "InstancePools", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = instance_poolsIcon;
+  return node;
 }
 
-export class ManagedDatabase extends _Databases {
-  protected static _iconDataUrl = managed_databaseIcon;
+export function ManagedDatabase(label?: string, options?: Record<string, unknown>) {
+  const node = _Databases(label ?? "ManagedDatabase", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = managed_databaseIcon;
+  return node;
 }
 
-export class OracleDatabase extends _Databases {
-  protected static _iconDataUrl = oracle_databaseIcon;
+export function OracleDatabase(label?: string, options?: Record<string, unknown>) {
+  const node = _Databases(label ?? "OracleDatabase", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = oracle_databaseIcon;
+  return node;
 }
 
-export class SQLDataWarehouses extends _Databases {
-  protected static _iconDataUrl = sql_data_warehousesIcon;
+export function SQLDataWarehouses(label?: string, options?: Record<string, unknown>) {
+  const node = _Databases(label ?? "SQLDataWarehouses", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = sql_data_warehousesIcon;
+  return node;
 }
 
-export class SQLDatabase extends _Databases {
-  protected static _iconDataUrl = sql_databaseIcon;
+export function SQLDatabase(label?: string, options?: Record<string, unknown>) {
+  const node = _Databases(label ?? "SQLDatabase", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = sql_databaseIcon;
+  return node;
 }
 
-export class SQLElasticPools extends _Databases {
-  protected static _iconDataUrl = sql_elastic_poolsIcon;
+export function SQLElasticPools(label?: string, options?: Record<string, unknown>) {
+  const node = _Databases(label ?? "SQLElasticPools", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = sql_elastic_poolsIcon;
+  return node;
 }
 
-export class SQLManagedInstance extends _Databases {
-  protected static _iconDataUrl = sql_managed_instanceIcon;
+export function SQLManagedInstance(label?: string, options?: Record<string, unknown>) {
+  const node = _Databases(label ?? "SQLManagedInstance", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = sql_managed_instanceIcon;
+  return node;
 }
 
-export class SQLServerRegistries extends _Databases {
-  protected static _iconDataUrl = sql_server_registriesIcon;
+export function SQLServerRegistries(label?: string, options?: Record<string, unknown>) {
+  const node = _Databases(label ?? "SQLServerRegistries", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = sql_server_registriesIcon;
+  return node;
 }
 
-export class SQLServer extends _Databases {
-  protected static _iconDataUrl = sql_serverIcon;
+export function SQLServer(label?: string, options?: Record<string, unknown>) {
+  const node = _Databases(label ?? "SQLServer", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = sql_serverIcon;
+  return node;
 }
 
-export class SsisLiftAndShiftIr extends _Databases {
-  protected static _iconDataUrl = ssis_lift_and_shift_irIcon;
+export function SsisLiftAndShiftIr(label?: string, options?: Record<string, unknown>) {
+  const node = _Databases(label ?? "SsisLiftAndShiftIr", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = ssis_lift_and_shift_irIcon;
+  return node;
 }
 
-export class VirtualClusters extends _Databases {
-  protected static _iconDataUrl = virtual_clustersIcon;
+export function VirtualClusters(label?: string, options?: Record<string, unknown>) {
+  const node = _Databases(label ?? "VirtualClusters", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = virtual_clustersIcon;
+  return node;
 }

@@ -3,20 +3,28 @@ import argocdIcon from "../../../resources/onprem/gitops/argocd.png";
 import flaggerIcon from "../../../resources/onprem/gitops/flagger.png";
 import fluxIcon from "../../../resources/onprem/gitops/flux.png";
 
-class _Gitops extends _Onprem {
-  protected static override _type = "gitops";
+function _Gitops(label?: string, options?: Record<string, unknown>) {
+  const node = _Onprem(label, options);
+  (node as unknown as Record<string, unknown>)._type = "gitops";
+  return node;
 }
 
-export class Argocd extends _Gitops {
-  protected static _iconDataUrl = argocdIcon;
+export function Argocd(label?: string, options?: Record<string, unknown>) {
+  const node = _Gitops(label ?? "Argocd", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = argocdIcon;
+  return node;
 }
 
-export class Flagger extends _Gitops {
-  protected static _iconDataUrl = flaggerIcon;
+export function Flagger(label?: string, options?: Record<string, unknown>) {
+  const node = _Gitops(label ?? "Flagger", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = flaggerIcon;
+  return node;
 }
 
-export class Flux extends _Gitops {
-  protected static _iconDataUrl = fluxIcon;
+export function Flux(label?: string, options?: Record<string, unknown>) {
+  const node = _Gitops(label ?? "Flux", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = fluxIcon;
+  return node;
 }
 
 // Aliases

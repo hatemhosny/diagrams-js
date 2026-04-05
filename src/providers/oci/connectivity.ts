@@ -18,78 +18,116 @@ import nat_gatewayIcon from "../../../resources/oci/connectivity/nat-gateway.png
 import vpn_whiteIcon from "../../../resources/oci/connectivity/vpn-white.png";
 import vpnIcon from "../../../resources/oci/connectivity/vpn.png";
 
-class _Connectivity extends _Oci {
-  protected static override _type = "connectivity";
+function _Connectivity(label?: string, options?: Record<string, unknown>) {
+  const node = _Oci(label, options);
+  (node as unknown as Record<string, unknown>)._type = "connectivity";
+  return node;
 }
 
-export class BackboneWhite extends _Connectivity {
-  protected static _iconDataUrl = backbone_whiteIcon;
+export function BackboneWhite(label?: string, options?: Record<string, unknown>) {
+  const node = _Connectivity(label ?? "BackboneWhite", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = backbone_whiteIcon;
+  return node;
 }
 
-export class Backbone extends _Connectivity {
-  protected static _iconDataUrl = backboneIcon;
+export function Backbone(label?: string, options?: Record<string, unknown>) {
+  const node = _Connectivity(label ?? "Backbone", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = backboneIcon;
+  return node;
 }
 
-export class CDNWhite extends _Connectivity {
-  protected static _iconDataUrl = cdn_whiteIcon;
+export function CDNWhite(label?: string, options?: Record<string, unknown>) {
+  const node = _Connectivity(label ?? "CDNWhite", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = cdn_whiteIcon;
+  return node;
 }
 
-export class CDN extends _Connectivity {
-  protected static _iconDataUrl = cdnIcon;
+export function CDN(label?: string, options?: Record<string, unknown>) {
+  const node = _Connectivity(label ?? "CDN", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = cdnIcon;
+  return node;
 }
 
-export class CustomerDatacenter extends _Connectivity {
-  protected static _iconDataUrl = customer_datacenterIcon;
+export function CustomerDatacenter(label?: string, options?: Record<string, unknown>) {
+  const node = _Connectivity(label ?? "CustomerDatacenter", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = customer_datacenterIcon;
+  return node;
 }
 
-export class CustomerDatacntrWhite extends _Connectivity {
-  protected static _iconDataUrl = customer_datacntr_whiteIcon;
+export function CustomerDatacntrWhite(label?: string, options?: Record<string, unknown>) {
+  const node = _Connectivity(label ?? "CustomerDatacntrWhite", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = customer_datacntr_whiteIcon;
+  return node;
 }
 
-export class CustomerPremisesWhite extends _Connectivity {
-  protected static _iconDataUrl = customer_premises_whiteIcon;
+export function CustomerPremisesWhite(label?: string, options?: Record<string, unknown>) {
+  const node = _Connectivity(label ?? "CustomerPremisesWhite", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = customer_premises_whiteIcon;
+  return node;
 }
 
-export class CustomerPremises extends _Connectivity {
-  protected static _iconDataUrl = customer_premisesIcon;
+export function CustomerPremises(label?: string, options?: Record<string, unknown>) {
+  const node = _Connectivity(label ?? "CustomerPremises", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = customer_premisesIcon;
+  return node;
 }
 
-export class DisconnectedRegionsWhite extends _Connectivity {
-  protected static _iconDataUrl = disconnected_regions_whiteIcon;
+export function DisconnectedRegionsWhite(label?: string, options?: Record<string, unknown>) {
+  const node = _Connectivity(label ?? "DisconnectedRegionsWhite", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = disconnected_regions_whiteIcon;
+  return node;
 }
 
-export class DisconnectedRegions extends _Connectivity {
-  protected static _iconDataUrl = disconnected_regionsIcon;
+export function DisconnectedRegions(label?: string, options?: Record<string, unknown>) {
+  const node = _Connectivity(label ?? "DisconnectedRegions", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = disconnected_regionsIcon;
+  return node;
 }
 
-export class DNSWhite extends _Connectivity {
-  protected static _iconDataUrl = dns_whiteIcon;
+export function DNSWhite(label?: string, options?: Record<string, unknown>) {
+  const node = _Connectivity(label ?? "DNSWhite", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = dns_whiteIcon;
+  return node;
 }
 
-export class DNS extends _Connectivity {
-  protected static _iconDataUrl = dnsIcon;
+export function DNS(label?: string, options?: Record<string, unknown>) {
+  const node = _Connectivity(label ?? "DNS", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = dnsIcon;
+  return node;
 }
 
-export class FastConnectWhite extends _Connectivity {
-  protected static _iconDataUrl = fast_connect_whiteIcon;
+export function FastConnectWhite(label?: string, options?: Record<string, unknown>) {
+  const node = _Connectivity(label ?? "FastConnectWhite", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = fast_connect_whiteIcon;
+  return node;
 }
 
-export class FastConnect extends _Connectivity {
-  protected static _iconDataUrl = fast_connectIcon;
+export function FastConnect(label?: string, options?: Record<string, unknown>) {
+  const node = _Connectivity(label ?? "FastConnect", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = fast_connectIcon;
+  return node;
 }
 
-export class NATGatewayWhite extends _Connectivity {
-  protected static _iconDataUrl = nat_gateway_whiteIcon;
+export function NATGatewayWhite(label?: string, options?: Record<string, unknown>) {
+  const node = _Connectivity(label ?? "NATGatewayWhite", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = nat_gateway_whiteIcon;
+  return node;
 }
 
-export class NATGateway extends _Connectivity {
-  protected static _iconDataUrl = nat_gatewayIcon;
+export function NATGateway(label?: string, options?: Record<string, unknown>) {
+  const node = _Connectivity(label ?? "NATGateway", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = nat_gatewayIcon;
+  return node;
 }
 
-export class VPNWhite extends _Connectivity {
-  protected static _iconDataUrl = vpn_whiteIcon;
+export function VPNWhite(label?: string, options?: Record<string, unknown>) {
+  const node = _Connectivity(label ?? "VPNWhite", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = vpn_whiteIcon;
+  return node;
 }
 
-export class VPN extends _Connectivity {
-  protected static _iconDataUrl = vpnIcon;
+export function VPN(label?: string, options?: Record<string, unknown>) {
+  const node = _Connectivity(label ?? "VPN", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = vpnIcon;
+  return node;
 }

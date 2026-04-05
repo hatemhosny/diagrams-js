@@ -33,138 +33,221 @@ import time_series_insights_events_sourcesIcon from "../../../resources/azure/io
 import windows_10_iot_core_servicesIcon from "../../../resources/azure/iot/windows-10-iot-core-services.png";
 import windows10_core_servicesIcon from "../../../resources/azure/iot/windows10-core-services.png";
 
-class _Iot extends _Azure {
-  protected static override _type = "iot";
+function _Iot(label?: string, options?: Record<string, unknown>) {
+  const node = _Azure(label, options);
+  (node as unknown as Record<string, unknown>)._type = "iot";
+  return node;
 }
 
-export class AzureCosmosDb extends _Iot {
-  protected static _iconDataUrl = azure_cosmos_dbIcon;
+export function AzureCosmosDb(label?: string, options?: Record<string, unknown>) {
+  const node = _Iot(label ?? "AzureCosmosDb", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_cosmos_dbIcon;
+  return node;
 }
 
-export class AzureDataboxGateway extends _Iot {
-  protected static _iconDataUrl = azure_databox_gatewayIcon;
+export function AzureDataboxGateway(label?: string, options?: Record<string, unknown>) {
+  const node = _Iot(label ?? "AzureDataboxGateway", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_databox_gatewayIcon;
+  return node;
 }
 
-export class AzureIotOperations extends _Iot {
-  protected static _iconDataUrl = azure_iot_operationsIcon;
+export function AzureIotOperations(label?: string, options?: Record<string, unknown>) {
+  const node = _Iot(label ?? "AzureIotOperations", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_iot_operationsIcon;
+  return node;
 }
 
-export class AzureMapsAccounts extends _Iot {
-  protected static _iconDataUrl = azure_maps_accountsIcon;
+export function AzureMapsAccounts(label?: string, options?: Record<string, unknown>) {
+  const node = _Iot(label ?? "AzureMapsAccounts", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_maps_accountsIcon;
+  return node;
 }
 
-export class AzureStack extends _Iot {
-  protected static _iconDataUrl = azure_stackIcon;
+export function AzureStack(label?: string, options?: Record<string, unknown>) {
+  const node = _Iot(label ?? "AzureStack", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_stackIcon;
+  return node;
 }
 
-export class DeviceProvisioningServices extends _Iot {
-  protected static _iconDataUrl = device_provisioning_servicesIcon;
+export function DeviceProvisioningServices(label?: string, options?: Record<string, unknown>) {
+  const node = _Iot(label ?? "DeviceProvisioningServices", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = device_provisioning_servicesIcon;
+  return node;
 }
 
-export class DigitalTwins extends _Iot {
-  protected static _iconDataUrl = digital_twinsIcon;
+export function DigitalTwins(label?: string, options?: Record<string, unknown>) {
+  const node = _Iot(label ?? "DigitalTwins", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = digital_twinsIcon;
+  return node;
 }
 
-export class EventGridSubscriptions extends _Iot {
-  protected static _iconDataUrl = event_grid_subscriptionsIcon;
+export function EventGridSubscriptions(label?: string, options?: Record<string, unknown>) {
+  const node = _Iot(label ?? "EventGridSubscriptions", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = event_grid_subscriptionsIcon;
+  return node;
 }
 
-export class EventHubClusters extends _Iot {
-  protected static _iconDataUrl = event_hub_clustersIcon;
+export function EventHubClusters(label?: string, options?: Record<string, unknown>) {
+  const node = _Iot(label ?? "EventHubClusters", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = event_hub_clustersIcon;
+  return node;
 }
 
-export class EventHubs extends _Iot {
-  protected static _iconDataUrl = event_hubsIcon;
+export function EventHubs(label?: string, options?: Record<string, unknown>) {
+  const node = _Iot(label ?? "EventHubs", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = event_hubsIcon;
+  return node;
 }
 
-export class FunctionApps extends _Iot {
-  protected static _iconDataUrl = function_appsIcon;
+export function FunctionApps(label?: string, options?: Record<string, unknown>) {
+  const node = _Iot(label ?? "FunctionApps", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = function_appsIcon;
+  return node;
 }
 
-export class IndustrialIot extends _Iot {
-  protected static _iconDataUrl = industrial_iotIcon;
+export function IndustrialIot(label?: string, options?: Record<string, unknown>) {
+  const node = _Iot(label ?? "IndustrialIot", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = industrial_iotIcon;
+  return node;
 }
 
-export class IotCentralApplications extends _Iot {
-  protected static _iconDataUrl = iot_central_applicationsIcon;
+export function IotCentralApplications(label?: string, options?: Record<string, unknown>) {
+  const node = _Iot(label ?? "IotCentralApplications", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = iot_central_applicationsIcon;
+  return node;
 }
 
-export class IotEdge extends _Iot {
-  protected static _iconDataUrl = iot_edgeIcon;
+export function IotEdge(label?: string, options?: Record<string, unknown>) {
+  const node = _Iot(label ?? "IotEdge", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = iot_edgeIcon;
+  return node;
 }
 
-export class IotHubSecurity extends _Iot {
-  protected static _iconDataUrl = iot_hub_securityIcon;
+export function IotHubSecurity(label?: string, options?: Record<string, unknown>) {
+  const node = _Iot(label ?? "IotHubSecurity", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = iot_hub_securityIcon;
+  return node;
 }
 
-export class IotHub extends _Iot {
-  protected static _iconDataUrl = iot_hubIcon;
+export function IotHub(label?: string, options?: Record<string, unknown>) {
+  const node = _Iot(label ?? "IotHub", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = iot_hubIcon;
+  return node;
 }
 
-export class LogicApps extends _Iot {
-  protected static _iconDataUrl = logic_appsIcon;
+export function LogicApps(label?: string, options?: Record<string, unknown>) {
+  const node = _Iot(label ?? "LogicApps", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = logic_appsIcon;
+  return node;
 }
 
-export class MachineLearningStudioClassicWebServices extends _Iot {
-  protected static _iconDataUrl = machine_learning_studio_classic_web_servicesIcon;
+export function MachineLearningStudioClassicWebServices(
+  label?: string,
+  options?: Record<string, unknown>,
+) {
+  const node = _Iot(label ?? "MachineLearningStudioClassicWebServices", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl =
+    machine_learning_studio_classic_web_servicesIcon;
+  return node;
 }
 
-export class MachineLearningStudioWebServicePlans extends _Iot {
-  protected static _iconDataUrl = machine_learning_studio_web_service_plansIcon;
+export function MachineLearningStudioWebServicePlans(
+  label?: string,
+  options?: Record<string, unknown>,
+) {
+  const node = _Iot(label ?? "MachineLearningStudioWebServicePlans", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl =
+    machine_learning_studio_web_service_plansIcon;
+  return node;
 }
 
-export class MachineLearningStudioWorkspaces extends _Iot {
-  protected static _iconDataUrl = machine_learning_studio_workspacesIcon;
+export function MachineLearningStudioWorkspaces(label?: string, options?: Record<string, unknown>) {
+  const node = _Iot(label ?? "MachineLearningStudioWorkspaces", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl =
+    machine_learning_studio_workspacesIcon;
+  return node;
 }
 
-export class Maps extends _Iot {
-  protected static _iconDataUrl = mapsIcon;
+export function Maps(label?: string, options?: Record<string, unknown>) {
+  const node = _Iot(label ?? "Maps", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = mapsIcon;
+  return node;
 }
 
-export class NotificationHubNamespaces extends _Iot {
-  protected static _iconDataUrl = notification_hub_namespacesIcon;
+export function NotificationHubNamespaces(label?: string, options?: Record<string, unknown>) {
+  const node = _Iot(label ?? "NotificationHubNamespaces", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = notification_hub_namespacesIcon;
+  return node;
 }
 
-export class NotificationHubs extends _Iot {
-  protected static _iconDataUrl = notification_hubsIcon;
+export function NotificationHubs(label?: string, options?: Record<string, unknown>) {
+  const node = _Iot(label ?? "NotificationHubs", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = notification_hubsIcon;
+  return node;
 }
 
-export class Sphere extends _Iot {
-  protected static _iconDataUrl = sphereIcon;
+export function Sphere(label?: string, options?: Record<string, unknown>) {
+  const node = _Iot(label ?? "Sphere", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = sphereIcon;
+  return node;
 }
 
-export class StackHciPremium extends _Iot {
-  protected static _iconDataUrl = stack_hci_premiumIcon;
+export function StackHciPremium(label?: string, options?: Record<string, unknown>) {
+  const node = _Iot(label ?? "StackHciPremium", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = stack_hci_premiumIcon;
+  return node;
 }
 
-export class StreamAnalyticsJobs extends _Iot {
-  protected static _iconDataUrl = stream_analytics_jobsIcon;
+export function StreamAnalyticsJobs(label?: string, options?: Record<string, unknown>) {
+  const node = _Iot(label ?? "StreamAnalyticsJobs", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = stream_analytics_jobsIcon;
+  return node;
 }
 
-export class TimeSeriesDataSets extends _Iot {
-  protected static _iconDataUrl = time_series_data_setsIcon;
+export function TimeSeriesDataSets(label?: string, options?: Record<string, unknown>) {
+  const node = _Iot(label ?? "TimeSeriesDataSets", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = time_series_data_setsIcon;
+  return node;
 }
 
-export class TimeSeriesInsightsAccessPolicies extends _Iot {
-  protected static _iconDataUrl = time_series_insights_access_policiesIcon;
+export function TimeSeriesInsightsAccessPolicies(
+  label?: string,
+  options?: Record<string, unknown>,
+) {
+  const node = _Iot(label ?? "TimeSeriesInsightsAccessPolicies", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl =
+    time_series_insights_access_policiesIcon;
+  return node;
 }
 
-export class TimeSeriesInsightsEnvironments extends _Iot {
-  protected static _iconDataUrl = time_series_insights_environmentsIcon;
+export function TimeSeriesInsightsEnvironments(label?: string, options?: Record<string, unknown>) {
+  const node = _Iot(label ?? "TimeSeriesInsightsEnvironments", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = time_series_insights_environmentsIcon;
+  return node;
 }
 
-export class TimeSeriesInsightsEventSources extends _Iot {
-  protected static _iconDataUrl = time_series_insights_event_sourcesIcon;
+export function TimeSeriesInsightsEventSources(label?: string, options?: Record<string, unknown>) {
+  const node = _Iot(label ?? "TimeSeriesInsightsEventSources", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl =
+    time_series_insights_event_sourcesIcon;
+  return node;
 }
 
-export class TimeSeriesInsightsEventsSources extends _Iot {
-  protected static _iconDataUrl = time_series_insights_events_sourcesIcon;
+export function TimeSeriesInsightsEventsSources(label?: string, options?: Record<string, unknown>) {
+  const node = _Iot(label ?? "TimeSeriesInsightsEventsSources", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl =
+    time_series_insights_events_sourcesIcon;
+  return node;
 }
 
-export class Windows10IotCoreServices extends _Iot {
-  protected static _iconDataUrl = windows_10_iot_core_servicesIcon;
+export function Windows10IotCoreServices(label?: string, options?: Record<string, unknown>) {
+  const node = _Iot(label ?? "Windows10IotCoreServices", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = windows_10_iot_core_servicesIcon;
+  return node;
 }
 
-export class Windows10CoreServices extends _Iot {
-  protected static _iconDataUrl = windows10_core_servicesIcon;
+export function Windows10CoreServices(label?: string, options?: Record<string, unknown>) {
+  const node = _Iot(label ?? "Windows10CoreServices", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = windows10_core_servicesIcon;
+  return node;
 }

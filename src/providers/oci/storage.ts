@@ -18,78 +18,116 @@ import object_storageIcon from "../../../resources/oci/storage/object-storage.pn
 import storage_gateway_whiteIcon from "../../../resources/oci/storage/storage-gateway-white.png";
 import storage_gatewayIcon from "../../../resources/oci/storage/storage-gateway.png";
 
-class _Storage extends _Oci {
-  protected static override _type = "storage";
+function _Storage(label?: string, options?: Record<string, unknown>) {
+  const node = _Oci(label, options);
+  (node as unknown as Record<string, unknown>)._type = "storage";
+  return node;
 }
 
-export class BackupRestoreWhite extends _Storage {
-  protected static _iconDataUrl = backup_restore_whiteIcon;
+export function BackupRestoreWhite(label?: string, options?: Record<string, unknown>) {
+  const node = _Storage(label ?? "BackupRestoreWhite", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = backup_restore_whiteIcon;
+  return node;
 }
 
-export class BackupRestore extends _Storage {
-  protected static _iconDataUrl = backup_restoreIcon;
+export function BackupRestore(label?: string, options?: Record<string, unknown>) {
+  const node = _Storage(label ?? "BackupRestore", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = backup_restoreIcon;
+  return node;
 }
 
-export class BlockStorageCloneWhite extends _Storage {
-  protected static _iconDataUrl = block_storage_clone_whiteIcon;
+export function BlockStorageCloneWhite(label?: string, options?: Record<string, unknown>) {
+  const node = _Storage(label ?? "BlockStorageCloneWhite", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = block_storage_clone_whiteIcon;
+  return node;
 }
 
-export class BlockStorageClone extends _Storage {
-  protected static _iconDataUrl = block_storage_cloneIcon;
+export function BlockStorageClone(label?: string, options?: Record<string, unknown>) {
+  const node = _Storage(label ?? "BlockStorageClone", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = block_storage_cloneIcon;
+  return node;
 }
 
-export class BlockStorageWhite extends _Storage {
-  protected static _iconDataUrl = block_storage_whiteIcon;
+export function BlockStorageWhite(label?: string, options?: Record<string, unknown>) {
+  const node = _Storage(label ?? "BlockStorageWhite", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = block_storage_whiteIcon;
+  return node;
 }
 
-export class BlockStorage extends _Storage {
-  protected static _iconDataUrl = block_storageIcon;
+export function BlockStorage(label?: string, options?: Record<string, unknown>) {
+  const node = _Storage(label ?? "BlockStorage", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = block_storageIcon;
+  return node;
 }
 
-export class BucketsWhite extends _Storage {
-  protected static _iconDataUrl = buckets_whiteIcon;
+export function BucketsWhite(label?: string, options?: Record<string, unknown>) {
+  const node = _Storage(label ?? "BucketsWhite", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = buckets_whiteIcon;
+  return node;
 }
 
-export class Buckets extends _Storage {
-  protected static _iconDataUrl = bucketsIcon;
+export function Buckets(label?: string, options?: Record<string, unknown>) {
+  const node = _Storage(label ?? "Buckets", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = bucketsIcon;
+  return node;
 }
 
-export class DataTransferWhite extends _Storage {
-  protected static _iconDataUrl = data_transfer_whiteIcon;
+export function DataTransferWhite(label?: string, options?: Record<string, unknown>) {
+  const node = _Storage(label ?? "DataTransferWhite", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = data_transfer_whiteIcon;
+  return node;
 }
 
-export class DataTransfer extends _Storage {
-  protected static _iconDataUrl = data_transferIcon;
+export function DataTransfer(label?: string, options?: Record<string, unknown>) {
+  const node = _Storage(label ?? "DataTransfer", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = data_transferIcon;
+  return node;
 }
 
-export class ElasticPerformanceWhite extends _Storage {
-  protected static _iconDataUrl = elastic_performance_whiteIcon;
+export function ElasticPerformanceWhite(label?: string, options?: Record<string, unknown>) {
+  const node = _Storage(label ?? "ElasticPerformanceWhite", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = elastic_performance_whiteIcon;
+  return node;
 }
 
-export class ElasticPerformance extends _Storage {
-  protected static _iconDataUrl = elastic_performanceIcon;
+export function ElasticPerformance(label?: string, options?: Record<string, unknown>) {
+  const node = _Storage(label ?? "ElasticPerformance", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = elastic_performanceIcon;
+  return node;
 }
 
-export class FileStorageWhite extends _Storage {
-  protected static _iconDataUrl = file_storage_whiteIcon;
+export function FileStorageWhite(label?: string, options?: Record<string, unknown>) {
+  const node = _Storage(label ?? "FileStorageWhite", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = file_storage_whiteIcon;
+  return node;
 }
 
-export class FileStorage extends _Storage {
-  protected static _iconDataUrl = file_storageIcon;
+export function FileStorage(label?: string, options?: Record<string, unknown>) {
+  const node = _Storage(label ?? "FileStorage", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = file_storageIcon;
+  return node;
 }
 
-export class ObjectStorageWhite extends _Storage {
-  protected static _iconDataUrl = object_storage_whiteIcon;
+export function ObjectStorageWhite(label?: string, options?: Record<string, unknown>) {
+  const node = _Storage(label ?? "ObjectStorageWhite", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = object_storage_whiteIcon;
+  return node;
 }
 
-export class ObjectStorage extends _Storage {
-  protected static _iconDataUrl = object_storageIcon;
+export function ObjectStorage(label?: string, options?: Record<string, unknown>) {
+  const node = _Storage(label ?? "ObjectStorage", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = object_storageIcon;
+  return node;
 }
 
-export class StorageGatewayWhite extends _Storage {
-  protected static _iconDataUrl = storage_gateway_whiteIcon;
+export function StorageGatewayWhite(label?: string, options?: Record<string, unknown>) {
+  const node = _Storage(label ?? "StorageGatewayWhite", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = storage_gateway_whiteIcon;
+  return node;
 }
 
-export class StorageGateway extends _Storage {
-  protected static _iconDataUrl = storage_gatewayIcon;
+export function StorageGateway(label?: string, options?: Record<string, unknown>) {
+  const node = _Storage(label ?? "StorageGateway", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = storage_gatewayIcon;
+  return node;
 }

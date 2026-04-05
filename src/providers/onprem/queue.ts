@@ -7,36 +7,52 @@ import natsIcon from "../../../resources/onprem/queue/nats.png";
 import rabbitmqIcon from "../../../resources/onprem/queue/rabbitmq.png";
 import zeromqIcon from "../../../resources/onprem/queue/zeromq.png";
 
-class _Queue extends _Onprem {
-  protected static override _type = "queue";
+function _Queue(label?: string, options?: Record<string, unknown>) {
+  const node = _Onprem(label, options);
+  (node as unknown as Record<string, unknown>)._type = "queue";
+  return node;
 }
 
-export class Activemq extends _Queue {
-  protected static _iconDataUrl = activemqIcon;
+export function Activemq(label?: string, options?: Record<string, unknown>) {
+  const node = _Queue(label ?? "Activemq", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = activemqIcon;
+  return node;
 }
 
-export class Celery extends _Queue {
-  protected static _iconDataUrl = celeryIcon;
+export function Celery(label?: string, options?: Record<string, unknown>) {
+  const node = _Queue(label ?? "Celery", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = celeryIcon;
+  return node;
 }
 
-export class Emqx extends _Queue {
-  protected static _iconDataUrl = emqxIcon;
+export function Emqx(label?: string, options?: Record<string, unknown>) {
+  const node = _Queue(label ?? "Emqx", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = emqxIcon;
+  return node;
 }
 
-export class Kafka extends _Queue {
-  protected static _iconDataUrl = kafkaIcon;
+export function Kafka(label?: string, options?: Record<string, unknown>) {
+  const node = _Queue(label ?? "Kafka", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = kafkaIcon;
+  return node;
 }
 
-export class Nats extends _Queue {
-  protected static _iconDataUrl = natsIcon;
+export function Nats(label?: string, options?: Record<string, unknown>) {
+  const node = _Queue(label ?? "Nats", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = natsIcon;
+  return node;
 }
 
-export class Rabbitmq extends _Queue {
-  protected static _iconDataUrl = rabbitmqIcon;
+export function Rabbitmq(label?: string, options?: Record<string, unknown>) {
+  const node = _Queue(label ?? "Rabbitmq", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = rabbitmqIcon;
+  return node;
 }
 
-export class Zeromq extends _Queue {
-  protected static _iconDataUrl = zeromqIcon;
+export function Zeromq(label?: string, options?: Record<string, unknown>) {
+  const node = _Queue(label ?? "Zeromq", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = zeromqIcon;
+  return node;
 }
 
 // Aliases

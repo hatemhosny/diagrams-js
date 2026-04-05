@@ -5,26 +5,38 @@ import enterprise_searchIcon from "../../../resources/elastic/enterprisesearch/e
 import site_searchIcon from "../../../resources/elastic/enterprisesearch/site-search.png";
 import workplace_searchIcon from "../../../resources/elastic/enterprisesearch/workplace-search.png";
 
-class _Enterprisesearch extends _Elastic {
-  protected static override _type = "enterprisesearch";
+function _Enterprisesearch(label?: string, options?: Record<string, unknown>) {
+  const node = _Elastic(label, options);
+  (node as unknown as Record<string, unknown>)._type = "enterprisesearch";
+  return node;
 }
 
-export class AppSearch extends _Enterprisesearch {
-  protected static _iconDataUrl = app_searchIcon;
+export function AppSearch(label?: string, options?: Record<string, unknown>) {
+  const node = _Enterprisesearch(label ?? "AppSearch", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = app_searchIcon;
+  return node;
 }
 
-export class Crawler extends _Enterprisesearch {
-  protected static _iconDataUrl = crawlerIcon;
+export function Crawler(label?: string, options?: Record<string, unknown>) {
+  const node = _Enterprisesearch(label ?? "Crawler", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = crawlerIcon;
+  return node;
 }
 
-export class EnterpriseSearch extends _Enterprisesearch {
-  protected static _iconDataUrl = enterprise_searchIcon;
+export function EnterpriseSearch(label?: string, options?: Record<string, unknown>) {
+  const node = _Enterprisesearch(label ?? "EnterpriseSearch", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = enterprise_searchIcon;
+  return node;
 }
 
-export class SiteSearch extends _Enterprisesearch {
-  protected static _iconDataUrl = site_searchIcon;
+export function SiteSearch(label?: string, options?: Record<string, unknown>) {
+  const node = _Enterprisesearch(label ?? "SiteSearch", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = site_searchIcon;
+  return node;
 }
 
-export class WorkplaceSearch extends _Enterprisesearch {
-  protected static _iconDataUrl = workplace_searchIcon;
+export function WorkplaceSearch(label?: string, options?: Record<string, unknown>) {
+  const node = _Enterprisesearch(label ?? "WorkplaceSearch", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = workplace_searchIcon;
+  return node;
 }

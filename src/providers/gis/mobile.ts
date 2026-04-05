@@ -3,18 +3,26 @@ import merginIcon from "../../../resources/gis/mobile/mergin.png";
 import qfieldIcon from "../../../resources/gis/mobile/qfield.png";
 import smashIcon from "../../../resources/gis/mobile/smash.png";
 
-class _Mobile extends _Gis {
-  protected static override _type = "mobile";
+function _Mobile(label?: string, options?: Record<string, unknown>) {
+  const node = _Gis(label, options);
+  (node as unknown as Record<string, unknown>)._type = "mobile";
+  return node;
 }
 
-export class Mergin extends _Mobile {
-  protected static _iconDataUrl = merginIcon;
+export function Mergin(label?: string, options?: Record<string, unknown>) {
+  const node = _Mobile(label ?? "Mergin", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = merginIcon;
+  return node;
 }
 
-export class Qfield extends _Mobile {
-  protected static _iconDataUrl = qfieldIcon;
+export function Qfield(label?: string, options?: Record<string, unknown>) {
+  const node = _Mobile(label ?? "Qfield", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = qfieldIcon;
+  return node;
 }
 
-export class Smash extends _Mobile {
-  protected static _iconDataUrl = smashIcon;
+export function Smash(label?: string, options?: Record<string, unknown>) {
+  const node = _Mobile(label ?? "Smash", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = smashIcon;
+  return node;
 }

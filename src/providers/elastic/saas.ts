@@ -2,14 +2,20 @@ import { _Elastic } from "./index.js";
 import cloudIcon from "../../../resources/elastic/saas/cloud.png";
 import elasticIcon from "../../../resources/elastic/saas/elastic.png";
 
-class _Saas extends _Elastic {
-  protected static override _type = "saas";
+function _Saas(label?: string, options?: Record<string, unknown>) {
+  const node = _Elastic(label, options);
+  (node as unknown as Record<string, unknown>)._type = "saas";
+  return node;
 }
 
-export class Cloud extends _Saas {
-  protected static _iconDataUrl = cloudIcon;
+export function Cloud(label?: string, options?: Record<string, unknown>) {
+  const node = _Saas(label ?? "Cloud", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = cloudIcon;
+  return node;
 }
 
-export class Elastic extends _Saas {
-  protected static _iconDataUrl = elasticIcon;
+export function Elastic(label?: string, options?: Record<string, unknown>) {
+  const node = _Saas(label ?? "Elastic", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = elasticIcon;
+  return node;
 }

@@ -4,22 +4,32 @@ import spaceIcon from "../../../resources/digitalocean/storage/space.png";
 import volume_snapshotIcon from "../../../resources/digitalocean/storage/volume-snapshot.png";
 import volumeIcon from "../../../resources/digitalocean/storage/volume.png";
 
-class _Storage extends _Digitalocean {
-  protected static override _type = "storage";
+function _Storage(label?: string, options?: Record<string, unknown>) {
+  const node = _Digitalocean(label, options);
+  (node as unknown as Record<string, unknown>)._type = "storage";
+  return node;
 }
 
-export class Folder extends _Storage {
-  protected static _iconDataUrl = folderIcon;
+export function Folder(label?: string, options?: Record<string, unknown>) {
+  const node = _Storage(label ?? "Folder", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = folderIcon;
+  return node;
 }
 
-export class Space extends _Storage {
-  protected static _iconDataUrl = spaceIcon;
+export function Space(label?: string, options?: Record<string, unknown>) {
+  const node = _Storage(label ?? "Space", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = spaceIcon;
+  return node;
 }
 
-export class VolumeSnapshot extends _Storage {
-  protected static _iconDataUrl = volume_snapshotIcon;
+export function VolumeSnapshot(label?: string, options?: Record<string, unknown>) {
+  const node = _Storage(label ?? "VolumeSnapshot", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = volume_snapshotIcon;
+  return node;
 }
 
-export class Volume extends _Storage {
-  protected static _iconDataUrl = volumeIcon;
+export function Volume(label?: string, options?: Record<string, unknown>) {
+  const node = _Storage(label ?? "Volume", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = volumeIcon;
+  return node;
 }

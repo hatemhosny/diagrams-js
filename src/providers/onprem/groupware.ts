@@ -1,10 +1,14 @@
 import { _Onprem } from "./index.js";
 import nextcloudIcon from "../../../resources/onprem/groupware/nextcloud.png";
 
-class _Groupware extends _Onprem {
-  protected static override _type = "groupware";
+function _Groupware(label?: string, options?: Record<string, unknown>) {
+  const node = _Onprem(label, options);
+  (node as unknown as Record<string, unknown>)._type = "groupware";
+  return node;
 }
 
-export class Nextcloud extends _Groupware {
-  protected static _iconDataUrl = nextcloudIcon;
+export function Nextcloud(label?: string, options?: Record<string, unknown>) {
+  const node = _Groupware(label ?? "Nextcloud", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = nextcloudIcon;
+  return node;
 }

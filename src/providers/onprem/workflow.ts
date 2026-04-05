@@ -4,24 +4,34 @@ import digdagIcon from "../../../resources/onprem/workflow/digdag.png";
 import kubeflowIcon from "../../../resources/onprem/workflow/kubeflow.png";
 import nifiIcon from "../../../resources/onprem/workflow/nifi.png";
 
-class _Workflow extends _Onprem {
-  protected static override _type = "workflow";
+function _Workflow(label?: string, options?: Record<string, unknown>) {
+  const node = _Onprem(label, options);
+  (node as unknown as Record<string, unknown>)._type = "workflow";
+  return node;
 }
 
-export class Airflow extends _Workflow {
-  protected static _iconDataUrl = airflowIcon;
+export function Airflow(label?: string, options?: Record<string, unknown>) {
+  const node = _Workflow(label ?? "Airflow", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = airflowIcon;
+  return node;
 }
 
-export class Digdag extends _Workflow {
-  protected static _iconDataUrl = digdagIcon;
+export function Digdag(label?: string, options?: Record<string, unknown>) {
+  const node = _Workflow(label ?? "Digdag", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = digdagIcon;
+  return node;
 }
 
-export class Kubeflow extends _Workflow {
-  protected static _iconDataUrl = kubeflowIcon;
+export function Kubeflow(label?: string, options?: Record<string, unknown>) {
+  const node = _Workflow(label ?? "Kubeflow", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = kubeflowIcon;
+  return node;
 }
 
-export class Nifi extends _Workflow {
-  protected static _iconDataUrl = nifiIcon;
+export function Nifi(label?: string, options?: Record<string, unknown>) {
+  const node = _Workflow(label ?? "Nifi", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = nifiIcon;
+  return node;
 }
 
 // Aliases

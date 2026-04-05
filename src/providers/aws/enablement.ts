@@ -5,26 +5,38 @@ import managed_servicesIcon from "../../../resources/aws/enablement/managed-serv
 import professional_servicesIcon from "../../../resources/aws/enablement/professional-services.png";
 import supportIcon from "../../../resources/aws/enablement/support.png";
 
-class _Enablement extends _Aws {
-  protected static override _type = "enablement";
+function _Enablement(label?: string, options?: Record<string, unknown>) {
+  const node = _Aws(label, options);
+  (node as unknown as Record<string, unknown>)._type = "enablement";
+  return node;
 }
 
-export class CustomerEnablement extends _Enablement {
-  protected static _iconDataUrl = customer_enablementIcon;
+export function CustomerEnablement(label?: string, options?: Record<string, unknown>) {
+  const node = _Enablement(label ?? "CustomerEnablement", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = customer_enablementIcon;
+  return node;
 }
 
-export class Iq extends _Enablement {
-  protected static _iconDataUrl = iqIcon;
+export function Iq(label?: string, options?: Record<string, unknown>) {
+  const node = _Enablement(label ?? "Iq", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = iqIcon;
+  return node;
 }
 
-export class ManagedServices extends _Enablement {
-  protected static _iconDataUrl = managed_servicesIcon;
+export function ManagedServices(label?: string, options?: Record<string, unknown>) {
+  const node = _Enablement(label ?? "ManagedServices", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = managed_servicesIcon;
+  return node;
 }
 
-export class ProfessionalServices extends _Enablement {
-  protected static _iconDataUrl = professional_servicesIcon;
+export function ProfessionalServices(label?: string, options?: Record<string, unknown>) {
+  const node = _Enablement(label ?? "ProfessionalServices", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = professional_servicesIcon;
+  return node;
 }
 
-export class Support extends _Enablement {
-  protected static _iconDataUrl = supportIcon;
+export function Support(label?: string, options?: Record<string, unknown>) {
+  const node = _Enablement(label ?? "Support", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = supportIcon;
+  return node;
 }

@@ -18,78 +18,116 @@ import peer_servicesIcon from "../../../resources/ibm/infrastructure/peer-servic
 import service_discovery_configurationIcon from "../../../resources/ibm/infrastructure/service-discovery-configuration.png";
 import transformation_connectivityIcon from "../../../resources/ibm/infrastructure/transformation-connectivity.png";
 
-class _Infrastructure extends _Ibm {
-  protected static override _type = "infrastructure";
+function _Infrastructure(label?: string, options?: Record<string, unknown>) {
+  const node = _Ibm(label, options);
+  (node as unknown as Record<string, unknown>)._type = "infrastructure";
+  return node;
 }
 
-export class Channels extends _Infrastructure {
-  protected static _iconDataUrl = channelsIcon;
+export function Channels(label?: string, options?: Record<string, unknown>) {
+  const node = _Infrastructure(label ?? "Channels", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = channelsIcon;
+  return node;
 }
 
-export class CloudMessaging extends _Infrastructure {
-  protected static _iconDataUrl = cloud_messagingIcon;
+export function CloudMessaging(label?: string, options?: Record<string, unknown>) {
+  const node = _Infrastructure(label ?? "CloudMessaging", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = cloud_messagingIcon;
+  return node;
 }
 
-export class Dashboard extends _Infrastructure {
-  protected static _iconDataUrl = dashboardIcon;
+export function Dashboard(label?: string, options?: Record<string, unknown>) {
+  const node = _Infrastructure(label ?? "Dashboard", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = dashboardIcon;
+  return node;
 }
 
-export class Diagnostics extends _Infrastructure {
-  protected static _iconDataUrl = diagnosticsIcon;
+export function Diagnostics(label?: string, options?: Record<string, unknown>) {
+  const node = _Infrastructure(label ?? "Diagnostics", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = diagnosticsIcon;
+  return node;
 }
 
-export class EdgeServices extends _Infrastructure {
-  protected static _iconDataUrl = edge_servicesIcon;
+export function EdgeServices(label?: string, options?: Record<string, unknown>) {
+  const node = _Infrastructure(label ?? "EdgeServices", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = edge_servicesIcon;
+  return node;
 }
 
-export class EnterpriseMessaging extends _Infrastructure {
-  protected static _iconDataUrl = enterprise_messagingIcon;
+export function EnterpriseMessaging(label?: string, options?: Record<string, unknown>) {
+  const node = _Infrastructure(label ?? "EnterpriseMessaging", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = enterprise_messagingIcon;
+  return node;
 }
 
-export class EventFeed extends _Infrastructure {
-  protected static _iconDataUrl = event_feedIcon;
+export function EventFeed(label?: string, options?: Record<string, unknown>) {
+  const node = _Infrastructure(label ?? "EventFeed", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = event_feedIcon;
+  return node;
 }
 
-export class InfrastructureServices extends _Infrastructure {
-  protected static _iconDataUrl = infrastructure_servicesIcon;
+export function InfrastructureServices(label?: string, options?: Record<string, unknown>) {
+  const node = _Infrastructure(label ?? "InfrastructureServices", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = infrastructure_servicesIcon;
+  return node;
 }
 
-export class InterserviceCommunication extends _Infrastructure {
-  protected static _iconDataUrl = interservice_communicationIcon;
+export function InterserviceCommunication(label?: string, options?: Record<string, unknown>) {
+  const node = _Infrastructure(label ?? "InterserviceCommunication", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = interservice_communicationIcon;
+  return node;
 }
 
-export class LoadBalancingRouting extends _Infrastructure {
-  protected static _iconDataUrl = load_balancing_routingIcon;
+export function LoadBalancingRouting(label?: string, options?: Record<string, unknown>) {
+  const node = _Infrastructure(label ?? "LoadBalancingRouting", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = load_balancing_routingIcon;
+  return node;
 }
 
-export class MicroservicesMesh extends _Infrastructure {
-  protected static _iconDataUrl = microservices_meshIcon;
+export function MicroservicesMesh(label?: string, options?: Record<string, unknown>) {
+  const node = _Infrastructure(label ?? "MicroservicesMesh", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = microservices_meshIcon;
+  return node;
 }
 
-export class MobileBackend extends _Infrastructure {
-  protected static _iconDataUrl = mobile_backendIcon;
+export function MobileBackend(label?: string, options?: Record<string, unknown>) {
+  const node = _Infrastructure(label ?? "MobileBackend", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = mobile_backendIcon;
+  return node;
 }
 
-export class MobileProviderNetwork extends _Infrastructure {
-  protected static _iconDataUrl = mobile_provider_networkIcon;
+export function MobileProviderNetwork(label?: string, options?: Record<string, unknown>) {
+  const node = _Infrastructure(label ?? "MobileProviderNetwork", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = mobile_provider_networkIcon;
+  return node;
 }
 
-export class MonitoringLogging extends _Infrastructure {
-  protected static _iconDataUrl = monitoring_loggingIcon;
+export function MonitoringLogging(label?: string, options?: Record<string, unknown>) {
+  const node = _Infrastructure(label ?? "MonitoringLogging", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = monitoring_loggingIcon;
+  return node;
 }
 
-export class Monitoring extends _Infrastructure {
-  protected static _iconDataUrl = monitoringIcon;
+export function Monitoring(label?: string, options?: Record<string, unknown>) {
+  const node = _Infrastructure(label ?? "Monitoring", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = monitoringIcon;
+  return node;
 }
 
-export class PeerServices extends _Infrastructure {
-  protected static _iconDataUrl = peer_servicesIcon;
+export function PeerServices(label?: string, options?: Record<string, unknown>) {
+  const node = _Infrastructure(label ?? "PeerServices", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = peer_servicesIcon;
+  return node;
 }
 
-export class ServiceDiscoveryConfiguration extends _Infrastructure {
-  protected static _iconDataUrl = service_discovery_configurationIcon;
+export function ServiceDiscoveryConfiguration(label?: string, options?: Record<string, unknown>) {
+  const node = _Infrastructure(label ?? "ServiceDiscoveryConfiguration", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = service_discovery_configurationIcon;
+  return node;
 }
 
-export class TransformationConnectivity extends _Infrastructure {
-  protected static _iconDataUrl = transformation_connectivityIcon;
+export function TransformationConnectivity(label?: string, options?: Record<string, unknown>) {
+  const node = _Infrastructure(label ?? "TransformationConnectivity", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = transformation_connectivityIcon;
+  return node;
 }

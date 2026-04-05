@@ -2,14 +2,20 @@ import { _Gis } from "./index.js";
 import maptunikIcon from "../../../resources/gis/desktop/maptunik.png";
 import qgisIcon from "../../../resources/gis/desktop/qgis.png";
 
-class _Desktop extends _Gis {
-  protected static override _type = "desktop";
+function _Desktop(label?: string, options?: Record<string, unknown>) {
+  const node = _Gis(label, options);
+  (node as unknown as Record<string, unknown>)._type = "desktop";
+  return node;
 }
 
-export class Maptunik extends _Desktop {
-  protected static _iconDataUrl = maptunikIcon;
+export function Maptunik(label?: string, options?: Record<string, unknown>) {
+  const node = _Desktop(label ?? "Maptunik", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = maptunikIcon;
+  return node;
 }
 
-export class QGIS extends _Desktop {
-  protected static _iconDataUrl = qgisIcon;
+export function QGIS(label?: string, options?: Record<string, unknown>) {
+  const node = _Desktop(label ?? "QGIS", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = qgisIcon;
+  return node;
 }

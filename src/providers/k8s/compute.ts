@@ -7,36 +7,52 @@ import podIcon from "../../../resources/k8s/compute/pod.png";
 import rsIcon from "../../../resources/k8s/compute/rs.png";
 import stsIcon from "../../../resources/k8s/compute/sts.png";
 
-class _Compute extends _K8s {
-  protected static override _type = "compute";
+function _Compute(label?: string, options?: Record<string, unknown>) {
+  const node = _K8s(label, options);
+  (node as unknown as Record<string, unknown>)._type = "compute";
+  return node;
 }
 
-export class Cronjob extends _Compute {
-  protected static _iconDataUrl = cronjobIcon;
+export function Cronjob(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "Cronjob", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = cronjobIcon;
+  return node;
 }
 
-export class Deploy extends _Compute {
-  protected static _iconDataUrl = deployIcon;
+export function Deploy(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "Deploy", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = deployIcon;
+  return node;
 }
 
-export class DS extends _Compute {
-  protected static _iconDataUrl = dsIcon;
+export function DS(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "DS", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = dsIcon;
+  return node;
 }
 
-export class Job extends _Compute {
-  protected static _iconDataUrl = jobIcon;
+export function Job(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "Job", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = jobIcon;
+  return node;
 }
 
-export class Pod extends _Compute {
-  protected static _iconDataUrl = podIcon;
+export function Pod(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "Pod", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = podIcon;
+  return node;
 }
 
-export class RS extends _Compute {
-  protected static _iconDataUrl = rsIcon;
+export function RS(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "RS", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = rsIcon;
+  return node;
 }
 
-export class STS extends _Compute {
-  protected static _iconDataUrl = stsIcon;
+export function STS(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "STS", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = stsIcon;
+  return node;
 }
 
 // Aliases

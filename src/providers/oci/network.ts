@@ -16,70 +16,104 @@ import service_gatewayIcon from "../../../resources/oci/network/service-gateway.
 import vcn_whiteIcon from "../../../resources/oci/network/vcn-white.png";
 import vcnIcon from "../../../resources/oci/network/vcn.png";
 
-class _Network extends _Oci {
-  protected static override _type = "network";
+function _Network(label?: string, options?: Record<string, unknown>) {
+  const node = _Oci(label, options);
+  (node as unknown as Record<string, unknown>)._type = "network";
+  return node;
 }
 
-export class DrgWhite extends _Network {
-  protected static _iconDataUrl = drg_whiteIcon;
+export function DrgWhite(label?: string, options?: Record<string, unknown>) {
+  const node = _Network(label ?? "DrgWhite", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = drg_whiteIcon;
+  return node;
 }
 
-export class Drg extends _Network {
-  protected static _iconDataUrl = drgIcon;
+export function Drg(label?: string, options?: Record<string, unknown>) {
+  const node = _Network(label ?? "Drg", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = drgIcon;
+  return node;
 }
 
-export class FirewallWhite extends _Network {
-  protected static _iconDataUrl = firewall_whiteIcon;
+export function FirewallWhite(label?: string, options?: Record<string, unknown>) {
+  const node = _Network(label ?? "FirewallWhite", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = firewall_whiteIcon;
+  return node;
 }
 
-export class Firewall extends _Network {
-  protected static _iconDataUrl = firewallIcon;
+export function Firewall(label?: string, options?: Record<string, unknown>) {
+  const node = _Network(label ?? "Firewall", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = firewallIcon;
+  return node;
 }
 
-export class InternetGatewayWhite extends _Network {
-  protected static _iconDataUrl = internet_gateway_whiteIcon;
+export function InternetGatewayWhite(label?: string, options?: Record<string, unknown>) {
+  const node = _Network(label ?? "InternetGatewayWhite", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = internet_gateway_whiteIcon;
+  return node;
 }
 
-export class InternetGateway extends _Network {
-  protected static _iconDataUrl = internet_gatewayIcon;
+export function InternetGateway(label?: string, options?: Record<string, unknown>) {
+  const node = _Network(label ?? "InternetGateway", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = internet_gatewayIcon;
+  return node;
 }
 
-export class LoadBalancerWhite extends _Network {
-  protected static _iconDataUrl = load_balancer_whiteIcon;
+export function LoadBalancerWhite(label?: string, options?: Record<string, unknown>) {
+  const node = _Network(label ?? "LoadBalancerWhite", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = load_balancer_whiteIcon;
+  return node;
 }
 
-export class LoadBalancer extends _Network {
-  protected static _iconDataUrl = load_balancerIcon;
+export function LoadBalancer(label?: string, options?: Record<string, unknown>) {
+  const node = _Network(label ?? "LoadBalancer", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = load_balancerIcon;
+  return node;
 }
 
-export class RouteTableWhite extends _Network {
-  protected static _iconDataUrl = route_table_whiteIcon;
+export function RouteTableWhite(label?: string, options?: Record<string, unknown>) {
+  const node = _Network(label ?? "RouteTableWhite", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = route_table_whiteIcon;
+  return node;
 }
 
-export class RouteTable extends _Network {
-  protected static _iconDataUrl = route_tableIcon;
+export function RouteTable(label?: string, options?: Record<string, unknown>) {
+  const node = _Network(label ?? "RouteTable", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = route_tableIcon;
+  return node;
 }
 
-export class SecurityListsWhite extends _Network {
-  protected static _iconDataUrl = security_lists_whiteIcon;
+export function SecurityListsWhite(label?: string, options?: Record<string, unknown>) {
+  const node = _Network(label ?? "SecurityListsWhite", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = security_lists_whiteIcon;
+  return node;
 }
 
-export class SecurityLists extends _Network {
-  protected static _iconDataUrl = security_listsIcon;
+export function SecurityLists(label?: string, options?: Record<string, unknown>) {
+  const node = _Network(label ?? "SecurityLists", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = security_listsIcon;
+  return node;
 }
 
-export class ServiceGatewayWhite extends _Network {
-  protected static _iconDataUrl = service_gateway_whiteIcon;
+export function ServiceGatewayWhite(label?: string, options?: Record<string, unknown>) {
+  const node = _Network(label ?? "ServiceGatewayWhite", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = service_gateway_whiteIcon;
+  return node;
 }
 
-export class ServiceGateway extends _Network {
-  protected static _iconDataUrl = service_gatewayIcon;
+export function ServiceGateway(label?: string, options?: Record<string, unknown>) {
+  const node = _Network(label ?? "ServiceGateway", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = service_gatewayIcon;
+  return node;
 }
 
-export class VcnWhite extends _Network {
-  protected static _iconDataUrl = vcn_whiteIcon;
+export function VcnWhite(label?: string, options?: Record<string, unknown>) {
+  const node = _Network(label ?? "VcnWhite", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = vcn_whiteIcon;
+  return node;
 }
 
-export class Vcn extends _Network {
-  protected static _iconDataUrl = vcnIcon;
+export function Vcn(label?: string, options?: Record<string, unknown>) {
+  const node = _Network(label ?? "Vcn", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = vcnIcon;
+  return node;
 }

@@ -1,10 +1,14 @@
 import { Node } from "../../Node.js";
 
-export class _Ibm extends Node {
-  protected static override _provider = "ibm";
-  protected static override _iconDir = "ibm";
+export function _Ibm(label?: string, options?: Record<string, unknown>) {
+  const node = Node(label ?? "Ibm", options);
+  (node as unknown as Record<string, unknown>)._provider = "ibm";
+  (node as unknown as Record<string, unknown>)._iconDir = "ibm";
+  return node;
 }
 
-export class Ibm extends _Ibm {
-  protected static override _icon = "ibm.png";
+export function Ibm(label?: string, options?: Record<string, unknown>) {
+  const node = _Ibm(label ?? "Ibm", options);
+  (node as unknown as Record<string, unknown>)._icon = "ibm.png";
+  return node;
 }

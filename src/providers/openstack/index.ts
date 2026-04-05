@@ -1,10 +1,14 @@
 import { Node } from "../../Node.js";
 
-export class _Openstack extends Node {
-  protected static override _provider = "openstack";
-  protected static override _iconDir = "openstack";
+export function _Openstack(label?: string, options?: Record<string, unknown>) {
+  const node = Node(label ?? "Openstack", options);
+  (node as unknown as Record<string, unknown>)._provider = "openstack";
+  (node as unknown as Record<string, unknown>)._iconDir = "openstack";
+  return node;
 }
 
-export class Openstack extends _Openstack {
-  protected static override _icon = "openstack.png";
+export function Openstack(label?: string, options?: Record<string, unknown>) {
+  const node = _Openstack(label ?? "Openstack", options);
+  (node as unknown as Record<string, unknown>)._icon = "openstack.png";
+  return node;
 }

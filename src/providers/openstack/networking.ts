@@ -3,18 +3,26 @@ import designateIcon from "../../../resources/openstack/networking/designate.png
 import neutronIcon from "../../../resources/openstack/networking/neutron.png";
 import octaviaIcon from "../../../resources/openstack/networking/octavia.png";
 
-class _Networking extends _Openstack {
-  protected static override _type = "networking";
+function _Networking(label?: string, options?: Record<string, unknown>) {
+  const node = _Openstack(label, options);
+  (node as unknown as Record<string, unknown>)._type = "networking";
+  return node;
 }
 
-export class Designate extends _Networking {
-  protected static _iconDataUrl = designateIcon;
+export function Designate(label?: string, options?: Record<string, unknown>) {
+  const node = _Networking(label ?? "Designate", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = designateIcon;
+  return node;
 }
 
-export class Neutron extends _Networking {
-  protected static _iconDataUrl = neutronIcon;
+export function Neutron(label?: string, options?: Record<string, unknown>) {
+  const node = _Networking(label ?? "Neutron", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = neutronIcon;
+  return node;
 }
 
-export class Octavia extends _Networking {
-  protected static _iconDataUrl = octaviaIcon;
+export function Octavia(label?: string, options?: Record<string, unknown>) {
+  const node = _Networking(label ?? "Octavia", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = octaviaIcon;
+  return node;
 }

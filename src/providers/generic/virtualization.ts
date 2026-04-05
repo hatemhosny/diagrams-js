@@ -4,22 +4,32 @@ import virtualboxIcon from "../../../resources/generic/virtualization/virtualbox
 import vmwareIcon from "../../../resources/generic/virtualization/vmware.png";
 import xenIcon from "../../../resources/generic/virtualization/xen.png";
 
-class _Virtualization extends _Generic {
-  protected static override _type = "virtualization";
+function _Virtualization(label?: string, options?: Record<string, unknown>) {
+  const node = _Generic(label, options);
+  (node as unknown as Record<string, unknown>)._type = "virtualization";
+  return node;
 }
 
-export class Qemu extends _Virtualization {
-  protected static _iconDataUrl = qemuIcon;
+export function Qemu(label?: string, options?: Record<string, unknown>) {
+  const node = _Virtualization(label ?? "Qemu", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = qemuIcon;
+  return node;
 }
 
-export class Virtualbox extends _Virtualization {
-  protected static _iconDataUrl = virtualboxIcon;
+export function Virtualbox(label?: string, options?: Record<string, unknown>) {
+  const node = _Virtualization(label ?? "Virtualbox", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = virtualboxIcon;
+  return node;
 }
 
-export class Vmware extends _Virtualization {
-  protected static _iconDataUrl = vmwareIcon;
+export function Vmware(label?: string, options?: Record<string, unknown>) {
+  const node = _Virtualization(label ?? "Vmware", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = vmwareIcon;
+  return node;
 }
 
-export class XEN extends _Virtualization {
-  protected static _iconDataUrl = xenIcon;
+export function XEN(label?: string, options?: Record<string, unknown>) {
+  const node = _Virtualization(label ?? "XEN", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = xenIcon;
+  return node;
 }

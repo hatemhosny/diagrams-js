@@ -15,68 +15,101 @@ import serverless_app_engineIcon from "../../../resources/alibabacloud/compute/s
 import simple_application_serverIcon from "../../../resources/alibabacloud/compute/simple-application-server.png";
 import web_app_serviceIcon from "../../../resources/alibabacloud/compute/web-app-service.png";
 
-class _Compute extends _Alibabacloud {
-  protected static override _type = "compute";
+function _Compute(label?: string, options?: Record<string, unknown>) {
+  const node = _Alibabacloud(label, options);
+  (node as unknown as Record<string, unknown>)._type = "compute";
+  return node;
 }
 
-export class AutoScaling extends _Compute {
-  protected static _iconDataUrl = auto_scalingIcon;
+export function AutoScaling(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "AutoScaling", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = auto_scalingIcon;
+  return node;
 }
 
-export class BatchCompute extends _Compute {
-  protected static _iconDataUrl = batch_computeIcon;
+export function BatchCompute(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "BatchCompute", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = batch_computeIcon;
+  return node;
 }
 
-export class ContainerRegistry extends _Compute {
-  protected static _iconDataUrl = container_registryIcon;
+export function ContainerRegistry(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "ContainerRegistry", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = container_registryIcon;
+  return node;
 }
 
-export class ContainerService extends _Compute {
-  protected static _iconDataUrl = container_serviceIcon;
+export function ContainerService(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "ContainerService", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = container_serviceIcon;
+  return node;
 }
 
-export class ElasticComputeService extends _Compute {
-  protected static _iconDataUrl = elastic_compute_serviceIcon;
+export function ElasticComputeService(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "ElasticComputeService", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = elastic_compute_serviceIcon;
+  return node;
 }
 
-export class ElasticContainerInstance extends _Compute {
-  protected static _iconDataUrl = elastic_container_instanceIcon;
+export function ElasticContainerInstance(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "ElasticContainerInstance", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = elastic_container_instanceIcon;
+  return node;
 }
 
-export class ElasticHighPerformanceComputing extends _Compute {
-  protected static _iconDataUrl = elastic_high_performance_computingIcon;
+export function ElasticHighPerformanceComputing(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "ElasticHighPerformanceComputing", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl =
+    elastic_high_performance_computingIcon;
+  return node;
 }
 
-export class ElasticSearch extends _Compute {
-  protected static _iconDataUrl = elastic_searchIcon;
+export function ElasticSearch(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "ElasticSearch", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = elastic_searchIcon;
+  return node;
 }
 
-export class FunctionCompute extends _Compute {
-  protected static _iconDataUrl = function_computeIcon;
+export function FunctionCompute(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "FunctionCompute", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = function_computeIcon;
+  return node;
 }
 
-export class OperationOrchestrationService extends _Compute {
-  protected static _iconDataUrl = operation_orchestration_serviceIcon;
+export function OperationOrchestrationService(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "OperationOrchestrationService", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = operation_orchestration_serviceIcon;
+  return node;
 }
 
-export class ResourceOrchestrationService extends _Compute {
-  protected static _iconDataUrl = resource_orchestration_serviceIcon;
+export function ResourceOrchestrationService(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "ResourceOrchestrationService", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = resource_orchestration_serviceIcon;
+  return node;
 }
 
-export class ServerLoadBalancer extends _Compute {
-  protected static _iconDataUrl = server_load_balancerIcon;
+export function ServerLoadBalancer(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "ServerLoadBalancer", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = server_load_balancerIcon;
+  return node;
 }
 
-export class ServerlessAppEngine extends _Compute {
-  protected static _iconDataUrl = serverless_app_engineIcon;
+export function ServerlessAppEngine(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "ServerlessAppEngine", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = serverless_app_engineIcon;
+  return node;
 }
 
-export class SimpleApplicationServer extends _Compute {
-  protected static _iconDataUrl = simple_application_serverIcon;
+export function SimpleApplicationServer(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "SimpleApplicationServer", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = simple_application_serverIcon;
+  return node;
 }
 
-export class WebAppService extends _Compute {
-  protected static _iconDataUrl = web_app_serviceIcon;
+export function WebAppService(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "WebAppService", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = web_app_serviceIcon;
+  return node;
 }
 
 // Aliases

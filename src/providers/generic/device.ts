@@ -2,14 +2,20 @@ import { _Generic } from "./index.js";
 import mobileIcon from "../../../resources/generic/device/mobile.png";
 import tabletIcon from "../../../resources/generic/device/tablet.png";
 
-class _Device extends _Generic {
-  protected static override _type = "device";
+function _Device(label?: string, options?: Record<string, unknown>) {
+  const node = _Generic(label, options);
+  (node as unknown as Record<string, unknown>)._type = "device";
+  return node;
 }
 
-export class Mobile extends _Device {
-  protected static _iconDataUrl = mobileIcon;
+export function Mobile(label?: string, options?: Record<string, unknown>) {
+  const node = _Device(label ?? "Mobile", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = mobileIcon;
+  return node;
 }
 
-export class Tablet extends _Device {
-  protected static _iconDataUrl = tabletIcon;
+export function Tablet(label?: string, options?: Record<string, unknown>) {
+  const node = _Device(label ?? "Tablet", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = tabletIcon;
+  return node;
 }

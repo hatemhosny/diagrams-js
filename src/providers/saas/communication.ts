@@ -1,10 +1,14 @@
 import { _Saas } from "./index.js";
 import twilioIcon from "../../../resources/saas/communication/twilio.png";
 
-class _Communication extends _Saas {
-  protected static override _type = "communication";
+function _Communication(label?: string, options?: Record<string, unknown>) {
+  const node = _Saas(label, options);
+  (node as unknown as Record<string, unknown>)._type = "communication";
+  return node;
 }
 
-export class Twilio extends _Communication {
-  protected static _iconDataUrl = twilioIcon;
+export function Twilio(label?: string, options?: Record<string, unknown>) {
+  const node = _Communication(label ?? "Twilio", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = twilioIcon;
+  return node;
 }

@@ -2,14 +2,20 @@ import { _Gis } from "./index.js";
 import geopackageIcon from "../../../resources/gis/format/geopackage.png";
 import geoparquetIcon from "../../../resources/gis/format/geoparquet.png";
 
-class _Format extends _Gis {
-  protected static override _type = "format";
+function _Format(label?: string, options?: Record<string, unknown>) {
+  const node = _Gis(label, options);
+  (node as unknown as Record<string, unknown>)._type = "format";
+  return node;
 }
 
-export class Geopackage extends _Format {
-  protected static _iconDataUrl = geopackageIcon;
+export function Geopackage(label?: string, options?: Record<string, unknown>) {
+  const node = _Format(label ?? "Geopackage", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = geopackageIcon;
+  return node;
 }
 
-export class Geoparquet extends _Format {
-  protected static _iconDataUrl = geoparquetIcon;
+export function Geoparquet(label?: string, options?: Record<string, unknown>) {
+  const node = _Format(label ?? "Geoparquet", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = geoparquetIcon;
+  return node;
 }

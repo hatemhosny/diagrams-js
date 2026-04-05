@@ -1,12 +1,16 @@
 import { _Onprem } from "./index.js";
 import pveIcon from "../../../resources/onprem/proxmox/pve.png";
 
-class _Proxmox extends _Onprem {
-  protected static override _type = "proxmox";
+function _Proxmox(label?: string, options?: Record<string, unknown>) {
+  const node = _Onprem(label, options);
+  (node as unknown as Record<string, unknown>)._type = "proxmox";
+  return node;
 }
 
-export class Pve extends _Proxmox {
-  protected static _iconDataUrl = pveIcon;
+export function Pve(label?: string, options?: Record<string, unknown>) {
+  const node = _Proxmox(label ?? "Pve", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = pveIcon;
+  return node;
 }
 
 // Aliases

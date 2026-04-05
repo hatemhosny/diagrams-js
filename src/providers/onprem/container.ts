@@ -8,40 +8,58 @@ import k3sIcon from "../../../resources/onprem/container/k3s.png";
 import lxcIcon from "../../../resources/onprem/container/lxc.png";
 import rktIcon from "../../../resources/onprem/container/rkt.png";
 
-class _Container extends _Onprem {
-  protected static override _type = "container";
+function _Container(label?: string, options?: Record<string, unknown>) {
+  const node = _Onprem(label, options);
+  (node as unknown as Record<string, unknown>)._type = "container";
+  return node;
 }
 
-export class Containerd extends _Container {
-  protected static _iconDataUrl = containerdIcon;
+export function Containerd(label?: string, options?: Record<string, unknown>) {
+  const node = _Container(label ?? "Containerd", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = containerdIcon;
+  return node;
 }
 
-export class Crio extends _Container {
-  protected static _iconDataUrl = crioIcon;
+export function Crio(label?: string, options?: Record<string, unknown>) {
+  const node = _Container(label ?? "Crio", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = crioIcon;
+  return node;
 }
 
-export class Docker extends _Container {
-  protected static _iconDataUrl = dockerIcon;
+export function Docker(label?: string, options?: Record<string, unknown>) {
+  const node = _Container(label ?? "Docker", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = dockerIcon;
+  return node;
 }
 
-export class Firecracker extends _Container {
-  protected static _iconDataUrl = firecrackerIcon;
+export function Firecracker(label?: string, options?: Record<string, unknown>) {
+  const node = _Container(label ?? "Firecracker", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = firecrackerIcon;
+  return node;
 }
 
-export class Gvisor extends _Container {
-  protected static _iconDataUrl = gvisorIcon;
+export function Gvisor(label?: string, options?: Record<string, unknown>) {
+  const node = _Container(label ?? "Gvisor", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = gvisorIcon;
+  return node;
 }
 
-export class K3s extends _Container {
-  protected static _iconDataUrl = k3sIcon;
+export function K3s(label?: string, options?: Record<string, unknown>) {
+  const node = _Container(label ?? "K3s", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = k3sIcon;
+  return node;
 }
 
-export class Lxc extends _Container {
-  protected static _iconDataUrl = lxcIcon;
+export function Lxc(label?: string, options?: Record<string, unknown>) {
+  const node = _Container(label ?? "Lxc", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = lxcIcon;
+  return node;
 }
 
-export class Rkt extends _Container {
-  protected static _iconDataUrl = rktIcon;
+export function Rkt(label?: string, options?: Record<string, unknown>) {
+  const node = _Container(label ?? "Rkt", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = rktIcon;
+  return node;
 }
 
 // Aliases

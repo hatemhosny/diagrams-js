@@ -23,100 +23,172 @@ import simple_queue_service_sqs_queueIcon from "../../../resources/aws/integrati
 import simple_queue_service_sqsIcon from "../../../resources/aws/integration/simple-queue-service-sqs.png";
 import step_functionsIcon from "../../../resources/aws/integration/step-functions.png";
 
-class _Integration extends _Aws {
-  protected static override _type = "integration";
+function _Integration(label?: string, options?: Record<string, unknown>) {
+  const node = _Aws(label, options);
+  (node as unknown as Record<string, unknown>)._type = "integration";
+  return node;
 }
 
-export class ApplicationIntegration extends _Integration {
-  protected static _iconDataUrl = application_integrationIcon;
+export function ApplicationIntegration(label?: string, options?: Record<string, unknown>) {
+  const node = _Integration(label ?? "ApplicationIntegration", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = application_integrationIcon;
+  return node;
 }
 
-export class Appsync extends _Integration {
-  protected static _iconDataUrl = appsyncIcon;
+export function Appsync(label?: string, options?: Record<string, unknown>) {
+  const node = _Integration(label ?? "Appsync", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = appsyncIcon;
+  return node;
 }
 
-export class ConsoleMobileApplication extends _Integration {
-  protected static _iconDataUrl = console_mobile_applicationIcon;
+export function ConsoleMobileApplication(label?: string, options?: Record<string, unknown>) {
+  const node = _Integration(label ?? "ConsoleMobileApplication", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = console_mobile_applicationIcon;
+  return node;
 }
 
-export class EventResource extends _Integration {
-  protected static _iconDataUrl = event_resourceIcon;
+export function EventResource(label?: string, options?: Record<string, unknown>) {
+  const node = _Integration(label ?? "EventResource", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = event_resourceIcon;
+  return node;
 }
 
-export class EventbridgeCustomEventBusResource extends _Integration {
-  protected static _iconDataUrl = eventbridge_custom_event_bus_resourceIcon;
+export function EventbridgeCustomEventBusResource(
+  label?: string,
+  options?: Record<string, unknown>,
+) {
+  const node = _Integration(label ?? "EventbridgeCustomEventBusResource", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl =
+    eventbridge_custom_event_bus_resourceIcon;
+  return node;
 }
 
-export class EventbridgeDefaultEventBusResource extends _Integration {
-  protected static _iconDataUrl = eventbridge_default_event_bus_resourceIcon;
+export function EventbridgeDefaultEventBusResource(
+  label?: string,
+  options?: Record<string, unknown>,
+) {
+  const node = _Integration(label ?? "EventbridgeDefaultEventBusResource", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl =
+    eventbridge_default_event_bus_resourceIcon;
+  return node;
 }
 
-export class EventbridgeEvent extends _Integration {
-  protected static _iconDataUrl = eventbridge_eventIcon;
+export function EventbridgeEvent(label?: string, options?: Record<string, unknown>) {
+  const node = _Integration(label ?? "EventbridgeEvent", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = eventbridge_eventIcon;
+  return node;
 }
 
-export class EventbridgePipes extends _Integration {
-  protected static _iconDataUrl = eventbridge_pipesIcon;
+export function EventbridgePipes(label?: string, options?: Record<string, unknown>) {
+  const node = _Integration(label ?? "EventbridgePipes", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = eventbridge_pipesIcon;
+  return node;
 }
 
-export class EventbridgeRule extends _Integration {
-  protected static _iconDataUrl = eventbridge_ruleIcon;
+export function EventbridgeRule(label?: string, options?: Record<string, unknown>) {
+  const node = _Integration(label ?? "EventbridgeRule", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = eventbridge_ruleIcon;
+  return node;
 }
 
-export class EventbridgeSaasPartnerEventBusResource extends _Integration {
-  protected static _iconDataUrl = eventbridge_saas_partner_event_bus_resourceIcon;
+export function EventbridgeSaasPartnerEventBusResource(
+  label?: string,
+  options?: Record<string, unknown>,
+) {
+  const node = _Integration(label ?? "EventbridgeSaasPartnerEventBusResource", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl =
+    eventbridge_saas_partner_event_bus_resourceIcon;
+  return node;
 }
 
-export class EventbridgeScheduler extends _Integration {
-  protected static _iconDataUrl = eventbridge_schedulerIcon;
+export function EventbridgeScheduler(label?: string, options?: Record<string, unknown>) {
+  const node = _Integration(label ?? "EventbridgeScheduler", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = eventbridge_schedulerIcon;
+  return node;
 }
 
-export class EventbridgeSchema extends _Integration {
-  protected static _iconDataUrl = eventbridge_schemaIcon;
+export function EventbridgeSchema(label?: string, options?: Record<string, unknown>) {
+  const node = _Integration(label ?? "EventbridgeSchema", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = eventbridge_schemaIcon;
+  return node;
 }
 
-export class Eventbridge extends _Integration {
-  protected static _iconDataUrl = eventbridgeIcon;
+export function Eventbridge(label?: string, options?: Record<string, unknown>) {
+  const node = _Integration(label ?? "Eventbridge", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = eventbridgeIcon;
+  return node;
 }
 
-export class ExpressWorkflows extends _Integration {
-  protected static _iconDataUrl = express_workflowsIcon;
+export function ExpressWorkflows(label?: string, options?: Record<string, unknown>) {
+  const node = _Integration(label ?? "ExpressWorkflows", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = express_workflowsIcon;
+  return node;
 }
 
-export class MQ extends _Integration {
-  protected static _iconDataUrl = mqIcon;
+export function MQ(label?: string, options?: Record<string, unknown>) {
+  const node = _Integration(label ?? "MQ", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = mqIcon;
+  return node;
 }
 
-export class SimpleNotificationServiceSnsEmailNotification extends _Integration {
-  protected static _iconDataUrl = simple_notification_service_sns_email_notificationIcon;
+export function SimpleNotificationServiceSnsEmailNotification(
+  label?: string,
+  options?: Record<string, unknown>,
+) {
+  const node = _Integration(label ?? "SimpleNotificationServiceSnsEmailNotification", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl =
+    simple_notification_service_sns_email_notificationIcon;
+  return node;
 }
 
-export class SimpleNotificationServiceSnsHttpNotification extends _Integration {
-  protected static _iconDataUrl = simple_notification_service_sns_http_notificationIcon;
+export function SimpleNotificationServiceSnsHttpNotification(
+  label?: string,
+  options?: Record<string, unknown>,
+) {
+  const node = _Integration(label ?? "SimpleNotificationServiceSnsHttpNotification", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl =
+    simple_notification_service_sns_http_notificationIcon;
+  return node;
 }
 
-export class SimpleNotificationServiceSnsTopic extends _Integration {
-  protected static _iconDataUrl = simple_notification_service_sns_topicIcon;
+export function SimpleNotificationServiceSnsTopic(
+  label?: string,
+  options?: Record<string, unknown>,
+) {
+  const node = _Integration(label ?? "SimpleNotificationServiceSnsTopic", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl =
+    simple_notification_service_sns_topicIcon;
+  return node;
 }
 
-export class SimpleNotificationServiceSns extends _Integration {
-  protected static _iconDataUrl = simple_notification_service_snsIcon;
+export function SimpleNotificationServiceSns(label?: string, options?: Record<string, unknown>) {
+  const node = _Integration(label ?? "SimpleNotificationServiceSns", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = simple_notification_service_snsIcon;
+  return node;
 }
 
-export class SimpleQueueServiceSqsMessage extends _Integration {
-  protected static _iconDataUrl = simple_queue_service_sqs_messageIcon;
+export function SimpleQueueServiceSqsMessage(label?: string, options?: Record<string, unknown>) {
+  const node = _Integration(label ?? "SimpleQueueServiceSqsMessage", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = simple_queue_service_sqs_messageIcon;
+  return node;
 }
 
-export class SimpleQueueServiceSqsQueue extends _Integration {
-  protected static _iconDataUrl = simple_queue_service_sqs_queueIcon;
+export function SimpleQueueServiceSqsQueue(label?: string, options?: Record<string, unknown>) {
+  const node = _Integration(label ?? "SimpleQueueServiceSqsQueue", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = simple_queue_service_sqs_queueIcon;
+  return node;
 }
 
-export class SimpleQueueServiceSqs extends _Integration {
-  protected static _iconDataUrl = simple_queue_service_sqsIcon;
+export function SimpleQueueServiceSqs(label?: string, options?: Record<string, unknown>) {
+  const node = _Integration(label ?? "SimpleQueueServiceSqs", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = simple_queue_service_sqsIcon;
+  return node;
 }
 
-export class StepFunctions extends _Integration {
-  protected static _iconDataUrl = step_functionsIcon;
+export function StepFunctions(label?: string, options?: Record<string, unknown>) {
+  const node = _Integration(label ?? "StepFunctions", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = step_functionsIcon;
+  return node;
 }
 
 // Aliases

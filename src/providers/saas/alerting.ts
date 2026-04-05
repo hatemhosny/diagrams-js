@@ -5,26 +5,38 @@ import pagerdutyIcon from "../../../resources/saas/alerting/pagerduty.png";
 import pushoverIcon from "../../../resources/saas/alerting/pushover.png";
 import xmattersIcon from "../../../resources/saas/alerting/xmatters.png";
 
-class _Alerting extends _Saas {
-  protected static override _type = "alerting";
+function _Alerting(label?: string, options?: Record<string, unknown>) {
+  const node = _Saas(label, options);
+  (node as unknown as Record<string, unknown>)._type = "alerting";
+  return node;
 }
 
-export class Newrelic extends _Alerting {
-  protected static _iconDataUrl = newrelicIcon;
+export function Newrelic(label?: string, options?: Record<string, unknown>) {
+  const node = _Alerting(label ?? "Newrelic", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = newrelicIcon;
+  return node;
 }
 
-export class Opsgenie extends _Alerting {
-  protected static _iconDataUrl = opsgenieIcon;
+export function Opsgenie(label?: string, options?: Record<string, unknown>) {
+  const node = _Alerting(label ?? "Opsgenie", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = opsgenieIcon;
+  return node;
 }
 
-export class Pagerduty extends _Alerting {
-  protected static _iconDataUrl = pagerdutyIcon;
+export function Pagerduty(label?: string, options?: Record<string, unknown>) {
+  const node = _Alerting(label ?? "Pagerduty", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = pagerdutyIcon;
+  return node;
 }
 
-export class Pushover extends _Alerting {
-  protected static _iconDataUrl = pushoverIcon;
+export function Pushover(label?: string, options?: Record<string, unknown>) {
+  const node = _Alerting(label ?? "Pushover", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = pushoverIcon;
+  return node;
 }
 
-export class Xmatters extends _Alerting {
-  protected static _iconDataUrl = xmattersIcon;
+export function Xmatters(label?: string, options?: Record<string, unknown>) {
+  const node = _Alerting(label ?? "Xmatters", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = xmattersIcon;
+  return node;
 }

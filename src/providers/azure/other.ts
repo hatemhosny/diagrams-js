@@ -128,518 +128,788 @@ import web_jobsIcon from "../../../resources/azure/other/web-jobs.png";
 import windows_notification_servicesIcon from "../../../resources/azure/other/windows-notification-services.png";
 import worker_container_appIcon from "../../../resources/azure/other/worker-container-app.png";
 
-class _Other extends _Azure {
-  protected static override _type = "other";
+function _Other(label?: string, options?: Record<string, unknown>) {
+  const node = _Azure(label, options);
+  (node as unknown as Record<string, unknown>)._type = "other";
+  return node;
 }
 
-export class AadLicenses extends _Other {
-  protected static _iconDataUrl = aad_licensesIcon;
+export function AadLicenses(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "AadLicenses", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = aad_licensesIcon;
+  return node;
 }
 
-export class AksIstio extends _Other {
-  protected static _iconDataUrl = aks_istioIcon;
+export function AksIstio(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "AksIstio", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = aks_istioIcon;
+  return node;
 }
 
-export class AppComplianceAutomation extends _Other {
-  protected static _iconDataUrl = app_compliance_automationIcon;
+export function AppComplianceAutomation(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "AppComplianceAutomation", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = app_compliance_automationIcon;
+  return node;
 }
 
-export class AppRegistrations extends _Other {
-  protected static _iconDataUrl = app_registrationsIcon;
+export function AppRegistrations(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "AppRegistrations", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = app_registrationsIcon;
+  return node;
 }
 
-export class Aquila extends _Other {
-  protected static _iconDataUrl = aquilaIcon;
+export function Aquila(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "Aquila", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = aquilaIcon;
+  return node;
 }
 
-export class ArcDataServices extends _Other {
-  protected static _iconDataUrl = arc_data_servicesIcon;
+export function ArcDataServices(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "ArcDataServices", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = arc_data_servicesIcon;
+  return node;
 }
 
-export class ArcKubernetes extends _Other {
-  protected static _iconDataUrl = arc_kubernetesIcon;
+export function ArcKubernetes(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "ArcKubernetes", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = arc_kubernetesIcon;
+  return node;
 }
 
-export class ArcPostgresql extends _Other {
-  protected static _iconDataUrl = arc_postgresql_Icon;
+export function ArcPostgresql(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "ArcPostgresql", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = arc_postgresql_Icon;
+  return node;
 }
 
-export class ArcSQLManagedInstance extends _Other {
-  protected static _iconDataUrl = arc_sql_managed_instanceIcon;
+export function ArcSQLManagedInstance(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "ArcSQLManagedInstance", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = arc_sql_managed_instanceIcon;
+  return node;
 }
 
-export class ArcSQLServer extends _Other {
-  protected static _iconDataUrl = arc_sql_serverIcon;
+export function ArcSQLServer(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "ArcSQLServer", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = arc_sql_serverIcon;
+  return node;
 }
 
-export class AvsVM extends _Other {
-  protected static _iconDataUrl = avs_vmIcon;
+export function AvsVM(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "AvsVM", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = avs_vmIcon;
+  return node;
 }
 
-export class AzureA extends _Other {
-  protected static _iconDataUrl = azure_aIcon;
+export function AzureA(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "AzureA", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_aIcon;
+  return node;
 }
 
-export class AzureBackupCenter extends _Other {
-  protected static _iconDataUrl = azure_backup_centerIcon;
+export function AzureBackupCenter(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "AzureBackupCenter", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_backup_centerIcon;
+  return node;
 }
 
-export class AzureCenterForSAP extends _Other {
-  protected static _iconDataUrl = azure_center_for_sapIcon;
+export function AzureCenterForSAP(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "AzureCenterForSAP", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_center_for_sapIcon;
+  return node;
 }
 
-export class AzureChaosStudio extends _Other {
-  protected static _iconDataUrl = azure_chaos_studioIcon;
+export function AzureChaosStudio(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "AzureChaosStudio", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_chaos_studioIcon;
+  return node;
 }
 
-export class AzureCloudShell extends _Other {
-  protected static _iconDataUrl = azure_cloud_shellIcon;
+export function AzureCloudShell(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "AzureCloudShell", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_cloud_shellIcon;
+  return node;
 }
 
-export class AzureCommunicationServices extends _Other {
-  protected static _iconDataUrl = azure_communication_servicesIcon;
+export function AzureCommunicationServices(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "AzureCommunicationServices", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_communication_servicesIcon;
+  return node;
 }
 
-export class AzureComputeGalleries extends _Other {
-  protected static _iconDataUrl = azure_compute_galleriesIcon;
+export function AzureComputeGalleries(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "AzureComputeGalleries", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_compute_galleriesIcon;
+  return node;
 }
 
-export class AzureDeploymentEnvironments extends _Other {
-  protected static _iconDataUrl = azure_deployment_environmentsIcon;
+export function AzureDeploymentEnvironments(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "AzureDeploymentEnvironments", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_deployment_environmentsIcon;
+  return node;
 }
 
-export class AzureDevTunnels extends _Other {
-  protected static _iconDataUrl = azure_dev_tunnelsIcon;
+export function AzureDevTunnels(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "AzureDevTunnels", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_dev_tunnelsIcon;
+  return node;
 }
 
-export class AzureEdgeHardwareCenter extends _Other {
-  protected static _iconDataUrl = azure_edge_hardware_centerIcon;
+export function AzureEdgeHardwareCenter(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "AzureEdgeHardwareCenter", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_edge_hardware_centerIcon;
+  return node;
 }
 
-export class AzureHpcWorkbenches extends _Other {
-  protected static _iconDataUrl = azure_hpc_workbenchesIcon;
+export function AzureHpcWorkbenches(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "AzureHpcWorkbenches", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_hpc_workbenchesIcon;
+  return node;
 }
 
-export class AzureLoadTesting extends _Other {
-  protected static _iconDataUrl = azure_load_testingIcon;
+export function AzureLoadTesting(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "AzureLoadTesting", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_load_testingIcon;
+  return node;
 }
 
-export class AzureManagedGrafana extends _Other {
-  protected static _iconDataUrl = azure_managed_grafanaIcon;
+export function AzureManagedGrafana(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "AzureManagedGrafana", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_managed_grafanaIcon;
+  return node;
 }
 
-export class AzureMonitorDashboard extends _Other {
-  protected static _iconDataUrl = azure_monitor_dashboardIcon;
+export function AzureMonitorDashboard(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "AzureMonitorDashboard", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_monitor_dashboardIcon;
+  return node;
 }
 
-export class AzureNetworkFunctionManagerFunctions extends _Other {
-  protected static _iconDataUrl = azure_network_function_manager_functionsIcon;
+export function AzureNetworkFunctionManagerFunctions(
+  label?: string,
+  options?: Record<string, unknown>,
+) {
+  const node = _Other(label ?? "AzureNetworkFunctionManagerFunctions", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl =
+    azure_network_function_manager_functionsIcon;
+  return node;
 }
 
-export class AzureNetworkFunctionManager extends _Other {
-  protected static _iconDataUrl = azure_network_function_managerIcon;
+export function AzureNetworkFunctionManager(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "AzureNetworkFunctionManager", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_network_function_managerIcon;
+  return node;
 }
 
-export class AzureOrbital extends _Other {
-  protected static _iconDataUrl = azure_orbitalIcon;
+export function AzureOrbital(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "AzureOrbital", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_orbitalIcon;
+  return node;
 }
 
-export class AzureQuotas extends _Other {
-  protected static _iconDataUrl = azure_quotasIcon;
+export function AzureQuotas(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "AzureQuotas", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_quotasIcon;
+  return node;
 }
 
-export class AzureSphere extends _Other {
-  protected static _iconDataUrl = azure_sphereIcon;
+export function AzureSphere(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "AzureSphere", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_sphereIcon;
+  return node;
 }
 
-export class AzureStorageMover extends _Other {
-  protected static _iconDataUrl = azure_storage_moverIcon;
+export function AzureStorageMover(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "AzureStorageMover", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_storage_moverIcon;
+  return node;
 }
 
-export class AzureSupportCenterBlue extends _Other {
-  protected static _iconDataUrl = azure_support_center_blueIcon;
+export function AzureSupportCenterBlue(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "AzureSupportCenterBlue", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_support_center_blueIcon;
+  return node;
 }
 
-export class AzureVideoIndexer extends _Other {
-  protected static _iconDataUrl = azure_video_indexerIcon;
+export function AzureVideoIndexer(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "AzureVideoIndexer", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_video_indexerIcon;
+  return node;
 }
 
-export class AzureVirtualDesktop extends _Other {
-  protected static _iconDataUrl = azure_virtual_desktopIcon;
+export function AzureVirtualDesktop(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "AzureVirtualDesktop", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_virtual_desktopIcon;
+  return node;
 }
 
-export class AzureVmwareSolution extends _Other {
-  protected static _iconDataUrl = azure_vmware_solutionIcon;
+export function AzureVmwareSolution(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "AzureVmwareSolution", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_vmware_solutionIcon;
+  return node;
 }
 
-export class Azureattestation extends _Other {
-  protected static _iconDataUrl = azureattestationIcon;
+export function Azureattestation(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "Azureattestation", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = azureattestationIcon;
+  return node;
 }
 
-export class Azurite extends _Other {
-  protected static _iconDataUrl = azuriteIcon;
+export function Azurite(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "Azurite", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = azuriteIcon;
+  return node;
 }
 
-export class BackupVault extends _Other {
-  protected static _iconDataUrl = backup_vaultIcon;
+export function BackupVault(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "BackupVault", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = backup_vaultIcon;
+  return node;
 }
 
-export class BareMetalInfrastructure extends _Other {
-  protected static _iconDataUrl = bare_metal_infrastructureIcon;
+export function BareMetalInfrastructure(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "BareMetalInfrastructure", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = bare_metal_infrastructureIcon;
+  return node;
 }
 
-export class CapacityReservationGroups extends _Other {
-  protected static _iconDataUrl = capacity_reservation_groupsIcon;
+export function CapacityReservationGroups(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "CapacityReservationGroups", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = capacity_reservation_groupsIcon;
+  return node;
 }
 
-export class CentralServiceInstanceForSAP extends _Other {
-  protected static _iconDataUrl = central_service_instance_for_sapIcon;
+export function CentralServiceInstanceForSAP(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "CentralServiceInstanceForSAP", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = central_service_instance_for_sapIcon;
+  return node;
 }
 
-export class Ceres extends _Other {
-  protected static _iconDataUrl = ceresIcon;
+export function Ceres(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "Ceres", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = ceresIcon;
+  return node;
 }
 
-export class CloudServicesExtendedSupport extends _Other {
-  protected static _iconDataUrl = cloud_services_extended_supportIcon;
+export function CloudServicesExtendedSupport(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "CloudServicesExtendedSupport", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = cloud_services_extended_supportIcon;
+  return node;
 }
 
-export class CommunityImages extends _Other {
-  protected static _iconDataUrl = community_imagesIcon;
+export function CommunityImages(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "CommunityImages", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = community_imagesIcon;
+  return node;
 }
 
-export class ComplianceCenter extends _Other {
-  protected static _iconDataUrl = compliance_centerIcon;
+export function ComplianceCenter(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "ComplianceCenter", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = compliance_centerIcon;
+  return node;
 }
 
-export class ConfidentialLedgers extends _Other {
-  protected static _iconDataUrl = confidential_ledgersIcon;
+export function ConfidentialLedgers(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "ConfidentialLedgers", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = confidential_ledgersIcon;
+  return node;
 }
 
-export class ContainerAppsEnvironments extends _Other {
-  protected static _iconDataUrl = container_apps_environmentsIcon;
+export function ContainerAppsEnvironments(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "ContainerAppsEnvironments", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = container_apps_environmentsIcon;
+  return node;
 }
 
-export class CostExport extends _Other {
-  protected static _iconDataUrl = cost_exportIcon;
+export function CostExport(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "CostExport", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = cost_exportIcon;
+  return node;
 }
 
-export class CustomIpPrefix extends _Other {
-  protected static _iconDataUrl = custom_ip_prefixIcon;
+export function CustomIpPrefix(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "CustomIpPrefix", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = custom_ip_prefixIcon;
+  return node;
 }
 
-export class DashboardHub extends _Other {
-  protected static _iconDataUrl = dashboard_hubIcon;
+export function DashboardHub(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "DashboardHub", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = dashboard_hubIcon;
+  return node;
 }
 
-export class DataCollectionRules extends _Other {
-  protected static _iconDataUrl = data_collection_rulesIcon;
+export function DataCollectionRules(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "DataCollectionRules", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = data_collection_rulesIcon;
+  return node;
 }
 
-export class DatabaseInstanceForSAP extends _Other {
-  protected static _iconDataUrl = database_instance_for_sapIcon;
+export function DatabaseInstanceForSAP(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "DatabaseInstanceForSAP", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = database_instance_for_sapIcon;
+  return node;
 }
 
-export class DedicatedHsm extends _Other {
-  protected static _iconDataUrl = dedicated_hsmIcon;
+export function DedicatedHsm(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "DedicatedHsm", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = dedicated_hsmIcon;
+  return node;
 }
 
-export class DefenderCmLocalManager extends _Other {
-  protected static _iconDataUrl = defender_cm_local_managerIcon;
+export function DefenderCmLocalManager(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "DefenderCmLocalManager", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = defender_cm_local_managerIcon;
+  return node;
 }
 
-export class DefenderDcsController extends _Other {
-  protected static _iconDataUrl = defender_dcs_controllerIcon;
+export function DefenderDcsController(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "DefenderDcsController", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = defender_dcs_controllerIcon;
+  return node;
 }
 
-export class DefenderDistributerControlSystem extends _Other {
-  protected static _iconDataUrl = defender_distributer_control_systemIcon;
+export function DefenderDistributerControlSystem(
+  label?: string,
+  options?: Record<string, unknown>,
+) {
+  const node = _Other(label ?? "DefenderDistributerControlSystem", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl =
+    defender_distributer_control_systemIcon;
+  return node;
 }
 
-export class DefenderEngineeringStation extends _Other {
-  protected static _iconDataUrl = defender_engineering_stationIcon;
+export function DefenderEngineeringStation(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "DefenderEngineeringStation", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = defender_engineering_stationIcon;
+  return node;
 }
 
-export class DefenderExternalManagement extends _Other {
-  protected static _iconDataUrl = defender_external_managementIcon;
+export function DefenderExternalManagement(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "DefenderExternalManagement", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = defender_external_managementIcon;
+  return node;
 }
 
-export class DefenderFreezerMonitor extends _Other {
-  protected static _iconDataUrl = defender_freezer_monitorIcon;
+export function DefenderFreezerMonitor(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "DefenderFreezerMonitor", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = defender_freezer_monitorIcon;
+  return node;
 }
 
-export class DefenderHistorian extends _Other {
-  protected static _iconDataUrl = defender_historianIcon;
+export function DefenderHistorian(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "DefenderHistorian", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = defender_historianIcon;
+  return node;
 }
 
-export class DefenderHmi extends _Other {
-  protected static _iconDataUrl = defender_hmiIcon;
+export function DefenderHmi(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "DefenderHmi", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = defender_hmiIcon;
+  return node;
 }
 
-export class DefenderIndustrialPackagingSystem extends _Other {
-  protected static _iconDataUrl = defender_industrial_packaging_systemIcon;
+export function DefenderIndustrialPackagingSystem(
+  label?: string,
+  options?: Record<string, unknown>,
+) {
+  const node = _Other(label ?? "DefenderIndustrialPackagingSystem", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl =
+    defender_industrial_packaging_systemIcon;
+  return node;
 }
 
-export class DefenderIndustrialPrinter extends _Other {
-  protected static _iconDataUrl = defender_industrial_printerIcon;
+export function DefenderIndustrialPrinter(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "DefenderIndustrialPrinter", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = defender_industrial_printerIcon;
+  return node;
 }
 
-export class DefenderIndustrialRobot extends _Other {
-  protected static _iconDataUrl = defender_industrial_robotIcon;
+export function DefenderIndustrialRobot(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "DefenderIndustrialRobot", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = defender_industrial_robotIcon;
+  return node;
 }
 
-export class DefenderIndustrialScaleSystem extends _Other {
-  protected static _iconDataUrl = defender_industrial_scale_systemIcon;
+export function DefenderIndustrialScaleSystem(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "DefenderIndustrialScaleSystem", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = defender_industrial_scale_systemIcon;
+  return node;
 }
 
-export class DefenderMarquee extends _Other {
-  protected static _iconDataUrl = defender_marqueeIcon;
+export function DefenderMarquee(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "DefenderMarquee", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = defender_marqueeIcon;
+  return node;
 }
 
-export class DefenderMeter extends _Other {
-  protected static _iconDataUrl = defender_meterIcon;
+export function DefenderMeter(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "DefenderMeter", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = defender_meterIcon;
+  return node;
 }
 
-export class DefenderPlc extends _Other {
-  protected static _iconDataUrl = defender_plcIcon;
+export function DefenderPlc(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "DefenderPlc", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = defender_plcIcon;
+  return node;
 }
 
-export class DefenderPneumaticDevice extends _Other {
-  protected static _iconDataUrl = defender_pneumatic_deviceIcon;
+export function DefenderPneumaticDevice(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "DefenderPneumaticDevice", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = defender_pneumatic_deviceIcon;
+  return node;
 }
 
-export class DefenderProgramableBoard extends _Other {
-  protected static _iconDataUrl = defender_programable_boardIcon;
+export function DefenderProgramableBoard(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "DefenderProgramableBoard", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = defender_programable_boardIcon;
+  return node;
 }
 
-export class DefenderRelay extends _Other {
-  protected static _iconDataUrl = defender_relayIcon;
+export function DefenderRelay(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "DefenderRelay", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = defender_relayIcon;
+  return node;
 }
 
-export class DefenderRobotController extends _Other {
-  protected static _iconDataUrl = defender_robot_controllerIcon;
+export function DefenderRobotController(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "DefenderRobotController", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = defender_robot_controllerIcon;
+  return node;
 }
 
-export class DefenderRtu extends _Other {
-  protected static _iconDataUrl = defender_rtuIcon;
+export function DefenderRtu(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "DefenderRtu", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = defender_rtuIcon;
+  return node;
 }
 
-export class DefenderSensor extends _Other {
-  protected static _iconDataUrl = defender_sensorIcon;
+export function DefenderSensor(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "DefenderSensor", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = defender_sensorIcon;
+  return node;
 }
 
-export class DefenderSlot extends _Other {
-  protected static _iconDataUrl = defender_slotIcon;
+export function DefenderSlot(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "DefenderSlot", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = defender_slotIcon;
+  return node;
 }
 
-export class DefenderWebGuidingSystem extends _Other {
-  protected static _iconDataUrl = defender_web_guiding_systemIcon;
+export function DefenderWebGuidingSystem(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "DefenderWebGuidingSystem", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = defender_web_guiding_systemIcon;
+  return node;
 }
 
-export class DeviceUpdateIotHub extends _Other {
-  protected static _iconDataUrl = device_update_iot_hubIcon;
+export function DeviceUpdateIotHub(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "DeviceUpdateIotHub", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = device_update_iot_hubIcon;
+  return node;
 }
 
-export class DiskPool extends _Other {
-  protected static _iconDataUrl = disk_poolIcon;
+export function DiskPool(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "DiskPool", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = disk_poolIcon;
+  return node;
 }
 
-export class EdgeManagement extends _Other {
-  protected static _iconDataUrl = edge_managementIcon;
+export function EdgeManagement(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "EdgeManagement", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = edge_managementIcon;
+  return node;
 }
 
-export class ElasticSan extends _Other {
-  protected static _iconDataUrl = elastic_sanIcon;
+export function ElasticSan(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "ElasticSan", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = elastic_sanIcon;
+  return node;
 }
 
-export class ExchangeOnPremisesAccess extends _Other {
-  protected static _iconDataUrl = exchange_on_premises_accessIcon;
+export function ExchangeOnPremisesAccess(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "ExchangeOnPremisesAccess", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = exchange_on_premises_accessIcon;
+  return node;
 }
 
-export class ExpressRouteTrafficCollector extends _Other {
-  protected static _iconDataUrl = express_route_traffic_collectorIcon;
+export function ExpressRouteTrafficCollector(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "ExpressRouteTrafficCollector", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = express_route_traffic_collectorIcon;
+  return node;
 }
 
-export class ExpressrouteDirect extends _Other {
-  protected static _iconDataUrl = expressroute_directIcon;
+export function ExpressrouteDirect(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "ExpressrouteDirect", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = expressroute_directIcon;
+  return node;
 }
 
-export class FhirService extends _Other {
-  protected static _iconDataUrl = fhir_serviceIcon;
+export function FhirService(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "FhirService", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = fhir_serviceIcon;
+  return node;
 }
 
-export class Fiji extends _Other {
-  protected static _iconDataUrl = fijiIcon;
+export function Fiji(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "Fiji", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = fijiIcon;
+  return node;
 }
 
-export class HdiAksCluster extends _Other {
-  protected static _iconDataUrl = hdi_aks_clusterIcon;
+export function HdiAksCluster(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "HdiAksCluster", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = hdi_aks_clusterIcon;
+  return node;
 }
 
-export class InstancePools extends _Other {
-  protected static _iconDataUrl = instance_poolsIcon;
+export function InstancePools(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "InstancePools", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = instance_poolsIcon;
+  return node;
 }
 
-export class InternetAnalyzerProfiles extends _Other {
-  protected static _iconDataUrl = internet_analyzer_profilesIcon;
+export function InternetAnalyzerProfiles(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "InternetAnalyzerProfiles", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = internet_analyzer_profilesIcon;
+  return node;
 }
 
-export class KubernetesFleetManager extends _Other {
-  protected static _iconDataUrl = kubernetes_fleet_managerIcon;
+export function KubernetesFleetManager(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "KubernetesFleetManager", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = kubernetes_fleet_managerIcon;
+  return node;
 }
 
-export class LocalNetworkGateways extends _Other {
-  protected static _iconDataUrl = local_network_gatewaysIcon;
+export function LocalNetworkGateways(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "LocalNetworkGateways", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = local_network_gatewaysIcon;
+  return node;
 }
 
-export class LogAnalyticsQueryPack extends _Other {
-  protected static _iconDataUrl = log_analytics_query_packIcon;
+export function LogAnalyticsQueryPack(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "LogAnalyticsQueryPack", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = log_analytics_query_packIcon;
+  return node;
 }
 
-export class ManagedInstanceApacheCassandra extends _Other {
-  protected static _iconDataUrl = managed_instance_apache_cassandraIcon;
+export function ManagedInstanceApacheCassandra(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "ManagedInstanceApacheCassandra", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = managed_instance_apache_cassandraIcon;
+  return node;
 }
 
-export class MedtechService extends _Other {
-  protected static _iconDataUrl = medtech_serviceIcon;
+export function MedtechService(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "MedtechService", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = medtech_serviceIcon;
+  return node;
 }
 
-export class MicrosoftDevBox extends _Other {
-  protected static _iconDataUrl = microsoft_dev_boxIcon;
+export function MicrosoftDevBox(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "MicrosoftDevBox", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = microsoft_dev_boxIcon;
+  return node;
 }
 
-export class MissionLandingZone extends _Other {
-  protected static _iconDataUrl = mission_landing_zoneIcon;
+export function MissionLandingZone(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "MissionLandingZone", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = mission_landing_zoneIcon;
+  return node;
 }
 
-export class MobileNetworks extends _Other {
-  protected static _iconDataUrl = mobile_networksIcon;
+export function MobileNetworks(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "MobileNetworks", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = mobile_networksIcon;
+  return node;
 }
 
-export class ModularDataCenter extends _Other {
-  protected static _iconDataUrl = modular_data_centerIcon;
+export function ModularDataCenter(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "ModularDataCenter", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = modular_data_centerIcon;
+  return node;
 }
 
-export class NetworkManagers extends _Other {
-  protected static _iconDataUrl = network_managersIcon;
+export function NetworkManagers(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "NetworkManagers", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = network_managersIcon;
+  return node;
 }
 
-export class NetworkSecurityPerimeters extends _Other {
-  protected static _iconDataUrl = network_security_perimetersIcon;
+export function NetworkSecurityPerimeters(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "NetworkSecurityPerimeters", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = network_security_perimetersIcon;
+  return node;
 }
 
-export class OpenSupplyChainPlatform extends _Other {
-  protected static _iconDataUrl = open_supply_chain_platformIcon;
+export function OpenSupplyChainPlatform(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "OpenSupplyChainPlatform", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = open_supply_chain_platformIcon;
+  return node;
 }
 
-export class PeeringService extends _Other {
-  protected static _iconDataUrl = peering_serviceIcon;
+export function PeeringService(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "PeeringService", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = peering_serviceIcon;
+  return node;
 }
 
-export class Peerings extends _Other {
-  protected static _iconDataUrl = peeringsIcon;
+export function Peerings(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "Peerings", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = peeringsIcon;
+  return node;
 }
 
-export class PrivateEndpoints extends _Other {
-  protected static _iconDataUrl = private_endpointsIcon;
+export function PrivateEndpoints(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "PrivateEndpoints", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = private_endpointsIcon;
+  return node;
 }
 
-export class ReservedCapacity extends _Other {
-  protected static _iconDataUrl = reserved_capacityIcon;
+export function ReservedCapacity(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "ReservedCapacity", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = reserved_capacityIcon;
+  return node;
 }
 
-export class ResourceGuard extends _Other {
-  protected static _iconDataUrl = resource_guardIcon;
+export function ResourceGuard(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "ResourceGuard", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = resource_guardIcon;
+  return node;
 }
 
-export class ResourceMover extends _Other {
-  protected static _iconDataUrl = resource_moverIcon;
+export function ResourceMover(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "ResourceMover", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = resource_moverIcon;
+  return node;
 }
 
-export class Rtos extends _Other {
-  protected static _iconDataUrl = rtosIcon;
+export function Rtos(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "Rtos", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = rtosIcon;
+  return node;
 }
 
-export class SavingsPlans extends _Other {
-  protected static _iconDataUrl = savings_plansIcon;
+export function SavingsPlans(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "SavingsPlans", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = savings_plansIcon;
+  return node;
 }
 
-export class ScvmmManagementServers extends _Other {
-  protected static _iconDataUrl = scvmm_management_serversIcon;
+export function ScvmmManagementServers(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "ScvmmManagementServers", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = scvmm_management_serversIcon;
+  return node;
 }
 
-export class SonicDash extends _Other {
-  protected static _iconDataUrl = sonic_dashIcon;
+export function SonicDash(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "SonicDash", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = sonic_dashIcon;
+  return node;
 }
 
-export class SshKeys extends _Other {
-  protected static _iconDataUrl = ssh_keysIcon;
+export function SshKeys(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "SshKeys", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = ssh_keysIcon;
+  return node;
 }
 
-export class StorageFunctions extends _Other {
-  protected static _iconDataUrl = storage_functionsIcon;
+export function StorageFunctions(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "StorageFunctions", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = storage_functionsIcon;
+  return node;
 }
 
-export class TargetsManagement extends _Other {
-  protected static _iconDataUrl = targets_managementIcon;
+export function TargetsManagement(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "TargetsManagement", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = targets_managementIcon;
+  return node;
 }
 
-export class TemplateSpecs extends _Other {
-  protected static _iconDataUrl = template_specsIcon;
+export function TemplateSpecs(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "TemplateSpecs", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = template_specsIcon;
+  return node;
 }
 
-export class TestBase extends _Other {
-  protected static _iconDataUrl = test_baseIcon;
+export function TestBase(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "TestBase", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = test_baseIcon;
+  return node;
 }
 
-export class UpdateManagementCenter extends _Other {
-  protected static _iconDataUrl = update_management_centerIcon;
+export function UpdateManagementCenter(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "UpdateManagementCenter", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = update_management_centerIcon;
+  return node;
 }
 
-export class VideoAnalyzers extends _Other {
-  protected static _iconDataUrl = video_analyzersIcon;
+export function VideoAnalyzers(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "VideoAnalyzers", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = video_analyzersIcon;
+  return node;
 }
 
-export class VirtualEnclaves extends _Other {
-  protected static _iconDataUrl = virtual_enclavesIcon;
+export function VirtualEnclaves(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "VirtualEnclaves", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = virtual_enclavesIcon;
+  return node;
 }
 
-export class VirtualInstanceForSAP extends _Other {
-  protected static _iconDataUrl = virtual_instance_for_sapIcon;
+export function VirtualInstanceForSAP(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "VirtualInstanceForSAP", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = virtual_instance_for_sapIcon;
+  return node;
 }
 
-export class VirtualVisitsBuilder extends _Other {
-  protected static _iconDataUrl = virtual_visits_builderIcon;
+export function VirtualVisitsBuilder(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "VirtualVisitsBuilder", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = virtual_visits_builderIcon;
+  return node;
 }
 
-export class VMAppDefinitions extends _Other {
-  protected static _iconDataUrl = vm_app_definitionsIcon;
+export function VMAppDefinitions(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "VMAppDefinitions", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = vm_app_definitionsIcon;
+  return node;
 }
 
-export class VMAppVersions extends _Other {
-  protected static _iconDataUrl = vm_app_versionsIcon;
+export function VMAppVersions(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "VMAppVersions", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = vm_app_versionsIcon;
+  return node;
 }
 
-export class VMImageVersion extends _Other {
-  protected static _iconDataUrl = vm_image_versionIcon;
+export function VMImageVersion(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "VMImageVersion", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = vm_image_versionIcon;
+  return node;
 }
 
-export class Wac extends _Other {
-  protected static _iconDataUrl = wacIcon;
+export function Wac(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "Wac", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = wacIcon;
+  return node;
 }
 
-export class WebAppDatabase extends _Other {
-  protected static _iconDataUrl = web_app_databaseIcon;
+export function WebAppDatabase(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "WebAppDatabase", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = web_app_databaseIcon;
+  return node;
 }
 
-export class WebJobs extends _Other {
-  protected static _iconDataUrl = web_jobsIcon;
+export function WebJobs(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "WebJobs", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = web_jobsIcon;
+  return node;
 }
 
-export class WindowsNotificationServices extends _Other {
-  protected static _iconDataUrl = windows_notification_servicesIcon;
+export function WindowsNotificationServices(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "WindowsNotificationServices", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = windows_notification_servicesIcon;
+  return node;
 }
 
-export class WorkerContainerApp extends _Other {
-  protected static _iconDataUrl = worker_container_appIcon;
+export function WorkerContainerApp(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "WorkerContainerApp", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = worker_container_appIcon;
+  return node;
 }

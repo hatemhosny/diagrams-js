@@ -69,13 +69,23 @@ export interface NodeOptions {
   [key: string]: unknown;
 }
 
-// Forward declarations
+// Forward declarations - these match the factory function return types
 export interface Node {
   nodeId: string;
   label: string;
-  to(target: Node | Node[] | Edge, edgeOrTarget?: Node | Node[]): Node | Node[];
-  from(source: Node | Node[]): Node;
-  with(target: Node | Node[]): Node;
+  to(target: Node): Node;
+  to(targets: Node[]): Node[];
+  to(edge: Edge, target: Node): Node;
+  to(edge: Edge, target: Node[]): Node[];
+  to(edge: Edge): Edge;
+  from(source: Node): Node;
+  from(sources: Node[]): Node;
+  from(edge: Edge, source: Node): Node;
+  from(edge: Edge, sources: Node[]): Node;
+  with(target: Node): Node;
+  with(targets: Node[]): Node[];
+  with(edge: Edge, target: Node): Node;
+  with(edge: Edge, target: Node[]): Node[];
 }
 
 export interface Edge {
@@ -83,5 +93,8 @@ export interface Edge {
   forward: boolean;
   reverse: boolean;
   attrs: Record<string, string>;
-  to(target: Node | Edge): Edge | Node;
+  to(target: Node): Node;
+  to(target: Edge): Edge;
+  from(target: Node): Node;
+  from(target: Edge): Edge;
 }

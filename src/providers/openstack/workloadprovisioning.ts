@@ -3,18 +3,26 @@ import magnumIcon from "../../../resources/openstack/workloadprovisioning/magnum
 import saharaIcon from "../../../resources/openstack/workloadprovisioning/sahara.png";
 import troveIcon from "../../../resources/openstack/workloadprovisioning/trove.png";
 
-class _Workloadprovisioning extends _Openstack {
-  protected static override _type = "workloadprovisioning";
+function _Workloadprovisioning(label?: string, options?: Record<string, unknown>) {
+  const node = _Openstack(label, options);
+  (node as unknown as Record<string, unknown>)._type = "workloadprovisioning";
+  return node;
 }
 
-export class Magnum extends _Workloadprovisioning {
-  protected static _iconDataUrl = magnumIcon;
+export function Magnum(label?: string, options?: Record<string, unknown>) {
+  const node = _Workloadprovisioning(label ?? "Magnum", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = magnumIcon;
+  return node;
 }
 
-export class Sahara extends _Workloadprovisioning {
-  protected static _iconDataUrl = saharaIcon;
+export function Sahara(label?: string, options?: Record<string, unknown>) {
+  const node = _Workloadprovisioning(label ?? "Sahara", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = saharaIcon;
+  return node;
 }
 
-export class Trove extends _Workloadprovisioning {
-  protected static _iconDataUrl = troveIcon;
+export function Trove(label?: string, options?: Record<string, unknown>) {
+  const node = _Workloadprovisioning(label ?? "Trove", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = troveIcon;
+  return node;
 }

@@ -6,32 +6,46 @@ import helmIcon from "../../../resources/openstack/deployment/helm.png";
 import kollaIcon from "../../../resources/openstack/deployment/kolla.png";
 import tripleoIcon from "../../../resources/openstack/deployment/tripleo.png";
 
-class _Deployment extends _Openstack {
-  protected static override _type = "deployment";
+function _Deployment(label?: string, options?: Record<string, unknown>) {
+  const node = _Openstack(label, options);
+  (node as unknown as Record<string, unknown>)._type = "deployment";
+  return node;
 }
 
-export class Ansible extends _Deployment {
-  protected static _iconDataUrl = ansibleIcon;
+export function Ansible(label?: string, options?: Record<string, unknown>) {
+  const node = _Deployment(label ?? "Ansible", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = ansibleIcon;
+  return node;
 }
 
-export class Charms extends _Deployment {
-  protected static _iconDataUrl = charmsIcon;
+export function Charms(label?: string, options?: Record<string, unknown>) {
+  const node = _Deployment(label ?? "Charms", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = charmsIcon;
+  return node;
 }
 
-export class Chef extends _Deployment {
-  protected static _iconDataUrl = chefIcon;
+export function Chef(label?: string, options?: Record<string, unknown>) {
+  const node = _Deployment(label ?? "Chef", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = chefIcon;
+  return node;
 }
 
-export class Helm extends _Deployment {
-  protected static _iconDataUrl = helmIcon;
+export function Helm(label?: string, options?: Record<string, unknown>) {
+  const node = _Deployment(label ?? "Helm", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = helmIcon;
+  return node;
 }
 
-export class Kolla extends _Deployment {
-  protected static _iconDataUrl = kollaIcon;
+export function Kolla(label?: string, options?: Record<string, unknown>) {
+  const node = _Deployment(label ?? "Kolla", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = kollaIcon;
+  return node;
 }
 
-export class Tripleo extends _Deployment {
-  protected static _iconDataUrl = tripleoIcon;
+export function Tripleo(label?: string, options?: Record<string, unknown>) {
+  const node = _Deployment(label ?? "Tripleo", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = tripleoIcon;
+  return node;
 }
 
 // Aliases

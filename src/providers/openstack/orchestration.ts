@@ -5,26 +5,38 @@ import mistralIcon from "../../../resources/openstack/orchestration/mistral.png"
 import senlinIcon from "../../../resources/openstack/orchestration/senlin.png";
 import zaqarIcon from "../../../resources/openstack/orchestration/zaqar.png";
 
-class _Orchestration extends _Openstack {
-  protected static override _type = "orchestration";
+function _Orchestration(label?: string, options?: Record<string, unknown>) {
+  const node = _Openstack(label, options);
+  (node as unknown as Record<string, unknown>)._type = "orchestration";
+  return node;
 }
 
-export class Blazar extends _Orchestration {
-  protected static _iconDataUrl = blazarIcon;
+export function Blazar(label?: string, options?: Record<string, unknown>) {
+  const node = _Orchestration(label ?? "Blazar", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = blazarIcon;
+  return node;
 }
 
-export class Heat extends _Orchestration {
-  protected static _iconDataUrl = heatIcon;
+export function Heat(label?: string, options?: Record<string, unknown>) {
+  const node = _Orchestration(label ?? "Heat", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = heatIcon;
+  return node;
 }
 
-export class Mistral extends _Orchestration {
-  protected static _iconDataUrl = mistralIcon;
+export function Mistral(label?: string, options?: Record<string, unknown>) {
+  const node = _Orchestration(label ?? "Mistral", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = mistralIcon;
+  return node;
 }
 
-export class Senlin extends _Orchestration {
-  protected static _iconDataUrl = senlinIcon;
+export function Senlin(label?: string, options?: Record<string, unknown>) {
+  const node = _Orchestration(label ?? "Senlin", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = senlinIcon;
+  return node;
 }
 
-export class Zaqar extends _Orchestration {
-  protected static _iconDataUrl = zaqarIcon;
+export function Zaqar(label?: string, options?: Record<string, unknown>) {
+  const node = _Orchestration(label ?? "Zaqar", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = zaqarIcon;
+  return node;
 }

@@ -17,76 +17,112 @@ import tools_for_eclipseIcon from "../../../resources/gcp/devtools/tools-for-ecl
 import tools_for_powershellIcon from "../../../resources/gcp/devtools/tools-for-powershell.png";
 import tools_for_visual_studioIcon from "../../../resources/gcp/devtools/tools-for-visual-studio.png";
 
-class _Devtools extends _Gcp {
-  protected static override _type = "devtools";
+function _Devtools(label?: string, options?: Record<string, unknown>) {
+  const node = _Gcp(label, options);
+  (node as unknown as Record<string, unknown>)._type = "devtools";
+  return node;
 }
 
-export class Build extends _Devtools {
-  protected static _iconDataUrl = buildIcon;
+export function Build(label?: string, options?: Record<string, unknown>) {
+  const node = _Devtools(label ?? "Build", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = buildIcon;
+  return node;
 }
 
-export class CloudShell extends _Devtools {
-  protected static _iconDataUrl = cloud_shellIcon;
+export function CloudShell(label?: string, options?: Record<string, unknown>) {
+  const node = _Devtools(label ?? "CloudShell", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = cloud_shellIcon;
+  return node;
 }
 
-export class CodeForIntellij extends _Devtools {
-  protected static _iconDataUrl = code_for_intellijIcon;
+export function CodeForIntellij(label?: string, options?: Record<string, unknown>) {
+  const node = _Devtools(label ?? "CodeForIntellij", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = code_for_intellijIcon;
+  return node;
 }
 
-export class Code extends _Devtools {
-  protected static _iconDataUrl = codeIcon;
+export function Code(label?: string, options?: Record<string, unknown>) {
+  const node = _Devtools(label ?? "Code", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = codeIcon;
+  return node;
 }
 
-export class ContainerRegistry extends _Devtools {
-  protected static _iconDataUrl = container_registryIcon;
+export function ContainerRegistry(label?: string, options?: Record<string, unknown>) {
+  const node = _Devtools(label ?? "ContainerRegistry", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = container_registryIcon;
+  return node;
 }
 
-export class GradleAppEnginePlugin extends _Devtools {
-  protected static _iconDataUrl = gradle_app_engine_pluginIcon;
+export function GradleAppEnginePlugin(label?: string, options?: Record<string, unknown>) {
+  const node = _Devtools(label ?? "GradleAppEnginePlugin", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = gradle_app_engine_pluginIcon;
+  return node;
 }
 
-export class IdePlugins extends _Devtools {
-  protected static _iconDataUrl = ide_pluginsIcon;
+export function IdePlugins(label?: string, options?: Record<string, unknown>) {
+  const node = _Devtools(label ?? "IdePlugins", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = ide_pluginsIcon;
+  return node;
 }
 
-export class MavenAppEnginePlugin extends _Devtools {
-  protected static _iconDataUrl = maven_app_engine_pluginIcon;
+export function MavenAppEnginePlugin(label?: string, options?: Record<string, unknown>) {
+  const node = _Devtools(label ?? "MavenAppEnginePlugin", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = maven_app_engine_pluginIcon;
+  return node;
 }
 
-export class Scheduler extends _Devtools {
-  protected static _iconDataUrl = schedulerIcon;
+export function Scheduler(label?: string, options?: Record<string, unknown>) {
+  const node = _Devtools(label ?? "Scheduler", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = schedulerIcon;
+  return node;
 }
 
-export class SDK extends _Devtools {
-  protected static _iconDataUrl = sdkIcon;
+export function SDK(label?: string, options?: Record<string, unknown>) {
+  const node = _Devtools(label ?? "SDK", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = sdkIcon;
+  return node;
 }
 
-export class ServiceCatalog extends _Devtools {
-  protected static _iconDataUrl = service_catalogIcon;
+export function ServiceCatalog(label?: string, options?: Record<string, unknown>) {
+  const node = _Devtools(label ?? "ServiceCatalog", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = service_catalogIcon;
+  return node;
 }
 
-export class SourceRepositories extends _Devtools {
-  protected static _iconDataUrl = source_repositoriesIcon;
+export function SourceRepositories(label?: string, options?: Record<string, unknown>) {
+  const node = _Devtools(label ?? "SourceRepositories", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = source_repositoriesIcon;
+  return node;
 }
 
-export class Tasks extends _Devtools {
-  protected static _iconDataUrl = tasksIcon;
+export function Tasks(label?: string, options?: Record<string, unknown>) {
+  const node = _Devtools(label ?? "Tasks", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = tasksIcon;
+  return node;
 }
 
-export class TestLab extends _Devtools {
-  protected static _iconDataUrl = test_labIcon;
+export function TestLab(label?: string, options?: Record<string, unknown>) {
+  const node = _Devtools(label ?? "TestLab", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = test_labIcon;
+  return node;
 }
 
-export class ToolsForEclipse extends _Devtools {
-  protected static _iconDataUrl = tools_for_eclipseIcon;
+export function ToolsForEclipse(label?: string, options?: Record<string, unknown>) {
+  const node = _Devtools(label ?? "ToolsForEclipse", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = tools_for_eclipseIcon;
+  return node;
 }
 
-export class ToolsForPowershell extends _Devtools {
-  protected static _iconDataUrl = tools_for_powershellIcon;
+export function ToolsForPowershell(label?: string, options?: Record<string, unknown>) {
+  const node = _Devtools(label ?? "ToolsForPowershell", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = tools_for_powershellIcon;
+  return node;
 }
 
-export class ToolsForVisualStudio extends _Devtools {
-  protected static _iconDataUrl = tools_for_visual_studioIcon;
+export function ToolsForVisualStudio(label?: string, options?: Record<string, unknown>) {
+  const node = _Devtools(label ?? "ToolsForVisualStudio", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = tools_for_visual_studioIcon;
+  return node;
 }
 
 // Aliases

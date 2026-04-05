@@ -59,244 +59,381 @@ import trusted_advisorIcon from "../../../resources/aws/management/trusted-advis
 import user_notificationsIcon from "../../../resources/aws/management/user-notifications.png";
 import well_architected_toolIcon from "../../../resources/aws/management/well-architected-tool.png";
 
-class _Management extends _Aws {
-  protected static override _type = "management";
+function _Management(label?: string, options?: Record<string, unknown>) {
+  const node = _Aws(label, options);
+  (node as unknown as Record<string, unknown>)._type = "management";
+  return node;
 }
 
-export class AmazonDevopsGuru extends _Management {
-  protected static _iconDataUrl = amazon_devops_guruIcon;
+export function AmazonDevopsGuru(label?: string, options?: Record<string, unknown>) {
+  const node = _Management(label ?? "AmazonDevopsGuru", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = amazon_devops_guruIcon;
+  return node;
 }
 
-export class AmazonManagedGrafana extends _Management {
-  protected static _iconDataUrl = amazon_managed_grafanaIcon;
+export function AmazonManagedGrafana(label?: string, options?: Record<string, unknown>) {
+  const node = _Management(label ?? "AmazonManagedGrafana", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = amazon_managed_grafanaIcon;
+  return node;
 }
 
-export class AmazonManagedPrometheus extends _Management {
-  protected static _iconDataUrl = amazon_managed_prometheusIcon;
+export function AmazonManagedPrometheus(label?: string, options?: Record<string, unknown>) {
+  const node = _Management(label ?? "AmazonManagedPrometheus", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = amazon_managed_prometheusIcon;
+  return node;
 }
 
-export class AmazonManagedWorkflowsApacheAirflow extends _Management {
-  protected static _iconDataUrl = amazon_managed_workflows_apache_airflowIcon;
+export function AmazonManagedWorkflowsApacheAirflow(
+  label?: string,
+  options?: Record<string, unknown>,
+) {
+  const node = _Management(label ?? "AmazonManagedWorkflowsApacheAirflow", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl =
+    amazon_managed_workflows_apache_airflowIcon;
+  return node;
 }
 
-export class AutoScaling extends _Management {
-  protected static _iconDataUrl = auto_scalingIcon;
+export function AutoScaling(label?: string, options?: Record<string, unknown>) {
+  const node = _Management(label ?? "AutoScaling", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = auto_scalingIcon;
+  return node;
 }
 
-export class Chatbot extends _Management {
-  protected static _iconDataUrl = chatbotIcon;
+export function Chatbot(label?: string, options?: Record<string, unknown>) {
+  const node = _Management(label ?? "Chatbot", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = chatbotIcon;
+  return node;
 }
 
-export class CloudformationChangeSet extends _Management {
-  protected static _iconDataUrl = cloudformation_change_setIcon;
+export function CloudformationChangeSet(label?: string, options?: Record<string, unknown>) {
+  const node = _Management(label ?? "CloudformationChangeSet", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = cloudformation_change_setIcon;
+  return node;
 }
 
-export class CloudformationStack extends _Management {
-  protected static _iconDataUrl = cloudformation_stackIcon;
+export function CloudformationStack(label?: string, options?: Record<string, unknown>) {
+  const node = _Management(label ?? "CloudformationStack", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = cloudformation_stackIcon;
+  return node;
 }
 
-export class CloudformationTemplate extends _Management {
-  protected static _iconDataUrl = cloudformation_templateIcon;
+export function CloudformationTemplate(label?: string, options?: Record<string, unknown>) {
+  const node = _Management(label ?? "CloudformationTemplate", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = cloudformation_templateIcon;
+  return node;
 }
 
-export class Cloudformation extends _Management {
-  protected static _iconDataUrl = cloudformationIcon;
+export function Cloudformation(label?: string, options?: Record<string, unknown>) {
+  const node = _Management(label ?? "Cloudformation", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = cloudformationIcon;
+  return node;
 }
 
-export class Cloudtrail extends _Management {
-  protected static _iconDataUrl = cloudtrailIcon;
+export function Cloudtrail(label?: string, options?: Record<string, unknown>) {
+  const node = _Management(label ?? "Cloudtrail", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = cloudtrailIcon;
+  return node;
 }
 
-export class CloudwatchAlarm extends _Management {
-  protected static _iconDataUrl = cloudwatch_alarmIcon;
+export function CloudwatchAlarm(label?: string, options?: Record<string, unknown>) {
+  const node = _Management(label ?? "CloudwatchAlarm", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = cloudwatch_alarmIcon;
+  return node;
 }
 
-export class CloudwatchEventEventBased extends _Management {
-  protected static _iconDataUrl = cloudwatch_event_event_basedIcon;
+export function CloudwatchEventEventBased(label?: string, options?: Record<string, unknown>) {
+  const node = _Management(label ?? "CloudwatchEventEventBased", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = cloudwatch_event_event_basedIcon;
+  return node;
 }
 
-export class CloudwatchEventTimeBased extends _Management {
-  protected static _iconDataUrl = cloudwatch_event_time_basedIcon;
+export function CloudwatchEventTimeBased(label?: string, options?: Record<string, unknown>) {
+  const node = _Management(label ?? "CloudwatchEventTimeBased", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = cloudwatch_event_time_basedIcon;
+  return node;
 }
 
-export class CloudwatchLogs extends _Management {
-  protected static _iconDataUrl = cloudwatch_logsIcon;
+export function CloudwatchLogs(label?: string, options?: Record<string, unknown>) {
+  const node = _Management(label ?? "CloudwatchLogs", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = cloudwatch_logsIcon;
+  return node;
 }
 
-export class CloudwatchRule extends _Management {
-  protected static _iconDataUrl = cloudwatch_ruleIcon;
+export function CloudwatchRule(label?: string, options?: Record<string, unknown>) {
+  const node = _Management(label ?? "CloudwatchRule", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = cloudwatch_ruleIcon;
+  return node;
 }
 
-export class Cloudwatch extends _Management {
-  protected static _iconDataUrl = cloudwatchIcon;
+export function Cloudwatch(label?: string, options?: Record<string, unknown>) {
+  const node = _Management(label ?? "Cloudwatch", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = cloudwatchIcon;
+  return node;
 }
 
-export class Codeguru extends _Management {
-  protected static _iconDataUrl = codeguruIcon;
+export function Codeguru(label?: string, options?: Record<string, unknown>) {
+  const node = _Management(label ?? "Codeguru", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = codeguruIcon;
+  return node;
 }
 
-export class CommandLineInterface extends _Management {
-  protected static _iconDataUrl = command_line_interfaceIcon;
+export function CommandLineInterface(label?: string, options?: Record<string, unknown>) {
+  const node = _Management(label ?? "CommandLineInterface", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = command_line_interfaceIcon;
+  return node;
 }
 
-export class Config extends _Management {
-  protected static _iconDataUrl = configIcon;
+export function Config(label?: string, options?: Record<string, unknown>) {
+  const node = _Management(label ?? "Config", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = configIcon;
+  return node;
 }
 
-export class ControlTower extends _Management {
-  protected static _iconDataUrl = control_towerIcon;
+export function ControlTower(label?: string, options?: Record<string, unknown>) {
+  const node = _Management(label ?? "ControlTower", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = control_towerIcon;
+  return node;
 }
 
-export class LicenseManager extends _Management {
-  protected static _iconDataUrl = license_managerIcon;
+export function LicenseManager(label?: string, options?: Record<string, unknown>) {
+  const node = _Management(label ?? "LicenseManager", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = license_managerIcon;
+  return node;
 }
 
-export class ManagedServices extends _Management {
-  protected static _iconDataUrl = managed_servicesIcon;
+export function ManagedServices(label?: string, options?: Record<string, unknown>) {
+  const node = _Management(label ?? "ManagedServices", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = managed_servicesIcon;
+  return node;
 }
 
-export class ManagementAndGovernance extends _Management {
-  protected static _iconDataUrl = management_and_governanceIcon;
+export function ManagementAndGovernance(label?: string, options?: Record<string, unknown>) {
+  const node = _Management(label ?? "ManagementAndGovernance", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = management_and_governanceIcon;
+  return node;
 }
 
-export class ManagementConsole extends _Management {
-  protected static _iconDataUrl = management_consoleIcon;
+export function ManagementConsole(label?: string, options?: Record<string, unknown>) {
+  const node = _Management(label ?? "ManagementConsole", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = management_consoleIcon;
+  return node;
 }
 
-export class OpsworksApps extends _Management {
-  protected static _iconDataUrl = opsworks_appsIcon;
+export function OpsworksApps(label?: string, options?: Record<string, unknown>) {
+  const node = _Management(label ?? "OpsworksApps", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = opsworks_appsIcon;
+  return node;
 }
 
-export class OpsworksDeployments extends _Management {
-  protected static _iconDataUrl = opsworks_deploymentsIcon;
+export function OpsworksDeployments(label?: string, options?: Record<string, unknown>) {
+  const node = _Management(label ?? "OpsworksDeployments", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = opsworks_deploymentsIcon;
+  return node;
 }
 
-export class OpsworksInstances extends _Management {
-  protected static _iconDataUrl = opsworks_instancesIcon;
+export function OpsworksInstances(label?: string, options?: Record<string, unknown>) {
+  const node = _Management(label ?? "OpsworksInstances", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = opsworks_instancesIcon;
+  return node;
 }
 
-export class OpsworksLayers extends _Management {
-  protected static _iconDataUrl = opsworks_layersIcon;
+export function OpsworksLayers(label?: string, options?: Record<string, unknown>) {
+  const node = _Management(label ?? "OpsworksLayers", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = opsworks_layersIcon;
+  return node;
 }
 
-export class OpsworksMonitoring extends _Management {
-  protected static _iconDataUrl = opsworks_monitoringIcon;
+export function OpsworksMonitoring(label?: string, options?: Record<string, unknown>) {
+  const node = _Management(label ?? "OpsworksMonitoring", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = opsworks_monitoringIcon;
+  return node;
 }
 
-export class OpsworksPermissions extends _Management {
-  protected static _iconDataUrl = opsworks_permissionsIcon;
+export function OpsworksPermissions(label?: string, options?: Record<string, unknown>) {
+  const node = _Management(label ?? "OpsworksPermissions", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = opsworks_permissionsIcon;
+  return node;
 }
 
-export class OpsworksResources extends _Management {
-  protected static _iconDataUrl = opsworks_resourcesIcon;
+export function OpsworksResources(label?: string, options?: Record<string, unknown>) {
+  const node = _Management(label ?? "OpsworksResources", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = opsworks_resourcesIcon;
+  return node;
 }
 
-export class OpsworksStack extends _Management {
-  protected static _iconDataUrl = opsworks_stackIcon;
+export function OpsworksStack(label?: string, options?: Record<string, unknown>) {
+  const node = _Management(label ?? "OpsworksStack", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = opsworks_stackIcon;
+  return node;
 }
 
-export class Opsworks extends _Management {
-  protected static _iconDataUrl = opsworksIcon;
+export function Opsworks(label?: string, options?: Record<string, unknown>) {
+  const node = _Management(label ?? "Opsworks", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = opsworksIcon;
+  return node;
 }
 
-export class OrganizationsAccount extends _Management {
-  protected static _iconDataUrl = organizations_accountIcon;
+export function OrganizationsAccount(label?: string, options?: Record<string, unknown>) {
+  const node = _Management(label ?? "OrganizationsAccount", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = organizations_accountIcon;
+  return node;
 }
 
-export class OrganizationsOrganizationalUnit extends _Management {
-  protected static _iconDataUrl = organizations_organizational_unitIcon;
+export function OrganizationsOrganizationalUnit(label?: string, options?: Record<string, unknown>) {
+  const node = _Management(label ?? "OrganizationsOrganizationalUnit", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = organizations_organizational_unitIcon;
+  return node;
 }
 
-export class Organizations extends _Management {
-  protected static _iconDataUrl = organizationsIcon;
+export function Organizations(label?: string, options?: Record<string, unknown>) {
+  const node = _Management(label ?? "Organizations", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = organizationsIcon;
+  return node;
 }
 
-export class PersonalHealthDashboard extends _Management {
-  protected static _iconDataUrl = personal_health_dashboardIcon;
+export function PersonalHealthDashboard(label?: string, options?: Record<string, unknown>) {
+  const node = _Management(label ?? "PersonalHealthDashboard", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = personal_health_dashboardIcon;
+  return node;
 }
 
-export class Proton extends _Management {
-  protected static _iconDataUrl = protonIcon;
+export function Proton(label?: string, options?: Record<string, unknown>) {
+  const node = _Management(label ?? "Proton", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = protonIcon;
+  return node;
 }
 
-export class ServiceCatalog extends _Management {
-  protected static _iconDataUrl = service_catalogIcon;
+export function ServiceCatalog(label?: string, options?: Record<string, unknown>) {
+  const node = _Management(label ?? "ServiceCatalog", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = service_catalogIcon;
+  return node;
 }
 
-export class SystemsManagerAppConfig extends _Management {
-  protected static _iconDataUrl = systems_manager_app_configIcon;
+export function SystemsManagerAppConfig(label?: string, options?: Record<string, unknown>) {
+  const node = _Management(label ?? "SystemsManagerAppConfig", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = systems_manager_app_configIcon;
+  return node;
 }
 
-export class SystemsManagerAutomation extends _Management {
-  protected static _iconDataUrl = systems_manager_automationIcon;
+export function SystemsManagerAutomation(label?: string, options?: Record<string, unknown>) {
+  const node = _Management(label ?? "SystemsManagerAutomation", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = systems_manager_automationIcon;
+  return node;
 }
 
-export class SystemsManagerDocuments extends _Management {
-  protected static _iconDataUrl = systems_manager_documentsIcon;
+export function SystemsManagerDocuments(label?: string, options?: Record<string, unknown>) {
+  const node = _Management(label ?? "SystemsManagerDocuments", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = systems_manager_documentsIcon;
+  return node;
 }
 
-export class SystemsManagerInventory extends _Management {
-  protected static _iconDataUrl = systems_manager_inventoryIcon;
+export function SystemsManagerInventory(label?: string, options?: Record<string, unknown>) {
+  const node = _Management(label ?? "SystemsManagerInventory", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = systems_manager_inventoryIcon;
+  return node;
 }
 
-export class SystemsManagerMaintenanceWindows extends _Management {
-  protected static _iconDataUrl = systems_manager_maintenance_windowsIcon;
+export function SystemsManagerMaintenanceWindows(
+  label?: string,
+  options?: Record<string, unknown>,
+) {
+  const node = _Management(label ?? "SystemsManagerMaintenanceWindows", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl =
+    systems_manager_maintenance_windowsIcon;
+  return node;
 }
 
-export class SystemsManagerOpscenter extends _Management {
-  protected static _iconDataUrl = systems_manager_opscenterIcon;
+export function SystemsManagerOpscenter(label?: string, options?: Record<string, unknown>) {
+  const node = _Management(label ?? "SystemsManagerOpscenter", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = systems_manager_opscenterIcon;
+  return node;
 }
 
-export class SystemsManagerParameterStore extends _Management {
-  protected static _iconDataUrl = systems_manager_parameter_storeIcon;
+export function SystemsManagerParameterStore(label?: string, options?: Record<string, unknown>) {
+  const node = _Management(label ?? "SystemsManagerParameterStore", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = systems_manager_parameter_storeIcon;
+  return node;
 }
 
-export class SystemsManagerPatchManager extends _Management {
-  protected static _iconDataUrl = systems_manager_patch_managerIcon;
+export function SystemsManagerPatchManager(label?: string, options?: Record<string, unknown>) {
+  const node = _Management(label ?? "SystemsManagerPatchManager", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = systems_manager_patch_managerIcon;
+  return node;
 }
 
-export class SystemsManagerRunCommand extends _Management {
-  protected static _iconDataUrl = systems_manager_run_commandIcon;
+export function SystemsManagerRunCommand(label?: string, options?: Record<string, unknown>) {
+  const node = _Management(label ?? "SystemsManagerRunCommand", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = systems_manager_run_commandIcon;
+  return node;
 }
 
-export class SystemsManagerStateManager extends _Management {
-  protected static _iconDataUrl = systems_manager_state_managerIcon;
+export function SystemsManagerStateManager(label?: string, options?: Record<string, unknown>) {
+  const node = _Management(label ?? "SystemsManagerStateManager", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = systems_manager_state_managerIcon;
+  return node;
 }
 
-export class SystemsManager extends _Management {
-  protected static _iconDataUrl = systems_managerIcon;
+export function SystemsManager(label?: string, options?: Record<string, unknown>) {
+  const node = _Management(label ?? "SystemsManager", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = systems_managerIcon;
+  return node;
 }
 
-export class TrustedAdvisorChecklistCost extends _Management {
-  protected static _iconDataUrl = trusted_advisor_checklist_costIcon;
+export function TrustedAdvisorChecklistCost(label?: string, options?: Record<string, unknown>) {
+  const node = _Management(label ?? "TrustedAdvisorChecklistCost", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = trusted_advisor_checklist_costIcon;
+  return node;
 }
 
-export class TrustedAdvisorChecklistFaultTolerant extends _Management {
-  protected static _iconDataUrl = trusted_advisor_checklist_fault_tolerantIcon;
+export function TrustedAdvisorChecklistFaultTolerant(
+  label?: string,
+  options?: Record<string, unknown>,
+) {
+  const node = _Management(label ?? "TrustedAdvisorChecklistFaultTolerant", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl =
+    trusted_advisor_checklist_fault_tolerantIcon;
+  return node;
 }
 
-export class TrustedAdvisorChecklistPerformance extends _Management {
-  protected static _iconDataUrl = trusted_advisor_checklist_performanceIcon;
+export function TrustedAdvisorChecklistPerformance(
+  label?: string,
+  options?: Record<string, unknown>,
+) {
+  const node = _Management(label ?? "TrustedAdvisorChecklistPerformance", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl =
+    trusted_advisor_checklist_performanceIcon;
+  return node;
 }
 
-export class TrustedAdvisorChecklistSecurity extends _Management {
-  protected static _iconDataUrl = trusted_advisor_checklist_securityIcon;
+export function TrustedAdvisorChecklistSecurity(label?: string, options?: Record<string, unknown>) {
+  const node = _Management(label ?? "TrustedAdvisorChecklistSecurity", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl =
+    trusted_advisor_checklist_securityIcon;
+  return node;
 }
 
-export class TrustedAdvisorChecklist extends _Management {
-  protected static _iconDataUrl = trusted_advisor_checklistIcon;
+export function TrustedAdvisorChecklist(label?: string, options?: Record<string, unknown>) {
+  const node = _Management(label ?? "TrustedAdvisorChecklist", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = trusted_advisor_checklistIcon;
+  return node;
 }
 
-export class TrustedAdvisor extends _Management {
-  protected static _iconDataUrl = trusted_advisorIcon;
+export function TrustedAdvisor(label?: string, options?: Record<string, unknown>) {
+  const node = _Management(label ?? "TrustedAdvisor", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = trusted_advisorIcon;
+  return node;
 }
 
-export class UserNotifications extends _Management {
-  protected static _iconDataUrl = user_notificationsIcon;
+export function UserNotifications(label?: string, options?: Record<string, unknown>) {
+  const node = _Management(label ?? "UserNotifications", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = user_notificationsIcon;
+  return node;
 }
 
-export class WellArchitectedTool extends _Management {
-  protected static _iconDataUrl = well_architected_toolIcon;
+export function WellArchitectedTool(label?: string, options?: Record<string, unknown>) {
+  const node = _Management(label ?? "WellArchitectedTool", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = well_architected_toolIcon;
+  return node;
 }
 
 // Aliases

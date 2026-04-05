@@ -6,30 +6,44 @@ import mapnikIcon from "../../../resources/gis/cli/mapnik.png";
 import mdalIcon from "../../../resources/gis/cli/mdal.png";
 import pdalIcon from "../../../resources/gis/cli/pdal.png";
 
-class _Cli extends _Gis {
-  protected static override _type = "cli";
+function _Cli(label?: string, options?: Record<string, unknown>) {
+  const node = _Gis(label, options);
+  (node as unknown as Record<string, unknown>)._type = "cli";
+  return node;
 }
 
-export class Gdal extends _Cli {
-  protected static _iconDataUrl = gdalIcon;
+export function Gdal(label?: string, options?: Record<string, unknown>) {
+  const node = _Cli(label ?? "Gdal", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = gdalIcon;
+  return node;
 }
 
-export class Imposm extends _Cli {
-  protected static _iconDataUrl = imposmIcon;
+export function Imposm(label?: string, options?: Record<string, unknown>) {
+  const node = _Cli(label ?? "Imposm", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = imposmIcon;
+  return node;
 }
 
-export class Lastools extends _Cli {
-  protected static _iconDataUrl = lastoolsIcon;
+export function Lastools(label?: string, options?: Record<string, unknown>) {
+  const node = _Cli(label ?? "Lastools", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = lastoolsIcon;
+  return node;
 }
 
-export class Mapnik extends _Cli {
-  protected static _iconDataUrl = mapnikIcon;
+export function Mapnik(label?: string, options?: Record<string, unknown>) {
+  const node = _Cli(label ?? "Mapnik", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = mapnikIcon;
+  return node;
 }
 
-export class Mdal extends _Cli {
-  protected static _iconDataUrl = mdalIcon;
+export function Mdal(label?: string, options?: Record<string, unknown>) {
+  const node = _Cli(label ?? "Mdal", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = mdalIcon;
+  return node;
 }
 
-export class Pdal extends _Cli {
-  protected static _iconDataUrl = pdalIcon;
+export function Pdal(label?: string, options?: Record<string, unknown>) {
+  const node = _Cli(label ?? "Pdal", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = pdalIcon;
+  return node;
 }

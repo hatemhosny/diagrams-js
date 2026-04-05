@@ -3,18 +3,26 @@ import boundaryIcon from "../../../resources/onprem/auth/boundary.png";
 import buzzfeed_ssoIcon from "../../../resources/onprem/auth/buzzfeed-sso.png";
 import oauth2_proxyIcon from "../../../resources/onprem/auth/oauth2-proxy.png";
 
-class _Auth extends _Onprem {
-  protected static override _type = "auth";
+function _Auth(label?: string, options?: Record<string, unknown>) {
+  const node = _Onprem(label, options);
+  (node as unknown as Record<string, unknown>)._type = "auth";
+  return node;
 }
 
-export class Boundary extends _Auth {
-  protected static _iconDataUrl = boundaryIcon;
+export function Boundary(label?: string, options?: Record<string, unknown>) {
+  const node = _Auth(label ?? "Boundary", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = boundaryIcon;
+  return node;
 }
 
-export class BuzzfeedSso extends _Auth {
-  protected static _iconDataUrl = buzzfeed_ssoIcon;
+export function BuzzfeedSso(label?: string, options?: Record<string, unknown>) {
+  const node = _Auth(label ?? "BuzzfeedSso", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = buzzfeed_ssoIcon;
+  return node;
 }
 
-export class Oauth2Proxy extends _Auth {
-  protected static _iconDataUrl = oauth2_proxyIcon;
+export function Oauth2Proxy(label?: string, options?: Record<string, unknown>) {
+  const node = _Auth(label ?? "Oauth2Proxy", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = oauth2_proxyIcon;
+  return node;
 }

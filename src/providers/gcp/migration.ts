@@ -2,16 +2,22 @@ import { _Gcp } from "./index.js";
 import migrate_compute_engineIcon from "../../../resources/gcp/migration/migrate-compute-engine.png";
 import transfer_applianceIcon from "../../../resources/gcp/migration/transfer-appliance.png";
 
-class _Migration extends _Gcp {
-  protected static override _type = "migration";
+function _Migration(label?: string, options?: Record<string, unknown>) {
+  const node = _Gcp(label, options);
+  (node as unknown as Record<string, unknown>)._type = "migration";
+  return node;
 }
 
-export class MigrateComputeEngine extends _Migration {
-  protected static _iconDataUrl = migrate_compute_engineIcon;
+export function MigrateComputeEngine(label?: string, options?: Record<string, unknown>) {
+  const node = _Migration(label ?? "MigrateComputeEngine", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = migrate_compute_engineIcon;
+  return node;
 }
 
-export class TransferAppliance extends _Migration {
-  protected static _iconDataUrl = transfer_applianceIcon;
+export function TransferAppliance(label?: string, options?: Record<string, unknown>) {
+  const node = _Migration(label ?? "TransferAppliance", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = transfer_applianceIcon;
+  return node;
 }
 
 // Aliases

@@ -1,10 +1,14 @@
 import { Node } from "../../Node.js";
 
-export class _Gcp extends Node {
-  protected static override _provider = "gcp";
-  protected static override _iconDir = "gcp";
+export function _Gcp(label?: string, options?: Record<string, unknown>) {
+  const node = Node(label ?? "Gcp", options);
+  (node as unknown as Record<string, unknown>)._provider = "gcp";
+  (node as unknown as Record<string, unknown>)._iconDir = "gcp";
+  return node;
 }
 
-export class Gcp extends _Gcp {
-  protected static override _icon = "gcp.png";
+export function Gcp(label?: string, options?: Record<string, unknown>) {
+  const node = _Gcp(label ?? "Gcp", options);
+  (node as unknown as Record<string, unknown>)._icon = "gcp.png";
+  return node;
 }

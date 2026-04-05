@@ -22,94 +22,140 @@ import pygeoapiIcon from "../../../resources/gis/server/pygeoapi.png";
 import qgis_serverIcon from "../../../resources/gis/server/qgis-server.png";
 import zooprojectIcon from "../../../resources/gis/server/zooproject.png";
 
-class _Server extends _Gis {
-  protected static override _type = "server";
+function _Server(label?: string, options?: Record<string, unknown>) {
+  const node = _Gis(label, options);
+  (node as unknown as Record<string, unknown>)._type = "server";
+  return node;
 }
 
-export class Actinia extends _Server {
-  protected static _iconDataUrl = actiniaIcon;
+export function Actinia(label?: string, options?: Record<string, unknown>) {
+  const node = _Server(label ?? "Actinia", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = actiniaIcon;
+  return node;
 }
 
-export class Baremaps extends _Server {
-  protected static _iconDataUrl = baremapsIcon;
+export function Baremaps(label?: string, options?: Record<string, unknown>) {
+  const node = _Server(label ?? "Baremaps", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = baremapsIcon;
+  return node;
 }
 
-export class Deegree extends _Server {
-  protected static _iconDataUrl = deegreeIcon;
+export function Deegree(label?: string, options?: Record<string, unknown>) {
+  const node = _Server(label ?? "Deegree", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = deegreeIcon;
+  return node;
 }
 
-export class G3wSuite extends _Server {
-  protected static _iconDataUrl = g3w_suiteIcon;
+export function G3wSuite(label?: string, options?: Record<string, unknown>) {
+  const node = _Server(label ?? "G3wSuite", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = g3w_suiteIcon;
+  return node;
 }
 
-export class Geohealthcheck extends _Server {
-  protected static _iconDataUrl = geohealthcheckIcon;
+export function Geohealthcheck(label?: string, options?: Record<string, unknown>) {
+  const node = _Server(label ?? "Geohealthcheck", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = geohealthcheckIcon;
+  return node;
 }
 
-export class Geomapfish extends _Server {
-  protected static _iconDataUrl = geomapfishIcon;
+export function Geomapfish(label?: string, options?: Record<string, unknown>) {
+  const node = _Server(label ?? "Geomapfish", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = geomapfishIcon;
+  return node;
 }
 
-export class Geomesa extends _Server {
-  protected static _iconDataUrl = geomesaIcon;
+export function Geomesa(label?: string, options?: Record<string, unknown>) {
+  const node = _Server(label ?? "Geomesa", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = geomesaIcon;
+  return node;
 }
 
-export class Geonetwork extends _Server {
-  protected static _iconDataUrl = geonetworkIcon;
+export function Geonetwork(label?: string, options?: Record<string, unknown>) {
+  const node = _Server(label ?? "Geonetwork", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = geonetworkIcon;
+  return node;
 }
 
-export class Geonode extends _Server {
-  protected static _iconDataUrl = geonodeIcon;
+export function Geonode(label?: string, options?: Record<string, unknown>) {
+  const node = _Server(label ?? "Geonode", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = geonodeIcon;
+  return node;
 }
 
-export class Georchestra extends _Server {
-  protected static _iconDataUrl = georchestraIcon;
+export function Georchestra(label?: string, options?: Record<string, unknown>) {
+  const node = _Server(label ?? "Georchestra", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = georchestraIcon;
+  return node;
 }
 
-export class Geoserver extends _Server {
-  protected static _iconDataUrl = geoserverIcon;
+export function Geoserver(label?: string, options?: Record<string, unknown>) {
+  const node = _Server(label ?? "Geoserver", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = geoserverIcon;
+  return node;
 }
 
-export class Geowebcache extends _Server {
-  protected static _iconDataUrl = geowebcacheIcon;
+export function Geowebcache(label?: string, options?: Record<string, unknown>) {
+  const node = _Server(label ?? "Geowebcache", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = geowebcacheIcon;
+  return node;
 }
 
-export class Kepler extends _Server {
-  protected static _iconDataUrl = keplerIcon;
+export function Kepler(label?: string, options?: Record<string, unknown>) {
+  const node = _Server(label ?? "Kepler", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = keplerIcon;
+  return node;
 }
 
-export class Mapproxy extends _Server {
-  protected static _iconDataUrl = mapproxyIcon;
+export function Mapproxy(label?: string, options?: Record<string, unknown>) {
+  const node = _Server(label ?? "Mapproxy", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = mapproxyIcon;
+  return node;
 }
 
-export class Mapserver extends _Server {
-  protected static _iconDataUrl = mapserverIcon;
+export function Mapserver(label?: string, options?: Record<string, unknown>) {
+  const node = _Server(label ?? "Mapserver", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = mapserverIcon;
+  return node;
 }
 
-export class Mapstore extends _Server {
-  protected static _iconDataUrl = mapstoreIcon;
+export function Mapstore(label?: string, options?: Record<string, unknown>) {
+  const node = _Server(label ?? "Mapstore", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = mapstoreIcon;
+  return node;
 }
 
-export class Mviewer extends _Server {
-  protected static _iconDataUrl = mviewerIcon;
+export function Mviewer(label?: string, options?: Record<string, unknown>) {
+  const node = _Server(label ?? "Mviewer", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = mviewerIcon;
+  return node;
 }
 
-export class Pg_tileserv extends _Server {
-  protected static _iconDataUrl = pg_tileservIcon;
+export function Pg_tileserv(label?: string, options?: Record<string, unknown>) {
+  const node = _Server(label ?? "Pg_tileserv", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = pg_tileservIcon;
+  return node;
 }
 
-export class Pycsw extends _Server {
-  protected static _iconDataUrl = pycswIcon;
+export function Pycsw(label?: string, options?: Record<string, unknown>) {
+  const node = _Server(label ?? "Pycsw", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = pycswIcon;
+  return node;
 }
 
-export class Pygeoapi extends _Server {
-  protected static _iconDataUrl = pygeoapiIcon;
+export function Pygeoapi(label?: string, options?: Record<string, unknown>) {
+  const node = _Server(label ?? "Pygeoapi", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = pygeoapiIcon;
+  return node;
 }
 
-export class QGISServer extends _Server {
-  protected static _iconDataUrl = qgis_serverIcon;
+export function QGISServer(label?: string, options?: Record<string, unknown>) {
+  const node = _Server(label ?? "QGISServer", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = qgis_serverIcon;
+  return node;
 }
 
-export class Zooproject extends _Server {
-  protected static _iconDataUrl = zooprojectIcon;
+export function Zooproject(label?: string, options?: Record<string, unknown>) {
+  const node = _Server(label ?? "Zooproject", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = zooprojectIcon;
+  return node;
 }

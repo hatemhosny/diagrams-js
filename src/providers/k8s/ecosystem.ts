@@ -4,22 +4,32 @@ import helmIcon from "../../../resources/k8s/ecosystem/helm.png";
 import krewIcon from "../../../resources/k8s/ecosystem/krew.png";
 import kustomizeIcon from "../../../resources/k8s/ecosystem/kustomize.png";
 
-class _Ecosystem extends _K8s {
-  protected static override _type = "ecosystem";
+function _Ecosystem(label?: string, options?: Record<string, unknown>) {
+  const node = _K8s(label, options);
+  (node as unknown as Record<string, unknown>)._type = "ecosystem";
+  return node;
 }
 
-export class ExternalDns extends _Ecosystem {
-  protected static _iconDataUrl = external_dnsIcon;
+export function ExternalDns(label?: string, options?: Record<string, unknown>) {
+  const node = _Ecosystem(label ?? "ExternalDns", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = external_dnsIcon;
+  return node;
 }
 
-export class Helm extends _Ecosystem {
-  protected static _iconDataUrl = helmIcon;
+export function Helm(label?: string, options?: Record<string, unknown>) {
+  const node = _Ecosystem(label ?? "Helm", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = helmIcon;
+  return node;
 }
 
-export class Krew extends _Ecosystem {
-  protected static _iconDataUrl = krewIcon;
+export function Krew(label?: string, options?: Record<string, unknown>) {
+  const node = _Ecosystem(label ?? "Krew", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = krewIcon;
+  return node;
 }
 
-export class Kustomize extends _Ecosystem {
-  protected static _iconDataUrl = kustomizeIcon;
+export function Kustomize(label?: string, options?: Record<string, unknown>) {
+  const node = _Ecosystem(label ?? "Kustomize", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = kustomizeIcon;
+  return node;
 }

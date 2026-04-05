@@ -1,10 +1,14 @@
 import { Node } from "../../Node.js";
 
-export class _Generic extends Node {
-  protected static override _provider = "generic";
-  protected static override _iconDir = "generic";
+export function _Generic(label?: string, options?: Record<string, unknown>) {
+  const node = Node(label ?? "Generic", options);
+  (node as unknown as Record<string, unknown>)._provider = "generic";
+  (node as unknown as Record<string, unknown>)._iconDir = "generic";
+  return node;
 }
 
-export class Generic extends _Generic {
-  protected static override _icon = "generic.png";
+export function Generic(label?: string, options?: Record<string, unknown>) {
+  const node = _Generic(label ?? "Generic", options);
+  (node as unknown as Record<string, unknown>)._icon = "generic.png";
+  return node;
 }

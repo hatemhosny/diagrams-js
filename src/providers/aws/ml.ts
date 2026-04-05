@@ -31,132 +31,196 @@ import transcribeIcon from "../../../resources/aws/ml/transcribe.png";
 import transformIcon from "../../../resources/aws/ml/transform.png";
 import translateIcon from "../../../resources/aws/ml/translate.png";
 
-class _Ml extends _Aws {
-  protected static override _type = "ml";
+function _Ml(label?: string, options?: Record<string, unknown>) {
+  const node = _Aws(label, options);
+  (node as unknown as Record<string, unknown>)._type = "ml";
+  return node;
 }
 
-export class ApacheMxnetOnAWS extends _Ml {
-  protected static _iconDataUrl = apache_mxnet_on_awsIcon;
+export function ApacheMxnetOnAWS(label?: string, options?: Record<string, unknown>) {
+  const node = _Ml(label ?? "ApacheMxnetOnAWS", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = apache_mxnet_on_awsIcon;
+  return node;
 }
 
-export class AugmentedAi extends _Ml {
-  protected static _iconDataUrl = augmented_aiIcon;
+export function AugmentedAi(label?: string, options?: Record<string, unknown>) {
+  const node = _Ml(label ?? "AugmentedAi", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = augmented_aiIcon;
+  return node;
 }
 
-export class Bedrock extends _Ml {
-  protected static _iconDataUrl = bedrockIcon;
+export function Bedrock(label?: string, options?: Record<string, unknown>) {
+  const node = _Ml(label ?? "Bedrock", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = bedrockIcon;
+  return node;
 }
 
-export class Comprehend extends _Ml {
-  protected static _iconDataUrl = comprehendIcon;
+export function Comprehend(label?: string, options?: Record<string, unknown>) {
+  const node = _Ml(label ?? "Comprehend", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = comprehendIcon;
+  return node;
 }
 
-export class DeepLearningAmis extends _Ml {
-  protected static _iconDataUrl = deep_learning_amisIcon;
+export function DeepLearningAmis(label?: string, options?: Record<string, unknown>) {
+  const node = _Ml(label ?? "DeepLearningAmis", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = deep_learning_amisIcon;
+  return node;
 }
 
-export class DeepLearningContainers extends _Ml {
-  protected static _iconDataUrl = deep_learning_containersIcon;
+export function DeepLearningContainers(label?: string, options?: Record<string, unknown>) {
+  const node = _Ml(label ?? "DeepLearningContainers", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = deep_learning_containersIcon;
+  return node;
 }
 
-export class Deepcomposer extends _Ml {
-  protected static _iconDataUrl = deepcomposerIcon;
+export function Deepcomposer(label?: string, options?: Record<string, unknown>) {
+  const node = _Ml(label ?? "Deepcomposer", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = deepcomposerIcon;
+  return node;
 }
 
-export class Deeplens extends _Ml {
-  protected static _iconDataUrl = deeplensIcon;
+export function Deeplens(label?: string, options?: Record<string, unknown>) {
+  const node = _Ml(label ?? "Deeplens", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = deeplensIcon;
+  return node;
 }
 
-export class Deepracer extends _Ml {
-  protected static _iconDataUrl = deepracerIcon;
+export function Deepracer(label?: string, options?: Record<string, unknown>) {
+  const node = _Ml(label ?? "Deepracer", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = deepracerIcon;
+  return node;
 }
 
-export class ElasticInference extends _Ml {
-  protected static _iconDataUrl = elastic_inferenceIcon;
+export function ElasticInference(label?: string, options?: Record<string, unknown>) {
+  const node = _Ml(label ?? "ElasticInference", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = elastic_inferenceIcon;
+  return node;
 }
 
-export class Forecast extends _Ml {
-  protected static _iconDataUrl = forecastIcon;
+export function Forecast(label?: string, options?: Record<string, unknown>) {
+  const node = _Ml(label ?? "Forecast", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = forecastIcon;
+  return node;
 }
 
-export class FraudDetector extends _Ml {
-  protected static _iconDataUrl = fraud_detectorIcon;
+export function FraudDetector(label?: string, options?: Record<string, unknown>) {
+  const node = _Ml(label ?? "FraudDetector", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = fraud_detectorIcon;
+  return node;
 }
 
-export class Kendra extends _Ml {
-  protected static _iconDataUrl = kendraIcon;
+export function Kendra(label?: string, options?: Record<string, unknown>) {
+  const node = _Ml(label ?? "Kendra", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = kendraIcon;
+  return node;
 }
 
-export class Lex extends _Ml {
-  protected static _iconDataUrl = lexIcon;
+export function Lex(label?: string, options?: Record<string, unknown>) {
+  const node = _Ml(label ?? "Lex", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = lexIcon;
+  return node;
 }
 
-export class MachineLearning extends _Ml {
-  protected static _iconDataUrl = machine_learningIcon;
+export function MachineLearning(label?: string, options?: Record<string, unknown>) {
+  const node = _Ml(label ?? "MachineLearning", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = machine_learningIcon;
+  return node;
 }
 
-export class Personalize extends _Ml {
-  protected static _iconDataUrl = personalizeIcon;
+export function Personalize(label?: string, options?: Record<string, unknown>) {
+  const node = _Ml(label ?? "Personalize", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = personalizeIcon;
+  return node;
 }
 
-export class Polly extends _Ml {
-  protected static _iconDataUrl = pollyIcon;
+export function Polly(label?: string, options?: Record<string, unknown>) {
+  const node = _Ml(label ?? "Polly", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = pollyIcon;
+  return node;
 }
 
-export class Q extends _Ml {
-  protected static _iconDataUrl = qIcon;
+export function Q(label?: string, options?: Record<string, unknown>) {
+  const node = _Ml(label ?? "Q", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = qIcon;
+  return node;
 }
 
-export class RekognitionImage extends _Ml {
-  protected static _iconDataUrl = rekognition_imageIcon;
+export function RekognitionImage(label?: string, options?: Record<string, unknown>) {
+  const node = _Ml(label ?? "RekognitionImage", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = rekognition_imageIcon;
+  return node;
 }
 
-export class RekognitionVideo extends _Ml {
-  protected static _iconDataUrl = rekognition_videoIcon;
+export function RekognitionVideo(label?: string, options?: Record<string, unknown>) {
+  const node = _Ml(label ?? "RekognitionVideo", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = rekognition_videoIcon;
+  return node;
 }
 
-export class Rekognition extends _Ml {
-  protected static _iconDataUrl = rekognitionIcon;
+export function Rekognition(label?: string, options?: Record<string, unknown>) {
+  const node = _Ml(label ?? "Rekognition", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = rekognitionIcon;
+  return node;
 }
 
-export class SagemakerGroundTruth extends _Ml {
-  protected static _iconDataUrl = sagemaker_ground_truthIcon;
+export function SagemakerGroundTruth(label?: string, options?: Record<string, unknown>) {
+  const node = _Ml(label ?? "SagemakerGroundTruth", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = sagemaker_ground_truthIcon;
+  return node;
 }
 
-export class SagemakerModel extends _Ml {
-  protected static _iconDataUrl = sagemaker_modelIcon;
+export function SagemakerModel(label?: string, options?: Record<string, unknown>) {
+  const node = _Ml(label ?? "SagemakerModel", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = sagemaker_modelIcon;
+  return node;
 }
 
-export class SagemakerNotebook extends _Ml {
-  protected static _iconDataUrl = sagemaker_notebookIcon;
+export function SagemakerNotebook(label?: string, options?: Record<string, unknown>) {
+  const node = _Ml(label ?? "SagemakerNotebook", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = sagemaker_notebookIcon;
+  return node;
 }
 
-export class SagemakerTrainingJob extends _Ml {
-  protected static _iconDataUrl = sagemaker_training_jobIcon;
+export function SagemakerTrainingJob(label?: string, options?: Record<string, unknown>) {
+  const node = _Ml(label ?? "SagemakerTrainingJob", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = sagemaker_training_jobIcon;
+  return node;
 }
 
-export class Sagemaker extends _Ml {
-  protected static _iconDataUrl = sagemakerIcon;
+export function Sagemaker(label?: string, options?: Record<string, unknown>) {
+  const node = _Ml(label ?? "Sagemaker", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = sagemakerIcon;
+  return node;
 }
 
-export class TensorflowOnAWS extends _Ml {
-  protected static _iconDataUrl = tensorflow_on_awsIcon;
+export function TensorflowOnAWS(label?: string, options?: Record<string, unknown>) {
+  const node = _Ml(label ?? "TensorflowOnAWS", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = tensorflow_on_awsIcon;
+  return node;
 }
 
-export class Textract extends _Ml {
-  protected static _iconDataUrl = textractIcon;
+export function Textract(label?: string, options?: Record<string, unknown>) {
+  const node = _Ml(label ?? "Textract", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = textractIcon;
+  return node;
 }
 
-export class Transcribe extends _Ml {
-  protected static _iconDataUrl = transcribeIcon;
+export function Transcribe(label?: string, options?: Record<string, unknown>) {
+  const node = _Ml(label ?? "Transcribe", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = transcribeIcon;
+  return node;
 }
 
-export class Transform extends _Ml {
-  protected static _iconDataUrl = transformIcon;
+export function Transform(label?: string, options?: Record<string, unknown>) {
+  const node = _Ml(label ?? "Transform", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = transformIcon;
+  return node;
 }
 
-export class Translate extends _Ml {
-  protected static _iconDataUrl = translateIcon;
+export function Translate(label?: string, options?: Record<string, unknown>) {
+  const node = _Ml(label ?? "Translate", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = translateIcon;
+  return node;
 }
 
 // Aliases

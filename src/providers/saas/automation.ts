@@ -1,10 +1,14 @@
 import { _Saas } from "./index.js";
 import n8nIcon from "../../../resources/saas/automation/n8n.png";
 
-class _Automation extends _Saas {
-  protected static override _type = "automation";
+function _Automation(label?: string, options?: Record<string, unknown>) {
+  const node = _Saas(label, options);
+  (node as unknown as Record<string, unknown>)._type = "automation";
+  return node;
 }
 
-export class N8n extends _Automation {
-  protected static _iconDataUrl = n8nIcon;
+export function N8n(label?: string, options?: Record<string, unknown>) {
+  const node = _Automation(label ?? "N8n", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = n8nIcon;
+  return node;
 }

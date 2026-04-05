@@ -6,30 +6,44 @@ import pulumiIcon from "../../../resources/onprem/iac/pulumi.png";
 import puppetIcon from "../../../resources/onprem/iac/puppet.png";
 import terraformIcon from "../../../resources/onprem/iac/terraform.png";
 
-class _Iac extends _Onprem {
-  protected static override _type = "iac";
+function _Iac(label?: string, options?: Record<string, unknown>) {
+  const node = _Onprem(label, options);
+  (node as unknown as Record<string, unknown>)._type = "iac";
+  return node;
 }
 
-export class Ansible extends _Iac {
-  protected static _iconDataUrl = ansibleIcon;
+export function Ansible(label?: string, options?: Record<string, unknown>) {
+  const node = _Iac(label ?? "Ansible", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = ansibleIcon;
+  return node;
 }
 
-export class Atlantis extends _Iac {
-  protected static _iconDataUrl = atlantisIcon;
+export function Atlantis(label?: string, options?: Record<string, unknown>) {
+  const node = _Iac(label ?? "Atlantis", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = atlantisIcon;
+  return node;
 }
 
-export class Awx extends _Iac {
-  protected static _iconDataUrl = awxIcon;
+export function Awx(label?: string, options?: Record<string, unknown>) {
+  const node = _Iac(label ?? "Awx", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = awxIcon;
+  return node;
 }
 
-export class Pulumi extends _Iac {
-  protected static _iconDataUrl = pulumiIcon;
+export function Pulumi(label?: string, options?: Record<string, unknown>) {
+  const node = _Iac(label ?? "Pulumi", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = pulumiIcon;
+  return node;
 }
 
-export class Puppet extends _Iac {
-  protected static _iconDataUrl = puppetIcon;
+export function Puppet(label?: string, options?: Record<string, unknown>) {
+  const node = _Iac(label ?? "Puppet", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = puppetIcon;
+  return node;
 }
 
-export class Terraform extends _Iac {
-  protected static _iconDataUrl = terraformIcon;
+export function Terraform(label?: string, options?: Record<string, unknown>) {
+  const node = _Iac(label ?? "Terraform", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = terraformIcon;
+  return node;
 }

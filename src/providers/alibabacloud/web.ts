@@ -2,14 +2,20 @@ import { _Alibabacloud } from "./index.js";
 import dnsIcon from "../../../resources/alibabacloud/web/dns.png";
 import domainIcon from "../../../resources/alibabacloud/web/domain.png";
 
-class _Web extends _Alibabacloud {
-  protected static override _type = "web";
+function _Web(label?: string, options?: Record<string, unknown>) {
+  const node = _Alibabacloud(label, options);
+  (node as unknown as Record<string, unknown>)._type = "web";
+  return node;
 }
 
-export class Dns extends _Web {
-  protected static _iconDataUrl = dnsIcon;
+export function Dns(label?: string, options?: Record<string, unknown>) {
+  const node = _Web(label ?? "Dns", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = dnsIcon;
+  return node;
 }
 
-export class Domain extends _Web {
-  protected static _iconDataUrl = domainIcon;
+export function Domain(label?: string, options?: Record<string, unknown>) {
+  const node = _Web(label ?? "Domain", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = domainIcon;
+  return node;
 }

@@ -6,30 +6,44 @@ import blockchain_applicationsIcon from "../../../resources/azure/blockchain/blo
 import consortiumIcon from "../../../resources/azure/blockchain/consortium.png";
 import outbound_connectionIcon from "../../../resources/azure/blockchain/outbound-connection.png";
 
-class _Blockchain extends _Azure {
-  protected static override _type = "blockchain";
+function _Blockchain(label?: string, options?: Record<string, unknown>) {
+  const node = _Azure(label, options);
+  (node as unknown as Record<string, unknown>)._type = "blockchain";
+  return node;
 }
 
-export class AbsMember extends _Blockchain {
-  protected static _iconDataUrl = abs_memberIcon;
+export function AbsMember(label?: string, options?: Record<string, unknown>) {
+  const node = _Blockchain(label ?? "AbsMember", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = abs_memberIcon;
+  return node;
 }
 
-export class AzureBlockchainService extends _Blockchain {
-  protected static _iconDataUrl = azure_blockchain_serviceIcon;
+export function AzureBlockchainService(label?: string, options?: Record<string, unknown>) {
+  const node = _Blockchain(label ?? "AzureBlockchainService", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_blockchain_serviceIcon;
+  return node;
 }
 
-export class AzureTokenService extends _Blockchain {
-  protected static _iconDataUrl = azure_token_serviceIcon;
+export function AzureTokenService(label?: string, options?: Record<string, unknown>) {
+  const node = _Blockchain(label ?? "AzureTokenService", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_token_serviceIcon;
+  return node;
 }
 
-export class BlockchainApplications extends _Blockchain {
-  protected static _iconDataUrl = blockchain_applicationsIcon;
+export function BlockchainApplications(label?: string, options?: Record<string, unknown>) {
+  const node = _Blockchain(label ?? "BlockchainApplications", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = blockchain_applicationsIcon;
+  return node;
 }
 
-export class Consortium extends _Blockchain {
-  protected static _iconDataUrl = consortiumIcon;
+export function Consortium(label?: string, options?: Record<string, unknown>) {
+  const node = _Blockchain(label ?? "Consortium", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = consortiumIcon;
+  return node;
 }
 
-export class OutboundConnection extends _Blockchain {
-  protected static _iconDataUrl = outbound_connectionIcon;
+export function OutboundConnection(label?: string, options?: Record<string, unknown>) {
+  const node = _Blockchain(label ?? "OutboundConnection", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = outbound_connectionIcon;
+  return node;
 }

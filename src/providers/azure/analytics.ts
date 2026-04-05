@@ -20,86 +20,128 @@ import private_link_servicesIcon from "../../../resources/azure/analytics/privat
 import stream_analytics_jobsIcon from "../../../resources/azure/analytics/stream-analytics-jobs.png";
 import synapse_analyticsIcon from "../../../resources/azure/analytics/synapse-analytics.png";
 
-class _Analytics extends _Azure {
-  protected static override _type = "analytics";
+function _Analytics(label?: string, options?: Record<string, unknown>) {
+  const node = _Azure(label, options);
+  (node as unknown as Record<string, unknown>)._type = "analytics";
+  return node;
 }
 
-export class AnalysisServices extends _Analytics {
-  protected static _iconDataUrl = analysis_servicesIcon;
+export function AnalysisServices(label?: string, options?: Record<string, unknown>) {
+  const node = _Analytics(label ?? "AnalysisServices", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = analysis_servicesIcon;
+  return node;
 }
 
-export class AzureDataExplorerClusters extends _Analytics {
-  protected static _iconDataUrl = azure_data_explorer_clustersIcon;
+export function AzureDataExplorerClusters(label?: string, options?: Record<string, unknown>) {
+  const node = _Analytics(label ?? "AzureDataExplorerClusters", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_data_explorer_clustersIcon;
+  return node;
 }
 
-export class AzureDatabricks extends _Analytics {
-  protected static _iconDataUrl = azure_databricksIcon;
+export function AzureDatabricks(label?: string, options?: Record<string, unknown>) {
+  const node = _Analytics(label ?? "AzureDatabricks", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_databricksIcon;
+  return node;
 }
 
-export class AzureSynapseAnalytics extends _Analytics {
-  protected static _iconDataUrl = azure_synapse_analyticsIcon;
+export function AzureSynapseAnalytics(label?: string, options?: Record<string, unknown>) {
+  const node = _Analytics(label ?? "AzureSynapseAnalytics", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_synapse_analyticsIcon;
+  return node;
 }
 
-export class AzureWorkbooks extends _Analytics {
-  protected static _iconDataUrl = azure_workbooksIcon;
+export function AzureWorkbooks(label?: string, options?: Record<string, unknown>) {
+  const node = _Analytics(label ?? "AzureWorkbooks", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_workbooksIcon;
+  return node;
 }
 
-export class DataExplorerClusters extends _Analytics {
-  protected static _iconDataUrl = data_explorer_clustersIcon;
+export function DataExplorerClusters(label?: string, options?: Record<string, unknown>) {
+  const node = _Analytics(label ?? "DataExplorerClusters", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = data_explorer_clustersIcon;
+  return node;
 }
 
-export class DataFactories extends _Analytics {
-  protected static _iconDataUrl = data_factoriesIcon;
+export function DataFactories(label?: string, options?: Record<string, unknown>) {
+  const node = _Analytics(label ?? "DataFactories", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = data_factoriesIcon;
+  return node;
 }
 
-export class DataLakeAnalytics extends _Analytics {
-  protected static _iconDataUrl = data_lake_analyticsIcon;
+export function DataLakeAnalytics(label?: string, options?: Record<string, unknown>) {
+  const node = _Analytics(label ?? "DataLakeAnalytics", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = data_lake_analyticsIcon;
+  return node;
 }
 
-export class DataLakeStoreGen1 extends _Analytics {
-  protected static _iconDataUrl = data_lake_store_gen1Icon;
+export function DataLakeStoreGen1(label?: string, options?: Record<string, unknown>) {
+  const node = _Analytics(label ?? "DataLakeStoreGen1", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = data_lake_store_gen1Icon;
+  return node;
 }
 
-export class Databricks extends _Analytics {
-  protected static _iconDataUrl = databricksIcon;
+export function Databricks(label?: string, options?: Record<string, unknown>) {
+  const node = _Analytics(label ?? "Databricks", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = databricksIcon;
+  return node;
 }
 
-export class EndpointAnalytics extends _Analytics {
-  protected static _iconDataUrl = endpoint_analyticsIcon;
+export function EndpointAnalytics(label?: string, options?: Record<string, unknown>) {
+  const node = _Analytics(label ?? "EndpointAnalytics", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = endpoint_analyticsIcon;
+  return node;
 }
 
-export class EventHubClusters extends _Analytics {
-  protected static _iconDataUrl = event_hub_clustersIcon;
+export function EventHubClusters(label?: string, options?: Record<string, unknown>) {
+  const node = _Analytics(label ?? "EventHubClusters", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = event_hub_clustersIcon;
+  return node;
 }
 
-export class EventHubs extends _Analytics {
-  protected static _iconDataUrl = event_hubsIcon;
+export function EventHubs(label?: string, options?: Record<string, unknown>) {
+  const node = _Analytics(label ?? "EventHubs", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = event_hubsIcon;
+  return node;
 }
 
-export class HDInsightClusters extends _Analytics {
-  protected static _iconDataUrl = hd_insight_clustersIcon;
+export function HDInsightClusters(label?: string, options?: Record<string, unknown>) {
+  const node = _Analytics(label ?? "HDInsightClusters", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = hd_insight_clustersIcon;
+  return node;
 }
 
-export class LogAnalyticsWorkspaces extends _Analytics {
-  protected static _iconDataUrl = log_analytics_workspacesIcon;
+export function LogAnalyticsWorkspaces(label?: string, options?: Record<string, unknown>) {
+  const node = _Analytics(label ?? "LogAnalyticsWorkspaces", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = log_analytics_workspacesIcon;
+  return node;
 }
 
-export class PowerBiEmbedded extends _Analytics {
-  protected static _iconDataUrl = power_bi_embeddedIcon;
+export function PowerBiEmbedded(label?: string, options?: Record<string, unknown>) {
+  const node = _Analytics(label ?? "PowerBiEmbedded", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = power_bi_embeddedIcon;
+  return node;
 }
 
-export class PowerPlatform extends _Analytics {
-  protected static _iconDataUrl = power_platformIcon;
+export function PowerPlatform(label?: string, options?: Record<string, unknown>) {
+  const node = _Analytics(label ?? "PowerPlatform", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = power_platformIcon;
+  return node;
 }
 
-export class PrivateLinkServices extends _Analytics {
-  protected static _iconDataUrl = private_link_servicesIcon;
+export function PrivateLinkServices(label?: string, options?: Record<string, unknown>) {
+  const node = _Analytics(label ?? "PrivateLinkServices", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = private_link_servicesIcon;
+  return node;
 }
 
-export class StreamAnalyticsJobs extends _Analytics {
-  protected static _iconDataUrl = stream_analytics_jobsIcon;
+export function StreamAnalyticsJobs(label?: string, options?: Record<string, unknown>) {
+  const node = _Analytics(label ?? "StreamAnalyticsJobs", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = stream_analytics_jobsIcon;
+  return node;
 }
 
-export class SynapseAnalytics extends _Analytics {
-  protected static _iconDataUrl = synapse_analyticsIcon;
+export function SynapseAnalytics(label?: string, options?: Record<string, unknown>) {
+  const node = _Analytics(label ?? "SynapseAnalytics", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = synapse_analyticsIcon;
+  return node;
 }

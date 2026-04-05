@@ -10,46 +10,68 @@ import devopsIcon from "../../../resources/ibm/devops/devops.png";
 import provisionIcon from "../../../resources/ibm/devops/provision.png";
 import release_managementIcon from "../../../resources/ibm/devops/release-management.png";
 
-class _Devops extends _Ibm {
-  protected static override _type = "devops";
+function _Devops(label?: string, options?: Record<string, unknown>) {
+  const node = _Ibm(label, options);
+  (node as unknown as Record<string, unknown>)._type = "devops";
+  return node;
 }
 
-export class ArtifactManagement extends _Devops {
-  protected static _iconDataUrl = artifact_managementIcon;
+export function ArtifactManagement(label?: string, options?: Record<string, unknown>) {
+  const node = _Devops(label ?? "ArtifactManagement", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = artifact_managementIcon;
+  return node;
 }
 
-export class BuildTest extends _Devops {
-  protected static _iconDataUrl = build_testIcon;
+export function BuildTest(label?: string, options?: Record<string, unknown>) {
+  const node = _Devops(label ?? "BuildTest", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = build_testIcon;
+  return node;
 }
 
-export class CodeEditor extends _Devops {
-  protected static _iconDataUrl = code_editorIcon;
+export function CodeEditor(label?: string, options?: Record<string, unknown>) {
+  const node = _Devops(label ?? "CodeEditor", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = code_editorIcon;
+  return node;
 }
 
-export class CollaborativeDevelopment extends _Devops {
-  protected static _iconDataUrl = collaborative_developmentIcon;
+export function CollaborativeDevelopment(label?: string, options?: Record<string, unknown>) {
+  const node = _Devops(label ?? "CollaborativeDevelopment", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = collaborative_developmentIcon;
+  return node;
 }
 
-export class ConfigurationManagement extends _Devops {
-  protected static _iconDataUrl = configuration_managementIcon;
+export function ConfigurationManagement(label?: string, options?: Record<string, unknown>) {
+  const node = _Devops(label ?? "ConfigurationManagement", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = configuration_managementIcon;
+  return node;
 }
 
-export class ContinuousDeploy extends _Devops {
-  protected static _iconDataUrl = continuous_deployIcon;
+export function ContinuousDeploy(label?: string, options?: Record<string, unknown>) {
+  const node = _Devops(label ?? "ContinuousDeploy", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = continuous_deployIcon;
+  return node;
 }
 
-export class ContinuousTesting extends _Devops {
-  protected static _iconDataUrl = continuous_testingIcon;
+export function ContinuousTesting(label?: string, options?: Record<string, unknown>) {
+  const node = _Devops(label ?? "ContinuousTesting", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = continuous_testingIcon;
+  return node;
 }
 
-export class Devops extends _Devops {
-  protected static _iconDataUrl = devopsIcon;
+export function Devops(label?: string, options?: Record<string, unknown>) {
+  const node = _Devops(label ?? "Devops", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = devopsIcon;
+  return node;
 }
 
-export class Provision extends _Devops {
-  protected static _iconDataUrl = provisionIcon;
+export function Provision(label?: string, options?: Record<string, unknown>) {
+  const node = _Devops(label ?? "Provision", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = provisionIcon;
+  return node;
 }
 
-export class ReleaseManagement extends _Devops {
-  protected static _iconDataUrl = release_managementIcon;
+export function ReleaseManagement(label?: string, options?: Record<string, unknown>) {
+  const node = _Devops(label ?? "ReleaseManagement", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = release_managementIcon;
+  return node;
 }

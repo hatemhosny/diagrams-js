@@ -2,14 +2,20 @@ import { _Onprem } from "./index.js";
 import harborIcon from "../../../resources/onprem/registry/harbor.png";
 import jfrogIcon from "../../../resources/onprem/registry/jfrog.png";
 
-class _Registry extends _Onprem {
-  protected static override _type = "registry";
+function _Registry(label?: string, options?: Record<string, unknown>) {
+  const node = _Onprem(label, options);
+  (node as unknown as Record<string, unknown>)._type = "registry";
+  return node;
 }
 
-export class Harbor extends _Registry {
-  protected static _iconDataUrl = harborIcon;
+export function Harbor(label?: string, options?: Record<string, unknown>) {
+  const node = _Registry(label ?? "Harbor", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = harborIcon;
+  return node;
 }
 
-export class Jfrog extends _Registry {
-  protected static _iconDataUrl = jfrogIcon;
+export function Jfrog(label?: string, options?: Record<string, unknown>) {
+  const node = _Registry(label ?? "Jfrog", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = jfrogIcon;
+  return node;
 }

@@ -1,10 +1,14 @@
 import { _Openstack } from "./index.js";
 import tricircleIcon from "../../../resources/openstack/multiregion/tricircle.png";
 
-class _Multiregion extends _Openstack {
-  protected static override _type = "multiregion";
+function _Multiregion(label?: string, options?: Record<string, unknown>) {
+  const node = _Openstack(label, options);
+  (node as unknown as Record<string, unknown>)._type = "multiregion";
+  return node;
 }
 
-export class Tricircle extends _Multiregion {
-  protected static _iconDataUrl = tricircleIcon;
+export function Tricircle(label?: string, options?: Record<string, unknown>) {
+  const node = _Multiregion(label ?? "Tricircle", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = tricircleIcon;
+  return node;
 }

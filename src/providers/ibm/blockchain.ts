@@ -20,86 +20,128 @@ import smart_contractIcon from "../../../resources/ibm/blockchain/smart-contract
 import transaction_managerIcon from "../../../resources/ibm/blockchain/transaction-manager.png";
 import walletIcon from "../../../resources/ibm/blockchain/wallet.png";
 
-class _Blockchain extends _Ibm {
-  protected static override _type = "blockchain";
+function _Blockchain(label?: string, options?: Record<string, unknown>) {
+  const node = _Ibm(label, options);
+  (node as unknown as Record<string, unknown>)._type = "blockchain";
+  return node;
 }
 
-export class BlockchainDeveloper extends _Blockchain {
-  protected static _iconDataUrl = blockchain_developerIcon;
+export function BlockchainDeveloper(label?: string, options?: Record<string, unknown>) {
+  const node = _Blockchain(label ?? "BlockchainDeveloper", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = blockchain_developerIcon;
+  return node;
 }
 
-export class Blockchain extends _Blockchain {
-  protected static _iconDataUrl = blockchainIcon;
+export function Blockchain(label?: string, options?: Record<string, unknown>) {
+  const node = _Blockchain(label ?? "Blockchain", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = blockchainIcon;
+  return node;
 }
 
-export class CertificateAuthority extends _Blockchain {
-  protected static _iconDataUrl = certificate_authorityIcon;
+export function CertificateAuthority(label?: string, options?: Record<string, unknown>) {
+  const node = _Blockchain(label ?? "CertificateAuthority", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = certificate_authorityIcon;
+  return node;
 }
 
-export class ClientApplication extends _Blockchain {
-  protected static _iconDataUrl = client_applicationIcon;
+export function ClientApplication(label?: string, options?: Record<string, unknown>) {
+  const node = _Blockchain(label ?? "ClientApplication", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = client_applicationIcon;
+  return node;
 }
 
-export class Communication extends _Blockchain {
-  protected static _iconDataUrl = communicationIcon;
+export function Communication(label?: string, options?: Record<string, unknown>) {
+  const node = _Blockchain(label ?? "Communication", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = communicationIcon;
+  return node;
 }
 
-export class Consensus extends _Blockchain {
-  protected static _iconDataUrl = consensusIcon;
+export function Consensus(label?: string, options?: Record<string, unknown>) {
+  const node = _Blockchain(label ?? "Consensus", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = consensusIcon;
+  return node;
 }
 
-export class EventListener extends _Blockchain {
-  protected static _iconDataUrl = event_listenerIcon;
+export function EventListener(label?: string, options?: Record<string, unknown>) {
+  const node = _Blockchain(label ?? "EventListener", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = event_listenerIcon;
+  return node;
 }
 
-export class Event extends _Blockchain {
-  protected static _iconDataUrl = eventIcon;
+export function Event(label?: string, options?: Record<string, unknown>) {
+  const node = _Blockchain(label ?? "Event", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = eventIcon;
+  return node;
 }
 
-export class ExistingEnterpriseSystems extends _Blockchain {
-  protected static _iconDataUrl = existing_enterprise_systemsIcon;
+export function ExistingEnterpriseSystems(label?: string, options?: Record<string, unknown>) {
+  const node = _Blockchain(label ?? "ExistingEnterpriseSystems", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = existing_enterprise_systemsIcon;
+  return node;
 }
 
-export class HyperledgerFabric extends _Blockchain {
-  protected static _iconDataUrl = hyperledger_fabricIcon;
+export function HyperledgerFabric(label?: string, options?: Record<string, unknown>) {
+  const node = _Blockchain(label ?? "HyperledgerFabric", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = hyperledger_fabricIcon;
+  return node;
 }
 
-export class KeyManagement extends _Blockchain {
-  protected static _iconDataUrl = key_managementIcon;
+export function KeyManagement(label?: string, options?: Record<string, unknown>) {
+  const node = _Blockchain(label ?? "KeyManagement", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = key_managementIcon;
+  return node;
 }
 
-export class Ledger extends _Blockchain {
-  protected static _iconDataUrl = ledgerIcon;
+export function Ledger(label?: string, options?: Record<string, unknown>) {
+  const node = _Blockchain(label ?? "Ledger", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = ledgerIcon;
+  return node;
 }
 
-export class MembershipServicesProviderApi extends _Blockchain {
-  protected static _iconDataUrl = membership_services_provider_apiIcon;
+export function MembershipServicesProviderApi(label?: string, options?: Record<string, unknown>) {
+  const node = _Blockchain(label ?? "MembershipServicesProviderApi", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = membership_services_provider_apiIcon;
+  return node;
 }
 
-export class Membership extends _Blockchain {
-  protected static _iconDataUrl = membershipIcon;
+export function Membership(label?: string, options?: Record<string, unknown>) {
+  const node = _Blockchain(label ?? "Membership", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = membershipIcon;
+  return node;
 }
 
-export class MessageBus extends _Blockchain {
-  protected static _iconDataUrl = message_busIcon;
+export function MessageBus(label?: string, options?: Record<string, unknown>) {
+  const node = _Blockchain(label ?? "MessageBus", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = message_busIcon;
+  return node;
 }
 
-export class Node extends _Blockchain {
-  protected static _iconDataUrl = nodeIcon;
+export function Node(label?: string, options?: Record<string, unknown>) {
+  const node = _Blockchain(label ?? "Node", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = nodeIcon;
+  return node;
 }
 
-export class Services extends _Blockchain {
-  protected static _iconDataUrl = servicesIcon;
+export function Services(label?: string, options?: Record<string, unknown>) {
+  const node = _Blockchain(label ?? "Services", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = servicesIcon;
+  return node;
 }
 
-export class SmartContract extends _Blockchain {
-  protected static _iconDataUrl = smart_contractIcon;
+export function SmartContract(label?: string, options?: Record<string, unknown>) {
+  const node = _Blockchain(label ?? "SmartContract", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = smart_contractIcon;
+  return node;
 }
 
-export class TransactionManager extends _Blockchain {
-  protected static _iconDataUrl = transaction_managerIcon;
+export function TransactionManager(label?: string, options?: Record<string, unknown>) {
+  const node = _Blockchain(label ?? "TransactionManager", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = transaction_managerIcon;
+  return node;
 }
 
-export class Wallet extends _Blockchain {
-  protected static _iconDataUrl = walletIcon;
+export function Wallet(label?: string, options?: Record<string, unknown>) {
+  const node = _Blockchain(label ?? "Wallet", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = walletIcon;
+  return node;
 }

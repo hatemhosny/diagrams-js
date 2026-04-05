@@ -4,22 +4,32 @@ import masakariIcon from "../../../resources/openstack/applicationlifecycle/masa
 import muranoIcon from "../../../resources/openstack/applicationlifecycle/murano.png";
 import solumIcon from "../../../resources/openstack/applicationlifecycle/solum.png";
 
-class _Applicationlifecycle extends _Openstack {
-  protected static override _type = "applicationlifecycle";
+function _Applicationlifecycle(label?: string, options?: Record<string, unknown>) {
+  const node = _Openstack(label, options);
+  (node as unknown as Record<string, unknown>)._type = "applicationlifecycle";
+  return node;
 }
 
-export class Freezer extends _Applicationlifecycle {
-  protected static _iconDataUrl = freezerIcon;
+export function Freezer(label?: string, options?: Record<string, unknown>) {
+  const node = _Applicationlifecycle(label ?? "Freezer", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = freezerIcon;
+  return node;
 }
 
-export class Masakari extends _Applicationlifecycle {
-  protected static _iconDataUrl = masakariIcon;
+export function Masakari(label?: string, options?: Record<string, unknown>) {
+  const node = _Applicationlifecycle(label ?? "Masakari", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = masakariIcon;
+  return node;
 }
 
-export class Murano extends _Applicationlifecycle {
-  protected static _iconDataUrl = muranoIcon;
+export function Murano(label?: string, options?: Record<string, unknown>) {
+  const node = _Applicationlifecycle(label ?? "Murano", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = muranoIcon;
+  return node;
 }
 
-export class Solum extends _Applicationlifecycle {
-  protected static _iconDataUrl = solumIcon;
+export function Solum(label?: string, options?: Record<string, unknown>) {
+  const node = _Applicationlifecycle(label ?? "Solum", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = solumIcon;
+  return node;
 }

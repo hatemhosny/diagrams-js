@@ -20,86 +20,128 @@ import searchIcon from "../../../resources/azure/web/search.png";
 import signalrIcon from "../../../resources/azure/web/signalr.png";
 import static_appsIcon from "../../../resources/azure/web/static-apps.png";
 
-class _Web extends _Azure {
-  protected static override _type = "web";
+function _Web(label?: string, options?: Record<string, unknown>) {
+  const node = _Azure(label, options);
+  (node as unknown as Record<string, unknown>)._type = "web";
+  return node;
 }
 
-export class APICenter extends _Web {
-  protected static _iconDataUrl = api_centerIcon;
+export function APICenter(label?: string, options?: Record<string, unknown>) {
+  const node = _Web(label ?? "APICenter", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = api_centerIcon;
+  return node;
 }
 
-export class APIConnections extends _Web {
-  protected static _iconDataUrl = api_connectionsIcon;
+export function APIConnections(label?: string, options?: Record<string, unknown>) {
+  const node = _Web(label ?? "APIConnections", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = api_connectionsIcon;
+  return node;
 }
 
-export class APIManagementServices extends _Web {
-  protected static _iconDataUrl = api_management_servicesIcon;
+export function APIManagementServices(label?: string, options?: Record<string, unknown>) {
+  const node = _Web(label ?? "APIManagementServices", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = api_management_servicesIcon;
+  return node;
 }
 
-export class AppServiceCertificates extends _Web {
-  protected static _iconDataUrl = app_service_certificatesIcon;
+export function AppServiceCertificates(label?: string, options?: Record<string, unknown>) {
+  const node = _Web(label ?? "AppServiceCertificates", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = app_service_certificatesIcon;
+  return node;
 }
 
-export class AppServiceDomains extends _Web {
-  protected static _iconDataUrl = app_service_domainsIcon;
+export function AppServiceDomains(label?: string, options?: Record<string, unknown>) {
+  const node = _Web(label ?? "AppServiceDomains", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = app_service_domainsIcon;
+  return node;
 }
 
-export class AppServiceEnvironments extends _Web {
-  protected static _iconDataUrl = app_service_environmentsIcon;
+export function AppServiceEnvironments(label?: string, options?: Record<string, unknown>) {
+  const node = _Web(label ?? "AppServiceEnvironments", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = app_service_environmentsIcon;
+  return node;
 }
 
-export class AppServicePlans extends _Web {
-  protected static _iconDataUrl = app_service_plansIcon;
+export function AppServicePlans(label?: string, options?: Record<string, unknown>) {
+  const node = _Web(label ?? "AppServicePlans", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = app_service_plansIcon;
+  return node;
 }
 
-export class AppServices extends _Web {
-  protected static _iconDataUrl = app_servicesIcon;
+export function AppServices(label?: string, options?: Record<string, unknown>) {
+  const node = _Web(label ?? "AppServices", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = app_servicesIcon;
+  return node;
 }
 
-export class AppSpace extends _Web {
-  protected static _iconDataUrl = app_spaceIcon;
+export function AppSpace(label?: string, options?: Record<string, unknown>) {
+  const node = _Web(label ?? "AppSpace", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = app_spaceIcon;
+  return node;
 }
 
-export class AzureMediaService extends _Web {
-  protected static _iconDataUrl = azure_media_serviceIcon;
+export function AzureMediaService(label?: string, options?: Record<string, unknown>) {
+  const node = _Web(label ?? "AzureMediaService", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_media_serviceIcon;
+  return node;
 }
 
-export class AzureSpringApps extends _Web {
-  protected static _iconDataUrl = azure_spring_appsIcon;
+export function AzureSpringApps(label?: string, options?: Record<string, unknown>) {
+  const node = _Web(label ?? "AzureSpringApps", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_spring_appsIcon;
+  return node;
 }
 
-export class CognitiveSearch extends _Web {
-  protected static _iconDataUrl = cognitive_searchIcon;
+export function CognitiveSearch(label?: string, options?: Record<string, unknown>) {
+  const node = _Web(label ?? "CognitiveSearch", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = cognitive_searchIcon;
+  return node;
 }
 
-export class CognitiveServices extends _Web {
-  protected static _iconDataUrl = cognitive_servicesIcon;
+export function CognitiveServices(label?: string, options?: Record<string, unknown>) {
+  const node = _Web(label ?? "CognitiveServices", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = cognitive_servicesIcon;
+  return node;
 }
 
-export class FrontDoorAndCDNProfiles extends _Web {
-  protected static _iconDataUrl = front_door_and_cdn_profilesIcon;
+export function FrontDoorAndCDNProfiles(label?: string, options?: Record<string, unknown>) {
+  const node = _Web(label ?? "FrontDoorAndCDNProfiles", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = front_door_and_cdn_profilesIcon;
+  return node;
 }
 
-export class MediaServices extends _Web {
-  protected static _iconDataUrl = media_servicesIcon;
+export function MediaServices(label?: string, options?: Record<string, unknown>) {
+  const node = _Web(label ?? "MediaServices", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = media_servicesIcon;
+  return node;
 }
 
-export class NotificationHubNamespaces extends _Web {
-  protected static _iconDataUrl = notification_hub_namespacesIcon;
+export function NotificationHubNamespaces(label?: string, options?: Record<string, unknown>) {
+  const node = _Web(label ?? "NotificationHubNamespaces", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = notification_hub_namespacesIcon;
+  return node;
 }
 
-export class PowerPlatform extends _Web {
-  protected static _iconDataUrl = power_platformIcon;
+export function PowerPlatform(label?: string, options?: Record<string, unknown>) {
+  const node = _Web(label ?? "PowerPlatform", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = power_platformIcon;
+  return node;
 }
 
-export class Search extends _Web {
-  protected static _iconDataUrl = searchIcon;
+export function Search(label?: string, options?: Record<string, unknown>) {
+  const node = _Web(label ?? "Search", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = searchIcon;
+  return node;
 }
 
-export class Signalr extends _Web {
-  protected static _iconDataUrl = signalrIcon;
+export function Signalr(label?: string, options?: Record<string, unknown>) {
+  const node = _Web(label ?? "Signalr", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = signalrIcon;
+  return node;
 }
 
-export class StaticApps extends _Web {
-  protected static _iconDataUrl = static_appsIcon;
+export function StaticApps(label?: string, options?: Record<string, unknown>) {
+  const node = _Web(label ?? "StaticApps", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = static_appsIcon;
+  return node;
 }

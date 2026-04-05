@@ -5,26 +5,38 @@ import metricsIcon from "../../../resources/elastic/observability/metrics.png";
 import observabilityIcon from "../../../resources/elastic/observability/observability.png";
 import uptimeIcon from "../../../resources/elastic/observability/uptime.png";
 
-class _Observability extends _Elastic {
-  protected static override _type = "observability";
+function _Observability(label?: string, options?: Record<string, unknown>) {
+  const node = _Elastic(label, options);
+  (node as unknown as Record<string, unknown>)._type = "observability";
+  return node;
 }
 
-export class APM extends _Observability {
-  protected static _iconDataUrl = apmIcon;
+export function APM(label?: string, options?: Record<string, unknown>) {
+  const node = _Observability(label ?? "APM", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = apmIcon;
+  return node;
 }
 
-export class Logs extends _Observability {
-  protected static _iconDataUrl = logsIcon;
+export function Logs(label?: string, options?: Record<string, unknown>) {
+  const node = _Observability(label ?? "Logs", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = logsIcon;
+  return node;
 }
 
-export class Metrics extends _Observability {
-  protected static _iconDataUrl = metricsIcon;
+export function Metrics(label?: string, options?: Record<string, unknown>) {
+  const node = _Observability(label ?? "Metrics", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = metricsIcon;
+  return node;
 }
 
-export class Observability extends _Observability {
-  protected static _iconDataUrl = observabilityIcon;
+export function Observability(label?: string, options?: Record<string, unknown>) {
+  const node = _Observability(label ?? "Observability", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = observabilityIcon;
+  return node;
 }
 
-export class Uptime extends _Observability {
-  protected static _iconDataUrl = uptimeIcon;
+export function Uptime(label?: string, options?: Record<string, unknown>) {
+  const node = _Observability(label ?? "Uptime", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = uptimeIcon;
+  return node;
 }

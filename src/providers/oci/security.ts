@@ -16,70 +16,104 @@ import vaultIcon from "../../../resources/oci/security/vault.png";
 import waf_whiteIcon from "../../../resources/oci/security/waf-white.png";
 import wafIcon from "../../../resources/oci/security/waf.png";
 
-class _Security extends _Oci {
-  protected static override _type = "security";
+function _Security(label?: string, options?: Record<string, unknown>) {
+  const node = _Oci(label, options);
+  (node as unknown as Record<string, unknown>)._type = "security";
+  return node;
 }
 
-export class CloudGuardWhite extends _Security {
-  protected static _iconDataUrl = cloud_guard_whiteIcon;
+export function CloudGuardWhite(label?: string, options?: Record<string, unknown>) {
+  const node = _Security(label ?? "CloudGuardWhite", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = cloud_guard_whiteIcon;
+  return node;
 }
 
-export class CloudGuard extends _Security {
-  protected static _iconDataUrl = cloud_guardIcon;
+export function CloudGuard(label?: string, options?: Record<string, unknown>) {
+  const node = _Security(label ?? "CloudGuard", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = cloud_guardIcon;
+  return node;
 }
 
-export class DDOSWhite extends _Security {
-  protected static _iconDataUrl = ddos_whiteIcon;
+export function DDOSWhite(label?: string, options?: Record<string, unknown>) {
+  const node = _Security(label ?? "DDOSWhite", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = ddos_whiteIcon;
+  return node;
 }
 
-export class DDOS extends _Security {
-  protected static _iconDataUrl = ddosIcon;
+export function DDOS(label?: string, options?: Record<string, unknown>) {
+  const node = _Security(label ?? "DDOS", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = ddosIcon;
+  return node;
 }
 
-export class EncryptionWhite extends _Security {
-  protected static _iconDataUrl = encryption_whiteIcon;
+export function EncryptionWhite(label?: string, options?: Record<string, unknown>) {
+  const node = _Security(label ?? "EncryptionWhite", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = encryption_whiteIcon;
+  return node;
 }
 
-export class Encryption extends _Security {
-  protected static _iconDataUrl = encryptionIcon;
+export function Encryption(label?: string, options?: Record<string, unknown>) {
+  const node = _Security(label ?? "Encryption", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = encryptionIcon;
+  return node;
 }
 
-export class IDAccessWhite extends _Security {
-  protected static _iconDataUrl = id_access_whiteIcon;
+export function IDAccessWhite(label?: string, options?: Record<string, unknown>) {
+  const node = _Security(label ?? "IDAccessWhite", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = id_access_whiteIcon;
+  return node;
 }
 
-export class IDAccess extends _Security {
-  protected static _iconDataUrl = id_accessIcon;
+export function IDAccess(label?: string, options?: Record<string, unknown>) {
+  const node = _Security(label ?? "IDAccess", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = id_accessIcon;
+  return node;
 }
 
-export class KeyManagementWhite extends _Security {
-  protected static _iconDataUrl = key_management_whiteIcon;
+export function KeyManagementWhite(label?: string, options?: Record<string, unknown>) {
+  const node = _Security(label ?? "KeyManagementWhite", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = key_management_whiteIcon;
+  return node;
 }
 
-export class KeyManagement extends _Security {
-  protected static _iconDataUrl = key_managementIcon;
+export function KeyManagement(label?: string, options?: Record<string, unknown>) {
+  const node = _Security(label ?? "KeyManagement", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = key_managementIcon;
+  return node;
 }
 
-export class MaxSecurityZoneWhite extends _Security {
-  protected static _iconDataUrl = max_security_zone_whiteIcon;
+export function MaxSecurityZoneWhite(label?: string, options?: Record<string, unknown>) {
+  const node = _Security(label ?? "MaxSecurityZoneWhite", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = max_security_zone_whiteIcon;
+  return node;
 }
 
-export class MaxSecurityZone extends _Security {
-  protected static _iconDataUrl = max_security_zoneIcon;
+export function MaxSecurityZone(label?: string, options?: Record<string, unknown>) {
+  const node = _Security(label ?? "MaxSecurityZone", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = max_security_zoneIcon;
+  return node;
 }
 
-export class VaultWhite extends _Security {
-  protected static _iconDataUrl = vault_whiteIcon;
+export function VaultWhite(label?: string, options?: Record<string, unknown>) {
+  const node = _Security(label ?? "VaultWhite", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = vault_whiteIcon;
+  return node;
 }
 
-export class Vault extends _Security {
-  protected static _iconDataUrl = vaultIcon;
+export function Vault(label?: string, options?: Record<string, unknown>) {
+  const node = _Security(label ?? "Vault", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = vaultIcon;
+  return node;
 }
 
-export class WAFWhite extends _Security {
-  protected static _iconDataUrl = waf_whiteIcon;
+export function WAFWhite(label?: string, options?: Record<string, unknown>) {
+  const node = _Security(label ?? "WAFWhite", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = waf_whiteIcon;
+  return node;
 }
 
-export class WAF extends _Security {
-  protected static _iconDataUrl = wafIcon;
+export function WAF(label?: string, options?: Record<string, unknown>) {
+  const node = _Security(label ?? "WAF", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = wafIcon;
+  return node;
 }

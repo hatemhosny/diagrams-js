@@ -3,18 +3,26 @@ import spinnakerIcon from "../../../resources/onprem/cd/spinnaker.png";
 import tekton_cliIcon from "../../../resources/onprem/cd/tekton-cli.png";
 import tektonIcon from "../../../resources/onprem/cd/tekton.png";
 
-class _Cd extends _Onprem {
-  protected static override _type = "cd";
+function _Cd(label?: string, options?: Record<string, unknown>) {
+  const node = _Onprem(label, options);
+  (node as unknown as Record<string, unknown>)._type = "cd";
+  return node;
 }
 
-export class Spinnaker extends _Cd {
-  protected static _iconDataUrl = spinnakerIcon;
+export function Spinnaker(label?: string, options?: Record<string, unknown>) {
+  const node = _Cd(label ?? "Spinnaker", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = spinnakerIcon;
+  return node;
 }
 
-export class TektonCli extends _Cd {
-  protected static _iconDataUrl = tekton_cliIcon;
+export function TektonCli(label?: string, options?: Record<string, unknown>) {
+  const node = _Cd(label ?? "TektonCli", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = tekton_cliIcon;
+  return node;
 }
 
-export class Tekton extends _Cd {
-  protected static _iconDataUrl = tektonIcon;
+export function Tekton(label?: string, options?: Record<string, unknown>) {
+  const node = _Cd(label ?? "Tekton", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = tektonIcon;
+  return node;
 }

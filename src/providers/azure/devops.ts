@@ -18,78 +18,116 @@ import pipelinesIcon from "../../../resources/azure/devops/pipelines.png";
 import reposIcon from "../../../resources/azure/devops/repos.png";
 import test_plansIcon from "../../../resources/azure/devops/test-plans.png";
 
-class _Devops extends _Azure {
-  protected static override _type = "devops";
+function _Devops(label?: string, options?: Record<string, unknown>) {
+  const node = _Azure(label, options);
+  (node as unknown as Record<string, unknown>)._type = "devops";
+  return node;
 }
 
-export class APIConnections extends _Devops {
-  protected static _iconDataUrl = api_connectionsIcon;
+export function APIConnections(label?: string, options?: Record<string, unknown>) {
+  const node = _Devops(label ?? "APIConnections", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = api_connectionsIcon;
+  return node;
 }
 
-export class APIManagementServices extends _Devops {
-  protected static _iconDataUrl = api_management_servicesIcon;
+export function APIManagementServices(label?: string, options?: Record<string, unknown>) {
+  const node = _Devops(label ?? "APIManagementServices", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = api_management_servicesIcon;
+  return node;
 }
 
-export class ApplicationInsights extends _Devops {
-  protected static _iconDataUrl = application_insightsIcon;
+export function ApplicationInsights(label?: string, options?: Record<string, unknown>) {
+  const node = _Devops(label ?? "ApplicationInsights", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = application_insightsIcon;
+  return node;
 }
 
-export class Artifacts extends _Devops {
-  protected static _iconDataUrl = artifactsIcon;
+export function Artifacts(label?: string, options?: Record<string, unknown>) {
+  const node = _Devops(label ?? "Artifacts", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = artifactsIcon;
+  return node;
 }
 
-export class AzureDevops extends _Devops {
-  protected static _iconDataUrl = azure_devopsIcon;
+export function AzureDevops(label?: string, options?: Record<string, unknown>) {
+  const node = _Devops(label ?? "AzureDevops", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_devopsIcon;
+  return node;
 }
 
-export class Boards extends _Devops {
-  protected static _iconDataUrl = boardsIcon;
+export function Boards(label?: string, options?: Record<string, unknown>) {
+  const node = _Devops(label ?? "Boards", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = boardsIcon;
+  return node;
 }
 
-export class ChangeAnalysis extends _Devops {
-  protected static _iconDataUrl = change_analysisIcon;
+export function ChangeAnalysis(label?: string, options?: Record<string, unknown>) {
+  const node = _Devops(label ?? "ChangeAnalysis", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = change_analysisIcon;
+  return node;
 }
 
-export class Cloudtest extends _Devops {
-  protected static _iconDataUrl = cloudtestIcon;
+export function Cloudtest(label?: string, options?: Record<string, unknown>) {
+  const node = _Devops(label ?? "Cloudtest", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = cloudtestIcon;
+  return node;
 }
 
-export class CodeOptimization extends _Devops {
-  protected static _iconDataUrl = code_optimizationIcon;
+export function CodeOptimization(label?: string, options?: Record<string, unknown>) {
+  const node = _Devops(label ?? "CodeOptimization", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = code_optimizationIcon;
+  return node;
 }
 
-export class DevopsStarter extends _Devops {
-  protected static _iconDataUrl = devops_starterIcon;
+export function DevopsStarter(label?: string, options?: Record<string, unknown>) {
+  const node = _Devops(label ?? "DevopsStarter", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = devops_starterIcon;
+  return node;
 }
 
-export class Devops extends _Devops {
-  protected static _iconDataUrl = devopsIcon;
+export function Devops(label?: string, options?: Record<string, unknown>) {
+  const node = _Devops(label ?? "Devops", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = devopsIcon;
+  return node;
 }
 
-export class DevtestLabs extends _Devops {
-  protected static _iconDataUrl = devtest_labsIcon;
+export function DevtestLabs(label?: string, options?: Record<string, unknown>) {
+  const node = _Devops(label ?? "DevtestLabs", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = devtest_labsIcon;
+  return node;
 }
 
-export class LabAccounts extends _Devops {
-  protected static _iconDataUrl = lab_accountsIcon;
+export function LabAccounts(label?: string, options?: Record<string, unknown>) {
+  const node = _Devops(label ?? "LabAccounts", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = lab_accountsIcon;
+  return node;
 }
 
-export class LabServices extends _Devops {
-  protected static _iconDataUrl = lab_servicesIcon;
+export function LabServices(label?: string, options?: Record<string, unknown>) {
+  const node = _Devops(label ?? "LabServices", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = lab_servicesIcon;
+  return node;
 }
 
-export class LoadTesting extends _Devops {
-  protected static _iconDataUrl = load_testingIcon;
+export function LoadTesting(label?: string, options?: Record<string, unknown>) {
+  const node = _Devops(label ?? "LoadTesting", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = load_testingIcon;
+  return node;
 }
 
-export class Pipelines extends _Devops {
-  protected static _iconDataUrl = pipelinesIcon;
+export function Pipelines(label?: string, options?: Record<string, unknown>) {
+  const node = _Devops(label ?? "Pipelines", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = pipelinesIcon;
+  return node;
 }
 
-export class Repos extends _Devops {
-  protected static _iconDataUrl = reposIcon;
+export function Repos(label?: string, options?: Record<string, unknown>) {
+  const node = _Devops(label ?? "Repos", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = reposIcon;
+  return node;
 }
 
-export class TestPlans extends _Devops {
-  protected static _iconDataUrl = test_plansIcon;
+export function TestPlans(label?: string, options?: Record<string, unknown>) {
+  const node = _Devops(label ?? "TestPlans", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = test_plansIcon;
+  return node;
 }

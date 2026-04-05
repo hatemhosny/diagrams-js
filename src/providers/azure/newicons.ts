@@ -7,34 +7,50 @@ import icm_troubleshootingIcon from "../../../resources/azure/newicons/icm-troub
 import osconfigIcon from "../../../resources/azure/newicons/osconfig.png";
 import storage_actionsIcon from "../../../resources/azure/newicons/storage-actions.png";
 
-class _Newicons extends _Azure {
-  protected static override _type = "newicons";
+function _Newicons(label?: string, options?: Record<string, unknown>) {
+  const node = _Azure(label, options);
+  (node as unknown as Record<string, unknown>)._type = "newicons";
+  return node;
 }
 
-export class AzureSustainability extends _Newicons {
-  protected static _iconDataUrl = azure_sustainabilityIcon;
+export function AzureSustainability(label?: string, options?: Record<string, unknown>) {
+  const node = _Newicons(label ?? "AzureSustainability", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_sustainabilityIcon;
+  return node;
 }
 
-export class ConnectedVehiclePlatform extends _Newicons {
-  protected static _iconDataUrl = connected_vehicle_platformIcon;
+export function ConnectedVehiclePlatform(label?: string, options?: Record<string, unknown>) {
+  const node = _Newicons(label ?? "ConnectedVehiclePlatform", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = connected_vehicle_platformIcon;
+  return node;
 }
 
-export class EntraConnectHealth extends _Newicons {
-  protected static _iconDataUrl = entra_connect_healthIcon;
+export function EntraConnectHealth(label?: string, options?: Record<string, unknown>) {
+  const node = _Newicons(label ?? "EntraConnectHealth", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = entra_connect_healthIcon;
+  return node;
 }
 
-export class EntraConnectSync extends _Newicons {
-  protected static _iconDataUrl = entra_connect_syncIcon;
+export function EntraConnectSync(label?: string, options?: Record<string, unknown>) {
+  const node = _Newicons(label ?? "EntraConnectSync", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = entra_connect_syncIcon;
+  return node;
 }
 
-export class IcmTroubleshooting extends _Newicons {
-  protected static _iconDataUrl = icm_troubleshootingIcon;
+export function IcmTroubleshooting(label?: string, options?: Record<string, unknown>) {
+  const node = _Newicons(label ?? "IcmTroubleshooting", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = icm_troubleshootingIcon;
+  return node;
 }
 
-export class Osconfig extends _Newicons {
-  protected static _iconDataUrl = osconfigIcon;
+export function Osconfig(label?: string, options?: Record<string, unknown>) {
+  const node = _Newicons(label ?? "Osconfig", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = osconfigIcon;
+  return node;
 }
 
-export class StorageActions extends _Newicons {
-  protected static _iconDataUrl = storage_actionsIcon;
+export function StorageActions(label?: string, options?: Record<string, unknown>) {
+  const node = _Newicons(label ?? "StorageActions", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = storage_actionsIcon;
+  return node;
 }

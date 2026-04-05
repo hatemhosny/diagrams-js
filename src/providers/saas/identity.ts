@@ -2,14 +2,20 @@ import { _Saas } from "./index.js";
 import auth0Icon from "../../../resources/saas/identity/auth0.png";
 import oktaIcon from "../../../resources/saas/identity/okta.png";
 
-class _Identity extends _Saas {
-  protected static override _type = "identity";
+function _Identity(label?: string, options?: Record<string, unknown>) {
+  const node = _Saas(label, options);
+  (node as unknown as Record<string, unknown>)._type = "identity";
+  return node;
 }
 
-export class Auth0 extends _Identity {
-  protected static _iconDataUrl = auth0Icon;
+export function Auth0(label?: string, options?: Record<string, unknown>) {
+  const node = _Identity(label ?? "Auth0", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = auth0Icon;
+  return node;
 }
 
-export class Okta extends _Identity {
-  protected static _iconDataUrl = oktaIcon;
+export function Okta(label?: string, options?: Record<string, unknown>) {
+  const node = _Identity(label ?? "Okta", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = oktaIcon;
+  return node;
 }

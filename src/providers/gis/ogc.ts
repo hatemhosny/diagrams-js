@@ -3,18 +3,26 @@ import ogcIcon from "../../../resources/gis/ogc/ogc.png";
 import wfsIcon from "../../../resources/gis/ogc/wfs.png";
 import wmsIcon from "../../../resources/gis/ogc/wms.png";
 
-class _Ogc extends _Gis {
-  protected static override _type = "ogc";
+function _Ogc(label?: string, options?: Record<string, unknown>) {
+  const node = _Gis(label, options);
+  (node as unknown as Record<string, unknown>)._type = "ogc";
+  return node;
 }
 
-export class OGC extends _Ogc {
-  protected static _iconDataUrl = ogcIcon;
+export function OGC(label?: string, options?: Record<string, unknown>) {
+  const node = _Ogc(label ?? "OGC", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = ogcIcon;
+  return node;
 }
 
-export class WFS extends _Ogc {
-  protected static _iconDataUrl = wfsIcon;
+export function WFS(label?: string, options?: Record<string, unknown>) {
+  const node = _Ogc(label ?? "WFS", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = wfsIcon;
+  return node;
 }
 
-export class WMS extends _Ogc {
-  protected static _iconDataUrl = wmsIcon;
+export function WMS(label?: string, options?: Record<string, unknown>) {
+  const node = _Ogc(label ?? "WMS", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = wmsIcon;
+  return node;
 }

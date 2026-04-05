@@ -3,7 +3,7 @@ import { Diagram, Node, Edge } from "../src/index.js";
 
 describe("Diagram", () => {
   it("should create a diagram with default options", () => {
-    const diagram = new Diagram("Test Diagram", {});
+    const diagram = Diagram("Test Diagram", {});
     expect(diagram.name).toBe("Test Diagram");
     expect(diagram.filename).toBe("test_diagram");
     expect(diagram.direction).toBe("LR");
@@ -11,13 +11,13 @@ describe("Diagram", () => {
   });
 
   it("should support different directions", () => {
-    const diagram = new Diagram("Test", { direction: "TB" });
+    const diagram = Diagram("Test", { direction: "TB" });
     expect(diagram.direction).toBe("TB");
     diagram.destroy();
   });
 
   it("should generate DOT source", () => {
-    const diagram = new Diagram("Test", {});
+    const diagram = Diagram("Test", {});
     const dot = diagram.toString();
     expect(dot).toContain('digraph "Test"');
     expect(dot).toContain('rankdir="LR"');
@@ -27,22 +27,22 @@ describe("Diagram", () => {
 
 describe("Node", () => {
   it("should create a node without context", () => {
-    const node = new Node("test");
+    const node = Node("test");
     expect(node.label).toBe("test");
     expect(node.nodeId).toBeDefined();
   });
 
   it("should create a node within diagram context", () => {
-    const diagram = new Diagram("Test", {});
-    const node = diagram.add(new Node("My Node"));
+    const diagram = Diagram("Test", {});
+    const node = diagram.add(Node("My Node"));
     expect(node.label).toBe("My Node");
     expect(node.nodeId).toBeDefined();
     diagram.destroy();
   });
 
   it("should support autolabel", () => {
-    const diagram = new Diagram("Test", { autolabel: true });
-    const node = diagram.add(new Node("test"));
+    const diagram = Diagram("Test", { autolabel: true });
+    const node = diagram.add(Node("test"));
     expect(node.label).toContain("Node");
     diagram.destroy();
   });
@@ -50,19 +50,19 @@ describe("Node", () => {
 
 describe("Edge", () => {
   it("should create an edge with default attributes", () => {
-    const edge = new Edge({});
+    const edge = Edge({});
     expect(edge.forward).toBe(false);
     expect(edge.reverse).toBe(false);
     expect(edge.attrs.dir).toBe("none");
   });
 
   it("should support forward direction", () => {
-    const edge = new Edge({ forward: true });
+    const edge = Edge({ forward: true });
     expect(edge.attrs.dir).toBe("forward");
   });
 
   it("should support custom attributes", () => {
-    const edge = new Edge({ label: "test", color: "red", style: "dashed" });
+    const edge = Edge({ label: "test", color: "red", style: "dashed" });
     expect(edge.attrs.label).toBe("test");
     expect(edge.attrs.color).toBe("red");
     expect(edge.attrs.style).toBe("dashed");
@@ -77,9 +77,9 @@ describe("Edge", () => {
 
 describe("Node connections", () => {
   it("should connect nodes with to()", () => {
-    const diagram = new Diagram("Test", {});
-    const node1 = diagram.add(new Node("Node1"));
-    const node2 = diagram.add(new Node("Node2"));
+    const diagram = Diagram("Test", {});
+    const node1 = diagram.add(Node("Node1"));
+    const node2 = diagram.add(Node("Node2"));
 
     const result = node1.to(node2);
     expect(result).toBe(node2);
@@ -90,9 +90,9 @@ describe("Node connections", () => {
   });
 
   it("should connect nodes with from()", () => {
-    const diagram = new Diagram("Test", {});
-    const node1 = diagram.add(new Node("Node1"));
-    const node2 = diagram.add(new Node("Node2"));
+    const diagram = Diagram("Test", {});
+    const node1 = diagram.add(Node("Node1"));
+    const node2 = diagram.add(Node("Node2"));
 
     node2.from(node1);
 
@@ -105,9 +105,9 @@ describe("Node connections", () => {
   });
 
   it("should support bidirectional connections with with()", () => {
-    const diagram = new Diagram("Test", {});
-    const node1 = diagram.add(new Node("Node1"));
-    const node2 = diagram.add(new Node("Node2"));
+    const diagram = Diagram("Test", {});
+    const node1 = diagram.add(Node("Node1"));
+    const node2 = diagram.add(Node("Node2"));
 
     node1.with(node2);
 
@@ -117,10 +117,10 @@ describe("Node connections", () => {
   });
 
   it("should connect to multiple nodes", () => {
-    const diagram = new Diagram("Test", {});
-    const node1 = diagram.add(new Node("Node1"));
-    const node2 = diagram.add(new Node("Node2"));
-    const node3 = diagram.add(new Node("Node3"));
+    const diagram = Diagram("Test", {});
+    const node1 = diagram.add(Node("Node1"));
+    const node2 = diagram.add(Node("Node2"));
+    const node3 = diagram.add(Node("Node3"));
 
     node1.to([node2, node3]);
 
@@ -131,11 +131,11 @@ describe("Node connections", () => {
   });
 
   it("should support edge customization", () => {
-    const diagram = new Diagram("Test", {});
-    const node1 = diagram.add(new Node("Node1"));
-    const node2 = diagram.add(new Node("Node2"));
+    const diagram = Diagram("Test", {});
+    const node1 = diagram.add(Node("Node1"));
+    const node2 = diagram.add(Node("Node2"));
 
-    node1.to(new Edge({ color: "red", style: "dashed" }), node2);
+    node1.to(Edge({ color: "red", style: "dashed" }), node2);
 
     const dot = diagram.toString();
     expect(dot).toContain('color="red"');
@@ -144,18 +144,18 @@ describe("Node connections", () => {
   });
 
   it("should support edge customization with forEach", () => {
-    const diagram = new Diagram("Test", {});
+    const diagram = Diagram("Test", {});
     const cluster = diagram.cluster("Test Cluster");
     const nodes = [
-      cluster.add(new Node("Node1")),
-      cluster.add(new Node("Node2")),
-      cluster.add(new Node("Node3")),
+      cluster.add(Node("Node1")),
+      cluster.add(Node("Node2")),
+      cluster.add(Node("Node3")),
     ];
-    const target = diagram.add(new Node("Target"));
+    const target = diagram.add(Node("Target"));
 
     // Test that nodes from cluster work with forEach and styled edges
     nodes.forEach((node) => {
-      node.to(new Edge({ color: "blue", style: "dotted" }), target);
+      node.to(Edge({ color: "blue", style: "dotted" }), target);
     });
 
     const dot = diagram.toString();
@@ -168,11 +168,11 @@ describe("Node connections", () => {
   });
 
   it("should support edge customization with with()", () => {
-    const diagram = new Diagram("Test", {});
-    const node1 = diagram.add(new Node("Node1"));
-    const node2 = diagram.add(new Node("Node2"));
+    const diagram = Diagram("Test", {});
+    const node1 = diagram.add(Node("Node1"));
+    const node2 = diagram.add(Node("Node2"));
 
-    node1.with(new Edge({ color: "purple", style: "dashed" }), node2);
+    node1.with(Edge({ color: "purple", style: "dashed" }), node2);
 
     const dot = diagram.toString();
     expect(dot).toContain('color="purple"');
@@ -181,11 +181,11 @@ describe("Node connections", () => {
   });
 
   it("should support edge customization with from(Edge, Node)", () => {
-    const diagram = new Diagram("Test", {});
-    const node1 = diagram.add(new Node("Node1"));
-    const node2 = diagram.add(new Node("Node2"));
+    const diagram = Diagram("Test", {});
+    const node1 = diagram.add(Node("Node1"));
+    const node2 = diagram.add(Node("Node2"));
 
-    node1.from(new Edge({ color: "orange", label: "test" }), node2);
+    node1.from(Edge({ color: "orange", label: "test" }), node2);
 
     const dot = diagram.toString();
     expect(dot).toContain('color="orange"');
@@ -195,12 +195,12 @@ describe("Node connections", () => {
   });
 
   it("should support to(Edge) chaining", () => {
-    const diagram = new Diagram("Test", {});
-    const node1 = diagram.add(new Node("Node1"));
-    const node2 = diagram.add(new Node("Node2"));
+    const diagram = Diagram("Test", {});
+    const node1 = diagram.add(Node("Node1"));
+    const node2 = diagram.add(Node("Node2"));
 
     // Test node.to(edge) returns edge for chaining
-    const edge = node1.to(new Edge({ color: "purple", forward: true, reverse: true }));
+    const edge = node1.to(Edge({ color: "purple", forward: true, reverse: true }));
     edge.from(node2);
 
     const dot = diagram.toString();
@@ -212,7 +212,7 @@ describe("Node connections", () => {
 
 describe("Cluster", () => {
   it("should create a cluster via diagram.cluster()", () => {
-    const diagram = new Diagram("Test");
+    const diagram = Diagram("Test");
     const cluster = diagram.cluster("My Cluster");
     expect(cluster.label).toBe("My Cluster");
     expect(cluster.name).toBe("cluster_My_Cluster");
@@ -220,7 +220,7 @@ describe("Cluster", () => {
   });
 
   it("should nest clusters", () => {
-    const diagram = new Diagram("Test");
+    const diagram = Diagram("Test");
     const cluster1 = diagram.cluster("Outer");
     const cluster2 = cluster1.cluster("Inner");
     expect(cluster2.depth).toBe(1);
@@ -228,9 +228,9 @@ describe("Cluster", () => {
   });
 
   it("should add nodes to clusters explicitly", () => {
-    const diagram = new Diagram("Test");
+    const diagram = Diagram("Test");
     const cluster = diagram.cluster("My Cluster");
-    const node = cluster.add(new Node("Test Node"));
+    const node = cluster.add(Node("Test Node"));
     expect(node.label).toBe("Test Node");
     diagram.destroy();
   });
@@ -238,11 +238,11 @@ describe("Cluster", () => {
 
 describe("Image Rendering", () => {
   it("should render to SVG", async () => {
-    const diagram = new Diagram("SVG Test", {
+    const diagram = Diagram("SVG Test", {
       direction: "TB",
     });
-    const node1 = diagram.add(new Node("Node 1"));
-    const node2 = diagram.add(new Node("Node 2"));
+    const node1 = diagram.add(Node("Node 1"));
+    const node2 = diagram.add(Node("Node 2"));
     node1.to(node2);
 
     const result = await diagram.render();
@@ -254,11 +254,11 @@ describe("Image Rendering", () => {
   });
 
   it("should render to SVG with explicit format option", async () => {
-    const diagram = new Diagram("SVG Test", {
+    const diagram = Diagram("SVG Test", {
       direction: "TB",
     });
-    const node1 = diagram.add(new Node("Node 1"));
-    const node2 = diagram.add(new Node("Node 2"));
+    const node1 = diagram.add(Node("Node 1"));
+    const node2 = diagram.add(Node("Node 2"));
     node1.to(node2);
 
     const result = await diagram.render({ format: "svg" });
@@ -270,11 +270,11 @@ describe("Image Rendering", () => {
   });
 
   it("should render to PNG in Node.js", async () => {
-    const diagram = new Diagram("PNG Test", {
+    const diagram = Diagram("PNG Test", {
       direction: "TB",
     });
-    const node1 = diagram.add(new Node("Node 1"));
-    const node2 = diagram.add(new Node("Node 2"));
+    const node1 = diagram.add(Node("Node 1"));
+    const node2 = diagram.add(Node("Node 2"));
     node1.to(node2);
 
     const result = await diagram.render({ format: "png" });
@@ -291,11 +291,11 @@ describe("Image Rendering", () => {
 
   it("should support icon data tracking", async () => {
     // Create diagram and manually track icon data
-    const diagram = new Diagram("Icon Tracking Test", {
+    const diagram = Diagram("Icon Tracking Test", {
       direction: "TB",
     });
 
-    const server = diagram.add(new Node("Server"));
+    const server = diagram.add(Node("Server"));
 
     // Manually track node with icon data (simulating provider class behavior)
     const testIconData =
@@ -312,11 +312,11 @@ describe("Image Rendering", () => {
   });
 
   it("should render PNG with icons", async () => {
-    const diagram = new Diagram("Icon PNG Test", {
+    const diagram = Diagram("Icon PNG Test", {
       direction: "TB",
     });
 
-    const server = diagram.add(new Node("Server"));
+    const server = diagram.add(Node("Server"));
 
     // Manually track node with icon data
     const testIconData =
@@ -336,11 +336,11 @@ describe("Image Rendering", () => {
   });
 
   it("should allow rendering same diagram to multiple formats", async () => {
-    const diagram = new Diagram("Multi Format Test", {
+    const diagram = Diagram("Multi Format Test", {
       direction: "LR",
     });
-    const node1 = diagram.add(new Node("A"));
-    const node2 = diagram.add(new Node("B"));
+    const node1 = diagram.add(Node("A"));
+    const node2 = diagram.add(Node("B"));
     node1.to(node2);
 
     // Render to SVG
@@ -361,11 +361,11 @@ describe("Image Rendering", () => {
   });
 
   it("should render to JPG in Node.js", async () => {
-    const diagram = new Diagram("JPG Test", {
+    const diagram = Diagram("JPG Test", {
       direction: "TB",
     });
-    const node1 = diagram.add(new Node("Node 1"));
-    const node2 = diagram.add(new Node("Node 2"));
+    const node1 = diagram.add(Node("Node 1"));
+    const node2 = diagram.add(Node("Node 2"));
     node1.to(node2);
 
     const result = await diagram.render({ format: "jpg" });
@@ -379,11 +379,11 @@ describe("Image Rendering", () => {
   });
 
   it("should render JPG with icons", async () => {
-    const diagram = new Diagram("Icon JPG Test", {
+    const diagram = Diagram("Icon JPG Test", {
       direction: "TB",
     });
 
-    const server = diagram.add(new Node("Server"));
+    const server = diagram.add(Node("Server"));
 
     // Manually track node with icon data
     const testIconData =
@@ -401,11 +401,11 @@ describe("Image Rendering", () => {
   });
 
   it("should render to DOT format", async () => {
-    const diagram = new Diagram("DOT Test", {
+    const diagram = Diagram("DOT Test", {
       direction: "LR",
     });
-    const node1 = diagram.add(new Node("Node A"));
-    const node2 = diagram.add(new Node("Node B"));
+    const node1 = diagram.add(Node("Node A"));
+    const node2 = diagram.add(Node("Node B"));
     node1.to(node2);
 
     const result = await diagram.render({ format: "dot" });
@@ -420,11 +420,11 @@ describe("Image Rendering", () => {
   });
 
   it("should include image attribute in DOT format for icons", async () => {
-    const diagram = new Diagram("DOT Icons Test", {
+    const diagram = Diagram("DOT Icons Test", {
       direction: "TB",
     });
 
-    const server = diagram.add(new Node("Server"));
+    const server = diagram.add(Node("Server"));
 
     // Manually track node with icon data
     const testIconData =
@@ -441,11 +441,11 @@ describe("Image Rendering", () => {
   });
 
   it("should not have duplicate attributes in DOT format", async () => {
-    const diagram = new Diagram("DOT No Duplicates Test", {
+    const diagram = Diagram("DOT No Duplicates Test", {
       direction: "TB",
     });
 
-    const server = diagram.add(new Node("Server"));
+    const server = diagram.add(Node("Server"));
 
     // Manually track node with icon data
     const testIconData =
@@ -470,9 +470,9 @@ describe("Image Rendering", () => {
   });
 
   it("should render SVG as data URL", async () => {
-    const diagram = new Diagram("Data URL Test");
-    const node1 = diagram.add(new Node("Node 1"));
-    const node2 = diagram.add(new Node("Node 2"));
+    const diagram = Diagram("Data URL Test");
+    const node1 = diagram.add(Node("Node 1"));
+    const node2 = diagram.add(Node("Node 2"));
     node1.to(node2);
 
     const result = await diagram.render({ format: "svg", dataUrl: true });
@@ -484,9 +484,9 @@ describe("Image Rendering", () => {
   });
 
   it("should render PNG as data URL", async () => {
-    const diagram = new Diagram("Data URL PNG Test");
-    const node1 = diagram.add(new Node("Node 1"));
-    const node2 = diagram.add(new Node("Node 2"));
+    const diagram = Diagram("Data URL PNG Test");
+    const node1 = diagram.add(Node("Node 1"));
+    const node2 = diagram.add(Node("Node 2"));
     node1.to(node2);
 
     const result = await diagram.render({ format: "png", dataUrl: true });
@@ -498,9 +498,9 @@ describe("Image Rendering", () => {
   });
 
   it("should render JPG as data URL", async () => {
-    const diagram = new Diagram("Data URL JPG Test");
-    const node1 = diagram.add(new Node("Node 1"));
-    const node2 = diagram.add(new Node("Node 2"));
+    const diagram = Diagram("Data URL JPG Test");
+    const node1 = diagram.add(Node("Node 1"));
+    const node2 = diagram.add(Node("Node 2"));
     node1.to(node2);
 
     const result = await diagram.render({ format: "jpg", dataUrl: true });
@@ -512,9 +512,9 @@ describe("Image Rendering", () => {
   });
 
   it("should render DOT as data URL", async () => {
-    const diagram = new Diagram("Data URL DOT Test");
-    const node1 = diagram.add(new Node("Node 1"));
-    const node2 = diagram.add(new Node("Node 2"));
+    const diagram = Diagram("Data URL DOT Test");
+    const node1 = diagram.add(Node("Node 1"));
+    const node2 = diagram.add(Node("Node 2"));
     node1.to(node2);
 
     const result = await diagram.render({ format: "dot", dataUrl: true });
@@ -530,11 +530,11 @@ describe("Custom Nodes", () => {
   it("should create Custom node with data URL icon", async () => {
     const { Custom } = await import("../src/Custom.js");
 
-    const diagram = new Diagram("Custom Node Test");
+    const diagram = Diagram("Custom Node Test");
     const testIconData =
       "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==";
 
-    const custom = diagram.add(new Custom("My Service", testIconData));
+    const custom = diagram.add(Custom("My Service", testIconData));
     expect(custom.getIconUrl()).toBe(testIconData);
 
     // Render and check that icon is injected
@@ -549,14 +549,14 @@ describe("Custom Nodes", () => {
   it("should deduplicate icons using <use> tags for multiple Custom nodes", async () => {
     const { Custom } = await import("../src/Custom.js");
 
-    const diagram = new Diagram("Custom Nodes Deduplication Test");
+    const diagram = Diagram("Custom Nodes Deduplication Test");
     const testIconData =
       "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==";
 
     // Create multiple Custom nodes with the same icon
-    const node1 = diagram.add(new Custom("Service 1", testIconData));
-    const node2 = diagram.add(new Custom("Service 2", testIconData));
-    const node3 = diagram.add(new Custom("Service 3", testIconData));
+    const node1 = diagram.add(Custom("Service 1", testIconData));
+    const node2 = diagram.add(Custom("Service 2", testIconData));
+    const node3 = diagram.add(Custom("Service 3", testIconData));
 
     node1.to(node2);
     node2.to(node3);
@@ -588,14 +588,14 @@ describe("Custom Nodes", () => {
   it("should handle different icons for different Custom nodes", async () => {
     const { Custom } = await import("../src/Custom.js");
 
-    const diagram = new Diagram("Custom Nodes Different Icons Test");
+    const diagram = Diagram("Custom Nodes Different Icons Test");
     const iconData1 =
       "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==";
     const iconData2 =
       "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8z8DwHwAFxgIArlYOPQAAAABJRU5ErkJggg==";
 
-    const node1 = diagram.add(new Custom("Service A", iconData1));
-    const node2 = diagram.add(new Custom("Service B", iconData2));
+    const node1 = diagram.add(Custom("Service A", iconData1));
+    const node2 = diagram.add(Custom("Service B", iconData2));
 
     node1.to(node2);
 

@@ -9,44 +9,64 @@ import teamcityIcon from "../../../resources/onprem/ci/teamcity.png";
 import travisciIcon from "../../../resources/onprem/ci/travisci.png";
 import zuulciIcon from "../../../resources/onprem/ci/zuulci.png";
 
-class _Ci extends _Onprem {
-  protected static override _type = "ci";
+function _Ci(label?: string, options?: Record<string, unknown>) {
+  const node = _Onprem(label, options);
+  (node as unknown as Record<string, unknown>)._type = "ci";
+  return node;
 }
 
-export class Circleci extends _Ci {
-  protected static _iconDataUrl = circleciIcon;
+export function Circleci(label?: string, options?: Record<string, unknown>) {
+  const node = _Ci(label ?? "Circleci", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = circleciIcon;
+  return node;
 }
 
-export class Concourseci extends _Ci {
-  protected static _iconDataUrl = concourseciIcon;
+export function Concourseci(label?: string, options?: Record<string, unknown>) {
+  const node = _Ci(label ?? "Concourseci", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = concourseciIcon;
+  return node;
 }
 
-export class Droneci extends _Ci {
-  protected static _iconDataUrl = droneciIcon;
+export function Droneci(label?: string, options?: Record<string, unknown>) {
+  const node = _Ci(label ?? "Droneci", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = droneciIcon;
+  return node;
 }
 
-export class GithubActions extends _Ci {
-  protected static _iconDataUrl = github_actionsIcon;
+export function GithubActions(label?: string, options?: Record<string, unknown>) {
+  const node = _Ci(label ?? "GithubActions", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = github_actionsIcon;
+  return node;
 }
 
-export class Gitlabci extends _Ci {
-  protected static _iconDataUrl = gitlabciIcon;
+export function Gitlabci(label?: string, options?: Record<string, unknown>) {
+  const node = _Ci(label ?? "Gitlabci", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = gitlabciIcon;
+  return node;
 }
 
-export class Jenkins extends _Ci {
-  protected static _iconDataUrl = jenkinsIcon;
+export function Jenkins(label?: string, options?: Record<string, unknown>) {
+  const node = _Ci(label ?? "Jenkins", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = jenkinsIcon;
+  return node;
 }
 
-export class Teamcity extends _Ci {
-  protected static _iconDataUrl = teamcityIcon;
+export function Teamcity(label?: string, options?: Record<string, unknown>) {
+  const node = _Ci(label ?? "Teamcity", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = teamcityIcon;
+  return node;
 }
 
-export class Travisci extends _Ci {
-  protected static _iconDataUrl = travisciIcon;
+export function Travisci(label?: string, options?: Record<string, unknown>) {
+  const node = _Ci(label ?? "Travisci", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = travisciIcon;
+  return node;
 }
 
-export class Zuulci extends _Ci {
-  protected static _iconDataUrl = zuulciIcon;
+export function Zuulci(label?: string, options?: Record<string, unknown>) {
+  const node = _Ci(label ?? "Zuulci", options);
+  (node as unknown as Record<string, unknown>)._iconDataUrl = zuulciIcon;
+  return node;
 }
 
 // Aliases
