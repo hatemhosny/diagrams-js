@@ -8,6 +8,16 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css"
       rel="stylesheet"
     />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-typescript.min.js"></script>
+    <script type="importmap">
+      {
+        "imports": {
+          "ts-diagrams": "./dist/index.js",
+          "ts-diagrams/": "./dist/providers/"
+        }
+      }
+    </script>
     <style>
       * {
         margin: 0;
@@ -76,8 +86,13 @@
         margin: 0;
         border-radius: 8px;
         max-height: 450px;
-        max-width: 50vw;
+        max-width: 45vw;
         overflow-y: auto;
+      }
+      @media (max-width: 900px) {
+        pre {
+          max-width: unset;
+        }
       }
       pre code {
         font-family: "Monaco", "Menlo", "Consolas", monospace;
@@ -137,7 +152,7 @@
         <h2>Example 1: Grouped Workers on AWS</h2>
         <div class="example-content">
           <div class="code-section">
-            <div class="code-header">TypeScript Code</div>
+            <div class="code-header">Code</div>
             <pre><code class="language-typescript">import { Diagram } from "ts-diagrams";
 import { EC2 } from "ts-diagrams/aws/compute";
 import { RDS } from "ts-diagrams/aws/database";
@@ -163,20 +178,52 @@ workers.forEach(w => w.to(events));
 const svg = await diagram.render();</code></pre>
           </div>
           <div class="diagram-section">
-            <div class="diagram-header">Rendered Diagram</div>
+            <div class="diagram-header">Diagram</div>
             <div class="diagram-container" id="diagram1">
               <div class="loading">Loading...</div>
             </div>
           </div>
         </div>
       </div>
+      <script type="module">
+        import { Diagram } from "ts-diagrams";
+        import { EC2 } from "ts-diagrams/aws/compute.js";
+        import { RDS } from "ts-diagrams/aws/database.js";
+        import { ALB } from "ts-diagrams/aws/network.js";
+
+        const diagram = new Diagram("Grouped Workers", {
+          direction: "TB",
+        });
+
+        const lb = diagram.add(new ALB("lb"));
+        const workers = [
+          diagram.add(new EC2("worker1")),
+          diagram.add(new EC2("worker2")),
+          diagram.add(new EC2("worker3")),
+          diagram.add(new EC2("worker4")),
+          diagram.add(new EC2("worker5")),
+        ];
+        const events = diagram.add(new RDS("events"));
+
+        lb.to(workers);
+        workers.forEach((w) => w.to(events));
+
+        try {
+          const svg = await diagram.render();
+          document.getElementById("diagram1").innerHTML = svg;
+          diagram.destroy();
+        } catch (e) {
+          document.getElementById("diagram1").innerHTML =
+            '<div class="error">' + e.message + "</div>";
+        }
+      </script>
 
       <!-- Example 2: Clustered Web Services -->
       <div class="example">
         <h2>Example 2: Clustered Web Services</h2>
         <div class="example-content">
           <div class="code-section">
-            <div class="code-header">TypeScript Code</div>
+            <div class="code-header">Code</div>
             <pre><code class="language-typescript">import { Diagram } from "ts-diagrams";
 import { ECS } from "ts-diagrams/aws/compute";
 import { RDS, ElastiCache } from "ts-diagrams/aws/database";
@@ -209,20 +256,59 @@ dns.to(lb);
 const svg = await diagram.render();</code></pre>
           </div>
           <div class="diagram-section">
-            <div class="diagram-header">Rendered Diagram</div>
+            <div class="diagram-header">Diagram</div>
             <div class="diagram-container" id="diagram2">
               <div class="loading">Loading...</div>
             </div>
           </div>
         </div>
       </div>
+      <script type="module">
+        import { Diagram } from "ts-diagrams";
+        import { ECS } from "ts-diagrams/aws/compute.js";
+        import { RDS, ElastiCache } from "ts-diagrams/aws/database.js";
+        import { ALB, Route53 } from "ts-diagrams/aws/network.js";
+
+        const diagram = new Diagram("Clustered Web Services");
+
+        const dns = diagram.add(new Route53("dns"));
+        const lb = diagram.add(new ALB("lb"));
+
+        const svcCluster = diagram.cluster("Services");
+        const svcGroup = [
+          svcCluster.add(new ECS("web1")),
+          svcCluster.add(new ECS("web2")),
+          svcCluster.add(new ECS("web3")),
+        ];
+        lb.to(svcGroup);
+
+        const dbCluster = diagram.cluster("DB Cluster");
+        const dbPrimary = dbCluster.add(new RDS("userdb"));
+        const dbReplica = dbCluster.add(new RDS("userdb ro"));
+        dbPrimary.with(dbReplica);
+        svcGroup.forEach((s) => s.to(dbPrimary));
+
+        const memcached = diagram.add(new ElastiCache("memcached"));
+        svcGroup.forEach((s) => s.to(memcached));
+
+        dns.to(lb);
+
+        try {
+          const svg = await diagram.render();
+          document.getElementById("diagram2").innerHTML = svg;
+          diagram.destroy();
+        } catch (e) {
+          document.getElementById("diagram2").innerHTML =
+            '<div class="error">' + e.message + "</div>";
+        }
+      </script>
 
       <!-- Example 3: Event Processing on AWS -->
       <div class="example">
         <h2>Example 3: Event Processing on AWS</h2>
         <div class="example-content">
           <div class="code-section">
-            <div class="code-header">TypeScript Code</div>
+            <div class="code-header">Code</div>
             <pre><code class="language-typescript">import { Diagram } from "ts-diagrams";
 import { ECS, EKS, Lambda } from "ts-diagrams/aws/compute";
 import { Redshift } from "ts-diagrams/aws/database";
@@ -263,20 +349,67 @@ handlers.forEach(h => {
 const svg = await diagram.render();</code></pre>
           </div>
           <div class="diagram-section">
-            <div class="diagram-header">Rendered Diagram</div>
+            <div class="diagram-header">Diagram</div>
             <div class="diagram-container" id="diagram3">
               <div class="loading">Loading...</div>
             </div>
           </div>
         </div>
       </div>
+      <script type="module">
+        import { Diagram } from "ts-diagrams";
+        import { ECS, EKS, Lambda } from "ts-diagrams/aws/compute.js";
+        import { Redshift } from "ts-diagrams/aws/database.js";
+        import { SQS } from "ts-diagrams/aws/integration.js";
+        import { S3 } from "ts-diagrams/aws/storage.js";
+
+        const diagram = new Diagram("Event Processing");
+
+        const source = diagram.add(new EKS("k8s source"));
+        const store = diagram.add(new S3("events store"));
+        const dw = diagram.add(new Redshift("analytics"));
+
+        const flowsCluster = diagram.cluster("Event Flows");
+
+        const workersCluster = flowsCluster.cluster("Event Workers");
+        const workerNodes = [
+          workersCluster.add(new ECS("worker1")),
+          workersCluster.add(new ECS("worker2")),
+          workersCluster.add(new ECS("worker3")),
+        ];
+        source.to(workerNodes);
+
+        const queue = flowsCluster.add(new SQS("event queue"));
+        workerNodes.forEach((w) => w.to(queue));
+
+        const procCluster = flowsCluster.cluster("Processing");
+        const handlers = [
+          procCluster.add(new Lambda("proc1")),
+          procCluster.add(new Lambda("proc2")),
+          procCluster.add(new Lambda("proc3")),
+        ];
+        queue.to(handlers);
+        handlers.forEach((h) => {
+          h.to(store);
+          h.to(dw);
+        });
+
+        try {
+          const svg = await diagram.render();
+          document.getElementById("diagram3").innerHTML = svg;
+          diagram.destroy();
+        } catch (e) {
+          document.getElementById("diagram3").innerHTML =
+            '<div class="error">' + e.message + "</div>";
+        }
+      </script>
 
       <!-- Example 4: Message Collecting System on GCP -->
       <div class="example">
         <h2>Example 4: Message Collecting System on GCP</h2>
         <div class="example-content">
           <div class="code-section">
-            <div class="code-header">TypeScript Code</div>
+            <div class="code-header">Code</div>
             <pre><code class="language-typescript">import { Diagram } from "ts-diagrams";
 import { BigQuery, Dataflow, PubSub } from "ts-diagrams/gcp/analytics";
 import { AppEngine, Functions } from "ts-diagrams/gcp/compute";
@@ -321,20 +454,75 @@ dataflow.to(func).to(appengine);
 const svg = await diagram.render();</code></pre>
           </div>
           <div class="diagram-section">
-            <div class="diagram-header">Rendered Diagram</div>
+            <div class="diagram-header">Diagram</div>
             <div class="diagram-container" id="diagram4">
               <div class="loading">Loading...</div>
             </div>
           </div>
         </div>
       </div>
+      <script type="module">
+        import { Diagram } from "ts-diagrams";
+        import {
+          BigQuery,
+          Dataflow,
+          PubSub,
+        } from "ts-diagrams/gcp/analytics.js";
+        import { AppEngine, Functions } from "ts-diagrams/gcp/compute.js";
+        import { BigTable } from "ts-diagrams/gcp/database.js";
+        import { IotCore } from "ts-diagrams/gcp/iot.js";
+        import { GCS } from "ts-diagrams/gcp/storage.js";
+
+        const diagram = new Diagram("Message Collecting");
+
+        const pubsub = diagram.add(new PubSub("pubsub"));
+
+        const sourceCluster = diagram.cluster("Source of Data");
+        const sources = [
+          sourceCluster.add(new IotCore("core1")),
+          sourceCluster.add(new IotCore("core2")),
+          sourceCluster.add(new IotCore("core3")),
+        ];
+        sources.forEach((s) => s.to(pubsub));
+
+        const targetsCluster = diagram.cluster("Targets");
+        const flowCluster = targetsCluster.cluster("Data Flow");
+        const dataflow = flowCluster.add(new Dataflow("data flow"));
+        pubsub.to(dataflow);
+
+        const lakeCluster = targetsCluster.cluster("Data Lake");
+        const bq = lakeCluster.add(new BigQuery("bq"));
+        const gcs = lakeCluster.add(new GCS("storage"));
+        dataflow.to([bq, gcs]);
+
+        const eventCluster = targetsCluster.cluster("Event Driven");
+
+        const procCluster = eventCluster.cluster("Processing");
+        const engine = procCluster.add(new AppEngine("engine"));
+        const bigtable = procCluster.add(new BigTable("bigtable"));
+        dataflow.to(engine).to(bigtable);
+
+        const serverlessCluster = eventCluster.cluster("Serverless");
+        const func = serverlessCluster.add(new Functions("func"));
+        const appengine = serverlessCluster.add(new AppEngine("appengine"));
+        dataflow.to(func).to(appengine);
+
+        try {
+          const svg = await diagram.render();
+          document.getElementById("diagram4").innerHTML = svg;
+          diagram.destroy();
+        } catch (e) {
+          document.getElementById("diagram4").innerHTML =
+            '<div class="error">' + e.message + "</div>";
+        }
+      </script>
 
       <!-- Example 5: Exposed Pod with 3 Replicas on Kubernetes -->
       <div class="example">
         <h2>Example 5: Exposed Pod with 3 Replicas on Kubernetes</h2>
         <div class="example-content">
           <div class="code-section">
-            <div class="code-header">TypeScript Code</div>
+            <div class="code-header">Code</div>
             <pre><code class="language-typescript">import { Diagram } from "ts-diagrams";
 import { HPA } from "ts-diagrams/k8s/clusterconfig";
 import { Deployment, Pod, ReplicaSet } from "ts-diagrams/k8s/compute";
@@ -353,8 +541,6 @@ const rs = diagram.add(new ReplicaSet("rs"));
 const dp = diagram.add(new Deployment("dp"));
 const hpa = diagram.add(new HPA("hpa"));
 
-// Forward: ingress >> svc >> pods
-// Reverse: pods << rs << dp << hpa
 ingress.to(svc);
 svc.to(pods);
 pods.forEach(p => p.from(rs));
@@ -364,20 +550,58 @@ dp.from(hpa);
 const svg = await diagram.render();</code></pre>
           </div>
           <div class="diagram-section">
-            <div class="diagram-header">Rendered Diagram</div>
+            <div class="diagram-header">Diagram</div>
             <div class="diagram-container" id="diagram5">
               <div class="loading">Loading...</div>
             </div>
           </div>
         </div>
       </div>
+      <script type="module">
+        import { Diagram } from "ts-diagrams";
+        import { HPA } from "ts-diagrams/k8s/clusterconfig.js";
+        import {
+          Deployment,
+          Pod,
+          ReplicaSet,
+        } from "ts-diagrams/k8s/compute.js";
+        import { Ingress, Service } from "ts-diagrams/k8s/network.js";
+
+        const diagram = new Diagram("Exposed Pod with 3 Replicas");
+
+        const ingress = diagram.add(new Ingress("domain.com"));
+        const svc = diagram.add(new Service("svc"));
+        const pods = [
+          diagram.add(new Pod("pod1")),
+          diagram.add(new Pod("pod2")),
+          diagram.add(new Pod("pod3")),
+        ];
+        const rs = diagram.add(new ReplicaSet("rs"));
+        const dp = diagram.add(new Deployment("dp"));
+        const hpa = diagram.add(new HPA("hpa"));
+
+        ingress.to(svc);
+        svc.to(pods);
+        pods.forEach((p) => p.from(rs));
+        rs.from(dp);
+        dp.from(hpa);
+
+        try {
+          const svg = await diagram.render();
+          document.getElementById("diagram5").innerHTML = svg;
+          diagram.destroy();
+        } catch (e) {
+          document.getElementById("diagram5").innerHTML =
+            '<div class="error">' + e.message + "</div>";
+        }
+      </script>
 
       <!-- Example 6: Stateful Architecture on Kubernetes -->
       <div class="example">
         <h2>Example 6: Stateful Architecture on Kubernetes</h2>
         <div class="example-content">
           <div class="code-section">
-            <div class="code-header">TypeScript Code</div>
+            <div class="code-header">Code</div>
             <pre><code class="language-typescript">import { Diagram } from "ts-diagrams";
 import { Pod, StatefulSet } from "ts-diagrams/k8s/compute";
 import { Service } from "ts-diagrams/k8s/network";
@@ -411,20 +635,60 @@ pv.from(sc);
 const svg = await diagram.render();</code></pre>
           </div>
           <div class="diagram-section">
-            <div class="diagram-header">Rendered Diagram</div>
+            <div class="diagram-header">Diagram</div>
             <div class="diagram-container" id="diagram6">
               <div class="loading">Loading...</div>
             </div>
           </div>
         </div>
       </div>
+      <script type="module">
+        import { Diagram } from "ts-diagrams";
+        import { Pod, StatefulSet } from "ts-diagrams/k8s/compute.js";
+        import { Service } from "ts-diagrams/k8s/network.js";
+        import { PV, PVC, StorageClass } from "ts-diagrams/k8s/storage.js";
+
+        const diagram = new Diagram("Stateful Architecture");
+        const appsCluster = diagram.cluster("Apps");
+        const svc = appsCluster.add(new Service("svc"));
+        const sts = appsCluster.add(new StatefulSet("sts"));
+        const pods = [];
+        const pvcs = [];
+        for (let i = 0; i < 3; i++) {
+          const pod = appsCluster.add(new Pod("pod"));
+          const pvc = appsCluster.add(new PVC("pvc"));
+
+          pod.with(sts).with(pvc);
+          svc.to(pod).to(pvc);
+
+          pods.push(pod);
+          pvcs.push(pvc);
+        }
+
+        const pv = diagram.add(new PV("pv"));
+        const sc = diagram.add(new StorageClass("sc"));
+
+        pvcs.forEach((pvc) => {
+          pvc.from(pv);
+        });
+        pv.from(sc);
+
+        try {
+          const svg = await diagram.render();
+          document.getElementById("diagram6").innerHTML = svg;
+          diagram.destroy();
+        } catch (e) {
+          document.getElementById("diagram6").innerHTML =
+            '<div class="error">' + e.message + "</div>";
+        }
+      </script>
 
       <!-- Example 7: Advanced Web Service with On-Premises -->
       <div class="example">
         <h2>Example 7: Advanced Web Service with On-Premises</h2>
         <div class="example-content">
           <div class="code-section">
-            <div class="code-header">TypeScript Code</div>
+            <div class="code-header">Code</div>
             <pre><code class="language-typescript">import { Diagram } from "ts-diagrams";
 import { Spark } from "ts-diagrams/onprem/analytics";
 import { Server } from "ts-diagrams/onprem/compute";
@@ -475,20 +739,77 @@ grpcsvc.forEach((svc) => svc.to(aggregator));
 const svg = await diagram.render();</code></pre>
           </div>
           <div class="diagram-section">
-            <div class="diagram-header">Rendered Diagram</div>
+            <div class="diagram-header">Diagram</div>
             <div class="diagram-container" id="diagram7">
               <div class="loading">Loading...</div>
             </div>
           </div>
         </div>
       </div>
+      <script type="module">
+        import { Diagram } from "ts-diagrams";
+        import { Spark } from "ts-diagrams/onprem/analytics.js";
+        import { Server } from "ts-diagrams/onprem/compute.js";
+        import { PostgreSQL } from "ts-diagrams/onprem/database.js";
+        import { Redis } from "ts-diagrams/onprem/inmemory.js";
+        import { Fluentd } from "ts-diagrams/onprem/aggregator.js";
+        import { Grafana, Prometheus } from "ts-diagrams/onprem/monitoring.js";
+        import { Nginx } from "ts-diagrams/onprem/network.js";
+        import { Kafka } from "ts-diagrams/onprem/queue.js";
+
+        const diagram = new Diagram("Advanced Web Service with On-Premises");
+
+        const ingress = diagram.add(new Nginx("ingress"));
+
+        const metrics = diagram.add(new Prometheus("metric"));
+        const grafana = diagram.add(new Grafana("monitoring"));
+        metrics.from(grafana);
+
+        const serviceCluster = diagram.cluster("Service Cluster");
+        const grpcsvc = [
+          serviceCluster.add(new Server("grpc1")),
+          serviceCluster.add(new Server("grpc2")),
+          serviceCluster.add(new Server("grpc3")),
+        ];
+
+        const sessionsCluster = diagram.cluster("Sessions HA");
+        const sessionPrimary = sessionsCluster.add(new Redis("session"));
+        const sessionReplica = sessionsCluster.add(new Redis("replica"));
+        sessionPrimary.with(sessionReplica);
+        sessionReplica.from(metrics);
+        grpcsvc.forEach((svc) => svc.to(sessionPrimary));
+
+        const dbCluster = diagram.cluster("Database HA");
+        const dbPrimary = dbCluster.add(new PostgreSQL("users"));
+        const dbReplica = dbCluster.add(new PostgreSQL("replica"));
+        dbPrimary.with(dbReplica);
+        dbReplica.from(metrics);
+        grpcsvc.forEach((svc) => svc.to(dbPrimary));
+
+        const aggregator = diagram.add(new Fluentd("logging"));
+        const kafka = diagram.add(new Kafka("stream"));
+        const spark = diagram.add(new Spark("analytics"));
+        aggregator.to(kafka).to(spark);
+
+        ingress.to(grpcsvc);
+        grpcsvc.forEach((svc) => svc.to(aggregator));
+
+        try {
+          const svg = await diagram.render();
+          document.getElementById("diagram7").innerHTML = svg;
+          diagram.destroy();
+        } catch (e) {
+          document.getElementById("diagram7").innerHTML =
+            '<div class="error">' + e.message + "</div>";
+        }
+      </script>
 
       <!-- Example 8: Advanced Web Service with Colored Edges -->
       <div class="example">
         <h2>Example 8: Advanced Web Service with Colored Edges</h2>
         <div class="example-content">
           <div class="code-section">
-            <div class="code-header">TypeScript Code</div>
+            <div class="code-header">Code</div>
             <pre><code class="language-typescript">import { Diagram, Edge } from "ts-diagrams";
 import { Spark } from "ts-diagrams/onprem/analytics";
 import { Server } from "ts-diagrams/onprem/compute";
@@ -505,7 +826,6 @@ const ingress = diagram.add(new Nginx("ingress"));
 
 const metrics = diagram.add(new Prometheus("metric"));
 const grafana = diagram.add(new Grafana("monitoring"));
-// Grafana → metrics (metrics << Grafana in Python)
 grafana.to(new Edge({ color: "firebrick", style: "dashed" }), metrics);
 
 const serviceCluster = diagram.cluster("Service Cluster");
@@ -518,62 +838,127 @@ const grpcsvc = [
 const sessionsCluster = diagram.cluster("Sessions HA");
 const sessionPrimary = sessionsCluster.add(new Redis("session"));
 const sessionReplica = sessionsCluster.add(new Redis("replica"));
-// Bidirectional: sessionPrimary - sessionReplica
 sessionPrimary.with(new Edge({ color: "brown", style: "dashed" }), sessionReplica);
-// metrics → sessionReplica (sessionReplica << metrics in Python)
 sessionReplica.from(new Edge({ label: "collect" }), metrics);
-// grpcsvc → sessionPrimary (grpcsvc >> sessionPrimary in Python)
 grpcsvc.forEach((svc) => svc.to(new Edge({ color: "brown" }), sessionPrimary));
 
 const dbCluster = diagram.cluster("Database HA");
 const dbPrimary = dbCluster.add(new PostgreSQL("users"));
 const dbReplica = dbCluster.add(new PostgreSQL("replica"));
-// Bidirectional: dbPrimary - dbReplica
 dbPrimary.with(new Edge({ color: "brown", style: "dotted" }), dbReplica);
-// metrics → dbReplica (dbReplica << metrics in Python)
 dbReplica.from(new Edge({ label: "collect" }), metrics);
-// grpcsvc → dbPrimary (grpcsvc >> dbPrimary in Python)
 grpcsvc.forEach((svc) => svc.to(new Edge({ color: "black" }), dbPrimary));
 
 const aggregator = diagram.add(new Fluentd("logging"));
 const kafka = diagram.add(new Kafka("stream"));
 const spark = diagram.add(new Spark("analytics"));
-// aggregator → kafka (aggregator >> kafka in Python)
 aggregator.to(new Edge({ label: "parse" }), kafka);
-// kafka → spark (kafka >> spark in Python)
 kafka.to(new Edge({ color: "black", style: "bold" }), spark);
 
-// Double-headed arrows: ingress ↔ grpcsvc (bidirectional with arrows on both ends)
 grpcsvc.forEach((svc) => {
   ingress.to(new Edge({ color: "darkgreen", forward: true, reverse: true })).to(svc);
 });
-// grpcsvc → aggregator (grpcsvc >> aggregator in Python)
 grpcsvc.forEach((svc) => svc.to(new Edge({ color: "darkorange" }), aggregator));
 
 const svg = await diagram.render();</code></pre>
           </div>
           <div class="diagram-section">
-            <div class="diagram-header">Rendered Diagram</div>
+            <div class="diagram-header">Diagram</div>
             <div class="diagram-container" id="diagram8">
               <div class="loading">Loading...</div>
             </div>
           </div>
         </div>
       </div>
+      <script type="module">
+        import { Diagram, Edge } from "ts-diagrams";
+        import { Spark } from "ts-diagrams/onprem/analytics.js";
+        import { Server } from "ts-diagrams/onprem/compute.js";
+        import { PostgreSQL } from "ts-diagrams/onprem/database.js";
+        import { Redis } from "ts-diagrams/onprem/inmemory.js";
+        import { Fluentd } from "ts-diagrams/onprem/aggregator.js";
+        import { Grafana, Prometheus } from "ts-diagrams/onprem/monitoring.js";
+        import { Nginx } from "ts-diagrams/onprem/network.js";
+        import { Kafka } from "ts-diagrams/onprem/queue.js";
+
+        const diagram = new Diagram(
+          "Advanced Web Service with On-Premises (colored)",
+        );
+
+        const ingress = diagram.add(new Nginx("ingress"));
+
+        const metrics = diagram.add(new Prometheus("metric"));
+        const grafana = diagram.add(new Grafana("monitoring"));
+        grafana.to(new Edge({ color: "firebrick", style: "dashed" }), metrics);
+
+        const serviceCluster = diagram.cluster("Service Cluster");
+        const grpcsvc = [
+          serviceCluster.add(new Server("grpc1")),
+          serviceCluster.add(new Server("grpc2")),
+          serviceCluster.add(new Server("grpc3")),
+        ];
+
+        const sessionsCluster = diagram.cluster("Sessions HA");
+        const sessionPrimary = sessionsCluster.add(new Redis("session"));
+        const sessionReplica = sessionsCluster.add(new Redis("replica"));
+        sessionPrimary.with(
+          new Edge({ color: "brown", style: "dashed" }),
+          sessionReplica,
+        );
+        sessionReplica.from(new Edge({ label: "collect" }), metrics);
+        grpcsvc.forEach((svc) =>
+          svc.to(new Edge({ color: "brown" }), sessionPrimary),
+        );
+
+        const dbCluster = diagram.cluster("Database HA");
+        const dbPrimary = dbCluster.add(new PostgreSQL("users"));
+        const dbReplica = dbCluster.add(new PostgreSQL("replica"));
+        dbPrimary.with(
+          new Edge({ color: "brown", style: "dotted" }),
+          dbReplica,
+        );
+        dbReplica.from(new Edge({ label: "collect" }), metrics);
+        grpcsvc.forEach((svc) =>
+          svc.to(new Edge({ color: "black" }), dbPrimary),
+        );
+
+        const aggregator = diagram.add(new Fluentd("logging"));
+        const kafka = diagram.add(new Kafka("stream"));
+        const spark = diagram.add(new Spark("analytics"));
+        aggregator.to(new Edge({ label: "parse" }), kafka);
+        kafka.to(new Edge({ color: "black", style: "bold" }), spark);
+
+        grpcsvc.forEach((svc) => {
+          ingress
+            .to(new Edge({ color: "darkgreen", forward: true, reverse: true }))
+            .to(svc);
+        });
+        grpcsvc.forEach((svc) =>
+          svc.to(new Edge({ color: "darkorange" }), aggregator),
+        );
+
+        try {
+          const svg = await diagram.render();
+          document.getElementById("diagram8").innerHTML = svg;
+          diagram.destroy();
+        } catch (e) {
+          document.getElementById("diagram8").innerHTML =
+            '<div class="error">' + e.message + "</div>";
+        }
+      </script>
 
       <!-- Example 9: Custom Nodes with Remote Icons -->
       <div class="example">
         <h2>Example 9: Custom Nodes with Remote Icons</h2>
         <div class="example-content">
           <div class="code-section">
-            <div class="code-header">TypeScript Code</div>
-            <pre><code class="language-typescript">import { Diagram, Custom, Cluster } from "ts-diagrams";
+            <div class="code-header">Code</div>
+            <pre><code class="language-typescript">import { Diagram, Custom } from "ts-diagrams";
 
 const diagram = new Diagram("Custom with remote icons", {
   direction: "LR"
 });
 
-// Use remote icons from GitHub (PNG images)
 const diagrams = diagram.add(
   new Custom("Diagrams", "https://raw.githubusercontent.com/mingrammer/diagrams/master/assets/img/diagrams.png")
 );
@@ -594,428 +979,47 @@ diagrams.to(elastic);
 const svg = await diagram.render();</code></pre>
           </div>
           <div class="diagram-section">
-            <div class="diagram-header">Rendered Diagram</div>
+            <div class="diagram-header">Diagram</div>
             <div class="diagram-container" id="diagram9">
               <div class="loading">Loading...</div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+      <script type="module">
+        import { Diagram, Custom } from "ts-diagrams";
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-typescript.min.js"></script>
+        const diagram = new Diagram("Custom with remote icons", {
+          direction: "LR",
+        });
 
-    <script type="module">
-      import { Diagram, Custom, Edge } from "./dist/index.js";
-      import { EC2, ECS, EKS, Lambda } from "./dist/providers/aws/compute.js";
-      import {
-        RDS,
-        ElastiCache,
-        Redshift,
-      } from "./dist/providers/aws/database.js";
-      import { ALB, Route53 } from "./dist/providers/aws/network.js";
-      import { SQS } from "./dist/providers/aws/integration.js";
-      import { S3 } from "./dist/providers/aws/storage.js";
-      import {
-        PubSub,
-        BigQuery,
-        Dataflow,
-      } from "./dist/providers/gcp/analytics.js";
-      import { AppEngine, Functions } from "./dist/providers/gcp/compute.js";
-      import { BigTable } from "./dist/providers/gcp/database.js";
-      import { IotCore } from "./dist/providers/gcp/iot.js";
-      import { GCS } from "./dist/providers/gcp/storage.js";
-      import { HPA } from "./dist/providers/k8s/clusterconfig.js";
-      import {
-        Deployment,
-        Pod,
-        ReplicaSet,
-        StatefulSet,
-      } from "./dist/providers/k8s/compute.js";
-      import { Ingress, Service } from "./dist/providers/k8s/network.js";
-      import { PV, PVC, StorageClass } from "./dist/providers/k8s/storage.js";
-      import { Spark } from "./dist/providers/onprem/analytics.js";
-      import { Server } from "./dist/providers/onprem/compute.js";
-      import { PostgreSQL } from "./dist/providers/onprem/database.js";
-      import { Redis } from "./dist/providers/onprem/inmemory.js";
-      import { Fluentd } from "./dist/providers/onprem/aggregator.js";
-      import {
-        Grafana,
-        Prometheus,
-      } from "./dist/providers/onprem/monitoring.js";
-      import { Nginx } from "./dist/providers/onprem/network.js";
-      import { Kafka } from "./dist/providers/onprem/queue.js";
+        const diagrams = diagram.add(
+          new Custom(
+            "Diagrams",
+            "https://raw.githubusercontent.com/mingrammer/diagrams/master/assets/img/diagrams.png",
+          ),
+        );
 
-      async function renderDiagram1() {
+        const providersCluster = diagram.cluster("Some Providers");
+
+        const openstack = providersCluster.add(
+          new Custom(
+            "OpenStack",
+            "https://raw.githubusercontent.com/mingrammer/diagrams/master/resources/openstack/openstack.png",
+          ),
+        );
+
+        const elastic = providersCluster.add(
+          new Custom(
+            "Elastic",
+            "https://raw.githubusercontent.com/mingrammer/diagrams/master/resources/elastic/saas/elastic.png",
+          ),
+        );
+
+        diagrams.to(openstack);
+        diagrams.to(elastic);
+
         try {
-          const diagram = new Diagram("Grouped Workers", { direction: "TB" });
-          const lb = diagram.add(new ALB("lb"));
-          const workers = [
-            diagram.add(new EC2("worker1")),
-            diagram.add(new EC2("worker2")),
-            diagram.add(new EC2("worker3")),
-            diagram.add(new EC2("worker4")),
-            diagram.add(new EC2("worker5")),
-          ];
-          const events = diagram.add(new RDS("events"));
-          lb.to(workers);
-          workers.forEach((w) => w.to(events));
-          const svg = await diagram.render();
-          document.getElementById("diagram1").innerHTML = svg;
-          diagram.destroy();
-        } catch (e) {
-          document.getElementById("diagram1").innerHTML =
-            '<div class="error">' + e.message + "</div>";
-        }
-      }
-
-      async function renderDiagram2() {
-        try {
-          const diagram = new Diagram("Clustered Web Services");
-          const dns = diagram.add(new Route53("dns"));
-          const lb = diagram.add(new ALB("lb"));
-
-          const svcCluster = diagram.cluster("Services");
-          const svcGroup = [
-            svcCluster.add(new ECS("web1")),
-            svcCluster.add(new ECS("web2")),
-            svcCluster.add(new ECS("web3")),
-          ];
-          lb.to(svcGroup);
-
-          const dbCluster = diagram.cluster("DB Cluster");
-          const dbPrimary = dbCluster.add(new RDS("userdb"));
-          const dbReplica = dbCluster.add(new RDS("userdb ro"));
-          dbPrimary.with(dbReplica);
-          svcGroup.forEach((s) => s.to(dbPrimary));
-
-          const memcached = diagram.add(new ElastiCache("memcached"));
-          svcGroup.forEach((s) => s.to(memcached));
-
-          dns.to(lb);
-          const svg = await diagram.render();
-          document.getElementById("diagram2").innerHTML = svg;
-          diagram.destroy();
-        } catch (e) {
-          document.getElementById("diagram2").innerHTML =
-            '<div class="error">' + e.message + "</div>";
-        }
-      }
-
-      async function renderDiagram3() {
-        try {
-          const diagram = new Diagram("Event Processing");
-          const source = diagram.add(new EKS("k8s source"));
-          const store = diagram.add(new S3("events store"));
-          const dw = diagram.add(new Redshift("analytics"));
-
-          const flowsCluster = diagram.cluster("Event Flows");
-
-          const workersCluster = flowsCluster.cluster("Event Workers");
-          const workerNodes = [
-            workersCluster.add(new ECS("worker1")),
-            workersCluster.add(new ECS("worker2")),
-            workersCluster.add(new ECS("worker3")),
-          ];
-          source.to(workerNodes);
-
-          const queue = flowsCluster.add(new SQS("event queue"));
-          workerNodes.forEach((w) => w.to(queue));
-
-          const procCluster = flowsCluster.cluster("Processing");
-          const handlers = [
-            procCluster.add(new Lambda("proc1")),
-            procCluster.add(new Lambda("proc2")),
-            procCluster.add(new Lambda("proc3")),
-          ];
-          queue.to(handlers);
-          handlers.forEach((h) => {
-            h.to(store);
-            h.to(dw);
-          });
-
-          const svg = await diagram.render();
-          document.getElementById("diagram3").innerHTML = svg;
-          diagram.destroy();
-        } catch (e) {
-          document.getElementById("diagram3").innerHTML =
-            '<div class="error">' + e.message + "</div>";
-        }
-      }
-
-      async function renderDiagram4() {
-        try {
-          const diagram = new Diagram("Message Collecting");
-          const pubsub = diagram.add(new PubSub("pubsub"));
-
-          const sourceCluster = diagram.cluster("Source of Data");
-          const sources = [
-            sourceCluster.add(new IotCore("core1")),
-            sourceCluster.add(new IotCore("core2")),
-            sourceCluster.add(new IotCore("core3")),
-          ];
-          sources.forEach((s) => s.to(pubsub));
-
-          const targetsCluster = diagram.cluster("Targets");
-          const flowCluster = targetsCluster.cluster("Data Flow");
-          const dataflow = flowCluster.add(new Dataflow("data flow"));
-          pubsub.to(dataflow);
-
-          const lakeCluster = targetsCluster.cluster("Data Lake");
-          const bq = lakeCluster.add(new BigQuery("bq"));
-          const gcs = lakeCluster.add(new GCS("storage"));
-          dataflow.to([bq, gcs]);
-
-          const eventCluster = targetsCluster.cluster("Event Driven");
-
-          const procCluster = eventCluster.cluster("Processing");
-          const engine = procCluster.add(new AppEngine("engine"));
-          const bigtable = procCluster.add(new BigTable("bigtable"));
-          dataflow.to(engine).to(bigtable);
-
-          const serverlessCluster = eventCluster.cluster("Serverless");
-          const func = serverlessCluster.add(new Functions("func"));
-          const appengine = serverlessCluster.add(new AppEngine("appengine"));
-          dataflow.to(func).to(appengine);
-
-          const svg = await diagram.render();
-          document.getElementById("diagram4").innerHTML = svg;
-          diagram.destroy();
-        } catch (e) {
-          document.getElementById("diagram4").innerHTML =
-            '<div class="error">' + e.message + "</div>";
-        }
-      }
-
-      async function renderDiagram5() {
-        try {
-          const diagram = new Diagram("Exposed Pod with 3 Replicas");
-          const ingress = diagram.add(new Ingress("domain.com"));
-          const svc = diagram.add(new Service("svc"));
-          const pods = [
-            diagram.add(new Pod("pod1")),
-            diagram.add(new Pod("pod2")),
-            diagram.add(new Pod("pod3")),
-          ];
-          const rs = diagram.add(new ReplicaSet("rs"));
-          const dp = diagram.add(new Deployment("dp"));
-          const hpa = diagram.add(new HPA("hpa"));
-
-          ingress.to(svc);
-          svc.to(pods);
-          pods.forEach((p) => p.from(rs));
-          rs.from(dp);
-          dp.from(hpa);
-
-          const svg = await diagram.render();
-          document.getElementById("diagram5").innerHTML = svg;
-          diagram.destroy();
-        } catch (e) {
-          document.getElementById("diagram5").innerHTML =
-            '<div class="error">' + e.message + "</div>";
-        }
-      }
-
-      async function renderDiagram6() {
-        try {
-          const diagram = new Diagram("Stateful Architecture");
-          const appsCluster = diagram.cluster("Apps");
-          const svc = appsCluster.add(new Service("svc"));
-          const sts = appsCluster.add(new StatefulSet("sts"));
-          const pods = [];
-          const pvcs = [];
-          for (let i = 0; i < 3; i++) {
-            const pod = appsCluster.add(new Pod("pod"));
-            const pvc = appsCluster.add(new PVC("pvc"));
-
-            pod.with(sts).with(pvc);
-            svc.to(pod).to(pvc);
-
-            pods.push(pod);
-            pvcs.push(pvc);
-          }
-
-          const pv = diagram.add(new PV("pv"));
-          const sc = diagram.add(new StorageClass("sc"));
-
-          pvcs.forEach((pvc) => {
-            pvc.from(pv);
-          });
-          pv.from(sc);
-
-          const svg = await diagram.render();
-          document.getElementById("diagram6").innerHTML = svg;
-          diagram.destroy();
-        } catch (e) {
-          document.getElementById("diagram6").innerHTML =
-            '<div class="error">' + e.message + "</div>";
-        }
-      }
-
-      async function renderDiagram7() {
-        try {
-          const diagram = new Diagram("Advanced Web Service with On-Premises");
-
-          const ingress = diagram.add(new Nginx("ingress"));
-
-          const metrics = diagram.add(new Prometheus("metric"));
-          const grafana = diagram.add(new Grafana("monitoring"));
-          metrics.from(grafana);
-
-          const serviceCluster = diagram.cluster("Service Cluster");
-          const grpcsvc = [
-            serviceCluster.add(new Server("grpc1")),
-            serviceCluster.add(new Server("grpc2")),
-            serviceCluster.add(new Server("grpc3")),
-          ];
-
-          const sessionsCluster = diagram.cluster("Sessions HA");
-          const sessionPrimary = sessionsCluster.add(new Redis("session"));
-          const sessionReplica = sessionsCluster.add(new Redis("replica"));
-          sessionPrimary.with(sessionReplica);
-          sessionReplica.from(metrics);
-          grpcsvc.forEach((svc) => svc.to(sessionPrimary));
-
-          const dbCluster = diagram.cluster("Database HA");
-          const dbPrimary = dbCluster.add(new PostgreSQL("users"));
-          const dbReplica = dbCluster.add(new PostgreSQL("replica"));
-          dbPrimary.with(dbReplica);
-          dbReplica.from(metrics);
-          grpcsvc.forEach((svc) => svc.to(dbPrimary));
-
-          const aggregator = diagram.add(new Fluentd("logging"));
-          const kafka = diagram.add(new Kafka("stream"));
-          const spark = diagram.add(new Spark("analytics"));
-          aggregator.to(kafka).to(spark);
-
-          ingress.to(grpcsvc);
-          grpcsvc.forEach((svc) => svc.to(aggregator));
-
-          const svg = await diagram.render();
-          document.getElementById("diagram7").innerHTML = svg;
-          diagram.destroy();
-        } catch (e) {
-          document.getElementById("diagram7").innerHTML =
-            '<div class="error">' + e.message + "</div>";
-        }
-      }
-
-      async function renderDiagram8() {
-        try {
-          const diagram = new Diagram(
-            "Advanced Web Service with On-Premises (colored)",
-          );
-
-          const ingress = diagram.add(new Nginx("ingress"));
-
-          const metrics = diagram.add(new Prometheus("metric"));
-          const grafana = diagram.add(new Grafana("monitoring"));
-          // Grafana → metrics (metrics << Grafana in Python)
-          grafana.to(
-            new Edge({ color: "firebrick", style: "dashed" }),
-            metrics,
-          );
-
-          const serviceCluster = diagram.cluster("Service Cluster");
-          const grpcsvc = [
-            serviceCluster.add(new Server("grpc1")),
-            serviceCluster.add(new Server("grpc2")),
-            serviceCluster.add(new Server("grpc3")),
-          ];
-
-          const sessionsCluster = diagram.cluster("Sessions HA");
-          const sessionPrimary = sessionsCluster.add(new Redis("session"));
-          const sessionReplica = sessionsCluster.add(new Redis("replica"));
-          // Bidirectional: sessionPrimary - sessionReplica
-          sessionPrimary.with(
-            new Edge({ color: "brown", style: "dashed" }),
-            sessionReplica,
-          );
-          // metrics → sessionReplica (sessionReplica << metrics in Python)
-          sessionReplica.from(new Edge({ label: "collect" }), metrics);
-          // grpcsvc → sessionPrimary (grpcsvc >> sessionPrimary in Python)
-          grpcsvc.forEach((svc) =>
-            svc.to(new Edge({ color: "brown" }), sessionPrimary),
-          );
-
-          const dbCluster = diagram.cluster("Database HA");
-          const dbPrimary = dbCluster.add(new PostgreSQL("users"));
-          const dbReplica = dbCluster.add(new PostgreSQL("replica"));
-          // Bidirectional: dbPrimary - dbReplica
-          dbPrimary.with(
-            new Edge({ color: "brown", style: "dotted" }),
-            dbReplica,
-          );
-          // metrics → dbReplica (dbReplica << metrics in Python)
-          dbReplica.from(new Edge({ label: "collect" }), metrics);
-          // grpcsvc → dbPrimary (grpcsvc >> dbPrimary in Python)
-          grpcsvc.forEach((svc) =>
-            svc.to(new Edge({ color: "black" }), dbPrimary),
-          );
-
-          const aggregator = diagram.add(new Fluentd("logging"));
-          const kafka = diagram.add(new Kafka("stream"));
-          const spark = diagram.add(new Spark("analytics"));
-          // aggregator → kafka (aggregator >> kafka in Python)
-          aggregator.to(new Edge({ label: "parse" }), kafka);
-          // kafka → spark (kafka >> spark in Python)
-          kafka.to(new Edge({ color: "black", style: "bold" }), spark);
-
-          // Double-headed arrows: ingress ↔ grpcsvc (bidirectional with arrows on both ends)
-          grpcsvc.forEach((svc) => {
-            ingress
-              .to(
-                new Edge({ color: "darkgreen", forward: true, reverse: true }),
-              )
-              .to(svc);
-          });
-          // grpcsvc → aggregator (grpcsvc >> aggregator in Python)
-          grpcsvc.forEach((svc) =>
-            svc.to(new Edge({ color: "darkorange" }), aggregator),
-          );
-
-          const svg = await diagram.render();
-          document.getElementById("diagram8").innerHTML = svg;
-          diagram.destroy();
-        } catch (e) {
-          document.getElementById("diagram8").innerHTML =
-            '<div class="error">' + e.message + "</div>";
-        }
-      }
-
-      async function renderDiagram9() {
-        try {
-          const diagram = new Diagram("Custom with remote icons", {
-            direction: "LR",
-          });
-
-          const diagrams = diagram.add(
-            new Custom(
-              "Diagrams",
-              "https://raw.githubusercontent.com/mingrammer/diagrams/master/assets/img/diagrams.png",
-            ),
-          );
-
-          const providersCluster = diagram.cluster("Some Providers");
-
-          const openstack = providersCluster.add(
-            new Custom(
-              "OpenStack",
-              "https://raw.githubusercontent.com/mingrammer/diagrams/master/resources/openstack/openstack.png",
-            ),
-          );
-
-          const elastic = providersCluster.add(
-            new Custom(
-              "Elastic",
-              "https://raw.githubusercontent.com/mingrammer/diagrams/master/resources/elastic/saas/elastic.png",
-            ),
-          );
-
-          diagrams.to(openstack);
-          diagrams.to(elastic);
-
           const svg = await diagram.render();
           document.getElementById("diagram9").innerHTML = svg;
           diagram.destroy();
@@ -1023,17 +1027,7 @@ const svg = await diagram.render();</code></pre>
           document.getElementById("diagram9").innerHTML =
             '<div class="error">' + e.message + "</div>";
         }
-      }
-
-      renderDiagram1();
-      renderDiagram2();
-      renderDiagram3();
-      renderDiagram4();
-      renderDiagram5();
-      renderDiagram6();
-      renderDiagram7();
-      renderDiagram8();
-      renderDiagram9();
-    </script>
+      </script>
+    </div>
   </body>
 </html>
