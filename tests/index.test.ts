@@ -293,6 +293,46 @@ describe("Image Rendering", () => {
 
     diagram.destroy();
   });
+
+  it("should render to JPG in Node.js", async () => {
+    const diagram = new Diagram("JPG Test", {
+      direction: "TB",
+    });
+    const node1 = diagram.add(new Node("Node 1"));
+    const node2 = diagram.add(new Node("Node 2"));
+    node1.to(node2);
+
+    const result = await diagram.render({ format: "jpg" });
+    expect(result instanceof Uint8Array).toBe(true);
+    expect(result.length).toBeGreaterThan(0);
+
+    // Check JPG magic bytes (JPEG starts with 0xFF 0xD8)
+    expect(result[0]).toBe(0xff);
+    expect(result[1]).toBe(0xd8);
+    diagram.destroy();
+  });
+
+  it("should render JPG with icons", async () => {
+    const diagram = new Diagram("Icon JPG Test", {
+      direction: "TB",
+    });
+
+    const server = diagram.add(new Node("Server"));
+
+    // Manually track node with icon data
+    const testIconData =
+      "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==";
+    diagram.trackNodeWithIcon(server, testIconData);
+
+    const result = await diagram.render({ format: "jpg" });
+    expect(result instanceof Uint8Array).toBe(true);
+    expect(result.length).toBeGreaterThan(0);
+
+    // Verify JPG magic bytes (JPEG starts with 0xFF 0xD8)
+    expect(result[0]).toBe(0xff);
+    expect(result[1]).toBe(0xd8);
+    diagram.destroy();
+  });
 });
 
 describe("Custom Nodes", () => {

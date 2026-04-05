@@ -377,6 +377,11 @@ export class Diagram {
       output = await this._svgToPng(output as string, options);
     }
 
+    // If JPG format was requested, convert SVG to JPG
+    if (format === "jpg") {
+      output = await this._svgToJpg(output as string, options);
+    }
+
     return output;
   }
 
@@ -540,6 +545,163 @@ export class Diagram {
     } catch (error) {
       throw new Error(
         `Failed to convert SVG to PNG. Make sure 'sharp' is installed: npm install sharp. Error: ${error instanceof Error ? error.message : String(error)}`,
+      );
+    }
+  }
+
+  /**
+   * Convert SVG string to JPG binary data
+   * Uses Canvas API in browser, sharp in Node.js
+   * @param svgString - The SVG string to convert
+   * @param options - Optional render options for dimensions and scale
+   * @returns Promise resolving to JPG data as Uint8Array
+   */
+  private async _svgToJpg(svgString: string, options: RenderOptions = {}): Promise<Uint8Array> {
+    if (this._isBrowser()) {
+      return this._svgToJpgBrowser(svgString, options);
+    } else {
+      return this._svgToJpgNode(svgString, options);
+    }
+  }
+
+  /**
+   * Convert SVG to JPG using Canvas API (browser only)
+   */
+  private async _svgToJpgBrowser(
+    svgString: string,
+    options: RenderOptions = {},
+  ): Promise<Uint8Array> {
+    return new Promise((resolve, reject) => {
+      const img = new Image();
+      const svgBlob = new Blob([svgString], {
+        type: "image/svg+xml;charset=utf-8",
+      });
+      const url = URL.createObjectURL(svgBlob);
+
+      img.onload = () => {
+        // Parse SVG dimensions
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(svgString, "image/svg+xml");
+        const svgElement = doc.querySelector("svg");
+
+        let width = 800;
+        let height = 600;
+
+        if (svgElement) {
+          const widthAttr = svgElement.getAttribute("width");
+          const heightAttr = svgElement.getAttribute("height");
+          const viewBox = svgElement.getAttribute("viewBox");
+
+          if (widthAttr && heightAttr) {
+            width = parseFloat(widthAttr.replace("pt", ""));
+            height = parseFloat(heightAttr.replace("pt", ""));
+          } else if (viewBox) {
+            const parts = viewBox.split(/\s+|,/);
+            if (parts.length === 4) {
+              width = parseFloat(parts[2]);
+              height = parseFloat(parts[3]);
+            }
+          }
+        }
+
+        // Apply user-specified dimensions or scale
+        const scale = options.scale ?? 2;
+        if (options.width) width = options.width;
+        if (options.height) height = options.height;
+
+        // Create canvas at scaled resolution
+        const canvas = document.createElement("canvas");
+        canvas.width = width * scale;
+        canvas.height = height * scale;
+
+        const ctx = canvas.getContext("2d");
+        if (!ctx) {
+          URL.revokeObjectURL(url);
+          reject(new Error("Failed to get canvas context"));
+          return;
+        }
+
+        // Fill white background (important for JPG which doesn't support transparency)
+        ctx.fillStyle = "white";
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+        // Draw SVG at specified scale
+        ctx.scale(scale, scale);
+        ctx.drawImage(img, 0, 0, width, height);
+
+        // Convert to blob with JPEG format
+        canvas.toBlob(
+          (blob) => {
+            URL.revokeObjectURL(url);
+            if (blob) {
+              // Convert blob to Uint8Array
+              const reader = new FileReader();
+              reader.onloadend = () => {
+                resolve(new Uint8Array(reader.result as ArrayBuffer));
+              };
+              reader.onerror = reject;
+              reader.readAsArrayBuffer(blob);
+            } else {
+              reject(new Error("Failed to create JPG blob"));
+            }
+          },
+          "image/jpeg",
+          0.95,
+        );
+      };
+
+      img.onerror = () => {
+        URL.revokeObjectURL(url);
+        reject(new Error("Failed to load SVG for conversion"));
+      };
+
+      img.src = url;
+    });
+  }
+
+  /**
+   * Convert SVG to JPG using sharp (Node.js only)
+   */
+  private async _svgToJpgNode(svgString: string, options: RenderOptions = {}): Promise<Uint8Array> {
+    try {
+      // Dynamic import to avoid bundling sharp in browser builds
+      const sharp = await import("sharp");
+
+      // Parse SVG to get dimensions for scaling
+      const widthMatch = svgString.match(/width="([\d.]+)pt"/);
+      const heightMatch = svgString.match(/height="([\d.]+)pt"/);
+      const viewBoxMatch = svgString.match(/viewBox="[^"]+"/);
+
+      let width = 800;
+      let height = 600;
+
+      if (widthMatch && heightMatch) {
+        width = parseFloat(widthMatch[1]);
+        height = parseFloat(heightMatch[1]);
+      } else if (viewBoxMatch) {
+        const parts = viewBoxMatch[0].split(/\s+|,/);
+        if (parts.length >= 4) {
+          width = parseFloat(parts[2]);
+          height = parseFloat(parts[3]);
+        }
+      }
+
+      // Apply user-specified dimensions or scale
+      const scale = options.scale ?? 2;
+      if (options.width) width = options.width;
+      if (options.height) height = options.height;
+
+      // Convert SVG to JPG at specified resolution
+      const jpgBuffer = await sharp
+        .default(Buffer.from(svgString))
+        .resize(width * scale, height * scale)
+        .jpeg({ quality: 95 })
+        .toBuffer();
+
+      return new Uint8Array(jpgBuffer);
+    } catch (error) {
+      throw new Error(
+        `Failed to convert SVG to JPG. Make sure 'sharp' is installed: npm install sharp. Error: ${error instanceof Error ? error.message : String(error)}`,
       );
     }
   }
