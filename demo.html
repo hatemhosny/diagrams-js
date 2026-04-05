@@ -25,8 +25,7 @@
         box-sizing: border-box;
       }
       body {
-        font-family:
-          -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
         background: #f5f5f5;
         min-height: 100vh;
         padding: 40px 20px;
@@ -463,11 +462,7 @@ const svg = await diagram.render();</code></pre>
       </div>
       <script type="module">
         import { Diagram } from "ts-diagrams";
-        import {
-          BigQuery,
-          Dataflow,
-          PubSub,
-        } from "ts-diagrams/gcp/analytics.js";
+        import { BigQuery, Dataflow, PubSub } from "ts-diagrams/gcp/analytics.js";
         import { AppEngine, Functions } from "ts-diagrams/gcp/compute.js";
         import { BigTable } from "ts-diagrams/gcp/database.js";
         import { IotCore } from "ts-diagrams/gcp/iot.js";
@@ -560,11 +555,7 @@ const svg = await diagram.render();</code></pre>
       <script type="module">
         import { Diagram } from "ts-diagrams";
         import { HPA } from "ts-diagrams/k8s/clusterconfig.js";
-        import {
-          Deployment,
-          Pod,
-          ReplicaSet,
-        } from "ts-diagrams/k8s/compute.js";
+        import { Deployment, Pod, ReplicaSet } from "ts-diagrams/k8s/compute.js";
         import { Ingress, Service } from "ts-diagrams/k8s/network.js";
 
         const diagram = new Diagram("Exposed Pod with 3 Replicas");
@@ -881,9 +872,7 @@ const svg = await diagram.render();</code></pre>
         import { Nginx } from "ts-diagrams/onprem/network.js";
         import { Kafka } from "ts-diagrams/onprem/queue.js";
 
-        const diagram = new Diagram(
-          "Advanced Web Service with On-Premises (colored)",
-        );
+        const diagram = new Diagram("Advanced Web Service with On-Premises (colored)");
 
         const ingress = diagram.add(new Nginx("ingress"));
 
@@ -901,26 +890,16 @@ const svg = await diagram.render();</code></pre>
         const sessionsCluster = diagram.cluster("Sessions HA");
         const sessionPrimary = sessionsCluster.add(new Redis("session"));
         const sessionReplica = sessionsCluster.add(new Redis("replica"));
-        sessionPrimary.with(
-          new Edge({ color: "brown", style: "dashed" }),
-          sessionReplica,
-        );
+        sessionPrimary.with(new Edge({ color: "brown", style: "dashed" }), sessionReplica);
         sessionReplica.from(new Edge({ label: "collect" }), metrics);
-        grpcsvc.forEach((svc) =>
-          svc.to(new Edge({ color: "brown" }), sessionPrimary),
-        );
+        grpcsvc.forEach((svc) => svc.to(new Edge({ color: "brown" }), sessionPrimary));
 
         const dbCluster = diagram.cluster("Database HA");
         const dbPrimary = dbCluster.add(new PostgreSQL("users"));
         const dbReplica = dbCluster.add(new PostgreSQL("replica"));
-        dbPrimary.with(
-          new Edge({ color: "brown", style: "dotted" }),
-          dbReplica,
-        );
+        dbPrimary.with(new Edge({ color: "brown", style: "dotted" }), dbReplica);
         dbReplica.from(new Edge({ label: "collect" }), metrics);
-        grpcsvc.forEach((svc) =>
-          svc.to(new Edge({ color: "black" }), dbPrimary),
-        );
+        grpcsvc.forEach((svc) => svc.to(new Edge({ color: "black" }), dbPrimary));
 
         const aggregator = diagram.add(new Fluentd("logging"));
         const kafka = diagram.add(new Kafka("stream"));
@@ -929,13 +908,9 @@ const svg = await diagram.render();</code></pre>
         kafka.to(new Edge({ color: "black", style: "bold" }), spark);
 
         grpcsvc.forEach((svc) => {
-          ingress
-            .to(new Edge({ color: "darkgreen", forward: true, reverse: true }))
-            .to(svc);
+          ingress.to(new Edge({ color: "darkgreen", forward: true, reverse: true })).to(svc);
         });
-        grpcsvc.forEach((svc) =>
-          svc.to(new Edge({ color: "darkorange" }), aggregator),
-        );
+        grpcsvc.forEach((svc) => svc.to(new Edge({ color: "darkorange" }), aggregator));
 
         try {
           const svg = await diagram.render();

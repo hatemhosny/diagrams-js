@@ -31,8 +31,6 @@ function getProviders() {
  * Build a single provider directory
  */
 async function buildProvider(provider) {
-  console.log(`Building ${provider}...`);
-
   const srcDir = path.join(SRC_PROVIDERS_DIR, provider);
   const destDir = path.join(DIST_PROVIDERS_DIR, provider);
 
@@ -94,21 +92,16 @@ async function buildProvider(provider) {
       );
 
       fs.writeFileSync(outFile, content);
-      console.log(`  ✓ Built ${file}`);
     } catch (err) {
       console.error(`  ✗ Failed to build ${file}: ${err.message}`);
     }
   }
-
-  console.log(`  ✓ ${provider} built\n`);
 }
 
 /**
  * Build providers index
  */
 async function buildProvidersIndex() {
-  console.log("Building providers index...");
-
   const entry = path.join(SRC_PROVIDERS_DIR, "index.ts");
   if (!fs.existsSync(entry)) {
     console.log("  No index.ts found");
@@ -124,22 +117,18 @@ async function buildProvidersIndex() {
       target: "es2022",
       outdir: DIST_PROVIDERS_DIR,
     });
-    console.log("  ✓ providers/index.js built\n");
   } catch (err) {
     console.error(`  ✗ Failed to build index: ${err.message}\n`);
   }
 }
 
 async function buildTypes() {
-  console.log("Building types...");
-
   try {
     execSync("npx tsgo");
     await fs.promises.cp(path.join("temp", "providers"), path.join("dist", "providers"), {
       recursive: true,
     });
     await fs.promises.rm("temp", { recursive: true });
-    console.log("  ✓ types built\n");
   } catch (err) {
     console.error(`  ✗ Failed to build types: ${err.message}\n`);
   }
@@ -149,8 +138,6 @@ async function buildTypes() {
  * Update package.json exports
  */
 function updatePackageExports() {
-  console.log("Updating package.json exports...\n");
-
   const packageJsonPath = path.join(ROOT_DIR, "package.json");
   const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, "utf-8"));
 
@@ -200,8 +187,6 @@ function updatePackageExports() {
  * Main build function
  */
 async function main() {
-  console.log("Building providers...\n");
-
   // Ensure dist/providers directory exists
   if (!fs.existsSync(DIST_PROVIDERS_DIR)) {
     fs.mkdirSync(DIST_PROVIDERS_DIR, { recursive: true });
