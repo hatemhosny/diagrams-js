@@ -107,6 +107,14 @@ const config: Config = {
               label: "GitHub",
               href: "https://github.com/hatemhosny/diagrams-js",
             },
+            {
+              label: "𝕏 / Twitter",
+              href: "https://x.com/hatem_hosny_",
+            },
+            {
+              label: "Credits",
+              to: "/docs/credits",
+            },
           ],
         },
         {
@@ -117,8 +125,8 @@ const config: Config = {
               to: "/playground",
             },
             {
-              label: "Python diagrams",
-              href: "https://diagrams.mingrammer.com",
+              label: "Sponsor 💚",
+              href: "https://github.com/sponsors/hatemhosny",
             },
           ],
         },
