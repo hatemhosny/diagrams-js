@@ -68,22 +68,36 @@ export function Node(label = "", options: NodeOptions = {}): Node {
     _iconDataUrl = iconDataUrl;
   }
 
-  // Merge additional attributes
+  // Track if user explicitly set shape (to preserve their choice for icon nodes)
+  const userExplicitShape = options.shape !== undefined;
+
+  // Only set shape at node level when necessary:
+  // 1. User explicitly set a shape (always respect it)
+  // 2. Node has icon via options and user didn't set shape (set to "none")
+  // Otherwise, inherit from global default (which is "box")
+  if (userExplicitShape) {
+    _attrs.shape = String(options.shape);
+  } else if (_iconDataUrl) {
+    _attrs.shape = "none";
+  }
+
+  // Merge additional attributes (excluding shape which we handled above)
   for (const [key, value] of Object.entries(options)) {
-    if (key !== "nodeId" && key !== "_iconDataUrl") {
+    if (key !== "nodeId" && key !== "_iconDataUrl" && key !== "shape") {
       _attrs[key] = String(value);
     }
   }
 
-  // If node has an icon, set the attributes for icon display
-  // This must happen AFTER merging options so it takes precedence
+  // If node has an icon via options, set the icon-related attributes
+  // Provider nodes (where _iconDataUrl is set after construction) will be handled in _register
   if (_iconDataUrl) {
     Object.assign(_attrs, {
-      shape: "none",
       height: "1.0",
       width: "1.0",
       fixedsize: "true",
       margin: "0,0",
+      labelloc: "b",
+      imagescale: "true",
     });
   }
 
@@ -120,10 +134,8 @@ export function Node(label = "", options: NodeOptions = {}): Node {
       if (isCluster(parent)) {
         _cluster = parent;
         _diagram = parent.diagram;
-        parent.node(_id, label, _attrs);
       } else {
         _diagram = parent;
-        parent.node(_id, label, _attrs);
       }
 
       // Handle autolabel
@@ -138,11 +150,32 @@ export function Node(label = "", options: NodeOptions = {}): Node {
         }
       }
 
-      // Track this node if it has an icon data URL (for auto-icon injection)
-      // Check the getter to get the current value (may have been set by provider after creation)
+      // Check if icon was set after construction (by provider functions)
+      // and update shape/icon attributes accordingly
       const currentIconDataUrl = node._iconDataUrl;
-      if (currentIconDataUrl && _diagram) {
+      if (currentIconDataUrl) {
+        // If user didn't explicitly set shape, change to "none" for icon nodes
+        if (!userExplicitShape) {
+          _attrs.shape = "none";
+        }
+        // Set icon-related attributes
+        Object.assign(_attrs, {
+          height: "1.0",
+          width: "1.0",
+          fixedsize: "true",
+          margin: "0,0",
+          labelloc: "b",
+          imagescale: "true",
+        });
+        // Track this node for icon injection
         _diagram.trackNodeWithIcon(node, currentIconDataUrl);
+      }
+
+      // Register the node with the parent (diagram or cluster)
+      if (isCluster(parent)) {
+        parent.node(_id, label, _attrs);
+      } else {
+        parent.node(_id, label, _attrs);
       }
 
       // Handle Custom nodes with external icons

@@ -5,12 +5,7 @@
 
 import { Custom, Diagram, Edge, Node } from "../dist/index.js";
 import { EC2, Lambda, ECS, EKS } from "../dist/providers/aws/compute.js";
-import {
-  Aurora,
-  RDS,
-  Elasticache,
-  Redshift,
-} from "../dist/providers/aws/database.js";
+import { Aurora, RDS, Elasticache, Redshift } from "../dist/providers/aws/database.js";
 import { ALB, ELB, Route53 } from "../dist/providers/aws/network.js";
 import { S3 } from "../dist/providers/aws/storage.js";
 import { SQS } from "../dist/providers/aws/integration.js";
@@ -19,12 +14,7 @@ import { AppEngine, Functions } from "../dist/providers/gcp/compute.js";
 import { Bigtable } from "../dist/providers/gcp/database.js";
 import { IotCore } from "../dist/providers/gcp/iot.js";
 import { Storage } from "../dist/providers/gcp/storage.js";
-import {
-  Pod,
-  Deployment,
-  StatefulSet,
-  ReplicaSet,
-} from "../dist/providers/k8s/compute.js";
+import { Pod, Deployment, StatefulSet, ReplicaSet } from "../dist/providers/k8s/compute.js";
 import { Service, Ingress } from "../dist/providers/k8s/network.js";
 import { PV, PVC, StorageClass } from "../dist/providers/k8s/storage.js";
 import { HPA } from "../dist/providers/k8s/clusterconfig.js";
@@ -100,10 +90,7 @@ async function generateExample2() {
   dns.to(lb);
 
   const svg = await diagram.render();
-  fs.writeFileSync(
-    path.join(OUTPUT_DIR, "example2-clustered-web-services.svg"),
-    svg,
-  );
+  fs.writeFileSync(path.join(OUTPUT_DIR, "example2-clustered-web-services.svg"), svg);
   diagram.destroy();
   console.log("  ✓ Generated");
 }
@@ -184,10 +171,7 @@ async function generateExample4() {
   dataflow.to(func).to(appengine);
 
   const svg = await diagram.render();
-  fs.writeFileSync(
-    path.join(OUTPUT_DIR, "example4-message-collecting.svg"),
-    svg,
-  );
+  fs.writeFileSync(path.join(OUTPUT_DIR, "example4-message-collecting.svg"), svg);
   diagram.destroy();
   console.log("  ✓ Generated");
 }
@@ -198,11 +182,7 @@ async function generateExample5() {
 
   const ingress = diagram.add(Ingress("domain.com"));
   const svc = diagram.add(Service("svc"));
-  const pods = [
-    diagram.add(Pod("pod1")),
-    diagram.add(Pod("pod2")),
-    diagram.add(Pod("pod3")),
-  ];
+  const pods = [diagram.add(Pod("pod1")), diagram.add(Pod("pod2")), diagram.add(Pod("pod3"))];
   const rs = diagram.add(ReplicaSet("rs"));
   const dp = diagram.add(Deployment("dp"));
   const hpa = diagram.add(HPA("hpa"));
@@ -317,10 +297,7 @@ async function generateExample8() {
   const sessionsCluster = diagram.cluster("Sessions HA");
   const sessionPrimary = sessionsCluster.add(Redis("session"));
   const sessionReplica = sessionsCluster.add(Redis("replica"));
-  sessionPrimary.with(
-    Edge({ color: "brown", style: "dashed" }),
-    sessionReplica,
-  );
+  sessionPrimary.with(Edge({ color: "brown", style: "dashed" }), sessionReplica);
   sessionReplica.from(Edge({ label: "collect" }), metrics);
   grpcsvc.forEach((svc) => svc.to(Edge({ color: "brown" }), sessionPrimary));
 
@@ -338,17 +315,12 @@ async function generateExample8() {
   kafka.to(Edge({ color: "black", style: "bold" }), spark);
 
   grpcsvc.forEach((svc) => {
-    ingress
-      .to(Edge({ color: "darkgreen", forward: true, reverse: true }))
-      .to(svc);
+    ingress.to(Edge({ color: "darkgreen", forward: true, reverse: true })).to(svc);
   });
   grpcsvc.forEach((svc) => svc.to(Edge({ color: "darkorange" }), aggregator));
 
   const svg = await diagram.render();
-  fs.writeFileSync(
-    path.join(OUTPUT_DIR, "example8-onprem-advanced-colors.svg"),
-    svg,
-  );
+  fs.writeFileSync(path.join(OUTPUT_DIR, "example8-onprem-advanced-colors.svg"), svg);
   diagram.destroy();
   console.log("  ✓ Generated");
 }
@@ -365,10 +337,7 @@ async function generateExample9() {
   ];
 
   const queue = diagram.add(
-    Custom(
-      "Message queue",
-      "https://jpadilla.github.io/rabbitmqapp/assets/img/icon.png",
-    ),
+    Custom("Message queue", "https://jpadilla.github.io/rabbitmqapp/assets/img/icon.png"),
   );
 
   const database = diagram.add(Aurora("Database"));

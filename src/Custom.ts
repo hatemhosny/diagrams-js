@@ -37,6 +37,8 @@ export function Custom(
     width: "1.0",
     fixedsize: "true",
     margin: "0,0",
+    labelloc: "b",
+    imagescale: "true",
     // If it's a data URL, set it as _iconDataUrl so Node._register tracks it
     ...(isDataUrl ? { _iconDataUrl: iconUrl } : {}),
   });

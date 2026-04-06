@@ -26,13 +26,8 @@ const defaultGraphAttrs: Record<string, string> = {
 };
 
 const defaultNodeAttrs: Record<string, string> = {
-  shape: "none",
+  shape: "box",
   style: "rounded",
-  fixedsize: "true",
-  width: "1.4",
-  height: "1.4",
-  labelloc: "b",
-  imagescale: "true",
   fontname: "Sans-Serif",
   fontsize: "10",
 };
