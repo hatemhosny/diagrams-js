@@ -66,35 +66,10 @@ export interface EdgeOptions {
 
 export interface NodeOptions {
   nodeId?: string;
+  _type?: string;
+  _iconDataUrl?: string;
   [key: string]: unknown;
 }
 
-// Forward declarations - these match the factory function return types
-export interface Node {
-  nodeId: string;
-  label: string;
-  to(target: Node): Node;
-  to(targets: Node[]): Node[];
-  to(edge: Edge, target: Node): Node;
-  to(edge: Edge, target: Node[]): Node[];
-  to(edge: Edge): Edge;
-  from(source: Node): Node;
-  from(sources: Node[]): Node;
-  from(edge: Edge, source: Node): Node;
-  from(edge: Edge, sources: Node[]): Node;
-  with(target: Node): Node;
-  with(targets: Node[]): Node[];
-  with(edge: Edge, target: Node): Node;
-  with(edge: Edge, target: Node[]): Node[];
-}
-
-export interface Edge {
-  node?: Node;
-  forward: boolean;
-  reverse: boolean;
-  attrs: Record<string, string>;
-  to(target: Node): Node;
-  to(target: Edge): Edge;
-  from(target: Node): Node;
-  from(target: Edge): Edge;
-}
+// Note: Node and Edge types are defined in their respective modules
+// Import them from "./Node.js" and "./Edge.js"

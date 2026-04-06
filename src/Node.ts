@@ -128,9 +128,9 @@ export function Node(label = "", options: NodeOptions = {}): Node {
 
       // Handle autolabel
       if (_diagram && _diagram.autolabel) {
-        // Get the constructor name from the node's creation context
-        // For factory functions, we use the label prefix from options or default to "Node"
-        const prefix = (options as { _type?: string })._type ?? "Node";
+        // Get the node type from options for autolabel prefix
+        // Provider factory functions set _type to the service name (e.g., "EC2", "S3")
+        const prefix = options._type ?? "Node";
         if (label) {
           node.label = prefix + "\n" + label;
         } else {
