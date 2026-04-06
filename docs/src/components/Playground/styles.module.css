@@ -53,15 +53,38 @@
   font-size: 0.9rem;
   font-weight: 600;
   color: white;
-  background: var(--ifm-color-primary);
+  background: #495057;
   border: none;
   border-radius: 6px;
   cursor: pointer;
   transition: background 0.2s ease;
+  min-width: 100px;
 }
 
 .button:hover {
-  background: var(--ifm-color-primary-darker);
+  background: #343a40;
+}
+
+[data-theme="dark"] .button {
+  background: #adb5bd;
+  color: #212529;
+}
+
+[data-theme="dark"] .button:hover {
+  background: #ced4da;
+}
+
+.buttonCopied {
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: white;
+  background: var(--ifm-color-primary);
+  border: none;
+  border-radius: 6px;
+  cursor: default;
+  transition: background 0.2s ease;
+  min-width: 100px;
 }
 
 .buttonSecondary {
