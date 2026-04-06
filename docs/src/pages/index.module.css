@@ -1,23 +1,251 @@
-/**
- * CSS files with the .module.css suffix will be treated as CSS modules
- * and scoped locally.
- */
-
 .heroBanner {
   padding: 4rem 0;
-  text-align: center;
+  text-align: left;
+  background: linear-gradient(
+    135deg,
+    var(--ifm-color-primary-lightest) 0%,
+    var(--ifm-color-primary-light) 100%
+  );
   position: relative;
   overflow: hidden;
 }
 
-@media screen and (max-width: 996px) {
-  .heroBanner {
-    padding: 2rem;
-  }
+[data-theme="dark"] .heroBanner {
+  background: linear-gradient(
+    135deg,
+    var(--ifm-color-primary-darkest) 0%,
+    var(--ifm-color-primary-dark) 100%
+  );
+}
+
+.heroTitle {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  color: var(--ifm-color-primary-contrast);
+}
+
+.heroSubtitle {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: var(--ifm-color-primary-contrast);
+  opacity: 0.95;
+}
+
+.heroDescription {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  color: var(--ifm-color-primary-contrast);
+  opacity: 0.9;
+}
+
+.heroDescription a {
+  color: var(--ifm-color-primary-contrast);
+  text-decoration: underline;
+  font-weight: 600;
 }
 
 .buttons {
   display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.diagramPreview {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  display: flex;
   align-items: center;
   justify-content: center;
+  min-height: 300px;
+}
+
+[data-theme="dark"] .diagramPreview {
+  background: var(--ifm-background-surface-color);
+}
+
+.diagramImage {
+  max-width: 100%;
+  max-height: 65vh;
+  border-radius: 6px;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.1));
+}
+
+/* Features Section */
+.featuresSection {
+  padding: 4rem 0;
+  background: var(--ifm-background-color);
+}
+
+.sectionTitle {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  color: var(--ifm-color-content);
+}
+
+.featureCard {
+  padding: 2rem;
+  background: var(--ifm-background-surface-color);
+  border-radius: 12px;
+  border: 1px solid var(--ifm-color-emphasis-200);
+  height: 100%;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.featureCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.featureTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: var(--ifm-color-content);
+}
+
+.featureDescription {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--ifm-color-content-secondary);
+  margin: 0;
+}
+
+/* Code Section */
+.codeSection {
+  padding: 4rem 0;
+  background: var(--ifm-background-surface-color);
+}
+
+.sectionDescription {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--ifm-color-content-secondary);
+  margin-bottom: 1.5rem;
+}
+
+.benefitsList {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem 0;
+}
+
+.benefitsList li {
+  padding: 0.5rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+  font-size: 1rem;
+  color: var(--ifm-color-content);
+}
+
+.benefitsList li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--ifm-color-primary);
+  font-weight: bold;
+}
+
+/* CTA Section */
+.ctaSection {
+  padding: 5rem 0;
+  background: linear-gradient(
+    135deg,
+    var(--ifm-color-primary) 0%,
+    var(--ifm-color-primary-dark) 100%
+  );
+  text-align: center;
+}
+
+.ctaContent {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.ctaTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.ctaDescription {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.ctaButtons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.ctaButtons .button--secondary {
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--ifm-color-primary);
+}
+
+.ctaButtons .button--secondary:hover {
+  background: white;
+}
+
+/* Responsive */
+@media (max-width: 996px) {
+  .heroBanner {
+    padding: 3rem 0;
+    text-align: center;
+  }
+
+  .heroTitle {
+    font-size: 2.5rem;
+  }
+
+  .heroSubtitle {
+    font-size: 1.5rem;
+  }
+
+  .diagramPreview {
+    margin-top: 2rem;
+    min-height: 250px;
+  }
+
+  .buttons {
+    justify-content: center;
+  }
+
+  .sectionTitle {
+    font-size: 2rem;
+  }
+
+  .ctaTitle {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .heroTitle {
+    font-size: 2rem;
+  }
+
+  .heroSubtitle {
+    font-size: 1.25rem;
+  }
+
+  .featureCard {
+    padding: 1.5rem;
+  }
+
+  .codeBlock {
+    margin-top: 2rem;
+  }
 }

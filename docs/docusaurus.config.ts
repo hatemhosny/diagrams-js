@@ -6,7 +6,7 @@ import type * as Preset from "@docusaurus/preset-classic";
 
 const config: Config = {
   title: "diagrams-js",
-  tagline: "Dinosaurs are cool",
+  tagline: "Draw cloud system architecture diagrams as code in TypeScript",
   favicon: "img/favicon.ico",
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -46,21 +46,7 @@ const config: Config = {
           editUrl:
             "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
         },
-        blog: {
-          showReadingTime: true,
-          feedOptions: {
-            type: ["rss", "atom"],
-            xslt: true,
-          },
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
-          // Useful options to enforce blogging best practices
-          onInlineTags: "warn",
-          onInlineAuthors: "warn",
-          onUntruncatedBlogPosts: "warn",
-        },
+        blog: false,
         theme: {
           customCss: "./src/css/custom.css",
         },
@@ -96,14 +82,21 @@ const config: Config = {
       ],
     },
     footer: {
-      style: "dark",
       links: [
         {
           title: "Docs",
           items: [
             {
-              label: "Tutorial",
-              to: "/docs/intro",
+              label: "Getting Started",
+              to: "/docs/getting-started/quickstart",
+            },
+            {
+              label: "Examples",
+              to: "/docs/getting-started/examples",
+            },
+            {
+              label: "API Reference",
+              to: "/docs/guides/diagram",
             },
           ],
         },
@@ -111,16 +104,8 @@ const config: Config = {
           title: "Community",
           items: [
             {
-              label: "Stack Overflow",
-              href: "https://stackoverflow.com/questions/tagged/docusaurus",
-            },
-            {
-              label: "Discord",
-              href: "https://discordapp.com/invite/docusaurus",
-            },
-            {
-              label: "X",
-              href: "https://x.com/docusaurus",
+              label: "GitHub",
+              href: "https://github.com/hatemhosny/diagrams-js",
             },
           ],
         },
@@ -128,17 +113,17 @@ const config: Config = {
           title: "More",
           items: [
             {
-              label: "Blog",
-              to: "/blog",
+              label: "Playground",
+              to: "/playground",
             },
             {
-              label: "GitHub",
-              href: "https://github.com/facebook/docusaurus",
+              label: "Python diagrams",
+              href: "https://diagrams.mingrammer.com",
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Hatem Hosny. MIT License.`,
     },
     prism: {
       theme: prismThemes.github,
@@ -146,6 +131,8 @@ const config: Config = {
       additionalLanguages: ["bash"],
     },
   } satisfies Preset.ThemeConfig,
+  stylesheets: [],
+  scripts: [],
 };
 
 export default config;
