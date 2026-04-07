@@ -14,17 +14,17 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10.33.0
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: "24.4.1"
           cache: "pnpm"
           cache-dependency-path: ./pnpm-lock.yaml
-
-      - name: Install pnpm
-        uses: pnpm/action-setup@v4
-        with:
-          version: 10.33.0
 
       - name: Install Vite+
         uses: voidzero-dev/setup-vp@v1
@@ -54,17 +54,17 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10.33.0
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: "24.4.1"
           cache: "pnpm"
           cache-dependency-path: ./docs/pnpm-lock.yaml
-
-      - name: Install pnpm
-        uses: pnpm/action-setup@v4
-        with:
-          version: 10.33.0
 
       - name: Install dependencies
         run: pnpm install --no-frozen-lockfile
