@@ -6,13 +6,13 @@ on:
       - main
       - master
     paths:
-      - 'diagrams-js/package.json'
+      - "diagrams-js/package.json"
   workflow_dispatch:
     inputs:
       version:
-        description: 'Version bump type (patch, minor, major)'
+        description: "Version bump type (patch, minor, major)"
         required: true
-        default: 'patch'
+        default: "patch"
         type: choice
         options:
           - patch
@@ -44,8 +44,8 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
-          cache: 'pnpm'
+          node-version: "20"
+          cache: "pnpm"
           cache-dependency-path: ./diagrams-js/pnpm-lock.yaml
 
       - name: Install dependencies
@@ -74,7 +74,7 @@ jobs:
         run: |
           # Get the previous tag
           PREV_TAG=$(git describe --tags --abbrev=0 2>/dev/null || echo "")
-          
+
           if [ -z "$PREV_TAG" ]; then
             # No previous tag, get all commits
             COMMITS=$(git log --pretty=format:"- %s (%h)" --no-merges)
@@ -82,24 +82,24 @@ jobs:
             # Get commits since last tag
             COMMITS=$(git log ${PREV_TAG}..HEAD --pretty=format:"- %s (%h)" --no-merges)
           fi
-          
+
           # Create changelog entry
           echo "## [${{ env.NEW_VERSION }}] - $(date +%Y-%m-%d)" > CHANGELOG_NEW.md
           echo "" >> CHANGELOG_NEW.md
-          
+
           # Categorize commits
           echo "### Features" >> CHANGELOG_NEW.md
           echo "$COMMITS" | grep -i "^\- feat" >> CHANGELOG_NEW.md || echo "- No new features" >> CHANGELOG_NEW.md
           echo "" >> CHANGELOG_NEW.md
-          
+
           echo "### Bug Fixes" >> CHANGELOG_NEW.md
           echo "$COMMITS" | grep -i "^\- fix" >> CHANGELOG_NEW.md || echo "- No bug fixes" >> CHANGELOG_NEW.md
           echo "" >> CHANGELOG_NEW.md
-          
+
           echo "### Other Changes" >> CHANGELOG_NEW.md
           echo "$COMMITS" | grep -iv "^\- feat\|^\- fix\|^\- chore(release)" >> CHANGELOG_NEW.md || echo "- No other changes" >> CHANGELOG_NEW.md
           echo "" >> CHANGELOG_NEW.md
-          
+
           # Prepend to existing CHANGELOG.md or create new one
           if [ -f ../CHANGELOG.md ]; then
             cat CHANGELOG_NEW.md ../CHANGELOG.md > CHANGELOG_TEMP.md
@@ -107,9 +107,9 @@ jobs:
           else
             cat CHANGELOG_NEW.md > ../CHANGELOG.md
           fi
-          
+
           rm CHANGELOG_NEW.md
-          
+
           # Set output for release notes
           echo "notes<<EOF" >> $GITHUB_OUTPUT
           cat ../CHANGELOG.md | head -50 >> $GITHUB_OUTPUT
@@ -144,13 +144,13 @@ jobs:
           title: "chore(release): bump version to ${{ env.NEW_VERSION }}"
           body: |
             ## Version Bump
-            
+
             This PR bumps the version to **${{ env.NEW_VERSION }}**.
-            
+
             ### Changes
             - Updated package.json version
             - Updated CHANGELOG.md
-            
+
             ### Checklist
             - [ ] Tests pass
             - [ ] Documentation updated (if needed)

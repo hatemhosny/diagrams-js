@@ -3,18 +3,18 @@
   "version": "0.0.0",
   "description": "A TypeScript port of the diagrams Python library for drawing cloud system architecture diagrams as code",
   "keywords": [
-    "diagrams",
     "architecture",
-    "cloud",
     "aws",
     "azure",
-    "gcp",
-    "kubernetes",
+    "cloud",
     "diagram-as-code",
-    "svg",
-    "visualization",
+    "diagrams",
+    "gcp",
     "infrastructure",
-    "typescript"
+    "kubernetes",
+    "svg",
+    "typescript",
+    "visualization"
   ],
   "homepage": "https://diagrams-js.hatemhosny.dev",
   "bugs": {

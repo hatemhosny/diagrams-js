@@ -13,23 +13,23 @@
 /* You can override the default Infima variables here. */
 :root {
   /* Primary color - TypeScript Blue */
-  --ifm-color-primary: #3178C6;
+  --ifm-color-primary: #3178c6;
   --ifm-color-primary-dark: #2c6cb3;
   --ifm-color-primary-darker: #26609f;
   --ifm-color-primary-darkest: #20548a;
   --ifm-color-primary-light: #4a8fd4;
   --ifm-color-primary-lighter: #5c9ad8;
   --ifm-color-primary-lightest: #7aaee0;
-  
+
   /* Secondary color - JavaScript Yellow */
-  --ifm-color-secondary: #E8D44D;
+  --ifm-color-secondary: #e8d44d;
   --ifm-color-secondary-dark: #e5ce35;
   --ifm-color-secondary-darker: #dfc920;
   --ifm-color-secondary-darkest: #b8a51b;
   --ifm-color-secondary-light: #ebda67;
   --ifm-color-secondary-lighter: #eee081;
   --ifm-color-secondary-lightest: #f3e9a6;
-  
+
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 }
@@ -38,20 +38,20 @@
 [data-theme="dark"] {
   --ifm-color-primary: #4a8fd4;
   --ifm-color-primary-dark: #3d84ca;
-  --ifm-color-primary-darker: #3178C6;
+  --ifm-color-primary-darker: #3178c6;
   --ifm-color-primary-darkest: #2c6cb3;
   --ifm-color-primary-light: #5c9ad8;
   --ifm-color-primary-lighter: #7aaee0;
   --ifm-color-primary-lightest: #9fc8ec;
-  
+
   --ifm-color-secondary: #f3e9a6;
   --ifm-color-secondary-dark: #eee081;
   --ifm-color-secondary-darker: #ebda67;
-  --ifm-color-secondary-darkest: #E8D44D;
+  --ifm-color-secondary-darkest: #e8d44d;
   --ifm-color-secondary-light: #f5edb5;
   --ifm-color-secondary-lighter: #f7f1c4;
   --ifm-color-secondary-lightest: #faf6d9;
-  
+
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 

@@ -4,9 +4,9 @@ on:
   pull_request:
     types: [opened, synchronize, reopened]
     paths:
-      - 'diagrams-js/**'
-      - '!diagrams-js/**/*.md'
-      - '!diagrams-js/docs/**'
+      - "diagrams-js/**"
+      - "!diagrams-js/**/*.md"
+      - "!diagrams-js/docs/**"
 
 jobs:
   preview:
@@ -27,8 +27,8 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
-          cache: 'pnpm'
+          node-version: "20"
+          cache: "pnpm"
           cache-dependency-path: ./diagrams-js/pnpm-lock.yaml
 
       - name: Install dependencies
@@ -95,7 +95,7 @@ jobs:
 
           generateExamples().catch(console.error);
           EOF
-          
+
           node /tmp/generate-examples.mjs
 
       - name: Create LiveCodes preview
@@ -143,31 +143,31 @@ jobs:
             }
           comment-template: |
             ## LiveCodes Preview
-            
+
             🎨 **Try the library interactively!**
-            
+
             [Open in LiveCodes]({{livecodesUrl}})
-            
+
             This preview demonstrates the diagrams-js library with live examples. You can:
             - View generated diagrams
             - Modify the code to create your own diagrams
             - Export diagrams as SVG or PNG
-            
+
             ### Available Providers in This Preview
             - AWS (EC2, S3, RDS, Lambda, and more)
             - Azure (VMs, Functions, Storage, etc.)
             - GCP (Compute Engine, Cloud Run, BigQuery, etc.)
             - Kubernetes (Pods, Services, Ingress, etc.)
-            
+
             ### Quick Example
             ```typescript
             import { Diagram, AWS } from 'diagrams-js';
-            
+
             const diagram = new Diagram('My Architecture');
             const ec2 = AWS.Compute.EC2('Server');
             const rds = AWS.Database.RDS('Database');
             diagram.connect(ec2, rds);
-            
+
             const svg = await diagram.render();
             ```
           comment-on-pr: true

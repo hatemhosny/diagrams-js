@@ -106,9 +106,7 @@ replica.from(Edge({ label: "collect", color: "blue" }), metrics);
 Edges can be chained for complex connections:
 
 ```typescript
-aggregator
-  .to(Edge({ label: "parse" }), kafka)
-  .to(Edge({ color: "black", style: "bold" }), spark);
+aggregator.to(Edge({ label: "parse" }), kafka).to(Edge({ color: "black", style: "bold" }), spark);
 ```
 
 ## Multiple Targets with Edges

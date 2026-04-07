@@ -208,11 +208,7 @@ const diagram = Diagram("Exposed Pod with 3 Replicas");
 
 const ingress = diagram.add(Ingress("domain.com"));
 const svc = diagram.add(Service("svc"));
-const pods = [
-  diagram.add(Pod("pod1")),
-  diagram.add(Pod("pod2")),
-  diagram.add(Pod("pod3")),
-];
+const pods = [diagram.add(Pod("pod1")), diagram.add(Pod("pod2")), diagram.add(Pod("pod3"))];
 const rs = diagram.add(ReplicaSet("rs"));
 const dp = diagram.add(Deployment("dp"));
 const hpa = diagram.add(HPA("hpa"));
@@ -416,13 +412,9 @@ const consumers = [
 ];
 
 const queue = diagram.add(
-  Custom(
-    "Message queue",
-    "https://jpadilla.github.io/rabbitmqapp/assets/img/icon.png",
-    {
-      width: "1.0",
-    },
-  ),
+  Custom("Message queue", "https://jpadilla.github.io/rabbitmqapp/assets/img/icon.png", {
+    width: "1.0",
+  }),
 );
 
 const database = diagram.add(Aurora("Database"));

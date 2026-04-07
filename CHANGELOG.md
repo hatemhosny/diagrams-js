@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+
 - Initial release of diagrams-js
 - TypeScript port of the Python diagrams library
 - Support for 17+ cloud providers (AWS, Azure, GCP, Kubernetes, etc.)
@@ -19,6 +20,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Tree-shakable exports
 
 ### Features
+
 - Generate architecture diagrams as code
 - Connect nodes with customizable edges
 - Support for clusters and groups
@@ -28,6 +30,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - SVG output with embedded icons
 
 ### Providers
+
 - AWS (200+ services)
 - Azure (100+ services)
 - GCP (80+ services)
@@ -49,6 +52,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [0.0.0] - 2026-04-07
 
 ### Added
+
 - Initial project setup
 - Repository structure
 - Build system with Vite+

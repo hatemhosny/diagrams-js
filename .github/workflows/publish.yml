@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
     inputs:
       version:
-        description: 'Version to publish (leave empty to use package.json version)'
+        description: "Version to publish (leave empty to use package.json version)"
         required: false
         type: string
 
@@ -32,9 +32,9 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
-          registry-url: 'https://registry.npmjs.org'
-          cache: 'pnpm'
+          node-version: "20"
+          registry-url: "https://registry.npmjs.org"
+          cache: "pnpm"
           cache-dependency-path: ./diagrams-js/pnpm-lock.yaml
 
       - name: Install dependencies

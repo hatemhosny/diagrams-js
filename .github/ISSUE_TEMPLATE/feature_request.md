@@ -19,12 +19,13 @@ A clear and concise description of any alternative solutions or features you've 
 Describe the use case for this feature. Who would benefit and how?
 
 **Proposed API (if applicable)**
+
 ```typescript
 // If applicable, show how the API might look
-import { Diagram, AWS } from 'diagrams-js';
+import { Diagram, AWS } from "diagrams-js";
 
 // New feature usage example
-const diagram = new Diagram('Test');
+const diagram = new Diagram("Test");
 // ... proposed API
 ```
 

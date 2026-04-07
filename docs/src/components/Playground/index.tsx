@@ -1,10 +1,7 @@
 import React, { useEffect, useState, useCallback } from "react";
 import LiveCodes from "livecodes/react";
 import { useColorMode } from "@docusaurus/theme-common";
-import {
-  compressToEncodedURIComponent,
-  decompressFromEncodedURIComponent,
-} from "lz-string";
+import { compressToEncodedURIComponent, decompressFromEncodedURIComponent } from "lz-string";
 import styles from "./styles.module.css";
 
 const imports = {
@@ -498,9 +495,7 @@ export default function Playground(): React.JSX.Element {
             theme: colorMode,
           });
           // Try to find matching example name
-          const matching = examples.find(
-            (e) => e.config.script.content === parsed.script?.content,
-          );
+          const matching = examples.find((e) => e.config.script.content === parsed.script?.content);
           if (matching) {
             setSelectedExample(matching.name);
           } else {

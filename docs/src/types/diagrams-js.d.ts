@@ -1,7 +1,7 @@
 // Type declarations for diagrams-js
 // This is a stub since diagrams-js is loaded dynamically from CDN in the docs
 
-declare module 'diagrams-js' {
+declare module "diagrams-js" {
   export interface Diagram {
     add(node: any): any;
     cluster(label: string): any;
