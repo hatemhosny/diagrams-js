@@ -20,64 +20,64 @@
 <path fill="#e5f5fd" stroke="#aeb6be" d="M92,-28C92,-28 141.6,-28 141.6,-28 147.6,-28 153.6,-34 153.6,-40 153.6,-40 153.6,-271 153.6,-271 153.6,-277 147.6,-283 141.6,-283 141.6,-283 92,-283 92,-283 86,-283 80,-277 80,-271 80,-271 80,-40 80,-40 80,-34 86,-28 92,-28"/>
 <text xml:space="preserve" text-anchor="middle" x="115" y="-268.2" font-family="Sans-Serif" font-size="12.00">Consumers</text>
 </g>
-<!-- mnon74ou_kz197fk67 -->
+<!-- mnoomdvb_ba2bv9eun -->
 <g id="node1" class="node">
-<title>mnon74ou_kz197fk67</title>
+<title>mnoomdvb_ba2bv9eun</title>
 <text xml:space="preserve" text-anchor="middle" x="36" y="-114" font-family="Sans-Serif" font-size="8.00">Message queue</text>
 <use href="#icon-jxkozv" x="36" y="-148"/></g>
-<!-- mnon74ou_jxfvl6l6c -->
+<!-- mnoomdvb_tn1224dv1 -->
 <g id="node3" class="node">
-<title>mnon74ou_jxfvl6l6c</title>
+<title>mnoomdvb_tn1224dv1</title>
 <text xml:space="preserve" text-anchor="middle" x="116.8" y="-38" font-family="Sans-Serif" font-size="8.00">worker</text>
 <use href="#icon-ughy3o" x="116.8" y="-72"/></g>
-<!-- mnon74ou_kz197fk67&#45;&gt;mnon74ou_jxfvl6l6c -->
+<!-- mnoomdvb_ba2bv9eun&#45;&gt;mnoomdvb_tn1224dv1 -->
 <g id="edge1" class="edge">
-<title>mnon74ou_kz197fk67&#45;&gt;mnon74ou_jxfvl6l6c</title>
+<title>mnoomdvb_ba2bv9eun&#45;&gt;mnoomdvb_tn1224dv1</title>
 <path fill="none" stroke="#7b8894" d="M36.2,-111.77C36.2,-91.06 36.2,-68 36.2,-68 36.2,-68 81.64,-68 81.64,-68"/>
 <polygon fill="#7b8894" stroke="#7b8894" points="81.64,-69.75 86.64,-68 81.64,-66.25 81.64,-69.75"/>
 </g>
-<!-- mnon74ou_1zliyzdyu -->
+<!-- mnoomdvb_ub0oldb6z -->
 <g id="node4" class="node">
-<title>mnon74ou_1zliyzdyu</title>
+<title>mnoomdvb_ub0oldb6z</title>
 <text xml:space="preserve" text-anchor="middle" x="116.8" y="-114" font-family="Sans-Serif" font-size="8.00">worker</text>
 <use href="#icon-ughy3o" x="116.8" y="-148"/></g>
-<!-- mnon74ou_kz197fk67&#45;&gt;mnon74ou_1zliyzdyu -->
+<!-- mnoomdvb_ba2bv9eun&#45;&gt;mnoomdvb_ub0oldb6z -->
 <g id="edge2" class="edge">
-<title>mnon74ou_kz197fk67&#45;&gt;mnon74ou_1zliyzdyu</title>
+<title>mnoomdvb_ba2bv9eun&#45;&gt;mnoomdvb_ub0oldb6z</title>
 <path fill="none" stroke="#7b8894" d="M71.68,-144C71.68,-144 81.83,-144 81.83,-144"/>
 <polygon fill="#7b8894" stroke="#7b8894" points="81.83,-145.75 86.83,-144 81.83,-142.25 81.83,-145.75"/>
 </g>
-<!-- mnon74ou_cw37jhfwl -->
+<!-- mnoomdvb_18tj4izj6 -->
 <g id="node5" class="node">
-<title>mnon74ou_cw37jhfwl</title>
+<title>mnoomdvb_18tj4izj6</title>
 <text xml:space="preserve" text-anchor="middle" x="116.8" y="-190" font-family="Sans-Serif" font-size="8.00">worker</text>
 <use href="#icon-ughy3o" x="116.8" y="-224"/></g>
-<!-- mnon74ou_kz197fk67&#45;&gt;mnon74ou_cw37jhfwl -->
+<!-- mnoomdvb_ba2bv9eun&#45;&gt;mnoomdvb_18tj4izj6 -->
 <g id="edge3" class="edge">
-<title>mnon74ou_kz197fk67&#45;&gt;mnon74ou_cw37jhfwl</title>
+<title>mnoomdvb_ba2bv9eun&#45;&gt;mnoomdvb_18tj4izj6</title>
 <path fill="none" stroke="#7b8894" d="M36.2,-176.23C36.2,-196.94 36.2,-220 36.2,-220 36.2,-220 81.64,-220 81.64,-220"/>
 <polygon fill="#7b8894" stroke="#7b8894" points="81.64,-221.75 86.64,-220 81.64,-218.25 81.64,-221.75"/>
 </g>
-<!-- mnon74qx_8ny8s041g -->
+<!-- mnoomdx6_k2f2y4a7u -->
 <g id="node2" class="node">
-<title>mnon74qx_8ny8s041g</title>
+<title>mnoomdx6_k2f2y4a7u</title>
 <text xml:space="preserve" text-anchor="middle" x="190.4" y="-114" font-family="Sans-Serif" font-size="8.00">Database</text>
 <use href="#icon-q3noqf" x="190.4" y="-148"/></g>
-<!-- mnon74ou_jxfvl6l6c&#45;&gt;mnon74qx_8ny8s041g -->
+<!-- mnoomdvb_tn1224dv1&#45;&gt;mnoomdx6_k2f2y4a7u -->
 <g id="edge4" class="edge">
-<title>mnon74ou_jxfvl6l6c&#45;&gt;mnon74qx_8ny8s041g</title>
+<title>mnoomdvb_tn1224dv1&#45;&gt;mnoomdx6_k2f2y4a7u</title>
 <path fill="none" stroke="#7b8894" d="M145.39,-68C166,-68 190.2,-68 190.2,-68 190.2,-68 190.2,-105.26 190.2,-105.26"/>
 <polygon fill="#7b8894" stroke="#7b8894" points="188.45,-105.26 190.2,-110.26 191.95,-105.26 188.45,-105.26"/>
 </g>
-<!-- mnon74ou_1zliyzdyu&#45;&gt;mnon74qx_8ny8s041g -->
+<!-- mnoomdvb_ub0oldb6z&#45;&gt;mnoomdx6_k2f2y4a7u -->
 <g id="edge5" class="edge">
-<title>mnon74ou_1zliyzdyu&#45;&gt;mnon74qx_8ny8s041g</title>
+<title>mnoomdvb_ub0oldb6z&#45;&gt;mnoomdx6_k2f2y4a7u</title>
 <path fill="none" stroke="#7b8894" d="M145.47,-144C145.47,-144 155.18,-144 155.18,-144"/>
 <polygon fill="#7b8894" stroke="#7b8894" points="155.18,-145.75 160.18,-144 155.18,-142.25 155.18,-145.75"/>
 </g>
-<!-- mnon74ou_cw37jhfwl&#45;&gt;mnon74qx_8ny8s041g -->
+<!-- mnoomdvb_18tj4izj6&#45;&gt;mnoomdx6_k2f2y4a7u -->
 <g id="edge6" class="edge">
-<title>mnon74ou_cw37jhfwl&#45;&gt;mnon74qx_8ny8s041g</title>
+<title>mnoomdvb_18tj4izj6&#45;&gt;mnoomdx6_k2f2y4a7u</title>
 <path fill="none" stroke="#7b8894" d="M145.39,-220C166,-220 190.2,-220 190.2,-220 190.2,-220 190.2,-182.74 190.2,-182.74"/>
 <polygon fill="#7b8894" stroke="#7b8894" points="191.95,-182.74 190.2,-177.74 188.45,-182.74 191.95,-182.74"/>
 </g>

@@ -32,6 +32,7 @@
   },
   "files": [
     "dist",
+    "index.js",
     "LICENSE",
     "README.md"
   ],

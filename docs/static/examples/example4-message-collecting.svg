@@ -55,118 +55,118 @@
 <path fill="#ece8f6" stroke="#aeb6be" d="M272.49,-342C272.49,-342 395.69,-342 395.69,-342 401.69,-342 407.69,-348 407.69,-354 407.69,-354 407.69,-433 407.69,-433 407.69,-439 401.69,-445 395.69,-445 395.69,-445 272.49,-445 272.49,-445 266.49,-445 260.49,-439 260.49,-433 260.49,-433 260.49,-354 260.49,-354 260.49,-348 266.49,-342 272.49,-342"/>
 <text xml:space="preserve" text-anchor="middle" x="293.14" y="-430.2" font-family="Sans-Serif" font-size="12.00">Serverless</text>
 </g>
-<!-- mnon74ld_fvqalo75n -->
+<!-- mnoomdrv_ql5qt0js4 -->
 <g id="node1" class="node">
-<title>mnon74ld_fvqalo75n</title>
+<title>mnoomdrv_ql5qt0js4</title>
 <text xml:space="preserve" text-anchor="middle" x="126.09" y="-181" font-family="Sans-Serif" font-size="8.00">pubsub</text>
 <use href="#icon-jgpfbt" x="126.09" y="-215"/></g>
-<!-- mnon74ld_461j7z7o1 -->
+<!-- mnoomdrw_9oaba5bqz -->
 <g id="node5" class="node">
-<title>mnon74ld_461j7z7o1</title>
+<title>mnoomdrw_9oaba5bqz</title>
 <text xml:space="preserve" text-anchor="middle" x="207.69" y="-181" font-family="Sans-Serif" font-size="8.00">data flow</text>
 <use href="#icon-lss315" x="207.69" y="-215"/></g>
-<!-- mnon74ld_fvqalo75n&#45;&gt;mnon74ld_461j7z7o1 -->
+<!-- mnoomdrv_ql5qt0js4&#45;&gt;mnoomdrw_9oaba5bqz -->
 <g id="edge4" class="edge">
-<title>mnon74ld_fvqalo75n&#45;&gt;mnon74ld_461j7z7o1</title>
+<title>mnoomdrv_ql5qt0js4&#45;&gt;mnoomdrw_9oaba5bqz</title>
 <path fill="none" stroke="#7b8894" d="M154.63,-211C154.63,-211 172.51,-211 172.51,-211"/>
 <polygon fill="#7b8894" stroke="#7b8894" points="172.51,-212.75 177.51,-211 172.51,-209.25 172.51,-212.75"/>
 </g>
-<!-- mnon74ld_3v1dpog2n -->
+<!-- mnoomdrv_lownnekl4 -->
 <g id="node2" class="node">
-<title>mnon74ld_3v1dpog2n</title>
+<title>mnoomdrv_lownnekl4</title>
 <text xml:space="preserve" text-anchor="middle" x="44.8" y="-105" font-family="Sans-Serif" font-size="8.00">core1</text>
 <use href="#icon-lx1axa" x="44.8" y="-139"/></g>
-<!-- mnon74ld_3v1dpog2n&#45;&gt;mnon74ld_fvqalo75n -->
+<!-- mnoomdrv_lownnekl4&#45;&gt;mnoomdrv_ql5qt0js4 -->
 <g id="edge1" class="edge">
-<title>mnon74ld_3v1dpog2n&#45;&gt;mnon74ld_fvqalo75n</title>
+<title>mnoomdrv_lownnekl4&#45;&gt;mnoomdrv_ql5qt0js4</title>
 <path fill="none" stroke="#7b8894" d="M73.54,-143.5C96.79,-143.5 125.69,-143.5 125.69,-143.5 125.69,-143.5 125.69,-172.32 125.69,-172.32"/>
 <polygon fill="#7b8894" stroke="#7b8894" points="123.94,-172.32 125.69,-177.32 127.44,-172.32 123.94,-172.32"/>
 </g>
-<!-- mnon74ld_5sqjkhumg -->
+<!-- mnoomdrv_9rv27drlj -->
 <g id="node3" class="node">
-<title>mnon74ld_5sqjkhumg</title>
+<title>mnoomdrv_9rv27drlj</title>
 <text xml:space="preserve" text-anchor="middle" x="44.8" y="-181" font-family="Sans-Serif" font-size="8.00">core2</text>
 <use href="#icon-lx1axa" x="44.8" y="-215"/></g>
-<!-- mnon74ld_5sqjkhumg&#45;&gt;mnon74ld_fvqalo75n -->
+<!-- mnoomdrv_9rv27drlj&#45;&gt;mnoomdrv_ql5qt0js4 -->
 <g id="edge2" class="edge">
-<title>mnon74ld_5sqjkhumg&#45;&gt;mnon74ld_fvqalo75n</title>
+<title>mnoomdrv_9rv27drlj&#45;&gt;mnoomdrv_ql5qt0js4</title>
 <path fill="none" stroke="#7b8894" d="M73.23,-211C73.23,-211 91.02,-211 91.02,-211"/>
 <polygon fill="#7b8894" stroke="#7b8894" points="91.02,-212.75 96.02,-211 91.02,-209.25 91.02,-212.75"/>
 </g>
-<!-- mnon74ld_pe3b24via -->
+<!-- mnoomdrw_wvm7kh2vj -->
 <g id="node4" class="node">
-<title>mnon74ld_pe3b24via</title>
+<title>mnoomdrw_wvm7kh2vj</title>
 <text xml:space="preserve" text-anchor="middle" x="44.8" y="-257" font-family="Sans-Serif" font-size="8.00">core3</text>
 <use href="#icon-lx1axa" x="44.8" y="-291"/></g>
-<!-- mnon74ld_pe3b24via&#45;&gt;mnon74ld_fvqalo75n -->
+<!-- mnoomdrw_wvm7kh2vj&#45;&gt;mnoomdrv_ql5qt0js4 -->
 <g id="edge3" class="edge">
-<title>mnon74ld_pe3b24via&#45;&gt;mnon74ld_fvqalo75n</title>
+<title>mnoomdrw_wvm7kh2vj&#45;&gt;mnoomdrv_ql5qt0js4</title>
 <path fill="none" stroke="#7b8894" d="M73.54,-279C96.79,-279 125.69,-279 125.69,-279 125.69,-279 125.69,-249.52 125.69,-249.52"/>
 <polygon fill="#7b8894" stroke="#7b8894" points="127.44,-249.52 125.69,-244.52 123.94,-249.52 127.44,-249.52"/>
 </g>
-<!-- mnon74ld_1js7gtbl8 -->
+<!-- mnoomdrw_j97eiaczx -->
 <g id="node6" class="node">
-<title>mnon74ld_1js7gtbl8</title>
+<title>mnoomdrw_j97eiaczx</title>
 <text xml:space="preserve" text-anchor="middle" x="297.29" y="-46" font-family="Sans-Serif" font-size="8.00">bq</text>
 <use href="#icon-gwp3q3" x="297.29" y="-80"/></g>
-<!-- mnon74ld_461j7z7o1&#45;&gt;mnon74ld_1js7gtbl8 -->
+<!-- mnoomdrw_9oaba5bqz&#45;&gt;mnoomdrw_j97eiaczx -->
 <g id="edge5" class="edge">
-<title>mnon74ld_461j7z7o1&#45;&gt;mnon74ld_1js7gtbl8</title>
+<title>mnoomdrw_9oaba5bqz&#45;&gt;mnoomdrw_j97eiaczx</title>
 <path fill="none" stroke="#7b8894" d="M197.69,-178.67C197.69,-137.91 197.69,-73.1 197.69,-73.1 197.69,-73.1 262.23,-73.1 262.23,-73.1"/>
 <polygon fill="#7b8894" stroke="#7b8894" points="262.23,-74.85 267.23,-73.1 262.23,-71.35 262.23,-74.85"/>
 </g>
-<!-- mnon74ld_buo1bokx9 -->
+<!-- mnoomdrw_cnkfmsmpm -->
 <g id="node7" class="node">
-<title>mnon74ld_buo1bokx9</title>
+<title>mnoomdrw_cnkfmsmpm</title>
 <text xml:space="preserve" text-anchor="middle" x="297.29" y="-122" font-family="Sans-Serif" font-size="8.00">storage</text>
 <use href="#icon-efw0uu" x="297.29" y="-156"/></g>
-<!-- mnon74ld_461j7z7o1&#45;&gt;mnon74ld_buo1bokx9 -->
+<!-- mnoomdrw_9oaba5bqz&#45;&gt;mnoomdrw_cnkfmsmpm -->
 <g id="edge6" class="edge">
-<title>mnon74ld_461j7z7o1&#45;&gt;mnon74ld_buo1bokx9</title>
+<title>mnoomdrw_9oaba5bqz&#45;&gt;mnoomdrw_cnkfmsmpm</title>
 <path fill="none" stroke="#7b8894" d="M217.69,-178.61C217.69,-175.23 217.69,-173 217.69,-173 217.69,-173 262.03,-173 262.03,-173"/>
 <polygon fill="#7b8894" stroke="#7b8894" points="262.03,-174.75 267.03,-173 262.03,-171.25 262.03,-174.75"/>
 </g>
-<!-- mnon74ld_xg366tcq7 -->
+<!-- mnoomdrw_ir52ql9o3 -->
 <g id="node8" class="node">
-<title>mnon74ld_xg366tcq7</title>
+<title>mnoomdrw_ir52ql9o3</title>
 <text xml:space="preserve" text-anchor="middle" x="297.29" y="-241" font-family="Sans-Serif" font-size="8.00">engine</text>
 <use href="#icon-jx7qpt" x="297.29" y="-275"/></g>
-<!-- mnon74ld_461j7z7o1&#45;&gt;mnon74ld_xg366tcq7 -->
+<!-- mnoomdrw_9oaba5bqz&#45;&gt;mnoomdrw_ir52ql9o3 -->
 <g id="edge7" class="edge">
-<title>mnon74ld_461j7z7o1&#45;&gt;mnon74ld_xg366tcq7</title>
+<title>mnoomdrw_9oaba5bqz&#45;&gt;mnoomdrw_ir52ql9o3</title>
 <path fill="none" stroke="#7b8894" d="M217.69,-243.39C217.69,-246.77 217.69,-249 217.69,-249 217.69,-249 262.03,-249 262.03,-249"/>
 <polygon fill="#7b8894" stroke="#7b8894" points="262.03,-250.75 267.03,-249 262.03,-247.25 262.03,-250.75"/>
 </g>
-<!-- mnon74ld_np9l11lbl -->
+<!-- mnoomdrw_re8icup95 -->
 <g id="node10" class="node">
-<title>mnon74ld_np9l11lbl</title>
+<title>mnoomdrw_re8icup95</title>
 <text xml:space="preserve" text-anchor="middle" x="297.29" y="-352" font-family="Sans-Serif" font-size="8.00">func</text>
 <use href="#icon-5fn0ff" x="297.29" y="-386"/></g>
-<!-- mnon74ld_461j7z7o1&#45;&gt;mnon74ld_np9l11lbl -->
+<!-- mnoomdrw_9oaba5bqz&#45;&gt;mnoomdrw_re8icup95 -->
 <g id="edge9" class="edge">
-<title>mnon74ld_461j7z7o1&#45;&gt;mnon74ld_np9l11lbl</title>
+<title>mnoomdrw_9oaba5bqz&#45;&gt;mnoomdrw_re8icup95</title>
 <path fill="none" stroke="#7b8894" d="M197.69,-243.16C197.69,-292.7 197.69,-382 197.69,-382 197.69,-382 262.23,-382 262.23,-382"/>
 <polygon fill="#7b8894" stroke="#7b8894" points="262.23,-383.75 267.23,-382 262.23,-380.25 262.23,-383.75"/>
 </g>
-<!-- mnon74ld_nng2li26p -->
+<!-- mnoomdrw_zb817pdj4 -->
 <g id="node9" class="node">
-<title>mnon74ld_nng2li26p</title>
+<title>mnoomdrw_zb817pdj4</title>
 <text xml:space="preserve" text-anchor="middle" x="370.89" y="-241" font-family="Sans-Serif" font-size="8.00">bigtable</text>
 <use href="#icon-9fchbs" x="370.89" y="-275"/></g>
-<!-- mnon74ld_xg366tcq7&#45;&gt;mnon74ld_nng2li26p -->
+<!-- mnoomdrw_ir52ql9o3&#45;&gt;mnoomdrw_zb817pdj4 -->
 <g id="edge8" class="edge">
-<title>mnon74ld_xg366tcq7&#45;&gt;mnon74ld_nng2li26p</title>
+<title>mnoomdrw_ir52ql9o3&#45;&gt;mnoomdrw_zb817pdj4</title>
 <path fill="none" stroke="#7b8894" d="M325.95,-271C325.95,-271 335.66,-271 335.66,-271"/>
 <polygon fill="#7b8894" stroke="#7b8894" points="335.66,-272.75 340.66,-271 335.66,-269.25 335.66,-272.75"/>
 </g>
-<!-- mnon74ld_bviwsimu4 -->
+<!-- mnoomdrw_p6lcwgesy -->
 <g id="node11" class="node">
-<title>mnon74ld_bviwsimu4</title>
+<title>mnoomdrw_p6lcwgesy</title>
 <text xml:space="preserve" text-anchor="middle" x="370.89" y="-352" font-family="Sans-Serif" font-size="8.00">appengine</text>
 <use href="#icon-jx7qpt" x="370.89" y="-386"/></g>
-<!-- mnon74ld_np9l11lbl&#45;&gt;mnon74ld_bviwsimu4 -->
+<!-- mnoomdrw_re8icup95&#45;&gt;mnoomdrw_p6lcwgesy -->
 <g id="edge10" class="edge">
-<title>mnon74ld_np9l11lbl&#45;&gt;mnon74ld_bviwsimu4</title>
+<title>mnoomdrw_re8icup95&#45;&gt;mnoomdrw_p6lcwgesy</title>
 <path fill="none" stroke="#7b8894" d="M325.95,-382C325.95,-382 335.66,-382 335.66,-382"/>
 <polygon fill="#7b8894" stroke="#7b8894" points="335.66,-383.75 340.66,-382 335.66,-380.25 335.66,-383.75"/>
 </g>

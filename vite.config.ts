@@ -25,7 +25,9 @@ export default defineConfig({
     },
     ignorePatterns: ["**/docs/**", "**/scripts/**"],
   },
-  fmt: {},
+  fmt: {
+    ignorePatterns: ["docs/docs/nodes"],
+  },
   resolve: {
     alias: {
       "(\\.\\./.*)\\.js$": "$1.ts",
