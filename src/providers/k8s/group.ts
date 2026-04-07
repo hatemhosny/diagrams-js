@@ -3,13 +3,13 @@ import nsIcon from "../../../resources/k8s/group/ns.png";
 
 function _Group(label?: string, options?: Record<string, unknown>) {
   const node = _K8s(label, options);
-  (node as unknown as Record<string, unknown>)._type = "group";
+  (node as unknown as Record<string, unknown>)["~type"] = "group";
   return node;
 }
 
 export function NS(label?: string, options?: Record<string, unknown>) {
   const node = _Group(label ?? "NS", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = nsIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = nsIcon;
   return node;
 }
 

@@ -8,42 +8,42 @@ import outbound_connectionIcon from "../../../resources/azure/blockchain/outboun
 
 function _Blockchain(label?: string, options?: Record<string, unknown>) {
   const node = _Azure(label, options);
-  (node as unknown as Record<string, unknown>)._type = "blockchain";
+  (node as unknown as Record<string, unknown>)["~type"] = "blockchain";
   return node;
 }
 
 export function AbsMember(label?: string, options?: Record<string, unknown>) {
   const node = _Blockchain(label ?? "AbsMember", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = abs_memberIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = abs_memberIcon;
   return node;
 }
 
 export function AzureBlockchainService(label?: string, options?: Record<string, unknown>) {
   const node = _Blockchain(label ?? "AzureBlockchainService", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_blockchain_serviceIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = azure_blockchain_serviceIcon;
   return node;
 }
 
 export function AzureTokenService(label?: string, options?: Record<string, unknown>) {
   const node = _Blockchain(label ?? "AzureTokenService", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_token_serviceIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = azure_token_serviceIcon;
   return node;
 }
 
 export function BlockchainApplications(label?: string, options?: Record<string, unknown>) {
   const node = _Blockchain(label ?? "BlockchainApplications", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = blockchain_applicationsIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = blockchain_applicationsIcon;
   return node;
 }
 
 export function Consortium(label?: string, options?: Record<string, unknown>) {
   const node = _Blockchain(label ?? "Consortium", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = consortiumIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = consortiumIcon;
   return node;
 }
 
 export function OutboundConnection(label?: string, options?: Record<string, unknown>) {
   const node = _Blockchain(label ?? "OutboundConnection", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = outbound_connectionIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = outbound_connectionIcon;
   return node;
 }

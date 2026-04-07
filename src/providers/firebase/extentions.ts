@@ -3,12 +3,12 @@ import extensionsIcon from "../../../resources/firebase/extentions/extensions.pn
 
 function _Extentions(label?: string, options?: Record<string, unknown>) {
   const node = _Firebase(label, options);
-  (node as unknown as Record<string, unknown>)._type = "extentions";
+  (node as unknown as Record<string, unknown>)["~type"] = "extentions";
   return node;
 }
 
 export function Extensions(label?: string, options?: Record<string, unknown>) {
   const node = _Extentions(label ?? "Extensions", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = extensionsIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = extensionsIcon;
   return node;
 }

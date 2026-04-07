@@ -15,84 +15,84 @@ import tms_data_interfaceIcon from "../../../resources/ibm/data/tms-data-interfa
 
 function _Data(label?: string, options?: Record<string, unknown>) {
   const node = _Ibm(label, options);
-  (node as unknown as Record<string, unknown>)._type = "data";
+  (node as unknown as Record<string, unknown>)["~type"] = "data";
   return node;
 }
 
 export function Caches(label?: string, options?: Record<string, unknown>) {
   const node = _Data(label ?? "Caches", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = cachesIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = cachesIcon;
   return node;
 }
 
 export function Cloud(label?: string, options?: Record<string, unknown>) {
   const node = _Data(label ?? "Cloud", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = cloudIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = cloudIcon;
   return node;
 }
 
 export function ConversationTrainedDeployed(label?: string, options?: Record<string, unknown>) {
   const node = _Data(label ?? "ConversationTrainedDeployed", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = conversation_trained_deployedIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = conversation_trained_deployedIcon;
   return node;
 }
 
 export function DataServices(label?: string, options?: Record<string, unknown>) {
   const node = _Data(label ?? "DataServices", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = data_servicesIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = data_servicesIcon;
   return node;
 }
 
 export function DataSources(label?: string, options?: Record<string, unknown>) {
   const node = _Data(label ?? "DataSources", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = data_sourcesIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = data_sourcesIcon;
   return node;
 }
 
 export function DeviceIdentityService(label?: string, options?: Record<string, unknown>) {
   const node = _Data(label ?? "DeviceIdentityService", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = device_identity_serviceIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = device_identity_serviceIcon;
   return node;
 }
 
 export function DeviceRegistry(label?: string, options?: Record<string, unknown>) {
   const node = _Data(label ?? "DeviceRegistry", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = device_registryIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = device_registryIcon;
   return node;
 }
 
 export function EnterpriseData(label?: string, options?: Record<string, unknown>) {
   const node = _Data(label ?? "EnterpriseData", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = enterprise_dataIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = enterprise_dataIcon;
   return node;
 }
 
 export function EnterpriseUserDirectory(label?: string, options?: Record<string, unknown>) {
   const node = _Data(label ?? "EnterpriseUserDirectory", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = enterprise_user_directoryIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = enterprise_user_directoryIcon;
   return node;
 }
 
 export function FileRepository(label?: string, options?: Record<string, unknown>) {
   const node = _Data(label ?? "FileRepository", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = file_repositoryIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = file_repositoryIcon;
   return node;
 }
 
 export function GroundTruth(label?: string, options?: Record<string, unknown>) {
   const node = _Data(label ?? "GroundTruth", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = ground_truthIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = ground_truthIcon;
   return node;
 }
 
 export function Model(label?: string, options?: Record<string, unknown>) {
   const node = _Data(label ?? "Model", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = modelIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = modelIcon;
   return node;
 }
 
 export function TmsDataInterface(label?: string, options?: Record<string, unknown>) {
   const node = _Data(label ?? "TmsDataInterface", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = tms_data_interfaceIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = tms_data_interfaceIcon;
   return node;
 }

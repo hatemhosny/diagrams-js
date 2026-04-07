@@ -4,18 +4,18 @@ import storageIcon from "../../../resources/outscale/storage/storage.png";
 
 function _Storage(label?: string, options?: Record<string, unknown>) {
   const node = _Outscale(label, options);
-  (node as unknown as Record<string, unknown>)._type = "storage";
+  (node as unknown as Record<string, unknown>)["~type"] = "storage";
   return node;
 }
 
 export function SimpleStorageService(label?: string, options?: Record<string, unknown>) {
   const node = _Storage(label ?? "SimpleStorageService", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = simple_storage_serviceIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = simple_storage_serviceIcon;
   return node;
 }
 
 export function Storage(label?: string, options?: Record<string, unknown>) {
   const node = _Storage(label ?? "Storage", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = storageIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = storageIcon;
   return node;
 }

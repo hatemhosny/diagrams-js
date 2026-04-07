@@ -7,36 +7,36 @@ import workplace_searchIcon from "../../../resources/elastic/enterprisesearch/wo
 
 function _Enterprisesearch(label?: string, options?: Record<string, unknown>) {
   const node = _Elastic(label, options);
-  (node as unknown as Record<string, unknown>)._type = "enterprisesearch";
+  (node as unknown as Record<string, unknown>)["~type"] = "enterprisesearch";
   return node;
 }
 
 export function AppSearch(label?: string, options?: Record<string, unknown>) {
   const node = _Enterprisesearch(label ?? "AppSearch", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = app_searchIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = app_searchIcon;
   return node;
 }
 
 export function Crawler(label?: string, options?: Record<string, unknown>) {
   const node = _Enterprisesearch(label ?? "Crawler", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = crawlerIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = crawlerIcon;
   return node;
 }
 
 export function EnterpriseSearch(label?: string, options?: Record<string, unknown>) {
   const node = _Enterprisesearch(label ?? "EnterpriseSearch", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = enterprise_searchIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = enterprise_searchIcon;
   return node;
 }
 
 export function SiteSearch(label?: string, options?: Record<string, unknown>) {
   const node = _Enterprisesearch(label ?? "SiteSearch", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = site_searchIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = site_searchIcon;
   return node;
 }
 
 export function WorkplaceSearch(label?: string, options?: Record<string, unknown>) {
   const node = _Enterprisesearch(label ?? "WorkplaceSearch", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = workplace_searchIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = workplace_searchIcon;
   return node;
 }

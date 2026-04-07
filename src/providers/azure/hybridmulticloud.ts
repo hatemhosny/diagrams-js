@@ -7,36 +7,37 @@ import azure_programmable_connectivityIcon from "../../../resources/azure/hybrid
 
 function _Hybridmulticloud(label?: string, options?: Record<string, unknown>) {
   const node = _Azure(label, options);
-  (node as unknown as Record<string, unknown>)._type = "hybridmulticloud";
+  (node as unknown as Record<string, unknown>)["~type"] = "hybridmulticloud";
   return node;
 }
 
 export function AzureOperator5gCore(label?: string, options?: Record<string, unknown>) {
   const node = _Hybridmulticloud(label ?? "AzureOperator5gCore", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_operator_5g_coreIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = azure_operator_5g_coreIcon;
   return node;
 }
 
 export function AzureOperatorInsights(label?: string, options?: Record<string, unknown>) {
   const node = _Hybridmulticloud(label ?? "AzureOperatorInsights", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_operator_insightsIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = azure_operator_insightsIcon;
   return node;
 }
 
 export function AzureOperatorNexus(label?: string, options?: Record<string, unknown>) {
   const node = _Hybridmulticloud(label ?? "AzureOperatorNexus", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_operator_nexusIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = azure_operator_nexusIcon;
   return node;
 }
 
 export function AzureOperatorServiceManager(label?: string, options?: Record<string, unknown>) {
   const node = _Hybridmulticloud(label ?? "AzureOperatorServiceManager", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_operator_service_managerIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = azure_operator_service_managerIcon;
   return node;
 }
 
 export function AzureProgrammableConnectivity(label?: string, options?: Record<string, unknown>) {
   const node = _Hybridmulticloud(label ?? "AzureProgrammableConnectivity", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_programmable_connectivityIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] =
+    azure_programmable_connectivityIcon;
   return node;
 }

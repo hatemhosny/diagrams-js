@@ -8,43 +8,43 @@ import schedIcon from "../../../resources/k8s/controlplane/sched.png";
 
 function _Controlplane(label?: string, options?: Record<string, unknown>) {
   const node = _K8s(label, options);
-  (node as unknown as Record<string, unknown>)._type = "controlplane";
+  (node as unknown as Record<string, unknown>)["~type"] = "controlplane";
   return node;
 }
 
 export function API(label?: string, options?: Record<string, unknown>) {
   const node = _Controlplane(label ?? "API", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = apiIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = apiIcon;
   return node;
 }
 
 export function CCM(label?: string, options?: Record<string, unknown>) {
   const node = _Controlplane(label ?? "CCM", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = c_c_mIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = c_c_mIcon;
   return node;
 }
 
 export function CM(label?: string, options?: Record<string, unknown>) {
   const node = _Controlplane(label ?? "CM", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = c_mIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = c_mIcon;
   return node;
 }
 
 export function KProxy(label?: string, options?: Record<string, unknown>) {
   const node = _Controlplane(label ?? "KProxy", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = k_proxyIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = k_proxyIcon;
   return node;
 }
 
 export function Kubelet(label?: string, options?: Record<string, unknown>) {
   const node = _Controlplane(label ?? "Kubelet", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = kubeletIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = kubeletIcon;
   return node;
 }
 
 export function Sched(label?: string, options?: Record<string, unknown>) {
   const node = _Controlplane(label ?? "Sched", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = schedIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = schedIcon;
   return node;
 }
 

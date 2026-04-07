@@ -6,30 +6,30 @@ import iot_platformIcon from "../../../resources/alibabacloud/iot/iot-platform.p
 
 function _Iot(label?: string, options?: Record<string, unknown>) {
   const node = _Alibabacloud(label, options);
-  (node as unknown as Record<string, unknown>)._type = "iot";
+  (node as unknown as Record<string, unknown>)["~type"] = "iot";
   return node;
 }
 
 export function IotInternetDeviceId(label?: string, options?: Record<string, unknown>) {
   const node = _Iot(label ?? "IotInternetDeviceId", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = iot_internet_device_idIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = iot_internet_device_idIcon;
   return node;
 }
 
 export function IotLinkWan(label?: string, options?: Record<string, unknown>) {
   const node = _Iot(label ?? "IotLinkWan", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = iot_link_wanIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = iot_link_wanIcon;
   return node;
 }
 
 export function IotMobileConnectionPackage(label?: string, options?: Record<string, unknown>) {
   const node = _Iot(label ?? "IotMobileConnectionPackage", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = iot_mobile_connection_packageIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = iot_mobile_connection_packageIcon;
   return node;
 }
 
 export function IotPlatform(label?: string, options?: Record<string, unknown>) {
   const node = _Iot(label ?? "IotPlatform", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = iot_platformIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = iot_platformIcon;
   return node;
 }

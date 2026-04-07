@@ -53,307 +53,308 @@ import web_application_firewall_policieswafIcon from "../../../resources/azure/n
 
 function _Networking(label?: string, options?: Record<string, unknown>) {
   const node = _Azure(label, options);
-  (node as unknown as Record<string, unknown>)._type = "networking";
+  (node as unknown as Record<string, unknown>)["~type"] = "networking";
   return node;
 }
 
 export function ApplicationGateways(label?: string, options?: Record<string, unknown>) {
   const node = _Networking(label ?? "ApplicationGateways", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = application_gatewaysIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = application_gatewaysIcon;
   return node;
 }
 
 export function AtmMultistack(label?: string, options?: Record<string, unknown>) {
   const node = _Networking(label ?? "AtmMultistack", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = atm_multistackIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = atm_multistackIcon;
   return node;
 }
 
 export function AzureCommunicationsGateway(label?: string, options?: Record<string, unknown>) {
   const node = _Networking(label ?? "AzureCommunicationsGateway", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_communications_gatewayIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = azure_communications_gatewayIcon;
   return node;
 }
 
 export function AzureFirewallManager(label?: string, options?: Record<string, unknown>) {
   const node = _Networking(label ?? "AzureFirewallManager", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_firewall_managerIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = azure_firewall_managerIcon;
   return node;
 }
 
 export function AzureFirewallPolicy(label?: string, options?: Record<string, unknown>) {
   const node = _Networking(label ?? "AzureFirewallPolicy", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_firewall_policyIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = azure_firewall_policyIcon;
   return node;
 }
 
 export function Bastions(label?: string, options?: Record<string, unknown>) {
   const node = _Networking(label ?? "Bastions", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = bastionsIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = bastionsIcon;
   return node;
 }
 
 export function CDNProfiles(label?: string, options?: Record<string, unknown>) {
   const node = _Networking(label ?? "CDNProfiles", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = cdn_profilesIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = cdn_profilesIcon;
   return node;
 }
 
 export function ConnectedCache(label?: string, options?: Record<string, unknown>) {
   const node = _Networking(label ?? "ConnectedCache", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = connected_cacheIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = connected_cacheIcon;
   return node;
 }
 
 export function Connections(label?: string, options?: Record<string, unknown>) {
   const node = _Networking(label ?? "Connections", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = connectionsIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = connectionsIcon;
   return node;
 }
 
 export function DDOSProtectionPlans(label?: string, options?: Record<string, unknown>) {
   const node = _Networking(label ?? "DDOSProtectionPlans", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = ddos_protection_plansIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = ddos_protection_plansIcon;
   return node;
 }
 
 export function DNSMultistack(label?: string, options?: Record<string, unknown>) {
   const node = _Networking(label ?? "DNSMultistack", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = dns_multistackIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = dns_multistackIcon;
   return node;
 }
 
 export function DNSPrivateResolver(label?: string, options?: Record<string, unknown>) {
   const node = _Networking(label ?? "DNSPrivateResolver", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = dns_private_resolverIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = dns_private_resolverIcon;
   return node;
 }
 
 export function DNSSecurityPolicy(label?: string, options?: Record<string, unknown>) {
   const node = _Networking(label ?? "DNSSecurityPolicy", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = dns_security_policyIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = dns_security_policyIcon;
   return node;
 }
 
 export function DNSZones(label?: string, options?: Record<string, unknown>) {
   const node = _Networking(label ?? "DNSZones", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = dns_zonesIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = dns_zonesIcon;
   return node;
 }
 
 export function ExpressrouteCircuits(label?: string, options?: Record<string, unknown>) {
   const node = _Networking(label ?? "ExpressrouteCircuits", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = expressroute_circuitsIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = expressroute_circuitsIcon;
   return node;
 }
 
 export function Firewalls(label?: string, options?: Record<string, unknown>) {
   const node = _Networking(label ?? "Firewalls", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = firewallsIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = firewallsIcon;
   return node;
 }
 
 export function FrontDoorAndCDNProfiles(label?: string, options?: Record<string, unknown>) {
   const node = _Networking(label ?? "FrontDoorAndCDNProfiles", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = front_door_and_cdn_profilesIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = front_door_and_cdn_profilesIcon;
   return node;
 }
 
 export function IpAddressManager(label?: string, options?: Record<string, unknown>) {
   const node = _Networking(label ?? "IpAddressManager", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = ip_address_managerIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = ip_address_managerIcon;
   return node;
 }
 
 export function IpGroups(label?: string, options?: Record<string, unknown>) {
   const node = _Networking(label ?? "IpGroups", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = ip_groupsIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = ip_groupsIcon;
   return node;
 }
 
 export function LoadBalancerHub(label?: string, options?: Record<string, unknown>) {
   const node = _Networking(label ?? "LoadBalancerHub", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = load_balancer_hubIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = load_balancer_hubIcon;
   return node;
 }
 
 export function LoadBalancers(label?: string, options?: Record<string, unknown>) {
   const node = _Networking(label ?? "LoadBalancers", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = load_balancersIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = load_balancersIcon;
   return node;
 }
 
 export function LocalNetworkGateways(label?: string, options?: Record<string, unknown>) {
   const node = _Networking(label ?? "LocalNetworkGateways", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = local_network_gatewaysIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = local_network_gatewaysIcon;
   return node;
 }
 
 export function Nat(label?: string, options?: Record<string, unknown>) {
   const node = _Networking(label ?? "Nat", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = natIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = natIcon;
   return node;
 }
 
 export function NetworkInterfaces(label?: string, options?: Record<string, unknown>) {
   const node = _Networking(label ?? "NetworkInterfaces", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = network_interfacesIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = network_interfacesIcon;
   return node;
 }
 
 export function NetworkSecurityGroups(label?: string, options?: Record<string, unknown>) {
   const node = _Networking(label ?? "NetworkSecurityGroups", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = network_security_groupsIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = network_security_groupsIcon;
   return node;
 }
 
 export function NetworkWatcher(label?: string, options?: Record<string, unknown>) {
   const node = _Networking(label ?? "NetworkWatcher", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = network_watcherIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = network_watcherIcon;
   return node;
 }
 
 export function OnPremisesDataGateways(label?: string, options?: Record<string, unknown>) {
   const node = _Networking(label ?? "OnPremisesDataGateways", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = on_premises_data_gatewaysIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = on_premises_data_gatewaysIcon;
   return node;
 }
 
 export function PrivateLinkService(label?: string, options?: Record<string, unknown>) {
   const node = _Networking(label ?? "PrivateLinkService", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = private_link_serviceIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = private_link_serviceIcon;
   return node;
 }
 
 export function PrivateLinkServices(label?: string, options?: Record<string, unknown>) {
   const node = _Networking(label ?? "PrivateLinkServices", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = private_link_servicesIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = private_link_servicesIcon;
   return node;
 }
 
 export function PrivateLink(label?: string, options?: Record<string, unknown>) {
   const node = _Networking(label ?? "PrivateLink", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = private_linkIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = private_linkIcon;
   return node;
 }
 
 export function ProximityPlacementGroups(label?: string, options?: Record<string, unknown>) {
   const node = _Networking(label ?? "ProximityPlacementGroups", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = proximity_placement_groupsIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = proximity_placement_groupsIcon;
   return node;
 }
 
 export function PublicIpAddressesClassic(label?: string, options?: Record<string, unknown>) {
   const node = _Networking(label ?? "PublicIpAddressesClassic", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = public_ip_addresses_classicIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = public_ip_addresses_classicIcon;
   return node;
 }
 
 export function PublicIpAddresses(label?: string, options?: Record<string, unknown>) {
   const node = _Networking(label ?? "PublicIpAddresses", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = public_ip_addressesIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = public_ip_addressesIcon;
   return node;
 }
 
 export function PublicIpPrefixes(label?: string, options?: Record<string, unknown>) {
   const node = _Networking(label ?? "PublicIpPrefixes", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = public_ip_prefixesIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = public_ip_prefixesIcon;
   return node;
 }
 
 export function ReservedIpAddressesClassic(label?: string, options?: Record<string, unknown>) {
   const node = _Networking(label ?? "ReservedIpAddressesClassic", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = reserved_ip_addresses_classicIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = reserved_ip_addresses_classicIcon;
   return node;
 }
 
 export function ResourceManagementPrivateLink(label?: string, options?: Record<string, unknown>) {
   const node = _Networking(label ?? "ResourceManagementPrivateLink", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = resource_management_private_linkIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] =
+    resource_management_private_linkIcon;
   return node;
 }
 
 export function RouteFilters(label?: string, options?: Record<string, unknown>) {
   const node = _Networking(label ?? "RouteFilters", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = route_filtersIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = route_filtersIcon;
   return node;
 }
 
 export function RouteTables(label?: string, options?: Record<string, unknown>) {
   const node = _Networking(label ?? "RouteTables", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = route_tablesIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = route_tablesIcon;
   return node;
 }
 
 export function ServiceEndpointPolicies(label?: string, options?: Record<string, unknown>) {
   const node = _Networking(label ?? "ServiceEndpointPolicies", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = service_endpoint_policiesIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = service_endpoint_policiesIcon;
   return node;
 }
 
 export function SpotVM(label?: string, options?: Record<string, unknown>) {
   const node = _Networking(label ?? "SpotVM", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = spot_vmIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = spot_vmIcon;
   return node;
 }
 
 export function SpotVmss(label?: string, options?: Record<string, unknown>) {
   const node = _Networking(label ?? "SpotVmss", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = spot_vmssIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = spot_vmssIcon;
   return node;
 }
 
 export function Subnet(label?: string, options?: Record<string, unknown>) {
   const node = _Networking(label ?? "Subnet", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = subnetIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = subnetIcon;
   return node;
 }
 
 export function TrafficController(label?: string, options?: Record<string, unknown>) {
   const node = _Networking(label ?? "TrafficController", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = traffic_controllerIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = traffic_controllerIcon;
   return node;
 }
 
 export function TrafficManagerProfiles(label?: string, options?: Record<string, unknown>) {
   const node = _Networking(label ?? "TrafficManagerProfiles", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = traffic_manager_profilesIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = traffic_manager_profilesIcon;
   return node;
 }
 
 export function VirtualNetworkGateways(label?: string, options?: Record<string, unknown>) {
   const node = _Networking(label ?? "VirtualNetworkGateways", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = virtual_network_gatewaysIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = virtual_network_gatewaysIcon;
   return node;
 }
 
 export function VirtualNetworksClassic(label?: string, options?: Record<string, unknown>) {
   const node = _Networking(label ?? "VirtualNetworksClassic", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = virtual_networks_classicIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = virtual_networks_classicIcon;
   return node;
 }
 
 export function VirtualNetworks(label?: string, options?: Record<string, unknown>) {
   const node = _Networking(label ?? "VirtualNetworks", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = virtual_networksIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = virtual_networksIcon;
   return node;
 }
 
 export function VirtualRouter(label?: string, options?: Record<string, unknown>) {
   const node = _Networking(label ?? "VirtualRouter", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = virtual_routerIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = virtual_routerIcon;
   return node;
 }
 
 export function VirtualWanHub(label?: string, options?: Record<string, unknown>) {
   const node = _Networking(label ?? "VirtualWanHub", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = virtual_wan_hubIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = virtual_wan_hubIcon;
   return node;
 }
 
 export function VirtualWans(label?: string, options?: Record<string, unknown>) {
   const node = _Networking(label ?? "VirtualWans", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = virtual_wansIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = virtual_wansIcon;
   return node;
 }
 
@@ -362,7 +363,7 @@ export function WebApplicationFirewallPolicieswaf(
   options?: Record<string, unknown>,
 ) {
   const node = _Networking(label ?? "WebApplicationFirewallPolicieswaf", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl =
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] =
     web_application_firewall_policieswafIcon;
   return node;
 }

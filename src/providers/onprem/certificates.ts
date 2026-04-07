@@ -4,18 +4,18 @@ import lets_encryptIcon from "../../../resources/onprem/certificates/lets-encryp
 
 function _Certificates(label?: string, options?: Record<string, unknown>) {
   const node = _Onprem(label, options);
-  (node as unknown as Record<string, unknown>)._type = "certificates";
+  (node as unknown as Record<string, unknown>)["~type"] = "certificates";
   return node;
 }
 
 export function CertManager(label?: string, options?: Record<string, unknown>) {
   const node = _Certificates(label ?? "CertManager", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = cert_managerIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = cert_managerIcon;
   return node;
 }
 
 export function LetsEncrypt(label?: string, options?: Record<string, unknown>) {
   const node = _Certificates(label ?? "LetsEncrypt", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = lets_encryptIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = lets_encryptIcon;
   return node;
 }

@@ -8,42 +8,42 @@ import savings_plansIcon from "../../../resources/aws/cost/savings-plans.png";
 
 function _Cost(label?: string, options?: Record<string, unknown>) {
   const node = _Aws(label, options);
-  (node as unknown as Record<string, unknown>)._type = "cost";
+  (node as unknown as Record<string, unknown>)["~type"] = "cost";
   return node;
 }
 
 export function Budgets(label?: string, options?: Record<string, unknown>) {
   const node = _Cost(label ?? "Budgets", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = budgetsIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = budgetsIcon;
   return node;
 }
 
 export function CostAndUsageReport(label?: string, options?: Record<string, unknown>) {
   const node = _Cost(label ?? "CostAndUsageReport", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = cost_and_usage_reportIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = cost_and_usage_reportIcon;
   return node;
 }
 
 export function CostExplorer(label?: string, options?: Record<string, unknown>) {
   const node = _Cost(label ?? "CostExplorer", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = cost_explorerIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = cost_explorerIcon;
   return node;
 }
 
 export function CostManagement(label?: string, options?: Record<string, unknown>) {
   const node = _Cost(label ?? "CostManagement", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = cost_managementIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = cost_managementIcon;
   return node;
 }
 
 export function ReservedInstanceReporting(label?: string, options?: Record<string, unknown>) {
   const node = _Cost(label ?? "ReservedInstanceReporting", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = reserved_instance_reportingIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = reserved_instance_reportingIcon;
   return node;
 }
 
 export function SavingsPlans(label?: string, options?: Record<string, unknown>) {
   const node = _Cost(label ?? "SavingsPlans", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = savings_plansIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = savings_plansIcon;
   return node;
 }

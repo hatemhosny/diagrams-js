@@ -44,127 +44,128 @@ import wavelengthIcon from "../../../resources/aws/compute/wavelength.png";
 
 function _Compute(label?: string, options?: Record<string, unknown>) {
   const node = _Aws(label, options);
-  (node as unknown as Record<string, unknown>)._type = "compute";
+  (node as unknown as Record<string, unknown>)["~type"] = "compute";
   return node;
 }
 
 export function AppRunner(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "AppRunner", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = app_runnerIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = app_runnerIcon;
   return node;
 }
 
 export function ApplicationAutoScaling(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "ApplicationAutoScaling", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = application_auto_scalingIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = application_auto_scalingIcon;
   return node;
 }
 
 export function Batch(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "Batch", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = batchIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = batchIcon;
   return node;
 }
 
 export function ComputeOptimizer(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "ComputeOptimizer", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = compute_optimizerIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = compute_optimizerIcon;
   return node;
 }
 
 export function Compute(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "Compute", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = computeIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = computeIcon;
   return node;
 }
 
 export function EC2Ami(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "EC2Ami", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = ec2_amiIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = ec2_amiIcon;
   return node;
 }
 
 export function EC2AutoScaling(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "EC2AutoScaling", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = ec2_auto_scalingIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = ec2_auto_scalingIcon;
   return node;
 }
 
 export function EC2ContainerRegistryImage(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "EC2ContainerRegistryImage", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = ec2_container_registry_imageIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = ec2_container_registry_imageIcon;
   return node;
 }
 
 export function EC2ContainerRegistryRegistry(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "EC2ContainerRegistryRegistry", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = ec2_container_registry_registryIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] =
+    ec2_container_registry_registryIcon;
   return node;
 }
 
 export function EC2ContainerRegistry(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "EC2ContainerRegistry", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = ec2_container_registryIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = ec2_container_registryIcon;
   return node;
 }
 
 export function EC2ElasticIpAddress(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "EC2ElasticIpAddress", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = ec2_elastic_ip_addressIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = ec2_elastic_ip_addressIcon;
   return node;
 }
 
 export function EC2ImageBuilder(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "EC2ImageBuilder", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = ec2_image_builderIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = ec2_image_builderIcon;
   return node;
 }
 
 export function EC2Instance(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "EC2Instance", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = ec2_instanceIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = ec2_instanceIcon;
   return node;
 }
 
 export function EC2Instances(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "EC2Instances", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = ec2_instancesIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = ec2_instancesIcon;
   return node;
 }
 
 export function EC2Rescue(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "EC2Rescue", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = ec2_rescueIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = ec2_rescueIcon;
   return node;
 }
 
 export function EC2SpotInstance(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "EC2SpotInstance", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = ec2_spot_instanceIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = ec2_spot_instanceIcon;
   return node;
 }
 
 export function EC2(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "EC2", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = ec2Icon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = ec2Icon;
   return node;
 }
 
 export function ElasticBeanstalkApplication(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "ElasticBeanstalkApplication", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = elastic_beanstalk_applicationIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = elastic_beanstalk_applicationIcon;
   return node;
 }
 
 export function ElasticBeanstalkDeployment(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "ElasticBeanstalkDeployment", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = elastic_beanstalk_deploymentIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = elastic_beanstalk_deploymentIcon;
   return node;
 }
 
 export function ElasticBeanstalk(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "ElasticBeanstalk", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = elastic_beanstalkIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = elastic_beanstalkIcon;
   return node;
 }
 
@@ -173,7 +174,7 @@ export function ElasticContainerServiceContainer(
   options?: Record<string, unknown>,
 ) {
   const node = _Compute(label ?? "ElasticContainerServiceContainer", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl =
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] =
     elastic_container_service_containerIcon;
   return node;
 }
@@ -183,128 +184,130 @@ export function ElasticContainerServiceServiceConnect(
   options?: Record<string, unknown>,
 ) {
   const node = _Compute(label ?? "ElasticContainerServiceServiceConnect", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl =
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] =
     elastic_container_service_service_connectIcon;
   return node;
 }
 
 export function ElasticContainerServiceService(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "ElasticContainerServiceService", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = elastic_container_service_serviceIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] =
+    elastic_container_service_serviceIcon;
   return node;
 }
 
 export function ElasticContainerServiceTask(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "ElasticContainerServiceTask", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = elastic_container_service_taskIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = elastic_container_service_taskIcon;
   return node;
 }
 
 export function ElasticContainerService(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "ElasticContainerService", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = elastic_container_serviceIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = elastic_container_serviceIcon;
   return node;
 }
 
 export function ElasticKubernetesService(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "ElasticKubernetesService", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = elastic_kubernetes_serviceIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = elastic_kubernetes_serviceIcon;
   return node;
 }
 
 export function Fargate(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "Fargate", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = fargateIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = fargateIcon;
   return node;
 }
 
 export function LambdaFunction(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "LambdaFunction", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = lambda_functionIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = lambda_functionIcon;
   return node;
 }
 
 export function Lambda(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "Lambda", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = lambdaIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = lambdaIcon;
   return node;
 }
 
 export function Lightsail(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "Lightsail", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = lightsailIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = lightsailIcon;
   return node;
 }
 
 export function LocalZones(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "LocalZones", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = local_zonesIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = local_zonesIcon;
   return node;
 }
 
 export function Outposts(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "Outposts", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = outpostsIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = outpostsIcon;
   return node;
 }
 
 export function ServerlessApplicationRepository(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "ServerlessApplicationRepository", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = serverless_application_repositoryIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] =
+    serverless_application_repositoryIcon;
   return node;
 }
 
 export function ThinkboxDeadline(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "ThinkboxDeadline", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = thinkbox_deadlineIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = thinkbox_deadlineIcon;
   return node;
 }
 
 export function ThinkboxDraft(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "ThinkboxDraft", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = thinkbox_draftIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = thinkbox_draftIcon;
   return node;
 }
 
 export function ThinkboxFrost(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "ThinkboxFrost", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = thinkbox_frostIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = thinkbox_frostIcon;
   return node;
 }
 
 export function ThinkboxKrakatoa(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "ThinkboxKrakatoa", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = thinkbox_krakatoaIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = thinkbox_krakatoaIcon;
   return node;
 }
 
 export function ThinkboxSequoia(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "ThinkboxSequoia", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = thinkbox_sequoiaIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = thinkbox_sequoiaIcon;
   return node;
 }
 
 export function ThinkboxStoke(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "ThinkboxStoke", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = thinkbox_stokeIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = thinkbox_stokeIcon;
   return node;
 }
 
 export function ThinkboxXmesh(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "ThinkboxXmesh", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = thinkbox_xmeshIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = thinkbox_xmeshIcon;
   return node;
 }
 
 export function VmwareCloudOnAWS(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "VmwareCloudOnAWS", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = vmware_cloud_on_awsIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = vmware_cloud_on_awsIcon;
   return node;
 }
 
 export function Wavelength(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "Wavelength", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = wavelengthIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = wavelengthIcon;
   return node;
 }
 

@@ -14,79 +14,79 @@ import transfer_for_sftpIcon from "../../../resources/aws/migration/transfer-for
 
 function _Migration(label?: string, options?: Record<string, unknown>) {
   const node = _Aws(label, options);
-  (node as unknown as Record<string, unknown>)._type = "migration";
+  (node as unknown as Record<string, unknown>)["~type"] = "migration";
   return node;
 }
 
 export function ApplicationDiscoveryService(label?: string, options?: Record<string, unknown>) {
   const node = _Migration(label ?? "ApplicationDiscoveryService", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = application_discovery_serviceIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = application_discovery_serviceIcon;
   return node;
 }
 
 export function CloudendureMigration(label?: string, options?: Record<string, unknown>) {
   const node = _Migration(label ?? "CloudendureMigration", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = cloudendure_migrationIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = cloudendure_migrationIcon;
   return node;
 }
 
 export function DatabaseMigrationService(label?: string, options?: Record<string, unknown>) {
   const node = _Migration(label ?? "DatabaseMigrationService", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = database_migration_serviceIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = database_migration_serviceIcon;
   return node;
 }
 
 export function DatasyncAgent(label?: string, options?: Record<string, unknown>) {
   const node = _Migration(label ?? "DatasyncAgent", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = datasync_agentIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = datasync_agentIcon;
   return node;
 }
 
 export function Datasync(label?: string, options?: Record<string, unknown>) {
   const node = _Migration(label ?? "Datasync", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = datasyncIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = datasyncIcon;
   return node;
 }
 
 export function MigrationAndTransfer(label?: string, options?: Record<string, unknown>) {
   const node = _Migration(label ?? "MigrationAndTransfer", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = migration_and_transferIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = migration_and_transferIcon;
   return node;
 }
 
 export function MigrationHub(label?: string, options?: Record<string, unknown>) {
   const node = _Migration(label ?? "MigrationHub", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = migration_hubIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = migration_hubIcon;
   return node;
 }
 
 export function ServerMigrationService(label?: string, options?: Record<string, unknown>) {
   const node = _Migration(label ?? "ServerMigrationService", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = server_migration_serviceIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = server_migration_serviceIcon;
   return node;
 }
 
 export function SnowballEdge(label?: string, options?: Record<string, unknown>) {
   const node = _Migration(label ?? "SnowballEdge", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = snowball_edgeIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = snowball_edgeIcon;
   return node;
 }
 
 export function Snowball(label?: string, options?: Record<string, unknown>) {
   const node = _Migration(label ?? "Snowball", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = snowballIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = snowballIcon;
   return node;
 }
 
 export function Snowmobile(label?: string, options?: Record<string, unknown>) {
   const node = _Migration(label ?? "Snowmobile", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = snowmobileIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = snowmobileIcon;
   return node;
 }
 
 export function TransferForSftp(label?: string, options?: Record<string, unknown>) {
   const node = _Migration(label ?? "TransferForSftp", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = transfer_for_sftpIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = transfer_for_sftpIcon;
   return node;
 }
 

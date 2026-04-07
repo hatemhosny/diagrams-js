@@ -20,7 +20,7 @@ describe("Node shape default behavior", () => {
     const diagram = Diagram("Test", {});
     // Simulate a provider node with icon
     const node = Node("Icon Node");
-    (node as unknown as { _iconDataUrl: string })._iconDataUrl = "data:image/png;base64,test";
+    (node as unknown as { "~iconDataUrl": string })["~iconDataUrl"] = "data:image/png;base64,test";
     diagram.add(node);
 
     const dot = await diagram.render({ format: "dot" });
@@ -39,7 +39,7 @@ describe("Node shape default behavior", () => {
     const diagram = Diagram("Test", {});
     // Simulate a provider node with icon but explicit shape
     const node = Node("Icon Node", { shape: "circle" });
-    (node as unknown as { _iconDataUrl: string })._iconDataUrl = "data:image/png;base64,test";
+    (node as unknown as { "~iconDataUrl": string })["~iconDataUrl"] = "data:image/png;base64,test";
     diagram.add(node);
 
     const dot = await diagram.render({ format: "dot" });
@@ -64,7 +64,8 @@ describe("Node shape default behavior", () => {
     const diagram = Diagram("Test", {});
     const plainNode = Node("Plain Node");
     const iconNode = Node("Icon Node");
-    (iconNode as unknown as { _iconDataUrl: string })._iconDataUrl = "data:image/png;base64,test";
+    (iconNode as unknown as { "~iconDataUrl": string })["~iconDataUrl"] =
+      "data:image/png;base64,test";
 
     diagram.add(plainNode);
     diagram.add(iconNode);
@@ -102,7 +103,7 @@ describe("Node shape default behavior", () => {
       nodeId: "custom1",
     });
     // Override the shape after creation
-    (customNode as unknown as { _attrs: Record<string, string> })._attrs.shape = "ellipse";
+    (customNode as unknown as { "~attrs": Record<string, string> })["~attrs"].shape = "ellipse";
     diagram.add(customNode);
 
     const dot = await diagram.render({ format: "dot" });

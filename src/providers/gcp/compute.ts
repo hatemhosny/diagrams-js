@@ -14,79 +14,79 @@ import runIcon from "../../../resources/gcp/compute/run.png";
 
 function _Compute(label?: string, options?: Record<string, unknown>) {
   const node = _Gcp(label, options);
-  (node as unknown as Record<string, unknown>)._type = "compute";
+  (node as unknown as Record<string, unknown>)["~type"] = "compute";
   return node;
 }
 
 export function AppEngine(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "AppEngine", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = app_engineIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = app_engineIcon;
   return node;
 }
 
 export function BinaryAuthorization(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "BinaryAuthorization", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = binary_authorizationIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = binary_authorizationIcon;
   return node;
 }
 
 export function ComputeEngine(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "ComputeEngine", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = compute_engineIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = compute_engineIcon;
   return node;
 }
 
 export function ContainerOptimizedOS(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "ContainerOptimizedOS", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = container_optimized_osIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = container_optimized_osIcon;
   return node;
 }
 
 export function Functions(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "Functions", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = functionsIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = functionsIcon;
   return node;
 }
 
 export function GKEOnPrem(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "GKEOnPrem", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = gke_on_premIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = gke_on_premIcon;
   return node;
 }
 
 export function GPU(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "GPU", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = gpuIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = gpuIcon;
   return node;
 }
 
 export function KubernetesEngine(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "KubernetesEngine", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = kubernetes_engineIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = kubernetes_engineIcon;
   return node;
 }
 
 export function OSConfigurationManagement(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "OSConfigurationManagement", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = os_configuration_managementIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = os_configuration_managementIcon;
   return node;
 }
 
 export function OSInventoryManagement(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "OSInventoryManagement", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = os_inventory_managementIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = os_inventory_managementIcon;
   return node;
 }
 
 export function OSPatchManagement(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "OSPatchManagement", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = os_patch_managementIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = os_patch_managementIcon;
   return node;
 }
 
 export function Run(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "Run", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = runIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = runIcon;
   return node;
 }
 

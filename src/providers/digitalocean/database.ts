@@ -6,30 +6,30 @@ import dbaas_standbyIcon from "../../../resources/digitalocean/database/dbaas-st
 
 function _Database(label?: string, options?: Record<string, unknown>) {
   const node = _Digitalocean(label, options);
-  (node as unknown as Record<string, unknown>)._type = "database";
+  (node as unknown as Record<string, unknown>)["~type"] = "database";
   return node;
 }
 
 export function DbaasPrimaryStandbyMore(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "DbaasPrimaryStandbyMore", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = dbaas_primary_standby_moreIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = dbaas_primary_standby_moreIcon;
   return node;
 }
 
 export function DbaasPrimary(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "DbaasPrimary", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = dbaas_primaryIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = dbaas_primaryIcon;
   return node;
 }
 
 export function DbaasReadOnly(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "DbaasReadOnly", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = dbaas_read_onlyIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = dbaas_read_onlyIcon;
   return node;
 }
 
 export function DbaasStandby(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "DbaasStandby", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = dbaas_standbyIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = dbaas_standbyIcon;
   return node;
 }

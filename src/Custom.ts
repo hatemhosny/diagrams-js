@@ -18,7 +18,7 @@ import { Node } from "./Node.js";
  * ```
  */
 export interface CustomNode {
-  _iconUrl: string;
+  ["~iconUrl"]: string;
   getIconUrl(): string;
   loadIcon(): Promise<string | null>;
 }
@@ -50,19 +50,19 @@ export function Custom(
     imagescale: "true",
     // Then apply user options (which will override defaults)
     ...options,
-    // If it's a data URL, set it as _iconDataUrl so Node._register tracks it
-    ...(isDataUrl ? { _iconDataUrl: iconUrl } : {}),
+    // If it's a data URL, set it as ~iconDataUrl so Node.~register tracks it
+    ...(isDataUrl ? { ["~iconDataUrl"]: iconUrl } : {}),
   });
 
   const customNode = {
     ...baseNode,
-    _iconUrl: iconUrl,
-    // Override _iconDataUrl getter/setter to ensure custom icons are tracked
-    get _iconDataUrl(): string | null {
+    ["~iconUrl"]: iconUrl,
+    // Override ~iconDataUrl getter/setter to ensure custom icons are tracked
+    get ["~iconDataUrl"](): string | null {
       // Return the iconUrl if it's a data URL, otherwise null (will be loaded async)
       return iconUrl.startsWith("data:") ? iconUrl : null;
     },
-    set _iconDataUrl(_value: string | null) {
+    set ["~iconDataUrl"](_value: string | null) {
       // No-op: Custom nodes manage their own icon data
     },
 

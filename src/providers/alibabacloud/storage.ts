@@ -10,55 +10,55 @@ import object_table_storeIcon from "../../../resources/alibabacloud/storage/obje
 
 function _Storage(label?: string, options?: Record<string, unknown>) {
   const node = _Alibabacloud(label, options);
-  (node as unknown as Record<string, unknown>)._type = "storage";
+  (node as unknown as Record<string, unknown>)["~type"] = "storage";
   return node;
 }
 
 export function CloudStorageGateway(label?: string, options?: Record<string, unknown>) {
   const node = _Storage(label ?? "CloudStorageGateway", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = cloud_storage_gatewayIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = cloud_storage_gatewayIcon;
   return node;
 }
 
 export function FileStorageHdfs(label?: string, options?: Record<string, unknown>) {
   const node = _Storage(label ?? "FileStorageHdfs", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = file_storage_hdfsIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = file_storage_hdfsIcon;
   return node;
 }
 
 export function FileStorageNas(label?: string, options?: Record<string, unknown>) {
   const node = _Storage(label ?? "FileStorageNas", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = file_storage_nasIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = file_storage_nasIcon;
   return node;
 }
 
 export function HybridBackupRecovery(label?: string, options?: Record<string, unknown>) {
   const node = _Storage(label ?? "HybridBackupRecovery", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = hybrid_backup_recoveryIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = hybrid_backup_recoveryIcon;
   return node;
 }
 
 export function HybridCloudDisasterRecovery(label?: string, options?: Record<string, unknown>) {
   const node = _Storage(label ?? "HybridCloudDisasterRecovery", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = hybrid_cloud_disaster_recoveryIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = hybrid_cloud_disaster_recoveryIcon;
   return node;
 }
 
 export function Imm(label?: string, options?: Record<string, unknown>) {
   const node = _Storage(label ?? "Imm", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = immIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = immIcon;
   return node;
 }
 
 export function ObjectStorageService(label?: string, options?: Record<string, unknown>) {
   const node = _Storage(label ?? "ObjectStorageService", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = object_storage_serviceIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = object_storage_serviceIcon;
   return node;
 }
 
 export function ObjectTableStore(label?: string, options?: Record<string, unknown>) {
   const node = _Storage(label ?? "ObjectTableStore", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = object_table_storeIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = object_table_storeIcon;
   return node;
 }
 

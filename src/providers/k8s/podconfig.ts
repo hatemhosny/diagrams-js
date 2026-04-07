@@ -4,19 +4,19 @@ import secretIcon from "../../../resources/k8s/podconfig/secret.png";
 
 function _Podconfig(label?: string, options?: Record<string, unknown>) {
   const node = _K8s(label, options);
-  (node as unknown as Record<string, unknown>)._type = "podconfig";
+  (node as unknown as Record<string, unknown>)["~type"] = "podconfig";
   return node;
 }
 
 export function CM(label?: string, options?: Record<string, unknown>) {
   const node = _Podconfig(label ?? "CM", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = cmIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = cmIcon;
   return node;
 }
 
 export function Secret(label?: string, options?: Record<string, unknown>) {
   const node = _Podconfig(label ?? "Secret", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = secretIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = secretIcon;
   return node;
 }
 

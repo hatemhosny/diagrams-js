@@ -447,7 +447,7 @@ describe("Image Rendering", () => {
 
     // Create a node with icon data URL so icon attributes are set
     const server = Node("Server");
-    (server as unknown as { _iconDataUrl: string })._iconDataUrl =
+    (server as unknown as { "~iconDataUrl": string })["~iconDataUrl"] =
       "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==";
     diagram.add(server);
 

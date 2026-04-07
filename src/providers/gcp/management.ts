@@ -6,30 +6,30 @@ import supportIcon from "../../../resources/gcp/management/support.png";
 
 function _Management(label?: string, options?: Record<string, unknown>) {
   const node = _Gcp(label, options);
-  (node as unknown as Record<string, unknown>)._type = "management";
+  (node as unknown as Record<string, unknown>)["~type"] = "management";
   return node;
 }
 
 export function Billing(label?: string, options?: Record<string, unknown>) {
   const node = _Management(label ?? "Billing", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = billingIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = billingIcon;
   return node;
 }
 
 export function Project(label?: string, options?: Record<string, unknown>) {
   const node = _Management(label ?? "Project", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = projectIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = projectIcon;
   return node;
 }
 
 export function Quotas(label?: string, options?: Record<string, unknown>) {
   const node = _Management(label ?? "Quotas", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = quotasIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = quotasIcon;
   return node;
 }
 
 export function Support(label?: string, options?: Record<string, unknown>) {
   const node = _Management(label ?? "Support", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = supportIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = supportIcon;
   return node;
 }

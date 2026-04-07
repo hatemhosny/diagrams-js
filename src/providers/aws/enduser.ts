@@ -7,36 +7,36 @@ import workspacesIcon from "../../../resources/aws/enduser/workspaces.png";
 
 function _Enduser(label?: string, options?: Record<string, unknown>) {
   const node = _Aws(label, options);
-  (node as unknown as Record<string, unknown>)._type = "enduser";
+  (node as unknown as Record<string, unknown>)["~type"] = "enduser";
   return node;
 }
 
 export function Appstream20(label?: string, options?: Record<string, unknown>) {
   const node = _Enduser(label ?? "Appstream20", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = appstream_2_0Icon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = appstream_2_0Icon;
   return node;
 }
 
 export function DesktopAndAppStreaming(label?: string, options?: Record<string, unknown>) {
   const node = _Enduser(label ?? "DesktopAndAppStreaming", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = desktop_and_app_streamingIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = desktop_and_app_streamingIcon;
   return node;
 }
 
 export function Workdocs(label?: string, options?: Record<string, unknown>) {
   const node = _Enduser(label ?? "Workdocs", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = workdocsIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = workdocsIcon;
   return node;
 }
 
 export function Worklink(label?: string, options?: Record<string, unknown>) {
   const node = _Enduser(label ?? "Worklink", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = worklinkIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = worklinkIcon;
   return node;
 }
 
 export function Workspaces(label?: string, options?: Record<string, unknown>) {
   const node = _Enduser(label ?? "Workspaces", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = workspacesIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = workspacesIcon;
   return node;
 }

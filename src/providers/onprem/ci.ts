@@ -11,61 +11,61 @@ import zuulciIcon from "../../../resources/onprem/ci/zuulci.png";
 
 function _Ci(label?: string, options?: Record<string, unknown>) {
   const node = _Onprem(label, options);
-  (node as unknown as Record<string, unknown>)._type = "ci";
+  (node as unknown as Record<string, unknown>)["~type"] = "ci";
   return node;
 }
 
 export function Circleci(label?: string, options?: Record<string, unknown>) {
   const node = _Ci(label ?? "Circleci", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = circleciIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = circleciIcon;
   return node;
 }
 
 export function Concourseci(label?: string, options?: Record<string, unknown>) {
   const node = _Ci(label ?? "Concourseci", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = concourseciIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = concourseciIcon;
   return node;
 }
 
 export function Droneci(label?: string, options?: Record<string, unknown>) {
   const node = _Ci(label ?? "Droneci", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = droneciIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = droneciIcon;
   return node;
 }
 
 export function GithubActions(label?: string, options?: Record<string, unknown>) {
   const node = _Ci(label ?? "GithubActions", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = github_actionsIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = github_actionsIcon;
   return node;
 }
 
 export function Gitlabci(label?: string, options?: Record<string, unknown>) {
   const node = _Ci(label ?? "Gitlabci", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = gitlabciIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = gitlabciIcon;
   return node;
 }
 
 export function Jenkins(label?: string, options?: Record<string, unknown>) {
   const node = _Ci(label ?? "Jenkins", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = jenkinsIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = jenkinsIcon;
   return node;
 }
 
 export function Teamcity(label?: string, options?: Record<string, unknown>) {
   const node = _Ci(label ?? "Teamcity", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = teamcityIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = teamcityIcon;
   return node;
 }
 
 export function Travisci(label?: string, options?: Record<string, unknown>) {
   const node = _Ci(label ?? "Travisci", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = travisciIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = travisciIcon;
   return node;
 }
 
 export function Zuulci(label?: string, options?: Record<string, unknown>) {
   const node = _Ci(label ?? "Zuulci", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = zuulciIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = zuulciIcon;
   return node;
 }
 

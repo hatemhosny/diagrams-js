@@ -34,139 +34,139 @@ import translator_textIcon from "../../../resources/azure/aimachinelearning/tran
 
 function _Aimachinelearning(label?: string, options?: Record<string, unknown>) {
   const node = _Azure(label, options);
-  (node as unknown as Record<string, unknown>)._type = "aimachinelearning";
+  (node as unknown as Record<string, unknown>)["~type"] = "aimachinelearning";
   return node;
 }
 
 export function AIStudio(label?: string, options?: Record<string, unknown>) {
   const node = _Aimachinelearning(label ?? "AIStudio", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = ai_studioIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = ai_studioIcon;
   return node;
 }
 
 export function AnomalyDetector(label?: string, options?: Record<string, unknown>) {
   const node = _Aimachinelearning(label ?? "AnomalyDetector", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = anomaly_detectorIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = anomaly_detectorIcon;
   return node;
 }
 
 export function AzureAppliedAIServices(label?: string, options?: Record<string, unknown>) {
   const node = _Aimachinelearning(label ?? "AzureAppliedAIServices", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_applied_ai_servicesIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = azure_applied_ai_servicesIcon;
   return node;
 }
 
 export function AzureExperimentationStudio(label?: string, options?: Record<string, unknown>) {
   const node = _Aimachinelearning(label ?? "AzureExperimentationStudio", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_experimentation_studioIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = azure_experimentation_studioIcon;
   return node;
 }
 
 export function AzureObjectUnderstanding(label?: string, options?: Record<string, unknown>) {
   const node = _Aimachinelearning(label ?? "AzureObjectUnderstanding", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_object_understandingIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = azure_object_understandingIcon;
   return node;
 }
 
 export function AzureOpenai(label?: string, options?: Record<string, unknown>) {
   const node = _Aimachinelearning(label ?? "AzureOpenai", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_openaiIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = azure_openaiIcon;
   return node;
 }
 
 export function BatchAI(label?: string, options?: Record<string, unknown>) {
   const node = _Aimachinelearning(label ?? "BatchAI", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = batch_aiIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = batch_aiIcon;
   return node;
 }
 
 export function Bonsai(label?: string, options?: Record<string, unknown>) {
   const node = _Aimachinelearning(label ?? "Bonsai", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = bonsaiIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = bonsaiIcon;
   return node;
 }
 
 export function BotServices(label?: string, options?: Record<string, unknown>) {
   const node = _Aimachinelearning(label ?? "BotServices", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = bot_servicesIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = bot_servicesIcon;
   return node;
 }
 
 export function CognitiveSearch(label?: string, options?: Record<string, unknown>) {
   const node = _Aimachinelearning(label ?? "CognitiveSearch", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = cognitive_searchIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = cognitive_searchIcon;
   return node;
 }
 
 export function CognitiveServicesDecisions(label?: string, options?: Record<string, unknown>) {
   const node = _Aimachinelearning(label ?? "CognitiveServicesDecisions", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = cognitive_services_decisionsIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = cognitive_services_decisionsIcon;
   return node;
 }
 
 export function CognitiveServices(label?: string, options?: Record<string, unknown>) {
   const node = _Aimachinelearning(label ?? "CognitiveServices", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = cognitive_servicesIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = cognitive_servicesIcon;
   return node;
 }
 
 export function ComputerVision(label?: string, options?: Record<string, unknown>) {
   const node = _Aimachinelearning(label ?? "ComputerVision", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = computer_visionIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = computer_visionIcon;
   return node;
 }
 
 export function ContentModerators(label?: string, options?: Record<string, unknown>) {
   const node = _Aimachinelearning(label ?? "ContentModerators", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = content_moderatorsIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = content_moderatorsIcon;
   return node;
 }
 
 export function CustomVision(label?: string, options?: Record<string, unknown>) {
   const node = _Aimachinelearning(label ?? "CustomVision", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = custom_visionIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = custom_visionIcon;
   return node;
 }
 
 export function FaceApis(label?: string, options?: Record<string, unknown>) {
   const node = _Aimachinelearning(label ?? "FaceApis", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = face_apisIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = face_apisIcon;
   return node;
 }
 
 export function FormRecognizers(label?: string, options?: Record<string, unknown>) {
   const node = _Aimachinelearning(label ?? "FormRecognizers", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = form_recognizersIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = form_recognizersIcon;
   return node;
 }
 
 export function GenomicsAccounts(label?: string, options?: Record<string, unknown>) {
   const node = _Aimachinelearning(label ?? "GenomicsAccounts", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = genomics_accountsIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = genomics_accountsIcon;
   return node;
 }
 
 export function Genomics(label?: string, options?: Record<string, unknown>) {
   const node = _Aimachinelearning(label ?? "Genomics", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = genomicsIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = genomicsIcon;
   return node;
 }
 
 export function ImmersiveReaders(label?: string, options?: Record<string, unknown>) {
   const node = _Aimachinelearning(label ?? "ImmersiveReaders", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = immersive_readersIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = immersive_readersIcon;
   return node;
 }
 
 export function LanguageUnderstanding(label?: string, options?: Record<string, unknown>) {
   const node = _Aimachinelearning(label ?? "LanguageUnderstanding", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = language_understandingIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = language_understandingIcon;
   return node;
 }
 
 export function Language(label?: string, options?: Record<string, unknown>) {
   const node = _Aimachinelearning(label ?? "Language", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = languageIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = languageIcon;
   return node;
 }
 
@@ -175,7 +175,7 @@ export function MachineLearningStudioClassicWebServices(
   options?: Record<string, unknown>,
 ) {
   const node = _Aimachinelearning(label ?? "MachineLearningStudioClassicWebServices", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl =
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] =
     machine_learning_studio_classic_web_servicesIcon;
   return node;
 }
@@ -185,56 +185,56 @@ export function MachineLearningStudioWebServicePlans(
   options?: Record<string, unknown>,
 ) {
   const node = _Aimachinelearning(label ?? "MachineLearningStudioWebServicePlans", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl =
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] =
     machine_learning_studio_web_service_plansIcon;
   return node;
 }
 
 export function MachineLearningStudioWorkspaces(label?: string, options?: Record<string, unknown>) {
   const node = _Aimachinelearning(label ?? "MachineLearningStudioWorkspaces", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl =
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] =
     machine_learning_studio_workspacesIcon;
   return node;
 }
 
 export function MachineLearning(label?: string, options?: Record<string, unknown>) {
   const node = _Aimachinelearning(label ?? "MachineLearning", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = machine_learningIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = machine_learningIcon;
   return node;
 }
 
 export function MetricsAdvisor(label?: string, options?: Record<string, unknown>) {
   const node = _Aimachinelearning(label ?? "MetricsAdvisor", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = metrics_advisorIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = metrics_advisorIcon;
   return node;
 }
 
 export function Personalizers(label?: string, options?: Record<string, unknown>) {
   const node = _Aimachinelearning(label ?? "Personalizers", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = personalizersIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = personalizersIcon;
   return node;
 }
 
 export function QnaMakers(label?: string, options?: Record<string, unknown>) {
   const node = _Aimachinelearning(label ?? "QnaMakers", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = qna_makersIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = qna_makersIcon;
   return node;
 }
 
 export function ServerlessSearch(label?: string, options?: Record<string, unknown>) {
   const node = _Aimachinelearning(label ?? "ServerlessSearch", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = serverless_searchIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = serverless_searchIcon;
   return node;
 }
 
 export function SpeechServices(label?: string, options?: Record<string, unknown>) {
   const node = _Aimachinelearning(label ?? "SpeechServices", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = speech_servicesIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = speech_servicesIcon;
   return node;
 }
 
 export function TranslatorText(label?: string, options?: Record<string, unknown>) {
   const node = _Aimachinelearning(label ?? "TranslatorText", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = translator_textIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = translator_textIcon;
   return node;
 }

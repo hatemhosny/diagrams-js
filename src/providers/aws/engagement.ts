@@ -7,37 +7,37 @@ import simple_email_service_sesIcon from "../../../resources/aws/engagement/simp
 
 function _Engagement(label?: string, options?: Record<string, unknown>) {
   const node = _Aws(label, options);
-  (node as unknown as Record<string, unknown>)._type = "engagement";
+  (node as unknown as Record<string, unknown>)["~type"] = "engagement";
   return node;
 }
 
 export function Connect(label?: string, options?: Record<string, unknown>) {
   const node = _Engagement(label ?? "Connect", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = connectIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = connectIcon;
   return node;
 }
 
 export function CustomerEngagement(label?: string, options?: Record<string, unknown>) {
   const node = _Engagement(label ?? "CustomerEngagement", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = customer_engagementIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = customer_engagementIcon;
   return node;
 }
 
 export function Pinpoint(label?: string, options?: Record<string, unknown>) {
   const node = _Engagement(label ?? "Pinpoint", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = pinpointIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = pinpointIcon;
   return node;
 }
 
 export function SimpleEmailServiceSesEmail(label?: string, options?: Record<string, unknown>) {
   const node = _Engagement(label ?? "SimpleEmailServiceSesEmail", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = simple_email_service_ses_emailIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = simple_email_service_ses_emailIcon;
   return node;
 }
 
 export function SimpleEmailServiceSes(label?: string, options?: Record<string, unknown>) {
   const node = _Engagement(label ?? "SimpleEmailServiceSes", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = simple_email_service_sesIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = simple_email_service_sesIcon;
   return node;
 }
 

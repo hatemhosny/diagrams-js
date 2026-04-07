@@ -7,36 +7,36 @@ import searchlightIcon from "../../../resources/openstack/sharedservices/searchl
 
 function _Sharedservices(label?: string, options?: Record<string, unknown>) {
   const node = _Openstack(label, options);
-  (node as unknown as Record<string, unknown>)._type = "sharedservices";
+  (node as unknown as Record<string, unknown>)["~type"] = "sharedservices";
   return node;
 }
 
 export function Barbican(label?: string, options?: Record<string, unknown>) {
   const node = _Sharedservices(label ?? "Barbican", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = barbicanIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = barbicanIcon;
   return node;
 }
 
 export function Glance(label?: string, options?: Record<string, unknown>) {
   const node = _Sharedservices(label ?? "Glance", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = glanceIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = glanceIcon;
   return node;
 }
 
 export function Karbor(label?: string, options?: Record<string, unknown>) {
   const node = _Sharedservices(label ?? "Karbor", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = karborIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = karborIcon;
   return node;
 }
 
 export function Keystone(label?: string, options?: Record<string, unknown>) {
   const node = _Sharedservices(label ?? "Keystone", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = keystoneIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = keystoneIcon;
   return node;
 }
 
 export function Searchlight(label?: string, options?: Record<string, unknown>) {
   const node = _Sharedservices(label ?? "Searchlight", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = searchlightIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = searchlightIcon;
   return node;
 }

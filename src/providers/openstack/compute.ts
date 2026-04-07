@@ -5,24 +5,24 @@ import zunIcon from "../../../resources/openstack/compute/zun.png";
 
 function _Compute(label?: string, options?: Record<string, unknown>) {
   const node = _Openstack(label, options);
-  (node as unknown as Record<string, unknown>)._type = "compute";
+  (node as unknown as Record<string, unknown>)["~type"] = "compute";
   return node;
 }
 
 export function Nova(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "Nova", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = novaIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = novaIcon;
   return node;
 }
 
 export function Qinling(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "Qinling", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = qinlingIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = qinlingIcon;
   return node;
 }
 
 export function Zun(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "Zun", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = zunIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = zunIcon;
   return node;
 }

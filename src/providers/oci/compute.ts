@@ -18,103 +18,103 @@ import vmIcon from "../../../resources/oci/compute/vm.png";
 
 function _Compute(label?: string, options?: Record<string, unknown>) {
   const node = _Oci(label, options);
-  (node as unknown as Record<string, unknown>)._type = "compute";
+  (node as unknown as Record<string, unknown>)["~type"] = "compute";
   return node;
 }
 
 export function AutoscaleWhite(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "AutoscaleWhite", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = autoscale_whiteIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = autoscale_whiteIcon;
   return node;
 }
 
 export function Autoscale(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "Autoscale", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = autoscaleIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = autoscaleIcon;
   return node;
 }
 
 export function BMWhite(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "BMWhite", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = bm_whiteIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = bm_whiteIcon;
   return node;
 }
 
 export function BM(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "BM", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = bmIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = bmIcon;
   return node;
 }
 
 export function ContainerWhite(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "ContainerWhite", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = container_whiteIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = container_whiteIcon;
   return node;
 }
 
 export function Container(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "Container", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = containerIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = containerIcon;
   return node;
 }
 
 export function FunctionsWhite(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "FunctionsWhite", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = functions_whiteIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = functions_whiteIcon;
   return node;
 }
 
 export function Functions(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "Functions", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = functionsIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = functionsIcon;
   return node;
 }
 
 export function InstancePoolsWhite(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "InstancePoolsWhite", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = instance_pools_whiteIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = instance_pools_whiteIcon;
   return node;
 }
 
 export function InstancePools(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "InstancePools", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = instance_poolsIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = instance_poolsIcon;
   return node;
 }
 
 export function OCIRWhite(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "OCIRWhite", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = ocir_whiteIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = ocir_whiteIcon;
   return node;
 }
 
 export function OCIR(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "OCIR", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = ocirIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = ocirIcon;
   return node;
 }
 
 export function OKEWhite(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "OKEWhite", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = oke_whiteIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = oke_whiteIcon;
   return node;
 }
 
 export function OKE(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "OKE", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = okeIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = okeIcon;
   return node;
 }
 
 export function VMWhite(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "VMWhite", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = vm_whiteIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = vm_whiteIcon;
   return node;
 }
 
 export function VM(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "VM", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = vmIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = vmIcon;
   return node;
 }
 

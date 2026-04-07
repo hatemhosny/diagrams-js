@@ -12,66 +12,66 @@ import windowsIcon from "../../../resources/generic/os/windows.png";
 
 function _Os(label?: string, options?: Record<string, unknown>) {
   const node = _Generic(label, options);
-  (node as unknown as Record<string, unknown>)._type = "os";
+  (node as unknown as Record<string, unknown>)["~type"] = "os";
   return node;
 }
 
 export function Android(label?: string, options?: Record<string, unknown>) {
   const node = _Os(label ?? "Android", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = androidIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = androidIcon;
   return node;
 }
 
 export function Centos(label?: string, options?: Record<string, unknown>) {
   const node = _Os(label ?? "Centos", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = centosIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = centosIcon;
   return node;
 }
 
 export function Debian(label?: string, options?: Record<string, unknown>) {
   const node = _Os(label ?? "Debian", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = debianIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = debianIcon;
   return node;
 }
 
 export function IOS(label?: string, options?: Record<string, unknown>) {
   const node = _Os(label ?? "IOS", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = iosIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = iosIcon;
   return node;
 }
 
 export function LinuxGeneral(label?: string, options?: Record<string, unknown>) {
   const node = _Os(label ?? "LinuxGeneral", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = linux_generalIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = linux_generalIcon;
   return node;
 }
 
 export function Raspbian(label?: string, options?: Record<string, unknown>) {
   const node = _Os(label ?? "Raspbian", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = raspbianIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = raspbianIcon;
   return node;
 }
 
 export function RedHat(label?: string, options?: Record<string, unknown>) {
   const node = _Os(label ?? "RedHat", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = red_hatIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = red_hatIcon;
   return node;
 }
 
 export function Suse(label?: string, options?: Record<string, unknown>) {
   const node = _Os(label ?? "Suse", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = suseIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = suseIcon;
   return node;
 }
 
 export function Ubuntu(label?: string, options?: Record<string, unknown>) {
   const node = _Os(label ?? "Ubuntu", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = ubuntuIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = ubuntuIcon;
   return node;
 }
 
 export function Windows(label?: string, options?: Record<string, unknown>) {
   const node = _Os(label ?? "Windows", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = windowsIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = windowsIcon;
   return node;
 }

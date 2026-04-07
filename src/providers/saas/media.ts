@@ -3,12 +3,12 @@ import cloudinaryIcon from "../../../resources/saas/media/cloudinary.png";
 
 function _Media(label?: string, options?: Record<string, unknown>) {
   const node = _Saas(label, options);
-  (node as unknown as Record<string, unknown>)._type = "media";
+  (node as unknown as Record<string, unknown>)["~type"] = "media";
   return node;
 }
 
 export function Cloudinary(label?: string, options?: Record<string, unknown>) {
   const node = _Media(label ?? "Cloudinary", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = cloudinaryIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = cloudinaryIcon;
   return node;
 }

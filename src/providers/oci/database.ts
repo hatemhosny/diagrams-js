@@ -20,115 +20,115 @@ import streamIcon from "../../../resources/oci/database/stream.png";
 
 function _Database(label?: string, options?: Record<string, unknown>) {
   const node = _Oci(label, options);
-  (node as unknown as Record<string, unknown>)._type = "database";
+  (node as unknown as Record<string, unknown>)["~type"] = "database";
   return node;
 }
 
 export function AutonomousWhite(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "AutonomousWhite", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = autonomous_whiteIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = autonomous_whiteIcon;
   return node;
 }
 
 export function Autonomous(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "Autonomous", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = autonomousIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = autonomousIcon;
   return node;
 }
 
 export function BigdataServiceWhite(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "BigdataServiceWhite", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = bigdata_service_whiteIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = bigdata_service_whiteIcon;
   return node;
 }
 
 export function BigdataService(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "BigdataService", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = bigdata_serviceIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = bigdata_serviceIcon;
   return node;
 }
 
 export function DatabaseServiceWhite(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "DatabaseServiceWhite", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = database_service_whiteIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = database_service_whiteIcon;
   return node;
 }
 
 export function DatabaseService(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "DatabaseService", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = database_serviceIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = database_serviceIcon;
   return node;
 }
 
 export function DataflowApacheWhite(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "DataflowApacheWhite", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = dataflow_apache_whiteIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = dataflow_apache_whiteIcon;
   return node;
 }
 
 export function DataflowApache(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "DataflowApache", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = dataflow_apacheIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = dataflow_apacheIcon;
   return node;
 }
 
 export function DcatWhite(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "DcatWhite", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = dcat_whiteIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = dcat_whiteIcon;
   return node;
 }
 
 export function Dcat(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "Dcat", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = dcatIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = dcatIcon;
   return node;
 }
 
 export function DisWhite(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "DisWhite", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = dis_whiteIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = dis_whiteIcon;
   return node;
 }
 
 export function Dis(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "Dis", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = disIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = disIcon;
   return node;
 }
 
 export function DMSWhite(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "DMSWhite", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = dms_whiteIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = dms_whiteIcon;
   return node;
 }
 
 export function DMS(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "DMS", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = dmsIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = dmsIcon;
   return node;
 }
 
 export function ScienceWhite(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "ScienceWhite", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = science_whiteIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = science_whiteIcon;
   return node;
 }
 
 export function Science(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "Science", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = scienceIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = scienceIcon;
   return node;
 }
 
 export function StreamWhite(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "StreamWhite", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = stream_whiteIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = stream_whiteIcon;
   return node;
 }
 
 export function Stream(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "Stream", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = streamIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = streamIcon;
   return node;
 }
 

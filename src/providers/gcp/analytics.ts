@@ -13,73 +13,73 @@ import pubsubIcon from "../../../resources/gcp/analytics/pubsub.png";
 
 function _Analytics(label?: string, options?: Record<string, unknown>) {
   const node = _Gcp(label, options);
-  (node as unknown as Record<string, unknown>)._type = "analytics";
+  (node as unknown as Record<string, unknown>)["~type"] = "analytics";
   return node;
 }
 
 export function Bigquery(label?: string, options?: Record<string, unknown>) {
   const node = _Analytics(label ?? "Bigquery", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = bigqueryIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = bigqueryIcon;
   return node;
 }
 
 export function Composer(label?: string, options?: Record<string, unknown>) {
   const node = _Analytics(label ?? "Composer", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = composerIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = composerIcon;
   return node;
 }
 
 export function DataCatalog(label?: string, options?: Record<string, unknown>) {
   const node = _Analytics(label ?? "DataCatalog", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = data_catalogIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = data_catalogIcon;
   return node;
 }
 
 export function DataFusion(label?: string, options?: Record<string, unknown>) {
   const node = _Analytics(label ?? "DataFusion", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = data_fusionIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = data_fusionIcon;
   return node;
 }
 
 export function Dataflow(label?: string, options?: Record<string, unknown>) {
   const node = _Analytics(label ?? "Dataflow", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = dataflowIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = dataflowIcon;
   return node;
 }
 
 export function Datalab(label?: string, options?: Record<string, unknown>) {
   const node = _Analytics(label ?? "Datalab", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = datalabIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = datalabIcon;
   return node;
 }
 
 export function Dataprep(label?: string, options?: Record<string, unknown>) {
   const node = _Analytics(label ?? "Dataprep", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = dataprepIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = dataprepIcon;
   return node;
 }
 
 export function Dataproc(label?: string, options?: Record<string, unknown>) {
   const node = _Analytics(label ?? "Dataproc", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = dataprocIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = dataprocIcon;
   return node;
 }
 
 export function Genomics(label?: string, options?: Record<string, unknown>) {
   const node = _Analytics(label ?? "Genomics", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = genomicsIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = genomicsIcon;
   return node;
 }
 
 export function Looker(label?: string, options?: Record<string, unknown>) {
   const node = _Analytics(label ?? "Looker", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = lookerIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = lookerIcon;
   return node;
 }
 
 export function Pubsub(label?: string, options?: Record<string, unknown>) {
   const node = _Analytics(label ?? "Pubsub", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = pubsubIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = pubsubIcon;
   return node;
 }
 

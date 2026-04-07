@@ -5,24 +5,24 @@ import endpointsIcon from "../../../resources/gcp/api/endpoints.png";
 
 function _Api(label?: string, options?: Record<string, unknown>) {
   const node = _Gcp(label, options);
-  (node as unknown as Record<string, unknown>)._type = "api";
+  (node as unknown as Record<string, unknown>)["~type"] = "api";
   return node;
 }
 
 export function APIGateway(label?: string, options?: Record<string, unknown>) {
   const node = _Api(label ?? "APIGateway", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = api_gatewayIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = api_gatewayIcon;
   return node;
 }
 
 export function Apigee(label?: string, options?: Record<string, unknown>) {
   const node = _Api(label ?? "Apigee", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = apigeeIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = apigeeIcon;
   return node;
 }
 
 export function Endpoints(label?: string, options?: Record<string, unknown>) {
   const node = _Api(label ?? "Endpoints", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = endpointsIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = endpointsIcon;
   return node;
 }

@@ -6,31 +6,31 @@ import storageIcon from "../../../resources/gcp/storage/storage.png";
 
 function _Storage(label?: string, options?: Record<string, unknown>) {
   const node = _Gcp(label, options);
-  (node as unknown as Record<string, unknown>)._type = "storage";
+  (node as unknown as Record<string, unknown>)["~type"] = "storage";
   return node;
 }
 
 export function Filestore(label?: string, options?: Record<string, unknown>) {
   const node = _Storage(label ?? "Filestore", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = filestoreIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = filestoreIcon;
   return node;
 }
 
 export function LocalSSD(label?: string, options?: Record<string, unknown>) {
   const node = _Storage(label ?? "LocalSSD", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = local_ssdIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = local_ssdIcon;
   return node;
 }
 
 export function PersistentDisk(label?: string, options?: Record<string, unknown>) {
   const node = _Storage(label ?? "PersistentDisk", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = persistent_diskIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = persistent_diskIcon;
   return node;
 }
 
 export function Storage(label?: string, options?: Record<string, unknown>) {
   const node = _Storage(label ?? "Storage", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = storageIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = storageIcon;
   return node;
 }
 

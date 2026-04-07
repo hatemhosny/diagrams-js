@@ -20,114 +20,114 @@ import workflowIcon from "../../../resources/oci/monitoring/workflow.png";
 
 function _Monitoring(label?: string, options?: Record<string, unknown>) {
   const node = _Oci(label, options);
-  (node as unknown as Record<string, unknown>)._type = "monitoring";
+  (node as unknown as Record<string, unknown>)["~type"] = "monitoring";
   return node;
 }
 
 export function AlarmWhite(label?: string, options?: Record<string, unknown>) {
   const node = _Monitoring(label ?? "AlarmWhite", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = alarm_whiteIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = alarm_whiteIcon;
   return node;
 }
 
 export function Alarm(label?: string, options?: Record<string, unknown>) {
   const node = _Monitoring(label ?? "Alarm", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = alarmIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = alarmIcon;
   return node;
 }
 
 export function EmailWhite(label?: string, options?: Record<string, unknown>) {
   const node = _Monitoring(label ?? "EmailWhite", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = email_whiteIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = email_whiteIcon;
   return node;
 }
 
 export function Email(label?: string, options?: Record<string, unknown>) {
   const node = _Monitoring(label ?? "Email", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = emailIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = emailIcon;
   return node;
 }
 
 export function EventsWhite(label?: string, options?: Record<string, unknown>) {
   const node = _Monitoring(label ?? "EventsWhite", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = events_whiteIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = events_whiteIcon;
   return node;
 }
 
 export function Events(label?: string, options?: Record<string, unknown>) {
   const node = _Monitoring(label ?? "Events", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = eventsIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = eventsIcon;
   return node;
 }
 
 export function HealthCheckWhite(label?: string, options?: Record<string, unknown>) {
   const node = _Monitoring(label ?? "HealthCheckWhite", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = health_check_whiteIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = health_check_whiteIcon;
   return node;
 }
 
 export function HealthCheck(label?: string, options?: Record<string, unknown>) {
   const node = _Monitoring(label ?? "HealthCheck", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = health_checkIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = health_checkIcon;
   return node;
 }
 
 export function NotificationsWhite(label?: string, options?: Record<string, unknown>) {
   const node = _Monitoring(label ?? "NotificationsWhite", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = notifications_whiteIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = notifications_whiteIcon;
   return node;
 }
 
 export function Notifications(label?: string, options?: Record<string, unknown>) {
   const node = _Monitoring(label ?? "Notifications", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = notificationsIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = notificationsIcon;
   return node;
 }
 
 export function QueueWhite(label?: string, options?: Record<string, unknown>) {
   const node = _Monitoring(label ?? "QueueWhite", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = queue_whiteIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = queue_whiteIcon;
   return node;
 }
 
 export function Queue(label?: string, options?: Record<string, unknown>) {
   const node = _Monitoring(label ?? "Queue", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = queueIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = queueIcon;
   return node;
 }
 
 export function SearchWhite(label?: string, options?: Record<string, unknown>) {
   const node = _Monitoring(label ?? "SearchWhite", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = search_whiteIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = search_whiteIcon;
   return node;
 }
 
 export function Search(label?: string, options?: Record<string, unknown>) {
   const node = _Monitoring(label ?? "Search", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = searchIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = searchIcon;
   return node;
 }
 
 export function TelemetryWhite(label?: string, options?: Record<string, unknown>) {
   const node = _Monitoring(label ?? "TelemetryWhite", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = telemetry_whiteIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = telemetry_whiteIcon;
   return node;
 }
 
 export function Telemetry(label?: string, options?: Record<string, unknown>) {
   const node = _Monitoring(label ?? "Telemetry", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = telemetryIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = telemetryIcon;
   return node;
 }
 
 export function WorkflowWhite(label?: string, options?: Record<string, unknown>) {
   const node = _Monitoring(label ?? "WorkflowWhite", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = workflow_whiteIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = workflow_whiteIcon;
   return node;
 }
 
 export function Workflow(label?: string, options?: Record<string, unknown>) {
   const node = _Monitoring(label ?? "Workflow", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = workflowIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = workflowIcon;
   return node;
 }

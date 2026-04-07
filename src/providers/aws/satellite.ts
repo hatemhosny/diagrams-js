@@ -4,18 +4,18 @@ import satelliteIcon from "../../../resources/aws/satellite/satellite.png";
 
 function _Satellite(label?: string, options?: Record<string, unknown>) {
   const node = _Aws(label, options);
-  (node as unknown as Record<string, unknown>)._type = "satellite";
+  (node as unknown as Record<string, unknown>)["~type"] = "satellite";
   return node;
 }
 
 export function GroundStation(label?: string, options?: Record<string, unknown>) {
   const node = _Satellite(label ?? "GroundStation", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = ground_stationIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = ground_stationIcon;
   return node;
 }
 
 export function Satellite(label?: string, options?: Record<string, unknown>) {
   const node = _Satellite(label ?? "Satellite", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = satelliteIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = satelliteIcon;
   return node;
 }

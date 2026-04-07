@@ -4,18 +4,18 @@ import twitterIcon from "../../../resources/saas/social/twitter.png";
 
 function _Social(label?: string, options?: Record<string, unknown>) {
   const node = _Saas(label, options);
-  (node as unknown as Record<string, unknown>)._type = "social";
+  (node as unknown as Record<string, unknown>)["~type"] = "social";
   return node;
 }
 
 export function Facebook(label?: string, options?: Record<string, unknown>) {
   const node = _Social(label ?? "Facebook", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = facebookIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = facebookIcon;
   return node;
 }
 
 export function Twitter(label?: string, options?: Record<string, unknown>) {
   const node = _Social(label ?? "Twitter", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = twitterIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = twitterIcon;
   return node;
 }

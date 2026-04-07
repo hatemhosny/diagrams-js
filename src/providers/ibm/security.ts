@@ -16,90 +16,91 @@ import vpnIcon from "../../../resources/ibm/security/vpn.png";
 
 function _Security(label?: string, options?: Record<string, unknown>) {
   const node = _Ibm(label, options);
-  (node as unknown as Record<string, unknown>)._type = "security";
+  (node as unknown as Record<string, unknown>)["~type"] = "security";
   return node;
 }
 
 export function ApiSecurity(label?: string, options?: Record<string, unknown>) {
   const node = _Security(label ?? "ApiSecurity", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = api_securityIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = api_securityIcon;
   return node;
 }
 
 export function BlockchainSecurityService(label?: string, options?: Record<string, unknown>) {
   const node = _Security(label ?? "BlockchainSecurityService", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = blockchain_security_serviceIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = blockchain_security_serviceIcon;
   return node;
 }
 
 export function DataSecurity(label?: string, options?: Record<string, unknown>) {
   const node = _Security(label ?? "DataSecurity", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = data_securityIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = data_securityIcon;
   return node;
 }
 
 export function Firewall(label?: string, options?: Record<string, unknown>) {
   const node = _Security(label ?? "Firewall", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = firewallIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = firewallIcon;
   return node;
 }
 
 export function Gateway(label?: string, options?: Record<string, unknown>) {
   const node = _Security(label ?? "Gateway", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = gatewayIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = gatewayIcon;
   return node;
 }
 
 export function GovernanceRiskCompliance(label?: string, options?: Record<string, unknown>) {
   const node = _Security(label ?? "GovernanceRiskCompliance", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = governance_risk_complianceIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = governance_risk_complianceIcon;
   return node;
 }
 
 export function IdentityAccessManagement(label?: string, options?: Record<string, unknown>) {
   const node = _Security(label ?? "IdentityAccessManagement", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = identity_access_managementIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = identity_access_managementIcon;
   return node;
 }
 
 export function IdentityProvider(label?: string, options?: Record<string, unknown>) {
   const node = _Security(label ?? "IdentityProvider", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = identity_providerIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = identity_providerIcon;
   return node;
 }
 
 export function InfrastructureSecurity(label?: string, options?: Record<string, unknown>) {
   const node = _Security(label ?? "InfrastructureSecurity", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = infrastructure_securityIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = infrastructure_securityIcon;
   return node;
 }
 
 export function PhysicalSecurity(label?: string, options?: Record<string, unknown>) {
   const node = _Security(label ?? "PhysicalSecurity", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = physical_securityIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = physical_securityIcon;
   return node;
 }
 
 export function SecurityMonitoringIntelligence(label?: string, options?: Record<string, unknown>) {
   const node = _Security(label ?? "SecurityMonitoringIntelligence", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = security_monitoring_intelligenceIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] =
+    security_monitoring_intelligenceIcon;
   return node;
 }
 
 export function SecurityServices(label?: string, options?: Record<string, unknown>) {
   const node = _Security(label ?? "SecurityServices", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = security_servicesIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = security_servicesIcon;
   return node;
 }
 
 export function TrustendComputing(label?: string, options?: Record<string, unknown>) {
   const node = _Security(label ?? "TrustendComputing", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = trustend_computingIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = trustend_computingIcon;
   return node;
 }
 
 export function Vpn(label?: string, options?: Record<string, unknown>) {
   const node = _Security(label ?? "Vpn", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = vpnIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = vpnIcon;
   return node;
 }

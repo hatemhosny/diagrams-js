@@ -22,126 +22,127 @@ import walletIcon from "../../../resources/ibm/blockchain/wallet.png";
 
 function _Blockchain(label?: string, options?: Record<string, unknown>) {
   const node = _Ibm(label, options);
-  (node as unknown as Record<string, unknown>)._type = "blockchain";
+  (node as unknown as Record<string, unknown>)["~type"] = "blockchain";
   return node;
 }
 
 export function BlockchainDeveloper(label?: string, options?: Record<string, unknown>) {
   const node = _Blockchain(label ?? "BlockchainDeveloper", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = blockchain_developerIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = blockchain_developerIcon;
   return node;
 }
 
 export function Blockchain(label?: string, options?: Record<string, unknown>) {
   const node = _Blockchain(label ?? "Blockchain", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = blockchainIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = blockchainIcon;
   return node;
 }
 
 export function CertificateAuthority(label?: string, options?: Record<string, unknown>) {
   const node = _Blockchain(label ?? "CertificateAuthority", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = certificate_authorityIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = certificate_authorityIcon;
   return node;
 }
 
 export function ClientApplication(label?: string, options?: Record<string, unknown>) {
   const node = _Blockchain(label ?? "ClientApplication", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = client_applicationIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = client_applicationIcon;
   return node;
 }
 
 export function Communication(label?: string, options?: Record<string, unknown>) {
   const node = _Blockchain(label ?? "Communication", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = communicationIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = communicationIcon;
   return node;
 }
 
 export function Consensus(label?: string, options?: Record<string, unknown>) {
   const node = _Blockchain(label ?? "Consensus", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = consensusIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = consensusIcon;
   return node;
 }
 
 export function EventListener(label?: string, options?: Record<string, unknown>) {
   const node = _Blockchain(label ?? "EventListener", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = event_listenerIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = event_listenerIcon;
   return node;
 }
 
 export function Event(label?: string, options?: Record<string, unknown>) {
   const node = _Blockchain(label ?? "Event", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = eventIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = eventIcon;
   return node;
 }
 
 export function ExistingEnterpriseSystems(label?: string, options?: Record<string, unknown>) {
   const node = _Blockchain(label ?? "ExistingEnterpriseSystems", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = existing_enterprise_systemsIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = existing_enterprise_systemsIcon;
   return node;
 }
 
 export function HyperledgerFabric(label?: string, options?: Record<string, unknown>) {
   const node = _Blockchain(label ?? "HyperledgerFabric", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = hyperledger_fabricIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = hyperledger_fabricIcon;
   return node;
 }
 
 export function KeyManagement(label?: string, options?: Record<string, unknown>) {
   const node = _Blockchain(label ?? "KeyManagement", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = key_managementIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = key_managementIcon;
   return node;
 }
 
 export function Ledger(label?: string, options?: Record<string, unknown>) {
   const node = _Blockchain(label ?? "Ledger", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = ledgerIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = ledgerIcon;
   return node;
 }
 
 export function MembershipServicesProviderApi(label?: string, options?: Record<string, unknown>) {
   const node = _Blockchain(label ?? "MembershipServicesProviderApi", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = membership_services_provider_apiIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] =
+    membership_services_provider_apiIcon;
   return node;
 }
 
 export function Membership(label?: string, options?: Record<string, unknown>) {
   const node = _Blockchain(label ?? "Membership", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = membershipIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = membershipIcon;
   return node;
 }
 
 export function MessageBus(label?: string, options?: Record<string, unknown>) {
   const node = _Blockchain(label ?? "MessageBus", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = message_busIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = message_busIcon;
   return node;
 }
 
 export function Node(label?: string, options?: Record<string, unknown>) {
   const node = _Blockchain(label ?? "Node", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = nodeIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = nodeIcon;
   return node;
 }
 
 export function Services(label?: string, options?: Record<string, unknown>) {
   const node = _Blockchain(label ?? "Services", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = servicesIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = servicesIcon;
   return node;
 }
 
 export function SmartContract(label?: string, options?: Record<string, unknown>) {
   const node = _Blockchain(label ?? "SmartContract", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = smart_contractIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = smart_contractIcon;
   return node;
 }
 
 export function TransactionManager(label?: string, options?: Record<string, unknown>) {
   const node = _Blockchain(label ?? "TransactionManager", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = transaction_managerIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = transaction_managerIcon;
   return node;
 }
 
 export function Wallet(label?: string, options?: Record<string, unknown>) {
   const node = _Blockchain(label ?? "Wallet", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = walletIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = walletIcon;
   return node;
 }

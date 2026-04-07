@@ -19,109 +19,109 @@ import tools_for_visual_studioIcon from "../../../resources/gcp/devtools/tools-f
 
 function _Devtools(label?: string, options?: Record<string, unknown>) {
   const node = _Gcp(label, options);
-  (node as unknown as Record<string, unknown>)._type = "devtools";
+  (node as unknown as Record<string, unknown>)["~type"] = "devtools";
   return node;
 }
 
 export function Build(label?: string, options?: Record<string, unknown>) {
   const node = _Devtools(label ?? "Build", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = buildIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = buildIcon;
   return node;
 }
 
 export function CloudShell(label?: string, options?: Record<string, unknown>) {
   const node = _Devtools(label ?? "CloudShell", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = cloud_shellIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = cloud_shellIcon;
   return node;
 }
 
 export function CodeForIntellij(label?: string, options?: Record<string, unknown>) {
   const node = _Devtools(label ?? "CodeForIntellij", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = code_for_intellijIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = code_for_intellijIcon;
   return node;
 }
 
 export function Code(label?: string, options?: Record<string, unknown>) {
   const node = _Devtools(label ?? "Code", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = codeIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = codeIcon;
   return node;
 }
 
 export function ContainerRegistry(label?: string, options?: Record<string, unknown>) {
   const node = _Devtools(label ?? "ContainerRegistry", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = container_registryIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = container_registryIcon;
   return node;
 }
 
 export function GradleAppEnginePlugin(label?: string, options?: Record<string, unknown>) {
   const node = _Devtools(label ?? "GradleAppEnginePlugin", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = gradle_app_engine_pluginIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = gradle_app_engine_pluginIcon;
   return node;
 }
 
 export function IdePlugins(label?: string, options?: Record<string, unknown>) {
   const node = _Devtools(label ?? "IdePlugins", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = ide_pluginsIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = ide_pluginsIcon;
   return node;
 }
 
 export function MavenAppEnginePlugin(label?: string, options?: Record<string, unknown>) {
   const node = _Devtools(label ?? "MavenAppEnginePlugin", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = maven_app_engine_pluginIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = maven_app_engine_pluginIcon;
   return node;
 }
 
 export function Scheduler(label?: string, options?: Record<string, unknown>) {
   const node = _Devtools(label ?? "Scheduler", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = schedulerIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = schedulerIcon;
   return node;
 }
 
 export function SDK(label?: string, options?: Record<string, unknown>) {
   const node = _Devtools(label ?? "SDK", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = sdkIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = sdkIcon;
   return node;
 }
 
 export function ServiceCatalog(label?: string, options?: Record<string, unknown>) {
   const node = _Devtools(label ?? "ServiceCatalog", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = service_catalogIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = service_catalogIcon;
   return node;
 }
 
 export function SourceRepositories(label?: string, options?: Record<string, unknown>) {
   const node = _Devtools(label ?? "SourceRepositories", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = source_repositoriesIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = source_repositoriesIcon;
   return node;
 }
 
 export function Tasks(label?: string, options?: Record<string, unknown>) {
   const node = _Devtools(label ?? "Tasks", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = tasksIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = tasksIcon;
   return node;
 }
 
 export function TestLab(label?: string, options?: Record<string, unknown>) {
   const node = _Devtools(label ?? "TestLab", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = test_labIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = test_labIcon;
   return node;
 }
 
 export function ToolsForEclipse(label?: string, options?: Record<string, unknown>) {
   const node = _Devtools(label ?? "ToolsForEclipse", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = tools_for_eclipseIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = tools_for_eclipseIcon;
   return node;
 }
 
 export function ToolsForPowershell(label?: string, options?: Record<string, unknown>) {
   const node = _Devtools(label ?? "ToolsForPowershell", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = tools_for_powershellIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = tools_for_powershellIcon;
   return node;
 }
 
 export function ToolsForVisualStudio(label?: string, options?: Record<string, unknown>) {
   const node = _Devtools(label ?? "ToolsForVisualStudio", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = tools_for_visual_studioIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = tools_for_visual_studioIcon;
   return node;
 }
 

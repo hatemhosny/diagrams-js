@@ -26,150 +26,150 @@ import usersIcon from "../../../resources/aws/general/users.png";
 
 function _General(label?: string, options?: Record<string, unknown>) {
   const node = _Aws(label, options);
-  (node as unknown as Record<string, unknown>)._type = "general";
+  (node as unknown as Record<string, unknown>)["~type"] = "general";
   return node;
 }
 
 export function Client(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "Client", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = clientIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = clientIcon;
   return node;
 }
 
 export function Disk(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "Disk", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = diskIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = diskIcon;
   return node;
 }
 
 export function Forums(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "Forums", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = forumsIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = forumsIcon;
   return node;
 }
 
 export function General(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "General", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = generalIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = generalIcon;
   return node;
 }
 
 export function GenericDatabase(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "GenericDatabase", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = generic_databaseIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = generic_databaseIcon;
   return node;
 }
 
 export function GenericFirewall(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "GenericFirewall", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = generic_firewallIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = generic_firewallIcon;
   return node;
 }
 
 export function GenericOfficeBuilding(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "GenericOfficeBuilding", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = generic_office_buildingIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = generic_office_buildingIcon;
   return node;
 }
 
 export function GenericSamlToken(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "GenericSamlToken", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = generic_saml_tokenIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = generic_saml_tokenIcon;
   return node;
 }
 
 export function GenericSDK(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "GenericSDK", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = generic_sdkIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = generic_sdkIcon;
   return node;
 }
 
 export function InternetAlt1(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "InternetAlt1", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = internet_alt1Icon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = internet_alt1Icon;
   return node;
 }
 
 export function InternetAlt2(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "InternetAlt2", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = internet_alt2Icon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = internet_alt2Icon;
   return node;
 }
 
 export function InternetGateway(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "InternetGateway", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = internet_gatewayIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = internet_gatewayIcon;
   return node;
 }
 
 export function Marketplace(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "Marketplace", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = marketplaceIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = marketplaceIcon;
   return node;
 }
 
 export function MobileClient(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "MobileClient", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = mobile_clientIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = mobile_clientIcon;
   return node;
 }
 
 export function Multimedia(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "Multimedia", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = multimediaIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = multimediaIcon;
   return node;
 }
 
 export function OfficeBuilding(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "OfficeBuilding", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = office_buildingIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = office_buildingIcon;
   return node;
 }
 
 export function SamlToken(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "SamlToken", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = saml_tokenIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = saml_tokenIcon;
   return node;
 }
 
 export function SDK(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "SDK", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = sdkIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = sdkIcon;
   return node;
 }
 
 export function SslPadlock(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "SslPadlock", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = ssl_padlockIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = ssl_padlockIcon;
   return node;
 }
 
 export function TapeStorage(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "TapeStorage", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = tape_storageIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = tape_storageIcon;
   return node;
 }
 
 export function Toolkit(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "Toolkit", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = toolkitIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = toolkitIcon;
   return node;
 }
 
 export function TraditionalServer(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "TraditionalServer", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = traditional_serverIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = traditional_serverIcon;
   return node;
 }
 
 export function User(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "User", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = userIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = userIcon;
   return node;
 }
 
 export function Users(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "Users", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = usersIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = usersIcon;
   return node;
 }

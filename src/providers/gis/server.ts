@@ -24,138 +24,138 @@ import zooprojectIcon from "../../../resources/gis/server/zooproject.png";
 
 function _Server(label?: string, options?: Record<string, unknown>) {
   const node = _Gis(label, options);
-  (node as unknown as Record<string, unknown>)._type = "server";
+  (node as unknown as Record<string, unknown>)["~type"] = "server";
   return node;
 }
 
 export function Actinia(label?: string, options?: Record<string, unknown>) {
   const node = _Server(label ?? "Actinia", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = actiniaIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = actiniaIcon;
   return node;
 }
 
 export function Baremaps(label?: string, options?: Record<string, unknown>) {
   const node = _Server(label ?? "Baremaps", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = baremapsIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = baremapsIcon;
   return node;
 }
 
 export function Deegree(label?: string, options?: Record<string, unknown>) {
   const node = _Server(label ?? "Deegree", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = deegreeIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = deegreeIcon;
   return node;
 }
 
 export function G3wSuite(label?: string, options?: Record<string, unknown>) {
   const node = _Server(label ?? "G3wSuite", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = g3w_suiteIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = g3w_suiteIcon;
   return node;
 }
 
 export function Geohealthcheck(label?: string, options?: Record<string, unknown>) {
   const node = _Server(label ?? "Geohealthcheck", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = geohealthcheckIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = geohealthcheckIcon;
   return node;
 }
 
 export function Geomapfish(label?: string, options?: Record<string, unknown>) {
   const node = _Server(label ?? "Geomapfish", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = geomapfishIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = geomapfishIcon;
   return node;
 }
 
 export function Geomesa(label?: string, options?: Record<string, unknown>) {
   const node = _Server(label ?? "Geomesa", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = geomesaIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = geomesaIcon;
   return node;
 }
 
 export function Geonetwork(label?: string, options?: Record<string, unknown>) {
   const node = _Server(label ?? "Geonetwork", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = geonetworkIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = geonetworkIcon;
   return node;
 }
 
 export function Geonode(label?: string, options?: Record<string, unknown>) {
   const node = _Server(label ?? "Geonode", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = geonodeIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = geonodeIcon;
   return node;
 }
 
 export function Georchestra(label?: string, options?: Record<string, unknown>) {
   const node = _Server(label ?? "Georchestra", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = georchestraIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = georchestraIcon;
   return node;
 }
 
 export function Geoserver(label?: string, options?: Record<string, unknown>) {
   const node = _Server(label ?? "Geoserver", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = geoserverIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = geoserverIcon;
   return node;
 }
 
 export function Geowebcache(label?: string, options?: Record<string, unknown>) {
   const node = _Server(label ?? "Geowebcache", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = geowebcacheIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = geowebcacheIcon;
   return node;
 }
 
 export function Kepler(label?: string, options?: Record<string, unknown>) {
   const node = _Server(label ?? "Kepler", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = keplerIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = keplerIcon;
   return node;
 }
 
 export function Mapproxy(label?: string, options?: Record<string, unknown>) {
   const node = _Server(label ?? "Mapproxy", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = mapproxyIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = mapproxyIcon;
   return node;
 }
 
 export function Mapserver(label?: string, options?: Record<string, unknown>) {
   const node = _Server(label ?? "Mapserver", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = mapserverIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = mapserverIcon;
   return node;
 }
 
 export function Mapstore(label?: string, options?: Record<string, unknown>) {
   const node = _Server(label ?? "Mapstore", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = mapstoreIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = mapstoreIcon;
   return node;
 }
 
 export function Mviewer(label?: string, options?: Record<string, unknown>) {
   const node = _Server(label ?? "Mviewer", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = mviewerIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = mviewerIcon;
   return node;
 }
 
 export function Pg_tileserv(label?: string, options?: Record<string, unknown>) {
   const node = _Server(label ?? "Pg_tileserv", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = pg_tileservIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = pg_tileservIcon;
   return node;
 }
 
 export function Pycsw(label?: string, options?: Record<string, unknown>) {
   const node = _Server(label ?? "Pycsw", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = pycswIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = pycswIcon;
   return node;
 }
 
 export function Pygeoapi(label?: string, options?: Record<string, unknown>) {
   const node = _Server(label ?? "Pygeoapi", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = pygeoapiIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = pygeoapiIcon;
   return node;
 }
 
 export function QGISServer(label?: string, options?: Record<string, unknown>) {
   const node = _Server(label ?? "QGISServer", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = qgis_serverIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = qgis_serverIcon;
   return node;
 }
 
 export function Zooproject(label?: string, options?: Record<string, unknown>) {
   const node = _Server(label ?? "Zooproject", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = zooprojectIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = zooprojectIcon;
   return node;
 }

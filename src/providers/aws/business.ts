@@ -6,31 +6,31 @@ import workmailIcon from "../../../resources/aws/business/workmail.png";
 
 function _Business(label?: string, options?: Record<string, unknown>) {
   const node = _Aws(label, options);
-  (node as unknown as Record<string, unknown>)._type = "business";
+  (node as unknown as Record<string, unknown>)["~type"] = "business";
   return node;
 }
 
 export function AlexaForBusiness(label?: string, options?: Record<string, unknown>) {
   const node = _Business(label ?? "AlexaForBusiness", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = alexa_for_businessIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = alexa_for_businessIcon;
   return node;
 }
 
 export function BusinessApplications(label?: string, options?: Record<string, unknown>) {
   const node = _Business(label ?? "BusinessApplications", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = business_applicationsIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = business_applicationsIcon;
   return node;
 }
 
 export function Chime(label?: string, options?: Record<string, unknown>) {
   const node = _Business(label ?? "Chime", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = chimeIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = chimeIcon;
   return node;
 }
 
 export function Workmail(label?: string, options?: Record<string, unknown>) {
   const node = _Business(label ?? "Workmail", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = workmailIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = workmailIcon;
   return node;
 }
 

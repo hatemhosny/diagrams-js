@@ -11,60 +11,60 @@ import vpcIcon from "../../../resources/digitalocean/network/vpc.png";
 
 function _Network(label?: string, options?: Record<string, unknown>) {
   const node = _Digitalocean(label, options);
-  (node as unknown as Record<string, unknown>)._type = "network";
+  (node as unknown as Record<string, unknown>)["~type"] = "network";
   return node;
 }
 
 export function Certificate(label?: string, options?: Record<string, unknown>) {
   const node = _Network(label ?? "Certificate", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = certificateIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = certificateIcon;
   return node;
 }
 
 export function DomainRegistration(label?: string, options?: Record<string, unknown>) {
   const node = _Network(label ?? "DomainRegistration", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = domain_registrationIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = domain_registrationIcon;
   return node;
 }
 
 export function Domain(label?: string, options?: Record<string, unknown>) {
   const node = _Network(label ?? "Domain", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = domainIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = domainIcon;
   return node;
 }
 
 export function Firewall(label?: string, options?: Record<string, unknown>) {
   const node = _Network(label ?? "Firewall", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = firewallIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = firewallIcon;
   return node;
 }
 
 export function FloatingIp(label?: string, options?: Record<string, unknown>) {
   const node = _Network(label ?? "FloatingIp", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = floating_ipIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = floating_ipIcon;
   return node;
 }
 
 export function InternetGateway(label?: string, options?: Record<string, unknown>) {
   const node = _Network(label ?? "InternetGateway", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = internet_gatewayIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = internet_gatewayIcon;
   return node;
 }
 
 export function LoadBalancer(label?: string, options?: Record<string, unknown>) {
   const node = _Network(label ?? "LoadBalancer", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = load_balancerIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = load_balancerIcon;
   return node;
 }
 
 export function ManagedVpn(label?: string, options?: Record<string, unknown>) {
   const node = _Network(label ?? "ManagedVpn", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = managed_vpnIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = managed_vpnIcon;
   return node;
 }
 
 export function Vpc(label?: string, options?: Record<string, unknown>) {
   const node = _Network(label ?? "Vpc", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = vpcIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = vpcIcon;
   return node;
 }

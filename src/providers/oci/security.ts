@@ -18,102 +18,102 @@ import wafIcon from "../../../resources/oci/security/waf.png";
 
 function _Security(label?: string, options?: Record<string, unknown>) {
   const node = _Oci(label, options);
-  (node as unknown as Record<string, unknown>)._type = "security";
+  (node as unknown as Record<string, unknown>)["~type"] = "security";
   return node;
 }
 
 export function CloudGuardWhite(label?: string, options?: Record<string, unknown>) {
   const node = _Security(label ?? "CloudGuardWhite", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = cloud_guard_whiteIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = cloud_guard_whiteIcon;
   return node;
 }
 
 export function CloudGuard(label?: string, options?: Record<string, unknown>) {
   const node = _Security(label ?? "CloudGuard", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = cloud_guardIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = cloud_guardIcon;
   return node;
 }
 
 export function DDOSWhite(label?: string, options?: Record<string, unknown>) {
   const node = _Security(label ?? "DDOSWhite", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = ddos_whiteIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = ddos_whiteIcon;
   return node;
 }
 
 export function DDOS(label?: string, options?: Record<string, unknown>) {
   const node = _Security(label ?? "DDOS", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = ddosIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = ddosIcon;
   return node;
 }
 
 export function EncryptionWhite(label?: string, options?: Record<string, unknown>) {
   const node = _Security(label ?? "EncryptionWhite", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = encryption_whiteIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = encryption_whiteIcon;
   return node;
 }
 
 export function Encryption(label?: string, options?: Record<string, unknown>) {
   const node = _Security(label ?? "Encryption", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = encryptionIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = encryptionIcon;
   return node;
 }
 
 export function IDAccessWhite(label?: string, options?: Record<string, unknown>) {
   const node = _Security(label ?? "IDAccessWhite", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = id_access_whiteIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = id_access_whiteIcon;
   return node;
 }
 
 export function IDAccess(label?: string, options?: Record<string, unknown>) {
   const node = _Security(label ?? "IDAccess", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = id_accessIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = id_accessIcon;
   return node;
 }
 
 export function KeyManagementWhite(label?: string, options?: Record<string, unknown>) {
   const node = _Security(label ?? "KeyManagementWhite", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = key_management_whiteIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = key_management_whiteIcon;
   return node;
 }
 
 export function KeyManagement(label?: string, options?: Record<string, unknown>) {
   const node = _Security(label ?? "KeyManagement", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = key_managementIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = key_managementIcon;
   return node;
 }
 
 export function MaxSecurityZoneWhite(label?: string, options?: Record<string, unknown>) {
   const node = _Security(label ?? "MaxSecurityZoneWhite", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = max_security_zone_whiteIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = max_security_zone_whiteIcon;
   return node;
 }
 
 export function MaxSecurityZone(label?: string, options?: Record<string, unknown>) {
   const node = _Security(label ?? "MaxSecurityZone", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = max_security_zoneIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = max_security_zoneIcon;
   return node;
 }
 
 export function VaultWhite(label?: string, options?: Record<string, unknown>) {
   const node = _Security(label ?? "VaultWhite", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = vault_whiteIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = vault_whiteIcon;
   return node;
 }
 
 export function Vault(label?: string, options?: Record<string, unknown>) {
   const node = _Security(label ?? "Vault", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = vaultIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = vaultIcon;
   return node;
 }
 
 export function WAFWhite(label?: string, options?: Record<string, unknown>) {
   const node = _Security(label ?? "WAFWhite", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = waf_whiteIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = waf_whiteIcon;
   return node;
 }
 
 export function WAF(label?: string, options?: Record<string, unknown>) {
   const node = _Security(label ?? "WAF", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = wafIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = wafIcon;
   return node;
 }

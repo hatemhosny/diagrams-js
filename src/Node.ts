@@ -14,15 +14,15 @@ export function getIconBaseDir(): string {
 }
 
 export interface Node {
-  _id: string;
   label: string;
-  _diagram: Diagram | null;
-  _cluster: Cluster | undefined;
-  _attrs: Record<string, string | number>;
-  _iconDataUrl: string | null;
   nodeId: string;
   cluster: Cluster | undefined;
-  _register(parent: Diagram | Cluster): void;
+  ["~id"]: string;
+  ["~diagram"]: Diagram | null;
+  ["~cluster"]: Cluster | undefined;
+  ["~attrs"]: Record<string, string | number>;
+  ["~iconDataUrl"]: string | null;
+  ["~register"](parent: Diagram | Cluster): void;
   to(target: Node): Node;
   to(targets: Node[]): Node[];
   to(edge: Edge): Edge;
@@ -63,7 +63,7 @@ export function Node(label = "", options: NodeOptions = {}): Node {
 
   // Check if this node has an icon data URL (embedded via esbuild dataurl loader)
   // This will be set by provider factory functions
-  const iconDataUrl = (options as { _iconDataUrl?: string })._iconDataUrl;
+  const iconDataUrl = (options as { ["~iconDataUrl"]?: string })["~iconDataUrl"];
   if (iconDataUrl) {
     _iconDataUrl = iconDataUrl;
   }
@@ -91,13 +91,13 @@ export function Node(label = "", options: NodeOptions = {}): Node {
 
   // Merge additional attributes (excluding shape which we handled above)
   for (const [key, value] of Object.entries(options)) {
-    if (key !== "nodeId" && key !== "_iconDataUrl" && key !== "shape") {
+    if (key !== "nodeId" && key !== "~iconDataUrl" && key !== "shape") {
       _attrs[key] = String(value);
     }
   }
 
   // If node has an icon via options, set the icon-related attributes
-  // Provider nodes (where _iconDataUrl is set after construction) will be handled in _register
+  // Provider nodes (where ~iconDataUrl is set after construction) will be handled in ~register
   if (_iconDataUrl) {
     Object.assign(_attrs, {
       height: "0.9",
@@ -110,15 +110,15 @@ export function Node(label = "", options: NodeOptions = {}): Node {
   }
 
   const node: Node = {
-    _id,
     label,
-    _diagram: null,
-    _cluster: undefined,
-    _attrs,
-    get _iconDataUrl(): string | null {
+    ["~id"]: _id,
+    ["~diagram"]: null,
+    ["~cluster"]: undefined,
+    ["~attrs"]: _attrs,
+    get ["~iconDataUrl"](): string | null {
       return _iconDataUrl;
     },
-    set _iconDataUrl(value: string | null) {
+    set ["~iconDataUrl"](value: string | null) {
       _iconDataUrl = value;
     },
 
@@ -138,7 +138,7 @@ export function Node(label = "", options: NodeOptions = {}): Node {
      * Called by Diagram.add() or Cluster.add()
      * @internal
      */
-    _register(parent: Diagram | Cluster): void {
+    ["~register"](parent: Diagram | Cluster): void {
       if (isCluster(parent)) {
         _cluster = parent;
         _diagram = parent.diagram;
@@ -149,8 +149,8 @@ export function Node(label = "", options: NodeOptions = {}): Node {
       // Handle autolabel
       if (_diagram && _diagram.autolabel) {
         // Get the node type from options for autolabel prefix
-        // Provider factory functions set _type to the service name (e.g., "EC2", "S3")
-        const prefix = options._type ?? "Node";
+        // Provider factory functions set ~type to the service name (e.g., "EC2", "S3")
+        const prefix = options["~type"] ?? "Node";
         if (label) {
           node.label = prefix + "\n" + label;
         } else {
@@ -160,7 +160,7 @@ export function Node(label = "", options: NodeOptions = {}): Node {
 
       // Check if icon was set (during construction or after by provider functions)
       // and update shape/icon attributes accordingly
-      const currentIconDataUrl = node._iconDataUrl;
+      const currentIconDataUrl = node["~iconDataUrl"];
       if (currentIconDataUrl) {
         // Determine each icon-related attribute with priority:
         // 1. User explicitly set in node options (highest priority)

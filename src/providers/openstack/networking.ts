@@ -5,24 +5,24 @@ import octaviaIcon from "../../../resources/openstack/networking/octavia.png";
 
 function _Networking(label?: string, options?: Record<string, unknown>) {
   const node = _Openstack(label, options);
-  (node as unknown as Record<string, unknown>)._type = "networking";
+  (node as unknown as Record<string, unknown>)["~type"] = "networking";
   return node;
 }
 
 export function Designate(label?: string, options?: Record<string, unknown>) {
   const node = _Networking(label ?? "Designate", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = designateIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = designateIcon;
   return node;
 }
 
 export function Neutron(label?: string, options?: Record<string, unknown>) {
   const node = _Networking(label ?? "Neutron", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = neutronIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = neutronIcon;
   return node;
 }
 
 export function Octavia(label?: string, options?: Record<string, unknown>) {
   const node = _Networking(label ?? "Octavia", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = octaviaIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = octaviaIcon;
   return node;
 }

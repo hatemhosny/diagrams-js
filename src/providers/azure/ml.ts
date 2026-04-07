@@ -12,43 +12,43 @@ import machine_learning_studio_workspacesIcon from "../../../resources/azure/ml/
 
 function _Ml(label?: string, options?: Record<string, unknown>) {
   const node = _Azure(label, options);
-  (node as unknown as Record<string, unknown>)._type = "ml";
+  (node as unknown as Record<string, unknown>)["~type"] = "ml";
   return node;
 }
 
 export function AzureOpenAI(label?: string, options?: Record<string, unknown>) {
   const node = _Ml(label ?? "AzureOpenAI", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_open_aiIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = azure_open_aiIcon;
   return node;
 }
 
 export function AzureSpeechService(label?: string, options?: Record<string, unknown>) {
   const node = _Ml(label ?? "AzureSpeechService", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_speech_serviceIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = azure_speech_serviceIcon;
   return node;
 }
 
 export function BatchAI(label?: string, options?: Record<string, unknown>) {
   const node = _Ml(label ?? "BatchAI", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = batch_aiIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = batch_aiIcon;
   return node;
 }
 
 export function BotServices(label?: string, options?: Record<string, unknown>) {
   const node = _Ml(label ?? "BotServices", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = bot_servicesIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = bot_servicesIcon;
   return node;
 }
 
 export function CognitiveServices(label?: string, options?: Record<string, unknown>) {
   const node = _Ml(label ?? "CognitiveServices", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = cognitive_servicesIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = cognitive_servicesIcon;
   return node;
 }
 
 export function GenomicsAccounts(label?: string, options?: Record<string, unknown>) {
   const node = _Ml(label ?? "GenomicsAccounts", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = genomics_accountsIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = genomics_accountsIcon;
   return node;
 }
 
@@ -57,7 +57,7 @@ export function MachineLearningServiceWorkspaces(
   options?: Record<string, unknown>,
 ) {
   const node = _Ml(label ?? "MachineLearningServiceWorkspaces", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl =
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] =
     machine_learning_service_workspacesIcon;
   return node;
 }
@@ -67,7 +67,7 @@ export function MachineLearningStudioWebServicePlans(
   options?: Record<string, unknown>,
 ) {
   const node = _Ml(label ?? "MachineLearningStudioWebServicePlans", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl =
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] =
     machine_learning_studio_web_service_plansIcon;
   return node;
 }
@@ -77,14 +77,14 @@ export function MachineLearningStudioWebServices(
   options?: Record<string, unknown>,
 ) {
   const node = _Ml(label ?? "MachineLearningStudioWebServices", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl =
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] =
     machine_learning_studio_web_servicesIcon;
   return node;
 }
 
 export function MachineLearningStudioWorkspaces(label?: string, options?: Record<string, unknown>) {
   const node = _Ml(label ?? "MachineLearningStudioWorkspaces", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl =
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] =
     machine_learning_studio_workspacesIcon;
   return node;
 }

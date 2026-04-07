@@ -5,24 +5,24 @@ import troveIcon from "../../../resources/openstack/workloadprovisioning/trove.p
 
 function _Workloadprovisioning(label?: string, options?: Record<string, unknown>) {
   const node = _Openstack(label, options);
-  (node as unknown as Record<string, unknown>)._type = "workloadprovisioning";
+  (node as unknown as Record<string, unknown>)["~type"] = "workloadprovisioning";
   return node;
 }
 
 export function Magnum(label?: string, options?: Record<string, unknown>) {
   const node = _Workloadprovisioning(label ?? "Magnum", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = magnumIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = magnumIcon;
   return node;
 }
 
 export function Sahara(label?: string, options?: Record<string, unknown>) {
   const node = _Workloadprovisioning(label ?? "Sahara", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = saharaIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = saharaIcon;
   return node;
 }
 
 export function Trove(label?: string, options?: Record<string, unknown>) {
   const node = _Workloadprovisioning(label ?? "Trove", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = troveIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = troveIcon;
   return node;
 }

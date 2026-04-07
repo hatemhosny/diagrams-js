@@ -4,18 +4,18 @@ import eckIcon from "../../../resources/elastic/orchestration/eck.png";
 
 function _Orchestration(label?: string, options?: Record<string, unknown>) {
   const node = _Elastic(label, options);
-  (node as unknown as Record<string, unknown>)._type = "orchestration";
+  (node as unknown as Record<string, unknown>)["~type"] = "orchestration";
   return node;
 }
 
 export function ECE(label?: string, options?: Record<string, unknown>) {
   const node = _Orchestration(label ?? "ECE", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = eceIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = eceIcon;
   return node;
 }
 
 export function ECK(label?: string, options?: Record<string, unknown>) {
   const node = _Orchestration(label ?? "ECK", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = eckIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = eckIcon;
   return node;
 }

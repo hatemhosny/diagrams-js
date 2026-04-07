@@ -9,49 +9,49 @@ import userIcon from "../../../resources/k8s/rbac/user.png";
 
 function _Rbac(label?: string, options?: Record<string, unknown>) {
   const node = _K8s(label, options);
-  (node as unknown as Record<string, unknown>)._type = "rbac";
+  (node as unknown as Record<string, unknown>)["~type"] = "rbac";
   return node;
 }
 
 export function CRole(label?: string, options?: Record<string, unknown>) {
   const node = _Rbac(label ?? "CRole", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = c_roleIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = c_roleIcon;
   return node;
 }
 
 export function CRB(label?: string, options?: Record<string, unknown>) {
   const node = _Rbac(label ?? "CRB", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = crbIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = crbIcon;
   return node;
 }
 
 export function Group(label?: string, options?: Record<string, unknown>) {
   const node = _Rbac(label ?? "Group", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = groupIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = groupIcon;
   return node;
 }
 
 export function RB(label?: string, options?: Record<string, unknown>) {
   const node = _Rbac(label ?? "RB", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = rbIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = rbIcon;
   return node;
 }
 
 export function Role(label?: string, options?: Record<string, unknown>) {
   const node = _Rbac(label ?? "Role", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = roleIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = roleIcon;
   return node;
 }
 
 export function SA(label?: string, options?: Record<string, unknown>) {
   const node = _Rbac(label ?? "SA", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = saIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = saIcon;
   return node;
 }
 
 export function User(label?: string, options?: Record<string, unknown>) {
   const node = _Rbac(label ?? "User", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = userIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = userIcon;
   return node;
 }
 

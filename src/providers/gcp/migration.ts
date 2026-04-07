@@ -4,19 +4,19 @@ import transfer_applianceIcon from "../../../resources/gcp/migration/transfer-ap
 
 function _Migration(label?: string, options?: Record<string, unknown>) {
   const node = _Gcp(label, options);
-  (node as unknown as Record<string, unknown>)._type = "migration";
+  (node as unknown as Record<string, unknown>)["~type"] = "migration";
   return node;
 }
 
 export function MigrateComputeEngine(label?: string, options?: Record<string, unknown>) {
   const node = _Migration(label ?? "MigrateComputeEngine", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = migrate_compute_engineIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = migrate_compute_engineIcon;
   return node;
 }
 
 export function TransferAppliance(label?: string, options?: Record<string, unknown>) {
   const node = _Migration(label ?? "TransferAppliance", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = transfer_applianceIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = transfer_applianceIcon;
   return node;
 }
 

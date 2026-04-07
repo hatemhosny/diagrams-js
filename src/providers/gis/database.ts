@@ -3,12 +3,12 @@ import postgisIcon from "../../../resources/gis/database/postgis.png";
 
 function _Database(label?: string, options?: Record<string, unknown>) {
   const node = _Gis(label, options);
-  (node as unknown as Record<string, unknown>)._type = "database";
+  (node as unknown as Record<string, unknown>)["~type"] = "database";
   return node;
 }
 
 export function Postgis(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "Postgis", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = postgisIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = postgisIcon;
   return node;
 }

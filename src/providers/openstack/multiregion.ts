@@ -3,12 +3,12 @@ import tricircleIcon from "../../../resources/openstack/multiregion/tricircle.pn
 
 function _Multiregion(label?: string, options?: Record<string, unknown>) {
   const node = _Openstack(label, options);
-  (node as unknown as Record<string, unknown>)._type = "multiregion";
+  (node as unknown as Record<string, unknown>)["~type"] = "multiregion";
   return node;
 }
 
 export function Tricircle(label?: string, options?: Record<string, unknown>) {
   const node = _Multiregion(label ?? "Tricircle", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = tricircleIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = tricircleIcon;
   return node;
 }

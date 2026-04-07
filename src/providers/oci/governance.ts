@@ -16,90 +16,90 @@ import taggingIcon from "../../../resources/oci/governance/tagging.png";
 
 function _Governance(label?: string, options?: Record<string, unknown>) {
   const node = _Oci(label, options);
-  (node as unknown as Record<string, unknown>)._type = "governance";
+  (node as unknown as Record<string, unknown>)["~type"] = "governance";
   return node;
 }
 
 export function AuditWhite(label?: string, options?: Record<string, unknown>) {
   const node = _Governance(label ?? "AuditWhite", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = audit_whiteIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = audit_whiteIcon;
   return node;
 }
 
 export function Audit(label?: string, options?: Record<string, unknown>) {
   const node = _Governance(label ?? "Audit", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = auditIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = auditIcon;
   return node;
 }
 
 export function CompartmentsWhite(label?: string, options?: Record<string, unknown>) {
   const node = _Governance(label ?? "CompartmentsWhite", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = compartments_whiteIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = compartments_whiteIcon;
   return node;
 }
 
 export function Compartments(label?: string, options?: Record<string, unknown>) {
   const node = _Governance(label ?? "Compartments", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = compartmentsIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = compartmentsIcon;
   return node;
 }
 
 export function GroupsWhite(label?: string, options?: Record<string, unknown>) {
   const node = _Governance(label ?? "GroupsWhite", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = groups_whiteIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = groups_whiteIcon;
   return node;
 }
 
 export function Groups(label?: string, options?: Record<string, unknown>) {
   const node = _Governance(label ?? "Groups", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = groupsIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = groupsIcon;
   return node;
 }
 
 export function LoggingWhite(label?: string, options?: Record<string, unknown>) {
   const node = _Governance(label ?? "LoggingWhite", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = logging_whiteIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = logging_whiteIcon;
   return node;
 }
 
 export function Logging(label?: string, options?: Record<string, unknown>) {
   const node = _Governance(label ?? "Logging", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = loggingIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = loggingIcon;
   return node;
 }
 
 export function OCIDWhite(label?: string, options?: Record<string, unknown>) {
   const node = _Governance(label ?? "OCIDWhite", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = ocid_whiteIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = ocid_whiteIcon;
   return node;
 }
 
 export function OCID(label?: string, options?: Record<string, unknown>) {
   const node = _Governance(label ?? "OCID", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = ocidIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = ocidIcon;
   return node;
 }
 
 export function PoliciesWhite(label?: string, options?: Record<string, unknown>) {
   const node = _Governance(label ?? "PoliciesWhite", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = policies_whiteIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = policies_whiteIcon;
   return node;
 }
 
 export function Policies(label?: string, options?: Record<string, unknown>) {
   const node = _Governance(label ?? "Policies", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = policiesIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = policiesIcon;
   return node;
 }
 
 export function TaggingWhite(label?: string, options?: Record<string, unknown>) {
   const node = _Governance(label ?? "TaggingWhite", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = tagging_whiteIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = tagging_whiteIcon;
   return node;
 }
 
 export function Tagging(label?: string, options?: Record<string, unknown>) {
   const node = _Governance(label ?? "Tagging", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = taggingIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = taggingIcon;
   return node;
 }

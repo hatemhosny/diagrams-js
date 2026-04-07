@@ -4,18 +4,18 @@ import mobile_pushIcon from "../../../resources/alibabacloud/communication/mobil
 
 function _Communication(label?: string, options?: Record<string, unknown>) {
   const node = _Alibabacloud(label, options);
-  (node as unknown as Record<string, unknown>)._type = "communication";
+  (node as unknown as Record<string, unknown>)["~type"] = "communication";
   return node;
 }
 
 export function DirectMail(label?: string, options?: Record<string, unknown>) {
   const node = _Communication(label ?? "DirectMail", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = direct_mailIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = direct_mailIcon;
   return node;
 }
 
 export function MobilePush(label?: string, options?: Record<string, unknown>) {
   const node = _Communication(label ?? "MobilePush", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = mobile_pushIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = mobile_pushIcon;
   return node;
 }

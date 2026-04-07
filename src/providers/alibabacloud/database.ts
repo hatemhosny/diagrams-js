@@ -19,85 +19,85 @@ import relational_database_serviceIcon from "../../../resources/alibabacloud/dat
 
 function _Database(label?: string, options?: Record<string, unknown>) {
   const node = _Alibabacloud(label, options);
-  (node as unknown as Record<string, unknown>)._type = "database";
+  (node as unknown as Record<string, unknown>)["~type"] = "database";
   return node;
 }
 
 export function ApsaradbCassandra(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "ApsaradbCassandra", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = apsaradb_cassandraIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = apsaradb_cassandraIcon;
   return node;
 }
 
 export function ApsaradbHbase(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "ApsaradbHbase", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = apsaradb_hbaseIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = apsaradb_hbaseIcon;
   return node;
 }
 
 export function ApsaradbMemcache(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "ApsaradbMemcache", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = apsaradb_memcacheIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = apsaradb_memcacheIcon;
   return node;
 }
 
 export function ApsaradbMongodb(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "ApsaradbMongodb", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = apsaradb_mongodbIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = apsaradb_mongodbIcon;
   return node;
 }
 
 export function ApsaradbOceanbase(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "ApsaradbOceanbase", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = apsaradb_oceanbaseIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = apsaradb_oceanbaseIcon;
   return node;
 }
 
 export function ApsaradbPolardb(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "ApsaradbPolardb", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = apsaradb_polardbIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = apsaradb_polardbIcon;
   return node;
 }
 
 export function ApsaradbPostgresql(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "ApsaradbPostgresql", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = apsaradb_postgresqlIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = apsaradb_postgresqlIcon;
   return node;
 }
 
 export function ApsaradbPpas(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "ApsaradbPpas", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = apsaradb_ppasIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = apsaradb_ppasIcon;
   return node;
 }
 
 export function ApsaradbRedis(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "ApsaradbRedis", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = apsaradb_redisIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = apsaradb_redisIcon;
   return node;
 }
 
 export function ApsaradbSqlserver(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "ApsaradbSqlserver", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = apsaradb_sqlserverIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = apsaradb_sqlserverIcon;
   return node;
 }
 
 export function DataManagementService(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "DataManagementService", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = data_management_serviceIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = data_management_serviceIcon;
   return node;
 }
 
 export function DataTransmissionService(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "DataTransmissionService", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = data_transmission_serviceIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = data_transmission_serviceIcon;
   return node;
 }
 
 export function DatabaseBackupService(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "DatabaseBackupService", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = database_backup_serviceIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = database_backup_serviceIcon;
   return node;
 }
 
@@ -106,26 +106,26 @@ export function DisributeRelationalDatabaseService(
   options?: Record<string, unknown>,
 ) {
   const node = _Database(label ?? "DisributeRelationalDatabaseService", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl =
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] =
     disribute_relational_database_serviceIcon;
   return node;
 }
 
 export function GraphDatabaseService(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "GraphDatabaseService", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = graph_database_serviceIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = graph_database_serviceIcon;
   return node;
 }
 
 export function HybriddbForMysql(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "HybriddbForMysql", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = hybriddb_for_mysqlIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = hybriddb_for_mysqlIcon;
   return node;
 }
 
 export function RelationalDatabaseService(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "RelationalDatabaseService", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = relational_database_serviceIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = relational_database_serviceIcon;
   return node;
 }
 

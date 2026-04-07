@@ -66,8 +66,8 @@ export interface EdgeOptions {
 
 export interface NodeOptions {
   nodeId?: string;
-  _type?: string;
-  _iconDataUrl?: string;
+  ["~type"]?: string;
+  ["~iconDataUrl"]?: string;
   [key: string]: unknown;
 }
 

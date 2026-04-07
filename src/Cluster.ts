@@ -90,7 +90,7 @@ export function Cluster(
      * Explicitly registers the node with this cluster
      */
     add<T extends Node>(node: T): T {
-      node._register(cluster);
+      node["~register"](cluster);
       return node;
     },
 

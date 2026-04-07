@@ -45,14 +45,14 @@ function generateProviderIndex(provider: string): string {
 
 export function _${pascalProvider}(label?: string, options?: Record<string, unknown>) {
   const node = Node(label ?? "${pascalProvider}", options);
-  (node as unknown as Record<string, unknown>)._provider = "${provider}";
-  (node as unknown as Record<string, unknown>)._iconDir = "${provider}";
+  (node as unknown as Record<string, unknown>)["~provider"] = "${provider}";
+  (node as unknown as Record<string, unknown>)["~iconDir"] = "${provider}";
   return node;
 }
 
 export function ${pascalProvider}(label?: string, options?: Record<string, unknown>) {
   const node = _${pascalProvider}(label ?? "${pascalProvider}", options);
-  (node as unknown as Record<string, unknown>)._icon = "${provider}.png";
+  (node as unknown as Record<string, unknown>)["~icon"] = "${provider}.png";
   return node;
 }
 `;
@@ -83,7 +83,7 @@ function generateModule(provider: string, serviceType: string, iconFiles: string
   code += `
 function _${pascalServiceType}(label?: string, options?: Record<string, unknown>) {
   const node = _${pascalProvider}(label, options);
-  (node as unknown as Record<string, unknown>)._type = "${serviceType}";
+  (node as unknown as Record<string, unknown>)["~type"] = "${serviceType}";
   return node;
 }
 
@@ -92,7 +92,7 @@ function _${pascalServiceType}(label?: string, options?: Record<string, unknown>
   for (const meta of classMetas) {
     code += `export function ${meta.name}(label?: string, options?: Record<string, unknown>) {
   const node = _${pascalServiceType}(label ?? "${meta.name}", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = ${meta.importName}Icon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = ${meta.importName}Icon;
   return node;
 }
 

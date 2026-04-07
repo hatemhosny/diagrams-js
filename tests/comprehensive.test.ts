@@ -681,15 +681,15 @@ describe("Autolabel Feature", () => {
   it("should add autolabel prefix when enabled", () => {
     const diagram = Diagram("Test", { autolabel: true });
     const node = diagram.add(Node("My Server"));
-    // autolabel adds "Node" prefix by default when _type is not set
+    // autolabel adds "Node" prefix by default when ~type is not set
     expect(node.label).toContain("Node");
     expect(node.label).toContain("My Server");
     diagram.destroy();
   });
 
-  it("should use _type for autolabel prefix when provided", () => {
+  it("should use ~type for autolabel prefix when provided", () => {
     const diagram = Diagram("Test", { autolabel: true });
-    const node = Node("My Server", { _type: "EC2" });
+    const node = Node("My Server", { "~type": "EC2" });
     diagram.add(node);
     expect(node.label).toBe("EC2\nMy Server");
     diagram.destroy();
@@ -697,7 +697,7 @@ describe("Autolabel Feature", () => {
 
   it("should handle autolabel with empty node label", () => {
     const diagram = Diagram("Test", { autolabel: true });
-    const node = Node("", { _type: "EC2" });
+    const node = Node("", { "~type": "EC2" });
     diagram.add(node);
     expect(node.label).toBe("EC2");
     diagram.destroy();
@@ -708,7 +708,7 @@ describe("Provider Node Behaviors - DOT Output", () => {
   it("should create provider node with icon attributes", async () => {
     const diagram = Diagram("Test", {});
     const node = Node("EC2");
-    (node as unknown as { _iconDataUrl: string })._iconDataUrl = "data:image/png;base64,test";
+    (node as unknown as { "~iconDataUrl": string })["~iconDataUrl"] = "data:image/png;base64,test";
     diagram.add(node);
     const dot = await diagram.render({ format: "dot" });
     expect(dot).toContain('image="data:image/png;base64,test"');
@@ -723,7 +723,7 @@ describe("Provider Node Behaviors - DOT Output", () => {
       },
     });
     const node = Node("EC2");
-    (node as unknown as { _iconDataUrl: string })._iconDataUrl = "data:image/png;base64,test";
+    (node as unknown as { "~iconDataUrl": string })["~iconDataUrl"] = "data:image/png;base64,test";
     diagram.add(node);
     const dot = await diagram.render({ format: "dot" });
     expect(dot).toContain('image="data:image/png;base64,test"');
@@ -740,7 +740,7 @@ describe("Provider Node Behaviors - DOT Output", () => {
       },
     });
     const node = Node("EC2");
-    (node as unknown as { _iconDataUrl: string })._iconDataUrl = "data:image/png;base64,test";
+    (node as unknown as { "~iconDataUrl": string })["~iconDataUrl"] = "data:image/png;base64,test";
     diagram.add(node);
     const dot = await diagram.render({ format: "dot" });
     expect(dot).toContain('image="data:image/png;base64,test"');
@@ -756,7 +756,7 @@ describe("Provider Node Behaviors - DOT Output", () => {
       },
     });
     const node = Node("EC2", { shape: "ellipse" });
-    (node as unknown as { _iconDataUrl: string })._iconDataUrl = "data:image/png;base64,test";
+    (node as unknown as { "~iconDataUrl": string })["~iconDataUrl"] = "data:image/png;base64,test";
     diagram.add(node);
     const dot = await diagram.render({ format: "dot" });
     expect(dot).toContain('image="data:image/png;base64,test"');
@@ -773,7 +773,7 @@ describe("Provider Node Behaviors - DOT Output", () => {
       },
     });
     const node = Node("EC2");
-    (node as unknown as { _iconDataUrl: string })._iconDataUrl = "data:image/png;base64,test";
+    (node as unknown as { "~iconDataUrl": string })["~iconDataUrl"] = "data:image/png;base64,test";
     diagram.add(node);
     const dot = await diagram.render({ format: "dot" });
     expect(dot).toContain('height="2.0"');
@@ -787,7 +787,7 @@ describe("Provider Node Behaviors - DOT Output", () => {
       },
     });
     const node = Node("EC2");
-    (node as unknown as { _iconDataUrl: string })._iconDataUrl = "data:image/png;base64,test";
+    (node as unknown as { "~iconDataUrl": string })["~iconDataUrl"] = "data:image/png;base64,test";
     diagram.add(node);
     const dot = await diagram.render({ format: "dot" });
     expect(dot).toContain('width="2.0"');
@@ -801,7 +801,7 @@ describe("Provider Node Behaviors - DOT Output", () => {
       },
     });
     const node = Node("EC2");
-    (node as unknown as { _iconDataUrl: string })._iconDataUrl = "data:image/png;base64,test";
+    (node as unknown as { "~iconDataUrl": string })["~iconDataUrl"] = "data:image/png;base64,test";
     diagram.add(node);
     const dot = await diagram.render({ format: "dot" });
     expect(dot).toContain('margin="0.2,0.2"');
@@ -815,7 +815,7 @@ describe("Provider Node Behaviors - DOT Output", () => {
       },
     });
     const node = Node("EC2", { height: "1.5" });
-    (node as unknown as { _iconDataUrl: string })._iconDataUrl = "data:image/png;base64,test";
+    (node as unknown as { "~iconDataUrl": string })["~iconDataUrl"] = "data:image/png;base64,test";
     diagram.add(node);
     const dot = await diagram.render({ format: "dot" });
     // Node-level should take precedence
@@ -828,7 +828,7 @@ describe("Icon Node Attributes - DOT Output", () => {
   it("should create provider node with all icon positioning attributes", async () => {
     const diagram = Diagram("Test", {});
     const node = Node("Service");
-    (node as unknown as { _iconDataUrl: string })._iconDataUrl = "data:image/png;base64,test";
+    (node as unknown as { "~iconDataUrl": string })["~iconDataUrl"] = "data:image/png;base64,test";
     diagram.add(node);
     const dot = await diagram.render({ format: "dot" });
     expect(dot).toContain('height="0.9"');
@@ -844,7 +844,8 @@ describe("Icon Node Attributes - DOT Output", () => {
     const diagram = Diagram("Test", {});
     const plainNode = diagram.add(Node("Plain"));
     const iconNode = Node("Icon");
-    (iconNode as unknown as { _iconDataUrl: string })._iconDataUrl = "data:image/png;base64,test";
+    (iconNode as unknown as { "~iconDataUrl": string })["~iconDataUrl"] =
+      "data:image/png;base64,test";
     diagram.add(iconNode);
     plainNode.to(iconNode);
     const dot = await diagram.render({ format: "dot" });

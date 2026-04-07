@@ -3,13 +3,13 @@ import pveIcon from "../../../resources/onprem/proxmox/pve.png";
 
 function _Proxmox(label?: string, options?: Record<string, unknown>) {
   const node = _Onprem(label, options);
-  (node as unknown as Record<string, unknown>)._type = "proxmox";
+  (node as unknown as Record<string, unknown>)["~type"] = "proxmox";
   return node;
 }
 
 export function Pve(label?: string, options?: Record<string, unknown>) {
   const node = _Proxmox(label ?? "Pve", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = pveIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = pveIcon;
   return node;
 }
 

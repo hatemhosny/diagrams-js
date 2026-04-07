@@ -24,25 +24,26 @@ import user_settingsIcon from "../../../resources/azure/security/user-settings.p
 
 function _Security(label?: string, options?: Record<string, unknown>) {
   const node = _Azure(label, options);
-  (node as unknown as Record<string, unknown>)._type = "security";
+  (node as unknown as Record<string, unknown>)["~type"] = "security";
   return node;
 }
 
 export function ApplicationSecurityGroups(label?: string, options?: Record<string, unknown>) {
   const node = _Security(label ?? "ApplicationSecurityGroups", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = application_security_groupsIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = application_security_groupsIcon;
   return node;
 }
 
 export function AzureADAuthenticationMethods(label?: string, options?: Record<string, unknown>) {
   const node = _Security(label ?? "AzureADAuthenticationMethods", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_ad_authentication_methodsIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] =
+    azure_ad_authentication_methodsIcon;
   return node;
 }
 
 export function AzureADIdentityProtection(label?: string, options?: Record<string, unknown>) {
   const node = _Security(label ?? "AzureADIdentityProtection", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_ad_identity_protectionIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = azure_ad_identity_protectionIcon;
   return node;
 }
 
@@ -51,115 +52,115 @@ export function AzureADPrivlegedIdentityManagement(
   options?: Record<string, unknown>,
 ) {
   const node = _Security(label ?? "AzureADPrivlegedIdentityManagement", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl =
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] =
     azure_ad_privleged_identity_managementIcon;
   return node;
 }
 
 export function AzureADRiskySignins(label?: string, options?: Record<string, unknown>) {
   const node = _Security(label ?? "AzureADRiskySignins", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_ad_risky_signinsIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = azure_ad_risky_signinsIcon;
   return node;
 }
 
 export function AzureADRiskyUsers(label?: string, options?: Record<string, unknown>) {
   const node = _Security(label ?? "AzureADRiskyUsers", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_ad_risky_usersIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = azure_ad_risky_usersIcon;
   return node;
 }
 
 export function AzureInformationProtection(label?: string, options?: Record<string, unknown>) {
   const node = _Security(label ?? "AzureInformationProtection", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_information_protectionIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = azure_information_protectionIcon;
   return node;
 }
 
 export function AzureSentinel(label?: string, options?: Record<string, unknown>) {
   const node = _Security(label ?? "AzureSentinel", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_sentinelIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = azure_sentinelIcon;
   return node;
 }
 
 export function ConditionalAccess(label?: string, options?: Record<string, unknown>) {
   const node = _Security(label ?? "ConditionalAccess", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = conditional_accessIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = conditional_accessIcon;
   return node;
 }
 
 export function Defender(label?: string, options?: Record<string, unknown>) {
   const node = _Security(label ?? "Defender", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = defenderIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = defenderIcon;
   return node;
 }
 
 export function Detonation(label?: string, options?: Record<string, unknown>) {
   const node = _Security(label ?? "Detonation", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = detonationIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = detonationIcon;
   return node;
 }
 
 export function ExtendedSecurityUpdates(label?: string, options?: Record<string, unknown>) {
   const node = _Security(label ?? "ExtendedSecurityUpdates", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = extended_security_updatesIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = extended_security_updatesIcon;
   return node;
 }
 
 export function Extendedsecurityupdates(label?: string, options?: Record<string, unknown>) {
   const node = _Security(label ?? "Extendedsecurityupdates", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = extendedsecurityupdatesIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = extendedsecurityupdatesIcon;
   return node;
 }
 
 export function IdentitySecureScore(label?: string, options?: Record<string, unknown>) {
   const node = _Security(label ?? "IdentitySecureScore", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = identity_secure_scoreIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = identity_secure_scoreIcon;
   return node;
 }
 
 export function KeyVaults(label?: string, options?: Record<string, unknown>) {
   const node = _Security(label ?? "KeyVaults", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = key_vaultsIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = key_vaultsIcon;
   return node;
 }
 
 export function MicrosoftDefenderEasm(label?: string, options?: Record<string, unknown>) {
   const node = _Security(label ?? "MicrosoftDefenderEasm", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = microsoft_defender_easmIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = microsoft_defender_easmIcon;
   return node;
 }
 
 export function MicrosoftDefenderForCloud(label?: string, options?: Record<string, unknown>) {
   const node = _Security(label ?? "MicrosoftDefenderForCloud", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = microsoft_defender_for_cloudIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = microsoft_defender_for_cloudIcon;
   return node;
 }
 
 export function MicrosoftDefenderForIot(label?: string, options?: Record<string, unknown>) {
   const node = _Security(label ?? "MicrosoftDefenderForIot", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = microsoft_defender_for_iotIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = microsoft_defender_for_iotIcon;
   return node;
 }
 
 export function MultifactorAuthentication(label?: string, options?: Record<string, unknown>) {
   const node = _Security(label ?? "MultifactorAuthentication", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = multifactor_authenticationIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = multifactor_authenticationIcon;
   return node;
 }
 
 export function SecurityCenter(label?: string, options?: Record<string, unknown>) {
   const node = _Security(label ?? "SecurityCenter", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = security_centerIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = security_centerIcon;
   return node;
 }
 
 export function Sentinel(label?: string, options?: Record<string, unknown>) {
   const node = _Security(label ?? "Sentinel", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = sentinelIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = sentinelIcon;
   return node;
 }
 
 export function UserSettings(label?: string, options?: Record<string, unknown>) {
   const node = _Security(label ?? "UserSettings", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = user_settingsIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = user_settingsIcon;
   return node;
 }

@@ -116,690 +116,690 @@ import workflowIcon from "../../../resources/azure/general/workflow.png";
 
 function _General(label?: string, options?: Record<string, unknown>) {
   const node = _Azure(label, options);
-  (node as unknown as Record<string, unknown>)._type = "general";
+  (node as unknown as Record<string, unknown>)["~type"] = "general";
   return node;
 }
 
 export function AllResources(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "AllResources", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = all_resourcesIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = all_resourcesIcon;
   return node;
 }
 
 export function Allresources(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "Allresources", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = allresourcesIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = allresourcesIcon;
   return node;
 }
 
 export function Azurehome(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "Azurehome", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = azurehomeIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = azurehomeIcon;
   return node;
 }
 
 export function Backlog(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "Backlog", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = backlogIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = backlogIcon;
   return node;
 }
 
 export function BizTalk(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "BizTalk", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = biz_talkIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = biz_talkIcon;
   return node;
 }
 
 export function BlobBlock(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "BlobBlock", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = blob_blockIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = blob_blockIcon;
   return node;
 }
 
 export function BlobPage(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "BlobPage", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = blob_pageIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = blob_pageIcon;
   return node;
 }
 
 export function Branch(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "Branch", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = branchIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = branchIcon;
   return node;
 }
 
 export function Browser(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "Browser", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = browserIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = browserIcon;
   return node;
 }
 
 export function Bug(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "Bug", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = bugIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = bugIcon;
   return node;
 }
 
 export function Builds(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "Builds", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = buildsIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = buildsIcon;
   return node;
 }
 
 export function Cache(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "Cache", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = cacheIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = cacheIcon;
   return node;
 }
 
 export function Code(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "Code", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = codeIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = codeIcon;
   return node;
 }
 
 export function Commit(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "Commit", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = commitIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = commitIcon;
   return node;
 }
 
 export function ControlsHorizontal(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "ControlsHorizontal", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = controls_horizontalIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = controls_horizontalIcon;
   return node;
 }
 
 export function Controls(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "Controls", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = controlsIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = controlsIcon;
   return node;
 }
 
 export function CostAlerts(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "CostAlerts", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = cost_alertsIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = cost_alertsIcon;
   return node;
 }
 
 export function CostAnalysis(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "CostAnalysis", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = cost_analysisIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = cost_analysisIcon;
   return node;
 }
 
 export function CostBudgets(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "CostBudgets", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = cost_budgetsIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = cost_budgetsIcon;
   return node;
 }
 
 export function CostManagementAndBilling(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "CostManagementAndBilling", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = cost_management_and_billingIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = cost_management_and_billingIcon;
   return node;
 }
 
 export function CostManagement(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "CostManagement", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = cost_managementIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = cost_managementIcon;
   return node;
 }
 
 export function Counter(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "Counter", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = counterIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = counterIcon;
   return node;
 }
 
 export function Cubes(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "Cubes", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = cubesIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = cubesIcon;
   return node;
 }
 
 export function Dashboard(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "Dashboard", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = dashboardIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = dashboardIcon;
   return node;
 }
 
 export function DevConsole(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "DevConsole", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = dev_consoleIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = dev_consoleIcon;
   return node;
 }
 
 export function Developertools(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "Developertools", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = developertoolsIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = developertoolsIcon;
   return node;
 }
 
 export function Download(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "Download", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = downloadIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = downloadIcon;
   return node;
 }
 
 export function Error(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "Error", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = errorIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = errorIcon;
   return node;
 }
 
 export function Extensions(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "Extensions", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = extensionsIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = extensionsIcon;
   return node;
 }
 
 export function FeaturePreviews(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "FeaturePreviews", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = feature_previewsIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = feature_previewsIcon;
   return node;
 }
 
 export function File(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "File", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = fileIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = fileIcon;
   return node;
 }
 
 export function Files(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "Files", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = filesIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = filesIcon;
   return node;
 }
 
 export function FolderBlank(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "FolderBlank", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = folder_blankIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = folder_blankIcon;
   return node;
 }
 
 export function FolderWebsite(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "FolderWebsite", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = folder_websiteIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = folder_websiteIcon;
   return node;
 }
 
 export function FreeServices(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "FreeServices", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = free_servicesIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = free_servicesIcon;
   return node;
 }
 
 export function Ftp(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "Ftp", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = ftpIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = ftpIcon;
   return node;
 }
 
 export function Gear(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "Gear", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = gearIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = gearIcon;
   return node;
 }
 
 export function GlobeError(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "GlobeError", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = globe_errorIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = globe_errorIcon;
   return node;
 }
 
 export function GlobeSuccess(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "GlobeSuccess", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = globe_successIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = globe_successIcon;
   return node;
 }
 
 export function GlobeWarning(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "GlobeWarning", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = globe_warningIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = globe_warningIcon;
   return node;
 }
 
 export function Guide(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "Guide", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = guideIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = guideIcon;
   return node;
 }
 
 export function Heart(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "Heart", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = heartIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = heartIcon;
   return node;
 }
 
 export function HelpAndSupport(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "HelpAndSupport", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = help_and_supportIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = help_and_supportIcon;
   return node;
 }
 
 export function Helpsupport(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "Helpsupport", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = helpsupportIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = helpsupportIcon;
   return node;
 }
 
 export function Image(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "Image", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = imageIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = imageIcon;
   return node;
 }
 
 export function Information(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "Information", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = informationIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = informationIcon;
   return node;
 }
 
 export function InputOutput(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "InputOutput", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = input_outputIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = input_outputIcon;
   return node;
 }
 
 export function JourneyHub(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "JourneyHub", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = journey_hubIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = journey_hubIcon;
   return node;
 }
 
 export function LaunchPortal(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "LaunchPortal", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = launch_portalIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = launch_portalIcon;
   return node;
 }
 
 export function Learn(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "Learn", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = learnIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = learnIcon;
   return node;
 }
 
 export function LoadTest(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "LoadTest", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = load_testIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = load_testIcon;
   return node;
 }
 
 export function Location(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "Location", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = locationIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = locationIcon;
   return node;
 }
 
 export function LogStreaming(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "LogStreaming", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = log_streamingIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = log_streamingIcon;
   return node;
 }
 
 export function ManagementGroups(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "ManagementGroups", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = management_groupsIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = management_groupsIcon;
   return node;
 }
 
 export function ManagementPortal(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "ManagementPortal", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = management_portalIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = management_portalIcon;
   return node;
 }
 
 export function Managementgroups(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "Managementgroups", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = managementgroupsIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = managementgroupsIcon;
   return node;
 }
 
 export function MarketplaceManagement(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "MarketplaceManagement", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = marketplace_managementIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = marketplace_managementIcon;
   return node;
 }
 
 export function Marketplace(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "Marketplace", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = marketplaceIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = marketplaceIcon;
   return node;
 }
 
 export function MediaFile(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "MediaFile", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = media_fileIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = media_fileIcon;
   return node;
 }
 
 export function Media(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "Media", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = mediaIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = mediaIcon;
   return node;
 }
 
 export function MobileEngagement(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "MobileEngagement", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = mobile_engagementIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = mobile_engagementIcon;
   return node;
 }
 
 export function Mobile(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "Mobile", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = mobileIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = mobileIcon;
   return node;
 }
 
 export function Module(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "Module", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = moduleIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = moduleIcon;
   return node;
 }
 
 export function PowerUp(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "PowerUp", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = power_upIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = power_upIcon;
   return node;
 }
 
 export function Power(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "Power", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = powerIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = powerIcon;
   return node;
 }
 
 export function Powershell(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "Powershell", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = powershellIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = powershellIcon;
   return node;
 }
 
 export function PreviewFeatures(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "PreviewFeatures", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = preview_featuresIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = preview_featuresIcon;
   return node;
 }
 
 export function ProcessExplorer(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "ProcessExplorer", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = process_explorerIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = process_explorerIcon;
   return node;
 }
 
 export function ProductionReadyDatabase(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "ProductionReadyDatabase", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = production_ready_databaseIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = production_ready_databaseIcon;
   return node;
 }
 
 export function QuickstartCenter(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "QuickstartCenter", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = quickstart_centerIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = quickstart_centerIcon;
   return node;
 }
 
 export function Quickstartcenter(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "Quickstartcenter", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = quickstartcenterIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = quickstartcenterIcon;
   return node;
 }
 
 export function Recent(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "Recent", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = recentIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = recentIcon;
   return node;
 }
 
 export function RegionManagement(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "RegionManagement", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = region_managementIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = region_managementIcon;
   return node;
 }
 
 export function Reservations(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "Reservations", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = reservationsIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = reservationsIcon;
   return node;
 }
 
 export function ResourceExplorer(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "ResourceExplorer", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = resource_explorerIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = resource_explorerIcon;
   return node;
 }
 
 export function ResourceGroupList(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "ResourceGroupList", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = resource_group_listIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = resource_group_listIcon;
   return node;
 }
 
 export function ResourceGroups(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "ResourceGroups", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = resource_groupsIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = resource_groupsIcon;
   return node;
 }
 
 export function ResourceLinked(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "ResourceLinked", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = resource_linkedIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = resource_linkedIcon;
   return node;
 }
 
 export function Resource(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "Resource", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = resourceIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = resourceIcon;
   return node;
 }
 
 export function Resourcegroups(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "Resourcegroups", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = resourcegroupsIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = resourcegroupsIcon;
   return node;
 }
 
 export function Scheduler(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "Scheduler", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = schedulerIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = schedulerIcon;
   return node;
 }
 
 export function SearchGrid(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "SearchGrid", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = search_gridIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = search_gridIcon;
   return node;
 }
 
 export function Search(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "Search", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = searchIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = searchIcon;
   return node;
 }
 
 export function ServerFarm(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "ServerFarm", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = server_farmIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = server_farmIcon;
   return node;
 }
 
 export function ServiceHealth(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "ServiceHealth", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = service_healthIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = service_healthIcon;
   return node;
 }
 
 export function Servicehealth(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "Servicehealth", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = servicehealthIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = servicehealthIcon;
   return node;
 }
 
 export function Shareddashboard(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "Shareddashboard", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = shareddashboardIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = shareddashboardIcon;
   return node;
 }
 
 export function Ssd(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "Ssd", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = ssdIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = ssdIcon;
   return node;
 }
 
 export function StorageAzureFiles(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "StorageAzureFiles", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = storage_azure_filesIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = storage_azure_filesIcon;
   return node;
 }
 
 export function StorageContainer(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "StorageContainer", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = storage_containerIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = storage_containerIcon;
   return node;
 }
 
 export function StorageQueue(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "StorageQueue", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = storage_queueIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = storage_queueIcon;
   return node;
 }
 
 export function Subscriptions(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "Subscriptions", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = subscriptionsIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = subscriptionsIcon;
   return node;
 }
 
 export function Support(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "Support", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = supportIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = supportIcon;
   return node;
 }
 
 export function Supportrequests(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "Supportrequests", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = supportrequestsIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = supportrequestsIcon;
   return node;
 }
 
 export function Table(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "Table", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = tableIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = tableIcon;
   return node;
 }
 
 export function Tag(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "Tag", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = tagIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = tagIcon;
   return node;
 }
 
 export function Tags(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "Tags", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = tagsIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = tagsIcon;
   return node;
 }
 
 export function Templates(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "Templates", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = templatesIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = templatesIcon;
   return node;
 }
 
 export function TfsVcRepository(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "TfsVcRepository", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = tfs_vc_repositoryIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = tfs_vc_repositoryIcon;
   return node;
 }
 
 export function Toolbox(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "Toolbox", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = toolboxIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = toolboxIcon;
   return node;
 }
 
 export function Troubleshoot(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "Troubleshoot", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = troubleshootIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = troubleshootIcon;
   return node;
 }
 
 export function Twousericon(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "Twousericon", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = twousericonIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = twousericonIcon;
   return node;
 }
 
 export function Userhealthicon(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "Userhealthicon", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = userhealthiconIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = userhealthiconIcon;
   return node;
 }
 
 export function Usericon(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "Usericon", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = usericonIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = usericonIcon;
   return node;
 }
 
 export function Userprivacy(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "Userprivacy", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = userprivacyIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = userprivacyIcon;
   return node;
 }
 
 export function Userresource(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "Userresource", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = userresourceIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = userresourceIcon;
   return node;
 }
 
 export function Versions(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "Versions", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = versionsIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = versionsIcon;
   return node;
 }
 
 export function WebSlots(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "WebSlots", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = web_slotsIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = web_slotsIcon;
   return node;
 }
 
 export function WebTest(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "WebTest", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = web_testIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = web_testIcon;
   return node;
 }
 
 export function WebsitePower(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "WebsitePower", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = website_powerIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = website_powerIcon;
   return node;
 }
 
 export function WebsiteStaging(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "WebsiteStaging", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = website_stagingIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = website_stagingIcon;
   return node;
 }
 
 export function Whatsnew(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "Whatsnew", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = whatsnewIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = whatsnewIcon;
   return node;
 }
 
 export function Workbooks(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "Workbooks", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = workbooksIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = workbooksIcon;
   return node;
 }
 
 export function Workflow(label?: string, options?: Record<string, unknown>) {
   const node = _General(label ?? "Workflow", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = workflowIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = workflowIcon;
   return node;
 }

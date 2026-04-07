@@ -4,18 +4,18 @@ import sumerianIcon from "../../../resources/aws/ar/sumerian.png";
 
 function _Ar(label?: string, options?: Record<string, unknown>) {
   const node = _Aws(label, options);
-  (node as unknown as Record<string, unknown>)._type = "ar";
+  (node as unknown as Record<string, unknown>)["~type"] = "ar";
   return node;
 }
 
 export function ArVr(label?: string, options?: Record<string, unknown>) {
   const node = _Ar(label ?? "ArVr", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = ar_vrIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = ar_vrIcon;
   return node;
 }
 
 export function Sumerian(label?: string, options?: Record<string, unknown>) {
   const node = _Ar(label ?? "Sumerian", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = sumerianIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = sumerianIcon;
   return node;
 }

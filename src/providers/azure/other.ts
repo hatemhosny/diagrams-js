@@ -130,157 +130,157 @@ import worker_container_appIcon from "../../../resources/azure/other/worker-cont
 
 function _Other(label?: string, options?: Record<string, unknown>) {
   const node = _Azure(label, options);
-  (node as unknown as Record<string, unknown>)._type = "other";
+  (node as unknown as Record<string, unknown>)["~type"] = "other";
   return node;
 }
 
 export function AadLicenses(label?: string, options?: Record<string, unknown>) {
   const node = _Other(label ?? "AadLicenses", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = aad_licensesIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = aad_licensesIcon;
   return node;
 }
 
 export function AksIstio(label?: string, options?: Record<string, unknown>) {
   const node = _Other(label ?? "AksIstio", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = aks_istioIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = aks_istioIcon;
   return node;
 }
 
 export function AppComplianceAutomation(label?: string, options?: Record<string, unknown>) {
   const node = _Other(label ?? "AppComplianceAutomation", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = app_compliance_automationIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = app_compliance_automationIcon;
   return node;
 }
 
 export function AppRegistrations(label?: string, options?: Record<string, unknown>) {
   const node = _Other(label ?? "AppRegistrations", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = app_registrationsIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = app_registrationsIcon;
   return node;
 }
 
 export function Aquila(label?: string, options?: Record<string, unknown>) {
   const node = _Other(label ?? "Aquila", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = aquilaIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = aquilaIcon;
   return node;
 }
 
 export function ArcDataServices(label?: string, options?: Record<string, unknown>) {
   const node = _Other(label ?? "ArcDataServices", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = arc_data_servicesIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = arc_data_servicesIcon;
   return node;
 }
 
 export function ArcKubernetes(label?: string, options?: Record<string, unknown>) {
   const node = _Other(label ?? "ArcKubernetes", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = arc_kubernetesIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = arc_kubernetesIcon;
   return node;
 }
 
 export function ArcPostgresql(label?: string, options?: Record<string, unknown>) {
   const node = _Other(label ?? "ArcPostgresql", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = arc_postgresql_Icon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = arc_postgresql_Icon;
   return node;
 }
 
 export function ArcSQLManagedInstance(label?: string, options?: Record<string, unknown>) {
   const node = _Other(label ?? "ArcSQLManagedInstance", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = arc_sql_managed_instanceIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = arc_sql_managed_instanceIcon;
   return node;
 }
 
 export function ArcSQLServer(label?: string, options?: Record<string, unknown>) {
   const node = _Other(label ?? "ArcSQLServer", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = arc_sql_serverIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = arc_sql_serverIcon;
   return node;
 }
 
 export function AvsVM(label?: string, options?: Record<string, unknown>) {
   const node = _Other(label ?? "AvsVM", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = avs_vmIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = avs_vmIcon;
   return node;
 }
 
 export function AzureA(label?: string, options?: Record<string, unknown>) {
   const node = _Other(label ?? "AzureA", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_aIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = azure_aIcon;
   return node;
 }
 
 export function AzureBackupCenter(label?: string, options?: Record<string, unknown>) {
   const node = _Other(label ?? "AzureBackupCenter", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_backup_centerIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = azure_backup_centerIcon;
   return node;
 }
 
 export function AzureCenterForSAP(label?: string, options?: Record<string, unknown>) {
   const node = _Other(label ?? "AzureCenterForSAP", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_center_for_sapIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = azure_center_for_sapIcon;
   return node;
 }
 
 export function AzureChaosStudio(label?: string, options?: Record<string, unknown>) {
   const node = _Other(label ?? "AzureChaosStudio", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_chaos_studioIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = azure_chaos_studioIcon;
   return node;
 }
 
 export function AzureCloudShell(label?: string, options?: Record<string, unknown>) {
   const node = _Other(label ?? "AzureCloudShell", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_cloud_shellIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = azure_cloud_shellIcon;
   return node;
 }
 
 export function AzureCommunicationServices(label?: string, options?: Record<string, unknown>) {
   const node = _Other(label ?? "AzureCommunicationServices", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_communication_servicesIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = azure_communication_servicesIcon;
   return node;
 }
 
 export function AzureComputeGalleries(label?: string, options?: Record<string, unknown>) {
   const node = _Other(label ?? "AzureComputeGalleries", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_compute_galleriesIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = azure_compute_galleriesIcon;
   return node;
 }
 
 export function AzureDeploymentEnvironments(label?: string, options?: Record<string, unknown>) {
   const node = _Other(label ?? "AzureDeploymentEnvironments", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_deployment_environmentsIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = azure_deployment_environmentsIcon;
   return node;
 }
 
 export function AzureDevTunnels(label?: string, options?: Record<string, unknown>) {
   const node = _Other(label ?? "AzureDevTunnels", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_dev_tunnelsIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = azure_dev_tunnelsIcon;
   return node;
 }
 
 export function AzureEdgeHardwareCenter(label?: string, options?: Record<string, unknown>) {
   const node = _Other(label ?? "AzureEdgeHardwareCenter", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_edge_hardware_centerIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = azure_edge_hardware_centerIcon;
   return node;
 }
 
 export function AzureHpcWorkbenches(label?: string, options?: Record<string, unknown>) {
   const node = _Other(label ?? "AzureHpcWorkbenches", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_hpc_workbenchesIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = azure_hpc_workbenchesIcon;
   return node;
 }
 
 export function AzureLoadTesting(label?: string, options?: Record<string, unknown>) {
   const node = _Other(label ?? "AzureLoadTesting", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_load_testingIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = azure_load_testingIcon;
   return node;
 }
 
 export function AzureManagedGrafana(label?: string, options?: Record<string, unknown>) {
   const node = _Other(label ?? "AzureManagedGrafana", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_managed_grafanaIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = azure_managed_grafanaIcon;
   return node;
 }
 
 export function AzureMonitorDashboard(label?: string, options?: Record<string, unknown>) {
   const node = _Other(label ?? "AzureMonitorDashboard", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_monitor_dashboardIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = azure_monitor_dashboardIcon;
   return node;
 }
 
@@ -289,182 +289,184 @@ export function AzureNetworkFunctionManagerFunctions(
   options?: Record<string, unknown>,
 ) {
   const node = _Other(label ?? "AzureNetworkFunctionManagerFunctions", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl =
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] =
     azure_network_function_manager_functionsIcon;
   return node;
 }
 
 export function AzureNetworkFunctionManager(label?: string, options?: Record<string, unknown>) {
   const node = _Other(label ?? "AzureNetworkFunctionManager", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_network_function_managerIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = azure_network_function_managerIcon;
   return node;
 }
 
 export function AzureOrbital(label?: string, options?: Record<string, unknown>) {
   const node = _Other(label ?? "AzureOrbital", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_orbitalIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = azure_orbitalIcon;
   return node;
 }
 
 export function AzureQuotas(label?: string, options?: Record<string, unknown>) {
   const node = _Other(label ?? "AzureQuotas", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_quotasIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = azure_quotasIcon;
   return node;
 }
 
 export function AzureSphere(label?: string, options?: Record<string, unknown>) {
   const node = _Other(label ?? "AzureSphere", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_sphereIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = azure_sphereIcon;
   return node;
 }
 
 export function AzureStorageMover(label?: string, options?: Record<string, unknown>) {
   const node = _Other(label ?? "AzureStorageMover", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_storage_moverIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = azure_storage_moverIcon;
   return node;
 }
 
 export function AzureSupportCenterBlue(label?: string, options?: Record<string, unknown>) {
   const node = _Other(label ?? "AzureSupportCenterBlue", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_support_center_blueIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = azure_support_center_blueIcon;
   return node;
 }
 
 export function AzureVideoIndexer(label?: string, options?: Record<string, unknown>) {
   const node = _Other(label ?? "AzureVideoIndexer", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_video_indexerIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = azure_video_indexerIcon;
   return node;
 }
 
 export function AzureVirtualDesktop(label?: string, options?: Record<string, unknown>) {
   const node = _Other(label ?? "AzureVirtualDesktop", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_virtual_desktopIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = azure_virtual_desktopIcon;
   return node;
 }
 
 export function AzureVmwareSolution(label?: string, options?: Record<string, unknown>) {
   const node = _Other(label ?? "AzureVmwareSolution", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_vmware_solutionIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = azure_vmware_solutionIcon;
   return node;
 }
 
 export function Azureattestation(label?: string, options?: Record<string, unknown>) {
   const node = _Other(label ?? "Azureattestation", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = azureattestationIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = azureattestationIcon;
   return node;
 }
 
 export function Azurite(label?: string, options?: Record<string, unknown>) {
   const node = _Other(label ?? "Azurite", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = azuriteIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = azuriteIcon;
   return node;
 }
 
 export function BackupVault(label?: string, options?: Record<string, unknown>) {
   const node = _Other(label ?? "BackupVault", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = backup_vaultIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = backup_vaultIcon;
   return node;
 }
 
 export function BareMetalInfrastructure(label?: string, options?: Record<string, unknown>) {
   const node = _Other(label ?? "BareMetalInfrastructure", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = bare_metal_infrastructureIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = bare_metal_infrastructureIcon;
   return node;
 }
 
 export function CapacityReservationGroups(label?: string, options?: Record<string, unknown>) {
   const node = _Other(label ?? "CapacityReservationGroups", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = capacity_reservation_groupsIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = capacity_reservation_groupsIcon;
   return node;
 }
 
 export function CentralServiceInstanceForSAP(label?: string, options?: Record<string, unknown>) {
   const node = _Other(label ?? "CentralServiceInstanceForSAP", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = central_service_instance_for_sapIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] =
+    central_service_instance_for_sapIcon;
   return node;
 }
 
 export function Ceres(label?: string, options?: Record<string, unknown>) {
   const node = _Other(label ?? "Ceres", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = ceresIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = ceresIcon;
   return node;
 }
 
 export function CloudServicesExtendedSupport(label?: string, options?: Record<string, unknown>) {
   const node = _Other(label ?? "CloudServicesExtendedSupport", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = cloud_services_extended_supportIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] =
+    cloud_services_extended_supportIcon;
   return node;
 }
 
 export function CommunityImages(label?: string, options?: Record<string, unknown>) {
   const node = _Other(label ?? "CommunityImages", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = community_imagesIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = community_imagesIcon;
   return node;
 }
 
 export function ComplianceCenter(label?: string, options?: Record<string, unknown>) {
   const node = _Other(label ?? "ComplianceCenter", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = compliance_centerIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = compliance_centerIcon;
   return node;
 }
 
 export function ConfidentialLedgers(label?: string, options?: Record<string, unknown>) {
   const node = _Other(label ?? "ConfidentialLedgers", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = confidential_ledgersIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = confidential_ledgersIcon;
   return node;
 }
 
 export function ContainerAppsEnvironments(label?: string, options?: Record<string, unknown>) {
   const node = _Other(label ?? "ContainerAppsEnvironments", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = container_apps_environmentsIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = container_apps_environmentsIcon;
   return node;
 }
 
 export function CostExport(label?: string, options?: Record<string, unknown>) {
   const node = _Other(label ?? "CostExport", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = cost_exportIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = cost_exportIcon;
   return node;
 }
 
 export function CustomIpPrefix(label?: string, options?: Record<string, unknown>) {
   const node = _Other(label ?? "CustomIpPrefix", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = custom_ip_prefixIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = custom_ip_prefixIcon;
   return node;
 }
 
 export function DashboardHub(label?: string, options?: Record<string, unknown>) {
   const node = _Other(label ?? "DashboardHub", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = dashboard_hubIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = dashboard_hubIcon;
   return node;
 }
 
 export function DataCollectionRules(label?: string, options?: Record<string, unknown>) {
   const node = _Other(label ?? "DataCollectionRules", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = data_collection_rulesIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = data_collection_rulesIcon;
   return node;
 }
 
 export function DatabaseInstanceForSAP(label?: string, options?: Record<string, unknown>) {
   const node = _Other(label ?? "DatabaseInstanceForSAP", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = database_instance_for_sapIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = database_instance_for_sapIcon;
   return node;
 }
 
 export function DedicatedHsm(label?: string, options?: Record<string, unknown>) {
   const node = _Other(label ?? "DedicatedHsm", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = dedicated_hsmIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = dedicated_hsmIcon;
   return node;
 }
 
 export function DefenderCmLocalManager(label?: string, options?: Record<string, unknown>) {
   const node = _Other(label ?? "DefenderCmLocalManager", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = defender_cm_local_managerIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = defender_cm_local_managerIcon;
   return node;
 }
 
 export function DefenderDcsController(label?: string, options?: Record<string, unknown>) {
   const node = _Other(label ?? "DefenderDcsController", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = defender_dcs_controllerIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = defender_dcs_controllerIcon;
   return node;
 }
 
@@ -473,38 +475,38 @@ export function DefenderDistributerControlSystem(
   options?: Record<string, unknown>,
 ) {
   const node = _Other(label ?? "DefenderDistributerControlSystem", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl =
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] =
     defender_distributer_control_systemIcon;
   return node;
 }
 
 export function DefenderEngineeringStation(label?: string, options?: Record<string, unknown>) {
   const node = _Other(label ?? "DefenderEngineeringStation", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = defender_engineering_stationIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = defender_engineering_stationIcon;
   return node;
 }
 
 export function DefenderExternalManagement(label?: string, options?: Record<string, unknown>) {
   const node = _Other(label ?? "DefenderExternalManagement", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = defender_external_managementIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = defender_external_managementIcon;
   return node;
 }
 
 export function DefenderFreezerMonitor(label?: string, options?: Record<string, unknown>) {
   const node = _Other(label ?? "DefenderFreezerMonitor", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = defender_freezer_monitorIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = defender_freezer_monitorIcon;
   return node;
 }
 
 export function DefenderHistorian(label?: string, options?: Record<string, unknown>) {
   const node = _Other(label ?? "DefenderHistorian", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = defender_historianIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = defender_historianIcon;
   return node;
 }
 
 export function DefenderHmi(label?: string, options?: Record<string, unknown>) {
   const node = _Other(label ?? "DefenderHmi", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = defender_hmiIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = defender_hmiIcon;
   return node;
 }
 
@@ -513,403 +515,406 @@ export function DefenderIndustrialPackagingSystem(
   options?: Record<string, unknown>,
 ) {
   const node = _Other(label ?? "DefenderIndustrialPackagingSystem", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl =
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] =
     defender_industrial_packaging_systemIcon;
   return node;
 }
 
 export function DefenderIndustrialPrinter(label?: string, options?: Record<string, unknown>) {
   const node = _Other(label ?? "DefenderIndustrialPrinter", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = defender_industrial_printerIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = defender_industrial_printerIcon;
   return node;
 }
 
 export function DefenderIndustrialRobot(label?: string, options?: Record<string, unknown>) {
   const node = _Other(label ?? "DefenderIndustrialRobot", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = defender_industrial_robotIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = defender_industrial_robotIcon;
   return node;
 }
 
 export function DefenderIndustrialScaleSystem(label?: string, options?: Record<string, unknown>) {
   const node = _Other(label ?? "DefenderIndustrialScaleSystem", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = defender_industrial_scale_systemIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] =
+    defender_industrial_scale_systemIcon;
   return node;
 }
 
 export function DefenderMarquee(label?: string, options?: Record<string, unknown>) {
   const node = _Other(label ?? "DefenderMarquee", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = defender_marqueeIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = defender_marqueeIcon;
   return node;
 }
 
 export function DefenderMeter(label?: string, options?: Record<string, unknown>) {
   const node = _Other(label ?? "DefenderMeter", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = defender_meterIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = defender_meterIcon;
   return node;
 }
 
 export function DefenderPlc(label?: string, options?: Record<string, unknown>) {
   const node = _Other(label ?? "DefenderPlc", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = defender_plcIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = defender_plcIcon;
   return node;
 }
 
 export function DefenderPneumaticDevice(label?: string, options?: Record<string, unknown>) {
   const node = _Other(label ?? "DefenderPneumaticDevice", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = defender_pneumatic_deviceIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = defender_pneumatic_deviceIcon;
   return node;
 }
 
 export function DefenderProgramableBoard(label?: string, options?: Record<string, unknown>) {
   const node = _Other(label ?? "DefenderProgramableBoard", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = defender_programable_boardIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = defender_programable_boardIcon;
   return node;
 }
 
 export function DefenderRelay(label?: string, options?: Record<string, unknown>) {
   const node = _Other(label ?? "DefenderRelay", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = defender_relayIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = defender_relayIcon;
   return node;
 }
 
 export function DefenderRobotController(label?: string, options?: Record<string, unknown>) {
   const node = _Other(label ?? "DefenderRobotController", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = defender_robot_controllerIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = defender_robot_controllerIcon;
   return node;
 }
 
 export function DefenderRtu(label?: string, options?: Record<string, unknown>) {
   const node = _Other(label ?? "DefenderRtu", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = defender_rtuIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = defender_rtuIcon;
   return node;
 }
 
 export function DefenderSensor(label?: string, options?: Record<string, unknown>) {
   const node = _Other(label ?? "DefenderSensor", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = defender_sensorIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = defender_sensorIcon;
   return node;
 }
 
 export function DefenderSlot(label?: string, options?: Record<string, unknown>) {
   const node = _Other(label ?? "DefenderSlot", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = defender_slotIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = defender_slotIcon;
   return node;
 }
 
 export function DefenderWebGuidingSystem(label?: string, options?: Record<string, unknown>) {
   const node = _Other(label ?? "DefenderWebGuidingSystem", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = defender_web_guiding_systemIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = defender_web_guiding_systemIcon;
   return node;
 }
 
 export function DeviceUpdateIotHub(label?: string, options?: Record<string, unknown>) {
   const node = _Other(label ?? "DeviceUpdateIotHub", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = device_update_iot_hubIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = device_update_iot_hubIcon;
   return node;
 }
 
 export function DiskPool(label?: string, options?: Record<string, unknown>) {
   const node = _Other(label ?? "DiskPool", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = disk_poolIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = disk_poolIcon;
   return node;
 }
 
 export function EdgeManagement(label?: string, options?: Record<string, unknown>) {
   const node = _Other(label ?? "EdgeManagement", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = edge_managementIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = edge_managementIcon;
   return node;
 }
 
 export function ElasticSan(label?: string, options?: Record<string, unknown>) {
   const node = _Other(label ?? "ElasticSan", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = elastic_sanIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = elastic_sanIcon;
   return node;
 }
 
 export function ExchangeOnPremisesAccess(label?: string, options?: Record<string, unknown>) {
   const node = _Other(label ?? "ExchangeOnPremisesAccess", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = exchange_on_premises_accessIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = exchange_on_premises_accessIcon;
   return node;
 }
 
 export function ExpressRouteTrafficCollector(label?: string, options?: Record<string, unknown>) {
   const node = _Other(label ?? "ExpressRouteTrafficCollector", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = express_route_traffic_collectorIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] =
+    express_route_traffic_collectorIcon;
   return node;
 }
 
 export function ExpressrouteDirect(label?: string, options?: Record<string, unknown>) {
   const node = _Other(label ?? "ExpressrouteDirect", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = expressroute_directIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = expressroute_directIcon;
   return node;
 }
 
 export function FhirService(label?: string, options?: Record<string, unknown>) {
   const node = _Other(label ?? "FhirService", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = fhir_serviceIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = fhir_serviceIcon;
   return node;
 }
 
 export function Fiji(label?: string, options?: Record<string, unknown>) {
   const node = _Other(label ?? "Fiji", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = fijiIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = fijiIcon;
   return node;
 }
 
 export function HdiAksCluster(label?: string, options?: Record<string, unknown>) {
   const node = _Other(label ?? "HdiAksCluster", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = hdi_aks_clusterIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = hdi_aks_clusterIcon;
   return node;
 }
 
 export function InstancePools(label?: string, options?: Record<string, unknown>) {
   const node = _Other(label ?? "InstancePools", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = instance_poolsIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = instance_poolsIcon;
   return node;
 }
 
 export function InternetAnalyzerProfiles(label?: string, options?: Record<string, unknown>) {
   const node = _Other(label ?? "InternetAnalyzerProfiles", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = internet_analyzer_profilesIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = internet_analyzer_profilesIcon;
   return node;
 }
 
 export function KubernetesFleetManager(label?: string, options?: Record<string, unknown>) {
   const node = _Other(label ?? "KubernetesFleetManager", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = kubernetes_fleet_managerIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = kubernetes_fleet_managerIcon;
   return node;
 }
 
 export function LocalNetworkGateways(label?: string, options?: Record<string, unknown>) {
   const node = _Other(label ?? "LocalNetworkGateways", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = local_network_gatewaysIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = local_network_gatewaysIcon;
   return node;
 }
 
 export function LogAnalyticsQueryPack(label?: string, options?: Record<string, unknown>) {
   const node = _Other(label ?? "LogAnalyticsQueryPack", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = log_analytics_query_packIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = log_analytics_query_packIcon;
   return node;
 }
 
 export function ManagedInstanceApacheCassandra(label?: string, options?: Record<string, unknown>) {
   const node = _Other(label ?? "ManagedInstanceApacheCassandra", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = managed_instance_apache_cassandraIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] =
+    managed_instance_apache_cassandraIcon;
   return node;
 }
 
 export function MedtechService(label?: string, options?: Record<string, unknown>) {
   const node = _Other(label ?? "MedtechService", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = medtech_serviceIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = medtech_serviceIcon;
   return node;
 }
 
 export function MicrosoftDevBox(label?: string, options?: Record<string, unknown>) {
   const node = _Other(label ?? "MicrosoftDevBox", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = microsoft_dev_boxIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = microsoft_dev_boxIcon;
   return node;
 }
 
 export function MissionLandingZone(label?: string, options?: Record<string, unknown>) {
   const node = _Other(label ?? "MissionLandingZone", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = mission_landing_zoneIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = mission_landing_zoneIcon;
   return node;
 }
 
 export function MobileNetworks(label?: string, options?: Record<string, unknown>) {
   const node = _Other(label ?? "MobileNetworks", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = mobile_networksIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = mobile_networksIcon;
   return node;
 }
 
 export function ModularDataCenter(label?: string, options?: Record<string, unknown>) {
   const node = _Other(label ?? "ModularDataCenter", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = modular_data_centerIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = modular_data_centerIcon;
   return node;
 }
 
 export function NetworkManagers(label?: string, options?: Record<string, unknown>) {
   const node = _Other(label ?? "NetworkManagers", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = network_managersIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = network_managersIcon;
   return node;
 }
 
 export function NetworkSecurityPerimeters(label?: string, options?: Record<string, unknown>) {
   const node = _Other(label ?? "NetworkSecurityPerimeters", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = network_security_perimetersIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = network_security_perimetersIcon;
   return node;
 }
 
 export function OpenSupplyChainPlatform(label?: string, options?: Record<string, unknown>) {
   const node = _Other(label ?? "OpenSupplyChainPlatform", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = open_supply_chain_platformIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = open_supply_chain_platformIcon;
   return node;
 }
 
 export function PeeringService(label?: string, options?: Record<string, unknown>) {
   const node = _Other(label ?? "PeeringService", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = peering_serviceIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = peering_serviceIcon;
   return node;
 }
 
 export function Peerings(label?: string, options?: Record<string, unknown>) {
   const node = _Other(label ?? "Peerings", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = peeringsIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = peeringsIcon;
   return node;
 }
 
 export function PrivateEndpoints(label?: string, options?: Record<string, unknown>) {
   const node = _Other(label ?? "PrivateEndpoints", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = private_endpointsIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = private_endpointsIcon;
   return node;
 }
 
 export function ReservedCapacity(label?: string, options?: Record<string, unknown>) {
   const node = _Other(label ?? "ReservedCapacity", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = reserved_capacityIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = reserved_capacityIcon;
   return node;
 }
 
 export function ResourceGuard(label?: string, options?: Record<string, unknown>) {
   const node = _Other(label ?? "ResourceGuard", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = resource_guardIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = resource_guardIcon;
   return node;
 }
 
 export function ResourceMover(label?: string, options?: Record<string, unknown>) {
   const node = _Other(label ?? "ResourceMover", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = resource_moverIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = resource_moverIcon;
   return node;
 }
 
 export function Rtos(label?: string, options?: Record<string, unknown>) {
   const node = _Other(label ?? "Rtos", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = rtosIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = rtosIcon;
   return node;
 }
 
 export function SavingsPlans(label?: string, options?: Record<string, unknown>) {
   const node = _Other(label ?? "SavingsPlans", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = savings_plansIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = savings_plansIcon;
   return node;
 }
 
 export function ScvmmManagementServers(label?: string, options?: Record<string, unknown>) {
   const node = _Other(label ?? "ScvmmManagementServers", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = scvmm_management_serversIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = scvmm_management_serversIcon;
   return node;
 }
 
 export function SonicDash(label?: string, options?: Record<string, unknown>) {
   const node = _Other(label ?? "SonicDash", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = sonic_dashIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = sonic_dashIcon;
   return node;
 }
 
 export function SshKeys(label?: string, options?: Record<string, unknown>) {
   const node = _Other(label ?? "SshKeys", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = ssh_keysIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = ssh_keysIcon;
   return node;
 }
 
 export function StorageFunctions(label?: string, options?: Record<string, unknown>) {
   const node = _Other(label ?? "StorageFunctions", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = storage_functionsIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = storage_functionsIcon;
   return node;
 }
 
 export function TargetsManagement(label?: string, options?: Record<string, unknown>) {
   const node = _Other(label ?? "TargetsManagement", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = targets_managementIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = targets_managementIcon;
   return node;
 }
 
 export function TemplateSpecs(label?: string, options?: Record<string, unknown>) {
   const node = _Other(label ?? "TemplateSpecs", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = template_specsIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = template_specsIcon;
   return node;
 }
 
 export function TestBase(label?: string, options?: Record<string, unknown>) {
   const node = _Other(label ?? "TestBase", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = test_baseIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = test_baseIcon;
   return node;
 }
 
 export function UpdateManagementCenter(label?: string, options?: Record<string, unknown>) {
   const node = _Other(label ?? "UpdateManagementCenter", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = update_management_centerIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = update_management_centerIcon;
   return node;
 }
 
 export function VideoAnalyzers(label?: string, options?: Record<string, unknown>) {
   const node = _Other(label ?? "VideoAnalyzers", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = video_analyzersIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = video_analyzersIcon;
   return node;
 }
 
 export function VirtualEnclaves(label?: string, options?: Record<string, unknown>) {
   const node = _Other(label ?? "VirtualEnclaves", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = virtual_enclavesIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = virtual_enclavesIcon;
   return node;
 }
 
 export function VirtualInstanceForSAP(label?: string, options?: Record<string, unknown>) {
   const node = _Other(label ?? "VirtualInstanceForSAP", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = virtual_instance_for_sapIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = virtual_instance_for_sapIcon;
   return node;
 }
 
 export function VirtualVisitsBuilder(label?: string, options?: Record<string, unknown>) {
   const node = _Other(label ?? "VirtualVisitsBuilder", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = virtual_visits_builderIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = virtual_visits_builderIcon;
   return node;
 }
 
 export function VMAppDefinitions(label?: string, options?: Record<string, unknown>) {
   const node = _Other(label ?? "VMAppDefinitions", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = vm_app_definitionsIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = vm_app_definitionsIcon;
   return node;
 }
 
 export function VMAppVersions(label?: string, options?: Record<string, unknown>) {
   const node = _Other(label ?? "VMAppVersions", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = vm_app_versionsIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = vm_app_versionsIcon;
   return node;
 }
 
 export function VMImageVersion(label?: string, options?: Record<string, unknown>) {
   const node = _Other(label ?? "VMImageVersion", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = vm_image_versionIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = vm_image_versionIcon;
   return node;
 }
 
 export function Wac(label?: string, options?: Record<string, unknown>) {
   const node = _Other(label ?? "Wac", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = wacIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = wacIcon;
   return node;
 }
 
 export function WebAppDatabase(label?: string, options?: Record<string, unknown>) {
   const node = _Other(label ?? "WebAppDatabase", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = web_app_databaseIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = web_app_databaseIcon;
   return node;
 }
 
 export function WebJobs(label?: string, options?: Record<string, unknown>) {
   const node = _Other(label ?? "WebJobs", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = web_jobsIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = web_jobsIcon;
   return node;
 }
 
 export function WindowsNotificationServices(label?: string, options?: Record<string, unknown>) {
   const node = _Other(label ?? "WindowsNotificationServices", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = windows_notification_servicesIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = windows_notification_servicesIcon;
   return node;
 }
 
 export function WorkerContainerApp(label?: string, options?: Record<string, unknown>) {
   const node = _Other(label ?? "WorkerContainerApp", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = worker_container_appIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = worker_container_appIcon;
   return node;
 }

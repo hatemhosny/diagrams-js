@@ -35,73 +35,73 @@ import user_privacyIcon from "../../../resources/azure/managementgovernance/user
 
 function _Managementgovernance(label?: string, options?: Record<string, unknown>) {
   const node = _Azure(label, options);
-  (node as unknown as Record<string, unknown>)._type = "managementgovernance";
+  (node as unknown as Record<string, unknown>)["~type"] = "managementgovernance";
   return node;
 }
 
 export function ActivityLog(label?: string, options?: Record<string, unknown>) {
   const node = _Managementgovernance(label ?? "ActivityLog", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = activity_logIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = activity_logIcon;
   return node;
 }
 
 export function Advisor(label?: string, options?: Record<string, unknown>) {
   const node = _Managementgovernance(label ?? "Advisor", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = advisorIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = advisorIcon;
   return node;
 }
 
 export function Alerts(label?: string, options?: Record<string, unknown>) {
   const node = _Managementgovernance(label ?? "Alerts", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = alertsIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = alertsIcon;
   return node;
 }
 
 export function ApplicationInsights(label?: string, options?: Record<string, unknown>) {
   const node = _Managementgovernance(label ?? "ApplicationInsights", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = application_insightsIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = application_insightsIcon;
   return node;
 }
 
 export function ArcMachines(label?: string, options?: Record<string, unknown>) {
   const node = _Managementgovernance(label ?? "ArcMachines", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = arc_machinesIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = arc_machinesIcon;
   return node;
 }
 
 export function AutomationAccounts(label?: string, options?: Record<string, unknown>) {
   const node = _Managementgovernance(label ?? "AutomationAccounts", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = automation_accountsIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = automation_accountsIcon;
   return node;
 }
 
 export function AzureArc(label?: string, options?: Record<string, unknown>) {
   const node = _Managementgovernance(label ?? "AzureArc", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_arcIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = azure_arcIcon;
   return node;
 }
 
 export function AzureLighthouse(label?: string, options?: Record<string, unknown>) {
   const node = _Managementgovernance(label ?? "AzureLighthouse", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_lighthouseIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = azure_lighthouseIcon;
   return node;
 }
 
 export function Blueprints(label?: string, options?: Record<string, unknown>) {
   const node = _Managementgovernance(label ?? "Blueprints", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = blueprintsIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = blueprintsIcon;
   return node;
 }
 
 export function Compliance(label?: string, options?: Record<string, unknown>) {
   const node = _Managementgovernance(label ?? "Compliance", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = complianceIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = complianceIcon;
   return node;
 }
 
 export function CostManagementAndBilling(label?: string, options?: Record<string, unknown>) {
   const node = _Managementgovernance(label ?? "CostManagementAndBilling", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = cost_management_and_billingIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = cost_management_and_billingIcon;
   return node;
 }
 
@@ -110,133 +110,133 @@ export function CustomerLockboxForMicrosoftAzure(
   options?: Record<string, unknown>,
 ) {
   const node = _Managementgovernance(label ?? "CustomerLockboxForMicrosoftAzure", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl =
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] =
     customer_lockbox_for_microsoft_azureIcon;
   return node;
 }
 
 export function DiagnosticsSettings(label?: string, options?: Record<string, unknown>) {
   const node = _Managementgovernance(label ?? "DiagnosticsSettings", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = diagnostics_settingsIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = diagnostics_settingsIcon;
   return node;
 }
 
 export function Education(label?: string, options?: Record<string, unknown>) {
   const node = _Managementgovernance(label ?? "Education", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = educationIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = educationIcon;
   return node;
 }
 
 export function IntuneTrends(label?: string, options?: Record<string, unknown>) {
   const node = _Managementgovernance(label ?? "IntuneTrends", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = intune_trendsIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = intune_trendsIcon;
   return node;
 }
 
 export function LogAnalyticsWorkspaces(label?: string, options?: Record<string, unknown>) {
   const node = _Managementgovernance(label ?? "LogAnalyticsWorkspaces", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = log_analytics_workspacesIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = log_analytics_workspacesIcon;
   return node;
 }
 
 export function Machinesazurearc(label?: string, options?: Record<string, unknown>) {
   const node = _Managementgovernance(label ?? "Machinesazurearc", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = machinesazurearcIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = machinesazurearcIcon;
   return node;
 }
 
 export function ManagedApplicationsCenter(label?: string, options?: Record<string, unknown>) {
   const node = _Managementgovernance(label ?? "ManagedApplicationsCenter", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = managed_applications_centerIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = managed_applications_centerIcon;
   return node;
 }
 
 export function ManagedDesktop(label?: string, options?: Record<string, unknown>) {
   const node = _Managementgovernance(label ?? "ManagedDesktop", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = managed_desktopIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = managed_desktopIcon;
   return node;
 }
 
 export function Metrics(label?: string, options?: Record<string, unknown>) {
   const node = _Managementgovernance(label ?? "Metrics", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = metricsIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = metricsIcon;
   return node;
 }
 
 export function Monitor(label?: string, options?: Record<string, unknown>) {
   const node = _Managementgovernance(label ?? "Monitor", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = monitorIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = monitorIcon;
   return node;
 }
 
 export function MyCustomers(label?: string, options?: Record<string, unknown>) {
   const node = _Managementgovernance(label ?? "MyCustomers", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = my_customersIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = my_customersIcon;
   return node;
 }
 
 export function OperationLogClassic(label?: string, options?: Record<string, unknown>) {
   const node = _Managementgovernance(label ?? "OperationLogClassic", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = operation_log_classicIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = operation_log_classicIcon;
   return node;
 }
 
 export function Policy(label?: string, options?: Record<string, unknown>) {
   const node = _Managementgovernance(label ?? "Policy", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = policyIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = policyIcon;
   return node;
 }
 
 export function RecoveryServicesVaults(label?: string, options?: Record<string, unknown>) {
   const node = _Managementgovernance(label ?? "RecoveryServicesVaults", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = recovery_services_vaultsIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = recovery_services_vaultsIcon;
   return node;
 }
 
 export function ResourceGraphExplorer(label?: string, options?: Record<string, unknown>) {
   const node = _Managementgovernance(label ?? "ResourceGraphExplorer", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = resource_graph_explorerIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = resource_graph_explorerIcon;
   return node;
 }
 
 export function ResourcesProvider(label?: string, options?: Record<string, unknown>) {
   const node = _Managementgovernance(label ?? "ResourcesProvider", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = resources_providerIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = resources_providerIcon;
   return node;
 }
 
 export function SchedulerJobCollections(label?: string, options?: Record<string, unknown>) {
   const node = _Managementgovernance(label ?? "SchedulerJobCollections", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = scheduler_job_collectionsIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = scheduler_job_collectionsIcon;
   return node;
 }
 
 export function ServiceCatalogMad(label?: string, options?: Record<string, unknown>) {
   const node = _Managementgovernance(label ?? "ServiceCatalogMad", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = service_catalog_madIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = service_catalog_madIcon;
   return node;
 }
 
 export function ServiceProviders(label?: string, options?: Record<string, unknown>) {
   const node = _Managementgovernance(label ?? "ServiceProviders", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = service_providersIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = service_providersIcon;
   return node;
 }
 
 export function Solutions(label?: string, options?: Record<string, unknown>) {
   const node = _Managementgovernance(label ?? "Solutions", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = solutionsIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = solutionsIcon;
   return node;
 }
 
 export function UniversalPrint(label?: string, options?: Record<string, unknown>) {
   const node = _Managementgovernance(label ?? "UniversalPrint", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = universal_printIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = universal_printIcon;
   return node;
 }
 
 export function UserPrivacy(label?: string, options?: Record<string, unknown>) {
   const node = _Managementgovernance(label ?? "UserPrivacy", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = user_privacyIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = user_privacyIcon;
   return node;
 }

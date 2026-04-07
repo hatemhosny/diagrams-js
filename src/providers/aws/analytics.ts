@@ -31,181 +31,181 @@ import redshiftIcon from "../../../resources/aws/analytics/redshift.png";
 
 function _Analytics(label?: string, options?: Record<string, unknown>) {
   const node = _Aws(label, options);
-  (node as unknown as Record<string, unknown>)._type = "analytics";
+  (node as unknown as Record<string, unknown>)["~type"] = "analytics";
   return node;
 }
 
 export function AmazonOpensearchService(label?: string, options?: Record<string, unknown>) {
   const node = _Analytics(label ?? "AmazonOpensearchService", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = amazon_opensearch_serviceIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = amazon_opensearch_serviceIcon;
   return node;
 }
 
 export function Analytics(label?: string, options?: Record<string, unknown>) {
   const node = _Analytics(label ?? "Analytics", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = analyticsIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = analyticsIcon;
   return node;
 }
 
 export function Athena(label?: string, options?: Record<string, unknown>) {
   const node = _Analytics(label ?? "Athena", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = athenaIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = athenaIcon;
   return node;
 }
 
 export function CloudsearchSearchDocuments(label?: string, options?: Record<string, unknown>) {
   const node = _Analytics(label ?? "CloudsearchSearchDocuments", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = cloudsearch_search_documentsIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = cloudsearch_search_documentsIcon;
   return node;
 }
 
 export function Cloudsearch(label?: string, options?: Record<string, unknown>) {
   const node = _Analytics(label ?? "Cloudsearch", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = cloudsearchIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = cloudsearchIcon;
   return node;
 }
 
 export function DataLakeResource(label?: string, options?: Record<string, unknown>) {
   const node = _Analytics(label ?? "DataLakeResource", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = data_lake_resourceIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = data_lake_resourceIcon;
   return node;
 }
 
 export function DataPipeline(label?: string, options?: Record<string, unknown>) {
   const node = _Analytics(label ?? "DataPipeline", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = data_pipelineIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = data_pipelineIcon;
   return node;
 }
 
 export function ElasticsearchService(label?: string, options?: Record<string, unknown>) {
   const node = _Analytics(label ?? "ElasticsearchService", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = elasticsearch_serviceIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = elasticsearch_serviceIcon;
   return node;
 }
 
 export function EMRCluster(label?: string, options?: Record<string, unknown>) {
   const node = _Analytics(label ?? "EMRCluster", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = emr_clusterIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = emr_clusterIcon;
   return node;
 }
 
 export function EMREngineMaprM3(label?: string, options?: Record<string, unknown>) {
   const node = _Analytics(label ?? "EMREngineMaprM3", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = emr_engine_mapr_m3Icon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = emr_engine_mapr_m3Icon;
   return node;
 }
 
 export function EMREngineMaprM5(label?: string, options?: Record<string, unknown>) {
   const node = _Analytics(label ?? "EMREngineMaprM5", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = emr_engine_mapr_m5Icon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = emr_engine_mapr_m5Icon;
   return node;
 }
 
 export function EMREngineMaprM7(label?: string, options?: Record<string, unknown>) {
   const node = _Analytics(label ?? "EMREngineMaprM7", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = emr_engine_mapr_m7Icon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = emr_engine_mapr_m7Icon;
   return node;
 }
 
 export function EMREngine(label?: string, options?: Record<string, unknown>) {
   const node = _Analytics(label ?? "EMREngine", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = emr_engineIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = emr_engineIcon;
   return node;
 }
 
 export function EMRHdfsCluster(label?: string, options?: Record<string, unknown>) {
   const node = _Analytics(label ?? "EMRHdfsCluster", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = emr_hdfs_clusterIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = emr_hdfs_clusterIcon;
   return node;
 }
 
 export function EMR(label?: string, options?: Record<string, unknown>) {
   const node = _Analytics(label ?? "EMR", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = emrIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = emrIcon;
   return node;
 }
 
 export function GlueCrawlers(label?: string, options?: Record<string, unknown>) {
   const node = _Analytics(label ?? "GlueCrawlers", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = glue_crawlersIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = glue_crawlersIcon;
   return node;
 }
 
 export function GlueDataCatalog(label?: string, options?: Record<string, unknown>) {
   const node = _Analytics(label ?? "GlueDataCatalog", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = glue_data_catalogIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = glue_data_catalogIcon;
   return node;
 }
 
 export function Glue(label?: string, options?: Record<string, unknown>) {
   const node = _Analytics(label ?? "Glue", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = glueIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = glueIcon;
   return node;
 }
 
 export function KinesisDataAnalytics(label?: string, options?: Record<string, unknown>) {
   const node = _Analytics(label ?? "KinesisDataAnalytics", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = kinesis_data_analyticsIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = kinesis_data_analyticsIcon;
   return node;
 }
 
 export function KinesisDataFirehose(label?: string, options?: Record<string, unknown>) {
   const node = _Analytics(label ?? "KinesisDataFirehose", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = kinesis_data_firehoseIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = kinesis_data_firehoseIcon;
   return node;
 }
 
 export function KinesisDataStreams(label?: string, options?: Record<string, unknown>) {
   const node = _Analytics(label ?? "KinesisDataStreams", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = kinesis_data_streamsIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = kinesis_data_streamsIcon;
   return node;
 }
 
 export function KinesisVideoStreams(label?: string, options?: Record<string, unknown>) {
   const node = _Analytics(label ?? "KinesisVideoStreams", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = kinesis_video_streamsIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = kinesis_video_streamsIcon;
   return node;
 }
 
 export function Kinesis(label?: string, options?: Record<string, unknown>) {
   const node = _Analytics(label ?? "Kinesis", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = kinesisIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = kinesisIcon;
   return node;
 }
 
 export function LakeFormation(label?: string, options?: Record<string, unknown>) {
   const node = _Analytics(label ?? "LakeFormation", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = lake_formationIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = lake_formationIcon;
   return node;
 }
 
 export function ManagedStreamingForKafka(label?: string, options?: Record<string, unknown>) {
   const node = _Analytics(label ?? "ManagedStreamingForKafka", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = managed_streaming_for_kafkaIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = managed_streaming_for_kafkaIcon;
   return node;
 }
 
 export function Quicksight(label?: string, options?: Record<string, unknown>) {
   const node = _Analytics(label ?? "Quicksight", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = quicksightIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = quicksightIcon;
   return node;
 }
 
 export function RedshiftDenseComputeNode(label?: string, options?: Record<string, unknown>) {
   const node = _Analytics(label ?? "RedshiftDenseComputeNode", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = redshift_dense_compute_nodeIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = redshift_dense_compute_nodeIcon;
   return node;
 }
 
 export function RedshiftDenseStorageNode(label?: string, options?: Record<string, unknown>) {
   const node = _Analytics(label ?? "RedshiftDenseStorageNode", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = redshift_dense_storage_nodeIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = redshift_dense_storage_nodeIcon;
   return node;
 }
 
 export function Redshift(label?: string, options?: Record<string, unknown>) {
   const node = _Analytics(label ?? "Redshift", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = redshiftIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = redshiftIcon;
   return node;
 }
 

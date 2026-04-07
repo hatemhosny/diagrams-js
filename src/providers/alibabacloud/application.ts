@@ -16,91 +16,91 @@ import yidaIcon from "../../../resources/alibabacloud/application/yida.png";
 
 function _Application(label?: string, options?: Record<string, unknown>) {
   const node = _Alibabacloud(label, options);
-  (node as unknown as Record<string, unknown>)._type = "application";
+  (node as unknown as Record<string, unknown>)["~type"] = "application";
   return node;
 }
 
 export function ApiGateway(label?: string, options?: Record<string, unknown>) {
   const node = _Application(label ?? "ApiGateway", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = api_gatewayIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = api_gatewayIcon;
   return node;
 }
 
 export function BeeBot(label?: string, options?: Record<string, unknown>) {
   const node = _Application(label ?? "BeeBot", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = bee_botIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = bee_botIcon;
   return node;
 }
 
 export function BlockchainAsAService(label?: string, options?: Record<string, unknown>) {
   const node = _Application(label ?? "BlockchainAsAService", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = blockchain_as_a_serviceIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = blockchain_as_a_serviceIcon;
   return node;
 }
 
 export function CloudCallCenter(label?: string, options?: Record<string, unknown>) {
   const node = _Application(label ?? "CloudCallCenter", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = cloud_call_centerIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = cloud_call_centerIcon;
   return node;
 }
 
 export function CodePipeline(label?: string, options?: Record<string, unknown>) {
   const node = _Application(label ?? "CodePipeline", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = code_pipelineIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = code_pipelineIcon;
   return node;
 }
 
 export function DirectMail(label?: string, options?: Record<string, unknown>) {
   const node = _Application(label ?? "DirectMail", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = direct_mailIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = direct_mailIcon;
   return node;
 }
 
 export function LogService(label?: string, options?: Record<string, unknown>) {
   const node = _Application(label ?? "LogService", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = log_serviceIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = log_serviceIcon;
   return node;
 }
 
 export function MessageNotificationService(label?: string, options?: Record<string, unknown>) {
   const node = _Application(label ?? "MessageNotificationService", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = message_notification_serviceIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = message_notification_serviceIcon;
   return node;
 }
 
 export function NodeJsPerformancePlatform(label?: string, options?: Record<string, unknown>) {
   const node = _Application(label ?? "NodeJsPerformancePlatform", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = node_js_performance_platformIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = node_js_performance_platformIcon;
   return node;
 }
 
 export function OpenSearch(label?: string, options?: Record<string, unknown>) {
   const node = _Application(label ?? "OpenSearch", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = open_searchIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = open_searchIcon;
   return node;
 }
 
 export function PerformanceTestingService(label?: string, options?: Record<string, unknown>) {
   const node = _Application(label ?? "PerformanceTestingService", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = performance_testing_serviceIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = performance_testing_serviceIcon;
   return node;
 }
 
 export function RdCloud(label?: string, options?: Record<string, unknown>) {
   const node = _Application(label ?? "RdCloud", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = rd_cloudIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = rd_cloudIcon;
   return node;
 }
 
 export function SmartConversationAnalysis(label?: string, options?: Record<string, unknown>) {
   const node = _Application(label ?? "SmartConversationAnalysis", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = smart_conversation_analysisIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = smart_conversation_analysisIcon;
   return node;
 }
 
 export function Yida(label?: string, options?: Record<string, unknown>) {
   const node = _Application(label ?? "Yida", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = yidaIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = yidaIcon;
   return node;
 }
 

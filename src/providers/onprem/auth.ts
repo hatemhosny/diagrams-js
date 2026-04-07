@@ -5,24 +5,24 @@ import oauth2_proxyIcon from "../../../resources/onprem/auth/oauth2-proxy.png";
 
 function _Auth(label?: string, options?: Record<string, unknown>) {
   const node = _Onprem(label, options);
-  (node as unknown as Record<string, unknown>)._type = "auth";
+  (node as unknown as Record<string, unknown>)["~type"] = "auth";
   return node;
 }
 
 export function Boundary(label?: string, options?: Record<string, unknown>) {
   const node = _Auth(label ?? "Boundary", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = boundaryIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = boundaryIcon;
   return node;
 }
 
 export function BuzzfeedSso(label?: string, options?: Record<string, unknown>) {
   const node = _Auth(label ?? "BuzzfeedSso", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = buzzfeed_ssoIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = buzzfeed_ssoIcon;
   return node;
 }
 
 export function Oauth2Proxy(label?: string, options?: Record<string, unknown>) {
   const node = _Auth(label ?? "Oauth2Proxy", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = oauth2_proxyIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = oauth2_proxyIcon;
   return node;
 }

@@ -6,30 +6,30 @@ import stripeIcon from "../../../resources/saas/payment/stripe.png";
 
 function _Payment(label?: string, options?: Record<string, unknown>) {
   const node = _Saas(label, options);
-  (node as unknown as Record<string, unknown>)._type = "payment";
+  (node as unknown as Record<string, unknown>)["~type"] = "payment";
   return node;
 }
 
 export function Adyen(label?: string, options?: Record<string, unknown>) {
   const node = _Payment(label ?? "Adyen", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = adyenIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = adyenIcon;
   return node;
 }
 
 export function AmazonPay(label?: string, options?: Record<string, unknown>) {
   const node = _Payment(label ?? "AmazonPay", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = amazon_payIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = amazon_payIcon;
   return node;
 }
 
 export function Paypal(label?: string, options?: Record<string, unknown>) {
   const node = _Payment(label ?? "Paypal", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = paypalIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = paypalIcon;
   return node;
 }
 
 export function Stripe(label?: string, options?: Record<string, unknown>) {
   const node = _Payment(label ?? "Stripe", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = stripeIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = stripeIcon;
   return node;
 }

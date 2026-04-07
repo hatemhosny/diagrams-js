@@ -6,31 +6,31 @@ import portworxIcon from "../../../resources/onprem/storage/portworx.png";
 
 function _Storage(label?: string, options?: Record<string, unknown>) {
   const node = _Onprem(label, options);
-  (node as unknown as Record<string, unknown>)._type = "storage";
+  (node as unknown as Record<string, unknown>)["~type"] = "storage";
   return node;
 }
 
 export function CephOsd(label?: string, options?: Record<string, unknown>) {
   const node = _Storage(label ?? "CephOsd", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = ceph_osdIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = ceph_osdIcon;
   return node;
 }
 
 export function Ceph(label?: string, options?: Record<string, unknown>) {
   const node = _Storage(label ?? "Ceph", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = cephIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = cephIcon;
   return node;
 }
 
 export function Glusterfs(label?: string, options?: Record<string, unknown>) {
   const node = _Storage(label ?? "Glusterfs", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = glusterfsIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = glusterfsIcon;
   return node;
 }
 
 export function Portworx(label?: string, options?: Record<string, unknown>) {
   const node = _Storage(label ?? "Portworx", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = portworxIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = portworxIcon;
   return node;
 }
 

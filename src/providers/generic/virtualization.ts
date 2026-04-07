@@ -6,30 +6,30 @@ import xenIcon from "../../../resources/generic/virtualization/xen.png";
 
 function _Virtualization(label?: string, options?: Record<string, unknown>) {
   const node = _Generic(label, options);
-  (node as unknown as Record<string, unknown>)._type = "virtualization";
+  (node as unknown as Record<string, unknown>)["~type"] = "virtualization";
   return node;
 }
 
 export function Qemu(label?: string, options?: Record<string, unknown>) {
   const node = _Virtualization(label ?? "Qemu", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = qemuIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = qemuIcon;
   return node;
 }
 
 export function Virtualbox(label?: string, options?: Record<string, unknown>) {
   const node = _Virtualization(label ?? "Virtualbox", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = virtualboxIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = virtualboxIcon;
   return node;
 }
 
 export function Vmware(label?: string, options?: Record<string, unknown>) {
   const node = _Virtualization(label ?? "Vmware", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = vmwareIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = vmwareIcon;
   return node;
 }
 
 export function XEN(label?: string, options?: Record<string, unknown>) {
   const node = _Virtualization(label ?? "XEN", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = xenIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = xenIcon;
   return node;
 }

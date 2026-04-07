@@ -16,90 +16,90 @@ import zabbixIcon from "../../../resources/onprem/monitoring/zabbix.png";
 
 function _Monitoring(label?: string, options?: Record<string, unknown>) {
   const node = _Onprem(label, options);
-  (node as unknown as Record<string, unknown>)._type = "monitoring";
+  (node as unknown as Record<string, unknown>)["~type"] = "monitoring";
   return node;
 }
 
 export function Cortex(label?: string, options?: Record<string, unknown>) {
   const node = _Monitoring(label ?? "Cortex", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = cortexIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = cortexIcon;
   return node;
 }
 
 export function Datadog(label?: string, options?: Record<string, unknown>) {
   const node = _Monitoring(label ?? "Datadog", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = datadogIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = datadogIcon;
   return node;
 }
 
 export function Dynatrace(label?: string, options?: Record<string, unknown>) {
   const node = _Monitoring(label ?? "Dynatrace", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = dynatraceIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = dynatraceIcon;
   return node;
 }
 
 export function Grafana(label?: string, options?: Record<string, unknown>) {
   const node = _Monitoring(label ?? "Grafana", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = grafanaIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = grafanaIcon;
   return node;
 }
 
 export function Humio(label?: string, options?: Record<string, unknown>) {
   const node = _Monitoring(label ?? "Humio", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = humioIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = humioIcon;
   return node;
 }
 
 export function Mimir(label?: string, options?: Record<string, unknown>) {
   const node = _Monitoring(label ?? "Mimir", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = mimirIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = mimirIcon;
   return node;
 }
 
 export function Nagios(label?: string, options?: Record<string, unknown>) {
   const node = _Monitoring(label ?? "Nagios", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = nagiosIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = nagiosIcon;
   return node;
 }
 
 export function Newrelic(label?: string, options?: Record<string, unknown>) {
   const node = _Monitoring(label ?? "Newrelic", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = newrelicIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = newrelicIcon;
   return node;
 }
 
 export function PrometheusOperator(label?: string, options?: Record<string, unknown>) {
   const node = _Monitoring(label ?? "PrometheusOperator", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = prometheus_operatorIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = prometheus_operatorIcon;
   return node;
 }
 
 export function Prometheus(label?: string, options?: Record<string, unknown>) {
   const node = _Monitoring(label ?? "Prometheus", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = prometheusIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = prometheusIcon;
   return node;
 }
 
 export function Sentry(label?: string, options?: Record<string, unknown>) {
   const node = _Monitoring(label ?? "Sentry", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = sentryIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = sentryIcon;
   return node;
 }
 
 export function Splunk(label?: string, options?: Record<string, unknown>) {
   const node = _Monitoring(label ?? "Splunk", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = splunkIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = splunkIcon;
   return node;
 }
 
 export function Thanos(label?: string, options?: Record<string, unknown>) {
   const node = _Monitoring(label ?? "Thanos", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = thanosIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = thanosIcon;
   return node;
 }
 
 export function Zabbix(label?: string, options?: Record<string, unknown>) {
   const node = _Monitoring(label ?? "Zabbix", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = zabbixIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = zabbixIcon;
   return node;
 }

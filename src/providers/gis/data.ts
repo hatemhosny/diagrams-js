@@ -7,36 +7,36 @@ import overturemapsIcon from "../../../resources/gis/data/overturemaps.png";
 
 function _Data(label?: string, options?: Record<string, unknown>) {
   const node = _Gis(label, options);
-  (node as unknown as Record<string, unknown>)._type = "data";
+  (node as unknown as Record<string, unknown>)["~type"] = "data";
   return node;
 }
 
 export function BAN(label?: string, options?: Record<string, unknown>) {
   const node = _Data(label ?? "BAN", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = banIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = banIcon;
   return node;
 }
 
 export function Here(label?: string, options?: Record<string, unknown>) {
   const node = _Data(label ?? "Here", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = hereIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = hereIcon;
   return node;
 }
 
 export function IGN(label?: string, options?: Record<string, unknown>) {
   const node = _Data(label ?? "IGN", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = ignIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = ignIcon;
   return node;
 }
 
 export function Openstreetmap(label?: string, options?: Record<string, unknown>) {
   const node = _Data(label ?? "Openstreetmap", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = openstreetmapIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = openstreetmapIcon;
   return node;
 }
 
 export function Overturemaps(label?: string, options?: Record<string, unknown>) {
   const node = _Data(label ?? "Overturemaps", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = overturemapsIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = overturemapsIcon;
   return node;
 }

@@ -4,18 +4,18 @@ import spatial_anchor_accountsIcon from "../../../resources/azure/mixedreality/s
 
 function _Mixedreality(label?: string, options?: Record<string, unknown>) {
   const node = _Azure(label, options);
-  (node as unknown as Record<string, unknown>)._type = "mixedreality";
+  (node as unknown as Record<string, unknown>)["~type"] = "mixedreality";
   return node;
 }
 
 export function RemoteRendering(label?: string, options?: Record<string, unknown>) {
   const node = _Mixedreality(label ?? "RemoteRendering", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = remote_renderingIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = remote_renderingIcon;
   return node;
 }
 
 export function SpatialAnchorAccounts(label?: string, options?: Record<string, unknown>) {
   const node = _Mixedreality(label ?? "SpatialAnchorAccounts", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = spatial_anchor_accountsIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = spatial_anchor_accountsIcon;
   return node;
 }

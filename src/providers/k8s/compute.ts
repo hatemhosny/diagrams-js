@@ -9,49 +9,49 @@ import stsIcon from "../../../resources/k8s/compute/sts.png";
 
 function _Compute(label?: string, options?: Record<string, unknown>) {
   const node = _K8s(label, options);
-  (node as unknown as Record<string, unknown>)._type = "compute";
+  (node as unknown as Record<string, unknown>)["~type"] = "compute";
   return node;
 }
 
 export function Cronjob(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "Cronjob", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = cronjobIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = cronjobIcon;
   return node;
 }
 
 export function Deploy(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "Deploy", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = deployIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = deployIcon;
   return node;
 }
 
 export function DS(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "DS", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = dsIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = dsIcon;
   return node;
 }
 
 export function Job(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "Job", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = jobIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = jobIcon;
   return node;
 }
 
 export function Pod(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "Pod", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = podIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = podIcon;
   return node;
 }
 
 export function RS(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "RS", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = rsIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = rsIcon;
   return node;
 }
 
 export function STS(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "STS", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = stsIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = stsIcon;
   return node;
 }
 

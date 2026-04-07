@@ -9,48 +9,48 @@ import user_subscriptionsIcon from "../../../resources/azure/azurestack/user-sub
 
 function _Azurestack(label?: string, options?: Record<string, unknown>) {
   const node = _Azure(label, options);
-  (node as unknown as Record<string, unknown>)._type = "azurestack";
+  (node as unknown as Record<string, unknown>)["~type"] = "azurestack";
   return node;
 }
 
 export function Capacity(label?: string, options?: Record<string, unknown>) {
   const node = _Azurestack(label ?? "Capacity", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = capacityIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = capacityIcon;
   return node;
 }
 
 export function InfrastructureBackup(label?: string, options?: Record<string, unknown>) {
   const node = _Azurestack(label ?? "InfrastructureBackup", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = infrastructure_backupIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = infrastructure_backupIcon;
   return node;
 }
 
 export function MultiTenancy(label?: string, options?: Record<string, unknown>) {
   const node = _Azurestack(label ?? "MultiTenancy", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = multi_tenancyIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = multi_tenancyIcon;
   return node;
 }
 
 export function Offers(label?: string, options?: Record<string, unknown>) {
   const node = _Azurestack(label ?? "Offers", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = offersIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = offersIcon;
   return node;
 }
 
 export function Plans(label?: string, options?: Record<string, unknown>) {
   const node = _Azurestack(label ?? "Plans", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = plansIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = plansIcon;
   return node;
 }
 
 export function Updates(label?: string, options?: Record<string, unknown>) {
   const node = _Azurestack(label ?? "Updates", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = updatesIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = updatesIcon;
   return node;
 }
 
 export function UserSubscriptions(label?: string, options?: Record<string, unknown>) {
   const node = _Azurestack(label ?? "UserSubscriptions", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = user_subscriptionsIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = user_subscriptionsIcon;
   return node;
 }

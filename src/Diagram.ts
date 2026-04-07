@@ -231,7 +231,7 @@ export function Diagram(name = "", options: DiagramOptions = {}): Diagram {
      * Add a node to this diagram
      */
     add<T extends Node>(node: T): T {
-      node._register(diagram as Diagram);
+      node["~register"](diagram as Diagram);
       return node;
     },
 

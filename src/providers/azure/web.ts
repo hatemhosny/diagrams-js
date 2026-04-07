@@ -22,126 +22,126 @@ import static_appsIcon from "../../../resources/azure/web/static-apps.png";
 
 function _Web(label?: string, options?: Record<string, unknown>) {
   const node = _Azure(label, options);
-  (node as unknown as Record<string, unknown>)._type = "web";
+  (node as unknown as Record<string, unknown>)["~type"] = "web";
   return node;
 }
 
 export function APICenter(label?: string, options?: Record<string, unknown>) {
   const node = _Web(label ?? "APICenter", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = api_centerIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = api_centerIcon;
   return node;
 }
 
 export function APIConnections(label?: string, options?: Record<string, unknown>) {
   const node = _Web(label ?? "APIConnections", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = api_connectionsIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = api_connectionsIcon;
   return node;
 }
 
 export function APIManagementServices(label?: string, options?: Record<string, unknown>) {
   const node = _Web(label ?? "APIManagementServices", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = api_management_servicesIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = api_management_servicesIcon;
   return node;
 }
 
 export function AppServiceCertificates(label?: string, options?: Record<string, unknown>) {
   const node = _Web(label ?? "AppServiceCertificates", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = app_service_certificatesIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = app_service_certificatesIcon;
   return node;
 }
 
 export function AppServiceDomains(label?: string, options?: Record<string, unknown>) {
   const node = _Web(label ?? "AppServiceDomains", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = app_service_domainsIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = app_service_domainsIcon;
   return node;
 }
 
 export function AppServiceEnvironments(label?: string, options?: Record<string, unknown>) {
   const node = _Web(label ?? "AppServiceEnvironments", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = app_service_environmentsIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = app_service_environmentsIcon;
   return node;
 }
 
 export function AppServicePlans(label?: string, options?: Record<string, unknown>) {
   const node = _Web(label ?? "AppServicePlans", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = app_service_plansIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = app_service_plansIcon;
   return node;
 }
 
 export function AppServices(label?: string, options?: Record<string, unknown>) {
   const node = _Web(label ?? "AppServices", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = app_servicesIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = app_servicesIcon;
   return node;
 }
 
 export function AppSpace(label?: string, options?: Record<string, unknown>) {
   const node = _Web(label ?? "AppSpace", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = app_spaceIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = app_spaceIcon;
   return node;
 }
 
 export function AzureMediaService(label?: string, options?: Record<string, unknown>) {
   const node = _Web(label ?? "AzureMediaService", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_media_serviceIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = azure_media_serviceIcon;
   return node;
 }
 
 export function AzureSpringApps(label?: string, options?: Record<string, unknown>) {
   const node = _Web(label ?? "AzureSpringApps", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_spring_appsIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = azure_spring_appsIcon;
   return node;
 }
 
 export function CognitiveSearch(label?: string, options?: Record<string, unknown>) {
   const node = _Web(label ?? "CognitiveSearch", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = cognitive_searchIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = cognitive_searchIcon;
   return node;
 }
 
 export function CognitiveServices(label?: string, options?: Record<string, unknown>) {
   const node = _Web(label ?? "CognitiveServices", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = cognitive_servicesIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = cognitive_servicesIcon;
   return node;
 }
 
 export function FrontDoorAndCDNProfiles(label?: string, options?: Record<string, unknown>) {
   const node = _Web(label ?? "FrontDoorAndCDNProfiles", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = front_door_and_cdn_profilesIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = front_door_and_cdn_profilesIcon;
   return node;
 }
 
 export function MediaServices(label?: string, options?: Record<string, unknown>) {
   const node = _Web(label ?? "MediaServices", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = media_servicesIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = media_servicesIcon;
   return node;
 }
 
 export function NotificationHubNamespaces(label?: string, options?: Record<string, unknown>) {
   const node = _Web(label ?? "NotificationHubNamespaces", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = notification_hub_namespacesIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = notification_hub_namespacesIcon;
   return node;
 }
 
 export function PowerPlatform(label?: string, options?: Record<string, unknown>) {
   const node = _Web(label ?? "PowerPlatform", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = power_platformIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = power_platformIcon;
   return node;
 }
 
 export function Search(label?: string, options?: Record<string, unknown>) {
   const node = _Web(label ?? "Search", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = searchIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = searchIcon;
   return node;
 }
 
 export function Signalr(label?: string, options?: Record<string, unknown>) {
   const node = _Web(label ?? "Signalr", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = signalrIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = signalrIcon;
   return node;
 }
 
 export function StaticApps(label?: string, options?: Record<string, unknown>) {
   const node = _Web(label ?? "StaticApps", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = static_appsIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = static_appsIcon;
   return node;
 }

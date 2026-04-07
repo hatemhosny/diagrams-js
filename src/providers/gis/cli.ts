@@ -8,42 +8,42 @@ import pdalIcon from "../../../resources/gis/cli/pdal.png";
 
 function _Cli(label?: string, options?: Record<string, unknown>) {
   const node = _Gis(label, options);
-  (node as unknown as Record<string, unknown>)._type = "cli";
+  (node as unknown as Record<string, unknown>)["~type"] = "cli";
   return node;
 }
 
 export function Gdal(label?: string, options?: Record<string, unknown>) {
   const node = _Cli(label ?? "Gdal", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = gdalIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = gdalIcon;
   return node;
 }
 
 export function Imposm(label?: string, options?: Record<string, unknown>) {
   const node = _Cli(label ?? "Imposm", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = imposmIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = imposmIcon;
   return node;
 }
 
 export function Lastools(label?: string, options?: Record<string, unknown>) {
   const node = _Cli(label ?? "Lastools", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = lastoolsIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = lastoolsIcon;
   return node;
 }
 
 export function Mapnik(label?: string, options?: Record<string, unknown>) {
   const node = _Cli(label ?? "Mapnik", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = mapnikIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = mapnikIcon;
   return node;
 }
 
 export function Mdal(label?: string, options?: Record<string, unknown>) {
   const node = _Cli(label ?? "Mdal", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = mdalIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = mdalIcon;
   return node;
 }
 
 export function Pdal(label?: string, options?: Record<string, unknown>) {
   const node = _Cli(label ?? "Pdal", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = pdalIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = pdalIcon;
   return node;
 }

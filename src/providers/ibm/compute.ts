@@ -7,36 +7,36 @@ import power_instanceIcon from "../../../resources/ibm/compute/power-instance.pn
 
 function _Compute(label?: string, options?: Record<string, unknown>) {
   const node = _Ibm(label, options);
-  (node as unknown as Record<string, unknown>)._type = "compute";
+  (node as unknown as Record<string, unknown>)["~type"] = "compute";
   return node;
 }
 
 export function BareMetalServer(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "BareMetalServer", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = bare_metal_serverIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = bare_metal_serverIcon;
   return node;
 }
 
 export function ImageService(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "ImageService", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = image_serviceIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = image_serviceIcon;
   return node;
 }
 
 export function Instance(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "Instance", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = instanceIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = instanceIcon;
   return node;
 }
 
 export function Key(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "Key", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = keyIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = keyIcon;
   return node;
 }
 
 export function PowerInstance(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "PowerInstance", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = power_instanceIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = power_instanceIcon;
   return node;
 }

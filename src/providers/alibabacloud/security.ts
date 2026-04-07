@@ -20,115 +20,115 @@ import web_application_firewallIcon from "../../../resources/alibabacloud/securi
 
 function _Security(label?: string, options?: Record<string, unknown>) {
   const node = _Alibabacloud(label, options);
-  (node as unknown as Record<string, unknown>)._type = "security";
+  (node as unknown as Record<string, unknown>)["~type"] = "security";
   return node;
 }
 
 export function AntiBotService(label?: string, options?: Record<string, unknown>) {
   const node = _Security(label ?? "AntiBotService", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = anti_bot_serviceIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = anti_bot_serviceIcon;
   return node;
 }
 
 export function AntiDdosBasic(label?: string, options?: Record<string, unknown>) {
   const node = _Security(label ?? "AntiDdosBasic", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = anti_ddos_basicIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = anti_ddos_basicIcon;
   return node;
 }
 
 export function AntiDdosPro(label?: string, options?: Record<string, unknown>) {
   const node = _Security(label ?? "AntiDdosPro", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = anti_ddos_proIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = anti_ddos_proIcon;
   return node;
 }
 
 export function AntifraudService(label?: string, options?: Record<string, unknown>) {
   const node = _Security(label ?? "AntifraudService", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = antifraud_serviceIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = antifraud_serviceIcon;
   return node;
 }
 
 export function BastionHost(label?: string, options?: Record<string, unknown>) {
   const node = _Security(label ?? "BastionHost", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = bastion_hostIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = bastion_hostIcon;
   return node;
 }
 
 export function CloudFirewall(label?: string, options?: Record<string, unknown>) {
   const node = _Security(label ?? "CloudFirewall", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = cloud_firewallIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = cloud_firewallIcon;
   return node;
 }
 
 export function CloudSecurityScanner(label?: string, options?: Record<string, unknown>) {
   const node = _Security(label ?? "CloudSecurityScanner", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = cloud_security_scannerIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = cloud_security_scannerIcon;
   return node;
 }
 
 export function ContentModeration(label?: string, options?: Record<string, unknown>) {
   const node = _Security(label ?? "ContentModeration", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = content_moderationIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = content_moderationIcon;
   return node;
 }
 
 export function CrowdsourcedSecurityTesting(label?: string, options?: Record<string, unknown>) {
   const node = _Security(label ?? "CrowdsourcedSecurityTesting", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = crowdsourced_security_testingIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = crowdsourced_security_testingIcon;
   return node;
 }
 
 export function DataEncryptionService(label?: string, options?: Record<string, unknown>) {
   const node = _Security(label ?? "DataEncryptionService", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = data_encryption_serviceIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = data_encryption_serviceIcon;
   return node;
 }
 
 export function DbAudit(label?: string, options?: Record<string, unknown>) {
   const node = _Security(label ?? "DbAudit", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = db_auditIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = db_auditIcon;
   return node;
 }
 
 export function GameShield(label?: string, options?: Record<string, unknown>) {
   const node = _Security(label ?? "GameShield", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = game_shieldIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = game_shieldIcon;
   return node;
 }
 
 export function IdVerification(label?: string, options?: Record<string, unknown>) {
   const node = _Security(label ?? "IdVerification", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = id_verificationIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = id_verificationIcon;
   return node;
 }
 
 export function ManagedSecurityService(label?: string, options?: Record<string, unknown>) {
   const node = _Security(label ?? "ManagedSecurityService", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = managed_security_serviceIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = managed_security_serviceIcon;
   return node;
 }
 
 export function SecurityCenter(label?: string, options?: Record<string, unknown>) {
   const node = _Security(label ?? "SecurityCenter", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = security_centerIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = security_centerIcon;
   return node;
 }
 
 export function ServerGuard(label?: string, options?: Record<string, unknown>) {
   const node = _Security(label ?? "ServerGuard", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = server_guardIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = server_guardIcon;
   return node;
 }
 
 export function SslCertificates(label?: string, options?: Record<string, unknown>) {
   const node = _Security(label ?? "SslCertificates", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = ssl_certificatesIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = ssl_certificatesIcon;
   return node;
 }
 
 export function WebApplicationFirewall(label?: string, options?: Record<string, unknown>) {
   const node = _Security(label ?? "WebApplicationFirewall", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = web_application_firewallIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = web_application_firewallIcon;
   return node;
 }
 

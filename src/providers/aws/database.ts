@@ -36,19 +36,19 @@ import timestreamIcon from "../../../resources/aws/database/timestream.png";
 
 function _Database(label?: string, options?: Record<string, unknown>) {
   const node = _Aws(label, options);
-  (node as unknown as Record<string, unknown>)._type = "database";
+  (node as unknown as Record<string, unknown>)["~type"] = "database";
   return node;
 }
 
 export function AuroraInstance(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "AuroraInstance", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = aurora_instanceIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = aurora_instanceIcon;
   return node;
 }
 
 export function Aurora(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "Aurora", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = auroraIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = auroraIcon;
   return node;
 }
 
@@ -57,104 +57,106 @@ export function DatabaseMigrationServiceDatabaseMigrationWorkflow(
   options?: Record<string, unknown>,
 ) {
   const node = _Database(label ?? "DatabaseMigrationServiceDatabaseMigrationWorkflow", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl =
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] =
     database_migration_service_database_migration_workflowIcon;
   return node;
 }
 
 export function DatabaseMigrationService(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "DatabaseMigrationService", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = database_migration_serviceIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = database_migration_serviceIcon;
   return node;
 }
 
 export function Database(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "Database", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = databaseIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = databaseIcon;
   return node;
 }
 
 export function DocumentdbMongodbCompatibility(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "DocumentdbMongodbCompatibility", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = documentdb_mongodb_compatibilityIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] =
+    documentdb_mongodb_compatibilityIcon;
   return node;
 }
 
 export function DynamodbAttribute(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "DynamodbAttribute", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = dynamodb_attributeIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = dynamodb_attributeIcon;
   return node;
 }
 
 export function DynamodbAttributes(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "DynamodbAttributes", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = dynamodb_attributesIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = dynamodb_attributesIcon;
   return node;
 }
 
 export function DynamodbDax(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "DynamodbDax", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = dynamodb_daxIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = dynamodb_daxIcon;
   return node;
 }
 
 export function DynamodbGlobalSecondaryIndex(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "DynamodbGlobalSecondaryIndex", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = dynamodb_global_secondary_indexIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] =
+    dynamodb_global_secondary_indexIcon;
   return node;
 }
 
 export function DynamodbItem(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "DynamodbItem", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = dynamodb_itemIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = dynamodb_itemIcon;
   return node;
 }
 
 export function DynamodbItems(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "DynamodbItems", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = dynamodb_itemsIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = dynamodb_itemsIcon;
   return node;
 }
 
 export function DynamodbStreams(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "DynamodbStreams", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = dynamodb_streamsIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = dynamodb_streamsIcon;
   return node;
 }
 
 export function DynamodbTable(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "DynamodbTable", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = dynamodb_tableIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = dynamodb_tableIcon;
   return node;
 }
 
 export function Dynamodb(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "Dynamodb", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = dynamodbIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = dynamodbIcon;
   return node;
 }
 
 export function ElasticacheCacheNode(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "ElasticacheCacheNode", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = elasticache_cache_nodeIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = elasticache_cache_nodeIcon;
   return node;
 }
 
 export function ElasticacheForMemcached(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "ElasticacheForMemcached", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = elasticache_for_memcachedIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = elasticache_for_memcachedIcon;
   return node;
 }
 
 export function ElasticacheForRedis(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "ElasticacheForRedis", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = elasticache_for_redisIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = elasticache_for_redisIcon;
   return node;
 }
 
 export function Elasticache(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "Elasticache", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = elasticacheIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = elasticacheIcon;
   return node;
 }
 
@@ -163,92 +165,92 @@ export function KeyspacesManagedApacheCassandraService(
   options?: Record<string, unknown>,
 ) {
   const node = _Database(label ?? "KeyspacesManagedApacheCassandraService", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl =
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] =
     keyspaces_managed_apache_cassandra_serviceIcon;
   return node;
 }
 
 export function Neptune(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "Neptune", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = neptuneIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = neptuneIcon;
   return node;
 }
 
 export function QuantumLedgerDatabaseQldb(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "QuantumLedgerDatabaseQldb", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = quantum_ledger_database_qldbIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = quantum_ledger_database_qldbIcon;
   return node;
 }
 
 export function RDSInstance(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "RDSInstance", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = rds_instanceIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = rds_instanceIcon;
   return node;
 }
 
 export function RDSMariadbInstance(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "RDSMariadbInstance", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = rds_mariadb_instanceIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = rds_mariadb_instanceIcon;
   return node;
 }
 
 export function RDSMysqlInstance(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "RDSMysqlInstance", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = rds_mysql_instanceIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = rds_mysql_instanceIcon;
   return node;
 }
 
 export function RDSOnVmware(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "RDSOnVmware", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = rds_on_vmwareIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = rds_on_vmwareIcon;
   return node;
 }
 
 export function RDSOracleInstance(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "RDSOracleInstance", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = rds_oracle_instanceIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = rds_oracle_instanceIcon;
   return node;
 }
 
 export function RDSPostgresqlInstance(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "RDSPostgresqlInstance", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = rds_postgresql_instanceIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = rds_postgresql_instanceIcon;
   return node;
 }
 
 export function RDSSqlServerInstance(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "RDSSqlServerInstance", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = rds_sql_server_instanceIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = rds_sql_server_instanceIcon;
   return node;
 }
 
 export function RDS(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "RDS", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = rdsIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = rdsIcon;
   return node;
 }
 
 export function RedshiftDenseComputeNode(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "RedshiftDenseComputeNode", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = redshift_dense_compute_nodeIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = redshift_dense_compute_nodeIcon;
   return node;
 }
 
 export function RedshiftDenseStorageNode(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "RedshiftDenseStorageNode", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = redshift_dense_storage_nodeIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = redshift_dense_storage_nodeIcon;
   return node;
 }
 
 export function Redshift(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "Redshift", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = redshiftIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = redshiftIcon;
   return node;
 }
 
 export function Timestream(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "Timestream", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = timestreamIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = timestreamIcon;
   return node;
 }
 

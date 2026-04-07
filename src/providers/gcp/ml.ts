@@ -24,139 +24,140 @@ import vision_apiIcon from "../../../resources/gcp/ml/vision-api.png";
 
 function _Ml(label?: string, options?: Record<string, unknown>) {
   const node = _Gcp(label, options);
-  (node as unknown as Record<string, unknown>)._type = "ml";
+  (node as unknown as Record<string, unknown>)["~type"] = "ml";
   return node;
 }
 
 export function AdvancedSolutionsLab(label?: string, options?: Record<string, unknown>) {
   const node = _Ml(label ?? "AdvancedSolutionsLab", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = advanced_solutions_labIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = advanced_solutions_labIcon;
   return node;
 }
 
 export function AIHub(label?: string, options?: Record<string, unknown>) {
   const node = _Ml(label ?? "AIHub", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = ai_hubIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = ai_hubIcon;
   return node;
 }
 
 export function AIPlatformDataLabelingService(label?: string, options?: Record<string, unknown>) {
   const node = _Ml(label ?? "AIPlatformDataLabelingService", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = ai_platform_data_labeling_serviceIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] =
+    ai_platform_data_labeling_serviceIcon;
   return node;
 }
 
 export function AIPlatform(label?: string, options?: Record<string, unknown>) {
   const node = _Ml(label ?? "AIPlatform", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = ai_platformIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = ai_platformIcon;
   return node;
 }
 
 export function AutomlNaturalLanguage(label?: string, options?: Record<string, unknown>) {
   const node = _Ml(label ?? "AutomlNaturalLanguage", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = automl_natural_languageIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = automl_natural_languageIcon;
   return node;
 }
 
 export function AutomlTables(label?: string, options?: Record<string, unknown>) {
   const node = _Ml(label ?? "AutomlTables", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = automl_tablesIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = automl_tablesIcon;
   return node;
 }
 
 export function AutomlTranslation(label?: string, options?: Record<string, unknown>) {
   const node = _Ml(label ?? "AutomlTranslation", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = automl_translationIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = automl_translationIcon;
   return node;
 }
 
 export function AutomlVideoIntelligence(label?: string, options?: Record<string, unknown>) {
   const node = _Ml(label ?? "AutomlVideoIntelligence", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = automl_video_intelligenceIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = automl_video_intelligenceIcon;
   return node;
 }
 
 export function AutomlVision(label?: string, options?: Record<string, unknown>) {
   const node = _Ml(label ?? "AutomlVision", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = automl_visionIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = automl_visionIcon;
   return node;
 }
 
 export function Automl(label?: string, options?: Record<string, unknown>) {
   const node = _Ml(label ?? "Automl", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = automlIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = automlIcon;
   return node;
 }
 
 export function DialogFlowEnterpriseEdition(label?: string, options?: Record<string, unknown>) {
   const node = _Ml(label ?? "DialogFlowEnterpriseEdition", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = dialog_flow_enterprise_editionIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = dialog_flow_enterprise_editionIcon;
   return node;
 }
 
 export function InferenceAPI(label?: string, options?: Record<string, unknown>) {
   const node = _Ml(label ?? "InferenceAPI", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = inference_apiIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = inference_apiIcon;
   return node;
 }
 
 export function JobsAPI(label?: string, options?: Record<string, unknown>) {
   const node = _Ml(label ?? "JobsAPI", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = jobs_apiIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = jobs_apiIcon;
   return node;
 }
 
 export function NaturalLanguageAPI(label?: string, options?: Record<string, unknown>) {
   const node = _Ml(label ?? "NaturalLanguageAPI", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = natural_language_apiIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = natural_language_apiIcon;
   return node;
 }
 
 export function RecommendationsAI(label?: string, options?: Record<string, unknown>) {
   const node = _Ml(label ?? "RecommendationsAI", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = recommendations_aiIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = recommendations_aiIcon;
   return node;
 }
 
 export function SpeechToText(label?: string, options?: Record<string, unknown>) {
   const node = _Ml(label ?? "SpeechToText", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = speech_to_textIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = speech_to_textIcon;
   return node;
 }
 
 export function TextToSpeech(label?: string, options?: Record<string, unknown>) {
   const node = _Ml(label ?? "TextToSpeech", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = text_to_speechIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = text_to_speechIcon;
   return node;
 }
 
 export function TPU(label?: string, options?: Record<string, unknown>) {
   const node = _Ml(label ?? "TPU", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = tpuIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = tpuIcon;
   return node;
 }
 
 export function TranslationAPI(label?: string, options?: Record<string, unknown>) {
   const node = _Ml(label ?? "TranslationAPI", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = translation_apiIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = translation_apiIcon;
   return node;
 }
 
 export function VertexAI(label?: string, options?: Record<string, unknown>) {
   const node = _Ml(label ?? "VertexAI", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = vertex_aiIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = vertex_aiIcon;
   return node;
 }
 
 export function VideoIntelligenceAPI(label?: string, options?: Record<string, unknown>) {
   const node = _Ml(label ?? "VideoIntelligenceAPI", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = video_intelligence_apiIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = video_intelligence_apiIcon;
   return node;
 }
 
 export function VisionAPI(label?: string, options?: Record<string, unknown>) {
   const node = _Ml(label ?? "VisionAPI", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = vision_apiIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = vision_apiIcon;
   return node;
 }
 

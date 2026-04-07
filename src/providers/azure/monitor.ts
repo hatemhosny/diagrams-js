@@ -14,78 +14,79 @@ import network_watcherIcon from "../../../resources/azure/monitor/network-watche
 
 function _Monitor(label?: string, options?: Record<string, unknown>) {
   const node = _Azure(label, options);
-  (node as unknown as Record<string, unknown>)._type = "monitor";
+  (node as unknown as Record<string, unknown>)["~type"] = "monitor";
   return node;
 }
 
 export function ActivityLog(label?: string, options?: Record<string, unknown>) {
   const node = _Monitor(label ?? "ActivityLog", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = activity_logIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = activity_logIcon;
   return node;
 }
 
 export function ApplicationInsights(label?: string, options?: Record<string, unknown>) {
   const node = _Monitor(label ?? "ApplicationInsights", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = application_insightsIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = application_insightsIcon;
   return node;
 }
 
 export function AutoScale(label?: string, options?: Record<string, unknown>) {
   const node = _Monitor(label ?? "AutoScale", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = auto_scaleIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = auto_scaleIcon;
   return node;
 }
 
 export function AzureMonitorsForSAPSolutions(label?: string, options?: Record<string, unknown>) {
   const node = _Monitor(label ?? "AzureMonitorsForSAPSolutions", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_monitors_for_sap_solutionsIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] =
+    azure_monitors_for_sap_solutionsIcon;
   return node;
 }
 
 export function AzureWorkbooks(label?: string, options?: Record<string, unknown>) {
   const node = _Monitor(label ?? "AzureWorkbooks", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = azure_workbooksIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = azure_workbooksIcon;
   return node;
 }
 
 export function ChangeAnalysis(label?: string, options?: Record<string, unknown>) {
   const node = _Monitor(label ?? "ChangeAnalysis", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = change_analysisIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = change_analysisIcon;
   return node;
 }
 
 export function DiagnosticsSettings(label?: string, options?: Record<string, unknown>) {
   const node = _Monitor(label ?? "DiagnosticsSettings", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = diagnostics_settingsIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = diagnostics_settingsIcon;
   return node;
 }
 
 export function LogAnalyticsWorkspaces(label?: string, options?: Record<string, unknown>) {
   const node = _Monitor(label ?? "LogAnalyticsWorkspaces", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = log_analytics_workspacesIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = log_analytics_workspacesIcon;
   return node;
 }
 
 export function Logs(label?: string, options?: Record<string, unknown>) {
   const node = _Monitor(label ?? "Logs", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = logsIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = logsIcon;
   return node;
 }
 
 export function Metrics(label?: string, options?: Record<string, unknown>) {
   const node = _Monitor(label ?? "Metrics", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = metricsIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = metricsIcon;
   return node;
 }
 
 export function Monitor(label?: string, options?: Record<string, unknown>) {
   const node = _Monitor(label ?? "Monitor", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = monitorIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = monitorIcon;
   return node;
 }
 
 export function NetworkWatcher(label?: string, options?: Record<string, unknown>) {
   const node = _Monitor(label ?? "NetworkWatcher", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = network_watcherIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = network_watcherIcon;
   return node;
 }

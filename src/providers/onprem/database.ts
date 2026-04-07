@@ -22,127 +22,127 @@ import scyllaIcon from "../../../resources/onprem/database/scylla.png";
 
 function _Database(label?: string, options?: Record<string, unknown>) {
   const node = _Onprem(label, options);
-  (node as unknown as Record<string, unknown>)._type = "database";
+  (node as unknown as Record<string, unknown>)["~type"] = "database";
   return node;
 }
 
 export function Cassandra(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "Cassandra", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = cassandraIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = cassandraIcon;
   return node;
 }
 
 export function Clickhouse(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "Clickhouse", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = clickhouseIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = clickhouseIcon;
   return node;
 }
 
 export function Cockroachdb(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "Cockroachdb", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = cockroachdbIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = cockroachdbIcon;
   return node;
 }
 
 export function Couchbase(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "Couchbase", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = couchbaseIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = couchbaseIcon;
   return node;
 }
 
 export function Couchdb(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "Couchdb", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = couchdbIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = couchdbIcon;
   return node;
 }
 
 export function Dgraph(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "Dgraph", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = dgraphIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = dgraphIcon;
   return node;
 }
 
 export function Druid(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "Druid", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = druidIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = druidIcon;
   return node;
 }
 
 export function Duckdb(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "Duckdb", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = duckdbIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = duckdbIcon;
   return node;
 }
 
 export function Hbase(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "Hbase", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = hbaseIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = hbaseIcon;
   return node;
 }
 
 export function Influxdb(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "Influxdb", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = influxdbIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = influxdbIcon;
   return node;
 }
 
 export function Janusgraph(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "Janusgraph", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = janusgraphIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = janusgraphIcon;
   return node;
 }
 
 export function Mariadb(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "Mariadb", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = mariadbIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = mariadbIcon;
   return node;
 }
 
 export function Mongodb(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "Mongodb", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = mongodbIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = mongodbIcon;
   return node;
 }
 
 export function Mssql(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "Mssql", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = mssqlIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = mssqlIcon;
   return node;
 }
 
 export function Mysql(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "Mysql", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = mysqlIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = mysqlIcon;
   return node;
 }
 
 export function Neo4j(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "Neo4j", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = neo4jIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = neo4jIcon;
   return node;
 }
 
 export function Oracle(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "Oracle", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = oracleIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = oracleIcon;
   return node;
 }
 
 export function Postgresql(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "Postgresql", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = postgresqlIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = postgresqlIcon;
   return node;
 }
 
 export function Qdrant(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "Qdrant", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = qdrantIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = qdrantIcon;
   return node;
 }
 
 export function Scylla(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "Scylla", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = scyllaIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = scyllaIcon;
   return node;
 }
 

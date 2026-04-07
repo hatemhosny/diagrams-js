@@ -8,43 +8,43 @@ import tripleoIcon from "../../../resources/openstack/deployment/tripleo.png";
 
 function _Deployment(label?: string, options?: Record<string, unknown>) {
   const node = _Openstack(label, options);
-  (node as unknown as Record<string, unknown>)._type = "deployment";
+  (node as unknown as Record<string, unknown>)["~type"] = "deployment";
   return node;
 }
 
 export function Ansible(label?: string, options?: Record<string, unknown>) {
   const node = _Deployment(label ?? "Ansible", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = ansibleIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = ansibleIcon;
   return node;
 }
 
 export function Charms(label?: string, options?: Record<string, unknown>) {
   const node = _Deployment(label ?? "Charms", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = charmsIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = charmsIcon;
   return node;
 }
 
 export function Chef(label?: string, options?: Record<string, unknown>) {
   const node = _Deployment(label ?? "Chef", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = chefIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = chefIcon;
   return node;
 }
 
 export function Helm(label?: string, options?: Record<string, unknown>) {
   const node = _Deployment(label ?? "Helm", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = helmIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = helmIcon;
   return node;
 }
 
 export function Kolla(label?: string, options?: Record<string, unknown>) {
   const node = _Deployment(label ?? "Kolla", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = kollaIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = kollaIcon;
   return node;
 }
 
 export function Tripleo(label?: string, options?: Record<string, unknown>) {
   const node = _Deployment(label ?? "Tripleo", options);
-  (node as unknown as Record<string, unknown>)._iconDataUrl = tripleoIcon;
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = tripleoIcon;
   return node;
 }
 
