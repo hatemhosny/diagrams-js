@@ -66,6 +66,12 @@ jobs:
           cache: "pnpm"
           cache-dependency-path: ./docs/pnpm-lock.yaml
 
+      - name: Install Vite+
+        uses: voidzero-dev/setup-vp@v1
+        with:
+          node-version: "24.4.1"
+          cache: true
+
       - name: Install dependencies
         run: pnpm install
 
