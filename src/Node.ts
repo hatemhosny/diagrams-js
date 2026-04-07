@@ -170,8 +170,8 @@ export function Node(label = "", options: NodeOptions = {}): Node {
         // Shape: default "none" (no border around icon)
         if (userExplicitAttrs.shape) {
           // Keep user-specified shape from node options
-        } else if (_diagram._userNodeAttr?.shape) {
-          _attrs.shape = _diagram._userNodeAttr.shape;
+        } else if (_diagram["~userNodeAttr"]?.shape) {
+          _attrs.shape = _diagram["~userNodeAttr"].shape;
         } else {
           _attrs.shape = "none";
         }
@@ -179,8 +179,8 @@ export function Node(label = "", options: NodeOptions = {}): Node {
         // Height: default "0.9"
         if (userExplicitAttrs.height) {
           // Keep user-specified height
-        } else if (_diagram._userNodeAttr?.height) {
-          _attrs.height = _diagram._userNodeAttr.height;
+        } else if (_diagram["~userNodeAttr"]?.height) {
+          _attrs.height = _diagram["~userNodeAttr"].height;
         } else {
           _attrs.height = "0.9";
         }
@@ -188,8 +188,8 @@ export function Node(label = "", options: NodeOptions = {}): Node {
         // Width: default "0.8"
         if (userExplicitAttrs.width) {
           // Keep user-specified width
-        } else if (_diagram._userNodeAttr?.width) {
-          _attrs.width = _diagram._userNodeAttr.width;
+        } else if (_diagram["~userNodeAttr"]?.width) {
+          _attrs.width = _diagram["~userNodeAttr"].width;
         } else {
           _attrs.width = "0.8";
         }
@@ -197,8 +197,8 @@ export function Node(label = "", options: NodeOptions = {}): Node {
         // Fixedsize: default "true"
         if (userExplicitAttrs.fixedsize) {
           // Keep user-specified fixedsize
-        } else if (_diagram._userNodeAttr?.fixedsize) {
-          _attrs.fixedsize = _diagram._userNodeAttr.fixedsize;
+        } else if (_diagram["~userNodeAttr"]?.fixedsize) {
+          _attrs.fixedsize = _diagram["~userNodeAttr"].fixedsize;
         } else {
           _attrs.fixedsize = "true";
         }
@@ -206,8 +206,8 @@ export function Node(label = "", options: NodeOptions = {}): Node {
         // Margin: default "0,0"
         if (userExplicitAttrs.margin) {
           // Keep user-specified margin
-        } else if (_diagram._userNodeAttr?.margin) {
-          _attrs.margin = _diagram._userNodeAttr.margin;
+        } else if (_diagram["~userNodeAttr"]?.margin) {
+          _attrs.margin = _diagram["~userNodeAttr"].margin;
         } else {
           _attrs.margin = "0,0";
         }
@@ -215,8 +215,8 @@ export function Node(label = "", options: NodeOptions = {}): Node {
         // Labelloc: default "b"
         if (userExplicitAttrs.labelloc) {
           // Keep user-specified labelloc
-        } else if (_diagram._userNodeAttr?.labelloc) {
-          _attrs.labelloc = _diagram._userNodeAttr.labelloc;
+        } else if (_diagram["~userNodeAttr"]?.labelloc) {
+          _attrs.labelloc = _diagram["~userNodeAttr"].labelloc;
         } else {
           _attrs.labelloc = "b";
         }
@@ -224,8 +224,8 @@ export function Node(label = "", options: NodeOptions = {}): Node {
         // Imagescale: default "true"
         if (userExplicitAttrs.imagescale) {
           // Keep user-specified imagescale
-        } else if (_diagram._userNodeAttr?.imagescale) {
-          _attrs.imagescale = _diagram._userNodeAttr.imagescale;
+        } else if (_diagram["~userNodeAttr"]?.imagescale) {
+          _attrs.imagescale = _diagram["~userNodeAttr"].imagescale;
         } else {
           _attrs.imagescale = "true";
         }

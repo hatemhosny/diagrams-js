@@ -52,7 +52,7 @@ export interface Diagram {
   nodeAttr: Record<string, string>;
   edgeAttr: Record<string, string>;
   // Track if user explicitly set icon-related properties in nodeAttr
-  _userNodeAttr?: {
+  ["~userNodeAttr"]?: {
     shape?: string;
     height?: string;
     width?: string;
@@ -166,7 +166,7 @@ export function Diagram(name = "", options: DiagramOptions = {}): Diagram {
     graphAttr,
     nodeAttr,
     edgeAttr,
-    _userNodeAttr: userNodeAttr,
+    ["~userNodeAttr"]: userNodeAttr,
 
     /**
      * Register a node with an icon for automatic icon injection
