@@ -33,7 +33,8 @@ jobs:
         run: pnpm run test
 
       - name: Run checks (lint, format, types)
-        run: pnpm run check
+        run: pnpm run check || (pnpm run check && git diff && exit 1)
+        # run: pnpm run check
 
       - name: Build package
         run: pnpm run build
