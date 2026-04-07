@@ -7,19 +7,107 @@ description: Node classes for Outscale provider
 
 Node classes list for the Outscale provider.
 
-## Import
+## Example Usage
 
 ```typescript
 import { Diagram } from "diagrams-js";
-// Import from "diagrams-js/outscale/*"
+import { Compute, DirectConnect } from "diagrams-js/outscale/compute";
+import { ClientVpn, InternetService, LoadBalancer } from "diagrams-js/outscale/network";
+
+const diagram = Diagram("Outscale Architecture", { direction: "TB" });
+
+const node1 = diagram.add(Compute("Node 1"));
+const node2 = diagram.add(ClientVpn("Node 2"));
+
+node1.to(node2);
+
+const svg = await diagram.render();
+diagram.destroy();
 ```
 
-## Available Categories
-
 :::note
-This provider supports compute, network, security, and storage categories. Please refer to the [Python diagrams Outscale documentation](https://diagrams.mingrammer.com/docs/nodes/outscale) for the complete list of available nodes.
+All node classes available in the [Python diagrams library](https://diagrams.mingrammer.com/docs/nodes/outscale) are also available in diagrams-js with the same class names and structure.
 :::
 
-:::tip Complete Reference
-For a complete list of all Outscale nodes, see the [Python diagrams Outscale documentation](https://diagrams.mingrammer.com/docs/nodes/outscale). All node classes listed there are available in diagrams-js with the same class names.
-:::
+## Node Reference
+
+### outscale/compute
+
+<img src="/resources/outscale/compute/compute.png" width="30" alt="Compute" /> **Compute**
+
+```typescript
+import { Compute } from "diagrams-js/outscale/compute"
+```
+
+<img src="/resources/outscale/compute/direct-connect.png" width="30" alt="DirectConnect" /> **DirectConnect**
+
+```typescript
+import { DirectConnect } from "diagrams-js/outscale/compute"
+```
+
+### outscale/network
+
+<img src="/resources/outscale/network/client-vpn.png" width="30" alt="ClientVpn" /> **ClientVpn**
+
+```typescript
+import { ClientVpn } from "diagrams-js/outscale/network"
+```
+
+<img src="/resources/outscale/network/internet-service.png" width="30" alt="InternetService" /> **InternetService**
+
+```typescript
+import { InternetService } from "diagrams-js/outscale/network"
+```
+
+<img src="/resources/outscale/network/load-balancer.png" width="30" alt="LoadBalancer" /> **LoadBalancer**
+
+```typescript
+import { LoadBalancer } from "diagrams-js/outscale/network"
+```
+
+<img src="/resources/outscale/network/nat-service.png" width="30" alt="NatService" /> **NatService**
+
+```typescript
+import { NatService } from "diagrams-js/outscale/network"
+```
+
+<img src="/resources/outscale/network/net.png" width="30" alt="Net" /> **Net**
+
+```typescript
+import { Net } from "diagrams-js/outscale/network"
+```
+
+<img src="/resources/outscale/network/site-to-site-vpng.png" width="30" alt="SiteToSiteVpng" /> **SiteToSiteVpng**
+
+```typescript
+import { SiteToSiteVpng } from "diagrams-js/outscale/network"
+```
+
+### outscale/security
+
+<img src="/resources/outscale/security/firewall.png" width="30" alt="Firewall" /> **Firewall**
+
+```typescript
+import { Firewall } from "diagrams-js/outscale/security"
+```
+
+<img src="/resources/outscale/security/identity-and-access-management.png" width="30" alt="IdentityAndAccessManagement" /> **IdentityAndAccessManagement**
+
+```typescript
+import { IdentityAndAccessManagement } from "diagrams-js/outscale/security"
+```
+
+### outscale/storage
+
+<img src="/resources/outscale/storage/simple-storage-service.png" width="30" alt="SimpleStorageService" /> **SimpleStorageService**
+
+```typescript
+import { SimpleStorageService } from "diagrams-js/outscale/storage"
+```
+
+<img src="/resources/outscale/storage/storage.png" width="30" alt="Storage" /> **Storage**
+
+```typescript
+import { Storage } from "diagrams-js/outscale/storage"
+```
+

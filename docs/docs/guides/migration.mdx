@@ -99,8 +99,9 @@ with Diagram("Services"):
 **TypeScript:**
 
 ```typescript
-const diagram = Diagram("Services");
+import { Diagram } from "diagrams-js";
 
+const diagram = Diagram("Services");
 const webTier = diagram.cluster("Web Tier");
 const web1 = webTier.add(EC2("web1"));
 const web2 = webTier.add(EC2("web2"));
@@ -160,7 +161,7 @@ Key differences:
 from diagrams.custom import Custom
 
 with Diagram("Custom"):
-    rabbitmq = Custom("RabbitMQ", "./rabbitmq.png")
+    prod = Custom("Product", "https://mywebsite.com/icon.png")
 ```
 
 **TypeScript:**
@@ -169,7 +170,7 @@ with Diagram("Custom"):
 import { Custom } from "diagrams-js";
 
 const diagram = Diagram("Custom");
-const rabbitmq = diagram.add(Custom("RabbitMQ", "./rabbitmq.png"));
+const prod = diagram.add(Custom("Product", "https://mywebsite.com/icon.png"));
 ```
 
 ## Import Paths
@@ -235,24 +236,24 @@ diagram.destroy();
 
 ## Missing Features
 
-Some Python features are not yet implemented:
+Some Python features are not implemented:
 
 - Automatic file opening (use `save()` instead)
 - Multiple output formats at once (call `render()` multiple times)
-- Jupyter notebook integration (coming soon)
+- C4 model
 
 ## New Features
 
 TypeScript version has some unique features:
 
-- Browser support - run directly in browsers
-- SVG output - native vector graphics
-- Type safety - full TypeScript support
-- Cross-platform - works in Node.js, Deno, Bun, and Cloudflare Workers
+- Browser support - runs directly in browsers
+- Dependency-free - no extra dependencies needed for browsers and SVG rendering in Node.js
+- Render as [Data URL](./rendering.mdx#render-as-data-url) - returns base64 data URL for easy embedding in HTML
+- Type safety - full TypeScript support with IDE autocompletion
 
 ## Getting Help
 
 - [Documentation](../) - Full documentation
 - [Examples](../getting-started/examples) - More examples
 - [API Reference](./api) - Complete API
-- [GitHub Issues](https://github.com/author/diagrams-js/issues) - Report issues
+- [GitHub Issues](https://github.com/hatemhosny/diagrams-js/issues) - Report issues

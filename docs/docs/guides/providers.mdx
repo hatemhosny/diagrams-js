@@ -1,0 +1,50 @@
+---
+title: Providers
+description: Available cloud providers
+---
+
+# Providers
+
+diagrams-js includes 17 providers with over 1000 node classes.
+
+## Available Providers
+
+| Provider                                  | Description                              |
+| ----------------------------------------- | ---------------------------------------- |
+| [AWS](../nodes/aws.mdx)                   | Amazon Web Services nodes                |
+| [Azure](../nodes/azure.mdx)               | Microsoft Azure nodes                    |
+| [GCP](../nodes/gcp.mdx)                   | Google Cloud Platform nodes              |
+| [Kubernetes](../nodes/k8s.mdx)            | Kubernetes nodes                         |
+| [OnPrem](../nodes/onprem.mdx)             | On-premises infrastructure nodes         |
+| [AlibabaCloud](../nodes/alibabacloud.mdx) | Alibaba Cloud nodes                      |
+| [DigitalOcean](../nodes/digitalocean.mdx) | DigitalOcean nodes                       |
+| [Elastic](../nodes/elastic.mdx)           | Elastic Stack nodes                      |
+| [Firebase](../nodes/firebase.mdx)         | Firebase nodes                           |
+| [Generic](../nodes/generic.mdx)           | Generic computing nodes                  |
+| [GIS](../nodes/gis.mdx)                   | GIS nodes                                |
+| [IBM](../nodes/ibm.mdx)                   | IBM Cloud nodes                          |
+| [OCI](../nodes/oci.mdx)                   | Oracle Cloud Infrastructure nodes        |
+| [OpenStack](../nodes/openstack.mdx)       | OpenStack nodes                          |
+| [Outscale](../nodes/outscale.mdx)         | Outscale nodes                           |
+| [Programming](../nodes/programming.mdx)   | Programming language and framework nodes |
+| [SaaS](../nodes/saas.mdx)                 | SaaS application nodes                   |
+
+## Usage
+
+```typescript
+import { EC2, Lambda } from "diagrams-js/aws/compute";
+import { RDS } from "diagrams-js/aws/database";
+import { GCE } from "diagrams-js/gcp/compute";
+```
+
+## Provider Structure
+
+Each provider is organized by service category:
+
+```
+providers/aws/
+  ├── compute.ts     # EC2, Lambda, ECS, etc.
+  ├── database.ts    # RDS, DynamoDB, etc.
+  ├── storage.ts     # S3, EBS, etc.
+  └── ...
+```

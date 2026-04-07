@@ -1036,6 +1036,8 @@
     "build:providers": "node scripts/build-providers.mjs",
     "build:fix": "vp check --fix",
     "dev": "vp build --watch",
+    "docs": "cd docs && pnpm start",
+    "docs:build": "cd docs && pnpm run build",
     "test": "vp test",
     "check": "vp check",
     "fix": "vp check --fix",

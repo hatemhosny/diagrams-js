@@ -1,37 +1,617 @@
 ---
-title: AlibabaCloud
+title: Alibaba Cloud
 description: Node classes for Alibaba Cloud provider
 ---
 
-# AlibabaCloud
+# Alibaba Cloud
 
 Node classes list for the Alibaba Cloud provider.
 
-## Import
+## Example Usage
 
 ```typescript
 import { Diagram } from "diagrams-js";
-// Import from "diagrams-js/alibabacloud/*"
-```
+import { AnalyticDb, ClickHouse, DataLakeAnalytics } from "diagrams-js/alibabacloud/analytics";
+import { ApiGateway, BeeBot, BlockchainAsAService } from "diagrams-js/alibabacloud/application";
 
-## Available Categories
+const diagram = Diagram("Alibaba Cloud Architecture", { direction: "TB" });
 
-:::note
-This provider supports multiple service categories. Please refer to the [Python diagrams AlibabaCloud documentation](https://diagrams.mingrammer.com/docs/nodes/alibabacloud) for the complete list of available nodes.
-:::
+const node1 = diagram.add(AnalyticDb("Node 1"));
+const node2 = diagram.add(ApiGateway("Node 2"));
 
-## Usage Example
+node1.to(node2);
 
-```typescript
-import { Diagram } from "diagrams-js";
-// Import nodes from "diagrams-js/alibabacloud/compute" etc.
-
-const diagram = Diagram("AlibabaCloud Example");
-// Add your nodes here
 const svg = await diagram.render();
 diagram.destroy();
 ```
 
-:::tip Complete Reference
-For a complete list of all AlibabaCloud nodes, see the [Python diagrams AlibabaCloud documentation](https://diagrams.mingrammer.com/docs/nodes/alibabacloud). All node classes listed there are available in diagrams-js with the same class names.
+:::note
+All node classes available in the [Python diagrams library](https://diagrams.mingrammer.com/docs/nodes/alibabacloud) are also available in diagrams-js with the same class names and structure.
 :::
+
+## Node Reference
+
+### alibabacloud/analytics
+
+<img src="/resources/alibabacloud/analytics/analytic-db.png" width="30" alt="AnalyticDb" /> **AnalyticDb**
+
+```typescript
+import { AnalyticDb } from "diagrams-js/alibabacloud/analytics"
+```
+
+<img src="/resources/alibabacloud/analytics/click-house.png" width="30" alt="ClickHouse" /> **ClickHouse**
+
+```typescript
+import { ClickHouse } from "diagrams-js/alibabacloud/analytics"
+```
+
+<img src="/resources/alibabacloud/analytics/data-lake-analytics.png" width="30" alt="DataLakeAnalytics" /> **DataLakeAnalytics**
+
+```typescript
+import { DataLakeAnalytics } from "diagrams-js/alibabacloud/analytics"
+```
+
+<img src="/resources/alibabacloud/analytics/elatic-map-reduce.png" width="30" alt="ElaticMapReduce" /> **ElaticMapReduce**
+
+```typescript
+import { ElaticMapReduce } from "diagrams-js/alibabacloud/analytics"
+```
+
+<img src="/resources/alibabacloud/analytics/open-search.png" width="30" alt="OpenSearch" /> **OpenSearch**
+
+```typescript
+import { OpenSearch } from "diagrams-js/alibabacloud/analytics"
+```
+
+### alibabacloud/application
+
+<img src="/resources/alibabacloud/application/api-gateway.png" width="30" alt="ApiGateway" /> **ApiGateway**
+
+```typescript
+import { ApiGateway } from "diagrams-js/alibabacloud/application"
+```
+
+<img src="/resources/alibabacloud/application/bee-bot.png" width="30" alt="BeeBot" /> **BeeBot**
+
+```typescript
+import { BeeBot } from "diagrams-js/alibabacloud/application"
+```
+
+<img src="/resources/alibabacloud/application/blockchain-as-a-service.png" width="30" alt="BlockchainAsAService" /> **BlockchainAsAService**
+
+```typescript
+import { BlockchainAsAService } from "diagrams-js/alibabacloud/application"
+```
+
+<img src="/resources/alibabacloud/application/cloud-call-center.png" width="30" alt="CloudCallCenter" /> **CloudCallCenter**
+
+```typescript
+import { CloudCallCenter } from "diagrams-js/alibabacloud/application"
+```
+
+<img src="/resources/alibabacloud/application/code-pipeline.png" width="30" alt="CodePipeline" /> **CodePipeline**
+
+```typescript
+import { CodePipeline } from "diagrams-js/alibabacloud/application"
+```
+
+<img src="/resources/alibabacloud/application/direct-mail.png" width="30" alt="DirectMail" /> **DirectMail**
+
+```typescript
+import { DirectMail } from "diagrams-js/alibabacloud/application"
+```
+
+<img src="/resources/alibabacloud/application/log-service.png" width="30" alt="LogService" /> **LogService**
+
+```typescript
+import { LogService } from "diagrams-js/alibabacloud/application"
+```
+
+<img src="/resources/alibabacloud/application/message-notification-service.png" width="30" alt="MessageNotificationService" /> **MessageNotificationService**
+
+```typescript
+import { MessageNotificationService } from "diagrams-js/alibabacloud/application"
+```
+
+<img src="/resources/alibabacloud/application/node-js-performance-platform.png" width="30" alt="NodeJsPerformancePlatform" /> **NodeJsPerformancePlatform**
+
+```typescript
+import { NodeJsPerformancePlatform } from "diagrams-js/alibabacloud/application"
+```
+
+<img src="/resources/alibabacloud/application/open-search.png" width="30" alt="OpenSearch" /> **OpenSearch**
+
+```typescript
+import { OpenSearch } from "diagrams-js/alibabacloud/application"
+```
+
+<img src="/resources/alibabacloud/application/performance-testing-service.png" width="30" alt="PerformanceTestingService" /> **PerformanceTestingService**
+
+```typescript
+import { PerformanceTestingService } from "diagrams-js/alibabacloud/application"
+```
+
+<img src="/resources/alibabacloud/application/rd-cloud.png" width="30" alt="RdCloud" /> **RdCloud**
+
+```typescript
+import { RdCloud } from "diagrams-js/alibabacloud/application"
+```
+
+<img src="/resources/alibabacloud/application/smart-conversation-analysis.png" width="30" alt="SmartConversationAnalysis" /> **SmartConversationAnalysis**
+
+```typescript
+import { SmartConversationAnalysis } from "diagrams-js/alibabacloud/application"
+```
+
+<img src="/resources/alibabacloud/application/yida.png" width="30" alt="Yida" /> **Yida**
+
+```typescript
+import { Yida } from "diagrams-js/alibabacloud/application"
+```
+
+### alibabacloud/communication
+
+<img src="/resources/alibabacloud/communication/direct-mail.png" width="30" alt="DirectMail" /> **DirectMail**
+
+```typescript
+import { DirectMail } from "diagrams-js/alibabacloud/communication"
+```
+
+<img src="/resources/alibabacloud/communication/mobile-push.png" width="30" alt="MobilePush" /> **MobilePush**
+
+```typescript
+import { MobilePush } from "diagrams-js/alibabacloud/communication"
+```
+
+### alibabacloud/compute
+
+<img src="/resources/alibabacloud/compute/auto-scaling.png" width="30" alt="AutoScaling" /> **AutoScaling**
+
+```typescript
+import { AutoScaling } from "diagrams-js/alibabacloud/compute"
+```
+
+<img src="/resources/alibabacloud/compute/batch-compute.png" width="30" alt="BatchCompute" /> **BatchCompute**
+
+```typescript
+import { BatchCompute } from "diagrams-js/alibabacloud/compute"
+```
+
+<img src="/resources/alibabacloud/compute/container-registry.png" width="30" alt="ContainerRegistry" /> **ContainerRegistry**
+
+```typescript
+import { ContainerRegistry } from "diagrams-js/alibabacloud/compute"
+```
+
+<img src="/resources/alibabacloud/compute/container-service.png" width="30" alt="ContainerService" /> **ContainerService**
+
+```typescript
+import { ContainerService } from "diagrams-js/alibabacloud/compute"
+```
+
+<img src="/resources/alibabacloud/compute/elastic-compute-service.png" width="30" alt="ElasticComputeService" /> **ElasticComputeService**
+
+```typescript
+import { ElasticComputeService } from "diagrams-js/alibabacloud/compute"
+```
+
+<img src="/resources/alibabacloud/compute/elastic-container-instance.png" width="30" alt="ElasticContainerInstance" /> **ElasticContainerInstance**
+
+```typescript
+import { ElasticContainerInstance } from "diagrams-js/alibabacloud/compute"
+```
+
+<img src="/resources/alibabacloud/compute/elastic-high-performance-computing.png" width="30" alt="ElasticHighPerformanceComputing" /> **ElasticHighPerformanceComputing**
+
+```typescript
+import { ElasticHighPerformanceComputing } from "diagrams-js/alibabacloud/compute"
+```
+
+<img src="/resources/alibabacloud/compute/elastic-search.png" width="30" alt="ElasticSearch" /> **ElasticSearch**
+
+```typescript
+import { ElasticSearch } from "diagrams-js/alibabacloud/compute"
+```
+
+<img src="/resources/alibabacloud/compute/function-compute.png" width="30" alt="FunctionCompute" /> **FunctionCompute**
+
+```typescript
+import { FunctionCompute } from "diagrams-js/alibabacloud/compute"
+```
+
+<img src="/resources/alibabacloud/compute/operation-orchestration-service.png" width="30" alt="OperationOrchestrationService" /> **OperationOrchestrationService**
+
+```typescript
+import { OperationOrchestrationService } from "diagrams-js/alibabacloud/compute"
+```
+
+<img src="/resources/alibabacloud/compute/resource-orchestration-service.png" width="30" alt="ResourceOrchestrationService" /> **ResourceOrchestrationService**
+
+```typescript
+import { ResourceOrchestrationService } from "diagrams-js/alibabacloud/compute"
+```
+
+<img src="/resources/alibabacloud/compute/server-load-balancer.png" width="30" alt="ServerLoadBalancer" /> **ServerLoadBalancer**
+
+```typescript
+import { ServerLoadBalancer } from "diagrams-js/alibabacloud/compute"
+```
+
+<img src="/resources/alibabacloud/compute/serverless-app-engine.png" width="30" alt="ServerlessAppEngine" /> **ServerlessAppEngine**
+
+```typescript
+import { ServerlessAppEngine } from "diagrams-js/alibabacloud/compute"
+```
+
+<img src="/resources/alibabacloud/compute/simple-application-server.png" width="30" alt="SimpleApplicationServer" /> **SimpleApplicationServer**
+
+```typescript
+import { SimpleApplicationServer } from "diagrams-js/alibabacloud/compute"
+```
+
+<img src="/resources/alibabacloud/compute/web-app-service.png" width="30" alt="WebAppService" /> **WebAppService**
+
+```typescript
+import { WebAppService } from "diagrams-js/alibabacloud/compute"
+```
+
+### alibabacloud/database
+
+<img src="/resources/alibabacloud/database/apsaradb-cassandra.png" width="30" alt="ApsaradbCassandra" /> **ApsaradbCassandra**
+
+```typescript
+import { ApsaradbCassandra } from "diagrams-js/alibabacloud/database"
+```
+
+<img src="/resources/alibabacloud/database/apsaradb-hbase.png" width="30" alt="ApsaradbHbase" /> **ApsaradbHbase**
+
+```typescript
+import { ApsaradbHbase } from "diagrams-js/alibabacloud/database"
+```
+
+<img src="/resources/alibabacloud/database/apsaradb-memcache.png" width="30" alt="ApsaradbMemcache" /> **ApsaradbMemcache**
+
+```typescript
+import { ApsaradbMemcache } from "diagrams-js/alibabacloud/database"
+```
+
+<img src="/resources/alibabacloud/database/apsaradb-mongodb.png" width="30" alt="ApsaradbMongodb" /> **ApsaradbMongodb**
+
+```typescript
+import { ApsaradbMongodb } from "diagrams-js/alibabacloud/database"
+```
+
+<img src="/resources/alibabacloud/database/apsaradb-oceanbase.png" width="30" alt="ApsaradbOceanbase" /> **ApsaradbOceanbase**
+
+```typescript
+import { ApsaradbOceanbase } from "diagrams-js/alibabacloud/database"
+```
+
+<img src="/resources/alibabacloud/database/apsaradb-polardb.png" width="30" alt="ApsaradbPolardb" /> **ApsaradbPolardb**
+
+```typescript
+import { ApsaradbPolardb } from "diagrams-js/alibabacloud/database"
+```
+
+<img src="/resources/alibabacloud/database/apsaradb-postgresql.png" width="30" alt="ApsaradbPostgresql" /> **ApsaradbPostgresql**
+
+```typescript
+import { ApsaradbPostgresql } from "diagrams-js/alibabacloud/database"
+```
+
+<img src="/resources/alibabacloud/database/apsaradb-ppas.png" width="30" alt="ApsaradbPpas" /> **ApsaradbPpas**
+
+```typescript
+import { ApsaradbPpas } from "diagrams-js/alibabacloud/database"
+```
+
+<img src="/resources/alibabacloud/database/apsaradb-redis.png" width="30" alt="ApsaradbRedis" /> **ApsaradbRedis**
+
+```typescript
+import { ApsaradbRedis } from "diagrams-js/alibabacloud/database"
+```
+
+<img src="/resources/alibabacloud/database/apsaradb-sqlserver.png" width="30" alt="ApsaradbSqlserver" /> **ApsaradbSqlserver**
+
+```typescript
+import { ApsaradbSqlserver } from "diagrams-js/alibabacloud/database"
+```
+
+<img src="/resources/alibabacloud/database/data-management-service.png" width="30" alt="DataManagementService" /> **DataManagementService**
+
+```typescript
+import { DataManagementService } from "diagrams-js/alibabacloud/database"
+```
+
+<img src="/resources/alibabacloud/database/data-transmission-service.png" width="30" alt="DataTransmissionService" /> **DataTransmissionService**
+
+```typescript
+import { DataTransmissionService } from "diagrams-js/alibabacloud/database"
+```
+
+<img src="/resources/alibabacloud/database/database-backup-service.png" width="30" alt="DatabaseBackupService" /> **DatabaseBackupService**
+
+```typescript
+import { DatabaseBackupService } from "diagrams-js/alibabacloud/database"
+```
+
+<img src="/resources/alibabacloud/database/disribute-relational-database-service.png" width="30" alt="DisributeRelationalDatabaseService" /> **DisributeRelationalDatabaseService**
+
+```typescript
+import { DisributeRelationalDatabaseService } from "diagrams-js/alibabacloud/database"
+```
+
+<img src="/resources/alibabacloud/database/graph-database-service.png" width="30" alt="GraphDatabaseService" /> **GraphDatabaseService**
+
+```typescript
+import { GraphDatabaseService } from "diagrams-js/alibabacloud/database"
+```
+
+<img src="/resources/alibabacloud/database/hybriddb-for-mysql.png" width="30" alt="HybriddbForMysql" /> **HybriddbForMysql**
+
+```typescript
+import { HybriddbForMysql } from "diagrams-js/alibabacloud/database"
+```
+
+<img src="/resources/alibabacloud/database/relational-database-service.png" width="30" alt="RelationalDatabaseService" /> **RelationalDatabaseService**
+
+```typescript
+import { RelationalDatabaseService } from "diagrams-js/alibabacloud/database"
+```
+
+### alibabacloud/iot
+
+<img src="/resources/alibabacloud/iot/iot-internet-device-id.png" width="30" alt="IotInternetDeviceId" /> **IotInternetDeviceId**
+
+```typescript
+import { IotInternetDeviceId } from "diagrams-js/alibabacloud/iot"
+```
+
+<img src="/resources/alibabacloud/iot/iot-link-wan.png" width="30" alt="IotLinkWan" /> **IotLinkWan**
+
+```typescript
+import { IotLinkWan } from "diagrams-js/alibabacloud/iot"
+```
+
+<img src="/resources/alibabacloud/iot/iot-mobile-connection-package.png" width="30" alt="IotMobileConnectionPackage" /> **IotMobileConnectionPackage**
+
+```typescript
+import { IotMobileConnectionPackage } from "diagrams-js/alibabacloud/iot"
+```
+
+<img src="/resources/alibabacloud/iot/iot-platform.png" width="30" alt="IotPlatform" /> **IotPlatform**
+
+```typescript
+import { IotPlatform } from "diagrams-js/alibabacloud/iot"
+```
+
+### alibabacloud/network
+
+<img src="/resources/alibabacloud/network/cdn.png" width="30" alt="Cdn" /> **Cdn**
+
+```typescript
+import { Cdn } from "diagrams-js/alibabacloud/network"
+```
+
+<img src="/resources/alibabacloud/network/cloud-enterprise-network.png" width="30" alt="CloudEnterpriseNetwork" /> **CloudEnterpriseNetwork**
+
+```typescript
+import { CloudEnterpriseNetwork } from "diagrams-js/alibabacloud/network"
+```
+
+<img src="/resources/alibabacloud/network/elastic-ip-address.png" width="30" alt="ElasticIpAddress" /> **ElasticIpAddress**
+
+```typescript
+import { ElasticIpAddress } from "diagrams-js/alibabacloud/network"
+```
+
+<img src="/resources/alibabacloud/network/express-connect.png" width="30" alt="ExpressConnect" /> **ExpressConnect**
+
+```typescript
+import { ExpressConnect } from "diagrams-js/alibabacloud/network"
+```
+
+<img src="/resources/alibabacloud/network/nat-gateway.png" width="30" alt="NatGateway" /> **NatGateway**
+
+```typescript
+import { NatGateway } from "diagrams-js/alibabacloud/network"
+```
+
+<img src="/resources/alibabacloud/network/server-load-balancer.png" width="30" alt="ServerLoadBalancer" /> **ServerLoadBalancer**
+
+```typescript
+import { ServerLoadBalancer } from "diagrams-js/alibabacloud/network"
+```
+
+<img src="/resources/alibabacloud/network/smart-access-gateway.png" width="30" alt="SmartAccessGateway" /> **SmartAccessGateway**
+
+```typescript
+import { SmartAccessGateway } from "diagrams-js/alibabacloud/network"
+```
+
+<img src="/resources/alibabacloud/network/virtual-private-cloud.png" width="30" alt="VirtualPrivateCloud" /> **VirtualPrivateCloud**
+
+```typescript
+import { VirtualPrivateCloud } from "diagrams-js/alibabacloud/network"
+```
+
+<img src="/resources/alibabacloud/network/vpn-gateway.png" width="30" alt="VpnGateway" /> **VpnGateway**
+
+```typescript
+import { VpnGateway } from "diagrams-js/alibabacloud/network"
+```
+
+### alibabacloud/security
+
+<img src="/resources/alibabacloud/security/anti-bot-service.png" width="30" alt="AntiBotService" /> **AntiBotService**
+
+```typescript
+import { AntiBotService } from "diagrams-js/alibabacloud/security"
+```
+
+<img src="/resources/alibabacloud/security/anti-ddos-basic.png" width="30" alt="AntiDdosBasic" /> **AntiDdosBasic**
+
+```typescript
+import { AntiDdosBasic } from "diagrams-js/alibabacloud/security"
+```
+
+<img src="/resources/alibabacloud/security/anti-ddos-pro.png" width="30" alt="AntiDdosPro" /> **AntiDdosPro**
+
+```typescript
+import { AntiDdosPro } from "diagrams-js/alibabacloud/security"
+```
+
+<img src="/resources/alibabacloud/security/antifraud-service.png" width="30" alt="AntifraudService" /> **AntifraudService**
+
+```typescript
+import { AntifraudService } from "diagrams-js/alibabacloud/security"
+```
+
+<img src="/resources/alibabacloud/security/bastion-host.png" width="30" alt="BastionHost" /> **BastionHost**
+
+```typescript
+import { BastionHost } from "diagrams-js/alibabacloud/security"
+```
+
+<img src="/resources/alibabacloud/security/cloud-firewall.png" width="30" alt="CloudFirewall" /> **CloudFirewall**
+
+```typescript
+import { CloudFirewall } from "diagrams-js/alibabacloud/security"
+```
+
+<img src="/resources/alibabacloud/security/cloud-security-scanner.png" width="30" alt="CloudSecurityScanner" /> **CloudSecurityScanner**
+
+```typescript
+import { CloudSecurityScanner } from "diagrams-js/alibabacloud/security"
+```
+
+<img src="/resources/alibabacloud/security/content-moderation.png" width="30" alt="ContentModeration" /> **ContentModeration**
+
+```typescript
+import { ContentModeration } from "diagrams-js/alibabacloud/security"
+```
+
+<img src="/resources/alibabacloud/security/crowdsourced-security-testing.png" width="30" alt="CrowdsourcedSecurityTesting" /> **CrowdsourcedSecurityTesting**
+
+```typescript
+import { CrowdsourcedSecurityTesting } from "diagrams-js/alibabacloud/security"
+```
+
+<img src="/resources/alibabacloud/security/data-encryption-service.png" width="30" alt="DataEncryptionService" /> **DataEncryptionService**
+
+```typescript
+import { DataEncryptionService } from "diagrams-js/alibabacloud/security"
+```
+
+<img src="/resources/alibabacloud/security/db-audit.png" width="30" alt="DbAudit" /> **DbAudit**
+
+```typescript
+import { DbAudit } from "diagrams-js/alibabacloud/security"
+```
+
+<img src="/resources/alibabacloud/security/game-shield.png" width="30" alt="GameShield" /> **GameShield**
+
+```typescript
+import { GameShield } from "diagrams-js/alibabacloud/security"
+```
+
+<img src="/resources/alibabacloud/security/id-verification.png" width="30" alt="IdVerification" /> **IdVerification**
+
+```typescript
+import { IdVerification } from "diagrams-js/alibabacloud/security"
+```
+
+<img src="/resources/alibabacloud/security/managed-security-service.png" width="30" alt="ManagedSecurityService" /> **ManagedSecurityService**
+
+```typescript
+import { ManagedSecurityService } from "diagrams-js/alibabacloud/security"
+```
+
+<img src="/resources/alibabacloud/security/security-center.png" width="30" alt="SecurityCenter" /> **SecurityCenter**
+
+```typescript
+import { SecurityCenter } from "diagrams-js/alibabacloud/security"
+```
+
+<img src="/resources/alibabacloud/security/server-guard.png" width="30" alt="ServerGuard" /> **ServerGuard**
+
+```typescript
+import { ServerGuard } from "diagrams-js/alibabacloud/security"
+```
+
+<img src="/resources/alibabacloud/security/ssl-certificates.png" width="30" alt="SslCertificates" /> **SslCertificates**
+
+```typescript
+import { SslCertificates } from "diagrams-js/alibabacloud/security"
+```
+
+<img src="/resources/alibabacloud/security/web-application-firewall.png" width="30" alt="WebApplicationFirewall" /> **WebApplicationFirewall**
+
+```typescript
+import { WebApplicationFirewall } from "diagrams-js/alibabacloud/security"
+```
+
+### alibabacloud/storage
+
+<img src="/resources/alibabacloud/storage/cloud-storage-gateway.png" width="30" alt="CloudStorageGateway" /> **CloudStorageGateway**
+
+```typescript
+import { CloudStorageGateway } from "diagrams-js/alibabacloud/storage"
+```
+
+<img src="/resources/alibabacloud/storage/file-storage-hdfs.png" width="30" alt="FileStorageHdfs" /> **FileStorageHdfs**
+
+```typescript
+import { FileStorageHdfs } from "diagrams-js/alibabacloud/storage"
+```
+
+<img src="/resources/alibabacloud/storage/file-storage-nas.png" width="30" alt="FileStorageNas" /> **FileStorageNas**
+
+```typescript
+import { FileStorageNas } from "diagrams-js/alibabacloud/storage"
+```
+
+<img src="/resources/alibabacloud/storage/hybrid-backup-recovery.png" width="30" alt="HybridBackupRecovery" /> **HybridBackupRecovery**
+
+```typescript
+import { HybridBackupRecovery } from "diagrams-js/alibabacloud/storage"
+```
+
+<img src="/resources/alibabacloud/storage/hybrid-cloud-disaster-recovery.png" width="30" alt="HybridCloudDisasterRecovery" /> **HybridCloudDisasterRecovery**
+
+```typescript
+import { HybridCloudDisasterRecovery } from "diagrams-js/alibabacloud/storage"
+```
+
+<img src="/resources/alibabacloud/storage/imm.png" width="30" alt="Imm" /> **Imm**
+
+```typescript
+import { Imm } from "diagrams-js/alibabacloud/storage"
+```
+
+<img src="/resources/alibabacloud/storage/object-storage-service.png" width="30" alt="ObjectStorageService" /> **ObjectStorageService**
+
+```typescript
+import { ObjectStorageService } from "diagrams-js/alibabacloud/storage"
+```
+
+<img src="/resources/alibabacloud/storage/object-table-store.png" width="30" alt="ObjectTableStore" /> **ObjectTableStore**
+
+```typescript
+import { ObjectTableStore } from "diagrams-js/alibabacloud/storage"
+```
+
+### alibabacloud/web
+
+<img src="/resources/alibabacloud/web/dns.png" width="30" alt="Dns" /> **Dns**
+
+```typescript
+import { Dns } from "diagrams-js/alibabacloud/web"
+```
+
+<img src="/resources/alibabacloud/web/domain.png" width="30" alt="Domain" /> **Domain**
+
+```typescript
+import { Domain } from "diagrams-js/alibabacloud/web"
+```
+

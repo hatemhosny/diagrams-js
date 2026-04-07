@@ -1,27 +1,303 @@
 ---
 title: SaaS
-description: Node classes for SaaS Applications provider
+description: Node classes for Software as a Service providers
 ---
 
 # SaaS
 
-Node classes list for the SaaS (Software as a Service) Applications provider.
+Node classes list for the SaaS provider.
 
-## Import
+## Example Usage
 
 ```typescript
 import { Diagram } from "diagrams-js";
-import { Slack, Discord } from "diagrams-js/saas/chat";
-import { Datadog, Newrelic } from "diagrams-js/saas/logging";
-import { Cloudflare } from "diagrams-js/saas/cdn";
+import { Newrelic, Opsgenie, Pagerduty } from "diagrams-js/saas/alerting";
+import { Dataform, Snowflake, Stitch } from "diagrams-js/saas/analytics";
+
+const diagram = Diagram("SaaS Architecture", { direction: "TB" });
+
+const node1 = diagram.add(Newrelic("Node 1"));
+const node2 = diagram.add(Dataform("Node 2"));
+
+node1.to(node2);
+
+const svg = await diagram.render();
+diagram.destroy();
 ```
 
-## Available Categories
-
 :::note
-This provider supports alerting, analytics, CDN, chat, and many other categories. Please refer to the [Python diagrams SaaS documentation](https://diagrams.mingrammer.com/docs/nodes/saas) for the complete list of available nodes.
+All node classes available in the [Python diagrams library](https://diagrams.mingrammer.com/docs/nodes/saas) are also available in diagrams-js with the same class names and structure.
 :::
 
-:::tip Complete Reference
-For a complete list of all SaaS nodes, see the [Python diagrams SaaS documentation](https://diagrams.mingrammer.com/docs/nodes/saas). All node classes listed there are available in diagrams-js with the same class names.
-:::
+## Node Reference
+
+### saas/alerting
+
+<img src="/resources/saas/alerting/newrelic.png" width="30" alt="Newrelic" /> **Newrelic**
+
+```typescript
+import { Newrelic } from "diagrams-js/saas/alerting"
+```
+
+<img src="/resources/saas/alerting/opsgenie.png" width="30" alt="Opsgenie" /> **Opsgenie**
+
+```typescript
+import { Opsgenie } from "diagrams-js/saas/alerting"
+```
+
+<img src="/resources/saas/alerting/pagerduty.png" width="30" alt="Pagerduty" /> **Pagerduty**
+
+```typescript
+import { Pagerduty } from "diagrams-js/saas/alerting"
+```
+
+<img src="/resources/saas/alerting/pushover.png" width="30" alt="Pushover" /> **Pushover**
+
+```typescript
+import { Pushover } from "diagrams-js/saas/alerting"
+```
+
+<img src="/resources/saas/alerting/xmatters.png" width="30" alt="Xmatters" /> **Xmatters**
+
+```typescript
+import { Xmatters } from "diagrams-js/saas/alerting"
+```
+
+### saas/analytics
+
+<img src="/resources/saas/analytics/dataform.png" width="30" alt="Dataform" /> **Dataform**
+
+```typescript
+import { Dataform } from "diagrams-js/saas/analytics"
+```
+
+<img src="/resources/saas/analytics/snowflake.png" width="30" alt="Snowflake" /> **Snowflake**
+
+```typescript
+import { Snowflake } from "diagrams-js/saas/analytics"
+```
+
+<img src="/resources/saas/analytics/stitch.png" width="30" alt="Stitch" /> **Stitch**
+
+```typescript
+import { Stitch } from "diagrams-js/saas/analytics"
+```
+
+### saas/automation
+
+<img src="/resources/saas/automation/n8n.png" width="30" alt="N8n" /> **N8n**
+
+```typescript
+import { N8n } from "diagrams-js/saas/automation"
+```
+
+### saas/cdn
+
+<img src="/resources/saas/cdn/akamai.png" width="30" alt="Akamai" /> **Akamai**
+
+```typescript
+import { Akamai } from "diagrams-js/saas/cdn"
+```
+
+<img src="/resources/saas/cdn/cloudflare.png" width="30" alt="Cloudflare" /> **Cloudflare**
+
+```typescript
+import { Cloudflare } from "diagrams-js/saas/cdn"
+```
+
+<img src="/resources/saas/cdn/fastly.png" width="30" alt="Fastly" /> **Fastly**
+
+```typescript
+import { Fastly } from "diagrams-js/saas/cdn"
+```
+
+<img src="/resources/saas/cdn/imperva.png" width="30" alt="Imperva" /> **Imperva**
+
+```typescript
+import { Imperva } from "diagrams-js/saas/cdn"
+```
+
+### saas/chat
+
+<img src="/resources/saas/chat/discord.png" width="30" alt="Discord" /> **Discord**
+
+```typescript
+import { Discord } from "diagrams-js/saas/chat"
+```
+
+<img src="/resources/saas/chat/line.png" width="30" alt="Line" /> **Line**
+
+```typescript
+import { Line } from "diagrams-js/saas/chat"
+```
+
+<img src="/resources/saas/chat/mattermost.png" width="30" alt="Mattermost" /> **Mattermost**
+
+```typescript
+import { Mattermost } from "diagrams-js/saas/chat"
+```
+
+<img src="/resources/saas/chat/messenger.png" width="30" alt="Messenger" /> **Messenger**
+
+```typescript
+import { Messenger } from "diagrams-js/saas/chat"
+```
+
+<img src="/resources/saas/chat/rocket-chat.png" width="30" alt="RocketChat" /> **RocketChat**
+
+```typescript
+import { RocketChat } from "diagrams-js/saas/chat"
+```
+
+<img src="/resources/saas/chat/slack.png" width="30" alt="Slack" /> **Slack**
+
+```typescript
+import { Slack } from "diagrams-js/saas/chat"
+```
+
+<img src="/resources/saas/chat/teams.png" width="30" alt="Teams" /> **Teams**
+
+```typescript
+import { Teams } from "diagrams-js/saas/chat"
+```
+
+<img src="/resources/saas/chat/telegram.png" width="30" alt="Telegram" /> **Telegram**
+
+```typescript
+import { Telegram } from "diagrams-js/saas/chat"
+```
+
+### saas/communication
+
+<img src="/resources/saas/communication/twilio.png" width="30" alt="Twilio" /> **Twilio**
+
+```typescript
+import { Twilio } from "diagrams-js/saas/communication"
+```
+
+### saas/crm
+
+<img src="/resources/saas/crm/intercom.png" width="30" alt="Intercom" /> **Intercom**
+
+```typescript
+import { Intercom } from "diagrams-js/saas/crm"
+```
+
+<img src="/resources/saas/crm/zendesk.png" width="30" alt="Zendesk" /> **Zendesk**
+
+```typescript
+import { Zendesk } from "diagrams-js/saas/crm"
+```
+
+### saas/filesharing
+
+<img src="/resources/saas/filesharing/nextcloud.png" width="30" alt="Nextcloud" /> **Nextcloud**
+
+```typescript
+import { Nextcloud } from "diagrams-js/saas/filesharing"
+```
+
+### saas/identity
+
+<img src="/resources/saas/identity/auth0.png" width="30" alt="Auth0" /> **Auth0**
+
+```typescript
+import { Auth0 } from "diagrams-js/saas/identity"
+```
+
+<img src="/resources/saas/identity/okta.png" width="30" alt="Okta" /> **Okta**
+
+```typescript
+import { Okta } from "diagrams-js/saas/identity"
+```
+
+### saas/logging
+
+<img src="/resources/saas/logging/datadog.png" width="30" alt="Datadog" /> **Datadog**
+
+```typescript
+import { Datadog } from "diagrams-js/saas/logging"
+```
+
+<img src="/resources/saas/logging/newrelic.png" width="30" alt="Newrelic" /> **Newrelic**
+
+```typescript
+import { Newrelic } from "diagrams-js/saas/logging"
+```
+
+<img src="/resources/saas/logging/papertrail.png" width="30" alt="Papertrail" /> **Papertrail**
+
+```typescript
+import { Papertrail } from "diagrams-js/saas/logging"
+```
+
+### saas/media
+
+<img src="/resources/saas/media/cloudinary.png" width="30" alt="Cloudinary" /> **Cloudinary**
+
+```typescript
+import { Cloudinary } from "diagrams-js/saas/media"
+```
+
+### saas/payment
+
+<img src="/resources/saas/payment/adyen.png" width="30" alt="Adyen" /> **Adyen**
+
+```typescript
+import { Adyen } from "diagrams-js/saas/payment"
+```
+
+<img src="/resources/saas/payment/amazon-pay.png" width="30" alt="AmazonPay" /> **AmazonPay**
+
+```typescript
+import { AmazonPay } from "diagrams-js/saas/payment"
+```
+
+<img src="/resources/saas/payment/paypal.png" width="30" alt="Paypal" /> **Paypal**
+
+```typescript
+import { Paypal } from "diagrams-js/saas/payment"
+```
+
+<img src="/resources/saas/payment/stripe.png" width="30" alt="Stripe" /> **Stripe**
+
+```typescript
+import { Stripe } from "diagrams-js/saas/payment"
+```
+
+### saas/recommendation
+
+<img src="/resources/saas/recommendation/recombee.png" width="30" alt="Recombee" /> **Recombee**
+
+```typescript
+import { Recombee } from "diagrams-js/saas/recommendation"
+```
+
+### saas/security
+
+<img src="/resources/saas/security/crowdstrike.png" width="30" alt="Crowdstrike" /> **Crowdstrike**
+
+```typescript
+import { Crowdstrike } from "diagrams-js/saas/security"
+```
+
+<img src="/resources/saas/security/sonarqube.png" width="30" alt="Sonarqube" /> **Sonarqube**
+
+```typescript
+import { Sonarqube } from "diagrams-js/saas/security"
+```
+
+### saas/social
+
+<img src="/resources/saas/social/facebook.png" width="30" alt="Facebook" /> **Facebook**
+
+```typescript
+import { Facebook } from "diagrams-js/saas/social"
+```
+
+<img src="/resources/saas/social/twitter.png" width="30" alt="Twitter" /> **Twitter**
+
+```typescript
+import { Twitter } from "diagrams-js/saas/social"
+```
+

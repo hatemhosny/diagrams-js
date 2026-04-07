@@ -9,7 +9,7 @@ description: Connecting nodes with customized edges
 
 ## Basic Usage
 
-An edge object contains attributes like **label**, **color**, and **style**. These mirror the corresponding [Graphviz edge attributes](https://graphviz.org/doc/info/attrs.html).
+An edge object contains attributes like **label**, **color**, and **style**. These mirror the corresponding [Graphviz edge attributes](https://graphviz.org/docs/edges/).
 
 ```typescript
 import { Diagram, Edge } from "diagrams-js";
@@ -106,7 +106,9 @@ replica.from(Edge({ label: "collect", color: "blue" }), metrics);
 Edges can be chained for complex connections:
 
 ```typescript
-aggregator.to(Edge({ label: "parse" }), kafka).to(Edge({ color: "black", style: "bold" }), spark);
+aggregator
+  .to(Edge({ label: "parse" }), kafka)
+  .to(Edge({ color: "black", style: "bold" }), spark);
 ```
 
 ## Multiple Targets with Edges
@@ -128,6 +130,7 @@ grpcsvc.forEach((svc) => svc.to(Edge({ color: "brown" }), sessionPrimary));
 
 ```typescript
 import { Diagram, Edge } from "diagrams-js";
+import { Spark } from "diagrams-js/onprem/analytics";
 import { Server } from "diagrams-js/onprem/compute";
 import { PostgreSQL } from "diagrams-js/onprem/database";
 import { Redis } from "diagrams-js/onprem/inmemory";
@@ -135,11 +138,11 @@ import { Fluentd } from "diagrams-js/onprem/aggregator";
 import { Grafana, Prometheus } from "diagrams-js/onprem/monitoring";
 import { Nginx } from "diagrams-js/onprem/network";
 import { Kafka } from "diagrams-js/onprem/queue";
-import { Spark } from "diagrams-js/onprem/analytics";
 
-const diagram = Diagram("Advanced Web Service", { direction: "TB" });
+const diagram = Diagram("Advanced Web Service with On-Premises (colored)");
 
 const ingress = diagram.add(Nginx("ingress"));
+
 const metrics = diagram.add(Prometheus("metric"));
 const grafana = diagram.add(Grafana("monitoring"));
 
@@ -163,12 +166,18 @@ sessionPrimary.with(Edge({ color: "brown", style: "dashed" }), sessionReplica);
 // Labelled edge from replica to metrics
 sessionReplica.from(Edge({ label: "collect" }), metrics);
 
+grpcsvc.forEach((svc) => svc.to(Edge({ color: "brown" }), sessionPrimary));
+
 const dbCluster = diagram.cluster("Database HA");
 const dbPrimary = dbCluster.add(PostgreSQL("users"));
 const dbReplica = dbCluster.add(PostgreSQL("replica"));
 
 // Brown dotted line for DB replication
 dbPrimary.with(Edge({ color: "brown", style: "dotted" }), dbReplica);
+
+// Labelled edge from replica to metrics
+dbReplica.from(Edge({ label: "collect" }), metrics);
+grpcsvc.forEach((svc) => svc.to(Edge({ color: "black" }), dbPrimary));
 
 const aggregator = diagram.add(Fluentd("logging"));
 const kafka = diagram.add(Kafka("stream"));
@@ -180,8 +189,9 @@ kafka.to(Edge({ color: "black", style: "bold" }), spark);
 
 // Bidirectional edges with color
 grpcsvc.forEach((svc) => {
-  ingress.to(Edge({ color: "darkgreen", forward: true, reverse: true })).to(svc);
+  ingress.to(Edge({ color: "darkgreen", forward: true, reverse: true }), svc);
 });
+grpcsvc.forEach((svc) => svc.to(Edge({ color: "darkorange" }), aggregator));
 
 const svg = await diagram.render();
 ```
@@ -202,4 +212,4 @@ Edge({
 });
 ```
 
-See [Graphviz edge attributes](https://graphviz.org/doc/info/attrs.html) for the complete list.
+See [Graphviz edge attributes](https://graphviz.org/docs/edges/) for the complete list.

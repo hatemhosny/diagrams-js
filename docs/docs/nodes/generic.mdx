@@ -1,28 +1,207 @@
 ---
 title: Generic
-description: Node classes for Generic computing provider
+description: Node classes for generic/on-premise resources
 ---
 
 # Generic
 
-Node classes list for the Generic computing provider.
+Node classes list for the Generic provider.
 
-## Import
+## Example Usage
 
 ```typescript
 import { Diagram } from "diagrams-js";
-import { Compute, Rack } from "diagrams-js/generic/compute";
-import { Database } from "diagrams-js/generic/database";
-import { Firewall, Router, Switch } from "diagrams-js/generic/network";
-import { Storage } from "diagrams-js/generic/storage";
+import { Blank } from "diagrams-js/generic/blank";
+import { Rack } from "diagrams-js/generic/compute";
+
+const diagram = Diagram("Generic Architecture", { direction: "TB" });
+
+const node1 = diagram.add(Blank("Node 1"));
+const node2 = diagram.add(Rack("Node 2"));
+
+node1.to(node2);
+
+const svg = await diagram.render();
+diagram.destroy();
 ```
 
-## Available Categories
-
 :::note
-This provider supports compute, database, network, OS, and storage categories. Please refer to the [Python diagrams Generic documentation](https://diagrams.mingrammer.com/docs/nodes/generic) for the complete list of available nodes.
+All node classes available in the [Python diagrams library](https://diagrams.mingrammer.com/docs/nodes/generic) are also available in diagrams-js with the same class names and structure.
 :::
 
-:::tip Complete Reference
-For a complete list of all Generic nodes, see the [Python diagrams Generic documentation](https://diagrams.mingrammer.com/docs/nodes/generic). All node classes listed there are available in diagrams-js with the same class names.
-:::
+## Node Reference
+
+### generic/blank
+
+<img src="/resources/generic/blank/blank.png" width="30" alt="Blank" /> **Blank**
+
+```typescript
+import { Blank } from "diagrams-js/generic/blank"
+```
+
+### generic/compute
+
+<img src="/resources/generic/compute/rack.png" width="30" alt="Rack" /> **Rack**
+
+```typescript
+import { Rack } from "diagrams-js/generic/compute"
+```
+
+### generic/database
+
+<img src="/resources/generic/database/sql.png" width="30" alt="SQL" /> **SQL**
+
+```typescript
+import { SQL } from "diagrams-js/generic/database"
+```
+
+### generic/device
+
+<img src="/resources/generic/device/mobile.png" width="30" alt="Mobile" /> **Mobile**
+
+```typescript
+import { Mobile } from "diagrams-js/generic/device"
+```
+
+<img src="/resources/generic/device/tablet.png" width="30" alt="Tablet" /> **Tablet**
+
+```typescript
+import { Tablet } from "diagrams-js/generic/device"
+```
+
+### generic/network
+
+<img src="/resources/generic/network/firewall.png" width="30" alt="Firewall" /> **Firewall**
+
+```typescript
+import { Firewall } from "diagrams-js/generic/network"
+```
+
+<img src="/resources/generic/network/router.png" width="30" alt="Router" /> **Router**
+
+```typescript
+import { Router } from "diagrams-js/generic/network"
+```
+
+<img src="/resources/generic/network/subnet.png" width="30" alt="Subnet" /> **Subnet**
+
+```typescript
+import { Subnet } from "diagrams-js/generic/network"
+```
+
+<img src="/resources/generic/network/switch.png" width="30" alt="Switch" /> **Switch**
+
+```typescript
+import { Switch } from "diagrams-js/generic/network"
+```
+
+<img src="/resources/generic/network/vpn.png" width="30" alt="VPN" /> **VPN**
+
+```typescript
+import { VPN } from "diagrams-js/generic/network"
+```
+
+### generic/os
+
+<img src="/resources/generic/os/android.png" width="30" alt="Android" /> **Android**
+
+```typescript
+import { Android } from "diagrams-js/generic/os"
+```
+
+<img src="/resources/generic/os/centos.png" width="30" alt="Centos" /> **Centos**
+
+```typescript
+import { Centos } from "diagrams-js/generic/os"
+```
+
+<img src="/resources/generic/os/debian.png" width="30" alt="Debian" /> **Debian**
+
+```typescript
+import { Debian } from "diagrams-js/generic/os"
+```
+
+<img src="/resources/generic/os/ios.png" width="30" alt="IOS" /> **IOS**
+
+```typescript
+import { IOS } from "diagrams-js/generic/os"
+```
+
+<img src="/resources/generic/os/linux-general.png" width="30" alt="LinuxGeneral" /> **LinuxGeneral**
+
+```typescript
+import { LinuxGeneral } from "diagrams-js/generic/os"
+```
+
+<img src="/resources/generic/os/raspbian.png" width="30" alt="Raspbian" /> **Raspbian**
+
+```typescript
+import { Raspbian } from "diagrams-js/generic/os"
+```
+
+<img src="/resources/generic/os/red-hat.png" width="30" alt="RedHat" /> **RedHat**
+
+```typescript
+import { RedHat } from "diagrams-js/generic/os"
+```
+
+<img src="/resources/generic/os/suse.png" width="30" alt="Suse" /> **Suse**
+
+```typescript
+import { Suse } from "diagrams-js/generic/os"
+```
+
+<img src="/resources/generic/os/ubuntu.png" width="30" alt="Ubuntu" /> **Ubuntu**
+
+```typescript
+import { Ubuntu } from "diagrams-js/generic/os"
+```
+
+<img src="/resources/generic/os/windows.png" width="30" alt="Windows" /> **Windows**
+
+```typescript
+import { Windows } from "diagrams-js/generic/os"
+```
+
+### generic/place
+
+<img src="/resources/generic/place/datacenter.png" width="30" alt="Datacenter" /> **Datacenter**
+
+```typescript
+import { Datacenter } from "diagrams-js/generic/place"
+```
+
+### generic/storage
+
+<img src="/resources/generic/storage/storage.png" width="30" alt="Storage" /> **Storage**
+
+```typescript
+import { Storage } from "diagrams-js/generic/storage"
+```
+
+### generic/virtualization
+
+<img src="/resources/generic/virtualization/qemu.png" width="30" alt="Qemu" /> **Qemu**
+
+```typescript
+import { Qemu } from "diagrams-js/generic/virtualization"
+```
+
+<img src="/resources/generic/virtualization/virtualbox.png" width="30" alt="Virtualbox" /> **Virtualbox**
+
+```typescript
+import { Virtualbox } from "diagrams-js/generic/virtualization"
+```
+
+<img src="/resources/generic/virtualization/vmware.png" width="30" alt="Vmware" /> **Vmware**
+
+```typescript
+import { Vmware } from "diagrams-js/generic/virtualization"
+```
+
+<img src="/resources/generic/virtualization/xen.png" width="30" alt="XEN" /> **XEN**
+
+```typescript
+import { XEN } from "diagrams-js/generic/virtualization"
+```
+

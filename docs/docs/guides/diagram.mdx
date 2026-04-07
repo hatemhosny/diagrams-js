@@ -59,8 +59,8 @@ Choose a color theme for clusters:
 
 ```typescript
 const diagram = Diagram("My Diagram", {
-  theme: "neutral", // Default
-  // theme: "pastel"
+  theme: "pastel", // Default
+  // theme: "neutral"
   // theme: "blues"
   // theme: "greens"
   // theme: "orange"
@@ -84,11 +84,10 @@ Pass custom Graphviz attributes:
 ```typescript
 const diagram = Diagram("My Diagram", {
   graphAttr: {
-    fontsize: "45",
+    fontsize: "15",
     bgcolor: "transparent",
   },
   nodeAttr: {
-    shape: "box",
     style: "filled",
   },
   edgeAttr: {

@@ -4,8 +4,9 @@
   "private": true,
   "scripts": {
     "docusaurus": "docusaurus",
-    "start": "docusaurus start",
-    "build": "docusaurus build",
+    "copy-resources": "node ../scripts/copy-resources.mjs",
+    "start": "npm run copy-resources && docusaurus start",
+    "build": "npm run copy-resources && docusaurus build",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
     "clear": "docusaurus clear",

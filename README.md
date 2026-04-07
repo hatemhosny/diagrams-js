@@ -5,7 +5,7 @@
 > A TypeScript/JavaScript port of the popular Python [diagrams](https://github.com/mingrammer/diagrams) library for drawing cloud system architecture diagrams as code.
 
 [![npm version](https://badge.fury.io/js/diagrams-js.svg)](https://www.npmjs.com/package/diagrams-js)
-[![CI](https://github.com/author/diagrams-js/actions/workflows/ci.yml/badge.svg)](https://github.com/author/diagrams-js/actions/workflows/ci.yml)
+[![CI](https://github.com/hatemhosny/diagrams-js/actions/workflows/ci.yml/badge.svg)](https://github.com/hatemhosny/diagrams-js/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Features
@@ -121,7 +121,7 @@ View the [full list](https://diagrams-js.hatemhosny.dev/docs/providers)
 
 ```bash
 # Clone the repository
-git clone https://github.com/author/diagrams-js.git
+git clone https://github.com/hatemhosny/diagrams-js.git
 cd diagrams-js/diagrams-js
 
 # Install dependencies
@@ -171,8 +171,8 @@ Icon resources are sourced from the Python diagrams repository and various cloud
 ## Support
 
 - 📖 [Documentation](https://diagrams-js.hatemhosny.dev)
-- 🐛 [Issue Tracker](https://github.com/author/diagrams-js/issues)
-- 💬 [Discussions](https://github.com/author/diagrams-js/discussions)
+- 🐛 [Issue Tracker](https://github.com/hatemhosny/diagrams-js/issues)
+- 💬 [Discussions](https://github.com/hatemhosny/diagrams-js/discussions)
 
 ---
 

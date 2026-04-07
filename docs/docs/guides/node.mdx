@@ -23,7 +23,7 @@ In this example, `EC2` is a node of resource type `compute` provided by `aws`.
 
 ## Available Providers
 
-You can use nodes from any supported provider:
+You can use nodes from any supported [provider](./providers.mdx):
 
 ```typescript
 // AWS resources
@@ -45,7 +45,7 @@ import { Service } from "diagrams-js/k8s/network";
 import { PV, PVC, StorageClass } from "diagrams-js/k8s/storage";
 ```
 
-See the [Nodes](../nodes/) section for a complete list.
+See the [Providers](./providers.mdx) section for a complete list.
 
 ## Data Flow
 
@@ -146,6 +146,6 @@ const svg = await diagram.render();
 
 ## Notes
 
-- The order of rendered diagrams is the reverse of the declaration order (controlled by Graphviz)
+- The order of rendered diagrams is not guaranteed
 - Use `direction` option to control the overall layout
 - Node connections create directed graph edges

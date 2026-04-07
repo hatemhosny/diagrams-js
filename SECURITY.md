@@ -4,10 +4,10 @@
 
 We release security updates for the following versions:
 
-| Version | Supported          |
-| ------- | ------------------ |
-| Latest  | :white_check_mark: |
-| < Latest| :x:                |
+| Version  | Supported          |
+| -------- | ------------------ |
+| Latest   | :white_check_mark: |
+| < Latest | :x:                |
 
 We strongly recommend always using the latest version to ensure you have the most recent security fixes.
 
@@ -21,7 +21,7 @@ We take security seriously. If you discover a security vulnerability, please rep
 
 Instead, please report security vulnerabilities via one of the following methods:
 
-1. **GitHub Security Advisory**: [Report a vulnerability](https://github.com/author/diagrams-js/security/advisories/new)
+1. **GitHub Security Advisory**: [Report a vulnerability](https://github.com/hatemhosny/diagrams-js/security/advisories/new)
 2. **Email**: Send details to [security@example.com](mailto:security@example.com)
 
 ### What to Include
@@ -84,17 +84,17 @@ We aim to respond to security reports within:
 
 ```typescript
 // Safe: Using built-in providers
-import { AWS } from 'diagrams-js';
-const ec2 = AWS.Compute.EC2('Server');
+import { AWS } from "diagrams-js";
+const ec2 = AWS.Compute.EC2("Server");
 
 // Caution: Validate external URLs
 const userProvidedUrl = getUserInput();
 if (isValidUrl(userProvidedUrl)) {
-  const node = new Custom('Label', userProvidedUrl);
+  const node = new Custom("Label", userProvidedUrl);
 }
 
 // Safe: Using data URIs for user content
-const node = new Custom('Label', 'data:image/png;base64,...');
+const node = new Custom("Label", "data:image/png;base64,...");
 ```
 
 ## Disclosure Policy
@@ -138,7 +138,7 @@ This repository uses:
 
 We thank the following security researchers who have responsibly disclosed vulnerabilities:
 
-*No vulnerabilities have been reported yet. Be the first responsible disclosure!*
+_No vulnerabilities have been reported yet. Be the first responsible disclosure!_
 
 ## Contact
 

@@ -7,19 +7,365 @@ description: Node classes for OpenStack provider
 
 Node classes list for the OpenStack provider.
 
-## Import
+## Example Usage
 
 ```typescript
 import { Diagram } from "diagrams-js";
-// Import from "diagrams-js/openstack/*"
+import { EC2API } from "diagrams-js/openstack/apiproxies";
+import { Freezer, Masakari, Murano } from "diagrams-js/openstack/applicationlifecycle";
+
+const diagram = Diagram("OpenStack Architecture", { direction: "TB" });
+
+const node1 = diagram.add(EC2API("Node 1"));
+const node2 = diagram.add(Freezer("Node 2"));
+
+node1.to(node2);
+
+const svg = await diagram.render();
+diagram.destroy();
 ```
 
-## Available Categories
-
 :::note
-This provider supports compute, networking, storage, and many other categories. Please refer to the [Python diagrams OpenStack documentation](https://diagrams.mingrammer.com/docs/nodes/openstack) for the complete list of available nodes.
+All node classes available in the [Python diagrams library](https://diagrams.mingrammer.com/docs/nodes/openstack) are also available in diagrams-js with the same class names and structure.
 :::
 
-:::tip Complete Reference
-For a complete list of all OpenStack nodes, see the [Python diagrams OpenStack documentation](https://diagrams.mingrammer.com/docs/nodes/openstack). All node classes listed there are available in diagrams-js with the same class names.
-:::
+## Node Reference
+
+### openstack/apiproxies
+
+**EC2API**
+
+```typescript
+import { EC2API } from "diagrams-js/openstack/apiproxies"
+```
+
+### openstack/applicationlifecycle
+
+<img src="/resources/openstack/applicationlifecycle/freezer.png" width="30" alt="Freezer" /> **Freezer**
+
+```typescript
+import { Freezer } from "diagrams-js/openstack/applicationlifecycle"
+```
+
+<img src="/resources/openstack/applicationlifecycle/masakari.png" width="30" alt="Masakari" /> **Masakari**
+
+```typescript
+import { Masakari } from "diagrams-js/openstack/applicationlifecycle"
+```
+
+<img src="/resources/openstack/applicationlifecycle/murano.png" width="30" alt="Murano" /> **Murano**
+
+```typescript
+import { Murano } from "diagrams-js/openstack/applicationlifecycle"
+```
+
+<img src="/resources/openstack/applicationlifecycle/solum.png" width="30" alt="Solum" /> **Solum**
+
+```typescript
+import { Solum } from "diagrams-js/openstack/applicationlifecycle"
+```
+
+### openstack/baremetal
+
+<img src="/resources/openstack/baremetal/cyborg.png" width="30" alt="Cyborg" /> **Cyborg**
+
+```typescript
+import { Cyborg } from "diagrams-js/openstack/baremetal"
+```
+
+<img src="/resources/openstack/baremetal/ironic.png" width="30" alt="Ironic" /> **Ironic**
+
+```typescript
+import { Ironic } from "diagrams-js/openstack/baremetal"
+```
+
+### openstack/billing
+
+<img src="/resources/openstack/billing/cloudkitty.png" width="30" alt="Cloudkitty" /> **Cloudkitty**
+
+```typescript
+import { Cloudkitty } from "diagrams-js/openstack/billing"
+```
+
+### openstack/compute
+
+<img src="/resources/openstack/compute/nova.png" width="30" alt="Nova" /> **Nova**
+
+```typescript
+import { Nova } from "diagrams-js/openstack/compute"
+```
+
+<img src="/resources/openstack/compute/qinling.png" width="30" alt="Qinling" /> **Qinling**
+
+```typescript
+import { Qinling } from "diagrams-js/openstack/compute"
+```
+
+<img src="/resources/openstack/compute/zun.png" width="30" alt="Zun" /> **Zun**
+
+```typescript
+import { Zun } from "diagrams-js/openstack/compute"
+```
+
+### openstack/containerservices
+
+<img src="/resources/openstack/containerservices/kuryr.png" width="30" alt="Kuryr" /> **Kuryr**
+
+```typescript
+import { Kuryr } from "diagrams-js/openstack/containerservices"
+```
+
+### openstack/deployment
+
+<img src="/resources/openstack/deployment/ansible.png" width="30" alt="Ansible" /> **Ansible**
+
+```typescript
+import { Ansible } from "diagrams-js/openstack/deployment"
+```
+
+<img src="/resources/openstack/deployment/charms.png" width="30" alt="Charms" /> **Charms**
+
+```typescript
+import { Charms } from "diagrams-js/openstack/deployment"
+```
+
+<img src="/resources/openstack/deployment/chef.png" width="30" alt="Chef" /> **Chef**
+
+```typescript
+import { Chef } from "diagrams-js/openstack/deployment"
+```
+
+<img src="/resources/openstack/deployment/helm.png" width="30" alt="Helm" /> **Helm**
+
+```typescript
+import { Helm } from "diagrams-js/openstack/deployment"
+```
+
+<img src="/resources/openstack/deployment/kolla.png" width="30" alt="Kolla" /> **Kolla**
+
+```typescript
+import { Kolla } from "diagrams-js/openstack/deployment"
+```
+
+<img src="/resources/openstack/deployment/tripleo.png" width="30" alt="Tripleo" /> **Tripleo**
+
+```typescript
+import { Tripleo } from "diagrams-js/openstack/deployment"
+```
+
+### openstack/frontend
+
+<img src="/resources/openstack/frontend/horizon.png" width="30" alt="Horizon" /> **Horizon**
+
+```typescript
+import { Horizon } from "diagrams-js/openstack/frontend"
+```
+
+### openstack/monitoring
+
+<img src="/resources/openstack/monitoring/monasca.png" width="30" alt="Monasca" /> **Monasca**
+
+```typescript
+import { Monasca } from "diagrams-js/openstack/monitoring"
+```
+
+<img src="/resources/openstack/monitoring/telemetry.png" width="30" alt="Telemetry" /> **Telemetry**
+
+```typescript
+import { Telemetry } from "diagrams-js/openstack/monitoring"
+```
+
+### openstack/multiregion
+
+<img src="/resources/openstack/multiregion/tricircle.png" width="30" alt="Tricircle" /> **Tricircle**
+
+```typescript
+import { Tricircle } from "diagrams-js/openstack/multiregion"
+```
+
+### openstack/networking
+
+<img src="/resources/openstack/networking/designate.png" width="30" alt="Designate" /> **Designate**
+
+```typescript
+import { Designate } from "diagrams-js/openstack/networking"
+```
+
+<img src="/resources/openstack/networking/neutron.png" width="30" alt="Neutron" /> **Neutron**
+
+```typescript
+import { Neutron } from "diagrams-js/openstack/networking"
+```
+
+<img src="/resources/openstack/networking/octavia.png" width="30" alt="Octavia" /> **Octavia**
+
+```typescript
+import { Octavia } from "diagrams-js/openstack/networking"
+```
+
+### openstack/nfv
+
+<img src="/resources/openstack/nfv/tacker.png" width="30" alt="Tacker" /> **Tacker**
+
+```typescript
+import { Tacker } from "diagrams-js/openstack/nfv"
+```
+
+### openstack/optimization
+
+<img src="/resources/openstack/optimization/congress.png" width="30" alt="Congress" /> **Congress**
+
+```typescript
+import { Congress } from "diagrams-js/openstack/optimization"
+```
+
+<img src="/resources/openstack/optimization/rally.png" width="30" alt="Rally" /> **Rally**
+
+```typescript
+import { Rally } from "diagrams-js/openstack/optimization"
+```
+
+<img src="/resources/openstack/optimization/vitrage.png" width="30" alt="Vitrage" /> **Vitrage**
+
+```typescript
+import { Vitrage } from "diagrams-js/openstack/optimization"
+```
+
+<img src="/resources/openstack/optimization/watcher.png" width="30" alt="Watcher" /> **Watcher**
+
+```typescript
+import { Watcher } from "diagrams-js/openstack/optimization"
+```
+
+### openstack/orchestration
+
+<img src="/resources/openstack/orchestration/blazar.png" width="30" alt="Blazar" /> **Blazar**
+
+```typescript
+import { Blazar } from "diagrams-js/openstack/orchestration"
+```
+
+<img src="/resources/openstack/orchestration/heat.png" width="30" alt="Heat" /> **Heat**
+
+```typescript
+import { Heat } from "diagrams-js/openstack/orchestration"
+```
+
+<img src="/resources/openstack/orchestration/mistral.png" width="30" alt="Mistral" /> **Mistral**
+
+```typescript
+import { Mistral } from "diagrams-js/openstack/orchestration"
+```
+
+<img src="/resources/openstack/orchestration/senlin.png" width="30" alt="Senlin" /> **Senlin**
+
+```typescript
+import { Senlin } from "diagrams-js/openstack/orchestration"
+```
+
+<img src="/resources/openstack/orchestration/zaqar.png" width="30" alt="Zaqar" /> **Zaqar**
+
+```typescript
+import { Zaqar } from "diagrams-js/openstack/orchestration"
+```
+
+### openstack/packaging
+
+<img src="/resources/openstack/packaging/loci.png" width="30" alt="LOCI" /> **LOCI**
+
+```typescript
+import { LOCI } from "diagrams-js/openstack/packaging"
+```
+
+<img src="/resources/openstack/packaging/puppet.png" width="30" alt="Puppet" /> **Puppet**
+
+```typescript
+import { Puppet } from "diagrams-js/openstack/packaging"
+```
+
+<img src="/resources/openstack/packaging/rpm.png" width="30" alt="RPM" /> **RPM**
+
+```typescript
+import { RPM } from "diagrams-js/openstack/packaging"
+```
+
+### openstack/sharedservices
+
+<img src="/resources/openstack/sharedservices/barbican.png" width="30" alt="Barbican" /> **Barbican**
+
+```typescript
+import { Barbican } from "diagrams-js/openstack/sharedservices"
+```
+
+<img src="/resources/openstack/sharedservices/glance.png" width="30" alt="Glance" /> **Glance**
+
+```typescript
+import { Glance } from "diagrams-js/openstack/sharedservices"
+```
+
+<img src="/resources/openstack/sharedservices/karbor.png" width="30" alt="Karbor" /> **Karbor**
+
+```typescript
+import { Karbor } from "diagrams-js/openstack/sharedservices"
+```
+
+<img src="/resources/openstack/sharedservices/keystone.png" width="30" alt="Keystone" /> **Keystone**
+
+```typescript
+import { Keystone } from "diagrams-js/openstack/sharedservices"
+```
+
+<img src="/resources/openstack/sharedservices/searchlight.png" width="30" alt="Searchlight" /> **Searchlight**
+
+```typescript
+import { Searchlight } from "diagrams-js/openstack/sharedservices"
+```
+
+### openstack/storage
+
+<img src="/resources/openstack/storage/cinder.png" width="30" alt="Cinder" /> **Cinder**
+
+```typescript
+import { Cinder } from "diagrams-js/openstack/storage"
+```
+
+<img src="/resources/openstack/storage/manila.png" width="30" alt="Manila" /> **Manila**
+
+```typescript
+import { Manila } from "diagrams-js/openstack/storage"
+```
+
+<img src="/resources/openstack/storage/swift.png" width="30" alt="Swift" /> **Swift**
+
+```typescript
+import { Swift } from "diagrams-js/openstack/storage"
+```
+
+### openstack/user
+
+<img src="/resources/openstack/user/openstackclient.png" width="30" alt="Openstackclient" /> **Openstackclient**
+
+```typescript
+import { Openstackclient } from "diagrams-js/openstack/user"
+```
+
+### openstack/workloadprovisioning
+
+<img src="/resources/openstack/workloadprovisioning/magnum.png" width="30" alt="Magnum" /> **Magnum**
+
+```typescript
+import { Magnum } from "diagrams-js/openstack/workloadprovisioning"
+```
+
+<img src="/resources/openstack/workloadprovisioning/sahara.png" width="30" alt="Sahara" /> **Sahara**
+
+```typescript
+import { Sahara } from "diagrams-js/openstack/workloadprovisioning"
+```
+
+<img src="/resources/openstack/workloadprovisioning/trove.png" width="30" alt="Trove" /> **Trove**
+
+```typescript
+import { Trove } from "diagrams-js/openstack/workloadprovisioning"
+```
+

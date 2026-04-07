@@ -45,12 +45,14 @@ diagrams/
 ## Development Setup
 
 1. **Fork and clone the repository**:
+
    ```bash
    git clone https://github.com/YOUR_USERNAME/diagrams-js.git
    cd diagrams-js/diagrams-js
    ```
 
 2. **Install dependencies**:
+
    ```bash
    vp install
    ```
@@ -65,7 +67,7 @@ diagrams/
 
 ### Reporting Bugs
 
-If you find a bug, please [open an issue](https://github.com/author/diagrams-js/issues/new) with:
+If you find a bug, please [open an issue](https://github.com/hatemhosny/diagrams-js/issues/new) with:
 
 - A clear, descriptive title
 - Steps to reproduce the bug
@@ -75,7 +77,7 @@ If you find a bug, please [open an issue](https://github.com/author/diagrams-js/
 
 ### Suggesting Features
 
-Feature suggestions are welcome! Please [open an issue](https://github.com/author/diagrams-js/issues/new) with:
+Feature suggestions are welcome! Please [open an issue](https://github.com/hatemhosny/diagrams-js/issues/new) with:
 
 - A clear description of the feature
 - Use cases and motivation
@@ -120,6 +122,7 @@ To add support for custom nodes with external icons:
 ### Pull Request Process
 
 1. **Create a branch**:
+
    ```bash
    git checkout -b feature/your-feature-name
    # or
@@ -132,21 +135,26 @@ To add support for custom nodes with external icons:
    - Update documentation if needed
 
 3. **Run checks**:
+
    ```bash
    vp run build
    vp check
    vp test
    ```
+
    All checks must pass before submitting.
 
 4. **Commit your changes**:
+
    ```bash
    git add .
    git commit -m "feat: add feature description"
    ```
+
    Follow [Conventional Commits](https://www.conventionalcommits.org/) format.
 
 5. **Push to your fork**:
+
    ```bash
    git push origin feature/your-feature-name
    ```
@@ -268,7 +276,7 @@ vp test tests/Diagram.test.ts
 - Document parameters and return types
 - Mark internal APIs with `@internal`
 
-```typescript
+````typescript
 /**
  * Creates a new diagram instance.
  * @param name - The name of the diagram
@@ -282,7 +290,7 @@ vp test tests/Diagram.test.ts
 export class Diagram {
   // ...
 }
-```
+````
 
 ### User Documentation
 
@@ -295,6 +303,7 @@ pnpm start  # Start dev server
 ```
 
 Update MDX files in `docs/docs/` when:
+
 - Adding new features
 - Changing APIs
 - Adding examples
@@ -318,8 +327,8 @@ We follow [Semantic Versioning](https://semver.org/):
 
 ## Questions?
 
-- Check existing [issues](https://github.com/author/diagrams-js/issues)
-- Start a [discussion](https://github.com/author/diagrams-js/discussions)
+- Check existing [issues](https://github.com/hatemhosny/diagrams-js/issues)
+- Start a [discussion](https://github.com/hatemhosny/diagrams-js/discussions)
 - Review [documentation](https://diagrams-js.hatemhosny.dev)
 
 ## Thank You!

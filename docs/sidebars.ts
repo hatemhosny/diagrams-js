@@ -1,7 +1,7 @@
 import type { SidebarsConfig } from "@docusaurus/plugin-content-docs";
 
 const sidebars: SidebarsConfig = {
-  tutorialSidebar: [
+  docsSidebar: [
     {
       type: "category",
       label: "Getting Started",
@@ -12,7 +12,6 @@ const sidebars: SidebarsConfig = {
         "getting-started/examples",
       ],
     },
-    // "playground",
     {
       type: "category",
       label: "Guides",
@@ -25,6 +24,7 @@ const sidebars: SidebarsConfig = {
         "guides/custom-nodes",
         "guides/rendering",
         "guides/migration",
+        "guides/providers",
       ],
     },
     {

@@ -60,18 +60,37 @@ const config: Config = {
     colorMode: {
       respectPrefersColorScheme: true,
     },
+    docs: {
+      sidebar: {
+        hideable: true,
+      },
+    },
     navbar: {
       title: "diagrams-js",
       logo: {
-        alt: "My Site Logo",
+        alt: "diagrams-js",
         src: "img/logo.svg",
       },
       items: [
         {
-          type: "docSidebar",
-          sidebarId: "tutorialSidebar",
           position: "left",
           label: "Docs",
+          to: "/docs/getting-started/installation",
+        },
+        {
+          position: "left",
+          label: "Examples",
+          to: "/docs/getting-started/examples",
+        },
+        {
+          position: "left",
+          label: "Guides",
+          to: "/docs/guides/diagram",
+        },
+        {
+          position: "left",
+          label: "Providers",
+          to: "/docs/guides/providers",
         },
         { to: "/playground", label: "Playground", position: "left" },
         {
@@ -131,7 +150,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Hatem Hosny. MIT License.`,
+      copyright: `Copyright © ${new Date().getFullYear()} <a href="https://github.com/hatemhosny" target="_blank">Hatem Hosny</a>. MIT License.`,
     },
     prism: {
       theme: prismThemes.github,

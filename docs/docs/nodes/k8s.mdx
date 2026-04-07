@@ -5,172 +5,323 @@ description: Node classes for Kubernetes provider
 
 # Kubernetes
 
-Node classes list for the Kubernetes (k8s) provider.
+Node classes list for the Kubernetes provider.
 
-## Import
-
-```typescript
-import { Diagram } from "diagrams-js";
-import { Pod, Deployment, StatefulSet } from "diagrams-js/k8s/compute";
-import { Service, Ingress } from "diagrams-js/k8s/network";
-import { PV, PVC, StorageClass } from "diagrams-js/k8s/storage";
-```
-
-## k8s.chaos
-
-<img src="/img/resources/k8s/chaos/chaos-mesh.png" width="30" alt="ChaosMesh" /> **ChaosMesh**
-`import {ChaosMesh} from "diagrams-js/k8s/chaos"`
-
-<img src="/img/resources/k8s/chaos/litmus-chaos.png" width="30" alt="LitmusChaos" /> **LitmusChaos**
-`import {LitmusChaos} from "diagrams-js/k8s/chaos"`
-
-## k8s.clusterconfig
-
-<img src="/img/resources/k8s/clusterconfig/hpa.png" width="30" alt="HPA" /> **HPA** (alias:
-HorizontalPodAutoscaler) `import {HPA} from "diagrams-js/k8s/clusterconfig"`
-
-<img src="/img/resources/k8s/clusterconfig/limits.png" width="30" alt="Limits" /> **Limits** (alias:
-LimitRange) `import {Limits} from "diagrams-js/k8s/clusterconfig"`
-
-<img src="/img/resources/k8s/clusterconfig/quota.png" width="30" alt="Quota" /> **Quota** `import
-{Quota} from "diagrams-js/k8s/clusterconfig"`
-
-## k8s.compute
-
-<img src="/img/resources/k8s/compute/pod.png" width="30" alt="Pod" /> **Pod** `import {Pod} from
-"diagrams-js/k8s/compute"`
-
-<img src="/img/resources/k8s/compute/deploy.png" width="30" alt="Deploy" /> **Deploy** (alias:
-Deployment) `import {Deploy} from "diagrams-js/k8s/compute"`
-
-<img src="/img/resources/k8s/compute/ds.png" width="30" alt="DS" /> **DS** (alias: DaemonSet)
-`import {DS} from "diagrams-js/k8s/compute"`
-
-<img src="/img/resources/k8s/compute/rs.png" width="30" alt="RS" /> **RS** (alias: ReplicaSet)
-`import {RS} from "diagrams-js/k8s/compute"`
-
-<img src="/img/resources/k8s/compute/sts.png" width="30" alt="STS" /> **STS** (alias: StatefulSet)
-`import {STS} from "diagrams-js/k8s/compute"`
-
-<img src="/img/resources/k8s/compute/job.png" width="30" alt="Job" /> **Job** `import {Job} from
-"diagrams-js/k8s/compute"`
-
-<img src="/img/resources/k8s/compute/cronjob.png" width="30" alt="Cronjob" /> **Cronjob** `import
-{Cronjob} from "diagrams-js/k8s/compute"`
-
-## k8s.controlplane
-
-<img src="/img/resources/k8s/controlplane/api.png" width="30" alt="API" /> **API** (alias:
-APIServer) `import {API} from "diagrams-js/k8s/controlplane"`
-
-<img src="/img/resources/k8s/controlplane/c-m.png" width="30" alt="CM" /> **CM** (alias:
-ControllerManager) `import {CM} from "diagrams-js/k8s/controlplane"`
-
-<img src="/img/resources/k8s/controlplane/c-c-m.png" width="30" alt="CCM" /> **CCM** `import {CCM}
-from "diagrams-js/k8s/controlplane"`
-
-<img src="/img/resources/k8s/controlplane/kubelet.png" width="30" alt="Kubelet" /> **Kubelet**
-`import {Kubelet} from "diagrams-js/k8s/controlplane"`
-
-<img src="/img/resources/k8s/controlplane/k-proxy.png" width="30" alt="KProxy" /> **KProxy** (alias:
-KubeProxy) `import {KProxy} from "diagrams-js/k8s/controlplane"`
-
-<img src="/img/resources/k8s/controlplane/sched.png" width="30" alt="Sched" /> **Sched** (alias:
-Scheduler) `import {Sched} from "diagrams-js/k8s/controlplane"`
-
-<img src="/img/resources/k8s/infra/etcd.png" width="30" alt="ETCD" /> **ETCD** `import {ETCD} from
-"diagrams-js/k8s/infra"`
-
-## k8s.network
-
-<img src="/img/resources/k8s/network/svc.png" width="30" alt="SVC" /> **SVC** (alias: Service)
-`import {SVC} from "diagrams-js/k8s/network"`
-
-<img src="/img/resources/k8s/network/ing.png" width="30" alt="Ing" /> **Ing** (alias: Ingress)
-`import {Ing} from "diagrams-js/k8s/network"`
-
-<img src="/img/resources/k8s/network/ep.png" width="30" alt="Ep" /> **Ep** (alias: Endpoint) `import
-{Ep} from "diagrams-js/k8s/network"`
-
-<img src="/img/resources/k8s/network/netpol.png" width="30" alt="Netpol" /> **Netpol** (alias:
-NetworkPolicy) `import {Netpol} from "diagrams-js/k8s/network"`
-
-## k8s.storage
-
-<img src="/img/resources/k8s/storage/pv.png" width="30" alt="PV" /> **PV** (alias: PersistentVolume)
-`import {PV} from "diagrams-js/k8s/storage"`
-
-<img src="/img/resources/k8s/storage/pvc.png" width="30" alt="PVC" /> **PVC** (alias:
-PersistentVolumeClaim) `import {PVC} from "diagrams-js/k8s/storage"`
-
-<img src="/img/resources/k8s/storage/sc.png" width="30" alt="SC" /> **SC** (alias: StorageClass)
-`import {SC} from "diagrams-js/k8s/storage"`
-
-<img src="/img/resources/k8s/storage/vol.png" width="30" alt="Vol" /> **Vol** (alias: Volume)
-`import {Vol} from "diagrams-js/k8s/storage"`
-
-## k8s.rbac
-
-<img src="/img/resources/k8s/rbac/c-role.png" width="30" alt="CRole" /> **CRole** (alias:
-ClusterRole) `import {CRole} from "diagrams-js/k8s/rbac"`
-
-<img src="/img/resources/k8s/rbac/crb.png" width="30" alt="CRB" /> **CRB** (alias:
-ClusterRoleBinding) `import {CRB} from "diagrams-js/k8s/rbac"`
-
-<img src="/img/resources/k8s/rbac/rb.png" width="30" alt="RB" /> **RB** (alias: RoleBinding) `import
-{RB} from "diagrams-js/k8s/rbac"`
-
-<img src="/img/resources/k8s/rbac/sa.png" width="30" alt="SA" /> **SA** (alias: ServiceAccount)
-`import {SA} from "diagrams-js/k8s/rbac"`
-
-## k8s.group
-
-<img src="/img/resources/k8s/group/ns.png" width="30" alt="NS" /> **NS** (alias: Namespace) `import
-{NS} from "diagrams-js/k8s/group"`
-
-## Usage Example
+## Example Usage
 
 ```typescript
 import { Diagram } from "diagrams-js";
-import { Deployment, Pod, ReplicaSet } from "diagrams-js/k8s/compute";
-import { Service, Ingress } from "diagrams-js/k8s/network";
-import { PV, PVC } from "diagrams-js/k8s/storage";
-import { HPA } from "diagrams-js/k8s/clusterconfig";
+import { ChaosMesh, LitmusChaos } from "diagrams-js/k8s/chaos";
+import { HPA, Limits, Quota } from "diagrams-js/k8s/clusterconfig";
 
 const diagram = Diagram("Kubernetes Architecture", { direction: "TB" });
 
-// Ingress and Service
-const ingress = diagram.add(Ingress("ingress.example.com"));
-const svc = diagram.add(Service("web-svc"));
+const node1 = diagram.add(ChaosMesh("Node 1"));
+const node2 = diagram.add(HPA("Node 2"));
 
-// Pods managed by ReplicaSet and Deployment
-const pods = [
-  diagram.add(Pod("web-pod-1")),
-  diagram.add(Pod("web-pod-2")),
-  diagram.add(Pod("web-pod-3")),
-];
-
-const rs = diagram.add(ReplicaSet("web-rs"));
-const deploy = diagram.add(Deployment("web-deploy"));
-const hpa = diagram.add(HPA("web-hpa"));
-
-// Storage
-const pvc = diagram.add(PVC("web-pvc"));
-const pv = diagram.add(PV("web-pv"));
-
-// Connections
-ingress.to(svc);
-svc.to(pods);
-pods.forEach((pod) => pod.from(rs));
-rs.from(deploy);
-deploy.from(hpa);
-pods.forEach((pod) => pod.with(pvc));
-pvc.from(pv);
+node1.to(node2);
 
 const svg = await diagram.render();
 diagram.destroy();
 ```
 
 :::note
-For a complete list of all Kubernetes nodes, see the [Python diagrams K8s documentation](https://diagrams.mingrammer.com/docs/nodes/k8s). All node classes listed there are available in diagrams-js with the same class names.
+All node classes available in the [Python diagrams library](https://diagrams.mingrammer.com/docs/nodes/k8s) are also available in diagrams-js with the same class names and structure.
 :::
+
+## Node Reference
+
+### k8s/chaos
+
+<img src="/resources/k8s/chaos/chaos-mesh.png" width="30" alt="ChaosMesh" /> **ChaosMesh**
+
+```typescript
+import { ChaosMesh } from "diagrams-js/k8s/chaos"
+```
+
+<img src="/resources/k8s/chaos/litmus-chaos.png" width="30" alt="LitmusChaos" /> **LitmusChaos**
+
+```typescript
+import { LitmusChaos } from "diagrams-js/k8s/chaos"
+```
+
+### k8s/clusterconfig
+
+<img src="/resources/k8s/clusterconfig/hpa.png" width="30" alt="HPA" /> **HPA**
+
+```typescript
+import { HPA } from "diagrams-js/k8s/clusterconfig"
+```
+
+<img src="/resources/k8s/clusterconfig/limits.png" width="30" alt="Limits" /> **Limits**
+
+```typescript
+import { Limits } from "diagrams-js/k8s/clusterconfig"
+```
+
+<img src="/resources/k8s/clusterconfig/quota.png" width="30" alt="Quota" /> **Quota**
+
+```typescript
+import { Quota } from "diagrams-js/k8s/clusterconfig"
+```
+
+### k8s/compute
+
+<img src="/resources/k8s/compute/cronjob.png" width="30" alt="Cronjob" /> **Cronjob**
+
+```typescript
+import { Cronjob } from "diagrams-js/k8s/compute"
+```
+
+<img src="/resources/k8s/compute/deploy.png" width="30" alt="Deploy" /> **Deploy**
+
+```typescript
+import { Deploy } from "diagrams-js/k8s/compute"
+```
+
+<img src="/resources/k8s/compute/ds.png" width="30" alt="DS" /> **DS**
+
+```typescript
+import { DS } from "diagrams-js/k8s/compute"
+```
+
+<img src="/resources/k8s/compute/job.png" width="30" alt="Job" /> **Job**
+
+```typescript
+import { Job } from "diagrams-js/k8s/compute"
+```
+
+<img src="/resources/k8s/compute/pod.png" width="30" alt="Pod" /> **Pod**
+
+```typescript
+import { Pod } from "diagrams-js/k8s/compute"
+```
+
+<img src="/resources/k8s/compute/rs.png" width="30" alt="RS" /> **RS**
+
+```typescript
+import { RS } from "diagrams-js/k8s/compute"
+```
+
+<img src="/resources/k8s/compute/sts.png" width="30" alt="STS" /> **STS**
+
+```typescript
+import { STS } from "diagrams-js/k8s/compute"
+```
+
+### k8s/controlplane
+
+<img src="/resources/k8s/controlplane/api.png" width="30" alt="API" /> **API**
+
+```typescript
+import { API } from "diagrams-js/k8s/controlplane"
+```
+
+**CCM**
+
+```typescript
+import { CCM } from "diagrams-js/k8s/controlplane"
+```
+
+**CM**
+
+```typescript
+import { CM } from "diagrams-js/k8s/controlplane"
+```
+
+<img src="/resources/k8s/controlplane/k-proxy.png" width="30" alt="KProxy" /> **KProxy**
+
+```typescript
+import { KProxy } from "diagrams-js/k8s/controlplane"
+```
+
+<img src="/resources/k8s/controlplane/kubelet.png" width="30" alt="Kubelet" /> **Kubelet**
+
+```typescript
+import { Kubelet } from "diagrams-js/k8s/controlplane"
+```
+
+<img src="/resources/k8s/controlplane/sched.png" width="30" alt="Sched" /> **Sched**
+
+```typescript
+import { Sched } from "diagrams-js/k8s/controlplane"
+```
+
+### k8s/ecosystem
+
+<img src="/resources/k8s/ecosystem/external-dns.png" width="30" alt="ExternalDns" /> **ExternalDns**
+
+```typescript
+import { ExternalDns } from "diagrams-js/k8s/ecosystem"
+```
+
+<img src="/resources/k8s/ecosystem/helm.png" width="30" alt="Helm" /> **Helm**
+
+```typescript
+import { Helm } from "diagrams-js/k8s/ecosystem"
+```
+
+<img src="/resources/k8s/ecosystem/krew.png" width="30" alt="Krew" /> **Krew**
+
+```typescript
+import { Krew } from "diagrams-js/k8s/ecosystem"
+```
+
+<img src="/resources/k8s/ecosystem/kustomize.png" width="30" alt="Kustomize" /> **Kustomize**
+
+```typescript
+import { Kustomize } from "diagrams-js/k8s/ecosystem"
+```
+
+### k8s/group
+
+<img src="/resources/k8s/group/ns.png" width="30" alt="NS" /> **NS**
+
+```typescript
+import { NS } from "diagrams-js/k8s/group"
+```
+
+### k8s/infra
+
+<img src="/resources/k8s/infra/etcd.png" width="30" alt="ETCD" /> **ETCD**
+
+```typescript
+import { ETCD } from "diagrams-js/k8s/infra"
+```
+
+<img src="/resources/k8s/infra/master.png" width="30" alt="Master" /> **Master**
+
+```typescript
+import { Master } from "diagrams-js/k8s/infra"
+```
+
+<img src="/resources/k8s/infra/node.png" width="30" alt="Node" /> **Node**
+
+```typescript
+import { Node } from "diagrams-js/k8s/infra"
+```
+
+### k8s/network
+
+<img src="/resources/k8s/network/ep.png" width="30" alt="Ep" /> **Ep**
+
+```typescript
+import { Ep } from "diagrams-js/k8s/network"
+```
+
+<img src="/resources/k8s/network/ing.png" width="30" alt="Ing" /> **Ing**
+
+```typescript
+import { Ing } from "diagrams-js/k8s/network"
+```
+
+<img src="/resources/k8s/network/netpol.png" width="30" alt="Netpol" /> **Netpol**
+
+```typescript
+import { Netpol } from "diagrams-js/k8s/network"
+```
+
+<img src="/resources/k8s/network/svc.png" width="30" alt="SVC" /> **SVC**
+
+```typescript
+import { SVC } from "diagrams-js/k8s/network"
+```
+
+### k8s/others
+
+<img src="/resources/k8s/others/crd.png" width="30" alt="CRD" /> **CRD**
+
+```typescript
+import { CRD } from "diagrams-js/k8s/others"
+```
+
+<img src="/resources/k8s/others/psp.png" width="30" alt="PSP" /> **PSP**
+
+```typescript
+import { PSP } from "diagrams-js/k8s/others"
+```
+
+### k8s/podconfig
+
+<img src="/resources/k8s/podconfig/cm.png" width="30" alt="CM" /> **CM**
+
+```typescript
+import { CM } from "diagrams-js/k8s/podconfig"
+```
+
+<img src="/resources/k8s/podconfig/secret.png" width="30" alt="Secret" /> **Secret**
+
+```typescript
+import { Secret } from "diagrams-js/k8s/podconfig"
+```
+
+### k8s/rbac
+
+<img src="/resources/k8s/rbac/c-role.png" width="30" alt="CRole" /> **CRole**
+
+```typescript
+import { CRole } from "diagrams-js/k8s/rbac"
+```
+
+<img src="/resources/k8s/rbac/crb.png" width="30" alt="CRB" /> **CRB**
+
+```typescript
+import { CRB } from "diagrams-js/k8s/rbac"
+```
+
+<img src="/resources/k8s/rbac/group.png" width="30" alt="Group" /> **Group**
+
+```typescript
+import { Group } from "diagrams-js/k8s/rbac"
+```
+
+<img src="/resources/k8s/rbac/rb.png" width="30" alt="RB" /> **RB**
+
+```typescript
+import { RB } from "diagrams-js/k8s/rbac"
+```
+
+<img src="/resources/k8s/rbac/role.png" width="30" alt="Role" /> **Role**
+
+```typescript
+import { Role } from "diagrams-js/k8s/rbac"
+```
+
+<img src="/resources/k8s/rbac/sa.png" width="30" alt="SA" /> **SA**
+
+```typescript
+import { SA } from "diagrams-js/k8s/rbac"
+```
+
+<img src="/resources/k8s/rbac/user.png" width="30" alt="User" /> **User**
+
+```typescript
+import { User } from "diagrams-js/k8s/rbac"
+```
+
+### k8s/storage
+
+<img src="/resources/k8s/storage/pv.png" width="30" alt="PV" /> **PV**
+
+```typescript
+import { PV } from "diagrams-js/k8s/storage"
+```
+
+<img src="/resources/k8s/storage/pvc.png" width="30" alt="PVC" /> **PVC**
+
+```typescript
+import { PVC } from "diagrams-js/k8s/storage"
+```
+
+<img src="/resources/k8s/storage/sc.png" width="30" alt="SC" /> **SC**
+
+```typescript
+import { SC } from "diagrams-js/k8s/storage"
+```
+
+<img src="/resources/k8s/storage/vol.png" width="30" alt="Vol" /> **Vol**
+
+```typescript
+import { Vol } from "diagrams-js/k8s/storage"
+```
+
