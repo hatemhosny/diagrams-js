@@ -146,7 +146,7 @@ jobs:
           cp -r ./diagrams-py/resources/* ./resources/ 2>/dev/null || true
 
           # Install dependencies for generation
-          pnpm install
+          pnpm install --no-frozen-lockfile
 
           # Run generate script to create TypeScript providers
           npx tsx scripts/generate.ts
