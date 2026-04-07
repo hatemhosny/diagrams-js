@@ -7,7 +7,7 @@
     "copy-resources": "node ../scripts/copy-resources.mjs",
     "start": "npm run copy-resources && docusaurus start",
     "build": "npm run build:lib && npm run copy-resources && docusaurus build",
-    "build:lib": "cd .. && vp run build",
+    "build:lib": "cd .. && npx vp run build",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
     "clear": "docusaurus clear",
