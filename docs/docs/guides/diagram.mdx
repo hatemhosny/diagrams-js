@@ -136,7 +136,11 @@ const dot = await diagram.render({ format: "dot" });
 
 ### save(filepath?)
 
-Save the diagram to a file:
+Save the diagram to a file. The behavior differs based on the environment:
+
+**Node.js**: Writes the file to disk using the filesystem.
+
+**Browsers**: Triggers a file download to the user's device.
 
 ```typescript
 // Auto-detect format from extension
@@ -145,6 +149,17 @@ await diagram.save("diagram.png");
 
 // Or use the default filename
 await diagram.save();
+```
+
+You can also specify render options:
+
+```typescript
+// Save as PNG with specific dimensions
+await diagram.save("diagram.png", {
+  format: "png",
+  width: 1200,
+  height: 800,
+});
 ```
 
 ### destroy()
