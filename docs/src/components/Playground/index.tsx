@@ -6,8 +6,8 @@ import styles from "./styles.module.css";
 import { examples } from "./examples";
 
 const imports = {
-  "diagrams-js": "http://localhost:3300/dist/index.js",
-  "diagrams-js/": "http://localhost:3300/dist/providers/",
+  // "diagrams-js": "http://localhost:3300/dist/index.js",
+  // "diagrams-js/": "http://localhost:3300/dist/providers/",
 };
 
 // Default config for LiveCodes

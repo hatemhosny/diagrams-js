@@ -20,4 +20,5 @@ yarn-debug.log*
 yarn-error.log*
 
 # Auto-copied resources
+/static/lib
 /static/resources

@@ -207,7 +207,7 @@ function CTASection() {
             <Link className="button button--primary button--lg" to="/docs/guides/diagram">
               API Reference
             </Link>
-            <Link className="button button--primary button--lg" to="/docs/nodes">
+            <Link className="button button--primary button--lg" to="/docs/guides/providers">
               Browse Nodes
             </Link>
           </div>

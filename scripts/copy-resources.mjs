@@ -5,7 +5,7 @@
  */
 
 import { copyFileSync, mkdirSync, readdirSync, statSync } from "fs";
-import { join, relative } from "path";
+import { join } from "path";
 import { fileURLToPath } from "url";
 
 const __dirname = fileURLToPath(new URL(".", import.meta.url));
@@ -30,3 +30,10 @@ function copyRecursive(src, dest) {
 console.log("Copying resources to docs/static/resources...");
 copyRecursive(sourceDir, targetDir);
 console.log("Resources copied successfully!");
+
+const libSrcDir = join(__dirname, "..", "dist");
+const libTargetDir = join(__dirname, "..", "docs", "static", "lib");
+
+console.log("Copying library to docs/static/lib...");
+copyRecursive(libSrcDir, libTargetDir);
+console.log("Library copied successfully!");

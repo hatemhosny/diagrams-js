@@ -1,0 +1,53 @@
+
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#1a1a2e"/>
+
+  <!-- Subtle gradient overlay -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#16213e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0f3460;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bgGradient)"/>
+
+  <!-- Logo scaled up and centered -->
+  <g transform="translate(500, 50) scale(2.5)">
+    <!-- Connecting Lines (The "Circuitry") -->
+    <path d="M45 65V115H130V145H150" stroke="#4A5568" stroke-width="4" stroke-linejoin="round"/>
+    <path d="M130 55H110V95H170V145" stroke="#4A5568" stroke-width="4" stroke-linejoin="round"/>
+    <path d="M45 165H65V145H85V185H130" stroke="#4A5568" stroke-width="4" stroke-linejoin="round"/>
+
+    <!-- Top Left Square (JS Yellow) -->
+    <rect x="10" y="10" width="60" height="60" rx="2" fill="#E8D44D" stroke="#4A5568" stroke-width="3"/>
+
+    <!-- Top Right Square (TS Blue) -->
+    <rect x="130" y="10" width="60" height="60" rx="2" fill="#3178C6" stroke="#4A5568" stroke-width="3"/>
+
+    <!-- Bottom Left Square (TS Blue) -->
+    <rect x="10" y="130" width="60" height="60" rx="2" fill="#3178C6" stroke="#4A5568" stroke-width="3"/>
+
+    <!-- Bottom Right Square (JS Yellow) -->
+    <rect x="130" y="130" width="60" height="60" rx="2" fill="#E8D44D" stroke="#4A5568" stroke-width="3"/>
+  </g>
+
+  <!-- Title -->
+  <text x="600" y="480" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="72" font-weight="bold" fill="#ffffff" text-anchor="middle" filter="url(#glow)">diagrams-js</text>
+
+  <!-- Tagline -->
+  <text x="600" y="580" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="32" fill="#ffffff" text-anchor="middle" style="text-shadow: 2px 2px 5px rgba(0,0,0,0.5);">Draw cloud system architecture diagrams as code</text>
+
+  <!-- Decorative corner elements -->
+  <circle cx="100" cy="100" r="4" fill="#E8D44D" opacity="0.6"/>
+  <circle cx="1100" cy="100" r="4" fill="#3178C6" opacity="0.6"/>
+  <circle cx="100" cy="530" r="4" fill="#3178C6" opacity="0.6"/>
+  <circle cx="1100" cy="530" r="4" fill="#E8D44D" opacity="0.6"/>
+</svg>
