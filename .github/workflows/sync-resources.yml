@@ -152,15 +152,15 @@ jobs:
           npx tsx scripts/generate.ts
 
           # Build providers
-          pnpm run build:providers
+          npx vp run build:providers
 
       - name: Run tests
         if: steps.compare.outputs.has_changes == 'true'
-        run: pnpm run test
+        run: npx vp run test
 
       - name: Run checks
         if: steps.compare.outputs.has_changes == 'true'
-        run: pnpm run check
+        run: npx vp run check
 
       - name: Create Pull Request
         if: steps.compare.outputs.has_changes == 'true'

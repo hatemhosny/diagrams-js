@@ -44,13 +44,13 @@ jobs:
         run: pnpm install --no-frozen-lockfile
 
       - name: Run tests
-        run: pnpm run test
+        run: npx vp run test
 
       - name: Run checks
-        run: pnpm run check
+        run: npx vp run check
 
       - name: Build package
-        run: pnpm run build
+        run: npx vp run build
 
       - name: Update version (if specified)
         if: github.event.inputs.version != ''
