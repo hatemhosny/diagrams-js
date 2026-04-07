@@ -1046,7 +1046,7 @@
     "test": "vp test",
     "check": "vp check",
     "fix": "vp check --fix",
-    "postinstall": "cd docs && pnpm install",
+    "postinstall": "cd docs && pnpm install --no-frozen-lockfile",
     "prepublishOnly": "vp run build",
     "prepare": "vp config",
     "generate": "npx tsx scripts/generate.ts",
