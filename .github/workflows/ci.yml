@@ -1,21 +1,14 @@
 name: CI
 
-on:
-  push:
-    branches:
-      - main
-      - master
-  pull_request:
-    branches:
-      - main
-      - master
+on: [push, pull_request]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   test:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ./diagrams-js
 
     steps:
       - name: Checkout repository
@@ -31,16 +24,16 @@ jobs:
         with:
           node-version: "20"
           cache: "pnpm"
-          cache-dependency-path: ./diagrams-js/pnpm-lock.yaml
+          cache-dependency-path: ./pnpm-lock.yaml
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
       - name: Run tests
-        run: pnpm test
+        run: pnpm run test
 
       - name: Run checks (lint, format, types)
-        run: pnpm check
+        run: pnpm run check
 
       - name: Build package
         run: pnpm run build

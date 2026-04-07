@@ -1,10 +1,16 @@
 name: Sync Resources from Python Repo
 
+run-name: Sync Resources
+
 on:
   schedule:
     # Run daily at 2:00 AM UTC
     - cron: "0 2 * * *"
   workflow_dispatch:
+
+concurrency:
+  group: sync-resources
+  cancel-in-progress: true
 
 jobs:
   check-and-sync:
@@ -17,7 +23,6 @@ jobs:
       - name: Checkout diagrams-js repository
         uses: actions/checkout@v4
         with:
-          path: diagrams-js
           fetch-depth: 0
 
       - name: Checkout diagrams-py repository
@@ -30,8 +35,6 @@ jobs:
       - name: Compare resources
         id: compare
         run: |
-          cd diagrams-js/diagrams-js
-
           # Create a temporary script to compare resources
           cat > /tmp/compare_resources.py << 'PYTHON_SCRIPT'
           import os
@@ -51,25 +54,25 @@ jobs:
               return files
 
           def main():
-              js_resources = Path('../diagrams-js/resources')
-              py_resources = Path('../diagrams-py/resources')
-              
+              js_resources = Path('./resources')
+              py_resources = Path('./diagrams-py/resources')
+
               if not py_resources.exists():
                   print("Python resources directory not found")
                   sys.exit(0)
-              
+
               js_files = get_resource_files(js_resources)
               py_files = get_resource_files(py_resources)
-              
+
               new_files = []
               updated_files = []
-              
+
               for rel_path, size in py_files.items():
                   if rel_path not in js_files:
                       new_files.append(str(rel_path))
                   elif js_files[rel_path] != size:
                       updated_files.append(str(rel_path))
-              
+
               result = {
                   'has_changes': len(new_files) > 0 or len(updated_files) > 0,
                   'new_files': new_files,
@@ -77,13 +80,13 @@ jobs:
                   'new_count': len(new_files),
                   'updated_count': len(updated_files)
               }
-              
+
               print(json.dumps(result, indent=2))
-              
+
               # Save to file for later steps
               with open('/tmp/sync_result.json', 'w') as f:
                   json.dump(result, f, indent=2)
-              
+
               return result['has_changes']
 
           if __name__ == '__main__':
@@ -98,21 +101,21 @@ jobs:
           if [ -f /tmp/sync_result.json ]; then
             HAS_CHANGES=$(python3 -c "import json; print(json.load(open('/tmp/sync_result.json'))['has_changes'])")
             echo "has_changes=$HAS_CHANGES" >> $GITHUB_OUTPUT
-            
+
             # Store the counts and file lists
             NEW_COUNT=$(python3 -c "import json; print(json.load(open('/tmp/sync_result.json'))['new_count'])")
             UPDATED_COUNT=$(python3 -c "import json; print(json.load(open('/tmp/sync_result.json'))['updated_count'])")
             echo "new_count=$NEW_COUNT" >> $GITHUB_OUTPUT
             echo "updated_count=$UPDATED_COUNT" >> $GITHUB_OUTPUT
-            
+
             # Store file lists as multiline strings
             NEW_FILES=$(python3 -c "import json; data=json.load(open('/tmp/sync_result.json')); print('\\n'.join(data['new_files']))")
             UPDATED_FILES=$(python3 -c "import json; data=json.load(open('/tmp/sync_result.json')); print('\\n'.join(data['updated_files']))")
-            
+
             echo "new_files<<EOF" >> $GITHUB_OUTPUT
             echo "$NEW_FILES" >> $GITHUB_OUTPUT
             echo "EOF" >> $GITHUB_OUTPUT
-            
+
             echo "updated_files<<EOF" >> $GITHUB_OUTPUT
             echo "$UPDATED_FILES" >> $GITHUB_OUTPUT
             echo "EOF" >> $GITHUB_OUTPUT
@@ -121,7 +124,6 @@ jobs:
             echo "new_count=0" >> $GITHUB_OUTPUT
             echo "updated_count=0" >> $GITHUB_OUTPUT
           fi
-        working-directory: .
 
       - name: Install pnpm
         if: steps.compare.outputs.has_changes == 'true'
@@ -135,15 +137,13 @@ jobs:
         with:
           node-version: "20"
           cache: "pnpm"
-          cache-dependency-path: ./diagrams-js/diagrams-js/pnpm-lock.yaml
+          cache-dependency-path: ./pnpm-lock.yaml
 
       - name: Sync resources
         if: steps.compare.outputs.has_changes == 'true'
         run: |
-          cd diagrams-js/diagrams-js
-
           # Copy new/updated resources from Python repo
-          cp -r ../../diagrams-py/resources/* resources/ 2>/dev/null || true
+          cp -r ./diagrams-py/resources/* ./resources/ 2>/dev/null || true
 
           # Install dependencies for generation
           pnpm install --frozen-lockfile
@@ -156,15 +156,11 @@ jobs:
 
       - name: Run tests
         if: steps.compare.outputs.has_changes == 'true'
-        run: |
-          cd diagrams-js/diagrams-js
-          pnpm test
+        run: pnpm run test
 
       - name: Run checks
         if: steps.compare.outputs.has_changes == 'true'
-        run: |
-          cd diagrams-js/diagrams-js
-          pnpm check
+        run: pnpm run check
 
       - name: Create Pull Request
         if: steps.compare.outputs.has_changes == 'true'
@@ -207,7 +203,6 @@ jobs:
             ---
             **Note**: This PR was automatically generated by the resource sync workflow.
           branch: sync/resources-from-python
-          path: diagrams-js
           delete-branch: true
           labels: |
             automated

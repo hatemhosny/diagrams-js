@@ -1,23 +1,23 @@
 name: Changelog & Release
 
+run-name: Release ${{ inputs.version }}
+
 on:
-  push:
-    branches:
-      - main
-      - master
-    paths:
-      - "diagrams-js/package.json"
   workflow_dispatch:
     inputs:
       version:
-        description: "Version bump type (patch, minor, major)"
+        description: "Version bump type (major, minor, patch)"
         required: true
         default: "patch"
         type: choice
         options:
-          - patch
-          - minor
           - major
+          - minor
+          - patch
+
+concurrency:
+  group: release
+  cancel-in-progress: false
 
 jobs:
   release:
@@ -25,9 +25,6 @@ jobs:
     permissions:
       contents: write
       pull-requests: write
-    defaults:
-      run:
-        working-directory: ./diagrams-js
 
     steps:
       - name: Checkout repository
@@ -46,7 +43,7 @@ jobs:
         with:
           node-version: "20"
           cache: "pnpm"
-          cache-dependency-path: ./diagrams-js/pnpm-lock.yaml
+          cache-dependency-path: ./pnpm-lock.yaml
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
@@ -101,25 +98,25 @@ jobs:
           echo "" >> CHANGELOG_NEW.md
 
           # Prepend to existing CHANGELOG.md or create new one
-          if [ -f ../CHANGELOG.md ]; then
-            cat CHANGELOG_NEW.md ../CHANGELOG.md > CHANGELOG_TEMP.md
-            mv CHANGELOG_TEMP.md ../CHANGELOG.md
+          if [ -f ./CHANGELOG.md ]; then
+            cat CHANGELOG_NEW.md ./CHANGELOG.md > CHANGELOG_TEMP.md
+            mv CHANGELOG_TEMP.md ./CHANGELOG.md
           else
-            cat CHANGELOG_NEW.md > ../CHANGELOG.md
+            cat CHANGELOG_NEW.md > ./CHANGELOG.md
           fi
 
           rm CHANGELOG_NEW.md
 
           # Set output for release notes
           echo "notes<<EOF" >> $GITHUB_OUTPUT
-          cat ../CHANGELOG.md | head -50 >> $GITHUB_OUTPUT
+          cat ./CHANGELOG.md | head -50 >> $GITHUB_OUTPUT
           echo "EOF" >> $GITHUB_OUTPUT
 
       - name: Commit version bump and changelog
         if: github.event.inputs.version != ''
         run: |
           git add package.json
-          git add ../CHANGELOG.md
+          git add ./CHANGELOG.md
           git commit -m "chore(release): bump version to ${{ env.NEW_VERSION }}"
           git tag -a "v${{ env.NEW_VERSION }}" -m "Release v${{ env.NEW_VERSION }}"
           git push origin HEAD --follow-tags
