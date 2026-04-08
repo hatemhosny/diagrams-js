@@ -1,4 +1,4 @@
-// Core classes
+// Core functions
 export { Diagram } from "./Diagram.js";
 export { Node } from "./Node.js";
 export { Edge } from "./Edge.js";
