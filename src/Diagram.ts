@@ -13,6 +13,14 @@ import {
 } from "./types.js";
 import { injectIcons, type NodeIconMap, type IconData } from "./icons.js";
 
+// Render function overload types for proper type inference
+type RenderFunction = {
+  (options?: { format?: "svg" | "dot" } & Omit<RenderOptions, "format">): Promise<string>;
+  (options: { format: "png" | "jpg" } & Omit<RenderOptions, "format">): Promise<Uint8Array>;
+  (options: { dataUrl: true } & RenderOptions): Promise<string>;
+  (options?: RenderOptions): Promise<Uint8Array | string>;
+};
+
 const directions = ["TB", "BT", "LR", "RL"] as const;
 const curveStyles = ["ortho", "curved", "spline", "polyline"] as const;
 
@@ -72,7 +80,7 @@ export interface Diagram {
   connect(from: Node, to: Node, edge: Edge): void;
   subgraph(cluster: Cluster): void;
   cluster(label: string): Cluster;
-  render(options?: RenderOptions): Promise<Uint8Array | string>;
+  render: RenderFunction;
   renderWithIcons(iconData?: IconData, nodeMap?: NodeIconMap[]): Promise<string>;
   save(filepath?: string, options?: RenderOptions): Promise<void>;
   toString(): string;
@@ -275,7 +283,7 @@ export function Diagram(name = "", options: DiagramOptions = {}): Diagram {
      * Render the diagram
      * @param options - Optional render options including format, filename, dimensions, and scale
      */
-    async render(options: RenderOptions = {}): Promise<Uint8Array | string> {
+    render: (async (options: RenderOptions = {}): Promise<Uint8Array | string> => {
       // Wait for any pending icon loads (e.g., Custom nodes with remote icons)
       await _waitForIconLoads();
 
@@ -859,7 +867,7 @@ export function Diagram(name = "", options: DiagramOptions = {}): Diagram {
 
         return `data:${mimeType};base64,${base64}`;
       }
-    },
+    }) as RenderFunction,
 
     /**
      * Render the diagram with icon injection
