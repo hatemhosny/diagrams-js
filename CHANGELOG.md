@@ -1,3 +1,17 @@
+## [0.0.6] - 2026-04-08
+
+### Features
+
+- No new features
+
+### Bug Fixes
+
+- No bug fixes
+
+### Other Changes
+
+- publish (ac9a22c)
+
 ## [0.0.5] - 2026-04-08
 
 ### Features
