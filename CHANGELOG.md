@@ -1,3 +1,20 @@
+## [0.0.3] - 2026-04-08
+
+### Features
+
+- No new features
+
+### Bug Fixes
+
+- fix release (b572457)
+- fix format (e7710ea)
+- fix release (425741d)
+- fix release workflow (a1fbe55)
+
+### Other Changes
+
+- No other changes
+
 ## [0.0.2] - 2026-04-08
 
 ### Features
