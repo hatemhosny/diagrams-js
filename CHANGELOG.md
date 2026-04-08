@@ -1,3 +1,18 @@
+## [0.0.4] - 2026-04-08
+
+### Features
+
+- No new features
+
+### Bug Fixes
+
+- fix publish (bd05118)
+- fix publish (0c3c1f2)
+
+### Other Changes
+
+- No other changes
+
 ## [0.0.3] - 2026-04-08
 
 ### Features
