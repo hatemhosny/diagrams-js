@@ -146,7 +146,7 @@ export default function Playground(): React.JSX.Element {
       </div>
 
       <div className={styles.livecodesWrapper}>
-        <LiveCodes config={currentConfig} sdkReady={setPlayground} height="80vh" />
+        <LiveCodes loading="eager" config={currentConfig} sdkReady={setPlayground} height="80vh" />
       </div>
     </div>
   );
