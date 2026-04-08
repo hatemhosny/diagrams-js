@@ -162,24 +162,22 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
 
       - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v7
-        with:
-          token: ${{ secrets.RELEASE_TOKEN }}
-          commit-message: "chore(release): bump version to ${{ env.NEW_VERSION }}"
-          title: "chore(release): bump version to ${{ env.NEW_VERSION }}"
-          body: |
-            ## Version Bump
+        run: |
+          gh pr create \
+            --base main \
+            --head ${{ env.RELEASE_BRANCH }} \
+            --title "chore(release): bump version to ${{ env.NEW_VERSION }}" \
+            --body "## Version Bump
 
-            This PR bumps the version to **${{ env.NEW_VERSION }}**.
+          This PR bumps the version to **${{ env.NEW_VERSION }}**.
 
-            ### Changes
-            - Updated package.json version
-            - Updated CHANGELOG.md
+          ### Changes
+          - Updated package.json version
+          - Updated CHANGELOG.md
 
-            ### Checklist
-            - [ ] Tests pass
-            - [ ] Documentation updated (if needed)
-            - [ ] CHANGELOG.md updated
-          branch: ${{ env.RELEASE_BRANCH }}
-          base: main
-          delete-branch: true
+          ### Checklist
+          - [ ] Tests pass
+          - [ ] Documentation updated (if needed)
+          - [ ] CHANGELOG.md updated"
+        env:
+          GH_TOKEN: ${{ secrets.RELEASE_TOKEN }}
