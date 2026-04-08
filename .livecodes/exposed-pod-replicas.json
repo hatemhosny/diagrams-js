@@ -1,0 +1,16 @@
+{
+  "title": "Exposed Pod with 3 Replicas",
+  "activeEditor": "script",
+  "markup": {
+    "language": "html",
+    "content": "<div id=\"diagram\"></div>"
+  },
+  "script": {
+    "language": "javascript",
+    "content": "import { Diagram } from 'diagrams-js';\nimport { HPA } from 'diagrams-js/k8s/clusterconfig.js';\nimport { Deployment, Pod, ReplicaSet } from 'diagrams-js/k8s/compute.js';\nimport { Ingress, Service } from 'diagrams-js/k8s/network.js';\n\nconst diagram = Diagram('Exposed Pod with 3 Replicas');\n\nconst ingress = diagram.add(Ingress('domain.com'));\nconst svc = diagram.add(Service('svc'));\nconst pods = [\n  diagram.add(Pod('pod1')),\n  diagram.add(Pod('pod2')),\n  diagram.add(Pod('pod3')),\n];\nconst rs = diagram.add(ReplicaSet('rs'));\nconst dp = diagram.add(Deployment('dp'));\nconst hpa = diagram.add(HPA('hpa'));\n\ningress.to(svc);\nsvc.to(pods);\npods.forEach(p => p.from(rs));\nrs.from(dp);\ndp.from(hpa);\n\nconst svg = await diagram.render();\ndocument.getElementById('diagram').innerHTML = svg;\n\ndiagram.destroy();\n"
+  },
+  "imports": {
+    "diagrams-js": "{{LC::TO_URL(./lib/index.js)}}",
+    "diagrams-js/": "{{LC::TO_URL(./lib/providers/)}}"
+  }
+}

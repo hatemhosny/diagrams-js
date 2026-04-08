@@ -1,0 +1,16 @@
+{
+  "title": "Blank Template",
+  "activeEditor": "script",
+  "markup": {
+    "language": "html",
+    "content": "<div id=\"diagram\"></div>"
+  },
+  "script": {
+    "language": "javascript",
+    "content": "import { Diagram } from 'diagrams-js';\nimport { EC2 } from 'diagrams-js/aws/compute.js';\n\nconst diagram = Diagram('My Diagram');\n\nconst server = diagram.add(EC2('Server'));\n\nconst svg = await diagram.render();\ndocument.getElementById('diagram').innerHTML = svg;\n\ndiagram.destroy();\n"
+  },
+  "imports": {
+    "diagrams-js": "{{LC::TO_URL(./lib/index.js)}}",
+    "diagrams-js/": "{{LC::TO_URL(./lib/providers/)}}"
+  }
+}

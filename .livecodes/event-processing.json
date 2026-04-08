@@ -1,0 +1,16 @@
+{
+  "title": "Event Processing on AWS",
+  "activeEditor": "script",
+  "markup": {
+    "language": "html",
+    "content": "<div id=\"diagram\"></div>"
+  },
+  "script": {
+    "language": "javascript",
+    "content": "import { Diagram } from 'diagrams-js';\nimport { ECS, EKS, Lambda } from 'diagrams-js/aws/compute.js';\nimport { Redshift } from 'diagrams-js/aws/database.js';\nimport { SQS } from 'diagrams-js/aws/integration.js';\nimport { S3 } from 'diagrams-js/aws/storage.js';\n\nconst diagram = Diagram('Event Processing');\n\nconst source = diagram.add(EKS('k8s source'));\nconst store = diagram.add(S3('events store'));\nconst dw = diagram.add(Redshift('analytics'));\n\nconst flowsCluster = diagram.cluster('Event Flows');\n\nconst workersCluster = flowsCluster.cluster('Event Workers');\nconst workerNodes = [\n  workersCluster.add(ECS('worker1')),\n  workersCluster.add(ECS('worker2')),\n  workersCluster.add(ECS('worker3')),\n];\nsource.to(workerNodes);\n\nconst queue = flowsCluster.add(SQS('event queue'));\nworkerNodes.forEach(w => w.to(queue));\n\nconst procCluster = flowsCluster.cluster('Processing');\nconst handlers = [\n  procCluster.add(Lambda('proc1')),\n  procCluster.add(Lambda('proc2')),\n  procCluster.add(Lambda('proc3')),\n];\nqueue.to(handlers);\nhandlers.forEach(h => {\n  h.to(store);\n  h.to(dw);\n});\n\nconst svg = await diagram.render();\ndocument.getElementById('diagram').innerHTML = svg;\n\ndiagram.destroy();\n"
+  },
+  "imports": {
+    "diagrams-js": "{{LC::TO_URL(./lib/index.js)}}",
+    "diagrams-js/": "{{LC::TO_URL(./lib/providers/)}}"
+  }
+}

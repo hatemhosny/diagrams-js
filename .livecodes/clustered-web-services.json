@@ -1,0 +1,16 @@
+{
+  "title": "Clustered Web Services",
+  "activeEditor": "script",
+  "markup": {
+    "language": "html",
+    "content": "<div id=\"diagram\"></div>"
+  },
+  "script": {
+    "language": "javascript",
+    "content": "import { Diagram } from 'diagrams-js';\nimport { ECS } from 'diagrams-js/aws/compute.js';\nimport { RDS, Elasticache } from 'diagrams-js/aws/database.js';\nimport { ELB, Route53 } from 'diagrams-js/aws/network.js';\n\nconst diagram = Diagram('Clustered Web Services');\n\nconst dns = diagram.add(Route53('dns'));\nconst lb = diagram.add(ELB('lb'));\n\nconst svcCluster = diagram.cluster('Services');\nconst svcGroup = [\n  svcCluster.add(ECS('web1')),\n  svcCluster.add(ECS('web2')),\n  svcCluster.add(ECS('web3')),\n];\nlb.to(svcGroup);\n\nconst dbCluster = diagram.cluster('DB Cluster');\nconst dbPrimary = dbCluster.add(RDS('userdb'));\nconst dbReplica = dbCluster.add(RDS('userdb ro'));\ndbPrimary.with(dbReplica);\nsvcGroup.forEach(s => s.to(dbPrimary));\n\nconst memcached = diagram.add(Elasticache('memcached'));\nsvcGroup.forEach(s => s.to(memcached));\n\ndns.to(lb);\n\nconst svg = await diagram.render();\ndocument.getElementById('diagram').innerHTML = svg;\n\ndiagram.destroy();\n"
+  },
+  "imports": {
+    "diagrams-js": "{{LC::TO_URL(./lib/index.js)}}",
+    "diagrams-js/": "{{LC::TO_URL(./lib/providers/)}}"
+  }
+}

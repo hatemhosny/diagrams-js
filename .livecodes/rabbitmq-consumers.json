@@ -1,0 +1,16 @@
+{
+  "title": "RabbitMQ Consumers with Custom Nodes",
+  "activeEditor": "script",
+  "markup": {
+    "language": "html",
+    "content": "<div id=\"diagram\"></div>"
+  },
+  "script": {
+    "language": "javascript",
+    "content": "import { Diagram, Custom } from 'diagrams-js';\nimport { Pod } from 'diagrams-js/k8s/compute.js';\nimport { Aurora } from 'diagrams-js/aws/database.js';\n\nconst diagram = Diagram('Broker Consumers');\n\nconst consumersCluster = diagram.cluster('Consumers');\nconst consumers = [\n  consumersCluster.add(Pod('worker')),\n  consumersCluster.add(Pod('worker')),\n  consumersCluster.add(Pod('worker')),\n];\n\nconst queue = diagram.add(\n  Custom('Message queue', 'https://jpadilla.github.io/rabbitmqapp/assets/img/icon.png', {\n    width: '1.0',\n  }),\n);\n\nconst database = diagram.add(Aurora('Database'));\n\nqueue.to(consumers);\nconsumers.forEach((consumer) => consumer.to(database));\n\nconst svg = await diagram.render();\ndocument.getElementById('diagram').innerHTML = svg;\n\ndiagram.destroy();\n"
+  },
+  "imports": {
+    "diagrams-js": "{{LC::TO_URL(./lib/index.js)}}",
+    "diagrams-js/": "{{LC::TO_URL(./lib/providers/)}}"
+  }
+}

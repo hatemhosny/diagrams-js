@@ -1,0 +1,16 @@
+{
+  "title": "Advanced Web Service (with colors and labels)",
+  "activeEditor": "script",
+  "markup": {
+    "language": "html",
+    "content": "<div id=\"diagram\"></div>"
+  },
+  "script": {
+    "language": "javascript",
+    "content": "import { Diagram, Edge } from 'diagrams-js';\nimport { Spark } from 'diagrams-js/onprem/analytics.js';\nimport { Server } from 'diagrams-js/onprem/compute.js';\nimport { PostgreSQL } from 'diagrams-js/onprem/database.js';\nimport { Redis } from 'diagrams-js/onprem/inmemory.js';\nimport { Fluentd } from 'diagrams-js/onprem/aggregator.js';\nimport { Grafana, Prometheus } from 'diagrams-js/onprem/monitoring.js';\nimport { Nginx } from 'diagrams-js/onprem/network.js';\nimport { Kafka } from 'diagrams-js/onprem/queue.js';\n\nconst diagram = Diagram('Advanced Web Service with On-Premises (colored)');\n\nconst ingress = diagram.add(Nginx('ingress'));\n\nconst metrics = diagram.add(Prometheus('metric'));\nconst grafana = diagram.add(Grafana('monitoring'));\ngrafana.to(Edge({ color: 'firebrick', style: 'dashed' }), metrics);\n\nconst serviceCluster = diagram.cluster('Service Cluster');\nconst grpcsvc = [\n  serviceCluster.add(Server('grpc1')),\n  serviceCluster.add(Server('grpc2')),\n  serviceCluster.add(Server('grpc3')),\n];\n\nconst sessionsCluster = diagram.cluster('Sessions HA');\nconst sessionPrimary = sessionsCluster.add(Redis('session'));\nconst sessionReplica = sessionsCluster.add(Redis('replica'));\nsessionPrimary.with(Edge({ color: 'brown', style: 'dashed' }), sessionReplica);\nsessionReplica.from(Edge({ label: 'collect' }), metrics);\ngrpcsvc.forEach((svc) => svc.to(Edge({ color: 'brown' }), sessionPrimary));\n\nconst dbCluster = diagram.cluster('Database HA');\nconst dbPrimary = dbCluster.add(PostgreSQL('users'));\nconst dbReplica = dbCluster.add(PostgreSQL('replica'));\ndbPrimary.with(Edge({ color: 'brown', style: 'dotted' }), dbReplica);\ndbReplica.from(Edge({ label: 'collect' }), metrics);\ngrpcsvc.forEach((svc) => svc.to(Edge({ color: 'black' }), dbPrimary));\n\nconst aggregator = diagram.add(Fluentd('logging'));\nconst kafka = diagram.add(Kafka('stream'));\nconst spark = diagram.add(Spark('analytics'));\naggregator.to(Edge({ label: 'parse' }), kafka);\nkafka.to(Edge({ color: 'black', style: 'bold' }), spark);\n\ngrpcsvc.forEach((svc) => {\n  ingress.to(Edge({ color: 'darkgreen', forward: true, reverse: true }), svc);\n});\ngrpcsvc.forEach((svc) => svc.to(Edge({ color: 'darkorange' }), aggregator));\n\nconst svg = await diagram.render();\ndocument.getElementById('diagram').innerHTML = svg;\n\ndiagram.destroy();\n"
+  },
+  "imports": {
+    "diagrams-js": "{{LC::TO_URL(./lib/index.js)}}",
+    "diagrams-js/": "{{LC::TO_URL(./lib/providers/)}}"
+  }
+}

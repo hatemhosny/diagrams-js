@@ -1,0 +1,16 @@
+{
+  "title": "Advanced Web Service with On-Premises",
+  "activeEditor": "script",
+  "markup": {
+    "language": "html",
+    "content": "<div id=\"diagram\"></div>"
+  },
+  "script": {
+    "language": "javascript",
+    "content": "import { Diagram } from 'diagrams-js';\nimport { Spark } from 'diagrams-js/onprem/analytics.js';\nimport { Server } from 'diagrams-js/onprem/compute.js';\nimport { PostgreSQL } from 'diagrams-js/onprem/database.js';\nimport { Redis } from 'diagrams-js/onprem/inmemory.js';\nimport { Fluentd } from 'diagrams-js/onprem/aggregator.js';\nimport { Grafana, Prometheus } from 'diagrams-js/onprem/monitoring.js';\nimport { Nginx } from 'diagrams-js/onprem/network.js';\nimport { Kafka } from 'diagrams-js/onprem/queue.js';\n\nconst diagram = Diagram('Advanced Web Service with On-Premises');\n\nconst ingress = diagram.add(Nginx('ingress'));\n\nconst metrics = diagram.add(Prometheus('metric'));\nconst grafana = diagram.add(Grafana('monitoring'));\nmetrics.from(grafana);\n\nconst serviceCluster = diagram.cluster('Service Cluster');\nconst grpcsvc = [\n  serviceCluster.add(Server('grpc1')),\n  serviceCluster.add(Server('grpc2')),\n  serviceCluster.add(Server('grpc3')),\n];\n\nconst sessionsCluster = diagram.cluster('Sessions HA');\nconst sessionPrimary = sessionsCluster.add(Redis('session'));\nconst sessionReplica = sessionsCluster.add(Redis('replica'));\nsessionPrimary.with(sessionReplica);\nsessionReplica.from(metrics);\ngrpcsvc.forEach((svc) => svc.to(sessionPrimary));\n\nconst dbCluster = diagram.cluster('Database HA');\nconst dbPrimary = dbCluster.add(PostgreSQL('users'));\nconst dbReplica = dbCluster.add(PostgreSQL('replica'));\ndbPrimary.with(dbReplica);\ndbReplica.from(metrics);\ngrpcsvc.forEach((svc) => svc.to(dbPrimary));\n\nconst aggregator = diagram.add(Fluentd('logging'));\nconst kafka = diagram.add(Kafka('stream'));\nconst spark = diagram.add(Spark('analytics'));\naggregator.to(kafka).to(spark);\n\ningress.to(grpcsvc);\ngrpcsvc.forEach((svc) => svc.to(aggregator));\n\nconst svg = await diagram.render();\ndocument.getElementById('diagram').innerHTML = svg;\n\ndiagram.destroy();\n"
+  },
+  "imports": {
+    "diagrams-js": "{{LC::TO_URL(./lib/index.js)}}",
+    "diagrams-js/": "{{LC::TO_URL(./lib/providers/)}}"
+  }
+}

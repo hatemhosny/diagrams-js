@@ -1,0 +1,16 @@
+{
+  "title": "Stateful Architecture on Kubernetes",
+  "activeEditor": "script",
+  "markup": {
+    "language": "html",
+    "content": "<div id=\"diagram\"></div>"
+  },
+  "script": {
+    "language": "javascript",
+    "content": "import { Diagram } from 'diagrams-js';\nimport { Pod, StatefulSet } from 'diagrams-js/k8s/compute.js';\nimport { Service } from 'diagrams-js/k8s/network.js';\nimport { PV, PVC, StorageClass } from 'diagrams-js/k8s/storage.js';\n\nconst diagram = Diagram('Stateful Architecture');\nconst appsCluster = diagram.cluster('Apps');\nconst svc = appsCluster.add(Service('svc'));\nconst sts = appsCluster.add(StatefulSet('sts'));\nconst pods = [];\nconst pvcs = [];\nfor (let i = 0; i < 3; i++) {\n  const pod = appsCluster.add(Pod('pod'));\n  const pvc = appsCluster.add(PVC('pvc'));\n\n  pod.with(sts).with(pvc);\n  svc.to(pod).to(pvc);\n\n  pods.push(pod);\n  pvcs.push(pvc);\n}\n\nconst pv = diagram.add(PV('pv'));\nconst sc = diagram.add(StorageClass('sc'));\n\npvcs.forEach(pvc => {\n  pvc.from(pv);\n});\npv.from(sc);\n\nconst svg = await diagram.render();\ndocument.getElementById('diagram').innerHTML = svg;\n\ndiagram.destroy();\n"
+  },
+  "imports": {
+    "diagrams-js": "{{LC::TO_URL(./lib/index.js)}}",
+    "diagrams-js/": "{{LC::TO_URL(./lib/providers/)}}"
+  }
+}

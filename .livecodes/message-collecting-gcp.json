@@ -1,0 +1,16 @@
+{
+  "title": "Message Collecting System on GCP",
+  "activeEditor": "script",
+  "markup": {
+    "language": "html",
+    "content": "<div id=\"diagram\"></div>"
+  },
+  "script": {
+    "language": "javascript",
+    "content": "import { Diagram } from 'diagrams-js';\nimport { BigQuery, Dataflow, PubSub } from 'diagrams-js/gcp/analytics.js';\nimport { AppEngine, Functions } from 'diagrams-js/gcp/compute.js';\nimport { Bigtable } from 'diagrams-js/gcp/database.js';\nimport { IotCore } from 'diagrams-js/gcp/iot.js';\nimport { Storage } from 'diagrams-js/gcp/storage.js';\n\nconst diagram = Diagram('Message Collecting');\n\nconst pubsub = diagram.add(PubSub('pubsub'));\n\nconst sourceCluster = diagram.cluster('Source of Data');\nconst sources = [\n  sourceCluster.add(IotCore('core1')),\n  sourceCluster.add(IotCore('core2')),\n  sourceCluster.add(IotCore('core3')),\n];\nsources.forEach(s => s.to(pubsub));\n\nconst targetsCluster = diagram.cluster('Targets');\nconst flowCluster = targetsCluster.cluster('Data Flow');\nconst dataflow = flowCluster.add(Dataflow('data flow'));\npubsub.to(dataflow);\n\nconst lakeCluster = targetsCluster.cluster('Data Lake');\nconst bq = lakeCluster.add(BigQuery('bq'));\nconst gcs = lakeCluster.add(Storage('storage'));\ndataflow.to([bq, gcs]);\n\nconst eventCluster = targetsCluster.cluster('Event Driven');\n\nconst procCluster = eventCluster.cluster('Processing');\nconst engine = procCluster.add(AppEngine('engine'));\nconst bigtable = procCluster.add(Bigtable('bigtable'));\ndataflow.to(engine).to(bigtable);\n\nconst serverlessCluster = eventCluster.cluster('Serverless');\nconst func = serverlessCluster.add(Functions('func'));\nconst appengine = serverlessCluster.add(AppEngine('appengine'));\ndataflow.to(func).to(appengine);\n\nconst svg = await diagram.render();\ndocument.getElementById('diagram').innerHTML = svg;\n\ndiagram.destroy();\n"
+  },
+  "imports": {
+    "diagrams-js": "{{LC::TO_URL(./lib/index.js)}}",
+    "diagrams-js/": "{{LC::TO_URL(./lib/providers/)}}"
+  }
+}
