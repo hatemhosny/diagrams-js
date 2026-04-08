@@ -130,13 +130,13 @@ jobs:
         run: |
           # Create and checkout release branch
           git checkout -b ${{ env.RELEASE_BRANCH }}
-          
+
           # Add and commit version bump and changelog
           vp check --fix
           git add package.json
           git add ./CHANGELOG.md
           git commit -m "chore(release): bump version to ${{ env.NEW_VERSION }}"
-          
+
           # Push release branch
           git push origin ${{ env.RELEASE_BRANCH }}
 
