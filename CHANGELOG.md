@@ -1,3 +1,26 @@
+## [0.0.9] - 2026-04-08
+
+### Features
+
+- No new features
+
+### Bug Fixes
+
+- fixes (61ef789)
+- fix (af5edc9)
+- fix: clean up the library public API (8d896f7)
+- fix: clean up exported types (7d1e60d)
+- fix: fix diagram.render type error (a53fa2e)
+
+### Other Changes
+
+- add more demos for preview in livecodes (9b18b9d)
+- edit livecodes demo (9c5c9ee)
+- netlify cors (30882bd)
+- demo (3c28438)
+- add preview in LiveCodes (e0b810c)
+- minor edit (12aa610)
+
 ## [0.0.8] - 2026-04-08
 
 ### Features
