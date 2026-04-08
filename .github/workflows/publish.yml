@@ -35,7 +35,6 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "24.4.1"
-          registry-url: "https://registry.npmjs.org"
           cache: "pnpm"
           cache-dependency-path: ./pnpm-lock.yaml
 
@@ -64,8 +63,8 @@ jobs:
 
       # Publish using OIDC token (configured as trusted publisher on npm)
       # See: https://docs.npmjs.com/trusted-publishers
-      - name: Publish to npm (OIDC)
-        run: pnpm publish --no-git-checks --access public --provenance
+      - name: Publish to npm
+        run: npm publish --access public
 
       - name: Upload build artifacts
         uses: actions/upload-artifact@v4
