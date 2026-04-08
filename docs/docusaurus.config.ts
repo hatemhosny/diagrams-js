@@ -155,7 +155,7 @@ const config: Config = {
       darkTheme: prismThemes.dracula,
       additionalLanguages: ["bash"],
     },
-    docsearch: {
+    algolia: {
       appId: "8SFHTLVOQQ",
       apiKey: "c91e004c50934f4eec81d3cdea16f907",
       indexName: "diagrams-js",
