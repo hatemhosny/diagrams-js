@@ -1,3 +1,19 @@
+## [0.0.8] - 2026-04-08
+
+### Features
+
+- No new features
+
+### Bug Fixes
+
+- fix search (ca1f3f6)
+
+### Other Changes
+
+- remove postinstall (25ccffe)
+- add algolia (fe93fba)
+- use esm.sh CDN in docs (d1d0f23)
+
 ## [0.0.7] - 2026-04-08
 
 ### Features
