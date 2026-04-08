@@ -1,0 +1,37 @@
+name: livecodes
+
+on: [pull_request]
+
+jobs:
+  build_and_prepare:
+    runs-on: ubuntu-latest
+    name: Generate Playgrounds
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10.33.0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: "24.4.1"
+          registry-url: "https://registry.npmjs.org"
+          cache: "pnpm"
+          cache-dependency-path: ./pnpm-lock.yaml
+
+      - name: Install Vite+
+        uses: voidzero-dev/setup-vp@v1
+        with:
+          node-version: "24.4.1"
+          cache: true
+
+      - name: Build and generate
+        uses: live-codes/preview-in-livecodes@v1
+        with:
+          install-command: "vp install"
+          build-command: "vp run build"
+          base-url: "https://deploy-preview-{{LC::PR}}--diagrams-js.netlify.app"

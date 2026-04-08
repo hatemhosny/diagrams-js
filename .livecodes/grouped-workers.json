@@ -1,0 +1,12 @@
+{
+  "title": "Grouped Workers on AWS",
+  "activeEditor": "script",
+  "markup": {
+    "language": "html",
+    "content": "<div id=\"diagram\"></div>"
+  },
+  "script": {
+    "language": "javascript",
+    "content": "import { Diagram } from 'diagrams-js';\nimport { EC2 } from 'diagrams-js/aws/compute';\nimport { RDS } from 'diagrams-js/aws/database';\nimport { ELB } from 'diagrams-js/aws/network';\n\nconst diagram = Diagram('Grouped Workers', {\n  direction: 'TB',\n});\n\nconst lb = diagram.add(ELB('lb'));\nconst workers = [\n  diagram.add(EC2('worker1')),\n  diagram.add(EC2('worker2')),\n  diagram.add(EC2('worker3')),\n  diagram.add(EC2('worker4')),\n  diagram.add(EC2('worker5')),\n];\nconst events = diagram.add(RDS('events'));\n\nlb.to(workers);\nworkers.forEach(w => w.to(events));\n\nconst svg = await diagram.render();\ndocument.getElementById('diagram').innerHTML = svg;\n\n//await diagram.save('grouped-workers.svg');\n\ndiagram.destroy();\n"
+  }
+}
