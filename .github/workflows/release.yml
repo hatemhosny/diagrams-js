@@ -1,4 +1,4 @@
-name: Changelog & Release
+name: Release
 
 run-name: Release ${{ inputs.version }}
 
