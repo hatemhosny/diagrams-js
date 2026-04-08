@@ -25,8 +25,7 @@
         box-sizing: border-box;
       }
       body {
-        font-family:
-          -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
         background: #f5f5f5;
         min-height: 100vh;
         padding: 40px 20px;
@@ -461,11 +460,7 @@ const svg = await diagram.render();</code></pre>
       </div>
       <script type="module">
         import { Diagram } from "diagrams-js";
-        import {
-          BigQuery,
-          Dataflow,
-          PubSub,
-        } from "diagrams-js/gcp/analytics.js";
+        import { BigQuery, Dataflow, PubSub } from "diagrams-js/gcp/analytics.js";
         import { AppEngine, Functions } from "diagrams-js/gcp/compute.js";
         import { BigTable } from "diagrams-js/gcp/database.js";
         import { IotCore } from "diagrams-js/gcp/iot.js";
@@ -558,22 +553,14 @@ const svg = await diagram.render();</code></pre>
       <script type="module">
         import { Diagram } from "diagrams-js";
         import { HPA } from "diagrams-js/k8s/clusterconfig.js";
-        import {
-          Deployment,
-          Pod,
-          ReplicaSet,
-        } from "diagrams-js/k8s/compute.js";
+        import { Deployment, Pod, ReplicaSet } from "diagrams-js/k8s/compute.js";
         import { Ingress, Service } from "diagrams-js/k8s/network.js";
 
         const diagram = Diagram("Exposed Pod with 3 Replicas");
 
         const ingress = diagram.add(Ingress("domain.com"));
         const svc = diagram.add(Service("svc"));
-        const pods = [
-          diagram.add(Pod("pod1")),
-          diagram.add(Pod("pod2")),
-          diagram.add(Pod("pod3")),
-        ];
+        const pods = [diagram.add(Pod("pod1")), diagram.add(Pod("pod2")), diagram.add(Pod("pod3"))];
         const rs = diagram.add(ReplicaSet("rs"));
         const dp = diagram.add(Deployment("dp"));
         const hpa = diagram.add(HPA("hpa"));
@@ -804,10 +791,7 @@ const svg = await diagram.render();</code></pre>
 
       <!-- Example 8: Advanced Web Service with On-Premises (with colors and labels) -->
       <div class="example">
-        <h2>
-          Example 8: Advanced Web Service with On-Premises (with colors and
-          labels)
-        </h2>
+        <h2>Example 8: Advanced Web Service with On-Premises (with colors and labels)</h2>
         <div class="example-content">
           <div class="code-section">
             <div class="code-header">Code</div>
@@ -882,9 +866,7 @@ const svg = await diagram.render();</code></pre>
         import { Nginx } from "diagrams-js/onprem/network.js";
         import { Kafka } from "diagrams-js/onprem/queue.js";
 
-        const diagram = Diagram(
-          "Advanced Web Service with On-Premises (colored)",
-        );
+        const diagram = Diagram("Advanced Web Service with On-Premises (colored)");
 
         const ingress = diagram.add(Nginx("ingress"));
 
@@ -902,14 +884,9 @@ const svg = await diagram.render();</code></pre>
         const sessionsCluster = diagram.cluster("Sessions HA");
         const sessionPrimary = sessionsCluster.add(Redis("session"));
         const sessionReplica = sessionsCluster.add(Redis("replica"));
-        sessionPrimary.with(
-          Edge({ color: "brown", style: "dashed" }),
-          sessionReplica,
-        );
+        sessionPrimary.with(Edge({ color: "brown", style: "dashed" }), sessionReplica);
         sessionReplica.from(Edge({ label: "collect" }), metrics);
-        grpcsvc.forEach((svc) =>
-          svc.to(Edge({ color: "brown" }), sessionPrimary),
-        );
+        grpcsvc.forEach((svc) => svc.to(Edge({ color: "brown" }), sessionPrimary));
 
         const dbCluster = diagram.cluster("Database HA");
         const dbPrimary = dbCluster.add(PostgreSQL("users"));
@@ -925,13 +902,9 @@ const svg = await diagram.render();</code></pre>
         kafka.to(Edge({ color: "black", style: "bold" }), spark);
 
         grpcsvc.forEach((svc) => {
-          ingress
-            .to(Edge({ color: "darkgreen", forward: true, reverse: true }))
-            .to(svc);
+          ingress.to(Edge({ color: "darkgreen", forward: true, reverse: true })).to(svc);
         });
-        grpcsvc.forEach((svc) =>
-          svc.to(Edge({ color: "darkorange" }), aggregator),
-        );
+        grpcsvc.forEach((svc) => svc.to(Edge({ color: "darkorange" }), aggregator));
 
         try {
           const svg = await diagram.render();
@@ -1000,13 +973,9 @@ const svg = await diagram.render();</code></pre>
         ];
 
         const queue = diagram.add(
-          Custom(
-            "Message queue",
-            "https://jpadilla.github.io/rabbitmqapp/assets/img/icon.png",
-            {
-              width: "1.0",
-            },
-          ),
+          Custom("Message queue", "https://jpadilla.github.io/rabbitmqapp/assets/img/icon.png", {
+            width: "1.0",
+          }),
         );
         const database = diagram.add(Aurora("Database"));
 

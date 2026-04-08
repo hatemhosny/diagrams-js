@@ -1,4 +1,4 @@
 [[headers]]
-  for = "/*"
-  [headers.values]
-    access-control-allow-origin = "*"
+for = "/*"
+[headers.values]
+access-control-allow-origin = "*"
