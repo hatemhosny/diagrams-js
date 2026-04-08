@@ -63,17 +63,11 @@ jobs:
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
 
       - name: Bump version
-        if: github.event.inputs.version != ''
         run: |
           npm version ${{ github.event.inputs.version }} --no-git-tag-version
           NEW_VERSION=$(node -p "require('./package.json').version")
           echo "NEW_VERSION=$NEW_VERSION" >> $GITHUB_ENV
-
-      - name: Get version from package.json
-        if: github.event.inputs.version == ''
-        run: |
-          NEW_VERSION=$(node -p "require('./package.json').version")
-          echo "NEW_VERSION=$NEW_VERSION" >> $GITHUB_ENV
+          echo "RELEASE_BRANCH=release/v$NEW_VERSION" >> $GITHUB_ENV
 
       - name: Generate Changelog
         id: changelog
@@ -131,19 +125,26 @@ jobs:
           cd ..
           tar -czf diagrams-js-v${{ env.NEW_VERSION }}.tar.gz -C dist .
 
-      - name: Commit version bump and changelog
-        if: github.event.inputs.version != ''
+      - name: Create release branch and commit
         run: |
+          # Create and checkout release branch
+          git checkout -b ${{ env.RELEASE_BRANCH }}
+
+          # Add and commit version bump and changelog
           vp check --fix
           git add package.json
           git add ./CHANGELOG.md
           git commit -m "chore(release): bump version to ${{ env.NEW_VERSION }}"
+
+          # Push release branch
+          git push origin ${{ env.RELEASE_BRANCH }}
+
+          # Create and push tag
           git tag -a "v${{ env.NEW_VERSION }}" -m "Release v${{ env.NEW_VERSION }}"
-          git push origin HEAD --follow-tags
+          git push origin "v${{ env.NEW_VERSION }}"
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
-        if: github.event.inputs.version != ''
         with:
           tag_name: v${{ env.NEW_VERSION }}
           name: Release v${{ env.NEW_VERSION }}
@@ -155,8 +156,7 @@ jobs:
             diagrams-js-v${{ env.NEW_VERSION }}.zip
             diagrams-js-v${{ env.NEW_VERSION }}.tar.gz
 
-      - name: Create Pull Request for version bump
-        if: github.event.inputs.version != ''
+      - name: Create Pull Request
         uses: peter-evans/create-pull-request@v7
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -175,6 +175,6 @@ jobs:
             - [ ] Tests pass
             - [ ] Documentation updated (if needed)
             - [ ] CHANGELOG.md updated
-          branch: release/v${{ env.NEW_VERSION }}
+          branch: ${{ env.RELEASE_BRANCH }}
           base: main
           delete-branch: true
