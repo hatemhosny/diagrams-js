@@ -143,7 +143,6 @@ jobs:
         uses: voidzero-dev/setup-vp@v1
         with:
           node-version: "24.4.1"
-          cache: true
 
       - name: Sync resources
         if: steps.compare.outputs.has_changes == 'true'

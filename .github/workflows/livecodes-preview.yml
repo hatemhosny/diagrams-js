@@ -27,7 +27,6 @@ jobs:
         uses: voidzero-dev/setup-vp@v1
         with:
           node-version: "24.4.1"
-          cache: true
 
       - name: Build and generate
         uses: live-codes/preview-in-livecodes@v1

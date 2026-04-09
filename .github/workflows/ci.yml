@@ -30,7 +30,6 @@ jobs:
         uses: voidzero-dev/setup-vp@v1
         with:
           node-version: "24.4.1"
-          cache: true
 
       - name: Install dependencies
         run: vp install
@@ -70,7 +69,6 @@ jobs:
         uses: voidzero-dev/setup-vp@v1
         with:
           node-version: "24.4.1"
-          cache: true
 
       - name: Install dependencies
         run: vp install
