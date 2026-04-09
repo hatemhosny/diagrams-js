@@ -12,6 +12,7 @@ Install [`diagrams-js`](https://www.npmjs.com/package/diagrams-js) using your pr
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 import CodeBlock from "@theme/CodeBlock";
+import Admonition from "@theme/Admonition";
 
 <Tabs groupId="install">
   <TabItem value="npm" label="npm" default>
@@ -25,6 +26,10 @@ import CodeBlock from "@theme/CodeBlock";
   </TabItem>
   <TabItem value="bun" label="bun" default>
     <CodeBlock language="bash">{`bun add diagrams-js`}</CodeBlock>
+    <Admonition type="info" title="Bun Version">
+      Bun 1.3.0+ is required for diagrams-js to work properly due to WebAssembly
+      support improvements.
+    </Admonition>
   </TabItem>
 </Tabs>
 
