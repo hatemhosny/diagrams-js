@@ -52,9 +52,9 @@ export default function Playground(): React.JSX.Element {
   // Load config from URL hash on mount
   useEffect(() => {
     const hash = window.location.hash;
-    if (hash && hash.startsWith("#config/")) {
+    if (hash) {
       try {
-        const compressed = hash.substring(8); // Remove '#config/'
+        const compressed = hash.substring(1); // Remove '#'
         const decompressed = decompressFromEncodedURIComponent(compressed);
         if (decompressed) {
           const parsed = JSON.parse(decompressed);
@@ -106,7 +106,7 @@ export default function Playground(): React.JSX.Element {
       const config = await playground.getConfig();
       const json = JSON.stringify(config);
       const compressed = compressToEncodedURIComponent(json);
-      const url = `${window.location.origin}${window.location.pathname}#config/${compressed}`;
+      const url = `${window.location.origin}${window.location.pathname}#${compressed}`;
 
       await navigator.clipboard.writeText(url);
       setShareCopied(true);
