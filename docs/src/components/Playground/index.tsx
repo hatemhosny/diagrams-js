@@ -21,6 +21,10 @@ const defaultConfig = {
     language: "html",
     content: '<div id="diagram"></div>',
   },
+  style: {
+    language: "css",
+    content: "#diagram { text-align: center; }",
+  },
   script: {
     language: "javascript",
     content: examples[0].config.script.content,

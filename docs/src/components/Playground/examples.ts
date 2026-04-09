@@ -403,6 +403,7 @@ const server = diagram.add(EC2("Server"));
 ].map((ex) => {
   ex.config.script.content += `
 const svg = await diagram.render();
+
 document.getElementById("diagram").innerHTML = svg;
 
 //await diagram.save("${ex.config.title.toLowerCase().replaceAll(" ", "-")}.svg");
