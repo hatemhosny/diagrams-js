@@ -17,7 +17,7 @@ import { Node } from "./Node.js";
  * const node = diagram.add(Custom("Custom", "https://example.com/icon.png"));
  * ```
  */
-export interface CustomNode {
+export interface Custom extends Node {
   ["~iconUrl"]: string;
   getIconUrl(): string;
   loadIcon(): Promise<string | null>;
@@ -36,7 +36,7 @@ export function Custom(
     labelloc?: string;
     imagescale?: string;
   },
-): ReturnType<typeof Node> & CustomNode {
+): Custom {
   // Create base node with icon data URL if it's already a data URL
   const isDataUrl = iconUrl.startsWith("data:");
   const baseNode = Node(label, {
