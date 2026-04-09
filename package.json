@@ -1058,6 +1058,7 @@
     "changelog": "conventional-changelog -p angular -i ../CHANGELOG.md -s"
   },
   "devDependencies": {
+    "@tanstack/intent": "^0.0.29",
     "@types/node": "^25.5.0",
     "@types/sharp": "^0.32.0",
     "@typescript/native-preview": "7.0.0-dev.20260328.1",
