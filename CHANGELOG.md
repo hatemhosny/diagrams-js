@@ -1,3 +1,28 @@
+## [0.0.11] - 2026-04-09
+
+### Features
+
+- No new features
+
+### Bug Fixes
+
+- fix link in docs (31a78be)
+- fix format (6e7e94f)
+- fix jsdocs (c8e6f55)
+
+### Other Changes
+
+- edit docs (3a0227d)
+- docs: clean up playground share URL (c64dc6a)
+- update playground examples (c1c28f7)
+- update docs (fa658e9)
+- docs: update ai guide (2967c18)
+- edit docs (a90c200)
+- auto-detect format from extension in diagram.save (311f661)
+- edit docs (4cdc021)
+- edit readme (ae49aa6)
+- edit readme (77190e0)
+
 ## [0.0.10] - 2026-04-09
 
 ### Features
