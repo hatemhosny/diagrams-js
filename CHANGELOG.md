@@ -1,3 +1,15 @@
+## [0.1.0] - 2026-04-09
+
+### Features
+
+- No new features
+
+### Bug Fixes
+
+- No bug fixes
+
+### Other Changes
+
 ## [0.0.11] - 2026-04-09
 
 ### Features
