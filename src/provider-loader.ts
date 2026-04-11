@@ -53,8 +53,12 @@ async function tryImportProvider(
   }
 
   // Strategy 3: bare module imports for Node.js/Bun or browsers/Deno with importmaps
+  let libPrefix: string;
+  let libSuffix: string;
+  libPrefix = "diagrams";
+  libSuffix = "js";
   try {
-    const modulePath = `diagrams-js/${provider}/${service}`;
+    const modulePath = `${libPrefix}-${libSuffix}/${provider}/${service}`;
     return await import(/* @vite-ignore */ modulePath);
   } catch {
     // bare module not supported
@@ -62,7 +66,7 @@ async function tryImportProvider(
 
   // Strategy 4: CDN
   try {
-    const modulePath = `https://esm.sh/diagrams-js/${provider}/${service}`;
+    const modulePath = `https://esm.sh/${libPrefix}-${libSuffix}/${provider}/${service}`;
     return await import(/* @vite-ignore */ modulePath);
   } catch {
     // Module not found - fall back to plain nodes
