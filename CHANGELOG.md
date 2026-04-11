@@ -1,3 +1,17 @@
+## [0.2.1] - 2026-04-11
+
+### Features
+
+- No new features
+
+### Bug Fixes
+
+- No bug fixes
+
+### Other Changes
+
+- improve build and provider exports (2ae0ca0)
+
 ## [0.2.0] - 2026-04-11
 
 ### Features
