@@ -1,3 +1,17 @@
+## [0.2.3] - 2026-04-11
+
+### Features
+
+- No new features
+
+### Bug Fixes
+
+- fix (e832dd1)
+
+### Other Changes
+
+- No other changes
+
 ## [0.2.2] - 2026-04-11
 
 ### Features
