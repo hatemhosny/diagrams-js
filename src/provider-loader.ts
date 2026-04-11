@@ -22,6 +22,9 @@ export type NodeFactory = (label?: string, options?: Record<string, unknown>) =>
  *    (works in Node.js, Bun with package.json exports)
  * 2. Direct relative path: `./providers/aws/compute.js`
  *    (fallback for Deno, browsers, or when package exports not available)
+ * 3. Bare module imports: `diagrams-js/aws/compute`
+ *    (Node.js/Bun or browsers/Deno with importmaps)
+ * 4. CDN: `https://esm.sh/diagrams-js/aws/compute`
  *
  * @param provider - Provider name (e.g., 'aws')
  * @param service - Service name (e.g., 'compute')
@@ -37,13 +40,29 @@ async function tryImportProvider(
     const modulePath = `./${provider}/${service}`;
     return await import(/* @vite-ignore */ modulePath);
   } catch {
-    // Package exports not available, try direct path
+    // Package exports not available
   }
 
   // Strategy 2: Direct relative path with .js extension
   // For Deno, browsers, or environments without package exports support
   try {
     const modulePath = `./providers/${provider}/${service}.js`;
+    return await import(/* @vite-ignore */ modulePath);
+  } catch {
+    // Relative path not available
+  }
+
+  // Strategy 3: bare module imports for Node.js/Bun or browsers/Deno with importmaps
+  try {
+    const modulePath = `diagrams-js/${provider}/${service}`;
+    return await import(/* @vite-ignore */ modulePath);
+  } catch {
+    // bare module not supported
+  }
+
+  // Strategy 4: CDN
+  try {
+    const modulePath = `https://esm.sh/diagrams-js/${provider}/${service}`;
     return await import(/* @vite-ignore */ modulePath);
   } catch {
     // Module not found - fall back to plain nodes

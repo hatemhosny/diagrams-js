@@ -127,6 +127,25 @@ const jsonString = '{"name":"Test","nodes":[{"id":"n1","label":"Server"}]}';
 const diagram = await Diagram.fromJSON(jsonString);
 ```
 
+### Import with Options
+
+Explicitly pass provider modules as an option:
+
+```typescript
+import { EC2, Lambda } from "diagrams-js/aws/compute";
+
+const diagram = await Diagram.fromJSON(json, {
+  providers: [{ EC2, Lambda }],
+});
+```
+
+This is useful for:
+
+- Allowing bundlers to include provider modules
+- Overriding default providers
+- Using custom node factories
+- Testing with mock providers
+
 ## Complete Example: Infrastructure as Code
 
 Generate diagrams from your infrastructure configuration:
