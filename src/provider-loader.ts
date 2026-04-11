@@ -34,11 +34,17 @@ async function tryImportProvider(
   provider: string,
   service: string,
 ): Promise<Record<string, unknown> | null> {
+  // Use indirect dynamic imports to prevent bundlers from analyzing paths
+  // while still working with native ES module resolution
+  const p = provider;
+  const s = service;
+  const importModule = (path: string) => import(path);
+
   // Strategy 1: Relative subpath import (resolved by package exports)
   // In Node.js/Bun: ./aws/compute -> package exports -> ./dist/providers/aws/compute.js
   try {
-    const modulePath = `./${provider}/${service}`;
-    return await import(/* @vite-ignore */ modulePath);
+    const parts = [".", p, s];
+    return await importModule(parts.join("/"));
   } catch {
     // Package exports not available
   }
@@ -46,28 +52,24 @@ async function tryImportProvider(
   // Strategy 2: Direct relative path with .js extension
   // For Deno, browsers, or environments without package exports support
   try {
-    const modulePath = `./providers/${provider}/${service}.js`;
-    return await import(/* @vite-ignore */ modulePath);
+    const parts = [".", "providers", p, s];
+    return await importModule(parts.join("/") + ".js");
   } catch {
     // Relative path not available
   }
 
   // Strategy 3: bare module imports for Node.js/Bun or browsers/Deno with importmaps
-  let libPrefix: string;
-  let libSuffix: string;
-  libPrefix = "diagrams";
-  libSuffix = "js";
   try {
-    const modulePath = `${libPrefix}-${libSuffix}/${provider}/${service}`;
-    return await import(/* @vite-ignore */ modulePath);
+    const parts = ["diagrams-js", p, s];
+    return await importModule(parts.join("/"));
   } catch {
     // bare module not supported
   }
 
-  // Strategy 4: CDN
+  // Strategy 4: CDN - constructed dynamically
   try {
-    const modulePath = `https://esm.sh/${libPrefix}-${libSuffix}/${provider}/${service}`;
-    return await import(/* @vite-ignore */ modulePath);
+    const parts = ["https://esm.sh", "diagrams-js", p, s];
+    return await importModule(parts.join("/"));
   } catch {
     // Module not found - fall back to plain nodes
   }
