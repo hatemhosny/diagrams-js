@@ -74,10 +74,7 @@ async function buildProvider(provider) {
 
       // Replace imports from ../../Node.js to point to the providers index
       // Provider index files import from ../../Node.js -> should point to ../../index.js
-      content = content.replace(
-        /from\s*["']\.\.\/\.\.\/Node\.js["']/g,
-        'from "../../index.js"',
-      );
+      content = content.replace(/from\s*["']\.\.\/\.\.\/Node\.js["']/g, 'from "../../index.js"');
 
       fs.writeFileSync(outFile, content);
     } catch (err) {
@@ -113,13 +110,9 @@ async function buildProvidersIndex() {
 async function buildTypes() {
   try {
     execSync("npx tsgo");
-    await fs.promises.cp(
-      path.join("temp", "providers"),
-      path.join("dist", "providers"),
-      {
-        recursive: true,
-      },
-    );
+    await fs.promises.cp(path.join("temp", "providers"), path.join("dist", "providers"), {
+      recursive: true,
+    });
     await fs.promises.rm("temp", { recursive: true });
   } catch (err) {
     console.error(`  ✗ Failed to build types: ${err.message}\n`);
@@ -163,10 +156,7 @@ function updatePackageExports() {
 
   // Update package.json
   packageJson.exports = exports;
-  fs.writeFileSync(
-    packageJsonPath,
-    JSON.stringify(packageJson, null, 2) + "\n",
-  );
+  fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2) + "\n");
 
   console.log("✓ package.json exports updated");
   console.log(`  Added ${Object.keys(exports).length - 2} provider exports`);
