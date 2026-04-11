@@ -3,7 +3,7 @@
 import * as fs from "node:fs";
 import * as path from "node:path";
 import { fileURLToPath } from "node:url";
-import { PROVIDERS, UPPER_WORDS, TITLE_WORDS, ALIASES, type Provider } from "./config.js";
+import { PROVIDERS, UPPER_WORDS, TITLE_WORDS, ALIASES, type Provider } from "./config.ts";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -161,11 +161,11 @@ function generateProvider(provider: Provider): void {
 }
 
 function generateProvidersIndex(): void {
-  let code = "// Auto-generated providers index\n// Do not edit manually\n\n";
+  let code = `// Auto-generated providers index
+// Do not edit manually
 
-  for (const provider of PROVIDERS) {
-    code += `export * from "./${provider}/index.js";\n`;
-  }
+export * from "../index.js";
+`;
 
   const indexPath = path.join(PROVIDERS_DIR, "index.ts");
   fs.writeFileSync(indexPath, code);
