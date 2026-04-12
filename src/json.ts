@@ -224,6 +224,11 @@ function serializeNode(
     if ("~getIconUrl" in raw && typeof raw["~getIconUrl"] === "function") {
       json.iconUrl = (raw["~getIconUrl"] as () => string)();
     }
+
+    // Extract metadata if present
+    if (nodeObj.metadata && Object.keys(nodeObj.metadata).length > 0) {
+      json.metadata = nodeObj.metadata;
+    }
   }
 
   // Extract user-meaningful attributes (filter out icon defaults for provider nodes)
@@ -646,6 +651,11 @@ export async function fromJSON(
       if (nodeDef.iconUrl) {
         raw["~iconDataUrl"] = nodeDef.iconUrl;
       }
+    }
+
+    // Copy metadata if present
+    if (nodeDef.metadata) {
+      node.metadata = nodeDef.metadata;
     }
 
     // Add to correct parent (cluster or diagram)

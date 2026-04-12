@@ -174,6 +174,11 @@ async function mergeDiagrams(
         node = lib.Node(nodeDef.label || nodeDef.id, nodeOptions);
       }
 
+      // Copy metadata if present
+      if (nodeDef.metadata) {
+        node.metadata = nodeDef.metadata;
+      }
+
       // Add to target diagram
       target.add(node);
       sourceNodes.set(nodeDef.id, node);
