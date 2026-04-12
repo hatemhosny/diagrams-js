@@ -24,10 +24,15 @@ const sidebars: SidebarsConfig = {
         "guides/custom-nodes",
         "guides/rendering",
         "guides/json",
-        "guides/plugins",
         "guides/migration",
         "guides/providers",
       ],
+    },
+    {
+      type: "category",
+      label: "Plugins",
+      collapsed: false,
+      items: ["plugins/overview", "plugins/docker-compose"],
     },
     {
       type: "category",

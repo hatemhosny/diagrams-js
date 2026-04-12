@@ -627,7 +627,7 @@ describe("Plugin System", () => {
     });
 
     const diagram = Diagram("Test Plugin");
-    await diagram.registerPlugins([testPlugin]);
+    await diagram.registerPlugins([testPlugin()]);
 
     const exporter = diagram.registry.getExporter("test-format");
     expect(exporter).toBeDefined();
@@ -680,7 +680,7 @@ describe("Plugin System", () => {
     });
 
     const diagram = Diagram("Test");
-    await diagram.registerPlugins([basePlugin, dependentPlugin]);
+    await diagram.registerPlugins([basePlugin(), dependentPlugin()]);
 
     const exporter = diagram.registry.getExporter("dependent-format");
     expect(exporter).toBeDefined();
@@ -730,7 +730,7 @@ describe("Plugin System", () => {
     });
 
     const diagram = Diagram("Test");
-    await diagram.registerPlugins([hookPlugin]);
+    await diagram.registerPlugins([hookPlugin()]);
 
     await diagram.export("json");
 
@@ -773,7 +773,7 @@ describe("Plugin System", () => {
     });
 
     const diagram = Diagram("Array Import Test");
-    await diagram.registerPlugins([arrayImporterPlugin]);
+    await diagram.registerPlugins([arrayImporterPlugin()]);
 
     // Test with array of sources
     await diagram.import(["source-1", "source-2", "source-3"], "array-test");
@@ -822,7 +822,7 @@ describe("Plugin System", () => {
     const diagram = Diagram("Test");
 
     // Register plugins explicitly
-    await diagram.registerPlugins([slowPlugin]);
+    await diagram.registerPlugins([slowPlugin()]);
 
     // Add a node immediately
     diagram.add(Node("Test Node"));
@@ -867,7 +867,7 @@ describe("Plugin System", () => {
 
     // Create diagram and register plugins explicitly
     const diagram = Diagram("Test");
-    await diagram.registerPlugins([trackingPlugin]);
+    await diagram.registerPlugins([trackingPlugin()]);
 
     // Now add nodes - hooks should fire
     diagram.add(Node("Node 1"));
@@ -908,7 +908,7 @@ describe("Plugin System", () => {
 
     // Create diagram and register plugins explicitly
     const diagram = Diagram("Test");
-    await diagram.registerPlugins([renamePlugin]);
+    await diagram.registerPlugins([renamePlugin()]);
 
     // Add a node
     const node = diagram.add(Node("Original"));

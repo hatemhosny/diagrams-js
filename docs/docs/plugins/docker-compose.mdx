@@ -1,0 +1,540 @@
+---
+title: Docker Compose Plugin
+description: Import and export Docker Compose files with diagrams-js
+---
+
+# Docker Compose Plugin
+
+The Docker Compose plugin enables bidirectional conversion between Docker Compose YAML files and architecture diagrams. Visualize your container orchestration setups or generate deployment configurations from diagrams.
+
+## Installation
+
+```bash
+npm install @diagrams-js/plugin-docker-compose
+```
+
+## Quick Start
+
+### Import from Docker Compose
+
+```typescript
+import { Diagram } from "diagrams-js";
+import { dockerComposePlugin } from "@diagrams-js/plugin-docker-compose";
+
+const diagram = Diagram("My Application");
+
+// Register the plugin instance
+await diagram.registerPlugins([dockerComposePlugin]);
+
+// Import from Docker Compose YAML
+const composeYaml = `
+version: "3.8"
+name: my-app
+services:
+  web:
+    image: nginx:latest
+    ports:
+      - "80:80"
+    depends_on:
+      - db
+  db:
+    image: postgres:13
+    environment:
+      POSTGRES_DB: mydb
+`;
+
+await diagram.import(composeYaml, "docker-compose");
+
+// Render the diagram
+const svg = await diagram.render();
+```
+
+### Export to Docker Compose
+
+```typescript
+import { Diagram, Node } from "diagrams-js";
+import { dockerComposePlugin } from "@diagrams-js/plugin-docker-compose";
+
+const diagram = Diagram("My Application");
+
+// Create nodes with Docker Compose metadata
+const web = diagram.add(Node("web"));
+web.metadata = {
+  compose: {
+    image: "nginx:latest",
+    ports: ["80:80"],
+  },
+};
+
+const db = diagram.add(Node("db"));
+db.metadata = {
+  compose: {
+    image: "postgres:13",
+    environment: { POSTGRES_DB: "mydb" },
+  },
+};
+
+// Create dependency
+web.from(db);
+
+// Register plugin and export
+await diagram.registerPlugins([dockerComposePlugin]);
+const composeYaml = await diagram.export("docker-compose");
+
+console.log(composeYaml);
+```
+
+## Features
+
+### Import Capabilities
+
+- **Parse Docker Compose YAML files** - Supports Docker Compose specification
+- **Smart icon mapping** - Automatically maps Docker images to appropriate provider icons
+- **Cluster organization** - Each compose project gets its own cluster
+- **Dependency visualization** - Creates edges for `depends_on` relationships
+- **Network and volume support** - Visualizes networks and volumes as separate nodes
+- **Multi-file import** - Import multiple compose files into separate clusters
+
+### Export Capabilities
+
+- **Generate valid Docker Compose files** - Exports to standard Docker Compose YAML
+- **Service configuration** - Includes image, ports, environment, volumes, etc.
+- **Dependency reconstruction** - Rebuilds `depends_on` from diagram edges
+- **Network and volume export** - Includes networks and volumes in output
+
+## Supported Docker Compose Fields
+
+### Services
+
+| Field         | Import | Export | Description                                 |
+| ------------- | ------ | ------ | ------------------------------------------- |
+| `image`       | ✅     | ✅     | Container image with automatic icon mapping |
+| `build`       | ✅     | ✅     | Build configuration                         |
+| `ports`       | ✅     | ✅     | Port mappings                               |
+| `environment` | ✅     | ✅     | Environment variables                       |
+| `volumes`     | ✅     | ✅     | Volume mounts                               |
+| `depends_on`  | ✅     | ✅     | Service dependencies (creates edges)        |
+| `networks`    | ✅     | ✅     | Network connections                         |
+| `command`     | ✅     | ✅     | Container command                           |
+| `working_dir` | ✅     | ✅     | Working directory                           |
+| `restart`     | ✅     | ✅     | Restart policy                              |
+| `labels`      | ✅     | ✅     | Container labels                            |
+
+### Networks
+
+- `driver` - Network driver (e.g., bridge, overlay)
+- `external` - External network flag
+
+### Volumes
+
+- `driver` - Volume driver
+- `external` - External volume flag
+
+## Image to Icon Mapping
+
+The plugin automatically recognizes common Docker images and maps them to appropriate provider icons:
+
+### Databases
+
+| Image Pattern      | Provider Icon |
+| ------------------ | ------------- |
+| `postgres`         | PostgreSQL    |
+| `mysql`            | MySQL         |
+| `mariadb`          | MariaDB       |
+| `mongo`, `mongodb` | MongoDB       |
+| `redis`            | Redis         |
+| `cassandra`        | Cassandra     |
+| `couchdb`          | CouchDB       |
+| `influxdb`         | InfluxDB      |
+| `neo4j`            | Neo4j         |
+| `oracle`           | Oracle        |
+| `mssql`            | MSSQL         |
+
+### Message Queues
+
+| Image Pattern | Provider Icon |
+| ------------- | ------------- |
+| `kafka`       | Kafka         |
+| `rabbitmq`    | RabbitMQ      |
+
+### Monitoring
+
+| Image Pattern | Provider Icon |
+| ------------- | ------------- |
+| `prometheus`  | Prometheus    |
+| `grafana`     | Grafana       |
+
+### Search
+
+| Image Pattern   | Provider Icon |
+| --------------- | ------------- |
+| `elasticsearch` | Elasticsearch |
+
+### Web Servers
+
+| Image Pattern     | Provider Icon |
+| ----------------- | ------------- |
+| `nginx`           | Nginx         |
+| `apache`, `httpd` | Apache        |
+
+### Container Orchestration
+
+| Image Pattern | Provider Icon |
+| ------------- | ------------- |
+| `nomad`       | Nomad         |
+
+### Default
+
+Images that don't match any pattern use a generic container icon.
+
+## Examples
+
+### Visualize a Microservices Architecture
+
+```typescript
+import { Diagram } from "diagrams-js";
+import { dockerComposePlugin } from "@diagrams-js/plugin-docker-compose";
+
+const composeYaml = `
+version: "3.8"
+name: ecommerce-app
+services:
+  frontend:
+    image: nginx:alpine
+    ports:
+      - "80:80"
+    depends_on:
+      - api
+
+  api:
+    image: node:18
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+      - cache
+
+  db:
+    image: postgres:15
+    environment:
+      POSTGRES_DB: ecommerce
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  cache:
+    image: redis:7-alpine
+
+volumes:
+  pgdata:
+`;
+
+const diagram = Diagram("E-commerce Application");
+await diagram.registerPlugins([dockerComposePlugin]);
+await diagram.import(composeYaml, "docker-compose");
+
+const svg = await diagram.render();
+```
+
+### Import Multiple Compose Files
+
+Compare staging and production configurations:
+
+```typescript
+const stagingCompose = `
+name: staging-environment
+services:
+  web:
+    image: nginx:alpine
+  api:
+    image: myapp:staging
+`;
+
+const productionCompose = `
+name: production-environment
+services:
+  web:
+    image: nginx:latest
+    ports:
+      - "80:80"
+      - "443:443"
+  api:
+    image: myapp:latest
+    replicas: 3
+`;
+
+const diagram = Diagram("Environment Comparison");
+await diagram.registerPlugins([dockerComposePlugin]);
+
+// Each compose file gets its own cluster
+await diagram.import([stagingCompose, productionCompose], "docker-compose");
+```
+
+### Export with Custom Metadata
+
+```typescript
+import { Diagram, Node } from "diagrams-js";
+import { dockerComposePlugin } from "@diagrams-js/plugin-docker-compose";
+
+const diagram = Diagram("Production Stack");
+
+const web = diagram.add(Node("web"));
+web.metadata = {
+  compose: {
+    image: "nginx:latest",
+    ports: ["80:80", "443:443"],
+    restart: "always",
+    labels: {
+      "app": "web",
+      "env": "production"
+    }
+  },
+};
+
+const api = diagram.add(Node("api"));
+api.metadata = {
+  compose: {
+    image: "myapp:latest",
+    environment: {
+      NODE_ENV: "production",
+      LOG_LEVEL: "info"
+    },
+    deploy: {
+      replicas: 3,
+      resources: {
+        limits: {
+          cpus: '0.5',
+          memory: 512M
+        }
+      }
+    }
+  },
+};
+
+await diagram.registerPlugins([dockerComposePlugin]);
+const compose = await diagram.export("docker-compose");
+```
+
+### Round-trip Conversion
+
+Import a compose file, modify it, then export back:
+
+```typescript
+const diagram = Diagram("Modified Stack");
+await diagram.registerPlugins([dockerComposePlugin]);
+
+// Import existing compose file
+await diagram.import(existingComposeYaml, "docker-compose");
+
+// Add a new service
+const monitoring = diagram.add(Node("monitoring"));
+monitoring.metadata = {
+  compose: {
+    image: "prometheus:latest",
+    ports: ["9090:9090"],
+  },
+};
+
+// Connect to existing services
+const json = diagram.toJSON();
+const webNode = json.nodes.find((n) => n.label === "web");
+if (webNode) {
+  monitoring.to(webNode as Node);
+}
+
+// Export modified configuration
+const updatedCompose = await diagram.export("docker-compose");
+```
+
+## API Reference
+
+### `dockerComposePlugin`
+
+A pre-created plugin instance without configuration. This is the recommended way to use the plugin when you don't need custom configuration.
+
+```typescript
+import { dockerComposePlugin } from "@diagrams-js/plugin-docker-compose";
+
+// ✅ Use the pre-created instance
+await diagram.registerPlugins([dockerComposePlugin]);
+```
+
+### `createDockerComposePlugin(config?)`
+
+Factory function for creating a Docker Compose plugin with custom configuration. Use this when you need to customize the plugin behavior.
+
+```typescript
+import { createDockerComposePlugin } from "@diagrams-js/plugin-docker-compose";
+
+// ✅ Create plugin with custom configuration
+const customPlugin = createDockerComposePlugin({
+  defaultVersion: "3.9",
+});
+
+await diagram.registerPlugins([customPlugin]);
+```
+
+**Parameters:**
+
+- `config` (optional): `DockerComposePluginConfig`
+  - `defaultVersion`: Default Docker Compose version for exports (default: "3.8")
+  - `imageMappings`: Custom image to icon mappings
+
+**Returns:** `DiagramsPlugin` - The plugin instance
+
+### Plugin Capabilities
+
+The plugin provides two capabilities:
+
+#### Importer
+
+- **Name:** `docker-compose`
+- **Extensions:** `.yml`, `.yaml`
+- **MIME Types:** `text/yaml`, `application/x-yaml`
+
+#### Exporter
+
+- **Name:** `docker-compose`
+- **Extension:** `.yml`
+- **MIME Type:** `text/yaml`
+
+## Best Practices
+
+### 1. Use Descriptive Service Names
+
+Service names become node labels, so use clear, descriptive names:
+
+```yaml
+# ✅ Good
+services:
+  user-service:
+    image: myapp/users:latest
+
+# ❌ Avoid
+services:
+  svc1:
+    image: myapp/users:latest
+```
+
+### 2. Store Metadata for Round-trip
+
+When creating nodes programmatically, store compose metadata to enable export:
+
+```typescript
+const node = diagram.add(Node("my-service"));
+node.metadata = {
+  compose: {
+    image: "my-image:latest",
+    ports: ["8080:80"],
+    environment: { NODE_ENV: "production" },
+  },
+};
+```
+
+### 3. Handle Dependencies
+
+Use `depends_on` in compose or `.from()` / `.to()` in diagrams-js to create edges:
+
+```yaml
+# In Docker Compose
+services:
+  web:
+    depends_on:
+      - db
+```
+
+```typescript
+// In diagrams-js
+web.from(db);
+```
+
+### 4. Version Your Compose Files
+
+Always include a version in your Docker Compose files for better compatibility:
+
+```yaml
+version: "3.8"
+services:
+  # ...
+```
+
+### 5. Use Named Volumes
+
+Named volumes are easier to visualize and manage:
+
+```yaml
+# ✅ Good
+services:
+  db:
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:
+
+# ❌ Avoid
+services:
+  db:
+    volumes:
+      - /host/path:/container/path
+```
+
+## Troubleshooting
+
+### Plugin Not Found
+
+Make sure to register the plugin before using import/export:
+
+```typescript
+// ✅ Correct order
+await diagram.registerPlugins([dockerComposePlugin]);
+await diagram.import(composeYaml, "docker-compose");
+
+// ❌ Wrong order
+await diagram.import(composeYaml, "docker-compose"); // Will fail!
+await diagram.registerPlugins([dockerComposePlugin]);
+```
+
+### Type Errors with Metadata
+
+The metadata property is now typed as `Record<string, any>`, so you can access it directly without type assertions:
+
+```typescript
+node.metadata = {
+  compose: { ... }
+};
+```
+
+### Missing Icons
+
+The plugin maps common images to provider icons. If your image isn't recognized:
+
+1. Check if it matches one of the patterns in the mapping table
+2. The plugin will use a generic container icon for unrecognized images
+3. You can manually set icons using provider nodes if needed
+
+### Import Fails
+
+Ensure your Docker Compose file is valid YAML:
+
+```typescript
+// Validate before importing
+try {
+  await diagram.import(composeYaml, "docker-compose");
+} catch (error) {
+  console.error("Import failed:", error.message);
+}
+```
+
+## Runtime Support
+
+The Docker Compose plugin supports all diagrams-js runtimes:
+
+- **Node.js** ✅
+- **Browser** ✅
+- **Deno** ✅
+- **Bun** ✅
+
+## Further Reading
+
+- [Plugin System Overview](./overview.mdx) - Learn about the diagrams-js plugin system
+- [Docker Compose Documentation](https://docs.docker.com/compose/) - Official Docker Compose docs

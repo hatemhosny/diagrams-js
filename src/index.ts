@@ -39,6 +39,28 @@ export {
   RuntimeError,
 } from "./plugins/index.js";
 
+// Re-export plugin types for external plugins
+export type {
+  DiagramsPlugin,
+  CreatePlugin,
+  PluginCapability,
+  ImporterCapability,
+  ExporterCapability,
+  RendererCapability,
+  MetadataCapability,
+  HookCapability,
+  PluginContext,
+  ImportContext,
+  ExportContext,
+  RenderContext,
+  MetadataContext,
+  HookContext,
+  NodeMetadata,
+  PluginRegistry,
+  RuntimeSupport,
+  HookHandler,
+} from "./plugins/types.js";
+
 // Types
 export type { Cluster } from "./Cluster.js";
 export type { DiagramOptions, EdgeOptions, NodeOptions, ThemeName, ThemeConfig } from "./types.js";
@@ -50,25 +72,3 @@ export type {
   FromJSONOptions,
   ProviderModule,
 } from "./json.js";
-
-// Plugin types
-export type {
-  DiagramsPlugin,
-  CreatePlugin,
-  PluginCapability,
-  ImporterCapability,
-  ExporterCapability,
-  RendererCapability,
-  MetadataCapability,
-  HookCapability,
-  PluginRegistry,
-  PluginContext,
-  ImportContext,
-  ExportContext,
-  RenderContext,
-  MetadataContext,
-  HookContext,
-  NodeMetadata,
-  RuntimeSupport,
-  HookHandler,
-} from "./plugins/types.js";

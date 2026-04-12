@@ -76,7 +76,7 @@ export interface Node {
   /** @internal */
   ["~register"](parent: Diagram | Cluster): void;
   /** Metadata attached to this node (e.g., cloud provider specs, pricing) */
-  metadata: Record<string, unknown>;
+  metadata: Record<string, any>;
 
   /**
    * Connect this node to another node (forward direction)
@@ -181,7 +181,7 @@ export function Node(label = "", options: NodeOptions = {}): Node {
   let _cluster: Cluster | undefined = undefined;
   const _attrs: Record<string, string | number> = {};
   let _iconDataUrl: string | null = null;
-  let _metadata: Record<string, unknown> = {};
+  let _metadata: Record<string, any> = {};
 
   // Check if this node has an icon data URL (embedded via esbuild dataurl loader)
   // This will be set by provider factory functions
@@ -305,10 +305,10 @@ export function Node(label = "", options: NodeOptions = {}): Node {
     /**
      * Get/set metadata for this node
      */
-    get metadata(): Record<string, unknown> {
+    get metadata(): Record<string, any> {
       return _metadata;
     },
-    set metadata(value: Record<string, unknown>) {
+    set metadata(value: Record<string, any>) {
       _metadata = value;
     },
 

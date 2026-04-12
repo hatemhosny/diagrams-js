@@ -7,7 +7,6 @@
 
 import type {
   DiagramsPlugin,
-  CreatePlugin,
   ImporterCapability,
   ExporterCapability,
   RendererCapability,
@@ -300,9 +299,7 @@ export function createPluginRegistry(): PluginRegistry {
     /**
      * Register a plugin
      */
-    register: async (createPlugin: CreatePlugin, config?: unknown): Promise<void> => {
-      const plugin = createPlugin(config);
-
+    register: async (plugin: DiagramsPlugin): Promise<void> => {
       // Validate plugin structure
       if (!plugin.name) {
         throw new PluginError("Plugin must have a name");
@@ -326,7 +323,7 @@ export function createPluginRegistry(): PluginRegistry {
       }
 
       // Add to pending for batch dependency resolution
-      pendingPlugins.set(plugin.name, { plugin, config });
+      pendingPlugins.set(plugin.name, { plugin, config: undefined });
 
       // Try to resolve immediately
       await resolvePendingPlugins();

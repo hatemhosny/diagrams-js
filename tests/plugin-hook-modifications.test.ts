@@ -31,7 +31,7 @@ describe("Plugin Hook Modification Tests", () => {
       });
 
       const diagram = Diagram("Test");
-      await diagram.registerPlugins([labelPlugin]);
+      await diagram.registerPlugins([labelPlugin()]);
 
       const node = diagram.add(Node("Server"));
       await new Promise((resolve) => setTimeout(resolve, 50));
@@ -65,7 +65,7 @@ describe("Plugin Hook Modification Tests", () => {
       });
 
       const diagram = Diagram("Test");
-      await diagram.registerPlugins([widthPlugin]);
+      await diagram.registerPlugins([widthPlugin()]);
 
       const node = diagram.add(Node("Server"));
       await new Promise((resolve) => setTimeout(resolve, 50));
@@ -100,7 +100,7 @@ describe("Plugin Hook Modification Tests", () => {
       });
 
       const diagram = Diagram("Test");
-      await diagram.registerPlugins([stylePlugin]);
+      await diagram.registerPlugins([stylePlugin()]);
 
       const node = diagram.add(Node("Server"));
       await new Promise((resolve) => setTimeout(resolve, 50));
@@ -138,7 +138,7 @@ describe("Plugin Hook Modification Tests", () => {
       });
 
       const diagram = Diagram("Test");
-      await diagram.registerPlugins([metadataPlugin]);
+      await diagram.registerPlugins([metadataPlugin()]);
 
       const node = diagram.add(Node("Load Balancer"));
       await new Promise((resolve) => setTimeout(resolve, 50));
@@ -175,7 +175,7 @@ describe("Plugin Hook Modification Tests", () => {
       });
 
       const diagram = Diagram("Test");
-      await diagram.registerPlugins([metadataPlugin]);
+      await diagram.registerPlugins([metadataPlugin()]);
 
       // Create a node that simulates a provider factory node
       // Provider factories set metadata via internal ~prefixed properties
@@ -228,7 +228,7 @@ describe("Plugin Hook Modification Tests", () => {
       });
 
       const diagram = Diagram("Test");
-      await diagram.registerPlugins([metadataPlugin]);
+      await diagram.registerPlugins([metadataPlugin()]);
 
       const node = diagram.add(Node("Storage"));
       await new Promise((resolve) => setTimeout(resolve, 50));
@@ -267,7 +267,7 @@ describe("Plugin Hook Modification Tests", () => {
       });
 
       const diagram = Diagram("Test");
-      await diagram.registerPlugins([stylePlugin]);
+      await diagram.registerPlugins([stylePlugin()]);
 
       const cluster = diagram.cluster("My Cluster");
       const node = cluster.add(Node("Server"));
@@ -309,7 +309,7 @@ describe("Plugin Hook Modification Tests", () => {
       });
 
       const diagram = Diagram("Test");
-      await diagram.registerPlugins([labelPlugin]);
+      await diagram.registerPlugins([labelPlugin()]);
 
       const cluster = diagram.cluster("My Cluster");
       const node = cluster.add(Node("Server"));
@@ -352,7 +352,7 @@ describe("Plugin Hook Modification Tests", () => {
       });
 
       const diagram = Diagram("Test");
-      await diagram.registerPlugins([colorPlugin]);
+      await diagram.registerPlugins([colorPlugin()]);
 
       const node1 = diagram.add(Node("A"));
       const node2 = diagram.add(Node("B"));
@@ -388,7 +388,7 @@ describe("Plugin Hook Modification Tests", () => {
       });
 
       const diagram = Diagram("Test");
-      await diagram.registerPlugins([colorPlugin]);
+      await diagram.registerPlugins([colorPlugin()]);
 
       const node1 = diagram.add(Node("A"));
       const node2 = diagram.add(Node("B"));
@@ -429,7 +429,7 @@ describe("Plugin Hook Modification Tests", () => {
       });
 
       const diagram = Diagram("Test");
-      await diagram.registerPlugins([clusterPlugin]);
+      await diagram.registerPlugins([clusterPlugin()]);
 
       const cluster = diagram.cluster("My Cluster");
       await new Promise((resolve) => setTimeout(resolve, 50));

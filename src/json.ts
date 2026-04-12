@@ -46,6 +46,8 @@ export interface DiagramNodeJSON {
   iconUrl?: string;
   /** Additional Graphviz attributes */
   attrs?: Record<string, string | number>;
+  /** Metadata attached to this node (e.g., cloud provider specs, pricing) */
+  metadata?: Record<string, any>;
 }
 
 /**
@@ -216,11 +218,16 @@ function serializeNode(
     if (service) json.service = service;
     if (resourceType) json.type = resourceType;
 
-    // Extract icon URL for Custom nodes only.
-    // Provider nodes get icons resolved from their provider/service/type triple
-    // at import time, so we don't embed them in JSON.
+    // Extract icon URL for Custom nodes or provider nodes with explicit icons.
+    // Provider nodes typically get icons resolved from their provider/service/type triple
+    // at import time via factory functions, but we also preserve explicit iconDataUrl
+    // for cases where nodes are being transferred between diagrams.
     if ("~getIconUrl" in raw && typeof raw["~getIconUrl"] === "function") {
       json.iconUrl = (raw["~getIconUrl"] as () => string)();
+    } else if (raw["~iconDataUrl"] && typeof raw["~iconDataUrl"] === "string") {
+      // Preserve icon data URL for provider nodes to enable proper icon rendering
+      // when nodes are transferred between diagrams (e.g., in plugin imports)
+      json.iconUrl = raw["~iconDataUrl"] as string;
     }
   }
 

@@ -152,6 +152,11 @@ export interface HookCapability {
 export type CreatePlugin = (config?: unknown) => DiagramsPlugin;
 
 /**
+ * Plugin input type - can be a plugin instance or a factory function
+ */
+export type PluginInput = DiagramsPlugin | CreatePlugin;
+
+/**
  * Plugin context passed to capabilities and hooks
  */
 export interface PluginContext {
@@ -308,7 +313,7 @@ export interface NodeMetadata {
  */
 export interface PluginRegistry {
   /** Register a plugin */
-  register: (createPlugin: CreatePlugin, config?: unknown) => Promise<void>;
+  register: (plugin: DiagramsPlugin) => Promise<void>;
   /** Unregister a plugin */
   unregister: (name: string) => Promise<void>;
   /** Get a plugin by name */

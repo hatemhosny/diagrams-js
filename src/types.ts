@@ -44,9 +44,7 @@ export type ThemeConfig = (typeof THEMES)[ThemeName];
 /**
  * Plugin definition for diagram options
  */
-export type PluginDefinition =
-  | import("./plugins/types.js").CreatePlugin
-  | [import("./plugins/types.js").CreatePlugin, unknown];
+export type PluginDefinition = import("./plugins/types.js").DiagramsPlugin;
 
 /**
  * Options for creating a diagram

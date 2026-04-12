@@ -179,12 +179,7 @@ export interface Diagram {
    * diagram.add(EC2("Web Server"));
    * ```
    */
-  registerPlugins(
-    plugins?: Array<
-      | import("./plugins/types.js").CreatePlugin
-      | [import("./plugins/types.js").CreatePlugin, unknown]
-    >,
-  ): Promise<void>;
+  registerPlugins(plugins?: import("./plugins/types.js").DiagramsPlugin[]): Promise<void>;
 
   /**
    * Export diagram to external format
@@ -392,7 +387,7 @@ export function Diagram(name = "", options: DiagramOptions = {}): Diagram {
   // Auto-register built-in plugins on first use
   async function ensureBuiltInPlugins(): Promise<void> {
     if (!pluginsInitialized && !registry.getPlugin("json")) {
-      await registry.register(createJSONPlugin);
+      await registry.register(createJSONPlugin());
       pluginsInitialized = true;
     }
   }
@@ -1556,26 +1551,20 @@ export function Diagram(name = "", options: DiagramOptions = {}): Diagram {
 
     /**
      * Register plugins with the diagram
-     * @param plugins - Array of plugin factory functions or [factory, config] tuples
+     * @param plugins - Array of plugin instances
      * @returns Promise that resolves when all plugins are registered and initialized
      */
     async registerPlugins(
-      plugins: Array<
-        | import("./plugins/types.js").CreatePlugin
-        | [import("./plugins/types.js").CreatePlugin, unknown]
-      > = [],
+      plugins: import("./plugins/types.js").DiagramsPlugin[] = [],
     ): Promise<void> {
       // Register built-in JSON plugin first (always available)
       if (!registry.getPlugin("json")) {
-        await registry.register(createJSONPlugin);
+        await registry.register(createJSONPlugin());
       }
 
       // Register all provided plugins
-      for (const pluginDef of plugins) {
-        const [createPlugin, config] = Array.isArray(pluginDef)
-          ? pluginDef
-          : [pluginDef, undefined];
-        await registry.register(createPlugin, config);
+      for (const plugin of plugins) {
+        await registry.register(plugin);
       }
 
       pluginsInitialized = true;

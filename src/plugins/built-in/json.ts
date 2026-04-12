@@ -5,10 +5,16 @@
  * It is automatically registered with every diagram.
  */
 
-import type { DiagramsPlugin, ImporterCapability, ExporterCapability } from "../types.js";
+import type {
+  DiagramsPlugin,
+  ImporterCapability,
+  ExporterCapability,
+  ImportContext,
+} from "../types.js";
 import type { Diagram } from "../../Diagram.js";
 import type { DiagramJSON } from "../../json.js";
 import { fromJSON as fromJSONImpl } from "../../json.js";
+import type { Node } from "../../Node.js";
 
 /**
  * Create the built-in JSON plugin
@@ -57,32 +63,22 @@ export function createJSONPlugin(): DiagramsPlugin {
           }
         },
 
-        import: async (source: string | string[], diagram: Diagram, _context): Promise<void> => {
+        import: async (
+          source: string | string[],
+          diagram: Diagram,
+          context: ImportContext,
+        ): Promise<void> => {
           const sources = Array.isArray(source) ? source : [source];
 
           for (let i = 0; i < sources.length; i++) {
             const json: DiagramJSON = JSON.parse(sources[i]);
 
-            if (sources.length > 1) {
-              // Multiple sources - each in its own cluster
-              diagram.cluster(json.name || `import-${i}`);
-              await fromJSONImpl(json);
+            // Import the JSON using Diagram.fromJSON() to get proper icon resolution
+            const importedDiagram = await fromJSONImpl(json);
 
-              // Note: This is a simplified implementation
-              // In a full implementation, we would copy nodes, edges, and clusters to this cluster
-            } else {
-              // Single source - import directly (no cluster)
-              await fromJSONImpl(json);
-
-              // Note: This is a simplified implementation
-              // In a full implementation, we would copy nodes, edges, and clusters to the diagram
-            }
+            // Merge the imported diagram into the target diagram
+            await mergeDiagrams(diagram, importedDiagram, context.lib);
           }
-
-          throw new Error(
-            "JSON import via plugin is not fully supported. Use Diagram.fromJSON() instead. " +
-              "Example: const diagram = await Diagram.fromJSON(jsonString)",
-          );
         },
       } as ImporterCapability,
 
@@ -99,6 +95,98 @@ export function createJSONPlugin(): DiagramsPlugin {
       } as ExporterCapability,
     ],
   };
+}
+
+/**
+ * Merge an imported diagram into the target diagram
+ * This copies all nodes, edges, and clusters from the source to the target
+ * This is a reusable utility that can be used by other plugins
+ */
+async function mergeDiagrams(
+  target: Diagram,
+  source: Diagram,
+  lib: ImportContext["lib"],
+): Promise<void> {
+  // Get the JSON representation of the source diagram
+  const json = source.toJSON();
+
+  // Build a map of node IDs to Node objects from the source diagram
+  const sourceNodes = new Map<string, Node>();
+
+  // Helper to collect nodes from a diagram (including from clusters)
+  function collectNodes(diag: Diagram): void {
+    // Get all nodes from the diagram's internal structure
+    const diagJson = diag.toJSON();
+
+    // Create nodes in the target diagram
+    for (const nodeDef of diagJson.nodes) {
+      // Build node options with provider metadata for icon resolution
+      const nodeOptions: Record<string, unknown> = {
+        nodeId: nodeDef.id,
+      };
+
+      // If the node has provider info, pass it in the options
+      // This allows the Node factory to properly set up icon tracking
+      if (nodeDef.provider) {
+        nodeOptions["~provider"] = nodeDef.provider;
+      }
+      if (nodeDef.service) {
+        nodeOptions["~type"] = nodeDef.service;
+      }
+      if (nodeDef.type) {
+        nodeOptions["~resourceType"] = nodeDef.type;
+      }
+      if (nodeDef.iconUrl) {
+        nodeOptions["~iconDataUrl"] = nodeDef.iconUrl;
+      }
+      if (nodeDef.attrs) {
+        Object.assign(nodeOptions, nodeDef.attrs);
+      }
+
+      // Create the node in the target diagram
+      const node = lib.Node(nodeDef.label || nodeDef.id, nodeOptions);
+
+      // Add to target diagram
+      target.add(node);
+      sourceNodes.set(nodeDef.id, node);
+    }
+  }
+
+  collectNodes(source);
+
+  // Create clusters and add nodes to them
+  if (json.clusters) {
+    for (const clusterDef of json.clusters) {
+      const cluster = target.cluster(clusterDef.label);
+
+      // Copy cluster attributes if any
+      if (clusterDef.graphAttr) {
+        Object.assign(cluster.graphAttr, clusterDef.graphAttr);
+      }
+
+      // Add nodes to the cluster
+      if (clusterDef.nodes) {
+        for (const nodeId of clusterDef.nodes) {
+          const node = sourceNodes.get(nodeId);
+          if (node) {
+            cluster.add(node);
+          }
+        }
+      }
+    }
+  }
+
+  // Create edges from the JSON
+  if (json.edges) {
+    for (const edgeDef of json.edges) {
+      const fromNode = sourceNodes.get(edgeDef.from);
+      const toNode = sourceNodes.get(edgeDef.to);
+
+      if (fromNode && toNode) {
+        fromNode.to(toNode);
+      }
+    }
+  }
 }
 
 /**

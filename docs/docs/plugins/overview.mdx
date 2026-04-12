@@ -1,9 +1,9 @@
 ---
-title: Plugin System
+title: Plugin System Overview
 description: Extend diagrams-js with custom import/export formats, metadata providers, and hooks
 ---
 
-# Plugin System
+# Plugin System Overview
 
 The diagrams-js plugin system allows you to extend the library with custom functionality including:
 
@@ -19,7 +19,7 @@ The diagrams-js plugin system allows you to extend the library with custom funct
 ```typescript
 // Create a custom exporter plugin
 // Note: Use context.lib to access diagrams-js exports instead of importing
-const myExporter = () => ({
+const myExporter = {
   name: "my-exporter",
   version: "1.0.0",
   apiVersion: "1.0",
@@ -42,14 +42,14 @@ const myExporter = () => ({
       },
     },
   ],
-});
+};
 
 // Use the plugin (import only needed for Diagram creation)
 import { Diagram } from "diagrams-js";
 
 const diagram = Diagram("My Architecture");
 
-// Register plugins explicitly
+// Register the plugin directly
 await diagram.registerPlugins([myExporter]);
 
 // Export to custom format
@@ -74,7 +74,7 @@ const json2 = diagram.toJSON(); // Also works
 Plugins should use `context.lib` to access diagrams-js functions instead of importing them. This prevents multiple instances and circular dependencies:
 
 ```typescript
-const myPlugin = () => ({
+const myPlugin = {
   name: "my-plugin",
   version: "1.0.0",
   apiVersion: "1.0",
@@ -94,7 +94,7 @@ const myPlugin = () => ({
       },
     },
   ],
-});
+};
 ```
 
 ## Plugin Structure
@@ -107,8 +107,8 @@ interface DiagramsPlugin {
   version: string; // Semver version
   apiVersion: "1.0"; // Plugin API version
   runtimeSupport: {
-    node: boolean; // Supports Node.js
     browser: boolean; // Supports browsers
+    node: boolean; // Supports Node.js
     deno: boolean; // Supports Deno
     bun: boolean; // Supports Bun
   };
@@ -127,7 +127,8 @@ interface DiagramsPlugin {
 Import diagrams from external formats:
 
 ```typescript
-const dockerComposePlugin = () => ({
+// For plugins that need configuration, use a factory function
+const createDockerComposePlugin = (config?: { defaultVersion?: string }) => ({
   name: "docker-compose",
   version: "1.0.0",
   apiVersion: "1.0",
@@ -154,9 +155,10 @@ const dockerComposePlugin = () => ({
   ],
 });
 
-// Usage
+// Usage with factory - call it to get the plugin instance
 const diagram = Diagram("My App");
-await diagram.registerPlugins([dockerComposePlugin]);
+await diagram.registerPlugins([createDockerComposePlugin()]);
+// or with config: await diagram.registerPlugins([createDockerComposePlugin({ defaultVersion: "3.9" })]);
 await diagram.import(yamlContent, "docker-compose");
 ```
 
@@ -174,7 +176,8 @@ await diagram.import([compose1, compose2, compose3], "docker-compose");
 Export diagrams to external formats:
 
 ```typescript
-const terraformPlugin = () => ({
+// Simple plugin without configuration - use an object directly
+const terraformPlugin = {
   name: "terraform",
   version: "1.0.0",
   apiVersion: "1.0",
@@ -198,9 +201,9 @@ const terraformPlugin = () => ({
       },
     },
   ],
-});
+};
 
-// Usage
+// Usage - pass the plugin instance directly
 const diagram = Diagram("My Infrastructure");
 await diagram.registerPlugins([terraformPlugin]);
 const terraform = await diagram.export("terraform");
@@ -211,7 +214,7 @@ const terraform = await diagram.export("terraform");
 Attach cloud provider metadata to nodes:
 
 ```typescript
-const awsMetadataPlugin = () => ({
+const awsMetadataPlugin = {
   name: "aws-metadata",
   version: "1.0.0",
   apiVersion: "1.0",
@@ -237,7 +240,7 @@ const awsMetadataPlugin = () => ({
       },
     },
   ],
-});
+};
 
 // Usage
 const diagram = Diagram("My App");
@@ -256,7 +259,7 @@ console.log(ec2.metadata.pricing.monthly); // 140.16
 Execute code at lifecycle events:
 
 ```typescript
-const loggingPlugin = () => ({
+const loggingPlugin = {
   name: "logging",
   version: "1.0.0",
   apiVersion: "1.0",
@@ -282,7 +285,9 @@ const loggingPlugin = () => ({
       ],
     },
   ],
-});
+};
+
+await diagram.registerPlugins([loggingPlugin]);
 ```
 
 #### Available Hook Events
@@ -301,7 +306,23 @@ const loggingPlugin = () => ({
 Plugins can declare dependencies on other plugins:
 
 ```typescript
-const advancedPlugin = () => ({
+const basePlugin = {
+  name: "base-plugin",
+  version: "1.0.0",
+  apiVersion: "1.0",
+  runtimeSupport: { node: true, browser: true, deno: true, bun: true },
+  capabilities: [
+    {
+      type: "exporter",
+      name: "base-format",
+      extension: ".base",
+      mimeType: "text/plain",
+      export: async () => "Base export",
+    },
+  ],
+};
+
+const advancedPlugin = {
   name: "advanced",
   version: "1.0.0",
   apiVersion: "1.0",
@@ -321,7 +342,7 @@ const advancedPlugin = () => ({
       },
     },
   ],
-});
+};
 
 // Register in correct order (dependencies first)
 const diagram = Diagram("Test");
@@ -334,6 +355,7 @@ Access the plugin registry to query capabilities:
 
 ```typescript
 const diagram = Diagram("Test");
+
 await diagram.registerPlugins([myPlugin]);
 
 // List all capabilities
@@ -374,22 +396,38 @@ const diagram2 = Diagram("App 2", { pluginRegistry: sharedRegistry });
 
 ## Best Practices
 
-### 1. Use Factory Functions
+### 1. Use Objects for Simple Plugins, Factories for Configurable Ones
 
-Always create plugins as factory functions for consistency:
+If your plugin doesn't need configuration, use a plain object. Use factory functions only when you need to accept configuration:
 
 ```typescript
-// ✅ Good
-const myPlugin = (config) => ({
+// ✅ Good: Simple plugin without config - use an object
+const mySimplePlugin = {
+  name: "my-simple-plugin",
+  version: "1.0.0",
+  apiVersion: "1.0",
+  runtimeSupport: { node: true, browser: true, deno: true, bun: true },
+  capabilities: [
+    // ...
+  ],
+};
+
+// ✅ Good: Plugin with config - use a factory function
+const createMyPlugin = (config: { apiKey: string }) => ({
   name: "my-plugin",
-  // ...
+  version: "1.0.0",
+  apiVersion: "1.0",
+  runtimeSupport: { node: true, browser: true, deno: true, bun: true },
+  capabilities: [
+    // ... use config.apiKey ...
+  ],
 });
 
-// ❌ Avoid
-const myPlugin = {
-  name: "my-plugin",
-  // ...
-};
+// Usage: Objects are passed directly
+await diagram.registerPlugins([mySimplePlugin]);
+
+// Usage: Factories are called to get the instance
+await diagram.registerPlugins([createMyPlugin({ apiKey: "xxx" })]);
 ```
 
 ### 2. Declare Runtime Support
@@ -448,9 +486,9 @@ const apiPlugin = () => ({
   // ...
 });
 
-// Usage with config
+// Usage with config - call factory with config
 const diagram = Diagram("Test");
-await diagram.registerPlugins([[apiPlugin, { apiKey: "xxx", region: "us-west-2" }]]);
+await diagram.registerPlugins([apiPlugin({ apiKey: "xxx", region: "us-west-2" })]);
 ```
 
 ## Examples
@@ -539,6 +577,6 @@ const createDockerComposePlugin = () => ({
 
 ## Next Steps
 
-- Learn about [Node Metadata](./node-metadata.mdx)
+- Try the [Docker Compose Plugin](./docker-compose.mdx) for importing/exporting Docker Compose files
 - See [complete examples](../getting-started/examples.mdx)
-- Check out the [API Reference](./diagram.mdx)
+- Check out the [API Reference](../guides/diagram.mdx)

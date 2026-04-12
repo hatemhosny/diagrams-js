@@ -34,7 +34,7 @@ describe("Plugin System - Comprehensive Hook Tests", () => {
   describe("Node Hooks", () => {
     it("should fire node:create hook when nodes are added", async () => {
       const diagram = Diagram("Test");
-      await diagram.registerPlugins([createHookPlugin([HookEvent.NODE_CREATE])]);
+      await diagram.registerPlugins([createHookPlugin([HookEvent.NODE_CREATE])()]);
 
       diagram.add(Node("Test Node"));
       await new Promise((resolve) => setTimeout(resolve, 50));
@@ -68,7 +68,7 @@ describe("Plugin System - Comprehensive Hook Tests", () => {
       });
 
       const diagram = Diagram("Test");
-      await diagram.registerPlugins([modifyPlugin]);
+      await diagram.registerPlugins([modifyPlugin()]);
 
       const node = diagram.add(Node("Original"));
       await new Promise((resolve) => setTimeout(resolve, 50));
@@ -83,7 +83,7 @@ describe("Plugin System - Comprehensive Hook Tests", () => {
 
     it("should fire node:create for multiple nodes", async () => {
       const diagram = Diagram("Test");
-      await diagram.registerPlugins([createHookPlugin([HookEvent.NODE_CREATE])]);
+      await diagram.registerPlugins([createHookPlugin([HookEvent.NODE_CREATE])()]);
 
       diagram.add(Node("Node 1"));
       diagram.add(Node("Node 2"));
@@ -125,7 +125,7 @@ describe("Plugin System - Comprehensive Hook Tests", () => {
       });
 
       const diagram = Diagram("Test");
-      await diagram.registerPlugins([metadataPlugin]);
+      await diagram.registerPlugins([metadataPlugin()]);
 
       const node = diagram.add(Node("Test Node"));
       await new Promise((resolve) => setTimeout(resolve, 50));
@@ -138,7 +138,7 @@ describe("Plugin System - Comprehensive Hook Tests", () => {
   describe("Edge Hooks", () => {
     it("should fire edge:create hook when edges are created", async () => {
       const diagram = Diagram("Test");
-      await diagram.registerPlugins([createHookPlugin([HookEvent.EDGE_CREATE])]);
+      await diagram.registerPlugins([createHookPlugin([HookEvent.EDGE_CREATE])()]);
 
       const node1 = diagram.add(Node("Node 1"));
       const node2 = diagram.add(Node("Node 2"));
@@ -175,7 +175,7 @@ describe("Plugin System - Comprehensive Hook Tests", () => {
       });
 
       const diagram = Diagram("Test");
-      await diagram.registerPlugins([edgeModifyPlugin]);
+      await diagram.registerPlugins([edgeModifyPlugin()]);
 
       const node1 = diagram.add(Node("Node 1"));
       const node2 = diagram.add(Node("Node 2"));
@@ -192,7 +192,7 @@ describe("Plugin System - Comprehensive Hook Tests", () => {
 
     it("should fire edge:create for multiple edges", async () => {
       const diagram = Diagram("Test");
-      await diagram.registerPlugins([createHookPlugin([HookEvent.EDGE_CREATE])]);
+      await diagram.registerPlugins([createHookPlugin([HookEvent.EDGE_CREATE])()]);
 
       const node1 = diagram.add(Node("Node 1"));
       const node2 = diagram.add(Node("Node 2"));
@@ -235,7 +235,7 @@ describe("Plugin System - Comprehensive Hook Tests", () => {
       });
 
       const diagram = Diagram("Test");
-      await diagram.registerPlugins([edgeLabelPlugin]);
+      await diagram.registerPlugins([edgeLabelPlugin()]);
 
       const node1 = diagram.add(Node("Source"));
       const node2 = diagram.add(Node("Target"));
@@ -250,7 +250,7 @@ describe("Plugin System - Comprehensive Hook Tests", () => {
   describe("Cluster Hooks", () => {
     it("should fire cluster:create hook when clusters are created", async () => {
       const diagram = Diagram("Test");
-      await diagram.registerPlugins([createHookPlugin([HookEvent.CLUSTER_CREATE])]);
+      await diagram.registerPlugins([createHookPlugin([HookEvent.CLUSTER_CREATE])()]);
 
       diagram.cluster("My Cluster");
       await new Promise((resolve) => setTimeout(resolve, 50));
@@ -288,7 +288,7 @@ describe("Plugin System - Comprehensive Hook Tests", () => {
       });
 
       const diagram = Diagram("Test");
-      await diagram.registerPlugins([clusterModifyPlugin]);
+      await diagram.registerPlugins([clusterModifyPlugin()]);
 
       diagram.cluster("My Cluster");
       await new Promise((resolve) => setTimeout(resolve, 50));
@@ -302,7 +302,7 @@ describe("Plugin System - Comprehensive Hook Tests", () => {
 
     it("should fire cluster:create for nested clusters", async () => {
       const diagram = Diagram("Test");
-      await diagram.registerPlugins([createHookPlugin([HookEvent.CLUSTER_CREATE])]);
+      await diagram.registerPlugins([createHookPlugin([HookEvent.CLUSTER_CREATE])()]);
 
       diagram.cluster("Outer");
       await new Promise((resolve) => setTimeout(resolve, 100));
@@ -319,7 +319,7 @@ describe("Plugin System - Comprehensive Hook Tests", () => {
     it("should fire before:export and after:export hooks", async () => {
       const diagram = Diagram("Test");
       await diagram.registerPlugins([
-        createHookPlugin([HookEvent.BEFORE_EXPORT, HookEvent.AFTER_EXPORT]),
+        createHookPlugin([HookEvent.BEFORE_EXPORT, HookEvent.AFTER_EXPORT])(),
       ]);
 
       await diagram.export("json");
@@ -355,7 +355,7 @@ describe("Plugin System - Comprehensive Hook Tests", () => {
 
       const diagram = Diagram("Test Diagram");
       diagram.add(Node("Node 1"));
-      await diagram.registerPlugins([accessExportPlugin]);
+      await diagram.registerPlugins([accessExportPlugin()]);
 
       await diagram.export("json");
 
@@ -387,7 +387,7 @@ describe("Plugin System - Comprehensive Hook Tests", () => {
       });
 
       const diagram = Diagram("Test");
-      await diagram.registerPlugins([accessExportPlugin]);
+      await diagram.registerPlugins([accessExportPlugin()]);
 
       const json = await diagram.export("json");
 
@@ -418,8 +418,8 @@ describe("Plugin System - Comprehensive Hook Tests", () => {
 
       const diagram = Diagram("Test");
       await diagram.registerPlugins([
-        testImporter,
-        createHookPlugin([HookEvent.BEFORE_IMPORT, HookEvent.AFTER_IMPORT]),
+        testImporter(),
+        createHookPlugin([HookEvent.BEFORE_IMPORT, HookEvent.AFTER_IMPORT])(),
       ]);
 
       await diagram.import("test data", "test-format");
@@ -472,7 +472,7 @@ describe("Plugin System - Comprehensive Hook Tests", () => {
       });
 
       const diagram = Diagram("Test");
-      await diagram.registerPlugins([testImporter, accessImportPlugin]);
+      await diagram.registerPlugins([testImporter(), accessImportPlugin()]);
 
       await diagram.import("test data", "test-format");
 
@@ -485,7 +485,7 @@ describe("Plugin System - Comprehensive Hook Tests", () => {
       const diagram = Diagram("Test");
       diagram.add(Node("Node 1"));
       await diagram.registerPlugins([
-        createHookPlugin([HookEvent.BEFORE_RENDER, HookEvent.AFTER_RENDER]),
+        createHookPlugin([HookEvent.BEFORE_RENDER, HookEvent.AFTER_RENDER])(),
       ]);
 
       await diagram.render();
@@ -520,7 +520,7 @@ describe("Plugin System - Comprehensive Hook Tests", () => {
       });
 
       const diagram = Diagram("Test");
-      await diagram.registerPlugins([accessRenderPlugin]);
+      await diagram.registerPlugins([accessRenderPlugin()]);
 
       await diagram.render();
 
@@ -533,7 +533,7 @@ describe("Plugin System - Comprehensive Hook Tests", () => {
     it("should fire before:serialize hook when calling toJSON", async () => {
       const diagram = Diagram("Test");
       diagram.add(Node("Node 1"));
-      await diagram.registerPlugins([createHookPlugin([HookEvent.BEFORE_SERIALIZE])]);
+      await diagram.registerPlugins([createHookPlugin([HookEvent.BEFORE_SERIALIZE])()]);
 
       diagram.toJSON();
 
@@ -566,7 +566,7 @@ describe("Plugin System - Comprehensive Hook Tests", () => {
       });
 
       const diagram = Diagram("Test Diagram");
-      await diagram.registerPlugins([accessSerializePlugin]);
+      await diagram.registerPlugins([accessSerializePlugin()]);
 
       diagram.toJSON();
 
@@ -594,8 +594,8 @@ describe("Plugin System - Comprehensive Hook Tests", () => {
       const diagram = Diagram("Test");
       diagram.add(Node("Node 1"));
       await diagram.registerPlugins([
-        testMetadataProvider,
-        createHookPlugin([HookEvent.METADATA_ATTACH]),
+        testMetadataProvider(),
+        createHookPlugin([HookEvent.METADATA_ATTACH])(),
       ]);
 
       await diagram.attachMetadata("test-provider");
@@ -645,7 +645,7 @@ describe("Plugin System - Comprehensive Hook Tests", () => {
 
       const diagram = Diagram("Test");
       diagram.add(Node("Test Node"));
-      await diagram.registerPlugins([testMetadataProvider, capturePlugin]);
+      await diagram.registerPlugins([testMetadataProvider(), capturePlugin()]);
 
       await diagram.attachMetadata("test-provider");
 
@@ -700,7 +700,7 @@ describe("Plugin System - Comprehensive Hook Tests", () => {
       });
 
       const diagram = Diagram("Test");
-      await diagram.registerPlugins([plugin1, plugin2]);
+      await diagram.registerPlugins([plugin1(), plugin2()]);
 
       const node = diagram.add(Node("Test"));
       await new Promise((resolve) => setTimeout(resolve, 50));
@@ -735,7 +735,7 @@ describe("Plugin System - Comprehensive Hook Tests", () => {
       });
 
       const diagram = Diagram("Test");
-      await diagram.registerPlugins([asyncPlugin]);
+      await diagram.registerPlugins([asyncPlugin()]);
 
       const node = diagram.add(Node("Test"));
       await new Promise((resolve) => setTimeout(resolve, 50));
@@ -770,7 +770,7 @@ describe("Plugin System - Comprehensive Hook Tests", () => {
       });
 
       const diagram = Diagram("Test");
-      await diagram.registerPlugins([contextPlugin]);
+      await diagram.registerPlugins([contextPlugin()]);
 
       diagram.add(Node("Test"));
       await new Promise((resolve) => setTimeout(resolve, 50));
@@ -819,7 +819,7 @@ describe("Plugin System - Comprehensive Hook Tests", () => {
       });
 
       const diagram = Diagram("Test");
-      await diagram.registerPlugins([libAccessPlugin]);
+      await diagram.registerPlugins([libAccessPlugin()]);
 
       diagram.add(Node("Main"));
       await new Promise((resolve) => setTimeout(resolve, 50));
@@ -851,7 +851,7 @@ describe("Plugin System - Comprehensive Hook Tests", () => {
       });
 
       const diagram = Diagram("Test");
-      await diagram.registerPlugins([errorPlugin]);
+      await diagram.registerPlugins([errorPlugin()]);
 
       // Should not throw, node should still be created
       expect(() => diagram.add(Node("Test"))).not.toThrow();
@@ -903,7 +903,7 @@ describe("Plugin System - Comprehensive Hook Tests", () => {
       });
 
       const diagram = Diagram("Test");
-      await diagram.registerPlugins([errorPlugin, successPlugin]);
+      await diagram.registerPlugins([errorPlugin(), successPlugin()]);
 
       diagram.add(Node("Test"));
       await new Promise((resolve) => setTimeout(resolve, 50));
@@ -938,7 +938,7 @@ describe("Plugin System - Comprehensive Hook Tests", () => {
       });
 
       const diagram = Diagram("Original");
-      await diagram.registerPlugins([renameDiagramPlugin]);
+      await diagram.registerPlugins([renameDiagramPlugin()]);
 
       const json = await diagram.export("json");
       const parsed = JSON.parse(json as string);
@@ -971,7 +971,7 @@ describe("Plugin System - Comprehensive Hook Tests", () => {
       });
 
       const diagram = Diagram("Test", { direction: "LR" });
-      await diagram.registerPlugins([directionPlugin]);
+      await diagram.registerPlugins([directionPlugin()]);
 
       await diagram.render();
 
@@ -1033,7 +1033,7 @@ describe("Plugin System - Comprehensive Hook Tests", () => {
       });
 
       const diagram = Diagram("Workflow Test");
-      await diagram.registerPlugins([workflowPlugin]);
+      await diagram.registerPlugins([workflowPlugin()]);
 
       // Create diagram structure
       const cluster = diagram.cluster("Cluster 1");
@@ -1084,7 +1084,7 @@ describe("Plugin System - Comprehensive Hook Tests", () => {
       });
 
       const diagram = Diagram("Test");
-      await diagram.registerPlugins([conditionalPlugin]);
+      await diagram.registerPlugins([conditionalPlugin()]);
 
       const regularNode = diagram.add(Node("Regular"));
       const specialNode = diagram.add(Node("Special Node"));
