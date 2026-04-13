@@ -182,3 +182,16 @@ skills:
       - "exporters"
       - "metadata-providers"
       - "hooks"
+
+  - name: "Creating Plugins"
+    slug: "creating-plugins"
+    type: "feature"
+    domain: "extensibility"
+    path: ".agents/skills/creating-plugins/SKILL.md"
+    description: "Create custom plugins for diagrams-js to extend import/export capabilities. Package structure, plugin API, best practices, and real-world examples. Use context.lib for runtime exports and context.loadResourcesList for resource discovery. NPM keywords for discoverability."
+    requires:
+      - "diagrams-js-plugin-system"
+    sources:
+      - "hatemhosny/diagrams-js:src/plugins/types.ts"
+      - "hatemhosny/plugin-docker-compose:src/index.ts"
+      - "hatemhosny/plugin-docker-compose:package.json"

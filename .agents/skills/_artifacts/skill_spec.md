@@ -12,21 +12,24 @@ diagrams-js is a TypeScript port of the Python diagrams library for drawing clou
 | Organization & Layout   | Grouping nodes and controlling layout         | clusters-grouping                                        |
 | Environment Integration | Using in different environments               | browser-integration, nodejs-integration                  |
 | Migration & Interop     | Migrating from Python and integrating         | python-migration                                         |
+| Extensibility           | Plugin system and creating custom plugins     | diagrams-js-plugin-system, creating-plugins              |
 
 ## Skill Inventory
 
-| Skill                 | Type      | Domain                  | What it covers                               | Failure modes |
-| --------------------- | --------- | ----------------------- | -------------------------------------------- | ------------- |
-| getting-started       | lifecycle | diagram-creation        | Installation, first diagram, render          | 2             |
-| diagram-configuration | core      | diagram-creation        | Direction, theme, curve style, attributes    | 3             |
-| rendering-export      | core      | diagram-creation        | SVG, PNG, JPG, DOT, data URLs, save          | 3             |
-| provider-nodes        | core      | node-management         | 17+ providers, 2000+ nodes, imports          | 2             |
-| custom-nodes          | core      | node-management         | External icons, URLs, data URLs, local files | 2             |
-| node-connections      | core      | connections-flow        | to(), from(), with(), Edge styling           | 4             |
-| clusters-grouping     | core      | organization-layout     | Clusters, nesting, grouping                  | 2             |
-| browser-integration   | framework | environment-integration | CDN, bundlers, DOM, data URLs                | 2             |
-| nodejs-integration    | core      | environment-integration | Files, PNG/JPG with sharp, local icons       | 1             |
-| python-migration      | lifecycle | migration-interop       | Operator mapping, syntax differences         | 3             |
+| Skill                     | Type      | Domain                  | What it covers                                                | Failure modes |
+| ------------------------- | --------- | ----------------------- | ------------------------------------------------------------- | ------------- |
+| getting-started           | lifecycle | diagram-creation        | Installation, first diagram, render                           | 2             |
+| diagram-configuration     | core      | diagram-creation        | Direction, theme, curve style, attributes                     | 3             |
+| rendering-export          | core      | diagram-creation        | SVG, PNG, JPG, DOT, data URLs, save                           | 3             |
+| provider-nodes            | core      | node-management         | 17+ providers, 2000+ nodes, imports                           | 2             |
+| custom-nodes              | core      | node-management         | External icons, URLs, data URLs, local files                  | 2             |
+| node-connections          | core      | connections-flow        | to(), from(), with(), Edge styling                            | 4             |
+| clusters-grouping         | core      | organization-layout     | Clusters, nesting, grouping                                   | 2             |
+| browser-integration       | framework | environment-integration | CDN, bundlers, DOM, data URLs                                 | 2             |
+| nodejs-integration        | core      | environment-integration | Files, PNG/JPG with sharp, local icons                        | 1             |
+| python-migration          | lifecycle | migration-interop       | Operator mapping, syntax differences                          | 3             |
+| diagrams-js-plugin-system | feature   | extensibility           | Importers, exporters, metadata, hooks                         | 0             |
+| creating-plugins          | feature   | extensibility           | Package structure, context.lib, loadResourcesList, publishing | 0             |
 
 ## Failure Mode Inventory
 
@@ -147,6 +150,7 @@ diagrams-js is a TypeScript port of the Python diagrams library for drawing clou
 - **Core skills:** getting-started, diagram-configuration, rendering-export, provider-nodes, custom-nodes, node-connections, clusters-grouping
 - **Framework skills:** browser-integration, nodejs-integration
 - **Lifecycle skills:** python-migration
+- **Feature skills:** diagrams-js-plugin-system, creating-plugins
 - **Reference files:** Provider reference with 17 providers and 100+ categories
 
 ## Composition Opportunities
