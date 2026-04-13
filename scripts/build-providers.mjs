@@ -100,10 +100,39 @@ async function buildProvidersIndex() {
       platform: "neutral",
       format: "esm",
       target: "es2022",
+      minify: true,
+      sourcemap: false,
       outdir: DIST_PROVIDERS_DIR,
     });
   } catch (err) {
     console.error(`  ✗ Failed to build index: ${err.message}\n`);
+  }
+}
+
+/**
+ * Build find-resource module
+ */
+async function buildFindResource() {
+  const entry = path.join(SRC_PROVIDERS_DIR, "find-resource.ts");
+  if (!fs.existsSync(entry)) {
+    console.log("  No find-resource.ts found");
+    return;
+  }
+
+  try {
+    await build({
+      entryPoints: [entry],
+      bundle: false,
+      platform: "neutral",
+      format: "esm",
+      target: "es2022",
+      minify: true,
+      sourcemap: false,
+      outdir: DIST_PROVIDERS_DIR,
+    });
+    console.log("  ✓ Built find-resource.ts");
+  } catch (err) {
+    console.error(`  ✗ Failed to build find-resource: ${err.message}\n`);
   }
 }
 
@@ -154,12 +183,19 @@ function updatePackageExports() {
     }
   }
 
+  // Add find-resource export
+  exports["./find-resource"] = {
+    import: "./dist/providers/find-resource.js",
+    types: "./dist/providers/find-resource.d.ts",
+  };
+
   // Update package.json
   packageJson.exports = exports;
   fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2) + "\n");
 
   console.log("✓ package.json exports updated");
-  console.log(`  Added ${Object.keys(exports).length - 2} provider exports`);
+  console.log(`  Added ${Object.keys(exports).length - 3} provider exports`);
+  console.log("  Added find-resource export");
 }
 
 /**
@@ -180,6 +216,9 @@ async function main() {
 
   // Build index
   await buildProvidersIndex();
+
+  // Build find-resource
+  await buildFindResource();
 
   // Build types
   await buildTypes();

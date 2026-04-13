@@ -172,6 +172,82 @@ export * from "../index.js";
   console.log("Generated providers/index.ts");
 }
 
+interface ResourceInfo {
+  provider: string;
+  type: string;
+  resource: string;
+}
+
+function generateFindResource(): void {
+  console.log("Generating find-resource.ts...");
+
+  const allResources: ResourceInfo[] = [];
+
+  for (const provider of PROVIDERS) {
+    const resourceDir = path.join(RESOURCES_DIR, provider);
+
+    if (!fs.existsSync(resourceDir)) {
+      continue;
+    }
+
+    const entries = fs.readdirSync(resourceDir, { withFileTypes: true });
+
+    for (const entry of entries) {
+      if (entry.isDirectory()) {
+        const serviceType = entry.name;
+        const serviceDir = path.join(resourceDir, serviceType);
+
+        const files = fs.readdirSync(serviceDir);
+        const pngFiles = files.filter((f) => f.endsWith(".png") && !f.includes("rounded")).sort();
+
+        for (const file of pngFiles) {
+          const resourceName = generateClassName(provider, file);
+          allResources.push({
+            provider,
+            type: serviceType,
+            resource: resourceName,
+          });
+        }
+      }
+    }
+  }
+
+  let code = `// Auto-generated find-resource module
+// Do not edit manually
+
+export interface ResourceInfo {
+  provider: string;
+  type: string;
+  resource: string;
+}
+
+export const allResources: ResourceInfo[] = ${JSON.stringify(allResources, null, 2)};
+
+export function findResource(query: string): ResourceInfo[] {
+  const lowerQuery = query.toLowerCase();
+  const matches = allResources.filter((r) =>
+    r.resource.toLowerCase().includes(lowerQuery)
+  );
+
+  // Sort: exact matches first (case-insensitive), then partial matches
+  return matches.sort((a, b) => {
+    const aLower = a.resource.toLowerCase();
+    const bLower = b.resource.toLowerCase();
+    const aIsExact = aLower === lowerQuery;
+    const bIsExact = bLower === lowerQuery;
+
+    if (aIsExact && !bIsExact) return -1;
+    if (!aIsExact && bIsExact) return 1;
+    return 0;
+  });
+}
+`;
+
+  const filePath = path.join(PROVIDERS_DIR, "find-resource.ts");
+  fs.writeFileSync(filePath, code);
+  console.log(`  Created find-resource.ts (${allResources.length} resources)`);
+}
+
 function main(): void {
   const args = process.argv.slice(2);
 
@@ -186,6 +262,7 @@ function main(): void {
       console.log();
     }
     generateProvidersIndex();
+    generateFindResource();
     console.log("\n✓ All providers generated successfully!");
   } else {
     const provider = args[0];
@@ -196,6 +273,7 @@ function main(): void {
     }
     generateProvider(provider as Provider);
     generateProvidersIndex();
+    generateFindResource();
   }
 }
 

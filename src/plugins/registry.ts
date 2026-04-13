@@ -24,6 +24,7 @@ import { Node } from "../Node.js";
 import { Edge } from "../Edge.js";
 import { Custom } from "../Custom.js";
 import { Cluster } from "../Cluster.js";
+import { loadResourcesList } from "../provider-loader.ts";
 
 /**
  * Detect the current runtime environment
@@ -144,6 +145,7 @@ export function createPluginRegistry(): PluginRegistry {
       executeHooks: async <T>(event: HookEvent, data: T): Promise<T> => {
         return registryInstance.executeHooks(event, data);
       },
+      loadResourcesList: () => loadResourcesList(),
       lib: {
         Diagram,
         Node,
@@ -429,6 +431,7 @@ export function createPluginRegistry(): PluginRegistry {
       renderers: Array.from(renderers.keys()),
       metadataProviders: Array.from(metadataProviders.keys()),
     }),
+    loadResourcesList: () => loadResourcesList(),
   };
 
   return registryInstance;
