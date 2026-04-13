@@ -13,35 +13,35 @@ function _Engagement(label?: string, options?: Record<string, unknown>) {
 
 export function Connect(label?: string, options?: Record<string, unknown>) {
   const node = _Engagement(label ?? "Connect", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Connect";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Connect";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = connectIcon;
   return node;
 }
 
 export function CustomerEngagement(label?: string, options?: Record<string, unknown>) {
   const node = _Engagement(label ?? "CustomerEngagement", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "CustomerEngagement";
+  (node as unknown as Record<string, unknown>)["~resource"] = "CustomerEngagement";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = customer_engagementIcon;
   return node;
 }
 
 export function Pinpoint(label?: string, options?: Record<string, unknown>) {
   const node = _Engagement(label ?? "Pinpoint", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Pinpoint";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Pinpoint";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = pinpointIcon;
   return node;
 }
 
 export function SimpleEmailServiceSesEmail(label?: string, options?: Record<string, unknown>) {
   const node = _Engagement(label ?? "SimpleEmailServiceSesEmail", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "SimpleEmailServiceSesEmail";
+  (node as unknown as Record<string, unknown>)["~resource"] = "SimpleEmailServiceSesEmail";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = simple_email_service_ses_emailIcon;
   return node;
 }
 
 export function SimpleEmailServiceSes(label?: string, options?: Record<string, unknown>) {
   const node = _Engagement(label ?? "SimpleEmailServiceSes", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "SimpleEmailServiceSes";
+  (node as unknown as Record<string, unknown>)["~resource"] = "SimpleEmailServiceSes";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = simple_email_service_sesIcon;
   return node;
 }

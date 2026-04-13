@@ -23,49 +23,49 @@ function _Compute(label?: string, options?: Record<string, unknown>) {
 
 export function AutoScaling(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "AutoScaling", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "AutoScaling";
+  (node as unknown as Record<string, unknown>)["~resource"] = "AutoScaling";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = auto_scalingIcon;
   return node;
 }
 
 export function BatchCompute(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "BatchCompute", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "BatchCompute";
+  (node as unknown as Record<string, unknown>)["~resource"] = "BatchCompute";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = batch_computeIcon;
   return node;
 }
 
 export function ContainerRegistry(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "ContainerRegistry", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "ContainerRegistry";
+  (node as unknown as Record<string, unknown>)["~resource"] = "ContainerRegistry";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = container_registryIcon;
   return node;
 }
 
 export function ContainerService(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "ContainerService", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "ContainerService";
+  (node as unknown as Record<string, unknown>)["~resource"] = "ContainerService";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = container_serviceIcon;
   return node;
 }
 
 export function ElasticComputeService(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "ElasticComputeService", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "ElasticComputeService";
+  (node as unknown as Record<string, unknown>)["~resource"] = "ElasticComputeService";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = elastic_compute_serviceIcon;
   return node;
 }
 
 export function ElasticContainerInstance(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "ElasticContainerInstance", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "ElasticContainerInstance";
+  (node as unknown as Record<string, unknown>)["~resource"] = "ElasticContainerInstance";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = elastic_container_instanceIcon;
   return node;
 }
 
 export function ElasticHighPerformanceComputing(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "ElasticHighPerformanceComputing", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "ElasticHighPerformanceComputing";
+  (node as unknown as Record<string, unknown>)["~resource"] = "ElasticHighPerformanceComputing";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] =
     elastic_high_performance_computingIcon;
   return node;
@@ -73,21 +73,21 @@ export function ElasticHighPerformanceComputing(label?: string, options?: Record
 
 export function ElasticSearch(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "ElasticSearch", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "ElasticSearch";
+  (node as unknown as Record<string, unknown>)["~resource"] = "ElasticSearch";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = elastic_searchIcon;
   return node;
 }
 
 export function FunctionCompute(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "FunctionCompute", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "FunctionCompute";
+  (node as unknown as Record<string, unknown>)["~resource"] = "FunctionCompute";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = function_computeIcon;
   return node;
 }
 
 export function OperationOrchestrationService(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "OperationOrchestrationService", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "OperationOrchestrationService";
+  (node as unknown as Record<string, unknown>)["~resource"] = "OperationOrchestrationService";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] =
     operation_orchestration_serviceIcon;
   return node;
@@ -95,35 +95,35 @@ export function OperationOrchestrationService(label?: string, options?: Record<s
 
 export function ResourceOrchestrationService(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "ResourceOrchestrationService", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "ResourceOrchestrationService";
+  (node as unknown as Record<string, unknown>)["~resource"] = "ResourceOrchestrationService";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = resource_orchestration_serviceIcon;
   return node;
 }
 
 export function ServerLoadBalancer(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "ServerLoadBalancer", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "ServerLoadBalancer";
+  (node as unknown as Record<string, unknown>)["~resource"] = "ServerLoadBalancer";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = server_load_balancerIcon;
   return node;
 }
 
 export function ServerlessAppEngine(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "ServerlessAppEngine", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "ServerlessAppEngine";
+  (node as unknown as Record<string, unknown>)["~resource"] = "ServerlessAppEngine";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = serverless_app_engineIcon;
   return node;
 }
 
 export function SimpleApplicationServer(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "SimpleApplicationServer", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "SimpleApplicationServer";
+  (node as unknown as Record<string, unknown>)["~resource"] = "SimpleApplicationServer";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = simple_application_serverIcon;
   return node;
 }
 
 export function WebAppService(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "WebAppService", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "WebAppService";
+  (node as unknown as Record<string, unknown>)["~resource"] = "WebAppService";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = web_app_serviceIcon;
   return node;
 }

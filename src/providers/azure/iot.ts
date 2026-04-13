@@ -41,119 +41,119 @@ function _Iot(label?: string, options?: Record<string, unknown>) {
 
 export function AzureCosmosDb(label?: string, options?: Record<string, unknown>) {
   const node = _Iot(label ?? "AzureCosmosDb", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "AzureCosmosDb";
+  (node as unknown as Record<string, unknown>)["~resource"] = "AzureCosmosDb";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = azure_cosmos_dbIcon;
   return node;
 }
 
 export function AzureDataboxGateway(label?: string, options?: Record<string, unknown>) {
   const node = _Iot(label ?? "AzureDataboxGateway", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "AzureDataboxGateway";
+  (node as unknown as Record<string, unknown>)["~resource"] = "AzureDataboxGateway";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = azure_databox_gatewayIcon;
   return node;
 }
 
 export function AzureIotOperations(label?: string, options?: Record<string, unknown>) {
   const node = _Iot(label ?? "AzureIotOperations", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "AzureIotOperations";
+  (node as unknown as Record<string, unknown>)["~resource"] = "AzureIotOperations";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = azure_iot_operationsIcon;
   return node;
 }
 
 export function AzureMapsAccounts(label?: string, options?: Record<string, unknown>) {
   const node = _Iot(label ?? "AzureMapsAccounts", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "AzureMapsAccounts";
+  (node as unknown as Record<string, unknown>)["~resource"] = "AzureMapsAccounts";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = azure_maps_accountsIcon;
   return node;
 }
 
 export function AzureStack(label?: string, options?: Record<string, unknown>) {
   const node = _Iot(label ?? "AzureStack", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "AzureStack";
+  (node as unknown as Record<string, unknown>)["~resource"] = "AzureStack";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = azure_stackIcon;
   return node;
 }
 
 export function DeviceProvisioningServices(label?: string, options?: Record<string, unknown>) {
   const node = _Iot(label ?? "DeviceProvisioningServices", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "DeviceProvisioningServices";
+  (node as unknown as Record<string, unknown>)["~resource"] = "DeviceProvisioningServices";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = device_provisioning_servicesIcon;
   return node;
 }
 
 export function DigitalTwins(label?: string, options?: Record<string, unknown>) {
   const node = _Iot(label ?? "DigitalTwins", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "DigitalTwins";
+  (node as unknown as Record<string, unknown>)["~resource"] = "DigitalTwins";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = digital_twinsIcon;
   return node;
 }
 
 export function EventGridSubscriptions(label?: string, options?: Record<string, unknown>) {
   const node = _Iot(label ?? "EventGridSubscriptions", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "EventGridSubscriptions";
+  (node as unknown as Record<string, unknown>)["~resource"] = "EventGridSubscriptions";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = event_grid_subscriptionsIcon;
   return node;
 }
 
 export function EventHubClusters(label?: string, options?: Record<string, unknown>) {
   const node = _Iot(label ?? "EventHubClusters", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "EventHubClusters";
+  (node as unknown as Record<string, unknown>)["~resource"] = "EventHubClusters";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = event_hub_clustersIcon;
   return node;
 }
 
 export function EventHubs(label?: string, options?: Record<string, unknown>) {
   const node = _Iot(label ?? "EventHubs", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "EventHubs";
+  (node as unknown as Record<string, unknown>)["~resource"] = "EventHubs";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = event_hubsIcon;
   return node;
 }
 
 export function FunctionApps(label?: string, options?: Record<string, unknown>) {
   const node = _Iot(label ?? "FunctionApps", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "FunctionApps";
+  (node as unknown as Record<string, unknown>)["~resource"] = "FunctionApps";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = function_appsIcon;
   return node;
 }
 
 export function IndustrialIot(label?: string, options?: Record<string, unknown>) {
   const node = _Iot(label ?? "IndustrialIot", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "IndustrialIot";
+  (node as unknown as Record<string, unknown>)["~resource"] = "IndustrialIot";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = industrial_iotIcon;
   return node;
 }
 
 export function IotCentralApplications(label?: string, options?: Record<string, unknown>) {
   const node = _Iot(label ?? "IotCentralApplications", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "IotCentralApplications";
+  (node as unknown as Record<string, unknown>)["~resource"] = "IotCentralApplications";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = iot_central_applicationsIcon;
   return node;
 }
 
 export function IotEdge(label?: string, options?: Record<string, unknown>) {
   const node = _Iot(label ?? "IotEdge", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "IotEdge";
+  (node as unknown as Record<string, unknown>)["~resource"] = "IotEdge";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = iot_edgeIcon;
   return node;
 }
 
 export function IotHubSecurity(label?: string, options?: Record<string, unknown>) {
   const node = _Iot(label ?? "IotHubSecurity", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "IotHubSecurity";
+  (node as unknown as Record<string, unknown>)["~resource"] = "IotHubSecurity";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = iot_hub_securityIcon;
   return node;
 }
 
 export function IotHub(label?: string, options?: Record<string, unknown>) {
   const node = _Iot(label ?? "IotHub", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "IotHub";
+  (node as unknown as Record<string, unknown>)["~resource"] = "IotHub";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = iot_hubIcon;
   return node;
 }
 
 export function LogicApps(label?: string, options?: Record<string, unknown>) {
   const node = _Iot(label ?? "LogicApps", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "LogicApps";
+  (node as unknown as Record<string, unknown>)["~resource"] = "LogicApps";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = logic_appsIcon;
   return node;
 }
@@ -163,7 +163,7 @@ export function MachineLearningStudioClassicWebServices(
   options?: Record<string, unknown>,
 ) {
   const node = _Iot(label ?? "MachineLearningStudioClassicWebServices", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] =
+  (node as unknown as Record<string, unknown>)["~resource"] =
     "MachineLearningStudioClassicWebServices";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] =
     machine_learning_studio_classic_web_servicesIcon;
@@ -175,7 +175,7 @@ export function MachineLearningStudioWebServicePlans(
   options?: Record<string, unknown>,
 ) {
   const node = _Iot(label ?? "MachineLearningStudioWebServicePlans", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] =
+  (node as unknown as Record<string, unknown>)["~resource"] =
     "MachineLearningStudioWebServicePlans";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] =
     machine_learning_studio_web_service_plansIcon;
@@ -184,7 +184,7 @@ export function MachineLearningStudioWebServicePlans(
 
 export function MachineLearningStudioWorkspaces(label?: string, options?: Record<string, unknown>) {
   const node = _Iot(label ?? "MachineLearningStudioWorkspaces", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "MachineLearningStudioWorkspaces";
+  (node as unknown as Record<string, unknown>)["~resource"] = "MachineLearningStudioWorkspaces";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] =
     machine_learning_studio_workspacesIcon;
   return node;
@@ -192,49 +192,49 @@ export function MachineLearningStudioWorkspaces(label?: string, options?: Record
 
 export function Maps(label?: string, options?: Record<string, unknown>) {
   const node = _Iot(label ?? "Maps", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Maps";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Maps";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = mapsIcon;
   return node;
 }
 
 export function NotificationHubNamespaces(label?: string, options?: Record<string, unknown>) {
   const node = _Iot(label ?? "NotificationHubNamespaces", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "NotificationHubNamespaces";
+  (node as unknown as Record<string, unknown>)["~resource"] = "NotificationHubNamespaces";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = notification_hub_namespacesIcon;
   return node;
 }
 
 export function NotificationHubs(label?: string, options?: Record<string, unknown>) {
   const node = _Iot(label ?? "NotificationHubs", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "NotificationHubs";
+  (node as unknown as Record<string, unknown>)["~resource"] = "NotificationHubs";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = notification_hubsIcon;
   return node;
 }
 
 export function Sphere(label?: string, options?: Record<string, unknown>) {
   const node = _Iot(label ?? "Sphere", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Sphere";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Sphere";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = sphereIcon;
   return node;
 }
 
 export function StackHciPremium(label?: string, options?: Record<string, unknown>) {
   const node = _Iot(label ?? "StackHciPremium", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "StackHciPremium";
+  (node as unknown as Record<string, unknown>)["~resource"] = "StackHciPremium";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = stack_hci_premiumIcon;
   return node;
 }
 
 export function StreamAnalyticsJobs(label?: string, options?: Record<string, unknown>) {
   const node = _Iot(label ?? "StreamAnalyticsJobs", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "StreamAnalyticsJobs";
+  (node as unknown as Record<string, unknown>)["~resource"] = "StreamAnalyticsJobs";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = stream_analytics_jobsIcon;
   return node;
 }
 
 export function TimeSeriesDataSets(label?: string, options?: Record<string, unknown>) {
   const node = _Iot(label ?? "TimeSeriesDataSets", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "TimeSeriesDataSets";
+  (node as unknown as Record<string, unknown>)["~resource"] = "TimeSeriesDataSets";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = time_series_data_setsIcon;
   return node;
 }
@@ -244,8 +244,7 @@ export function TimeSeriesInsightsAccessPolicies(
   options?: Record<string, unknown>,
 ) {
   const node = _Iot(label ?? "TimeSeriesInsightsAccessPolicies", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] =
-    "TimeSeriesInsightsAccessPolicies";
+  (node as unknown as Record<string, unknown>)["~resource"] = "TimeSeriesInsightsAccessPolicies";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] =
     time_series_insights_access_policiesIcon;
   return node;
@@ -253,7 +252,7 @@ export function TimeSeriesInsightsAccessPolicies(
 
 export function TimeSeriesInsightsEnvironments(label?: string, options?: Record<string, unknown>) {
   const node = _Iot(label ?? "TimeSeriesInsightsEnvironments", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "TimeSeriesInsightsEnvironments";
+  (node as unknown as Record<string, unknown>)["~resource"] = "TimeSeriesInsightsEnvironments";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] =
     time_series_insights_environmentsIcon;
   return node;
@@ -261,7 +260,7 @@ export function TimeSeriesInsightsEnvironments(label?: string, options?: Record<
 
 export function TimeSeriesInsightsEventSources(label?: string, options?: Record<string, unknown>) {
   const node = _Iot(label ?? "TimeSeriesInsightsEventSources", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "TimeSeriesInsightsEventSources";
+  (node as unknown as Record<string, unknown>)["~resource"] = "TimeSeriesInsightsEventSources";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] =
     time_series_insights_event_sourcesIcon;
   return node;
@@ -269,7 +268,7 @@ export function TimeSeriesInsightsEventSources(label?: string, options?: Record<
 
 export function TimeSeriesInsightsEventsSources(label?: string, options?: Record<string, unknown>) {
   const node = _Iot(label ?? "TimeSeriesInsightsEventsSources", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "TimeSeriesInsightsEventsSources";
+  (node as unknown as Record<string, unknown>)["~resource"] = "TimeSeriesInsightsEventsSources";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] =
     time_series_insights_events_sourcesIcon;
   return node;
@@ -277,14 +276,14 @@ export function TimeSeriesInsightsEventsSources(label?: string, options?: Record
 
 export function Windows10IotCoreServices(label?: string, options?: Record<string, unknown>) {
   const node = _Iot(label ?? "Windows10IotCoreServices", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Windows10IotCoreServices";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Windows10IotCoreServices";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = windows_10_iot_core_servicesIcon;
   return node;
 }
 
 export function Windows10CoreServices(label?: string, options?: Record<string, unknown>) {
   const node = _Iot(label ?? "Windows10CoreServices", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Windows10CoreServices";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Windows10CoreServices";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = windows10_core_servicesIcon;
   return node;
 }

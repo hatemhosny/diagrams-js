@@ -9,7 +9,7 @@ function _User(label?: string, options?: Record<string, unknown>) {
 
 export function Openstackclient(label?: string, options?: Record<string, unknown>) {
   const node = _User(label ?? "Openstackclient", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Openstackclient";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Openstackclient";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = openstackclientIcon;
   return node;
 }

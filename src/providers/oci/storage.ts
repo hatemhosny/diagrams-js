@@ -26,126 +26,126 @@ function _Storage(label?: string, options?: Record<string, unknown>) {
 
 export function BackupRestoreWhite(label?: string, options?: Record<string, unknown>) {
   const node = _Storage(label ?? "BackupRestoreWhite", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "BackupRestoreWhite";
+  (node as unknown as Record<string, unknown>)["~resource"] = "BackupRestoreWhite";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = backup_restore_whiteIcon;
   return node;
 }
 
 export function BackupRestore(label?: string, options?: Record<string, unknown>) {
   const node = _Storage(label ?? "BackupRestore", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "BackupRestore";
+  (node as unknown as Record<string, unknown>)["~resource"] = "BackupRestore";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = backup_restoreIcon;
   return node;
 }
 
 export function BlockStorageCloneWhite(label?: string, options?: Record<string, unknown>) {
   const node = _Storage(label ?? "BlockStorageCloneWhite", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "BlockStorageCloneWhite";
+  (node as unknown as Record<string, unknown>)["~resource"] = "BlockStorageCloneWhite";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = block_storage_clone_whiteIcon;
   return node;
 }
 
 export function BlockStorageClone(label?: string, options?: Record<string, unknown>) {
   const node = _Storage(label ?? "BlockStorageClone", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "BlockStorageClone";
+  (node as unknown as Record<string, unknown>)["~resource"] = "BlockStorageClone";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = block_storage_cloneIcon;
   return node;
 }
 
 export function BlockStorageWhite(label?: string, options?: Record<string, unknown>) {
   const node = _Storage(label ?? "BlockStorageWhite", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "BlockStorageWhite";
+  (node as unknown as Record<string, unknown>)["~resource"] = "BlockStorageWhite";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = block_storage_whiteIcon;
   return node;
 }
 
 export function BlockStorage(label?: string, options?: Record<string, unknown>) {
   const node = _Storage(label ?? "BlockStorage", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "BlockStorage";
+  (node as unknown as Record<string, unknown>)["~resource"] = "BlockStorage";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = block_storageIcon;
   return node;
 }
 
 export function BucketsWhite(label?: string, options?: Record<string, unknown>) {
   const node = _Storage(label ?? "BucketsWhite", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "BucketsWhite";
+  (node as unknown as Record<string, unknown>)["~resource"] = "BucketsWhite";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = buckets_whiteIcon;
   return node;
 }
 
 export function Buckets(label?: string, options?: Record<string, unknown>) {
   const node = _Storage(label ?? "Buckets", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Buckets";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Buckets";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = bucketsIcon;
   return node;
 }
 
 export function DataTransferWhite(label?: string, options?: Record<string, unknown>) {
   const node = _Storage(label ?? "DataTransferWhite", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "DataTransferWhite";
+  (node as unknown as Record<string, unknown>)["~resource"] = "DataTransferWhite";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = data_transfer_whiteIcon;
   return node;
 }
 
 export function DataTransfer(label?: string, options?: Record<string, unknown>) {
   const node = _Storage(label ?? "DataTransfer", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "DataTransfer";
+  (node as unknown as Record<string, unknown>)["~resource"] = "DataTransfer";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = data_transferIcon;
   return node;
 }
 
 export function ElasticPerformanceWhite(label?: string, options?: Record<string, unknown>) {
   const node = _Storage(label ?? "ElasticPerformanceWhite", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "ElasticPerformanceWhite";
+  (node as unknown as Record<string, unknown>)["~resource"] = "ElasticPerformanceWhite";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = elastic_performance_whiteIcon;
   return node;
 }
 
 export function ElasticPerformance(label?: string, options?: Record<string, unknown>) {
   const node = _Storage(label ?? "ElasticPerformance", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "ElasticPerformance";
+  (node as unknown as Record<string, unknown>)["~resource"] = "ElasticPerformance";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = elastic_performanceIcon;
   return node;
 }
 
 export function FileStorageWhite(label?: string, options?: Record<string, unknown>) {
   const node = _Storage(label ?? "FileStorageWhite", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "FileStorageWhite";
+  (node as unknown as Record<string, unknown>)["~resource"] = "FileStorageWhite";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = file_storage_whiteIcon;
   return node;
 }
 
 export function FileStorage(label?: string, options?: Record<string, unknown>) {
   const node = _Storage(label ?? "FileStorage", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "FileStorage";
+  (node as unknown as Record<string, unknown>)["~resource"] = "FileStorage";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = file_storageIcon;
   return node;
 }
 
 export function ObjectStorageWhite(label?: string, options?: Record<string, unknown>) {
   const node = _Storage(label ?? "ObjectStorageWhite", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "ObjectStorageWhite";
+  (node as unknown as Record<string, unknown>)["~resource"] = "ObjectStorageWhite";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = object_storage_whiteIcon;
   return node;
 }
 
 export function ObjectStorage(label?: string, options?: Record<string, unknown>) {
   const node = _Storage(label ?? "ObjectStorage", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "ObjectStorage";
+  (node as unknown as Record<string, unknown>)["~resource"] = "ObjectStorage";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = object_storageIcon;
   return node;
 }
 
 export function StorageGatewayWhite(label?: string, options?: Record<string, unknown>) {
   const node = _Storage(label ?? "StorageGatewayWhite", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "StorageGatewayWhite";
+  (node as unknown as Record<string, unknown>)["~resource"] = "StorageGatewayWhite";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = storage_gateway_whiteIcon;
   return node;
 }
 
 export function StorageGateway(label?: string, options?: Record<string, unknown>) {
   const node = _Storage(label ?? "StorageGateway", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "StorageGateway";
+  (node as unknown as Record<string, unknown>)["~resource"] = "StorageGateway";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = storage_gatewayIcon;
   return node;
 }

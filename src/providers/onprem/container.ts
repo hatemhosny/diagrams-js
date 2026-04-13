@@ -16,56 +16,56 @@ function _Container(label?: string, options?: Record<string, unknown>) {
 
 export function Containerd(label?: string, options?: Record<string, unknown>) {
   const node = _Container(label ?? "Containerd", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Containerd";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Containerd";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = containerdIcon;
   return node;
 }
 
 export function Crio(label?: string, options?: Record<string, unknown>) {
   const node = _Container(label ?? "Crio", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Crio";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Crio";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = crioIcon;
   return node;
 }
 
 export function Docker(label?: string, options?: Record<string, unknown>) {
   const node = _Container(label ?? "Docker", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Docker";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Docker";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = dockerIcon;
   return node;
 }
 
 export function Firecracker(label?: string, options?: Record<string, unknown>) {
   const node = _Container(label ?? "Firecracker", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Firecracker";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Firecracker";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = firecrackerIcon;
   return node;
 }
 
 export function Gvisor(label?: string, options?: Record<string, unknown>) {
   const node = _Container(label ?? "Gvisor", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Gvisor";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Gvisor";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = gvisorIcon;
   return node;
 }
 
 export function K3s(label?: string, options?: Record<string, unknown>) {
   const node = _Container(label ?? "K3s", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "K3s";
+  (node as unknown as Record<string, unknown>)["~resource"] = "K3s";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = k3sIcon;
   return node;
 }
 
 export function Lxc(label?: string, options?: Record<string, unknown>) {
   const node = _Container(label ?? "Lxc", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Lxc";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Lxc";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = lxcIcon;
   return node;
 }
 
 export function Rkt(label?: string, options?: Record<string, unknown>) {
   const node = _Container(label ?? "Rkt", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Rkt";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Rkt";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = rktIcon;
   return node;
 }

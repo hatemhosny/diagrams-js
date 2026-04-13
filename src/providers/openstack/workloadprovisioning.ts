@@ -11,21 +11,21 @@ function _Workloadprovisioning(label?: string, options?: Record<string, unknown>
 
 export function Magnum(label?: string, options?: Record<string, unknown>) {
   const node = _Workloadprovisioning(label ?? "Magnum", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Magnum";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Magnum";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = magnumIcon;
   return node;
 }
 
 export function Sahara(label?: string, options?: Record<string, unknown>) {
   const node = _Workloadprovisioning(label ?? "Sahara", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Sahara";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Sahara";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = saharaIcon;
   return node;
 }
 
 export function Trove(label?: string, options?: Record<string, unknown>) {
   const node = _Workloadprovisioning(label ?? "Trove", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Trove";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Trove";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = troveIcon;
   return node;
 }

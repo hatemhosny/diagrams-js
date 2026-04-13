@@ -12,28 +12,28 @@ function _Inmemory(label?: string, options?: Record<string, unknown>) {
 
 export function Aerospike(label?: string, options?: Record<string, unknown>) {
   const node = _Inmemory(label ?? "Aerospike", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Aerospike";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Aerospike";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = aerospikeIcon;
   return node;
 }
 
 export function Hazelcast(label?: string, options?: Record<string, unknown>) {
   const node = _Inmemory(label ?? "Hazelcast", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Hazelcast";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Hazelcast";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = hazelcastIcon;
   return node;
 }
 
 export function Memcached(label?: string, options?: Record<string, unknown>) {
   const node = _Inmemory(label ?? "Memcached", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Memcached";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Memcached";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = memcachedIcon;
   return node;
 }
 
 export function Redis(label?: string, options?: Record<string, unknown>) {
   const node = _Inmemory(label ?? "Redis", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Redis";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Redis";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = redisIcon;
   return node;
 }

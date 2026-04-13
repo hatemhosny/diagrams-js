@@ -9,7 +9,7 @@ function _Containerservices(label?: string, options?: Record<string, unknown>) {
 
 export function Kuryr(label?: string, options?: Record<string, unknown>) {
   const node = _Containerservices(label ?? "Kuryr", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Kuryr";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Kuryr";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = kuryrIcon;
   return node;
 }

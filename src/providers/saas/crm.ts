@@ -10,14 +10,14 @@ function _Crm(label?: string, options?: Record<string, unknown>) {
 
 export function Intercom(label?: string, options?: Record<string, unknown>) {
   const node = _Crm(label ?? "Intercom", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Intercom";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Intercom";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = intercomIcon;
   return node;
 }
 
 export function Zendesk(label?: string, options?: Record<string, unknown>) {
   const node = _Crm(label ?? "Zendesk", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Zendesk";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Zendesk";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = zendeskIcon;
   return node;
 }

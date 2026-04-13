@@ -13,35 +13,35 @@ function _Orchestration(label?: string, options?: Record<string, unknown>) {
 
 export function Blazar(label?: string, options?: Record<string, unknown>) {
   const node = _Orchestration(label ?? "Blazar", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Blazar";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Blazar";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = blazarIcon;
   return node;
 }
 
 export function Heat(label?: string, options?: Record<string, unknown>) {
   const node = _Orchestration(label ?? "Heat", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Heat";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Heat";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = heatIcon;
   return node;
 }
 
 export function Mistral(label?: string, options?: Record<string, unknown>) {
   const node = _Orchestration(label ?? "Mistral", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Mistral";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Mistral";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = mistralIcon;
   return node;
 }
 
 export function Senlin(label?: string, options?: Record<string, unknown>) {
   const node = _Orchestration(label ?? "Senlin", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Senlin";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Senlin";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = senlinIcon;
   return node;
 }
 
 export function Zaqar(label?: string, options?: Record<string, unknown>) {
   const node = _Orchestration(label ?? "Zaqar", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Zaqar";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Zaqar";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = zaqarIcon;
   return node;
 }

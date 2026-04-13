@@ -11,21 +11,21 @@ function _Mobile(label?: string, options?: Record<string, unknown>) {
 
 export function Mergin(label?: string, options?: Record<string, unknown>) {
   const node = _Mobile(label ?? "Mergin", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Mergin";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Mergin";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = merginIcon;
   return node;
 }
 
 export function Qfield(label?: string, options?: Record<string, unknown>) {
   const node = _Mobile(label ?? "Qfield", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Qfield";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Qfield";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = qfieldIcon;
   return node;
 }
 
 export function Smash(label?: string, options?: Record<string, unknown>) {
   const node = _Mobile(label ?? "Smash", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Smash";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Smash";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = smashIcon;
   return node;
 }

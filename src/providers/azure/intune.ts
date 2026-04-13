@@ -26,7 +26,7 @@ function _Intune(label?: string, options?: Record<string, unknown>) {
 
 export function AzureADRolesAndAdministrators(label?: string, options?: Record<string, unknown>) {
   const node = _Intune(label ?? "AzureADRolesAndAdministrators", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "AzureADRolesAndAdministrators";
+  (node as unknown as Record<string, unknown>)["~resource"] = "AzureADRolesAndAdministrators";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] =
     azure_ad_roles_and_administratorsIcon;
   return node;
@@ -34,119 +34,119 @@ export function AzureADRolesAndAdministrators(label?: string, options?: Record<s
 
 export function ClientApps(label?: string, options?: Record<string, unknown>) {
   const node = _Intune(label ?? "ClientApps", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "ClientApps";
+  (node as unknown as Record<string, unknown>)["~resource"] = "ClientApps";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = client_appsIcon;
   return node;
 }
 
 export function DeviceCompliance(label?: string, options?: Record<string, unknown>) {
   const node = _Intune(label ?? "DeviceCompliance", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "DeviceCompliance";
+  (node as unknown as Record<string, unknown>)["~resource"] = "DeviceCompliance";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = device_complianceIcon;
   return node;
 }
 
 export function DeviceConfiguration(label?: string, options?: Record<string, unknown>) {
   const node = _Intune(label ?? "DeviceConfiguration", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "DeviceConfiguration";
+  (node as unknown as Record<string, unknown>)["~resource"] = "DeviceConfiguration";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = device_configurationIcon;
   return node;
 }
 
 export function DeviceEnrollment(label?: string, options?: Record<string, unknown>) {
   const node = _Intune(label ?? "DeviceEnrollment", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "DeviceEnrollment";
+  (node as unknown as Record<string, unknown>)["~resource"] = "DeviceEnrollment";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = device_enrollmentIcon;
   return node;
 }
 
 export function DeviceSecurityApple(label?: string, options?: Record<string, unknown>) {
   const node = _Intune(label ?? "DeviceSecurityApple", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "DeviceSecurityApple";
+  (node as unknown as Record<string, unknown>)["~resource"] = "DeviceSecurityApple";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = device_security_appleIcon;
   return node;
 }
 
 export function DeviceSecurityGoogle(label?: string, options?: Record<string, unknown>) {
   const node = _Intune(label ?? "DeviceSecurityGoogle", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "DeviceSecurityGoogle";
+  (node as unknown as Record<string, unknown>)["~resource"] = "DeviceSecurityGoogle";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = device_security_googleIcon;
   return node;
 }
 
 export function DeviceSecurityWindows(label?: string, options?: Record<string, unknown>) {
   const node = _Intune(label ?? "DeviceSecurityWindows", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "DeviceSecurityWindows";
+  (node as unknown as Record<string, unknown>)["~resource"] = "DeviceSecurityWindows";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = device_security_windowsIcon;
   return node;
 }
 
 export function Devices(label?: string, options?: Record<string, unknown>) {
   const node = _Intune(label ?? "Devices", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Devices";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Devices";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = devicesIcon;
   return node;
 }
 
 export function Ebooks(label?: string, options?: Record<string, unknown>) {
   const node = _Intune(label ?? "Ebooks", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Ebooks";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Ebooks";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = ebooksIcon;
   return node;
 }
 
 export function ExchangeAccess(label?: string, options?: Record<string, unknown>) {
   const node = _Intune(label ?? "ExchangeAccess", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "ExchangeAccess";
+  (node as unknown as Record<string, unknown>)["~resource"] = "ExchangeAccess";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = exchange_accessIcon;
   return node;
 }
 
 export function IntuneAppProtection(label?: string, options?: Record<string, unknown>) {
   const node = _Intune(label ?? "IntuneAppProtection", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "IntuneAppProtection";
+  (node as unknown as Record<string, unknown>)["~resource"] = "IntuneAppProtection";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = intune_app_protectionIcon;
   return node;
 }
 
 export function IntuneForEducation(label?: string, options?: Record<string, unknown>) {
   const node = _Intune(label ?? "IntuneForEducation", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "IntuneForEducation";
+  (node as unknown as Record<string, unknown>)["~resource"] = "IntuneForEducation";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = intune_for_educationIcon;
   return node;
 }
 
 export function Intune(label?: string, options?: Record<string, unknown>) {
   const node = _Intune(label ?? "Intune", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Intune";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Intune";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = intuneIcon;
   return node;
 }
 
 export function Mindaro(label?: string, options?: Record<string, unknown>) {
   const node = _Intune(label ?? "Mindaro", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Mindaro";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Mindaro";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = mindaroIcon;
   return node;
 }
 
 export function SecurityBaselines(label?: string, options?: Record<string, unknown>) {
   const node = _Intune(label ?? "SecurityBaselines", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "SecurityBaselines";
+  (node as unknown as Record<string, unknown>)["~resource"] = "SecurityBaselines";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = security_baselinesIcon;
   return node;
 }
 
 export function SoftwareUpdates(label?: string, options?: Record<string, unknown>) {
   const node = _Intune(label ?? "SoftwareUpdates", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "SoftwareUpdates";
+  (node as unknown as Record<string, unknown>)["~resource"] = "SoftwareUpdates";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = software_updatesIcon;
   return node;
 }
 
 export function TenantStatus(label?: string, options?: Record<string, unknown>) {
   const node = _Intune(label ?? "TenantStatus", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "TenantStatus";
+  (node as unknown as Record<string, unknown>)["~resource"] = "TenantStatus";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = tenant_statusIcon;
   return node;
 }

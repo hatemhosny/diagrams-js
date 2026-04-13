@@ -26,126 +26,126 @@ function _Database(label?: string, options?: Record<string, unknown>) {
 
 export function AutonomousWhite(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "AutonomousWhite", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "AutonomousWhite";
+  (node as unknown as Record<string, unknown>)["~resource"] = "AutonomousWhite";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = autonomous_whiteIcon;
   return node;
 }
 
 export function Autonomous(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "Autonomous", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Autonomous";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Autonomous";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = autonomousIcon;
   return node;
 }
 
 export function BigdataServiceWhite(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "BigdataServiceWhite", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "BigdataServiceWhite";
+  (node as unknown as Record<string, unknown>)["~resource"] = "BigdataServiceWhite";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = bigdata_service_whiteIcon;
   return node;
 }
 
 export function BigdataService(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "BigdataService", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "BigdataService";
+  (node as unknown as Record<string, unknown>)["~resource"] = "BigdataService";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = bigdata_serviceIcon;
   return node;
 }
 
 export function DatabaseServiceWhite(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "DatabaseServiceWhite", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "DatabaseServiceWhite";
+  (node as unknown as Record<string, unknown>)["~resource"] = "DatabaseServiceWhite";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = database_service_whiteIcon;
   return node;
 }
 
 export function DatabaseService(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "DatabaseService", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "DatabaseService";
+  (node as unknown as Record<string, unknown>)["~resource"] = "DatabaseService";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = database_serviceIcon;
   return node;
 }
 
 export function DataflowApacheWhite(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "DataflowApacheWhite", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "DataflowApacheWhite";
+  (node as unknown as Record<string, unknown>)["~resource"] = "DataflowApacheWhite";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = dataflow_apache_whiteIcon;
   return node;
 }
 
 export function DataflowApache(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "DataflowApache", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "DataflowApache";
+  (node as unknown as Record<string, unknown>)["~resource"] = "DataflowApache";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = dataflow_apacheIcon;
   return node;
 }
 
 export function DcatWhite(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "DcatWhite", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "DcatWhite";
+  (node as unknown as Record<string, unknown>)["~resource"] = "DcatWhite";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = dcat_whiteIcon;
   return node;
 }
 
 export function Dcat(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "Dcat", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Dcat";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Dcat";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = dcatIcon;
   return node;
 }
 
 export function DisWhite(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "DisWhite", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "DisWhite";
+  (node as unknown as Record<string, unknown>)["~resource"] = "DisWhite";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = dis_whiteIcon;
   return node;
 }
 
 export function Dis(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "Dis", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Dis";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Dis";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = disIcon;
   return node;
 }
 
 export function DMSWhite(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "DMSWhite", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "DMSWhite";
+  (node as unknown as Record<string, unknown>)["~resource"] = "DMSWhite";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = dms_whiteIcon;
   return node;
 }
 
 export function DMS(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "DMS", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "DMS";
+  (node as unknown as Record<string, unknown>)["~resource"] = "DMS";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = dmsIcon;
   return node;
 }
 
 export function ScienceWhite(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "ScienceWhite", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "ScienceWhite";
+  (node as unknown as Record<string, unknown>)["~resource"] = "ScienceWhite";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = science_whiteIcon;
   return node;
 }
 
 export function Science(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "Science", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Science";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Science";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = scienceIcon;
   return node;
 }
 
 export function StreamWhite(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "StreamWhite", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "StreamWhite";
+  (node as unknown as Record<string, unknown>)["~resource"] = "StreamWhite";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = stream_whiteIcon;
   return node;
 }
 
 export function Stream(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "Stream", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Stream";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Stream";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = streamIcon;
   return node;
 }

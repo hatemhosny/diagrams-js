@@ -12,28 +12,28 @@ function _Geocoding(label?: string, options?: Record<string, unknown>) {
 
 export function Addok(label?: string, options?: Record<string, unknown>) {
   const node = _Geocoding(label ?? "Addok", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Addok";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Addok";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = addokIcon;
   return node;
 }
 
 export function Gisgraphy(label?: string, options?: Record<string, unknown>) {
   const node = _Geocoding(label ?? "Gisgraphy", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Gisgraphy";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Gisgraphy";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = gisgraphyIcon;
   return node;
 }
 
 export function Nominatim(label?: string, options?: Record<string, unknown>) {
   const node = _Geocoding(label ?? "Nominatim", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Nominatim";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Nominatim";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = nominatimIcon;
   return node;
 }
 
 export function Pelias(label?: string, options?: Record<string, unknown>) {
   const node = _Geocoding(label ?? "Pelias", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Pelias";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Pelias";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = peliasIcon;
   return node;
 }

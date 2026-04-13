@@ -10,14 +10,14 @@ function _Security(label?: string, options?: Record<string, unknown>) {
 
 export function Crowdstrike(label?: string, options?: Record<string, unknown>) {
   const node = _Security(label ?? "Crowdstrike", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Crowdstrike";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Crowdstrike";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = crowdstrikeIcon;
   return node;
 }
 
 export function Sonarqube(label?: string, options?: Record<string, unknown>) {
   const node = _Security(label ?? "Sonarqube", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Sonarqube";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Sonarqube";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = sonarqubeIcon;
   return node;
 }

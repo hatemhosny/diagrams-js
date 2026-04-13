@@ -22,98 +22,98 @@ function _Elasticsearch(label?: string, options?: Record<string, unknown>) {
 
 export function Alerting(label?: string, options?: Record<string, unknown>) {
   const node = _Elasticsearch(label ?? "Alerting", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Alerting";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Alerting";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = alertingIcon;
   return node;
 }
 
 export function Beats(label?: string, options?: Record<string, unknown>) {
   const node = _Elasticsearch(label ?? "Beats", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Beats";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Beats";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = beatsIcon;
   return node;
 }
 
 export function Elasticsearch(label?: string, options?: Record<string, unknown>) {
   const node = _Elasticsearch(label ?? "Elasticsearch", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Elasticsearch";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Elasticsearch";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = elasticsearchIcon;
   return node;
 }
 
 export function Kibana(label?: string, options?: Record<string, unknown>) {
   const node = _Elasticsearch(label ?? "Kibana", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Kibana";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Kibana";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = kibanaIcon;
   return node;
 }
 
 export function LogstashPipeline(label?: string, options?: Record<string, unknown>) {
   const node = _Elasticsearch(label ?? "LogstashPipeline", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "LogstashPipeline";
+  (node as unknown as Record<string, unknown>)["~resource"] = "LogstashPipeline";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = logstash_pipelineIcon;
   return node;
 }
 
 export function Logstash(label?: string, options?: Record<string, unknown>) {
   const node = _Elasticsearch(label ?? "Logstash", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Logstash";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Logstash";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = logstashIcon;
   return node;
 }
 
 export function MachineLearning(label?: string, options?: Record<string, unknown>) {
   const node = _Elasticsearch(label ?? "MachineLearning", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "MachineLearning";
+  (node as unknown as Record<string, unknown>)["~resource"] = "MachineLearning";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = machine_learningIcon;
   return node;
 }
 
 export function MapServices(label?: string, options?: Record<string, unknown>) {
   const node = _Elasticsearch(label ?? "MapServices", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "MapServices";
+  (node as unknown as Record<string, unknown>)["~resource"] = "MapServices";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = map_servicesIcon;
   return node;
 }
 
 export function Maps(label?: string, options?: Record<string, unknown>) {
   const node = _Elasticsearch(label ?? "Maps", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Maps";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Maps";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = mapsIcon;
   return node;
 }
 
 export function Monitoring(label?: string, options?: Record<string, unknown>) {
   const node = _Elasticsearch(label ?? "Monitoring", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Monitoring";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Monitoring";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = monitoringIcon;
   return node;
 }
 
 export function SearchableSnapshots(label?: string, options?: Record<string, unknown>) {
   const node = _Elasticsearch(label ?? "SearchableSnapshots", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "SearchableSnapshots";
+  (node as unknown as Record<string, unknown>)["~resource"] = "SearchableSnapshots";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = searchable_snapshotsIcon;
   return node;
 }
 
 export function SecuritySettings(label?: string, options?: Record<string, unknown>) {
   const node = _Elasticsearch(label ?? "SecuritySettings", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "SecuritySettings";
+  (node as unknown as Record<string, unknown>)["~resource"] = "SecuritySettings";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = security_settingsIcon;
   return node;
 }
 
 export function SQL(label?: string, options?: Record<string, unknown>) {
   const node = _Elasticsearch(label ?? "SQL", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "SQL";
+  (node as unknown as Record<string, unknown>)["~resource"] = "SQL";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = sqlIcon;
   return node;
 }
 
 export function Stack(label?: string, options?: Record<string, unknown>) {
   const node = _Elasticsearch(label ?? "Stack", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Stack";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Stack";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = stackIcon;
   return node;
 }

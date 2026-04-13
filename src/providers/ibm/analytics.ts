@@ -13,35 +13,35 @@ function _Analytics(label?: string, options?: Record<string, unknown>) {
 
 export function Analytics(label?: string, options?: Record<string, unknown>) {
   const node = _Analytics(label ?? "Analytics", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Analytics";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Analytics";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = analyticsIcon;
   return node;
 }
 
 export function DataIntegration(label?: string, options?: Record<string, unknown>) {
   const node = _Analytics(label ?? "DataIntegration", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "DataIntegration";
+  (node as unknown as Record<string, unknown>)["~resource"] = "DataIntegration";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = data_integrationIcon;
   return node;
 }
 
 export function DataRepositories(label?: string, options?: Record<string, unknown>) {
   const node = _Analytics(label ?? "DataRepositories", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "DataRepositories";
+  (node as unknown as Record<string, unknown>)["~resource"] = "DataRepositories";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = data_repositoriesIcon;
   return node;
 }
 
 export function DeviceAnalytics(label?: string, options?: Record<string, unknown>) {
   const node = _Analytics(label ?? "DeviceAnalytics", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "DeviceAnalytics";
+  (node as unknown as Record<string, unknown>)["~resource"] = "DeviceAnalytics";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = device_analyticsIcon;
   return node;
 }
 
 export function StreamingComputing(label?: string, options?: Record<string, unknown>) {
   const node = _Analytics(label ?? "StreamingComputing", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "StreamingComputing";
+  (node as unknown as Record<string, unknown>)["~resource"] = "StreamingComputing";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = streaming_computingIcon;
   return node;
 }

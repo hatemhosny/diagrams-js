@@ -212,11 +212,11 @@ function serializeNode(
     const raw = nodeObj as unknown as Record<string, unknown>;
     const provider = raw["~provider"] as string | undefined;
     const service = raw["~type"] as string | undefined;
-    const resourceType = raw["~resourceType"] as string | undefined;
+    const resource = raw["~resource"] as string | undefined;
 
     if (provider) json.provider = provider;
     if (service) json.service = service;
-    if (resourceType) json.type = resourceType;
+    if (resource) json.type = resource;
 
     // Extract icon URL for Custom nodes only.
     // Provider nodes get icons resolved from their provider/service/type triple
@@ -623,7 +623,7 @@ export async function fromJSON(
     const factory = nodeDef.type ? factoryLookup.get(nodeDef.type) : undefined;
 
     if (factory) {
-      // Use the provider factory - it sets ~provider, ~type, ~resourceType, ~iconDataUrl
+      // Use the provider factory - it sets ~provider, ~type, ~resource, ~iconDataUrl
       node = factory(nodeDef.label ?? "", { nodeId: nodeDef.id, ...nodeDef.attrs });
     } else {
       // Fallback: create a plain Node and set metadata manually
@@ -645,7 +645,7 @@ export async function fromJSON(
         raw["~type"] = nodeDef.service;
       }
       if (nodeDef.type) {
-        raw["~resourceType"] = nodeDef.type;
+        raw["~resource"] = nodeDef.type;
       }
       // Set explicit iconUrl (for Custom nodes or manual override)
       if (nodeDef.iconUrl) {

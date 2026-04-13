@@ -12,28 +12,28 @@ function _Routing(label?: string, options?: Record<string, unknown>) {
 
 export function Graphhopper(label?: string, options?: Record<string, unknown>) {
   const node = _Routing(label ?? "Graphhopper", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Graphhopper";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Graphhopper";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = graphhopperIcon;
   return node;
 }
 
 export function Osrm(label?: string, options?: Record<string, unknown>) {
   const node = _Routing(label ?? "Osrm", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Osrm";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Osrm";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = osrmIcon;
   return node;
 }
 
 export function Pgrouting(label?: string, options?: Record<string, unknown>) {
   const node = _Routing(label ?? "Pgrouting", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Pgrouting";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Pgrouting";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = pgroutingIcon;
   return node;
 }
 
 export function Valhalla(label?: string, options?: Record<string, unknown>) {
   const node = _Routing(label ?? "Valhalla", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Valhalla";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Valhalla";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = valhallaIcon;
   return node;
 }

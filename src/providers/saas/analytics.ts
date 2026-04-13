@@ -11,21 +11,21 @@ function _Analytics(label?: string, options?: Record<string, unknown>) {
 
 export function Dataform(label?: string, options?: Record<string, unknown>) {
   const node = _Analytics(label ?? "Dataform", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Dataform";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Dataform";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = dataformIcon;
   return node;
 }
 
 export function Snowflake(label?: string, options?: Record<string, unknown>) {
   const node = _Analytics(label ?? "Snowflake", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Snowflake";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Snowflake";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = snowflakeIcon;
   return node;
 }
 
 export function Stitch(label?: string, options?: Record<string, unknown>) {
   const node = _Analytics(label ?? "Stitch", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Stitch";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Stitch";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = stitchIcon;
   return node;
 }

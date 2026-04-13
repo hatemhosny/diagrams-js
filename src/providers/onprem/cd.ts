@@ -11,21 +11,21 @@ function _Cd(label?: string, options?: Record<string, unknown>) {
 
 export function Spinnaker(label?: string, options?: Record<string, unknown>) {
   const node = _Cd(label ?? "Spinnaker", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Spinnaker";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Spinnaker";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = spinnakerIcon;
   return node;
 }
 
 export function TektonCli(label?: string, options?: Record<string, unknown>) {
   const node = _Cd(label ?? "TektonCli", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "TektonCli";
+  (node as unknown as Record<string, unknown>)["~resource"] = "TektonCli";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = tekton_cliIcon;
   return node;
 }
 
 export function Tekton(label?: string, options?: Record<string, unknown>) {
   const node = _Cd(label ?? "Tekton", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Tekton";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Tekton";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = tektonIcon;
   return node;
 }

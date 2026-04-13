@@ -9,7 +9,7 @@ function _Frontend(label?: string, options?: Record<string, unknown>) {
 
 export function Horizon(label?: string, options?: Record<string, unknown>) {
   const node = _Frontend(label ?? "Horizon", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Horizon";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Horizon";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = horizonIcon;
   return node;
 }

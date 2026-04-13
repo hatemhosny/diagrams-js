@@ -20,84 +20,84 @@ function _Compute(label?: string, options?: Record<string, unknown>) {
 
 export function AppEngine(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "AppEngine", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "AppEngine";
+  (node as unknown as Record<string, unknown>)["~resource"] = "AppEngine";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = app_engineIcon;
   return node;
 }
 
 export function BinaryAuthorization(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "BinaryAuthorization", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "BinaryAuthorization";
+  (node as unknown as Record<string, unknown>)["~resource"] = "BinaryAuthorization";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = binary_authorizationIcon;
   return node;
 }
 
 export function ComputeEngine(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "ComputeEngine", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "ComputeEngine";
+  (node as unknown as Record<string, unknown>)["~resource"] = "ComputeEngine";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = compute_engineIcon;
   return node;
 }
 
 export function ContainerOptimizedOS(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "ContainerOptimizedOS", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "ContainerOptimizedOS";
+  (node as unknown as Record<string, unknown>)["~resource"] = "ContainerOptimizedOS";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = container_optimized_osIcon;
   return node;
 }
 
 export function Functions(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "Functions", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Functions";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Functions";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = functionsIcon;
   return node;
 }
 
 export function GKEOnPrem(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "GKEOnPrem", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "GKEOnPrem";
+  (node as unknown as Record<string, unknown>)["~resource"] = "GKEOnPrem";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = gke_on_premIcon;
   return node;
 }
 
 export function GPU(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "GPU", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "GPU";
+  (node as unknown as Record<string, unknown>)["~resource"] = "GPU";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = gpuIcon;
   return node;
 }
 
 export function KubernetesEngine(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "KubernetesEngine", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "KubernetesEngine";
+  (node as unknown as Record<string, unknown>)["~resource"] = "KubernetesEngine";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = kubernetes_engineIcon;
   return node;
 }
 
 export function OSConfigurationManagement(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "OSConfigurationManagement", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "OSConfigurationManagement";
+  (node as unknown as Record<string, unknown>)["~resource"] = "OSConfigurationManagement";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = os_configuration_managementIcon;
   return node;
 }
 
 export function OSInventoryManagement(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "OSInventoryManagement", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "OSInventoryManagement";
+  (node as unknown as Record<string, unknown>)["~resource"] = "OSInventoryManagement";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = os_inventory_managementIcon;
   return node;
 }
 
 export function OSPatchManagement(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "OSPatchManagement", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "OSPatchManagement";
+  (node as unknown as Record<string, unknown>)["~resource"] = "OSPatchManagement";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = os_patch_managementIcon;
   return node;
 }
 
 export function Run(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "Run", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Run";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Run";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = runIcon;
   return node;
 }

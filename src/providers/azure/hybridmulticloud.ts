@@ -13,35 +13,35 @@ function _Hybridmulticloud(label?: string, options?: Record<string, unknown>) {
 
 export function AzureOperator5gCore(label?: string, options?: Record<string, unknown>) {
   const node = _Hybridmulticloud(label ?? "AzureOperator5gCore", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "AzureOperator5gCore";
+  (node as unknown as Record<string, unknown>)["~resource"] = "AzureOperator5gCore";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = azure_operator_5g_coreIcon;
   return node;
 }
 
 export function AzureOperatorInsights(label?: string, options?: Record<string, unknown>) {
   const node = _Hybridmulticloud(label ?? "AzureOperatorInsights", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "AzureOperatorInsights";
+  (node as unknown as Record<string, unknown>)["~resource"] = "AzureOperatorInsights";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = azure_operator_insightsIcon;
   return node;
 }
 
 export function AzureOperatorNexus(label?: string, options?: Record<string, unknown>) {
   const node = _Hybridmulticloud(label ?? "AzureOperatorNexus", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "AzureOperatorNexus";
+  (node as unknown as Record<string, unknown>)["~resource"] = "AzureOperatorNexus";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = azure_operator_nexusIcon;
   return node;
 }
 
 export function AzureOperatorServiceManager(label?: string, options?: Record<string, unknown>) {
   const node = _Hybridmulticloud(label ?? "AzureOperatorServiceManager", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "AzureOperatorServiceManager";
+  (node as unknown as Record<string, unknown>)["~resource"] = "AzureOperatorServiceManager";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = azure_operator_service_managerIcon;
   return node;
 }
 
 export function AzureProgrammableConnectivity(label?: string, options?: Record<string, unknown>) {
   const node = _Hybridmulticloud(label ?? "AzureProgrammableConnectivity", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "AzureProgrammableConnectivity";
+  (node as unknown as Record<string, unknown>)["~resource"] = "AzureProgrammableConnectivity";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] =
     azure_programmable_connectivityIcon;
   return node;

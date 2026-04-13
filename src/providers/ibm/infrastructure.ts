@@ -26,119 +26,119 @@ function _Infrastructure(label?: string, options?: Record<string, unknown>) {
 
 export function Channels(label?: string, options?: Record<string, unknown>) {
   const node = _Infrastructure(label ?? "Channels", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Channels";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Channels";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = channelsIcon;
   return node;
 }
 
 export function CloudMessaging(label?: string, options?: Record<string, unknown>) {
   const node = _Infrastructure(label ?? "CloudMessaging", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "CloudMessaging";
+  (node as unknown as Record<string, unknown>)["~resource"] = "CloudMessaging";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = cloud_messagingIcon;
   return node;
 }
 
 export function Dashboard(label?: string, options?: Record<string, unknown>) {
   const node = _Infrastructure(label ?? "Dashboard", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Dashboard";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Dashboard";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = dashboardIcon;
   return node;
 }
 
 export function Diagnostics(label?: string, options?: Record<string, unknown>) {
   const node = _Infrastructure(label ?? "Diagnostics", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Diagnostics";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Diagnostics";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = diagnosticsIcon;
   return node;
 }
 
 export function EdgeServices(label?: string, options?: Record<string, unknown>) {
   const node = _Infrastructure(label ?? "EdgeServices", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "EdgeServices";
+  (node as unknown as Record<string, unknown>)["~resource"] = "EdgeServices";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = edge_servicesIcon;
   return node;
 }
 
 export function EnterpriseMessaging(label?: string, options?: Record<string, unknown>) {
   const node = _Infrastructure(label ?? "EnterpriseMessaging", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "EnterpriseMessaging";
+  (node as unknown as Record<string, unknown>)["~resource"] = "EnterpriseMessaging";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = enterprise_messagingIcon;
   return node;
 }
 
 export function EventFeed(label?: string, options?: Record<string, unknown>) {
   const node = _Infrastructure(label ?? "EventFeed", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "EventFeed";
+  (node as unknown as Record<string, unknown>)["~resource"] = "EventFeed";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = event_feedIcon;
   return node;
 }
 
 export function InfrastructureServices(label?: string, options?: Record<string, unknown>) {
   const node = _Infrastructure(label ?? "InfrastructureServices", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "InfrastructureServices";
+  (node as unknown as Record<string, unknown>)["~resource"] = "InfrastructureServices";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = infrastructure_servicesIcon;
   return node;
 }
 
 export function InterserviceCommunication(label?: string, options?: Record<string, unknown>) {
   const node = _Infrastructure(label ?? "InterserviceCommunication", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "InterserviceCommunication";
+  (node as unknown as Record<string, unknown>)["~resource"] = "InterserviceCommunication";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = interservice_communicationIcon;
   return node;
 }
 
 export function LoadBalancingRouting(label?: string, options?: Record<string, unknown>) {
   const node = _Infrastructure(label ?? "LoadBalancingRouting", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "LoadBalancingRouting";
+  (node as unknown as Record<string, unknown>)["~resource"] = "LoadBalancingRouting";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = load_balancing_routingIcon;
   return node;
 }
 
 export function MicroservicesMesh(label?: string, options?: Record<string, unknown>) {
   const node = _Infrastructure(label ?? "MicroservicesMesh", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "MicroservicesMesh";
+  (node as unknown as Record<string, unknown>)["~resource"] = "MicroservicesMesh";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = microservices_meshIcon;
   return node;
 }
 
 export function MobileBackend(label?: string, options?: Record<string, unknown>) {
   const node = _Infrastructure(label ?? "MobileBackend", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "MobileBackend";
+  (node as unknown as Record<string, unknown>)["~resource"] = "MobileBackend";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = mobile_backendIcon;
   return node;
 }
 
 export function MobileProviderNetwork(label?: string, options?: Record<string, unknown>) {
   const node = _Infrastructure(label ?? "MobileProviderNetwork", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "MobileProviderNetwork";
+  (node as unknown as Record<string, unknown>)["~resource"] = "MobileProviderNetwork";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = mobile_provider_networkIcon;
   return node;
 }
 
 export function MonitoringLogging(label?: string, options?: Record<string, unknown>) {
   const node = _Infrastructure(label ?? "MonitoringLogging", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "MonitoringLogging";
+  (node as unknown as Record<string, unknown>)["~resource"] = "MonitoringLogging";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = monitoring_loggingIcon;
   return node;
 }
 
 export function Monitoring(label?: string, options?: Record<string, unknown>) {
   const node = _Infrastructure(label ?? "Monitoring", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Monitoring";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Monitoring";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = monitoringIcon;
   return node;
 }
 
 export function PeerServices(label?: string, options?: Record<string, unknown>) {
   const node = _Infrastructure(label ?? "PeerServices", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "PeerServices";
+  (node as unknown as Record<string, unknown>)["~resource"] = "PeerServices";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = peer_servicesIcon;
   return node;
 }
 
 export function ServiceDiscoveryConfiguration(label?: string, options?: Record<string, unknown>) {
   const node = _Infrastructure(label ?? "ServiceDiscoveryConfiguration", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "ServiceDiscoveryConfiguration";
+  (node as unknown as Record<string, unknown>)["~resource"] = "ServiceDiscoveryConfiguration";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] =
     service_discovery_configurationIcon;
   return node;
@@ -146,7 +146,7 @@ export function ServiceDiscoveryConfiguration(label?: string, options?: Record<s
 
 export function TransformationConnectivity(label?: string, options?: Record<string, unknown>) {
   const node = _Infrastructure(label ?? "TransformationConnectivity", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "TransformationConnectivity";
+  (node as unknown as Record<string, unknown>)["~resource"] = "TransformationConnectivity";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = transformation_connectivityIcon;
   return node;
 }

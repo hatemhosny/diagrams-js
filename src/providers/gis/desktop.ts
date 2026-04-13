@@ -10,14 +10,14 @@ function _Desktop(label?: string, options?: Record<string, unknown>) {
 
 export function Maptunik(label?: string, options?: Record<string, unknown>) {
   const node = _Desktop(label ?? "Maptunik", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Maptunik";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Maptunik";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = maptunikIcon;
   return node;
 }
 
 export function QGIS(label?: string, options?: Record<string, unknown>) {
   const node = _Desktop(label ?? "QGIS", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "QGIS";
+  (node as unknown as Record<string, unknown>)["~resource"] = "QGIS";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = qgisIcon;
   return node;
 }

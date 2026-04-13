@@ -13,35 +13,35 @@ function _Observability(label?: string, options?: Record<string, unknown>) {
 
 export function APM(label?: string, options?: Record<string, unknown>) {
   const node = _Observability(label ?? "APM", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "APM";
+  (node as unknown as Record<string, unknown>)["~resource"] = "APM";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = apmIcon;
   return node;
 }
 
 export function Logs(label?: string, options?: Record<string, unknown>) {
   const node = _Observability(label ?? "Logs", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Logs";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Logs";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = logsIcon;
   return node;
 }
 
 export function Metrics(label?: string, options?: Record<string, unknown>) {
   const node = _Observability(label ?? "Metrics", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Metrics";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Metrics";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = metricsIcon;
   return node;
 }
 
 export function Observability(label?: string, options?: Record<string, unknown>) {
   const node = _Observability(label ?? "Observability", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Observability";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Observability";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = observabilityIcon;
   return node;
 }
 
 export function Uptime(label?: string, options?: Record<string, unknown>) {
   const node = _Observability(label ?? "Uptime", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Uptime";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Uptime";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = uptimeIcon;
   return node;
 }

@@ -9,7 +9,7 @@ function _Storage(label?: string, options?: Record<string, unknown>) {
 
 export function Storage(label?: string, options?: Record<string, unknown>) {
   const node = _Storage(label ?? "Storage", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Storage";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Storage";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = storageIcon;
   return node;
 }

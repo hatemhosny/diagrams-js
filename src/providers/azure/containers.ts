@@ -15,49 +15,49 @@ function _Containers(label?: string, options?: Record<string, unknown>) {
 
 export function AppServices(label?: string, options?: Record<string, unknown>) {
   const node = _Containers(label ?? "AppServices", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "AppServices";
+  (node as unknown as Record<string, unknown>)["~resource"] = "AppServices";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = app_servicesIcon;
   return node;
 }
 
 export function AzureRedHatOpenshift(label?: string, options?: Record<string, unknown>) {
   const node = _Containers(label ?? "AzureRedHatOpenshift", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "AzureRedHatOpenshift";
+  (node as unknown as Record<string, unknown>)["~resource"] = "AzureRedHatOpenshift";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = azure_red_hat_openshiftIcon;
   return node;
 }
 
 export function BatchAccounts(label?: string, options?: Record<string, unknown>) {
   const node = _Containers(label ?? "BatchAccounts", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "BatchAccounts";
+  (node as unknown as Record<string, unknown>)["~resource"] = "BatchAccounts";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = batch_accountsIcon;
   return node;
 }
 
 export function ContainerInstances(label?: string, options?: Record<string, unknown>) {
   const node = _Containers(label ?? "ContainerInstances", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "ContainerInstances";
+  (node as unknown as Record<string, unknown>)["~resource"] = "ContainerInstances";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = container_instancesIcon;
   return node;
 }
 
 export function ContainerRegistries(label?: string, options?: Record<string, unknown>) {
   const node = _Containers(label ?? "ContainerRegistries", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "ContainerRegistries";
+  (node as unknown as Record<string, unknown>)["~resource"] = "ContainerRegistries";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = container_registriesIcon;
   return node;
 }
 
 export function KubernetesServices(label?: string, options?: Record<string, unknown>) {
   const node = _Containers(label ?? "KubernetesServices", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "KubernetesServices";
+  (node as unknown as Record<string, unknown>)["~resource"] = "KubernetesServices";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = kubernetes_servicesIcon;
   return node;
 }
 
 export function ServiceFabricClusters(label?: string, options?: Record<string, unknown>) {
   const node = _Containers(label ?? "ServiceFabricClusters", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "ServiceFabricClusters";
+  (node as unknown as Record<string, unknown>)["~resource"] = "ServiceFabricClusters";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = service_fabric_clustersIcon;
   return node;
 }

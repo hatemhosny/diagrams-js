@@ -14,42 +14,42 @@ function _Iac(label?: string, options?: Record<string, unknown>) {
 
 export function Ansible(label?: string, options?: Record<string, unknown>) {
   const node = _Iac(label ?? "Ansible", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Ansible";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Ansible";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = ansibleIcon;
   return node;
 }
 
 export function Atlantis(label?: string, options?: Record<string, unknown>) {
   const node = _Iac(label ?? "Atlantis", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Atlantis";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Atlantis";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = atlantisIcon;
   return node;
 }
 
 export function Awx(label?: string, options?: Record<string, unknown>) {
   const node = _Iac(label ?? "Awx", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Awx";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Awx";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = awxIcon;
   return node;
 }
 
 export function Pulumi(label?: string, options?: Record<string, unknown>) {
   const node = _Iac(label ?? "Pulumi", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Pulumi";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Pulumi";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = pulumiIcon;
   return node;
 }
 
 export function Puppet(label?: string, options?: Record<string, unknown>) {
   const node = _Iac(label ?? "Puppet", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Puppet";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Puppet";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = puppetIcon;
   return node;
 }
 
 export function Terraform(label?: string, options?: Record<string, unknown>) {
   const node = _Iac(label ?? "Terraform", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Terraform";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Terraform";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = terraformIcon;
   return node;
 }

@@ -9,7 +9,7 @@ function _Messaging(label?: string, options?: Record<string, unknown>) {
 
 export function Centrifugo(label?: string, options?: Record<string, unknown>) {
   const node = _Messaging(label ?? "Centrifugo", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Centrifugo";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Centrifugo";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = centrifugoIcon;
   return node;
 }

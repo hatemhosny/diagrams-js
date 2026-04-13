@@ -10,14 +10,14 @@ function _Satellite(label?: string, options?: Record<string, unknown>) {
 
 export function GroundStation(label?: string, options?: Record<string, unknown>) {
   const node = _Satellite(label ?? "GroundStation", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "GroundStation";
+  (node as unknown as Record<string, unknown>)["~resource"] = "GroundStation";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = ground_stationIcon;
   return node;
 }
 
 export function Satellite(label?: string, options?: Record<string, unknown>) {
   const node = _Satellite(label ?? "Satellite", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Satellite";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Satellite";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = satelliteIcon;
   return node;
 }

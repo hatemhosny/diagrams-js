@@ -10,14 +10,14 @@ function _Compute(label?: string, options?: Record<string, unknown>) {
 
 export function Nomad(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "Nomad", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Nomad";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Nomad";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = nomadIcon;
   return node;
 }
 
 export function Server(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "Server", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Server";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Server";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = serverIcon;
   return node;
 }

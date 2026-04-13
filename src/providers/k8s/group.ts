@@ -9,7 +9,7 @@ function _Group(label?: string, options?: Record<string, unknown>) {
 
 export function NS(label?: string, options?: Record<string, unknown>) {
   const node = _Group(label ?? "NS", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "NS";
+  (node as unknown as Record<string, unknown>)["~resource"] = "NS";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = nsIcon;
   return node;
 }

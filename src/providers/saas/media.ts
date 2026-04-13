@@ -9,7 +9,7 @@ function _Media(label?: string, options?: Record<string, unknown>) {
 
 export function Cloudinary(label?: string, options?: Record<string, unknown>) {
   const node = _Media(label ?? "Cloudinary", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Cloudinary";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Cloudinary";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = cloudinaryIcon;
   return node;
 }

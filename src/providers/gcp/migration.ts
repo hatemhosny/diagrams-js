@@ -10,14 +10,14 @@ function _Migration(label?: string, options?: Record<string, unknown>) {
 
 export function MigrateComputeEngine(label?: string, options?: Record<string, unknown>) {
   const node = _Migration(label ?? "MigrateComputeEngine", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "MigrateComputeEngine";
+  (node as unknown as Record<string, unknown>)["~resource"] = "MigrateComputeEngine";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = migrate_compute_engineIcon;
   return node;
 }
 
 export function TransferAppliance(label?: string, options?: Record<string, unknown>) {
   const node = _Migration(label ?? "TransferAppliance", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "TransferAppliance";
+  (node as unknown as Record<string, unknown>)["~resource"] = "TransferAppliance";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = transfer_applianceIcon;
   return node;
 }

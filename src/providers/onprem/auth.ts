@@ -11,21 +11,21 @@ function _Auth(label?: string, options?: Record<string, unknown>) {
 
 export function Boundary(label?: string, options?: Record<string, unknown>) {
   const node = _Auth(label ?? "Boundary", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Boundary";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Boundary";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = boundaryIcon;
   return node;
 }
 
 export function BuzzfeedSso(label?: string, options?: Record<string, unknown>) {
   const node = _Auth(label ?? "BuzzfeedSso", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "BuzzfeedSso";
+  (node as unknown as Record<string, unknown>)["~resource"] = "BuzzfeedSso";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = buzzfeed_ssoIcon;
   return node;
 }
 
 export function Oauth2Proxy(label?: string, options?: Record<string, unknown>) {
   const node = _Auth(label ?? "Oauth2Proxy", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Oauth2Proxy";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Oauth2Proxy";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = oauth2_proxyIcon;
   return node;
 }

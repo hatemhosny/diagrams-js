@@ -67,21 +67,21 @@ function _Management(label?: string, options?: Record<string, unknown>) {
 
 export function AmazonDevopsGuru(label?: string, options?: Record<string, unknown>) {
   const node = _Management(label ?? "AmazonDevopsGuru", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "AmazonDevopsGuru";
+  (node as unknown as Record<string, unknown>)["~resource"] = "AmazonDevopsGuru";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = amazon_devops_guruIcon;
   return node;
 }
 
 export function AmazonManagedGrafana(label?: string, options?: Record<string, unknown>) {
   const node = _Management(label ?? "AmazonManagedGrafana", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "AmazonManagedGrafana";
+  (node as unknown as Record<string, unknown>)["~resource"] = "AmazonManagedGrafana";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = amazon_managed_grafanaIcon;
   return node;
 }
 
 export function AmazonManagedPrometheus(label?: string, options?: Record<string, unknown>) {
   const node = _Management(label ?? "AmazonManagedPrometheus", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "AmazonManagedPrometheus";
+  (node as unknown as Record<string, unknown>)["~resource"] = "AmazonManagedPrometheus";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = amazon_managed_prometheusIcon;
   return node;
 }
@@ -91,8 +91,7 @@ export function AmazonManagedWorkflowsApacheAirflow(
   options?: Record<string, unknown>,
 ) {
   const node = _Management(label ?? "AmazonManagedWorkflowsApacheAirflow", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] =
-    "AmazonManagedWorkflowsApacheAirflow";
+  (node as unknown as Record<string, unknown>)["~resource"] = "AmazonManagedWorkflowsApacheAirflow";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] =
     amazon_managed_workflows_apache_airflowIcon;
   return node;
@@ -100,224 +99,224 @@ export function AmazonManagedWorkflowsApacheAirflow(
 
 export function AutoScaling(label?: string, options?: Record<string, unknown>) {
   const node = _Management(label ?? "AutoScaling", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "AutoScaling";
+  (node as unknown as Record<string, unknown>)["~resource"] = "AutoScaling";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = auto_scalingIcon;
   return node;
 }
 
 export function Chatbot(label?: string, options?: Record<string, unknown>) {
   const node = _Management(label ?? "Chatbot", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Chatbot";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Chatbot";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = chatbotIcon;
   return node;
 }
 
 export function CloudformationChangeSet(label?: string, options?: Record<string, unknown>) {
   const node = _Management(label ?? "CloudformationChangeSet", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "CloudformationChangeSet";
+  (node as unknown as Record<string, unknown>)["~resource"] = "CloudformationChangeSet";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = cloudformation_change_setIcon;
   return node;
 }
 
 export function CloudformationStack(label?: string, options?: Record<string, unknown>) {
   const node = _Management(label ?? "CloudformationStack", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "CloudformationStack";
+  (node as unknown as Record<string, unknown>)["~resource"] = "CloudformationStack";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = cloudformation_stackIcon;
   return node;
 }
 
 export function CloudformationTemplate(label?: string, options?: Record<string, unknown>) {
   const node = _Management(label ?? "CloudformationTemplate", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "CloudformationTemplate";
+  (node as unknown as Record<string, unknown>)["~resource"] = "CloudformationTemplate";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = cloudformation_templateIcon;
   return node;
 }
 
 export function Cloudformation(label?: string, options?: Record<string, unknown>) {
   const node = _Management(label ?? "Cloudformation", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Cloudformation";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Cloudformation";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = cloudformationIcon;
   return node;
 }
 
 export function Cloudtrail(label?: string, options?: Record<string, unknown>) {
   const node = _Management(label ?? "Cloudtrail", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Cloudtrail";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Cloudtrail";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = cloudtrailIcon;
   return node;
 }
 
 export function CloudwatchAlarm(label?: string, options?: Record<string, unknown>) {
   const node = _Management(label ?? "CloudwatchAlarm", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "CloudwatchAlarm";
+  (node as unknown as Record<string, unknown>)["~resource"] = "CloudwatchAlarm";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = cloudwatch_alarmIcon;
   return node;
 }
 
 export function CloudwatchEventEventBased(label?: string, options?: Record<string, unknown>) {
   const node = _Management(label ?? "CloudwatchEventEventBased", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "CloudwatchEventEventBased";
+  (node as unknown as Record<string, unknown>)["~resource"] = "CloudwatchEventEventBased";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = cloudwatch_event_event_basedIcon;
   return node;
 }
 
 export function CloudwatchEventTimeBased(label?: string, options?: Record<string, unknown>) {
   const node = _Management(label ?? "CloudwatchEventTimeBased", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "CloudwatchEventTimeBased";
+  (node as unknown as Record<string, unknown>)["~resource"] = "CloudwatchEventTimeBased";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = cloudwatch_event_time_basedIcon;
   return node;
 }
 
 export function CloudwatchLogs(label?: string, options?: Record<string, unknown>) {
   const node = _Management(label ?? "CloudwatchLogs", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "CloudwatchLogs";
+  (node as unknown as Record<string, unknown>)["~resource"] = "CloudwatchLogs";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = cloudwatch_logsIcon;
   return node;
 }
 
 export function CloudwatchRule(label?: string, options?: Record<string, unknown>) {
   const node = _Management(label ?? "CloudwatchRule", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "CloudwatchRule";
+  (node as unknown as Record<string, unknown>)["~resource"] = "CloudwatchRule";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = cloudwatch_ruleIcon;
   return node;
 }
 
 export function Cloudwatch(label?: string, options?: Record<string, unknown>) {
   const node = _Management(label ?? "Cloudwatch", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Cloudwatch";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Cloudwatch";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = cloudwatchIcon;
   return node;
 }
 
 export function Codeguru(label?: string, options?: Record<string, unknown>) {
   const node = _Management(label ?? "Codeguru", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Codeguru";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Codeguru";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = codeguruIcon;
   return node;
 }
 
 export function CommandLineInterface(label?: string, options?: Record<string, unknown>) {
   const node = _Management(label ?? "CommandLineInterface", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "CommandLineInterface";
+  (node as unknown as Record<string, unknown>)["~resource"] = "CommandLineInterface";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = command_line_interfaceIcon;
   return node;
 }
 
 export function Config(label?: string, options?: Record<string, unknown>) {
   const node = _Management(label ?? "Config", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Config";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Config";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = configIcon;
   return node;
 }
 
 export function ControlTower(label?: string, options?: Record<string, unknown>) {
   const node = _Management(label ?? "ControlTower", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "ControlTower";
+  (node as unknown as Record<string, unknown>)["~resource"] = "ControlTower";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = control_towerIcon;
   return node;
 }
 
 export function LicenseManager(label?: string, options?: Record<string, unknown>) {
   const node = _Management(label ?? "LicenseManager", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "LicenseManager";
+  (node as unknown as Record<string, unknown>)["~resource"] = "LicenseManager";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = license_managerIcon;
   return node;
 }
 
 export function ManagedServices(label?: string, options?: Record<string, unknown>) {
   const node = _Management(label ?? "ManagedServices", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "ManagedServices";
+  (node as unknown as Record<string, unknown>)["~resource"] = "ManagedServices";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = managed_servicesIcon;
   return node;
 }
 
 export function ManagementAndGovernance(label?: string, options?: Record<string, unknown>) {
   const node = _Management(label ?? "ManagementAndGovernance", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "ManagementAndGovernance";
+  (node as unknown as Record<string, unknown>)["~resource"] = "ManagementAndGovernance";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = management_and_governanceIcon;
   return node;
 }
 
 export function ManagementConsole(label?: string, options?: Record<string, unknown>) {
   const node = _Management(label ?? "ManagementConsole", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "ManagementConsole";
+  (node as unknown as Record<string, unknown>)["~resource"] = "ManagementConsole";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = management_consoleIcon;
   return node;
 }
 
 export function OpsworksApps(label?: string, options?: Record<string, unknown>) {
   const node = _Management(label ?? "OpsworksApps", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "OpsworksApps";
+  (node as unknown as Record<string, unknown>)["~resource"] = "OpsworksApps";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = opsworks_appsIcon;
   return node;
 }
 
 export function OpsworksDeployments(label?: string, options?: Record<string, unknown>) {
   const node = _Management(label ?? "OpsworksDeployments", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "OpsworksDeployments";
+  (node as unknown as Record<string, unknown>)["~resource"] = "OpsworksDeployments";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = opsworks_deploymentsIcon;
   return node;
 }
 
 export function OpsworksInstances(label?: string, options?: Record<string, unknown>) {
   const node = _Management(label ?? "OpsworksInstances", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "OpsworksInstances";
+  (node as unknown as Record<string, unknown>)["~resource"] = "OpsworksInstances";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = opsworks_instancesIcon;
   return node;
 }
 
 export function OpsworksLayers(label?: string, options?: Record<string, unknown>) {
   const node = _Management(label ?? "OpsworksLayers", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "OpsworksLayers";
+  (node as unknown as Record<string, unknown>)["~resource"] = "OpsworksLayers";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = opsworks_layersIcon;
   return node;
 }
 
 export function OpsworksMonitoring(label?: string, options?: Record<string, unknown>) {
   const node = _Management(label ?? "OpsworksMonitoring", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "OpsworksMonitoring";
+  (node as unknown as Record<string, unknown>)["~resource"] = "OpsworksMonitoring";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = opsworks_monitoringIcon;
   return node;
 }
 
 export function OpsworksPermissions(label?: string, options?: Record<string, unknown>) {
   const node = _Management(label ?? "OpsworksPermissions", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "OpsworksPermissions";
+  (node as unknown as Record<string, unknown>)["~resource"] = "OpsworksPermissions";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = opsworks_permissionsIcon;
   return node;
 }
 
 export function OpsworksResources(label?: string, options?: Record<string, unknown>) {
   const node = _Management(label ?? "OpsworksResources", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "OpsworksResources";
+  (node as unknown as Record<string, unknown>)["~resource"] = "OpsworksResources";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = opsworks_resourcesIcon;
   return node;
 }
 
 export function OpsworksStack(label?: string, options?: Record<string, unknown>) {
   const node = _Management(label ?? "OpsworksStack", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "OpsworksStack";
+  (node as unknown as Record<string, unknown>)["~resource"] = "OpsworksStack";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = opsworks_stackIcon;
   return node;
 }
 
 export function Opsworks(label?: string, options?: Record<string, unknown>) {
   const node = _Management(label ?? "Opsworks", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Opsworks";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Opsworks";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = opsworksIcon;
   return node;
 }
 
 export function OrganizationsAccount(label?: string, options?: Record<string, unknown>) {
   const node = _Management(label ?? "OrganizationsAccount", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "OrganizationsAccount";
+  (node as unknown as Record<string, unknown>)["~resource"] = "OrganizationsAccount";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = organizations_accountIcon;
   return node;
 }
 
 export function OrganizationsOrganizationalUnit(label?: string, options?: Record<string, unknown>) {
   const node = _Management(label ?? "OrganizationsOrganizationalUnit", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "OrganizationsOrganizationalUnit";
+  (node as unknown as Record<string, unknown>)["~resource"] = "OrganizationsOrganizationalUnit";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] =
     organizations_organizational_unitIcon;
   return node;
@@ -325,56 +324,56 @@ export function OrganizationsOrganizationalUnit(label?: string, options?: Record
 
 export function Organizations(label?: string, options?: Record<string, unknown>) {
   const node = _Management(label ?? "Organizations", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Organizations";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Organizations";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = organizationsIcon;
   return node;
 }
 
 export function PersonalHealthDashboard(label?: string, options?: Record<string, unknown>) {
   const node = _Management(label ?? "PersonalHealthDashboard", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "PersonalHealthDashboard";
+  (node as unknown as Record<string, unknown>)["~resource"] = "PersonalHealthDashboard";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = personal_health_dashboardIcon;
   return node;
 }
 
 export function Proton(label?: string, options?: Record<string, unknown>) {
   const node = _Management(label ?? "Proton", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Proton";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Proton";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = protonIcon;
   return node;
 }
 
 export function ServiceCatalog(label?: string, options?: Record<string, unknown>) {
   const node = _Management(label ?? "ServiceCatalog", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "ServiceCatalog";
+  (node as unknown as Record<string, unknown>)["~resource"] = "ServiceCatalog";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = service_catalogIcon;
   return node;
 }
 
 export function SystemsManagerAppConfig(label?: string, options?: Record<string, unknown>) {
   const node = _Management(label ?? "SystemsManagerAppConfig", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "SystemsManagerAppConfig";
+  (node as unknown as Record<string, unknown>)["~resource"] = "SystemsManagerAppConfig";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = systems_manager_app_configIcon;
   return node;
 }
 
 export function SystemsManagerAutomation(label?: string, options?: Record<string, unknown>) {
   const node = _Management(label ?? "SystemsManagerAutomation", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "SystemsManagerAutomation";
+  (node as unknown as Record<string, unknown>)["~resource"] = "SystemsManagerAutomation";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = systems_manager_automationIcon;
   return node;
 }
 
 export function SystemsManagerDocuments(label?: string, options?: Record<string, unknown>) {
   const node = _Management(label ?? "SystemsManagerDocuments", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "SystemsManagerDocuments";
+  (node as unknown as Record<string, unknown>)["~resource"] = "SystemsManagerDocuments";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = systems_manager_documentsIcon;
   return node;
 }
 
 export function SystemsManagerInventory(label?: string, options?: Record<string, unknown>) {
   const node = _Management(label ?? "SystemsManagerInventory", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "SystemsManagerInventory";
+  (node as unknown as Record<string, unknown>)["~resource"] = "SystemsManagerInventory";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = systems_manager_inventoryIcon;
   return node;
 }
@@ -384,8 +383,7 @@ export function SystemsManagerMaintenanceWindows(
   options?: Record<string, unknown>,
 ) {
   const node = _Management(label ?? "SystemsManagerMaintenanceWindows", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] =
-    "SystemsManagerMaintenanceWindows";
+  (node as unknown as Record<string, unknown>)["~resource"] = "SystemsManagerMaintenanceWindows";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] =
     systems_manager_maintenance_windowsIcon;
   return node;
@@ -393,14 +391,14 @@ export function SystemsManagerMaintenanceWindows(
 
 export function SystemsManagerOpscenter(label?: string, options?: Record<string, unknown>) {
   const node = _Management(label ?? "SystemsManagerOpscenter", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "SystemsManagerOpscenter";
+  (node as unknown as Record<string, unknown>)["~resource"] = "SystemsManagerOpscenter";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = systems_manager_opscenterIcon;
   return node;
 }
 
 export function SystemsManagerParameterStore(label?: string, options?: Record<string, unknown>) {
   const node = _Management(label ?? "SystemsManagerParameterStore", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "SystemsManagerParameterStore";
+  (node as unknown as Record<string, unknown>)["~resource"] = "SystemsManagerParameterStore";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] =
     systems_manager_parameter_storeIcon;
   return node;
@@ -408,35 +406,35 @@ export function SystemsManagerParameterStore(label?: string, options?: Record<st
 
 export function SystemsManagerPatchManager(label?: string, options?: Record<string, unknown>) {
   const node = _Management(label ?? "SystemsManagerPatchManager", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "SystemsManagerPatchManager";
+  (node as unknown as Record<string, unknown>)["~resource"] = "SystemsManagerPatchManager";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = systems_manager_patch_managerIcon;
   return node;
 }
 
 export function SystemsManagerRunCommand(label?: string, options?: Record<string, unknown>) {
   const node = _Management(label ?? "SystemsManagerRunCommand", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "SystemsManagerRunCommand";
+  (node as unknown as Record<string, unknown>)["~resource"] = "SystemsManagerRunCommand";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = systems_manager_run_commandIcon;
   return node;
 }
 
 export function SystemsManagerStateManager(label?: string, options?: Record<string, unknown>) {
   const node = _Management(label ?? "SystemsManagerStateManager", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "SystemsManagerStateManager";
+  (node as unknown as Record<string, unknown>)["~resource"] = "SystemsManagerStateManager";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = systems_manager_state_managerIcon;
   return node;
 }
 
 export function SystemsManager(label?: string, options?: Record<string, unknown>) {
   const node = _Management(label ?? "SystemsManager", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "SystemsManager";
+  (node as unknown as Record<string, unknown>)["~resource"] = "SystemsManager";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = systems_managerIcon;
   return node;
 }
 
 export function TrustedAdvisorChecklistCost(label?: string, options?: Record<string, unknown>) {
   const node = _Management(label ?? "TrustedAdvisorChecklistCost", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "TrustedAdvisorChecklistCost";
+  (node as unknown as Record<string, unknown>)["~resource"] = "TrustedAdvisorChecklistCost";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = trusted_advisor_checklist_costIcon;
   return node;
 }
@@ -446,7 +444,7 @@ export function TrustedAdvisorChecklistFaultTolerant(
   options?: Record<string, unknown>,
 ) {
   const node = _Management(label ?? "TrustedAdvisorChecklistFaultTolerant", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] =
+  (node as unknown as Record<string, unknown>)["~resource"] =
     "TrustedAdvisorChecklistFaultTolerant";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] =
     trusted_advisor_checklist_fault_tolerantIcon;
@@ -458,8 +456,7 @@ export function TrustedAdvisorChecklistPerformance(
   options?: Record<string, unknown>,
 ) {
   const node = _Management(label ?? "TrustedAdvisorChecklistPerformance", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] =
-    "TrustedAdvisorChecklistPerformance";
+  (node as unknown as Record<string, unknown>)["~resource"] = "TrustedAdvisorChecklistPerformance";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] =
     trusted_advisor_checklist_performanceIcon;
   return node;
@@ -467,7 +464,7 @@ export function TrustedAdvisorChecklistPerformance(
 
 export function TrustedAdvisorChecklistSecurity(label?: string, options?: Record<string, unknown>) {
   const node = _Management(label ?? "TrustedAdvisorChecklistSecurity", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "TrustedAdvisorChecklistSecurity";
+  (node as unknown as Record<string, unknown>)["~resource"] = "TrustedAdvisorChecklistSecurity";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] =
     trusted_advisor_checklist_securityIcon;
   return node;
@@ -475,28 +472,28 @@ export function TrustedAdvisorChecklistSecurity(label?: string, options?: Record
 
 export function TrustedAdvisorChecklist(label?: string, options?: Record<string, unknown>) {
   const node = _Management(label ?? "TrustedAdvisorChecklist", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "TrustedAdvisorChecklist";
+  (node as unknown as Record<string, unknown>)["~resource"] = "TrustedAdvisorChecklist";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = trusted_advisor_checklistIcon;
   return node;
 }
 
 export function TrustedAdvisor(label?: string, options?: Record<string, unknown>) {
   const node = _Management(label ?? "TrustedAdvisor", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "TrustedAdvisor";
+  (node as unknown as Record<string, unknown>)["~resource"] = "TrustedAdvisor";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = trusted_advisorIcon;
   return node;
 }
 
 export function UserNotifications(label?: string, options?: Record<string, unknown>) {
   const node = _Management(label ?? "UserNotifications", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "UserNotifications";
+  (node as unknown as Record<string, unknown>)["~resource"] = "UserNotifications";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = user_notificationsIcon;
   return node;
 }
 
 export function WellArchitectedTool(label?: string, options?: Record<string, unknown>) {
   const node = _Management(label ?? "WellArchitectedTool", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "WellArchitectedTool";
+  (node as unknown as Record<string, unknown>)["~resource"] = "WellArchitectedTool";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = well_architected_toolIcon;
   return node;
 }

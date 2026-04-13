@@ -112,7 +112,7 @@ describe("Plugin Hook Modification Tests", () => {
       expect(dot).toContain('fillcolor="lightblue"');
     });
 
-    it("should allow modifying provider, type, and resourceType", async () => {
+    it("should allow modifying provider, type, and resource", async () => {
       const metadataPlugin = (): DiagramsPlugin => ({
         name: "metadata-modifier",
         version: "1.0.0",
@@ -128,7 +128,7 @@ describe("Plugin Hook Modification Tests", () => {
                   const nodeData = data as { node: NodeType };
                   nodeData.node.provider = "aws";
                   nodeData.node.type = "compute";
-                  nodeData.node.resourceType = "ALB";
+                  nodeData.node.resource = "ALB";
                   return nodeData;
                 },
               },
@@ -145,7 +145,7 @@ describe("Plugin Hook Modification Tests", () => {
 
       expect(node.provider).toBe("aws");
       expect(node.type).toBe("compute");
-      expect(node.resourceType).toBe("ALB");
+      expect(node.resource).toBe("ALB");
     });
 
     it("should allow modifying provider metadata on nodes from provider factories", async () => {
@@ -165,7 +165,7 @@ describe("Plugin Hook Modification Tests", () => {
                 handler: async (data: unknown, _context: HookContext) => {
                   const nodeData = data as { node: NodeType };
                   // Modify existing provider metadata
-                  nodeData.node.resourceType = "ModifiedResource";
+                  nodeData.node.resource = "ModifiedResource";
                   return nodeData;
                 },
               },
@@ -179,14 +179,14 @@ describe("Plugin Hook Modification Tests", () => {
 
       // Create a node that simulates a provider factory node
       // Provider factories set metadata via internal ~prefixed properties
-      // The public provider/type/resourceType getters/setters access these same properties
+      // The public provider/type/resource getters/setters access these same properties
       const node = Node("Test Node");
 
       // Simulate provider factory setting metadata via internal properties
       // This happens BEFORE the node is registered and the hook fires
       (node as unknown as Record<string, string>)["~provider"] = "aws";
       (node as unknown as Record<string, string>)["~type"] = "network";
-      (node as unknown as Record<string, string>)["~resourceType"] = "OriginalResource";
+      (node as unknown as Record<string, string>)["~resource"] = "OriginalResource";
 
       // Now add the node to the diagram - this triggers the hook
       diagram.add(node);
@@ -194,9 +194,9 @@ describe("Plugin Hook Modification Tests", () => {
       // Wait for the hook to fire and complete
       await new Promise((resolve) => setTimeout(resolve, 50));
 
-      // The hook should have modified the resourceType
-      // The public getter reads from ~resourceType, which the hook modified
-      expect(node.resourceType).toBe("ModifiedResource");
+      // The hook should have modified the resource
+      // The public getter reads from ~resource, which the hook modified
+      expect(node.resource).toBe("ModifiedResource");
       // Original provider and type should still be accessible
       expect(node.provider).toBe("aws");
       expect(node.type).toBe("network");
@@ -218,7 +218,7 @@ describe("Plugin Hook Modification Tests", () => {
                   const nodeData = data as { node: NodeType };
                   nodeData.node.provider = "azure";
                   nodeData.node.type = "storage";
-                  nodeData.node.resourceType = "BlobStorage";
+                  nodeData.node.resource = "BlobStorage";
                   return nodeData;
                 },
               },
@@ -236,7 +236,7 @@ describe("Plugin Hook Modification Tests", () => {
       const json = diagram.toJSON();
       const nodeData = json.nodes.find((n) => n.id === node.nodeId);
 
-      // JSON structure: provider -> ~provider, service -> ~type, type -> ~resourceType
+      // JSON structure: provider -> ~provider, service -> ~type, type -> ~resource
       expect(nodeData?.provider).toBe("azure");
       expect(nodeData?.service).toBe("storage");
       expect(nodeData?.type).toBe("BlobStorage");

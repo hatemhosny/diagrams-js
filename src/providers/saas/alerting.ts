@@ -13,35 +13,35 @@ function _Alerting(label?: string, options?: Record<string, unknown>) {
 
 export function Newrelic(label?: string, options?: Record<string, unknown>) {
   const node = _Alerting(label ?? "Newrelic", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Newrelic";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Newrelic";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = newrelicIcon;
   return node;
 }
 
 export function Opsgenie(label?: string, options?: Record<string, unknown>) {
   const node = _Alerting(label ?? "Opsgenie", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Opsgenie";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Opsgenie";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = opsgenieIcon;
   return node;
 }
 
 export function Pagerduty(label?: string, options?: Record<string, unknown>) {
   const node = _Alerting(label ?? "Pagerduty", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Pagerduty";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Pagerduty";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = pagerdutyIcon;
   return node;
 }
 
 export function Pushover(label?: string, options?: Record<string, unknown>) {
   const node = _Alerting(label ?? "Pushover", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Pushover";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Pushover";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = pushoverIcon;
   return node;
 }
 
 export function Xmatters(label?: string, options?: Record<string, unknown>) {
   const node = _Alerting(label ?? "Xmatters", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Xmatters";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Xmatters";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = xmattersIcon;
   return node;
 }

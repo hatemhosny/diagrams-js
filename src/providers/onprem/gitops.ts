@@ -11,21 +11,21 @@ function _Gitops(label?: string, options?: Record<string, unknown>) {
 
 export function Argocd(label?: string, options?: Record<string, unknown>) {
   const node = _Gitops(label ?? "Argocd", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Argocd";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Argocd";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = argocdIcon;
   return node;
 }
 
 export function Flagger(label?: string, options?: Record<string, unknown>) {
   const node = _Gitops(label ?? "Flagger", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Flagger";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Flagger";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = flaggerIcon;
   return node;
 }
 
 export function Flux(label?: string, options?: Record<string, unknown>) {
   const node = _Gitops(label ?? "Flux", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Flux";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Flux";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = fluxIcon;
   return node;
 }

@@ -13,35 +13,35 @@ function _Enterprisesearch(label?: string, options?: Record<string, unknown>) {
 
 export function AppSearch(label?: string, options?: Record<string, unknown>) {
   const node = _Enterprisesearch(label ?? "AppSearch", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "AppSearch";
+  (node as unknown as Record<string, unknown>)["~resource"] = "AppSearch";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = app_searchIcon;
   return node;
 }
 
 export function Crawler(label?: string, options?: Record<string, unknown>) {
   const node = _Enterprisesearch(label ?? "Crawler", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Crawler";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Crawler";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = crawlerIcon;
   return node;
 }
 
 export function EnterpriseSearch(label?: string, options?: Record<string, unknown>) {
   const node = _Enterprisesearch(label ?? "EnterpriseSearch", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "EnterpriseSearch";
+  (node as unknown as Record<string, unknown>)["~resource"] = "EnterpriseSearch";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = enterprise_searchIcon;
   return node;
 }
 
 export function SiteSearch(label?: string, options?: Record<string, unknown>) {
   const node = _Enterprisesearch(label ?? "SiteSearch", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "SiteSearch";
+  (node as unknown as Record<string, unknown>)["~resource"] = "SiteSearch";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = site_searchIcon;
   return node;
 }
 
 export function WorkplaceSearch(label?: string, options?: Record<string, unknown>) {
   const node = _Enterprisesearch(label ?? "WorkplaceSearch", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "WorkplaceSearch";
+  (node as unknown as Record<string, unknown>)["~resource"] = "WorkplaceSearch";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = workplace_searchIcon;
   return node;
 }

@@ -15,49 +15,49 @@ function _Compute(label?: string, options?: Record<string, unknown>) {
 
 export function Cronjob(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "Cronjob", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Cronjob";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Cronjob";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = cronjobIcon;
   return node;
 }
 
 export function Deploy(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "Deploy", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Deploy";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Deploy";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = deployIcon;
   return node;
 }
 
 export function DS(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "DS", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "DS";
+  (node as unknown as Record<string, unknown>)["~resource"] = "DS";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = dsIcon;
   return node;
 }
 
 export function Job(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "Job", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Job";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Job";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = jobIcon;
   return node;
 }
 
 export function Pod(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "Pod", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Pod";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Pod";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = podIcon;
   return node;
 }
 
 export function RS(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "RS", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "RS";
+  (node as unknown as Record<string, unknown>)["~resource"] = "RS";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = rsIcon;
   return node;
 }
 
 export function STS(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "STS", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "STS";
+  (node as unknown as Record<string, unknown>)["~resource"] = "STS";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = stsIcon;
   return node;
 }

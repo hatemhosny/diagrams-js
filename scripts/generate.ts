@@ -92,7 +92,7 @@ function _${pascalServiceType}(label?: string, options?: Record<string, unknown>
   for (const meta of classMetas) {
     code += `export function ${meta.name}(label?: string, options?: Record<string, unknown>) {
   const node = _${pascalServiceType}(label ?? "${meta.name}", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "${meta.name}";
+  (node as unknown as Record<string, unknown>)["~resource"] = "${meta.name}";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = ${meta.importName}Icon;
   return node;
 }

@@ -10,14 +10,14 @@ function _Compute(label?: string, options?: Record<string, unknown>) {
 
 export function Compute(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "Compute", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Compute";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Compute";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = computeIcon;
   return node;
 }
 
 export function DirectConnect(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "DirectConnect", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "DirectConnect";
+  (node as unknown as Record<string, unknown>)["~resource"] = "DirectConnect";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = direct_connectIcon;
   return node;
 }

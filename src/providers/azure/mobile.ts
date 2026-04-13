@@ -13,35 +13,35 @@ function _Mobile(label?: string, options?: Record<string, unknown>) {
 
 export function AppServiceMobile(label?: string, options?: Record<string, unknown>) {
   const node = _Mobile(label ?? "AppServiceMobile", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "AppServiceMobile";
+  (node as unknown as Record<string, unknown>)["~resource"] = "AppServiceMobile";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = app_service_mobileIcon;
   return node;
 }
 
 export function AppServices(label?: string, options?: Record<string, unknown>) {
   const node = _Mobile(label ?? "AppServices", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "AppServices";
+  (node as unknown as Record<string, unknown>)["~resource"] = "AppServices";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = app_servicesIcon;
   return node;
 }
 
 export function MobileEngagement(label?: string, options?: Record<string, unknown>) {
   const node = _Mobile(label ?? "MobileEngagement", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "MobileEngagement";
+  (node as unknown as Record<string, unknown>)["~resource"] = "MobileEngagement";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = mobile_engagementIcon;
   return node;
 }
 
 export function NotificationHubs(label?: string, options?: Record<string, unknown>) {
   const node = _Mobile(label ?? "NotificationHubs", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "NotificationHubs";
+  (node as unknown as Record<string, unknown>)["~resource"] = "NotificationHubs";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = notification_hubsIcon;
   return node;
 }
 
 export function PowerPlatform(label?: string, options?: Record<string, unknown>) {
   const node = _Mobile(label ?? "PowerPlatform", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "PowerPlatform";
+  (node as unknown as Record<string, unknown>)["~resource"] = "PowerPlatform";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = power_platformIcon;
   return node;
 }

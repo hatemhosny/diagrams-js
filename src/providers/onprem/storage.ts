@@ -12,28 +12,28 @@ function _Storage(label?: string, options?: Record<string, unknown>) {
 
 export function CephOsd(label?: string, options?: Record<string, unknown>) {
   const node = _Storage(label ?? "CephOsd", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "CephOsd";
+  (node as unknown as Record<string, unknown>)["~resource"] = "CephOsd";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = ceph_osdIcon;
   return node;
 }
 
 export function Ceph(label?: string, options?: Record<string, unknown>) {
   const node = _Storage(label ?? "Ceph", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Ceph";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Ceph";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = cephIcon;
   return node;
 }
 
 export function Glusterfs(label?: string, options?: Record<string, unknown>) {
   const node = _Storage(label ?? "Glusterfs", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Glusterfs";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Glusterfs";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = glusterfsIcon;
   return node;
 }
 
 export function Portworx(label?: string, options?: Record<string, unknown>) {
   const node = _Storage(label ?? "Portworx", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Portworx";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Portworx";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = portworxIcon;
   return node;
 }

@@ -12,28 +12,28 @@ function _Storage(label?: string, options?: Record<string, unknown>) {
 
 export function PV(label?: string, options?: Record<string, unknown>) {
   const node = _Storage(label ?? "PV", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "PV";
+  (node as unknown as Record<string, unknown>)["~resource"] = "PV";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = pvIcon;
   return node;
 }
 
 export function PVC(label?: string, options?: Record<string, unknown>) {
   const node = _Storage(label ?? "PVC", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "PVC";
+  (node as unknown as Record<string, unknown>)["~resource"] = "PVC";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = pvcIcon;
   return node;
 }
 
 export function SC(label?: string, options?: Record<string, unknown>) {
   const node = _Storage(label ?? "SC", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "SC";
+  (node as unknown as Record<string, unknown>)["~resource"] = "SC";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = scIcon;
   return node;
 }
 
 export function Vol(label?: string, options?: Record<string, unknown>) {
   const node = _Storage(label ?? "Vol", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Vol";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Vol";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = volIcon;
   return node;
 }

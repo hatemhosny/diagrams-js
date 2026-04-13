@@ -9,7 +9,7 @@ function _Search(label?: string, options?: Record<string, unknown>) {
 
 export function Solr(label?: string, options?: Record<string, unknown>) {
   const node = _Search(label ?? "Solr", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Solr";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Solr";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = solrIcon;
   return node;
 }

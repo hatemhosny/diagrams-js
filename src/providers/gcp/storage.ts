@@ -12,28 +12,28 @@ function _Storage(label?: string, options?: Record<string, unknown>) {
 
 export function Filestore(label?: string, options?: Record<string, unknown>) {
   const node = _Storage(label ?? "Filestore", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Filestore";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Filestore";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = filestoreIcon;
   return node;
 }
 
 export function LocalSSD(label?: string, options?: Record<string, unknown>) {
   const node = _Storage(label ?? "LocalSSD", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "LocalSSD";
+  (node as unknown as Record<string, unknown>)["~resource"] = "LocalSSD";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = local_ssdIcon;
   return node;
 }
 
 export function PersistentDisk(label?: string, options?: Record<string, unknown>) {
   const node = _Storage(label ?? "PersistentDisk", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "PersistentDisk";
+  (node as unknown as Record<string, unknown>)["~resource"] = "PersistentDisk";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = persistent_diskIcon;
   return node;
 }
 
 export function Storage(label?: string, options?: Record<string, unknown>) {
   const node = _Storage(label ?? "Storage", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Storage";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Storage";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = storageIcon;
   return node;
 }

@@ -24,112 +24,112 @@ function _Compute(label?: string, options?: Record<string, unknown>) {
 
 export function AutoscaleWhite(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "AutoscaleWhite", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "AutoscaleWhite";
+  (node as unknown as Record<string, unknown>)["~resource"] = "AutoscaleWhite";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = autoscale_whiteIcon;
   return node;
 }
 
 export function Autoscale(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "Autoscale", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Autoscale";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Autoscale";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = autoscaleIcon;
   return node;
 }
 
 export function BMWhite(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "BMWhite", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "BMWhite";
+  (node as unknown as Record<string, unknown>)["~resource"] = "BMWhite";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = bm_whiteIcon;
   return node;
 }
 
 export function BM(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "BM", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "BM";
+  (node as unknown as Record<string, unknown>)["~resource"] = "BM";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = bmIcon;
   return node;
 }
 
 export function ContainerWhite(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "ContainerWhite", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "ContainerWhite";
+  (node as unknown as Record<string, unknown>)["~resource"] = "ContainerWhite";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = container_whiteIcon;
   return node;
 }
 
 export function Container(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "Container", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Container";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Container";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = containerIcon;
   return node;
 }
 
 export function FunctionsWhite(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "FunctionsWhite", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "FunctionsWhite";
+  (node as unknown as Record<string, unknown>)["~resource"] = "FunctionsWhite";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = functions_whiteIcon;
   return node;
 }
 
 export function Functions(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "Functions", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Functions";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Functions";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = functionsIcon;
   return node;
 }
 
 export function InstancePoolsWhite(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "InstancePoolsWhite", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "InstancePoolsWhite";
+  (node as unknown as Record<string, unknown>)["~resource"] = "InstancePoolsWhite";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = instance_pools_whiteIcon;
   return node;
 }
 
 export function InstancePools(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "InstancePools", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "InstancePools";
+  (node as unknown as Record<string, unknown>)["~resource"] = "InstancePools";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = instance_poolsIcon;
   return node;
 }
 
 export function OCIRWhite(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "OCIRWhite", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "OCIRWhite";
+  (node as unknown as Record<string, unknown>)["~resource"] = "OCIRWhite";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = ocir_whiteIcon;
   return node;
 }
 
 export function OCIR(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "OCIR", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "OCIR";
+  (node as unknown as Record<string, unknown>)["~resource"] = "OCIR";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = ocirIcon;
   return node;
 }
 
 export function OKEWhite(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "OKEWhite", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "OKEWhite";
+  (node as unknown as Record<string, unknown>)["~resource"] = "OKEWhite";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = oke_whiteIcon;
   return node;
 }
 
 export function OKE(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "OKE", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "OKE";
+  (node as unknown as Record<string, unknown>)["~resource"] = "OKE";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = okeIcon;
   return node;
 }
 
 export function VMWhite(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "VMWhite", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "VMWhite";
+  (node as unknown as Record<string, unknown>)["~resource"] = "VMWhite";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = vm_whiteIcon;
   return node;
 }
 
 export function VM(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "VM", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "VM";
+  (node as unknown as Record<string, unknown>)["~resource"] = "VM";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = vmIcon;
   return node;
 }

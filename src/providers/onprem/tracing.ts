@@ -10,14 +10,14 @@ function _Tracing(label?: string, options?: Record<string, unknown>) {
 
 export function Jaeger(label?: string, options?: Record<string, unknown>) {
   const node = _Tracing(label ?? "Jaeger", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Jaeger";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Jaeger";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = jaegerIcon;
   return node;
 }
 
 export function Tempo(label?: string, options?: Record<string, unknown>) {
   const node = _Tracing(label ?? "Tempo", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Tempo";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Tempo";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = tempoIcon;
   return node;
 }

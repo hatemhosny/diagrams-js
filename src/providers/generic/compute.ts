@@ -9,7 +9,7 @@ function _Compute(label?: string, options?: Record<string, unknown>) {
 
 export function Rack(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "Rack", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Rack";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Rack";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = rackIcon;
   return node;
 }

@@ -60,7 +60,7 @@ export interface Node {
   /** The service type (e.g., "compute", "database", "storage") */
   type?: string;
   /** The specific resource type (e.g., "EC2", "S3", "RDS") */
-  resourceType?: string;
+  resource?: string;
   /** @internal */
   ["~id"]: string;
   /** @internal */
@@ -232,9 +232,9 @@ export function Node(label = "", options: NodeOptions = {}): Node {
     });
   }
 
-  // Provider metadata internal storage (accessed via ~provider, ~type, ~resourceType)
+  // Provider metadata internal storage (accessed via ~provider, ~type, ~resource)
   // These are set by provider factory functions using the ~prefixed properties
-  // The public provider/type/resourceType getters/setters access these same properties
+  // The public provider/type/resource getters/setters access these same properties
 
   const node: Node = {
     label,
@@ -293,13 +293,13 @@ export function Node(label = "", options: NodeOptions = {}): Node {
 
     /**
      * Get/set the resource type
-     * Accesses the internal ~resourceType property set by provider factory functions
+     * Accesses the internal ~resource property set by provider factory functions
      */
-    get resourceType(): string | undefined {
-      return (node as unknown as Record<string, string | undefined>)["~resourceType"];
+    get resource(): string | undefined {
+      return (node as unknown as Record<string, string | undefined>)["~resource"];
     },
-    set resourceType(value: string | undefined) {
-      (node as unknown as Record<string, string | undefined>)["~resourceType"] = value;
+    set resource(value: string | undefined) {
+      (node as unknown as Record<string, string | undefined>)["~resource"] = value;
     },
 
     /**

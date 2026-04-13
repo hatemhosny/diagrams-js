@@ -138,7 +138,7 @@ async function mergeDiagrams(
 
       let node: Node;
       if (factory) {
-        // Use the provider factory - it sets ~provider, ~type, ~resourceType, ~iconDataUrl
+        // Use the provider factory - it sets ~provider, ~type, ~resource, ~iconDataUrl
         const nodeOptions: Record<string, unknown> = {
           nodeId: nodeDef.id,
         };
@@ -161,7 +161,7 @@ async function mergeDiagrams(
           nodeOptions["~type"] = nodeDef.service;
         }
         if (nodeDef.type) {
-          nodeOptions["~resourceType"] = nodeDef.type;
+          nodeOptions["~resource"] = nodeDef.type;
         }
         if (nodeDef.iconUrl) {
           nodeOptions["~iconDataUrl"] = nodeDef.iconUrl;

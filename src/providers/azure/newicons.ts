@@ -15,49 +15,49 @@ function _Newicons(label?: string, options?: Record<string, unknown>) {
 
 export function AzureSustainability(label?: string, options?: Record<string, unknown>) {
   const node = _Newicons(label ?? "AzureSustainability", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "AzureSustainability";
+  (node as unknown as Record<string, unknown>)["~resource"] = "AzureSustainability";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = azure_sustainabilityIcon;
   return node;
 }
 
 export function ConnectedVehiclePlatform(label?: string, options?: Record<string, unknown>) {
   const node = _Newicons(label ?? "ConnectedVehiclePlatform", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "ConnectedVehiclePlatform";
+  (node as unknown as Record<string, unknown>)["~resource"] = "ConnectedVehiclePlatform";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = connected_vehicle_platformIcon;
   return node;
 }
 
 export function EntraConnectHealth(label?: string, options?: Record<string, unknown>) {
   const node = _Newicons(label ?? "EntraConnectHealth", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "EntraConnectHealth";
+  (node as unknown as Record<string, unknown>)["~resource"] = "EntraConnectHealth";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = entra_connect_healthIcon;
   return node;
 }
 
 export function EntraConnectSync(label?: string, options?: Record<string, unknown>) {
   const node = _Newicons(label ?? "EntraConnectSync", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "EntraConnectSync";
+  (node as unknown as Record<string, unknown>)["~resource"] = "EntraConnectSync";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = entra_connect_syncIcon;
   return node;
 }
 
 export function IcmTroubleshooting(label?: string, options?: Record<string, unknown>) {
   const node = _Newicons(label ?? "IcmTroubleshooting", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "IcmTroubleshooting";
+  (node as unknown as Record<string, unknown>)["~resource"] = "IcmTroubleshooting";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = icm_troubleshootingIcon;
   return node;
 }
 
 export function Osconfig(label?: string, options?: Record<string, unknown>) {
   const node = _Newicons(label ?? "Osconfig", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Osconfig";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Osconfig";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = osconfigIcon;
   return node;
 }
 
 export function StorageActions(label?: string, options?: Record<string, unknown>) {
   const node = _Newicons(label ?? "StorageActions", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "StorageActions";
+  (node as unknown as Record<string, unknown>)["~resource"] = "StorageActions";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = storage_actionsIcon;
   return node;
 }

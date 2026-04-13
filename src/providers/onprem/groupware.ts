@@ -9,7 +9,7 @@ function _Groupware(label?: string, options?: Record<string, unknown>) {
 
 export function Nextcloud(label?: string, options?: Record<string, unknown>) {
   const node = _Groupware(label ?? "Nextcloud", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Nextcloud";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Nextcloud";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = nextcloudIcon;
   return node;
 }

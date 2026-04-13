@@ -9,7 +9,7 @@ function _Identity(label?: string, options?: Record<string, unknown>) {
 
 export function Dex(label?: string, options?: Record<string, unknown>) {
   const node = _Identity(label ?? "Dex", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Dex";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Dex";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = dexIcon;
   return node;
 }

@@ -14,7 +14,7 @@ function _Migration(label?: string, options?: Record<string, unknown>) {
 
 export function AzureDatabaseMigrationServices(label?: string, options?: Record<string, unknown>) {
   const node = _Migration(label ?? "AzureDatabaseMigrationServices", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "AzureDatabaseMigrationServices";
+  (node as unknown as Record<string, unknown>)["~resource"] = "AzureDatabaseMigrationServices";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] =
     azure_database_migration_servicesIcon;
   return node;
@@ -22,35 +22,35 @@ export function AzureDatabaseMigrationServices(label?: string, options?: Record<
 
 export function DataBoxEdge(label?: string, options?: Record<string, unknown>) {
   const node = _Migration(label ?? "DataBoxEdge", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "DataBoxEdge";
+  (node as unknown as Record<string, unknown>)["~resource"] = "DataBoxEdge";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = data_box_edgeIcon;
   return node;
 }
 
 export function DataBox(label?: string, options?: Record<string, unknown>) {
   const node = _Migration(label ?? "DataBox", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "DataBox";
+  (node as unknown as Record<string, unknown>)["~resource"] = "DataBox";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = data_boxIcon;
   return node;
 }
 
 export function DatabaseMigrationServices(label?: string, options?: Record<string, unknown>) {
   const node = _Migration(label ?? "DatabaseMigrationServices", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "DatabaseMigrationServices";
+  (node as unknown as Record<string, unknown>)["~resource"] = "DatabaseMigrationServices";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = database_migration_servicesIcon;
   return node;
 }
 
 export function MigrationProjects(label?: string, options?: Record<string, unknown>) {
   const node = _Migration(label ?? "MigrationProjects", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "MigrationProjects";
+  (node as unknown as Record<string, unknown>)["~resource"] = "MigrationProjects";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = migration_projectsIcon;
   return node;
 }
 
 export function RecoveryServicesVaults(label?: string, options?: Record<string, unknown>) {
   const node = _Migration(label ?? "RecoveryServicesVaults", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "RecoveryServicesVaults";
+  (node as unknown as Record<string, unknown>)["~resource"] = "RecoveryServicesVaults";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = recovery_services_vaultsIcon;
   return node;
 }

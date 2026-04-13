@@ -25,119 +25,119 @@ function _Devtools(label?: string, options?: Record<string, unknown>) {
 
 export function Build(label?: string, options?: Record<string, unknown>) {
   const node = _Devtools(label ?? "Build", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Build";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Build";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = buildIcon;
   return node;
 }
 
 export function CloudShell(label?: string, options?: Record<string, unknown>) {
   const node = _Devtools(label ?? "CloudShell", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "CloudShell";
+  (node as unknown as Record<string, unknown>)["~resource"] = "CloudShell";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = cloud_shellIcon;
   return node;
 }
 
 export function CodeForIntellij(label?: string, options?: Record<string, unknown>) {
   const node = _Devtools(label ?? "CodeForIntellij", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "CodeForIntellij";
+  (node as unknown as Record<string, unknown>)["~resource"] = "CodeForIntellij";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = code_for_intellijIcon;
   return node;
 }
 
 export function Code(label?: string, options?: Record<string, unknown>) {
   const node = _Devtools(label ?? "Code", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Code";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Code";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = codeIcon;
   return node;
 }
 
 export function ContainerRegistry(label?: string, options?: Record<string, unknown>) {
   const node = _Devtools(label ?? "ContainerRegistry", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "ContainerRegistry";
+  (node as unknown as Record<string, unknown>)["~resource"] = "ContainerRegistry";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = container_registryIcon;
   return node;
 }
 
 export function GradleAppEnginePlugin(label?: string, options?: Record<string, unknown>) {
   const node = _Devtools(label ?? "GradleAppEnginePlugin", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "GradleAppEnginePlugin";
+  (node as unknown as Record<string, unknown>)["~resource"] = "GradleAppEnginePlugin";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = gradle_app_engine_pluginIcon;
   return node;
 }
 
 export function IdePlugins(label?: string, options?: Record<string, unknown>) {
   const node = _Devtools(label ?? "IdePlugins", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "IdePlugins";
+  (node as unknown as Record<string, unknown>)["~resource"] = "IdePlugins";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = ide_pluginsIcon;
   return node;
 }
 
 export function MavenAppEnginePlugin(label?: string, options?: Record<string, unknown>) {
   const node = _Devtools(label ?? "MavenAppEnginePlugin", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "MavenAppEnginePlugin";
+  (node as unknown as Record<string, unknown>)["~resource"] = "MavenAppEnginePlugin";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = maven_app_engine_pluginIcon;
   return node;
 }
 
 export function Scheduler(label?: string, options?: Record<string, unknown>) {
   const node = _Devtools(label ?? "Scheduler", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Scheduler";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Scheduler";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = schedulerIcon;
   return node;
 }
 
 export function SDK(label?: string, options?: Record<string, unknown>) {
   const node = _Devtools(label ?? "SDK", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "SDK";
+  (node as unknown as Record<string, unknown>)["~resource"] = "SDK";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = sdkIcon;
   return node;
 }
 
 export function ServiceCatalog(label?: string, options?: Record<string, unknown>) {
   const node = _Devtools(label ?? "ServiceCatalog", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "ServiceCatalog";
+  (node as unknown as Record<string, unknown>)["~resource"] = "ServiceCatalog";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = service_catalogIcon;
   return node;
 }
 
 export function SourceRepositories(label?: string, options?: Record<string, unknown>) {
   const node = _Devtools(label ?? "SourceRepositories", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "SourceRepositories";
+  (node as unknown as Record<string, unknown>)["~resource"] = "SourceRepositories";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = source_repositoriesIcon;
   return node;
 }
 
 export function Tasks(label?: string, options?: Record<string, unknown>) {
   const node = _Devtools(label ?? "Tasks", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Tasks";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Tasks";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = tasksIcon;
   return node;
 }
 
 export function TestLab(label?: string, options?: Record<string, unknown>) {
   const node = _Devtools(label ?? "TestLab", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "TestLab";
+  (node as unknown as Record<string, unknown>)["~resource"] = "TestLab";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = test_labIcon;
   return node;
 }
 
 export function ToolsForEclipse(label?: string, options?: Record<string, unknown>) {
   const node = _Devtools(label ?? "ToolsForEclipse", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "ToolsForEclipse";
+  (node as unknown as Record<string, unknown>)["~resource"] = "ToolsForEclipse";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = tools_for_eclipseIcon;
   return node;
 }
 
 export function ToolsForPowershell(label?: string, options?: Record<string, unknown>) {
   const node = _Devtools(label ?? "ToolsForPowershell", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "ToolsForPowershell";
+  (node as unknown as Record<string, unknown>)["~resource"] = "ToolsForPowershell";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = tools_for_powershellIcon;
   return node;
 }
 
 export function ToolsForVisualStudio(label?: string, options?: Record<string, unknown>) {
   const node = _Devtools(label ?? "ToolsForVisualStudio", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "ToolsForVisualStudio";
+  (node as unknown as Record<string, unknown>)["~resource"] = "ToolsForVisualStudio";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = tools_for_visual_studioIcon;
   return node;
 }

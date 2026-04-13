@@ -26,126 +26,126 @@ function _Devops(label?: string, options?: Record<string, unknown>) {
 
 export function APIConnections(label?: string, options?: Record<string, unknown>) {
   const node = _Devops(label ?? "APIConnections", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "APIConnections";
+  (node as unknown as Record<string, unknown>)["~resource"] = "APIConnections";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = api_connectionsIcon;
   return node;
 }
 
 export function APIManagementServices(label?: string, options?: Record<string, unknown>) {
   const node = _Devops(label ?? "APIManagementServices", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "APIManagementServices";
+  (node as unknown as Record<string, unknown>)["~resource"] = "APIManagementServices";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = api_management_servicesIcon;
   return node;
 }
 
 export function ApplicationInsights(label?: string, options?: Record<string, unknown>) {
   const node = _Devops(label ?? "ApplicationInsights", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "ApplicationInsights";
+  (node as unknown as Record<string, unknown>)["~resource"] = "ApplicationInsights";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = application_insightsIcon;
   return node;
 }
 
 export function Artifacts(label?: string, options?: Record<string, unknown>) {
   const node = _Devops(label ?? "Artifacts", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Artifacts";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Artifacts";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = artifactsIcon;
   return node;
 }
 
 export function AzureDevops(label?: string, options?: Record<string, unknown>) {
   const node = _Devops(label ?? "AzureDevops", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "AzureDevops";
+  (node as unknown as Record<string, unknown>)["~resource"] = "AzureDevops";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = azure_devopsIcon;
   return node;
 }
 
 export function Boards(label?: string, options?: Record<string, unknown>) {
   const node = _Devops(label ?? "Boards", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Boards";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Boards";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = boardsIcon;
   return node;
 }
 
 export function ChangeAnalysis(label?: string, options?: Record<string, unknown>) {
   const node = _Devops(label ?? "ChangeAnalysis", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "ChangeAnalysis";
+  (node as unknown as Record<string, unknown>)["~resource"] = "ChangeAnalysis";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = change_analysisIcon;
   return node;
 }
 
 export function Cloudtest(label?: string, options?: Record<string, unknown>) {
   const node = _Devops(label ?? "Cloudtest", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Cloudtest";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Cloudtest";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = cloudtestIcon;
   return node;
 }
 
 export function CodeOptimization(label?: string, options?: Record<string, unknown>) {
   const node = _Devops(label ?? "CodeOptimization", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "CodeOptimization";
+  (node as unknown as Record<string, unknown>)["~resource"] = "CodeOptimization";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = code_optimizationIcon;
   return node;
 }
 
 export function DevopsStarter(label?: string, options?: Record<string, unknown>) {
   const node = _Devops(label ?? "DevopsStarter", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "DevopsStarter";
+  (node as unknown as Record<string, unknown>)["~resource"] = "DevopsStarter";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = devops_starterIcon;
   return node;
 }
 
 export function Devops(label?: string, options?: Record<string, unknown>) {
   const node = _Devops(label ?? "Devops", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Devops";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Devops";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = devopsIcon;
   return node;
 }
 
 export function DevtestLabs(label?: string, options?: Record<string, unknown>) {
   const node = _Devops(label ?? "DevtestLabs", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "DevtestLabs";
+  (node as unknown as Record<string, unknown>)["~resource"] = "DevtestLabs";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = devtest_labsIcon;
   return node;
 }
 
 export function LabAccounts(label?: string, options?: Record<string, unknown>) {
   const node = _Devops(label ?? "LabAccounts", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "LabAccounts";
+  (node as unknown as Record<string, unknown>)["~resource"] = "LabAccounts";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = lab_accountsIcon;
   return node;
 }
 
 export function LabServices(label?: string, options?: Record<string, unknown>) {
   const node = _Devops(label ?? "LabServices", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "LabServices";
+  (node as unknown as Record<string, unknown>)["~resource"] = "LabServices";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = lab_servicesIcon;
   return node;
 }
 
 export function LoadTesting(label?: string, options?: Record<string, unknown>) {
   const node = _Devops(label ?? "LoadTesting", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "LoadTesting";
+  (node as unknown as Record<string, unknown>)["~resource"] = "LoadTesting";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = load_testingIcon;
   return node;
 }
 
 export function Pipelines(label?: string, options?: Record<string, unknown>) {
   const node = _Devops(label ?? "Pipelines", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Pipelines";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Pipelines";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = pipelinesIcon;
   return node;
 }
 
 export function Repos(label?: string, options?: Record<string, unknown>) {
   const node = _Devops(label ?? "Repos", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Repos";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Repos";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = reposIcon;
   return node;
 }
 
 export function TestPlans(label?: string, options?: Record<string, unknown>) {
   const node = _Devops(label ?? "TestPlans", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "TestPlans";
+  (node as unknown as Record<string, unknown>)["~resource"] = "TestPlans";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = test_plansIcon;
   return node;
 }

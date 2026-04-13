@@ -10,14 +10,14 @@ function _Others(label?: string, options?: Record<string, unknown>) {
 
 export function CRD(label?: string, options?: Record<string, unknown>) {
   const node = _Others(label ?? "CRD", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "CRD";
+  (node as unknown as Record<string, unknown>)["~resource"] = "CRD";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = crdIcon;
   return node;
 }
 
 export function PSP(label?: string, options?: Record<string, unknown>) {
   const node = _Others(label ?? "PSP", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "PSP";
+  (node as unknown as Record<string, unknown>)["~resource"] = "PSP";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = pspIcon;
   return node;
 }

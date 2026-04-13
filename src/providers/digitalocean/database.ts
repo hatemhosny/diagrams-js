@@ -12,28 +12,28 @@ function _Database(label?: string, options?: Record<string, unknown>) {
 
 export function DbaasPrimaryStandbyMore(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "DbaasPrimaryStandbyMore", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "DbaasPrimaryStandbyMore";
+  (node as unknown as Record<string, unknown>)["~resource"] = "DbaasPrimaryStandbyMore";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = dbaas_primary_standby_moreIcon;
   return node;
 }
 
 export function DbaasPrimary(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "DbaasPrimary", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "DbaasPrimary";
+  (node as unknown as Record<string, unknown>)["~resource"] = "DbaasPrimary";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = dbaas_primaryIcon;
   return node;
 }
 
 export function DbaasReadOnly(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "DbaasReadOnly", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "DbaasReadOnly";
+  (node as unknown as Record<string, unknown>)["~resource"] = "DbaasReadOnly";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = dbaas_read_onlyIcon;
   return node;
 }
 
 export function DbaasStandby(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "DbaasStandby", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "DbaasStandby";
+  (node as unknown as Record<string, unknown>)["~resource"] = "DbaasStandby";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = dbaas_standbyIcon;
   return node;
 }

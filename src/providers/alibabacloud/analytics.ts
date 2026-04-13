@@ -13,35 +13,35 @@ function _Analytics(label?: string, options?: Record<string, unknown>) {
 
 export function AnalyticDb(label?: string, options?: Record<string, unknown>) {
   const node = _Analytics(label ?? "AnalyticDb", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "AnalyticDb";
+  (node as unknown as Record<string, unknown>)["~resource"] = "AnalyticDb";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = analytic_dbIcon;
   return node;
 }
 
 export function ClickHouse(label?: string, options?: Record<string, unknown>) {
   const node = _Analytics(label ?? "ClickHouse", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "ClickHouse";
+  (node as unknown as Record<string, unknown>)["~resource"] = "ClickHouse";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = click_houseIcon;
   return node;
 }
 
 export function DataLakeAnalytics(label?: string, options?: Record<string, unknown>) {
   const node = _Analytics(label ?? "DataLakeAnalytics", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "DataLakeAnalytics";
+  (node as unknown as Record<string, unknown>)["~resource"] = "DataLakeAnalytics";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = data_lake_analyticsIcon;
   return node;
 }
 
 export function ElaticMapReduce(label?: string, options?: Record<string, unknown>) {
   const node = _Analytics(label ?? "ElaticMapReduce", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "ElaticMapReduce";
+  (node as unknown as Record<string, unknown>)["~resource"] = "ElaticMapReduce";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = elatic_map_reduceIcon;
   return node;
 }
 
 export function OpenSearch(label?: string, options?: Record<string, unknown>) {
   const node = _Analytics(label ?? "OpenSearch", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "OpenSearch";
+  (node as unknown as Record<string, unknown>)["~resource"] = "OpenSearch";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = open_searchIcon;
   return node;
 }

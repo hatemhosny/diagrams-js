@@ -9,7 +9,7 @@ function _Organization(label?: string, options?: Record<string, unknown>) {
 
 export function Osgeo(label?: string, options?: Record<string, unknown>) {
   const node = _Organization(label ?? "Osgeo", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Osgeo";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Osgeo";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = osgeoIcon;
   return node;
 }

@@ -10,14 +10,14 @@ function _Monitoring(label?: string, options?: Record<string, unknown>) {
 
 export function Monasca(label?: string, options?: Record<string, unknown>) {
   const node = _Monitoring(label ?? "Monasca", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Monasca";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Monasca";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = monascaIcon;
   return node;
 }
 
 export function Telemetry(label?: string, options?: Record<string, unknown>) {
   const node = _Monitoring(label ?? "Telemetry", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Telemetry";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Telemetry";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = telemetryIcon;
   return node;
 }

@@ -14,42 +14,42 @@ function _Network(label?: string, options?: Record<string, unknown>) {
 
 export function ClientVpn(label?: string, options?: Record<string, unknown>) {
   const node = _Network(label ?? "ClientVpn", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "ClientVpn";
+  (node as unknown as Record<string, unknown>)["~resource"] = "ClientVpn";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = client_vpnIcon;
   return node;
 }
 
 export function InternetService(label?: string, options?: Record<string, unknown>) {
   const node = _Network(label ?? "InternetService", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "InternetService";
+  (node as unknown as Record<string, unknown>)["~resource"] = "InternetService";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = internet_serviceIcon;
   return node;
 }
 
 export function LoadBalancer(label?: string, options?: Record<string, unknown>) {
   const node = _Network(label ?? "LoadBalancer", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "LoadBalancer";
+  (node as unknown as Record<string, unknown>)["~resource"] = "LoadBalancer";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = load_balancerIcon;
   return node;
 }
 
 export function NatService(label?: string, options?: Record<string, unknown>) {
   const node = _Network(label ?? "NatService", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "NatService";
+  (node as unknown as Record<string, unknown>)["~resource"] = "NatService";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = nat_serviceIcon;
   return node;
 }
 
 export function Net(label?: string, options?: Record<string, unknown>) {
   const node = _Network(label ?? "Net", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Net";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Net";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = netIcon;
   return node;
 }
 
 export function SiteToSiteVpng(label?: string, options?: Record<string, unknown>) {
   const node = _Network(label ?? "SiteToSiteVpng", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "SiteToSiteVpng";
+  (node as unknown as Record<string, unknown>)["~resource"] = "SiteToSiteVpng";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = site_to_site_vpngIcon;
   return node;
 }

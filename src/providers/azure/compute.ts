@@ -61,56 +61,56 @@ function _Compute(label?: string, options?: Record<string, unknown>) {
 
 export function AppServices(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "AppServices", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "AppServices";
+  (node as unknown as Record<string, unknown>)["~resource"] = "AppServices";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = app_servicesIcon;
   return node;
 }
 
 export function ApplicationGroup(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "ApplicationGroup", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "ApplicationGroup";
+  (node as unknown as Record<string, unknown>)["~resource"] = "ApplicationGroup";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = application_groupIcon;
   return node;
 }
 
 export function AutomanagedVM(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "AutomanagedVM", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "AutomanagedVM";
+  (node as unknown as Record<string, unknown>)["~resource"] = "AutomanagedVM";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = automanaged_vmIcon;
   return node;
 }
 
 export function AvailabilitySets(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "AvailabilitySets", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "AvailabilitySets";
+  (node as unknown as Record<string, unknown>)["~resource"] = "AvailabilitySets";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = availability_setsIcon;
   return node;
 }
 
 export function AzureComputeGalleries(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "AzureComputeGalleries", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "AzureComputeGalleries";
+  (node as unknown as Record<string, unknown>)["~resource"] = "AzureComputeGalleries";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = azure_compute_galleriesIcon;
   return node;
 }
 
 export function AzureSpringApps(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "AzureSpringApps", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "AzureSpringApps";
+  (node as unknown as Record<string, unknown>)["~resource"] = "AzureSpringApps";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = azure_spring_appsIcon;
   return node;
 }
 
 export function BatchAccounts(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "BatchAccounts", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "BatchAccounts";
+  (node as unknown as Record<string, unknown>)["~resource"] = "BatchAccounts";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = batch_accountsIcon;
   return node;
 }
 
 export function CitrixVirtualDesktopsEssentials(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "CitrixVirtualDesktopsEssentials", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "CitrixVirtualDesktopsEssentials";
+  (node as unknown as Record<string, unknown>)["~resource"] = "CitrixVirtualDesktopsEssentials";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] =
     citrix_virtual_desktops_essentialsIcon;
   return node;
@@ -118,315 +118,315 @@ export function CitrixVirtualDesktopsEssentials(label?: string, options?: Record
 
 export function CloudServicesClassic(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "CloudServicesClassic", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "CloudServicesClassic";
+  (node as unknown as Record<string, unknown>)["~resource"] = "CloudServicesClassic";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = cloud_services_classicIcon;
   return node;
 }
 
 export function CloudServices(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "CloudServices", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "CloudServices";
+  (node as unknown as Record<string, unknown>)["~resource"] = "CloudServices";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = cloud_servicesIcon;
   return node;
 }
 
 export function CloudsimpleVirtualMachines(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "CloudsimpleVirtualMachines", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "CloudsimpleVirtualMachines";
+  (node as unknown as Record<string, unknown>)["~resource"] = "CloudsimpleVirtualMachines";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = cloudsimple_virtual_machinesIcon;
   return node;
 }
 
 export function ContainerApps(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "ContainerApps", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "ContainerApps";
+  (node as unknown as Record<string, unknown>)["~resource"] = "ContainerApps";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = container_appsIcon;
   return node;
 }
 
 export function ContainerInstances(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "ContainerInstances", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "ContainerInstances";
+  (node as unknown as Record<string, unknown>)["~resource"] = "ContainerInstances";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = container_instancesIcon;
   return node;
 }
 
 export function ContainerRegistries(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "ContainerRegistries", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "ContainerRegistries";
+  (node as unknown as Record<string, unknown>)["~resource"] = "ContainerRegistries";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = container_registriesIcon;
   return node;
 }
 
 export function ContainerServicesDeprecated(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "ContainerServicesDeprecated", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "ContainerServicesDeprecated";
+  (node as unknown as Record<string, unknown>)["~resource"] = "ContainerServicesDeprecated";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = container_services_deprecatedIcon;
   return node;
 }
 
 export function DiskEncryptionSets(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "DiskEncryptionSets", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "DiskEncryptionSets";
+  (node as unknown as Record<string, unknown>)["~resource"] = "DiskEncryptionSets";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = disk_encryption_setsIcon;
   return node;
 }
 
 export function DiskSnapshots(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "DiskSnapshots", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "DiskSnapshots";
+  (node as unknown as Record<string, unknown>)["~resource"] = "DiskSnapshots";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = disk_snapshotsIcon;
   return node;
 }
 
 export function DisksClassic(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "DisksClassic", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "DisksClassic";
+  (node as unknown as Record<string, unknown>)["~resource"] = "DisksClassic";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = disks_classicIcon;
   return node;
 }
 
 export function DisksSnapshots(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "DisksSnapshots", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "DisksSnapshots";
+  (node as unknown as Record<string, unknown>)["~resource"] = "DisksSnapshots";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = disks_snapshotsIcon;
   return node;
 }
 
 export function Disks(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "Disks", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Disks";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Disks";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = disksIcon;
   return node;
 }
 
 export function FunctionApps(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "FunctionApps", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "FunctionApps";
+  (node as unknown as Record<string, unknown>)["~resource"] = "FunctionApps";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = function_appsIcon;
   return node;
 }
 
 export function HostGroups(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "HostGroups", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "HostGroups";
+  (node as unknown as Record<string, unknown>)["~resource"] = "HostGroups";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = host_groupsIcon;
   return node;
 }
 
 export function HostPools(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "HostPools", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "HostPools";
+  (node as unknown as Record<string, unknown>)["~resource"] = "HostPools";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = host_poolsIcon;
   return node;
 }
 
 export function Hosts(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "Hosts", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Hosts";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Hosts";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = hostsIcon;
   return node;
 }
 
 export function ImageDefinitions(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "ImageDefinitions", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "ImageDefinitions";
+  (node as unknown as Record<string, unknown>)["~resource"] = "ImageDefinitions";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = image_definitionsIcon;
   return node;
 }
 
 export function ImageTemplates(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "ImageTemplates", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "ImageTemplates";
+  (node as unknown as Record<string, unknown>)["~resource"] = "ImageTemplates";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = image_templatesIcon;
   return node;
 }
 
 export function ImageVersions(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "ImageVersions", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "ImageVersions";
+  (node as unknown as Record<string, unknown>)["~resource"] = "ImageVersions";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = image_versionsIcon;
   return node;
 }
 
 export function Images(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "Images", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Images";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Images";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = imagesIcon;
   return node;
 }
 
 export function KubernetesServices(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "KubernetesServices", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "KubernetesServices";
+  (node as unknown as Record<string, unknown>)["~resource"] = "KubernetesServices";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = kubernetes_servicesIcon;
   return node;
 }
 
 export function MaintenanceConfiguration(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "MaintenanceConfiguration", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "MaintenanceConfiguration";
+  (node as unknown as Record<string, unknown>)["~resource"] = "MaintenanceConfiguration";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = maintenance_configurationIcon;
   return node;
 }
 
 export function ManagedServiceFabric(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "ManagedServiceFabric", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "ManagedServiceFabric";
+  (node as unknown as Record<string, unknown>)["~resource"] = "ManagedServiceFabric";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = managed_service_fabricIcon;
   return node;
 }
 
 export function MeshApplications(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "MeshApplications", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "MeshApplications";
+  (node as unknown as Record<string, unknown>)["~resource"] = "MeshApplications";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = mesh_applicationsIcon;
   return node;
 }
 
 export function MetricsAdvisor(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "MetricsAdvisor", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "MetricsAdvisor";
+  (node as unknown as Record<string, unknown>)["~resource"] = "MetricsAdvisor";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = metrics_advisorIcon;
   return node;
 }
 
 export function OsImagesClassic(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "OsImagesClassic", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "OsImagesClassic";
+  (node as unknown as Record<string, unknown>)["~resource"] = "OsImagesClassic";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = os_images_classicIcon;
   return node;
 }
 
 export function OsImages(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "OsImages", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "OsImages";
+  (node as unknown as Record<string, unknown>)["~resource"] = "OsImages";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = os_imagesIcon;
   return node;
 }
 
 export function RestorePointsCollections(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "RestorePointsCollections", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "RestorePointsCollections";
+  (node as unknown as Record<string, unknown>)["~resource"] = "RestorePointsCollections";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = restore_points_collectionsIcon;
   return node;
 }
 
 export function RestorePoints(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "RestorePoints", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "RestorePoints";
+  (node as unknown as Record<string, unknown>)["~resource"] = "RestorePoints";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = restore_pointsIcon;
   return node;
 }
 
 export function SAPHANAOnAzure(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "SAPHANAOnAzure", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "SAPHANAOnAzure";
+  (node as unknown as Record<string, unknown>)["~resource"] = "SAPHANAOnAzure";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = sap_hana_on_azureIcon;
   return node;
 }
 
 export function ServiceFabricClusters(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "ServiceFabricClusters", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "ServiceFabricClusters";
+  (node as unknown as Record<string, unknown>)["~resource"] = "ServiceFabricClusters";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = service_fabric_clustersIcon;
   return node;
 }
 
 export function SharedImageGalleries(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "SharedImageGalleries", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "SharedImageGalleries";
+  (node as unknown as Record<string, unknown>)["~resource"] = "SharedImageGalleries";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = shared_image_galleriesIcon;
   return node;
 }
 
 export function SpringCloud(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "SpringCloud", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "SpringCloud";
+  (node as unknown as Record<string, unknown>)["~resource"] = "SpringCloud";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = spring_cloudIcon;
   return node;
 }
 
 export function VirtualMachine(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "VirtualMachine", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "VirtualMachine";
+  (node as unknown as Record<string, unknown>)["~resource"] = "VirtualMachine";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = virtual_machineIcon;
   return node;
 }
 
 export function VirtualMachinesClassic(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "VirtualMachinesClassic", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "VirtualMachinesClassic";
+  (node as unknown as Record<string, unknown>)["~resource"] = "VirtualMachinesClassic";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = virtual_machines_classicIcon;
   return node;
 }
 
 export function VMClassic(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "VMClassic", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "VMClassic";
+  (node as unknown as Record<string, unknown>)["~resource"] = "VMClassic";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = vm_classicIcon;
   return node;
 }
 
 export function VMImagesClassic(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "VMImagesClassic", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "VMImagesClassic";
+  (node as unknown as Record<string, unknown>)["~resource"] = "VMImagesClassic";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = vm_images_classicIcon;
   return node;
 }
 
 export function VMImages(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "VMImages", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "VMImages";
+  (node as unknown as Record<string, unknown>)["~resource"] = "VMImages";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = vm_imagesIcon;
   return node;
 }
 
 export function VMLinux(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "VMLinux", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "VMLinux";
+  (node as unknown as Record<string, unknown>)["~resource"] = "VMLinux";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = vm_linuxIcon;
   return node;
 }
 
 export function VMScaleSet(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "VMScaleSet", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "VMScaleSet";
+  (node as unknown as Record<string, unknown>)["~resource"] = "VMScaleSet";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = vm_scale_setIcon;
   return node;
 }
 
 export function VMScaleSets(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "VMScaleSets", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "VMScaleSets";
+  (node as unknown as Record<string, unknown>)["~resource"] = "VMScaleSets";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = vm_scale_setsIcon;
   return node;
 }
 
 export function VMWindows(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "VMWindows", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "VMWindows";
+  (node as unknown as Record<string, unknown>)["~resource"] = "VMWindows";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = vm_windowsIcon;
   return node;
 }
 
 export function VM(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "VM", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "VM";
+  (node as unknown as Record<string, unknown>)["~resource"] = "VM";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = vmIcon;
   return node;
 }
 
 export function Workspaces2(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "Workspaces2", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Workspaces2";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Workspaces2";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = workspaces_2Icon;
   return node;
 }
 
 export function Workspaces(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "Workspaces", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Workspaces";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Workspaces";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = workspacesIcon;
   return node;
 }

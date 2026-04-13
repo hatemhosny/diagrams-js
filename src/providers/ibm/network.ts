@@ -29,147 +29,147 @@ function _Network(label?: string, options?: Record<string, unknown>) {
 
 export function Bridge(label?: string, options?: Record<string, unknown>) {
   const node = _Network(label ?? "Bridge", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Bridge";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Bridge";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = bridgeIcon;
   return node;
 }
 
 export function DirectLink(label?: string, options?: Record<string, unknown>) {
   const node = _Network(label ?? "DirectLink", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "DirectLink";
+  (node as unknown as Record<string, unknown>)["~resource"] = "DirectLink";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = direct_linkIcon;
   return node;
 }
 
 export function Enterprise(label?: string, options?: Record<string, unknown>) {
   const node = _Network(label ?? "Enterprise", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Enterprise";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Enterprise";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = enterpriseIcon;
   return node;
 }
 
 export function Firewall(label?: string, options?: Record<string, unknown>) {
   const node = _Network(label ?? "Firewall", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Firewall";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Firewall";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = firewallIcon;
   return node;
 }
 
 export function FloatingIp(label?: string, options?: Record<string, unknown>) {
   const node = _Network(label ?? "FloatingIp", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "FloatingIp";
+  (node as unknown as Record<string, unknown>)["~resource"] = "FloatingIp";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = floating_ipIcon;
   return node;
 }
 
 export function Gateway(label?: string, options?: Record<string, unknown>) {
   const node = _Network(label ?? "Gateway", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Gateway";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Gateway";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = gatewayIcon;
   return node;
 }
 
 export function InternetServices(label?: string, options?: Record<string, unknown>) {
   const node = _Network(label ?? "InternetServices", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "InternetServices";
+  (node as unknown as Record<string, unknown>)["~resource"] = "InternetServices";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = internet_servicesIcon;
   return node;
 }
 
 export function LoadBalancerListener(label?: string, options?: Record<string, unknown>) {
   const node = _Network(label ?? "LoadBalancerListener", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "LoadBalancerListener";
+  (node as unknown as Record<string, unknown>)["~resource"] = "LoadBalancerListener";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = load_balancer_listenerIcon;
   return node;
 }
 
 export function LoadBalancerPool(label?: string, options?: Record<string, unknown>) {
   const node = _Network(label ?? "LoadBalancerPool", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "LoadBalancerPool";
+  (node as unknown as Record<string, unknown>)["~resource"] = "LoadBalancerPool";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = load_balancer_poolIcon;
   return node;
 }
 
 export function LoadBalancer(label?: string, options?: Record<string, unknown>) {
   const node = _Network(label ?? "LoadBalancer", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "LoadBalancer";
+  (node as unknown as Record<string, unknown>)["~resource"] = "LoadBalancer";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = load_balancerIcon;
   return node;
 }
 
 export function LoadBalancingRouting(label?: string, options?: Record<string, unknown>) {
   const node = _Network(label ?? "LoadBalancingRouting", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "LoadBalancingRouting";
+  (node as unknown as Record<string, unknown>)["~resource"] = "LoadBalancingRouting";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = load_balancing_routingIcon;
   return node;
 }
 
 export function PublicGateway(label?: string, options?: Record<string, unknown>) {
   const node = _Network(label ?? "PublicGateway", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "PublicGateway";
+  (node as unknown as Record<string, unknown>)["~resource"] = "PublicGateway";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = public_gatewayIcon;
   return node;
 }
 
 export function Region(label?: string, options?: Record<string, unknown>) {
   const node = _Network(label ?? "Region", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Region";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Region";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = regionIcon;
   return node;
 }
 
 export function Router(label?: string, options?: Record<string, unknown>) {
   const node = _Network(label ?? "Router", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Router";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Router";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = routerIcon;
   return node;
 }
 
 export function Rules(label?: string, options?: Record<string, unknown>) {
   const node = _Network(label ?? "Rules", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Rules";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Rules";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = rulesIcon;
   return node;
 }
 
 export function Subnet(label?: string, options?: Record<string, unknown>) {
   const node = _Network(label ?? "Subnet", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Subnet";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Subnet";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = subnetIcon;
   return node;
 }
 
 export function TransitGateway(label?: string, options?: Record<string, unknown>) {
   const node = _Network(label ?? "TransitGateway", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "TransitGateway";
+  (node as unknown as Record<string, unknown>)["~resource"] = "TransitGateway";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = transit_gatewayIcon;
   return node;
 }
 
 export function Vpc(label?: string, options?: Record<string, unknown>) {
   const node = _Network(label ?? "Vpc", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Vpc";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Vpc";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = vpcIcon;
   return node;
 }
 
 export function VpnConnection(label?: string, options?: Record<string, unknown>) {
   const node = _Network(label ?? "VpnConnection", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "VpnConnection";
+  (node as unknown as Record<string, unknown>)["~resource"] = "VpnConnection";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = vpn_connectionIcon;
   return node;
 }
 
 export function VpnGateway(label?: string, options?: Record<string, unknown>) {
   const node = _Network(label ?? "VpnGateway", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "VpnGateway";
+  (node as unknown as Record<string, unknown>)["~resource"] = "VpnGateway";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = vpn_gatewayIcon;
   return node;
 }
 
 export function VpnPolicy(label?: string, options?: Record<string, unknown>) {
   const node = _Network(label ?? "VpnPolicy", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "VpnPolicy";
+  (node as unknown as Record<string, unknown>)["~resource"] = "VpnPolicy";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = vpn_policyIcon;
   return node;
 }

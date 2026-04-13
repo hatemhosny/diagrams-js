@@ -17,63 +17,63 @@ function _Ci(label?: string, options?: Record<string, unknown>) {
 
 export function Circleci(label?: string, options?: Record<string, unknown>) {
   const node = _Ci(label ?? "Circleci", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Circleci";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Circleci";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = circleciIcon;
   return node;
 }
 
 export function Concourseci(label?: string, options?: Record<string, unknown>) {
   const node = _Ci(label ?? "Concourseci", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Concourseci";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Concourseci";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = concourseciIcon;
   return node;
 }
 
 export function Droneci(label?: string, options?: Record<string, unknown>) {
   const node = _Ci(label ?? "Droneci", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Droneci";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Droneci";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = droneciIcon;
   return node;
 }
 
 export function GithubActions(label?: string, options?: Record<string, unknown>) {
   const node = _Ci(label ?? "GithubActions", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "GithubActions";
+  (node as unknown as Record<string, unknown>)["~resource"] = "GithubActions";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = github_actionsIcon;
   return node;
 }
 
 export function Gitlabci(label?: string, options?: Record<string, unknown>) {
   const node = _Ci(label ?? "Gitlabci", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Gitlabci";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Gitlabci";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = gitlabciIcon;
   return node;
 }
 
 export function Jenkins(label?: string, options?: Record<string, unknown>) {
   const node = _Ci(label ?? "Jenkins", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Jenkins";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Jenkins";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = jenkinsIcon;
   return node;
 }
 
 export function Teamcity(label?: string, options?: Record<string, unknown>) {
   const node = _Ci(label ?? "Teamcity", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Teamcity";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Teamcity";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = teamcityIcon;
   return node;
 }
 
 export function Travisci(label?: string, options?: Record<string, unknown>) {
   const node = _Ci(label ?? "Travisci", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Travisci";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Travisci";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = travisciIcon;
   return node;
 }
 
 export function Zuulci(label?: string, options?: Record<string, unknown>) {
   const node = _Ci(label ?? "Zuulci", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Zuulci";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Zuulci";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = zuulciIcon;
   return node;
 }

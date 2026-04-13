@@ -12,28 +12,28 @@ function _Management(label?: string, options?: Record<string, unknown>) {
 
 export function Billing(label?: string, options?: Record<string, unknown>) {
   const node = _Management(label ?? "Billing", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Billing";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Billing";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = billingIcon;
   return node;
 }
 
 export function Project(label?: string, options?: Record<string, unknown>) {
   const node = _Management(label ?? "Project", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Project";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Project";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = projectIcon;
   return node;
 }
 
 export function Quotas(label?: string, options?: Record<string, unknown>) {
   const node = _Management(label ?? "Quotas", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Quotas";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Quotas";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = quotasIcon;
   return node;
 }
 
 export function Support(label?: string, options?: Record<string, unknown>) {
   const node = _Management(label ?? "Support", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Support";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Support";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = supportIcon;
   return node;
 }

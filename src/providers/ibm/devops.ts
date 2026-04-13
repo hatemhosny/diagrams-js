@@ -18,70 +18,70 @@ function _Devops(label?: string, options?: Record<string, unknown>) {
 
 export function ArtifactManagement(label?: string, options?: Record<string, unknown>) {
   const node = _Devops(label ?? "ArtifactManagement", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "ArtifactManagement";
+  (node as unknown as Record<string, unknown>)["~resource"] = "ArtifactManagement";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = artifact_managementIcon;
   return node;
 }
 
 export function BuildTest(label?: string, options?: Record<string, unknown>) {
   const node = _Devops(label ?? "BuildTest", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "BuildTest";
+  (node as unknown as Record<string, unknown>)["~resource"] = "BuildTest";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = build_testIcon;
   return node;
 }
 
 export function CodeEditor(label?: string, options?: Record<string, unknown>) {
   const node = _Devops(label ?? "CodeEditor", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "CodeEditor";
+  (node as unknown as Record<string, unknown>)["~resource"] = "CodeEditor";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = code_editorIcon;
   return node;
 }
 
 export function CollaborativeDevelopment(label?: string, options?: Record<string, unknown>) {
   const node = _Devops(label ?? "CollaborativeDevelopment", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "CollaborativeDevelopment";
+  (node as unknown as Record<string, unknown>)["~resource"] = "CollaborativeDevelopment";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = collaborative_developmentIcon;
   return node;
 }
 
 export function ConfigurationManagement(label?: string, options?: Record<string, unknown>) {
   const node = _Devops(label ?? "ConfigurationManagement", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "ConfigurationManagement";
+  (node as unknown as Record<string, unknown>)["~resource"] = "ConfigurationManagement";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = configuration_managementIcon;
   return node;
 }
 
 export function ContinuousDeploy(label?: string, options?: Record<string, unknown>) {
   const node = _Devops(label ?? "ContinuousDeploy", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "ContinuousDeploy";
+  (node as unknown as Record<string, unknown>)["~resource"] = "ContinuousDeploy";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = continuous_deployIcon;
   return node;
 }
 
 export function ContinuousTesting(label?: string, options?: Record<string, unknown>) {
   const node = _Devops(label ?? "ContinuousTesting", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "ContinuousTesting";
+  (node as unknown as Record<string, unknown>)["~resource"] = "ContinuousTesting";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = continuous_testingIcon;
   return node;
 }
 
 export function Devops(label?: string, options?: Record<string, unknown>) {
   const node = _Devops(label ?? "Devops", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Devops";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Devops";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = devopsIcon;
   return node;
 }
 
 export function Provision(label?: string, options?: Record<string, unknown>) {
   const node = _Devops(label ?? "Provision", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Provision";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Provision";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = provisionIcon;
   return node;
 }
 
 export function ReleaseManagement(label?: string, options?: Record<string, unknown>) {
   const node = _Devops(label ?? "ReleaseManagement", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "ReleaseManagement";
+  (node as unknown as Record<string, unknown>)["~resource"] = "ReleaseManagement";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = release_managementIcon;
   return node;
 }

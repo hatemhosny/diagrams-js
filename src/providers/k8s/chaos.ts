@@ -10,14 +10,14 @@ function _Chaos(label?: string, options?: Record<string, unknown>) {
 
 export function ChaosMesh(label?: string, options?: Record<string, unknown>) {
   const node = _Chaos(label ?? "ChaosMesh", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "ChaosMesh";
+  (node as unknown as Record<string, unknown>)["~resource"] = "ChaosMesh";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = chaos_meshIcon;
   return node;
 }
 
 export function LitmusChaos(label?: string, options?: Record<string, unknown>) {
   const node = _Chaos(label ?? "LitmusChaos", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "LitmusChaos";
+  (node as unknown as Record<string, unknown>)["~resource"] = "LitmusChaos";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = litmus_chaosIcon;
   return node;
 }

@@ -13,35 +13,35 @@ function _Enablement(label?: string, options?: Record<string, unknown>) {
 
 export function CustomerEnablement(label?: string, options?: Record<string, unknown>) {
   const node = _Enablement(label ?? "CustomerEnablement", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "CustomerEnablement";
+  (node as unknown as Record<string, unknown>)["~resource"] = "CustomerEnablement";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = customer_enablementIcon;
   return node;
 }
 
 export function Iq(label?: string, options?: Record<string, unknown>) {
   const node = _Enablement(label ?? "Iq", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Iq";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Iq";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = iqIcon;
   return node;
 }
 
 export function ManagedServices(label?: string, options?: Record<string, unknown>) {
   const node = _Enablement(label ?? "ManagedServices", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "ManagedServices";
+  (node as unknown as Record<string, unknown>)["~resource"] = "ManagedServices";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = managed_servicesIcon;
   return node;
 }
 
 export function ProfessionalServices(label?: string, options?: Record<string, unknown>) {
   const node = _Enablement(label ?? "ProfessionalServices", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "ProfessionalServices";
+  (node as unknown as Record<string, unknown>)["~resource"] = "ProfessionalServices";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = professional_servicesIcon;
   return node;
 }
 
 export function Support(label?: string, options?: Record<string, unknown>) {
   const node = _Enablement(label ?? "Support", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Support";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Support";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = supportIcon;
   return node;
 }

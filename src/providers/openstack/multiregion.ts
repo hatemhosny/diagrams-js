@@ -9,7 +9,7 @@ function _Multiregion(label?: string, options?: Record<string, unknown>) {
 
 export function Tricircle(label?: string, options?: Record<string, unknown>) {
   const node = _Multiregion(label ?? "Tricircle", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Tricircle";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Tricircle";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = tricircleIcon;
   return node;
 }
