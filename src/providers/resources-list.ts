@@ -1,4 +1,4 @@
-// Auto-generated find-resource module
+// Auto-generated resources-list module
 // Do not edit manually
 
 export interface ResourceInfo {

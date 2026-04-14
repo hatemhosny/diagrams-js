@@ -178,8 +178,8 @@ interface ResourceInfo {
   resource: string;
 }
 
-function generateFindResource(): void {
-  console.log("Generating find-resource.ts...");
+function generateResourcesList(): void {
+  console.log("Generating resources-list.ts...");
 
   const allResources: ResourceInfo[] = [];
 
@@ -218,7 +218,7 @@ function generateFindResource(): void {
     indexEntries.push([r.resource.toLowerCase(), idx]);
   });
 
-  let code = `// Auto-generated find-resource module
+  let code = `// Auto-generated resources-list module
 // Do not edit manually
 
 export interface ResourceInfo {
@@ -234,13 +234,13 @@ const resourceIndex: Map<string, number> = new Map(${JSON.stringify(indexEntries
 
 export function findResource(query: string): ResourceInfo[] {
   const lowerQuery = query.toLowerCase();
-  
+
   // Check for exact match first (O(1) lookup)
   const exactMatchIndex = resourceIndex.get(lowerQuery);
   if (exactMatchIndex !== undefined) {
     return [allResources[exactMatchIndex]];
   }
-  
+
   // Fall back to partial match search
   return allResources.filter((r) =>
     r.resource.toLowerCase().includes(lowerQuery)
@@ -248,9 +248,9 @@ export function findResource(query: string): ResourceInfo[] {
 }
 `;
 
-  const filePath = path.join(PROVIDERS_DIR, "find-resource.ts");
+  const filePath = path.join(PROVIDERS_DIR, "resources-list.ts");
   fs.writeFileSync(filePath, code);
-  console.log(`  Created find-resource.ts (${allResources.length} resources)`);
+  console.log(`  Created resources-list.ts (${allResources.length} resources)`);
 }
 
 function main(): void {
@@ -267,7 +267,7 @@ function main(): void {
       console.log();
     }
     generateProvidersIndex();
-    generateFindResource();
+    generateResourcesList();
     console.log("\n✓ All providers generated successfully!");
   } else {
     const provider = args[0];
@@ -278,7 +278,7 @@ function main(): void {
     }
     generateProvider(provider as Provider);
     generateProvidersIndex();
-    generateFindResource();
+    generateResourcesList();
   }
 }
 

@@ -177,7 +177,7 @@ export interface PluginContext {
   /** Execute hooks for an event */
   executeHooks: <T>(event: HookEvent, data: T) => Promise<T>;
   /** Get a list of available resources */
-  loadResourcesList: () => Promise<typeof import("../providers/find-resource.ts") | null>;
+  loadResourcesList: () => Promise<typeof import("../providers/resources-list.ts") | null>;
   /** Library exports - use these instead of importing diagrams-js to avoid multiple instances */
   lib: {
     /** Diagram factory function */
@@ -339,7 +339,7 @@ export interface PluginRegistry {
     renderers: string[];
     metadataProviders: string[];
   };
-  loadResourcesList: () => Promise<typeof import("../providers/find-resource.ts") | null>;
+  loadResourcesList: () => Promise<typeof import("../providers/resources-list.ts") | null>;
 }
 
 /**

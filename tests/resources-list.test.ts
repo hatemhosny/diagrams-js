@@ -1,7 +1,7 @@
 import { describe, it, expect } from "vite-plus/test";
-import { allResources, findResource } from "../src/providers/find-resource.js";
+import { allResources, findResource } from "../src/providers/resources-list.js";
 
-describe("find-resource module", () => {
+describe("resources-list module", () => {
   describe("allResources", () => {
     it("should export all resources array", () => {
       expect(Array.isArray(allResources)).toBe(true);

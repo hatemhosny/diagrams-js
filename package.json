@@ -963,9 +963,9 @@
       "import": "./dist/providers/saas/social.js",
       "types": "./dist/providers/saas/social.d.ts"
     },
-    "./find-resource": {
-      "import": "./dist/providers/find-resource.js",
-      "types": "./dist/providers/find-resource.d.ts"
+    "./resources-list": {
+      "import": "./dist/providers/resources-list.js",
+      "types": "./dist/providers/resources-list.d.ts"
     }
   },
   "publishConfig": {

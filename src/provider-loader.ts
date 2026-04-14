@@ -42,7 +42,7 @@ async function tryImportProvider(
 
   // Strategy 1: Relative subpath import (resolved by package exports)
   // In Node.js/Bun: ./aws/compute -> package exports -> ./dist/providers/aws/compute.js
-  if (!importStrategy || importStrategy === "relative") {
+  if (importStrategy === "relative" || (!importStrategy && !import.meta.url.endsWith(".js"))) {
     try {
       const path = getPath([".", provider, service]);
       const module = await import(path);
@@ -55,7 +55,7 @@ async function tryImportProvider(
 
   // Strategy 2: Direct relative path with .js extension
   // For Deno, browsers, or environments without package exports support
-  if (!importStrategy || importStrategy === "direct") {
+  if (importStrategy === "direct" || !importStrategy) {
     try {
       const path = getPath([".", "providers", provider, service]);
       const module = await import(path + ".js");
@@ -67,7 +67,7 @@ async function tryImportProvider(
   }
 
   // Strategy 3: bare module imports for Node.js/Bun or browsers/Deno with importmaps
-  if (!importStrategy || importStrategy === "bare") {
+  if (importStrategy === "bare" || !importStrategy) {
     try {
       const path = getPath(["diagrams-js", provider, service]);
       const module = await import(path);
@@ -78,7 +78,7 @@ async function tryImportProvider(
     }
   }
   // Strategy 4: CDN - constructed dynamically
-  if (!importStrategy || importStrategy === "cdn") {
+  if (importStrategy === "cdn" || !importStrategy) {
     try {
       const path = getPath(["https://esm.sh", "diagrams-js", provider, service]);
       const module = await import(path);
@@ -124,7 +124,7 @@ export async function loadProviderModules(
 }
 
 export async function loadResourcesList() {
-  return (await tryImportProvider("find-resource")) as
-    | typeof import("./providers/find-resource.ts")
+  return (await tryImportProvider("resources-list")) as
+    | typeof import("./providers/resources-list.ts")
     | null;
 }
