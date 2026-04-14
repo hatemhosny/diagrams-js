@@ -3,7 +3,8 @@ name: diagrams-js/creating-plugins
 description: >-
   Create custom plugins for diagrams-js to extend import/export capabilities.
   Package structure, plugin API, best practices, and real-world examples.
-  Use context.lib for runtime exports and context.loadResourcesList for resource discovery.
+  Use context.lib for runtime exports, context.loadResourcesList for resource discovery,
+  and context.loadYaml for YAML parsing without bundling dependencies.
 type: feature
 library: diagrams-js
 library_version: "0.2.4"
@@ -22,8 +23,9 @@ Create custom plugins to extend diagrams-js with import/export formats, metadata
 
 1. **Never import from `diagrams-js`** - Access runtime exports via `context.lib` to avoid multiple library instances. Type imports are allowed
 2. **Use `context.loadResourcesList()`** - Dynamically discover provider icons and resources
-3. **Convert to/from JSON** - Use diagrams-js JSON format as the intermediary for imports
-4. **Factory Functions** - You may create plugins as factory functions if configuration may be needed
+3. **Use `context.loadYaml()`** - Parse and serialize YAML without bundling dependencies
+4. **Convert to/from JSON** - Use diagrams-js JSON format as the intermediary for imports
+5. **Factory Functions** - You may create plugins as factory functions if configuration may be needed
 
 ### Package Structure
 
@@ -269,6 +271,76 @@ export function createMyPlugin(config?: MyPluginConfig): DiagramsPlugin {
 }
 ```
 
+## YAML Parsing
+
+### Using context.loadYaml()
+
+Plugins can parse and serialize YAML using `context.loadYaml()` without bundling their own YAML parser. This reduces plugin bundle size and ensures consistent parsing across all plugins:
+
+```typescript
+export function createMyPlugin(config?: MyPluginConfig): DiagramsPlugin {
+  return {
+    name: "my-yaml-format",
+    version: "1.0.0",
+    apiVersion: "1.0",
+    runtimeSupport: { node: true, browser: true, deno: true, bun: true },
+
+    capabilities: [
+      {
+        type: "importer",
+        name: "my-yaml-format",
+        extensions: [".yml", ".yaml"],
+        mimeTypes: ["text/yaml", "application/x-yaml"],
+
+        import: async (source, diagram, context) => {
+          // Load YAML module via context - no bundling needed
+          const yaml = await context.loadYaml();
+          const data = yaml.load(source);
+
+          // Process the parsed data
+          for (const item of data.items) {
+            const node = diagram.add(Node(item.name));
+            node.metadata = { source: item };
+          }
+        },
+      } as ImporterCapability,
+
+      {
+        type: "exporter",
+        name: "my-yaml-format",
+        extension: ".yml",
+        mimeType: "text/yaml",
+
+        export: async (diagram, context) => {
+          const yaml = await context.loadYaml();
+          const json = diagram.toJSON();
+
+          // Convert to your format
+          const data = {
+            version: "1.0",
+            services: json.nodes.map((n) => ({
+              name: n.label,
+              metadata: n.metadata,
+            })),
+          };
+
+          // Serialize to YAML
+          return yaml.dump(data);
+        },
+      } as ExporterCapability,
+    ],
+  };
+}
+```
+
+**Benefits of using `context.loadYaml()`:**
+
+- No need to add `js-yaml` or other YAML parsers to your plugin dependencies
+- Reduces plugin bundle size
+- Consistent YAML parsing across all plugins
+- Lazy-loaded only when needed
+- Works across all runtimes (browser, Node.js, Deno, Bun)
+
 ## Plugin Types
 
 ### Importer Plugin
@@ -444,6 +516,34 @@ export const myPlugin = () => ({
 });
 ```
 
+### CRITICAL: Use context.loadYaml() for YAML Parsing
+
+**Wrong** - Bundling your own YAML parser:
+
+```typescript
+// ❌ Adds unnecessary bundle size
+import YAML from "yaml";
+
+export const myPlugin = () => ({
+  import: async (source, diagram, context) => {
+    const data = YAML.parse(source);
+    // ...
+  },
+});
+```
+
+**Correct** - Use context-provided YAML module:
+
+```typescript
+export const myPlugin = () => ({
+  import: async (source, diagram, context) => {
+    const yaml = await context.loadYaml(); // ✅ No bundling needed
+    const data = yaml.load(source);
+    // ...
+  },
+});
+```
+
 ## Real-World Example: Docker Compose Plugin
 
 See `@diagrams-js/plugin-docker-compose` for a complete reference implementation:
@@ -453,6 +553,7 @@ See `@diagrams-js/plugin-docker-compose` for a complete reference implementation
 
 export function createDockerComposePlugin(config?: DockerComposePluginConfig): DiagramsPlugin {
   let findResource: (query: string) => ResourceInfo[];
+  let yaml: typeof import("diagrams-js").Yaml | undefined;
 
   return {
     name: "docker-compose",
@@ -460,11 +561,17 @@ export function createDockerComposePlugin(config?: DockerComposePluginConfig): D
     apiVersion: "1.0",
     runtimeSupport: { node: true, browser: true, deno: true, bun: true },
 
-    // Load resource discovery on initialization
+    // Load resource discovery and YAML module on initialization
     initialize: async (_config, context) => {
-      const module = await context.loadResourcesList();
-      if (module?.findResource) {
-        findResource = module.findResource;
+      const [resourcesList, yamlModule] = await Promise.all([
+        context.loadResourcesList(),
+        context.loadYaml(),
+      ]);
+      if (resourcesList?.findResource) {
+        findResource = resourcesList.findResource;
+      }
+      if (yamlModule) {
+        yaml = yamlModule;
       }
     },
 
@@ -476,7 +583,7 @@ export function createDockerComposePlugin(config?: DockerComposePluginConfig): D
         mimeTypes: ["text/yaml", "application/x-yaml"],
 
         import: async (source, diagram, context) => {
-          // Parse YAML
+          // Parse YAML using context-provided module
           const compose = yaml.load(source) as ComposeFile;
 
           // Convert to diagrams-js JSON
@@ -525,6 +632,7 @@ export function createDockerComposePlugin(config?: DockerComposePluginConfig): D
             };
           }
 
+          // Serialize using context-provided YAML module
           return yaml.dump(compose);
         },
       } as ExporterCapability,

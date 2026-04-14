@@ -1415,6 +1415,7 @@ export function Diagram(name = "", options: DiagramOptions = {}): Diagram {
         getMetadataProvider: registry.getMetadataProvider,
         executeHooks: registry.executeHooks,
         loadResourcesList: registry.loadResourcesList,
+        loadYaml: registry.loadYaml,
         lib: {
           Diagram: Diagram as unknown as typeof import("./Diagram.js").Diagram,
           Node: NodeFactory,
@@ -1462,6 +1463,7 @@ export function Diagram(name = "", options: DiagramOptions = {}): Diagram {
         getMetadataProvider: registry.getMetadataProvider,
         executeHooks: registry.executeHooks,
         loadResourcesList: registry.loadResourcesList,
+        loadYaml: registry.loadYaml,
         lib: {
           Diagram: Diagram as unknown as typeof import("./Diagram.js").Diagram,
           Node: NodeFactory,
@@ -1521,6 +1523,7 @@ export function Diagram(name = "", options: DiagramOptions = {}): Diagram {
             getMetadataProvider: registry.getMetadataProvider,
             executeHooks: registry.executeHooks,
             loadResourcesList: registry.loadResourcesList,
+            loadYaml: registry.loadYaml,
             lib: {
               Diagram: Diagram as unknown as typeof import("./Diagram.js").Diagram,
               Node: NodeFactory,

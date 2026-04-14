@@ -8,6 +8,7 @@
  */
 
 import type { Node } from "./Node.js";
+import type { Yaml } from "./types.ts";
 
 /**
  * A node factory function (e.g., `EC2`, `Lambda`, `S3`).
@@ -127,4 +128,8 @@ export async function loadResourcesList() {
   return (await tryImportProvider("resources-list")) as
     | typeof import("./providers/resources-list.ts")
     | null;
+}
+
+export async function loadYaml(): Promise<Yaml | null> {
+  return (await tryImportProvider("yaml")) as Yaml | null;
 }

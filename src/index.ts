@@ -13,8 +13,7 @@
  * const api = diagram.add(EC2("API Server"));
  * const storage = diagram.add(S3("Storage"));
  *
- * db.to(api);
- * api.to(storage);
+ * db.to(api).to(storage);
  *
  * const svg = await diagram.render();
  * ```
@@ -63,7 +62,14 @@ export type {
 
 // Types
 export type { Cluster } from "./Cluster.js";
-export type { DiagramOptions, EdgeOptions, NodeOptions, ThemeName, ThemeConfig } from "./types.js";
+export type {
+  DiagramOptions,
+  EdgeOptions,
+  NodeOptions,
+  ThemeName,
+  ThemeConfig,
+  Yaml,
+} from "./types.js";
 export type {
   DiagramJSON,
   DiagramNodeJSON,

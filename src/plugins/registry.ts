@@ -24,7 +24,7 @@ import { Node } from "../Node.js";
 import { Edge } from "../Edge.js";
 import { Custom } from "../Custom.js";
 import { Cluster } from "../Cluster.js";
-import { loadResourcesList } from "../provider-loader.ts";
+import { loadResourcesList, loadYaml } from "../provider-loader.ts";
 
 /**
  * Detect the current runtime environment
@@ -146,6 +146,7 @@ export function createPluginRegistry(): PluginRegistry {
         return registryInstance.executeHooks(event, data);
       },
       loadResourcesList: () => loadResourcesList(),
+      loadYaml: () => loadYaml(),
       lib: {
         Diagram,
         Node,
@@ -432,6 +433,7 @@ export function createPluginRegistry(): PluginRegistry {
       metadataProviders: Array.from(metadataProviders.keys()),
     }),
     loadResourcesList: () => loadResourcesList(),
+    loadYaml: () => loadYaml(),
   };
 
   return registryInstance;

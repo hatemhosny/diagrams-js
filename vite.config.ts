@@ -20,9 +20,14 @@ export default defineConfig({
     format: ["esm"],
     minify: true,
     sourcemap: false,
+    deps: {
+      onlyBundle: ["@viz-js/viz"],
+      neverBundle: ["js-yaml"], // js-yaml is built by esbuild in a separate module
+    },
   },
   optimizeDeps: {
     include: ["@viz-js/viz"],
+    exclude: ["js-yaml"],
   },
   lint: {
     options: {

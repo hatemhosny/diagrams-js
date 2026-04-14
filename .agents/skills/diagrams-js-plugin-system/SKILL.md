@@ -105,8 +105,9 @@ const dockerComposePlugin = () => ({
         return source.includes("services:");
       },
       import: async (source, diagram, context) => {
-        const yaml = await import("yaml");
-        const compose = yaml.parse(source);
+        // Use context.loadYaml() instead of bundling yaml parser
+        const yaml = await context.loadYaml();
+        const compose = yaml.load(source);
 
         // Access Node from context.lib instead of importing
         const { Node } = context.lib;
@@ -345,17 +346,31 @@ runtimeSupport: {
 }
 ```
 
-### 3. Use Lazy Loading
+### 3. Use Context-Provided Utilities
 
-For large dependencies, use dynamic imports:
+For YAML parsing and other common needs, use the utilities provided in the plugin context instead of bundling your own dependencies:
 
 ```typescript
+// ✅ Good: Use context.loadYaml() - no bundling needed
 import: async (source, diagram, context) => {
-  const yaml = await import("yaml"); // Lazy load
+  const yaml = await context.loadYaml();
+  const parsed = yaml.load(source);
+  // ...
+}
+
+// ❌ Avoid: Bundling your own YAML parser
+import: async (source, diagram, context) => {
+  const yaml = await import("yaml"); // Adds bundle size
   const parsed = yaml.parse(source);
   // ...
 }
 ```
+
+This approach:
+
+- Reduces plugin bundle size
+- Ensures consistent parsing across plugins
+- Works across all runtimes automatically
 
 ### 4. Validate Configuration
 
@@ -470,8 +485,9 @@ const dockerComposePlugin = () => ({
         return source.includes("services:");
       },
       import: async (source, diagram, context) => {
-        const yaml = await import("yaml");
-        const compose = yaml.parse(source);
+        // Use context.loadYaml() instead of bundling yaml parser
+        const yaml = await context.loadYaml();
+        const compose = yaml.load(source);
 
         // Access Node from context.lib
         const { Node } = context.lib;
@@ -479,7 +495,7 @@ const dockerComposePlugin = () => ({
         const sources = Array.isArray(source) ? source : [source];
 
         for (let i = 0; i < sources.length; i++) {
-          const compose = yaml.parse(sources[i]);
+          const compose = yaml.load(sources[i]);
 
           // Multiple sources: each gets its own cluster
           if (sources.length > 1) {

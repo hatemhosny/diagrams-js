@@ -143,8 +143,9 @@ const createDockerComposePlugin = (config?: { defaultVersion?: string }) => ({
         return source.includes("services:");
       },
       import: async (source, diagram, context) => {
-        // Parse YAML and create nodes
-        const compose = yaml.parse(source);
+        // Use context.loadYaml() - no need to bundle your own parser
+        const yaml = await context.loadYaml();
+        const compose = yaml.load(source);
 
         for (const [name, service] of Object.entries(compose.services)) {
           const node = diagram.add(Node(name));
@@ -207,6 +208,46 @@ const terraformPlugin = {
 const diagram = Diagram("My Infrastructure");
 await diagram.registerPlugins([terraformPlugin]);
 const terraform = await diagram.export("terraform");
+```
+
+For YAML export, use `context.loadYaml()`:
+
+```typescript
+const kubernetesPlugin = {
+  name: "kubernetes",
+  version: "1.0.0",
+  apiVersion: "1.0",
+  runtimeSupport: { node: true, browser: true, deno: true, bun: true },
+  capabilities: [
+    {
+      type: "exporter",
+      name: "kubernetes",
+      extension: ".yaml",
+      mimeType: "text/yaml",
+      export: async (diagram, context) => {
+        // Use context-provided YAML module
+        const yaml = await context.loadYaml();
+        const json = diagram.toJSON();
+
+        const manifests = json.nodes.map((node) => ({
+          apiVersion: "apps/v1",
+          kind: "Deployment",
+          metadata: { name: node.label },
+          spec: {
+            replicas: node.metadata?.replicas || 1,
+            template: {
+              spec: {
+                containers: [{ name: node.label, image: node.metadata?.image }],
+              },
+            },
+          },
+        }));
+
+        return yaml.dump(manifests);
+      },
+    },
+  ],
+};
 ```
 
 ### Metadata Provider
@@ -349,6 +390,84 @@ const diagram = Diagram("Test");
 await diagram.registerPlugins([basePlugin, advancedPlugin]);
 ```
 
+## Plugin Context Utilities
+
+The plugin context provides several utility methods to help plugins function without bundling their own dependencies:
+
+### Lazy-Loaded YAML Parser
+
+Plugins can use `context.loadYaml()` to access a YAML parsing module (js-yaml) without bundling their own parser:
+
+```typescript
+const myPlugin = {
+  name: "my-yaml-plugin",
+  version: "1.0.0",
+  apiVersion: "1.0",
+  runtimeSupport: { node: true, browser: true, deno: true, bun: true },
+  initialize: async (config, context) => {
+    // Load the YAML module during initialization
+    const yaml = await context.loadYaml();
+    // Store it for later use in import/export
+    this.yamlModule = yaml;
+  },
+  capabilities: [
+    {
+      type: "importer",
+      name: "my-format",
+      extensions: [".yml", ".yaml"],
+      import: async (source, diagram, context) => {
+        // Use the pre-loaded YAML module
+        const yaml = await context.loadYaml();
+        const parsed = yaml.load(source);
+        // ... process parsed data
+      },
+    },
+    {
+      type: "exporter",
+      name: "my-format",
+      extension: ".yml",
+      mimeType: "text/yaml",
+      export: async (diagram, context) => {
+        const yaml = await context.loadYaml();
+        const data = {
+          /* ... */
+        };
+        return yaml.dump(data);
+      },
+    },
+  ],
+};
+```
+
+**Benefits:**
+
+- No need to bundle a YAML parser in your plugin
+- Consistent YAML parsing across all plugins
+- Lazy-loaded only when needed
+- Works across all runtimes (browser, Node.js, Deno, Bun)
+
+### Resource Discovery
+
+Plugins can access the resource discovery utility via `context.loadResourcesList()`:
+
+```typescript
+const myPlugin = {
+  name: "my-plugin",
+  version: "1.0.0",
+  apiVersion: "1.0",
+  runtimeSupport: { node: true, browser: true, deno: true, bun: true },
+  initialize: async (config, context) => {
+    const resources = await context.loadResourcesList();
+    if (resources?.findResource) {
+      // Use findResource to dynamically discover provider icons
+      const matches = resources.findResource("postgres");
+      // matches = [{ provider: "onprem", type: "database", resource: "Postgresql" }, ...]
+    }
+  },
+  // ...
+};
+```
+
 ## Plugin Registry
 
 Access the plugin registry to query capabilities:
@@ -455,17 +574,31 @@ export: async (diagram, context) => {
 }
 ```
 
-### 4. Use Lazy Loading
+### 4. Use Context-Provided Utilities
 
-For large dependencies, use dynamic imports:
+For common needs like YAML parsing, use the utilities provided in the plugin context instead of bundling your own dependencies:
 
 ```typescript
+// ✅ Good: Use context.loadYaml() - no bundling needed
 import: async (source, diagram, context) => {
-  const yaml = await import("yaml"); // Lazy load
+  const yaml = await context.loadYaml();
+  const parsed = yaml.load(source);
+  // ...
+}
+
+// ❌ Avoid: Bundling your own YAML parser
+import: async (source, diagram, context) => {
+  const yaml = await import("yaml"); // Adds bundle size
   const parsed = yaml.parse(source);
   // ...
 }
 ```
+
+This approach:
+
+- Reduces plugin bundle size
+- Ensures consistent parsing across plugins
+- Works across all runtimes automatically
 
 ### 5. Validate Configuration
 
@@ -511,8 +644,9 @@ const createDockerComposePlugin = () => ({
         return source.includes("version:") || source.includes("services:");
       },
       import: async (source, diagram, context) => {
-        const yaml = await import("yaml");
-        const compose = yaml.parse(source);
+        // Use context.loadYaml() instead of bundling your own parser
+        const yaml = await context.loadYaml();
+        const compose = yaml.load(source);
 
         // Create nodes for each service
         for (const [name, service] of Object.entries(compose.services || {})) {
@@ -558,7 +692,8 @@ const createDockerComposePlugin = () => ({
       extension: ".yml",
       mimeType: "text/yaml",
       export: async (diagram, context) => {
-        const yaml = await import("yaml");
+        // Use context.loadYaml() for consistent YAML serialization
+        const yaml = await context.loadYaml();
         const compose = { version: "3.8", services: {} };
 
         for (const node of diagram.toJSON().nodes) {
@@ -568,7 +703,7 @@ const createDockerComposePlugin = () => ({
           };
         }
 
-        return yaml.stringify(compose);
+        return yaml.dump(compose);
       },
     },
   ],

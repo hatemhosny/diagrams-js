@@ -153,3 +153,5 @@ export interface NodeOptions {
 
 // Note: Node and Edge types are defined in their respective modules
 // Import them from "./Node.js" and "./Edge.js"
+
+export type Yaml = typeof import("./yaml.ts");

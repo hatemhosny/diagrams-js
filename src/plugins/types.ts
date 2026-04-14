@@ -178,6 +178,8 @@ export interface PluginContext {
   executeHooks: <T>(event: HookEvent, data: T) => Promise<T>;
   /** Get a list of available resources */
   loadResourcesList: () => Promise<typeof import("../providers/resources-list.ts") | null>;
+  /** Load Yaml module */
+  loadYaml: () => Promise<typeof import("../yaml.ts") | null>;
   /** Library exports - use these instead of importing diagrams-js to avoid multiple instances */
   lib: {
     /** Diagram factory function */
@@ -340,6 +342,7 @@ export interface PluginRegistry {
     metadataProviders: string[];
   };
   loadResourcesList: () => Promise<typeof import("../providers/resources-list.ts") | null>;
+  loadYaml: () => Promise<typeof import("../yaml.ts") | null>;
 }
 
 /**
