@@ -25,6 +25,7 @@ import { Diagram as createDiagram } from "./Diagram.js";
 import type { Diagram } from "./Diagram.js";
 import { Node } from "./Node.js";
 import { Edge } from "./Edge.js";
+import { Custom } from "./Custom.js";
 import type { DiagramOptions } from "./types.js";
 import { loadProviderModules } from "./provider-loader.js";
 
@@ -611,11 +612,12 @@ export async function fromJSON(
   }
 
   // Create all nodes
+  const nodeIdSet = new Set<string>();
   for (const nodeDef of json.nodes) {
-    // Validate node ID uniqueness
-    if (nodeMap.has(nodeDef.id)) {
+    if (nodeIdSet.has(nodeDef.id)) {
       throw new Error(`Duplicate node ID: "${nodeDef.id}"`);
     }
+    nodeIdSet.add(nodeDef.id);
 
     // Try to use a provider factory function if type is specified and a matching factory exists.
     // This gives us the correct icon, provider metadata, etc. automatically.
@@ -625,6 +627,15 @@ export async function fromJSON(
     if (factory) {
       // Use the provider factory - it sets ~provider, ~type, ~resource, ~iconDataUrl
       node = factory(nodeDef.label ?? "", { nodeId: nodeDef.id, ...nodeDef.attrs });
+    } else if (nodeDef.iconUrl && _isRemoteUrl(nodeDef.iconUrl)) {
+      // Remote icon URL - use Custom node which handles fetching automatically
+      const nodeOptions: Record<string, unknown> = {
+        nodeId: nodeDef.id,
+      };
+      if (nodeDef.attrs) {
+        Object.assign(nodeOptions, nodeDef.attrs);
+      }
+      node = Custom(nodeDef.label ?? "", nodeDef.iconUrl, nodeOptions);
     } else {
       // Fallback: create a plain Node and set metadata manually
       const nodeOptions: Record<string, unknown> = {
@@ -647,7 +658,7 @@ export async function fromJSON(
       if (nodeDef.type) {
         raw["~resource"] = nodeDef.type;
       }
-      // Set explicit iconUrl (for Custom nodes or manual override)
+      // Set explicit iconUrl (for data URLs or local paths)
       if (nodeDef.iconUrl) {
         raw["~iconDataUrl"] = nodeDef.iconUrl;
       }
@@ -724,4 +735,12 @@ export async function fromJSON(
   }
 
   return diagram;
+}
+
+/**
+ * Check if a URL is a remote URL (http/https)
+ * Data URLs return false
+ */
+function _isRemoteUrl(url: string): boolean {
+  return url.startsWith("http://") || url.startsWith("https://");
 }

@@ -146,6 +146,15 @@ async function mergeDiagrams(
           Object.assign(nodeOptions, nodeDef.attrs);
         }
         node = factory(nodeDef.label || nodeDef.id, nodeOptions);
+      } else if (nodeDef.iconUrl && _isRemoteUrl(nodeDef.iconUrl)) {
+        // Remote icon URL - use Custom node which handles fetching automatically
+        const nodeOptions: Record<string, unknown> = {
+          nodeId: nodeDef.id,
+        };
+        if (nodeDef.attrs) {
+          Object.assign(nodeOptions, nodeDef.attrs);
+        }
+        node = lib.Custom(nodeDef.label || nodeDef.id, nodeDef.iconUrl, nodeOptions);
       } else {
         // Build node options with provider metadata for icon resolution
         const nodeOptions: Record<string, unknown> = {
@@ -220,6 +229,14 @@ async function mergeDiagrams(
       }
     }
   }
+}
+
+/**
+ * Check if a URL is a remote URL (http/https)
+ * Data URLs return false
+ */
+function _isRemoteUrl(url: string): boolean {
+  return url.startsWith("http://") || url.startsWith("https://");
 }
 
 /**
