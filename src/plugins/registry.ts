@@ -18,12 +18,8 @@ import type {
   RuntimeSupport,
 } from "./types.js";
 
-import { PluginError, DependencyError, RuntimeError, HookEvent as HookEventEnum } from "./types.js";
-import { Diagram } from "../Diagram.js";
-import { Node } from "../Node.js";
-import { Edge } from "../Edge.js";
-import { Custom } from "../Custom.js";
-import { Cluster } from "../Cluster.js";
+import { PluginError, DependencyError, RuntimeError } from "./types.js";
+import * as lib from "../index.js";
 import { loadResourcesList, loadYaml } from "../provider-loader.ts";
 
 /**
@@ -147,17 +143,7 @@ export function createPluginRegistry(): PluginRegistry {
       },
       loadResourcesList: () => loadResourcesList(),
       loadYaml: () => loadYaml(),
-      lib: {
-        Diagram,
-        Node,
-        Edge,
-        Custom,
-        Cluster,
-        HookEvent: HookEventEnum,
-        PluginError,
-        DependencyError,
-        RuntimeError,
-      },
+      lib,
     };
   }
 

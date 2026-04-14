@@ -1,6 +1,17 @@
 import { Node } from "./Node.js";
 
 /**
+ * Cache for icon loading promises to prevent duplicate fetches
+ * Key: icon URL, Value: Promise resolving to data URL
+ */
+const iconLoadingCache = new Map<string, Promise<string | null>>();
+
+/**
+ * Timeout for fetching remote icons (10 seconds)
+ */
+const ICON_FETCH_TIMEOUT = 10000;
+
+/**
  * Custom node with an external icon
  * Allows using icons from URLs or local file paths
  *
@@ -122,6 +133,7 @@ export function Custom(
      * Load the icon and return as data URL
      * In browser: fetches from URL
      * In Node.js: reads from file system or fetches from URL
+     * Uses caching to prevent duplicate fetches for the same URL
      */
     async loadIcon(): Promise<string | null> {
       // Already a data URL, return as-is
@@ -129,13 +141,36 @@ export function Custom(
         return iconUrl;
       }
 
-      // Remote URL - fetch it
-      if (_isRemoteUrl(iconUrl)) {
-        return _fetchRemoteIcon(iconUrl);
+      // Check cache first to prevent duplicate loading
+      if (iconLoadingCache.has(iconUrl)) {
+        return iconLoadingCache.get(iconUrl)!;
       }
 
-      // Local file path
-      return _loadLocalIcon(iconUrl);
+      // Create loading promise
+      let loadingPromise: Promise<string | null>;
+
+      // Remote URL - fetch it
+      if (_isRemoteUrl(iconUrl)) {
+        loadingPromise = _fetchRemoteIcon(iconUrl);
+      } else {
+        // Local file path
+        loadingPromise = _loadLocalIcon(iconUrl);
+      }
+
+      // Cache the promise
+      iconLoadingCache.set(iconUrl, loadingPromise);
+
+      // Clean up cache after loading (success or failure)
+      loadingPromise
+        .then(() => {
+          // Keep in cache on success for potential reuse
+        })
+        .catch(() => {
+          // Remove from cache on failure so it can be retried
+          iconLoadingCache.delete(iconUrl);
+        });
+
+      return loadingPromise;
     },
   };
 
@@ -157,12 +192,21 @@ function _isRemoteUrl(url: string): boolean {
 }
 
 /**
- * Fetch icon from remote URL
+ * Fetch icon from remote URL with timeout
  */
 async function _fetchRemoteIcon(iconUrl: string): Promise<string | null> {
   try {
+    // Create abort controller for timeout
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), ICON_FETCH_TIMEOUT);
+
     // Use global fetch (available in browser and Node.js 18+)
-    const response = await globalThis.fetch(iconUrl);
+    const response = await globalThis.fetch(iconUrl, {
+      signal: controller.signal,
+    });
+
+    clearTimeout(timeoutId);
+
     if (!response.ok) {
       console.warn(`Failed to fetch icon: ${iconUrl}`);
       return null;

@@ -3,9 +3,8 @@ import type { Viz } from "@viz-js/viz";
 import { setDiagram } from "./context.js";
 import { Cluster } from "./Cluster.js";
 import type { Node } from "./Node.js";
-import { Node as NodeFactory } from "./Node.js";
-import { Edge } from "./Edge.js";
-import { Custom } from "./Custom.js";
+import type { Edge } from "./Edge.js";
+import * as lib from "./index.js";
 import {
   THEMES,
   type DiagramOptions,
@@ -17,12 +16,7 @@ import { injectIcons, type NodeIconMap, type IconData } from "./icons.js";
 import { buildDiagramJSON, type DiagramJSON, fromJSON as fromJSONImpl } from "./json.js";
 import { createPluginRegistry, createJSONPlugin } from "./plugins/index.js";
 import type { PluginRegistry } from "./plugins/types.js";
-import {
-  HookEvent as HookEventEnum,
-  PluginError,
-  DependencyError,
-  RuntimeError,
-} from "./plugins/types.js";
+import { HookEvent as HookEventEnum } from "./plugins/types.js";
 
 // Render function overload types for proper type inference
 type RenderFunction = {
@@ -1416,17 +1410,7 @@ export function Diagram(name = "", options: DiagramOptions = {}): Diagram {
         executeHooks: registry.executeHooks,
         loadResourcesList: registry.loadResourcesList,
         loadYaml: registry.loadYaml,
-        lib: {
-          Diagram: Diagram as unknown as typeof import("./Diagram.js").Diagram,
-          Node: NodeFactory,
-          Edge,
-          Custom,
-          Cluster,
-          HookEvent: HookEventEnum,
-          PluginError,
-          DependencyError,
-          RuntimeError,
-        },
+        lib,
       });
 
       // Execute after import hook
@@ -1464,17 +1448,7 @@ export function Diagram(name = "", options: DiagramOptions = {}): Diagram {
         executeHooks: registry.executeHooks,
         loadResourcesList: registry.loadResourcesList,
         loadYaml: registry.loadYaml,
-        lib: {
-          Diagram: Diagram as unknown as typeof import("./Diagram.js").Diagram,
-          Node: NodeFactory,
-          Edge,
-          Custom,
-          Cluster,
-          HookEvent: HookEventEnum,
-          PluginError,
-          DependencyError,
-          RuntimeError,
-        },
+        lib,
       });
 
       // Execute after export hook
@@ -1524,17 +1498,7 @@ export function Diagram(name = "", options: DiagramOptions = {}): Diagram {
             executeHooks: registry.executeHooks,
             loadResourcesList: registry.loadResourcesList,
             loadYaml: registry.loadYaml,
-            lib: {
-              Diagram: Diagram as unknown as typeof import("./Diagram.js").Diagram,
-              Node: NodeFactory,
-              Edge,
-              Custom,
-              Cluster,
-              HookEvent: HookEventEnum,
-              PluginError,
-              DependencyError,
-              RuntimeError,
-            },
+            lib,
           },
         );
 

@@ -180,25 +180,11 @@ export interface PluginContext {
   loadResourcesList: () => Promise<typeof import("../providers/resources-list.ts") | null>;
   /** Load Yaml module */
   loadYaml: () => Promise<typeof import("../yaml.ts") | null>;
-  /** Library exports - use these instead of importing diagrams-js to avoid multiple instances */
-  lib: {
-    /** Diagram factory function */
-    Diagram: typeof import("../Diagram.js").Diagram;
-    /** Node factory function */
-    Node: typeof import("../Node.js").Node;
-    /** Edge factory function */
-    Edge: typeof import("../Edge.js").Edge;
-    /** Custom node factory function */
-    Custom: typeof import("../Custom.js").Custom;
-    /** Cluster factory function */
-    Cluster: typeof import("../Cluster.js").Cluster;
-    /** HookEvent enum */
-    HookEvent: typeof import("./types.js").HookEvent;
-    /** Error classes */
-    PluginError: typeof import("./types.js").PluginError;
-    DependencyError: typeof import("./types.js").DependencyError;
-    RuntimeError: typeof import("./types.js").RuntimeError;
-  };
+  /**
+   * Library exports - use these instead of importing diagrams-js to avoid multiple instances.
+   * This provides access to all diagrams-js exports including Diagram, Node, Edge, Custom, Iconify, etc.
+   */
+  lib: typeof import("../index.js");
 }
 
 /**
