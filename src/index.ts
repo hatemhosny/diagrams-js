@@ -25,10 +25,10 @@
 export { Diagram } from "./Diagram.js";
 export { Node } from "./Node.js";
 export { Edge } from "./Edge.js";
+export { Cluster } from "./Cluster.js";
 export { Custom, Iconify } from "./Custom.js";
 
 // Types
-export type { Cluster } from "./Cluster.js";
 export type {
   DiagramOptions,
   EdgeOptions,
