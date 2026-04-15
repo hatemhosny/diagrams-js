@@ -429,5 +429,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - CI/CD workflows for GitHub Actions
 - Automated resource synchronization from Python diagrams repo
 
-[Unreleased]: https://github.com/hatemhosny/diagrams-js/compare/v0.0.0...HEAD
-[0.0.0]: https://github.com/hatemhosny/diagrams-js/releases/tag/v0.0.0
+[Unreleased]: https://github.com/diagrams-js/diagrams-js/compare/v0.0.0...HEAD
+[0.0.0]: https://github.com/diagrams-js/diagrams-js/releases/tag/v0.0.0

@@ -168,7 +168,7 @@ dist/
 
 ### Reporting Bugs
 
-If you find a bug, please [open an issue](https://github.com/hatemhosny/diagrams-js/issues/new) with:
+If you find a bug, please [open an issue](https://github.com/diagrams-js/diagrams-js/issues/new) with:
 
 - A clear, descriptive title
 - Steps to reproduce the bug
@@ -178,7 +178,7 @@ If you find a bug, please [open an issue](https://github.com/hatemhosny/diagrams
 
 ### Suggesting Features
 
-Feature suggestions are welcome! Please [open an issue](https://github.com/hatemhosny/diagrams-js/issues/new) with:
+Feature suggestions are welcome! Please [open an issue](https://github.com/diagrams-js/diagrams-js/issues/new) with:
 
 - A clear description of the feature
 - Use cases and motivation
@@ -208,8 +208,8 @@ Feature suggestions are welcome! Please [open an issue](https://github.com/hatem
 
 ## Questions?
 
-- Check existing [issues](https://github.com/hatemhosny/diagrams-js/issues)
-- Start a [discussion](https://github.com/hatemhosny/diagrams-js/discussions)
+- Check existing [issues](https://github.com/diagrams-js/diagrams-js/issues)
+- Start a [discussion](https://github.com/diagrams-js/diagrams-js/discussions)
 - Review [documentation](https://diagrams-js.hatemhosny.dev)
 
 ## Thank You!

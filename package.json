@@ -19,13 +19,13 @@
   ],
   "homepage": "https://diagrams-js.hatemhosny.dev",
   "bugs": {
-    "url": "https://github.com/hatemhosny/diagrams-js/issues"
+    "url": "https://github.com/diagrams-js/diagrams-js/issues"
   },
   "license": "MIT",
   "author": "Hatem Hosny <hatemhosny@example.com>",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hatemhosny/diagrams-js.git"
+    "url": "git+https://github.com/diagrams-js/diagrams-js.git"
   },
   "funding": {
     "type": "github",

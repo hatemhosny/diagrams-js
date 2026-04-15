@@ -22,7 +22,7 @@ const config: Config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: "hatemhosny", // Usually your GitHub org/user name.
+  organizationName: "diagrams-js", // Usually your GitHub org/user name.
   projectName: "diagrams-js", // Usually your repo name.
 
   onBrokenLinks: "throw",
@@ -43,7 +43,7 @@ const config: Config = {
           sidebarPath: "./sidebars.ts",
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl: "https://github.com/hatemhosny/diagrams-js/tree/main/docs/",
+          editUrl: "https://github.com/diagrams-js/diagrams-js/tree/main/docs/",
         },
         blog: false,
         theme: {
@@ -97,7 +97,7 @@ const config: Config = {
           position: "right",
         },
         {
-          href: "https://github.com/hatemhosny/diagrams-js",
+          href: "https://github.com/diagrams-js/diagrams-js",
           label: "GitHub",
           position: "right",
         },
@@ -144,7 +144,7 @@ const config: Config = {
           items: [
             {
               label: "GitHub",
-              href: "https://github.com/hatemhosny/diagrams-js",
+              href: "https://github.com/diagrams-js/diagrams-js",
             },
             {
               label: "𝕏 / Twitter",
