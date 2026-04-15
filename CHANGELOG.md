@@ -1,3 +1,34 @@
+## [0.3.0] - 2026-04-15
+
+### Features
+
+- feat: provide yaml to plugins as lazy loaded module (98d0ad5)
+- feat: add plugin system (c14d6b0)
+
+### Bug Fixes
+
+- fix json (8575d7f)
+- fix json plugin (598bc82)
+
+### Other Changes
+
+- change repo (61d70f6)
+- export cluster (cb1a2c9)
+- add docker compose example diagram (7ff76c5)
+- update docs (57e2cec)
+- move skills (664bd39)
+- clean up (fdead7f)
+- update docs (9a013fd)
+- allow using custom nodes in json (ebc25d8)
+- rename find-resource to resources-list (6956d99)
+- update readme (1443915)
+- add Iconify (10dac51)
+- improve icon lookup performance (fd88c2c)
+- add creating plugins skill (d684b9e)
+- allow plugins to load resources list (e9bd358)
+- refactor!: rename resourceType to resource (67ac588)
+- improve json plugin (2fa0806)
+
 ## [0.2.4] - 2026-04-11
 
 ### Features
