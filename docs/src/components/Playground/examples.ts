@@ -480,6 +480,59 @@ lb.to(web).to(db);
     },
   },
   {
+    name: "Docker Compose Plugin Example",
+    config: {
+      title: "Docker Compose Plugin Example",
+      script: {
+        language: "javascript",
+        content: `import { Diagram } from "diagrams-js";
+import { dockerComposePlugin } from "@diagrams-js/plugin-docker-compose";
+
+const diagram = Diagram("E-commerce Application");
+
+// Register the plugin instance
+await diagram.registerPlugins([dockerComposePlugin]);
+
+// Import from Docker Compose YAML
+const composeYaml = \`
+version: "3.8"
+name: ecommerce-app
+services:
+  frontend:
+    image: nginx:alpine
+    ports:
+      - "80:80"
+    depends_on:
+      - api
+
+  api:
+    image: node:18
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+      - cache
+
+  db:
+    image: postgres:15
+    environment:
+      POSTGRES_DB: ecommerce
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  cache:
+    image: redis:7-alpine
+
+volumes:
+  pgdata:
+\`;
+
+await diagram.import(composeYaml, "docker-compose");
+`,
+      },
+    },
+  },
+  {
     name: "Blank Template",
     config: {
       title: "Blank Template",

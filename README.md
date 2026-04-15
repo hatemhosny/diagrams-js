@@ -27,7 +27,7 @@
 
 [![Web Architecture](./docs/static/examples/example3-event-processing.svg)](./docs/static/examples/example3-event-processing.svg)
 
-Check the [examples page](https://diagrams-js.hatemhosny.dev/getting-started/examples) for a full list of examples.
+Check the [examples page](https://diagrams-js.hatemhosny.dev/docs/getting-started/examples) for a full list of examples.
 
 ## Interactive Playground
 
@@ -92,33 +92,32 @@ const svg = await diagram.render();
 📚 **Full documentation**: [https://diagrams-js.hatemhosny.dev](https://diagrams-js.hatemhosny.dev)
 
 - [Getting Started](https://diagrams-js.hatemhosny.dev/docs/getting-started/installation)
-- [API Reference](https://diagrams-js.hatemhosny.dev/docs/api)
-- [Examples](https://diagrams-js.hatemhosny.dev/getting-started/examples)
+- [Examples](https://diagrams-js.hatemhosny.dev/docs/getting-started/examples)
 - [Guides](https://diagrams-js.hatemhosny.dev/docs/guides/diagram)
 - [Providers](https://diagrams-js.hatemhosny.dev/docs/guides/providers)
 - [Playground](https://diagrams-js.hatemhosny.dev/playground)
 
 ## Supported Providers
 
-| Provider                                                                  | Description                              |
-| ------------------------------------------------------------------------- | ---------------------------------------- |
-| [AWS](https://diagrams-js.hatemhosny.dev/doc/nodes/aws)                   | Amazon Web Services nodes                |
-| [Azure](https://diagrams-js.hatemhosny.dev/doc/nodes/azure)               | Microsoft Azure nodes                    |
-| [GCP](https://diagrams-js.hatemhosny.dev/doc/nodes/gcp)                   | Google Cloud Platform nodes              |
-| [Kubernetes](https://diagrams-js.hatemhosny.dev/doc/nodes/k8s)            | Kubernetes nodes                         |
-| [OnPrem](https://diagrams-js.hatemhosny.dev/doc/nodes/onprem)             | On-premises infrastructure nodes         |
-| [AlibabaCloud](https://diagrams-js.hatemhosny.dev/doc/nodes/alibabacloud) | Alibaba Cloud nodes                      |
-| [DigitalOcean](https://diagrams-js.hatemhosny.dev/doc/nodes/digitalocean) | DigitalOcean nodes                       |
-| [Elastic](https://diagrams-js.hatemhosny.dev/doc/nodes/elastic)           | Elastic Stack nodes                      |
-| [Firebase](https://diagrams-js.hatemhosny.dev/doc/nodes/firebase)         | Firebase nodes                           |
-| [Generic](https://diagrams-js.hatemhosny.dev/doc/nodes/generic)           | Generic computing nodes                  |
-| [GIS](https://diagrams-js.hatemhosny.dev/doc/nodes/gis)                   | GIS nodes                                |
-| [IBM](https://diagrams-js.hatemhosny.dev/doc/nodes/ibm)                   | IBM Cloud nodes                          |
-| [OCI](https://diagrams-js.hatemhosny.dev/doc/nodes/oci)                   | Oracle Cloud Infrastructure nodes        |
-| [OpenStack](https://diagrams-js.hatemhosny.dev/doc/nodes/openstack)       | OpenStack nodes                          |
-| [Outscale](https://diagrams-js.hatemhosny.dev/doc/nodes/outscale)         | Outscale nodes                           |
-| [Programming](https://diagrams-js.hatemhosny.dev/doc/nodes/programming)   | Programming language and framework nodes |
-| [SaaS](https://diagrams-js.hatemhosny.dev/doc/nodes/saas)                 | SaaS application nodes                   |
+| Provider                                                                   | Description                              |
+| -------------------------------------------------------------------------- | ---------------------------------------- |
+| [AWS](https://diagrams-js.hatemhosny.dev/docs/nodes/aws)                   | Amazon Web Services nodes                |
+| [Azure](https://diagrams-js.hatemhosny.dev/docs/nodes/azure)               | Microsoft Azure nodes                    |
+| [GCP](https://diagrams-js.hatemhosny.dev/docs/nodes/gcp)                   | Google Cloud Platform nodes              |
+| [Kubernetes](https://diagrams-js.hatemhosny.dev/docs/nodes/k8s)            | Kubernetes nodes                         |
+| [OnPrem](https://diagrams-js.hatemhosny.dev/docs/nodes/onprem)             | On-premises infrastructure nodes         |
+| [AlibabaCloud](https://diagrams-js.hatemhosny.dev/docs/nodes/alibabacloud) | Alibaba Cloud nodes                      |
+| [DigitalOcean](https://diagrams-js.hatemhosny.dev/docs/nodes/digitalocean) | DigitalOcean nodes                       |
+| [Elastic](https://diagrams-js.hatemhosny.dev/docs/nodes/elastic)           | Elastic Stack nodes                      |
+| [Firebase](https://diagrams-js.hatemhosny.dev/docs/nodes/firebase)         | Firebase nodes                           |
+| [Generic](https://diagrams-js.hatemhosny.dev/docs/nodes/generic)           | Generic computing nodes                  |
+| [GIS](https://diagrams-js.hatemhosny.dev/docs/nodes/gis)                   | GIS nodes                                |
+| [IBM](https://diagrams-js.hatemhosny.dev/docs/nodes/ibm)                   | IBM Cloud nodes                          |
+| [OCI](https://diagrams-js.hatemhosny.dev/docs/nodes/oci)                   | Oracle Cloud Infrastructure nodes        |
+| [OpenStack](https://diagrams-js.hatemhosny.dev/docs/nodes/openstack)       | OpenStack nodes                          |
+| [Outscale](https://diagrams-js.hatemhosny.dev/docs/nodes/outscale)         | Outscale nodes                           |
+| [Programming](https://diagrams-js.hatemhosny.dev/docs/nodes/programming)   | Programming language and framework nodes |
+| [SaaS](https://diagrams-js.hatemhosny.dev/docs/nodes/saas)                 | SaaS application nodes                   |
 
 View the [full list](https://diagrams-js.hatemhosny.dev/docs/guides/providers)
 
@@ -148,23 +147,6 @@ vp check
 
 # Build the library
 vp run build
-```
-
-### Project Structure
-
-```
-diagrams-js/
-├── src/              # Source code
-│   ├── index.ts      # Main exports
-│   ├── Diagram.ts    # Core diagram class
-│   ├── Node.ts       # Base node class
-│   ├── Edge.ts       # Edge/connection class
-│   ├── Cluster.ts    # Cluster/grouping class
-│   └── providers/    # Auto-generated provider classes
-├── resources/        # Icon resources (PNG files)
-├── scripts/          # Build and generation scripts
-├── tests/            # Test files
-└── docs/             # Documentation site
 ```
 
 ## Contributing
