@@ -12,28 +12,28 @@ function _Iot(label?: string, options?: Record<string, unknown>) {
 
 export function IotInternetDeviceId(label?: string, options?: Record<string, unknown>) {
   const node = _Iot(label ?? "IotInternetDeviceId", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "IotInternetDeviceId";
+  (node as unknown as Record<string, unknown>)["~resource"] = "IotInternetDeviceId";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = iot_internet_device_idIcon;
   return node;
 }
 
 export function IotLinkWan(label?: string, options?: Record<string, unknown>) {
   const node = _Iot(label ?? "IotLinkWan", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "IotLinkWan";
+  (node as unknown as Record<string, unknown>)["~resource"] = "IotLinkWan";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = iot_link_wanIcon;
   return node;
 }
 
 export function IotMobileConnectionPackage(label?: string, options?: Record<string, unknown>) {
   const node = _Iot(label ?? "IotMobileConnectionPackage", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "IotMobileConnectionPackage";
+  (node as unknown as Record<string, unknown>)["~resource"] = "IotMobileConnectionPackage";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = iot_mobile_connection_packageIcon;
   return node;
 }
 
 export function IotPlatform(label?: string, options?: Record<string, unknown>) {
   const node = _Iot(label ?? "IotPlatform", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "IotPlatform";
+  (node as unknown as Record<string, unknown>)["~resource"] = "IotPlatform";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = iot_platformIcon;
   return node;
 }

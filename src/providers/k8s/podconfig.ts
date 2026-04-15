@@ -10,14 +10,14 @@ function _Podconfig(label?: string, options?: Record<string, unknown>) {
 
 export function CM(label?: string, options?: Record<string, unknown>) {
   const node = _Podconfig(label ?? "CM", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "CM";
+  (node as unknown as Record<string, unknown>)["~resource"] = "CM";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = cmIcon;
   return node;
 }
 
 export function Secret(label?: string, options?: Record<string, unknown>) {
   const node = _Podconfig(label ?? "Secret", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Secret";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Secret";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = secretIcon;
   return node;
 }

@@ -1,0 +1,16 @@
+{
+  "title": "Plugin System Example",
+  "activeEditor": "script",
+  "markup": {
+    "language": "html",
+    "content": "<div id=\"diagram\"></div>"
+  },
+  "script": {
+    "language": "javascript",
+    "content": "import { Diagram, HookEvent } from 'diagrams-js';\nimport { EC2 } from 'diagrams-js/aws/compute.js';\nimport { RDS } from 'diagrams-js/aws/database.js';\nimport { ELB } from 'diagrams-js/aws/network.js';\n\n// Create a plugin that modifies node labels\nconst labelPrefixPlugin = () => ({\n  name: 'label-prefix',\n  version: '1.0.0',\n  apiVersion: '1.0',\n  runtimeSupport: { node: true, browser: true, deno: true, bun: true },\n  capabilities: [\n    {\n      type: 'hook',\n      hooks: [\n        {\n          event: HookEvent.NODE_CREATE,\n          handler: async (data) => {\n            data.node.label = '[AWS] ' + data.node.label;\n            return data;\n          },\n        },\n      ],\n    },\n  ],\n});\n\n// Create a plugin that adds colored edges\nconst coloredEdgePlugin = () => ({\n  name: 'colored-edges',\n  version: '1.0.0',\n  apiVersion: '1.0',\n  runtimeSupport: { node: true, browser: true, deno: true, bun: true },\n  capabilities: [\n    {\n      type: 'hook',\n      hooks: [\n        {\n          event: HookEvent.EDGE_CREATE,\n          handler: async (data) => {\n            // Modify the internal _attrs object directly\n            data.edge._internalAttrs.color = 'blue';\n            data.edge._internalAttrs.penwidth = '2';\n            return data;\n          },\n        },\n      ],\n    },\n  ],\n});\n\nconst diagram = Diagram('Plugin Example');\n\n// Register plugins before adding nodes\nawait diagram.registerPlugins([labelPrefixPlugin, coloredEdgePlugin]);\n\nconst lb = diagram.add(ELB('Load Balancer'));\nconst web = diagram.add(EC2('Web Server'));\nconst db = diagram.add(RDS('Database'));\n\n// Connect nodes using chained syntax - edges will be modified by the plugin\nlb.to(web).to(db);\n\nconst svg = await diagram.render();\ndocument.getElementById('diagram').innerHTML = svg;\n"
+  },
+  "imports": {
+    "diagrams-js": "{{LC::TO_URL(./lib/index.js)}}",
+    "diagrams-js/": "{{LC::TO_URL(./lib/providers/)}}"
+  }
+}

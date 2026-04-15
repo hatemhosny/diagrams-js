@@ -31,161 +31,161 @@ function _Language(label?: string, options?: Record<string, unknown>) {
 
 export function Bash(label?: string, options?: Record<string, unknown>) {
   const node = _Language(label ?? "Bash", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Bash";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Bash";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = bashIcon;
   return node;
 }
 
 export function C(label?: string, options?: Record<string, unknown>) {
   const node = _Language(label ?? "C", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "C";
+  (node as unknown as Record<string, unknown>)["~resource"] = "C";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = cIcon;
   return node;
 }
 
 export function Cpp(label?: string, options?: Record<string, unknown>) {
   const node = _Language(label ?? "Cpp", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Cpp";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Cpp";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = cppIcon;
   return node;
 }
 
 export function Csharp(label?: string, options?: Record<string, unknown>) {
   const node = _Language(label ?? "Csharp", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Csharp";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Csharp";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = csharpIcon;
   return node;
 }
 
 export function Dart(label?: string, options?: Record<string, unknown>) {
   const node = _Language(label ?? "Dart", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Dart";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Dart";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = dartIcon;
   return node;
 }
 
 export function Elixir(label?: string, options?: Record<string, unknown>) {
   const node = _Language(label ?? "Elixir", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Elixir";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Elixir";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = elixirIcon;
   return node;
 }
 
 export function Erlang(label?: string, options?: Record<string, unknown>) {
   const node = _Language(label ?? "Erlang", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Erlang";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Erlang";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = erlangIcon;
   return node;
 }
 
 export function Go(label?: string, options?: Record<string, unknown>) {
   const node = _Language(label ?? "Go", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Go";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Go";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = goIcon;
   return node;
 }
 
 export function Java(label?: string, options?: Record<string, unknown>) {
   const node = _Language(label ?? "Java", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Java";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Java";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = javaIcon;
   return node;
 }
 
 export function Javascript(label?: string, options?: Record<string, unknown>) {
   const node = _Language(label ?? "Javascript", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Javascript";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Javascript";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = javascriptIcon;
   return node;
 }
 
 export function Kotlin(label?: string, options?: Record<string, unknown>) {
   const node = _Language(label ?? "Kotlin", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Kotlin";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Kotlin";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = kotlinIcon;
   return node;
 }
 
 export function Latex(label?: string, options?: Record<string, unknown>) {
   const node = _Language(label ?? "Latex", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Latex";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Latex";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = latexIcon;
   return node;
 }
 
 export function Matlab(label?: string, options?: Record<string, unknown>) {
   const node = _Language(label ?? "Matlab", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Matlab";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Matlab";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = matlabIcon;
   return node;
 }
 
 export function Nodejs(label?: string, options?: Record<string, unknown>) {
   const node = _Language(label ?? "Nodejs", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Nodejs";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Nodejs";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = nodejsIcon;
   return node;
 }
 
 export function Php(label?: string, options?: Record<string, unknown>) {
   const node = _Language(label ?? "Php", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Php";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Php";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = phpIcon;
   return node;
 }
 
 export function Python(label?: string, options?: Record<string, unknown>) {
   const node = _Language(label ?? "Python", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Python";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Python";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = pythonIcon;
   return node;
 }
 
 export function R(label?: string, options?: Record<string, unknown>) {
   const node = _Language(label ?? "R", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "R";
+  (node as unknown as Record<string, unknown>)["~resource"] = "R";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = rIcon;
   return node;
 }
 
 export function Ruby(label?: string, options?: Record<string, unknown>) {
   const node = _Language(label ?? "Ruby", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Ruby";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Ruby";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = rubyIcon;
   return node;
 }
 
 export function Rust(label?: string, options?: Record<string, unknown>) {
   const node = _Language(label ?? "Rust", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Rust";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Rust";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = rustIcon;
   return node;
 }
 
 export function Scala(label?: string, options?: Record<string, unknown>) {
   const node = _Language(label ?? "Scala", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Scala";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Scala";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = scalaIcon;
   return node;
 }
 
 export function Sql(label?: string, options?: Record<string, unknown>) {
   const node = _Language(label ?? "Sql", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Sql";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Sql";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = sqlIcon;
   return node;
 }
 
 export function Swift(label?: string, options?: Record<string, unknown>) {
   const node = _Language(label ?? "Swift", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Swift";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Swift";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = swiftIcon;
   return node;
 }
 
 export function Typescript(label?: string, options?: Record<string, unknown>) {
   const node = _Language(label ?? "Typescript", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Typescript";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Typescript";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = typescriptIcon;
   return node;
 }

@@ -11,21 +11,21 @@ function _Api(label?: string, options?: Record<string, unknown>) {
 
 export function APIGateway(label?: string, options?: Record<string, unknown>) {
   const node = _Api(label ?? "APIGateway", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "APIGateway";
+  (node as unknown as Record<string, unknown>)["~resource"] = "APIGateway";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = api_gatewayIcon;
   return node;
 }
 
 export function Apigee(label?: string, options?: Record<string, unknown>) {
   const node = _Api(label ?? "Apigee", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Apigee";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Apigee";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = apigeeIcon;
   return node;
 }
 
 export function Endpoints(label?: string, options?: Record<string, unknown>) {
   const node = _Api(label ?? "Endpoints", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Endpoints";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Endpoints";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = endpointsIcon;
   return node;
 }

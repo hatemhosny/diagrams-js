@@ -10,14 +10,14 @@ function _Saas(label?: string, options?: Record<string, unknown>) {
 
 export function Cloud(label?: string, options?: Record<string, unknown>) {
   const node = _Saas(label ?? "Cloud", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Cloud";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Cloud";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = cloudIcon;
   return node;
 }
 
 export function Elastic(label?: string, options?: Record<string, unknown>) {
   const node = _Saas(label ?? "Elastic", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Elastic";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Elastic";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = elasticIcon;
   return node;
 }

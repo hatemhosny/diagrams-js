@@ -15,49 +15,49 @@ function _Mobile(label?: string, options?: Record<string, unknown>) {
 
 export function Amplify(label?: string, options?: Record<string, unknown>) {
   const node = _Mobile(label ?? "Amplify", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Amplify";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Amplify";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = amplifyIcon;
   return node;
 }
 
 export function APIGatewayEndpoint(label?: string, options?: Record<string, unknown>) {
   const node = _Mobile(label ?? "APIGatewayEndpoint", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "APIGatewayEndpoint";
+  (node as unknown as Record<string, unknown>)["~resource"] = "APIGatewayEndpoint";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = api_gateway_endpointIcon;
   return node;
 }
 
 export function APIGateway(label?: string, options?: Record<string, unknown>) {
   const node = _Mobile(label ?? "APIGateway", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "APIGateway";
+  (node as unknown as Record<string, unknown>)["~resource"] = "APIGateway";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = api_gatewayIcon;
   return node;
 }
 
 export function Appsync(label?: string, options?: Record<string, unknown>) {
   const node = _Mobile(label ?? "Appsync", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Appsync";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Appsync";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = appsyncIcon;
   return node;
 }
 
 export function DeviceFarm(label?: string, options?: Record<string, unknown>) {
   const node = _Mobile(label ?? "DeviceFarm", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "DeviceFarm";
+  (node as unknown as Record<string, unknown>)["~resource"] = "DeviceFarm";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = device_farmIcon;
   return node;
 }
 
 export function Mobile(label?: string, options?: Record<string, unknown>) {
   const node = _Mobile(label ?? "Mobile", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Mobile";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Mobile";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = mobileIcon;
   return node;
 }
 
 export function Pinpoint(label?: string, options?: Record<string, unknown>) {
   const node = _Mobile(label ?? "Pinpoint", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Pinpoint";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Pinpoint";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = pinpointIcon;
   return node;
 }

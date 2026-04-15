@@ -12,28 +12,28 @@ function _Applicationlifecycle(label?: string, options?: Record<string, unknown>
 
 export function Freezer(label?: string, options?: Record<string, unknown>) {
   const node = _Applicationlifecycle(label ?? "Freezer", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Freezer";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Freezer";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = freezerIcon;
   return node;
 }
 
 export function Masakari(label?: string, options?: Record<string, unknown>) {
   const node = _Applicationlifecycle(label ?? "Masakari", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Masakari";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Masakari";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = masakariIcon;
   return node;
 }
 
 export function Murano(label?: string, options?: Record<string, unknown>) {
   const node = _Applicationlifecycle(label ?? "Murano", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Murano";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Murano";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = muranoIcon;
   return node;
 }
 
 export function Solum(label?: string, options?: Record<string, unknown>) {
   const node = _Applicationlifecycle(label ?? "Solum", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Solum";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Solum";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = solumIcon;
   return node;
 }

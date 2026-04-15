@@ -14,14 +14,14 @@ function _Robotics(label?: string, options?: Record<string, unknown>) {
 
 export function RobomakerCloudExtensionRos(label?: string, options?: Record<string, unknown>) {
   const node = _Robotics(label ?? "RobomakerCloudExtensionRos", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "RobomakerCloudExtensionRos";
+  (node as unknown as Record<string, unknown>)["~resource"] = "RobomakerCloudExtensionRos";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = robomaker_cloud_extension_rosIcon;
   return node;
 }
 
 export function RobomakerDevelopmentEnvironment(label?: string, options?: Record<string, unknown>) {
   const node = _Robotics(label ?? "RobomakerDevelopmentEnvironment", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "RobomakerDevelopmentEnvironment";
+  (node as unknown as Record<string, unknown>)["~resource"] = "RobomakerDevelopmentEnvironment";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] =
     robomaker_development_environmentIcon;
   return node;
@@ -29,28 +29,28 @@ export function RobomakerDevelopmentEnvironment(label?: string, options?: Record
 
 export function RobomakerFleetManagement(label?: string, options?: Record<string, unknown>) {
   const node = _Robotics(label ?? "RobomakerFleetManagement", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "RobomakerFleetManagement";
+  (node as unknown as Record<string, unknown>)["~resource"] = "RobomakerFleetManagement";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = robomaker_fleet_managementIcon;
   return node;
 }
 
 export function RobomakerSimulator(label?: string, options?: Record<string, unknown>) {
   const node = _Robotics(label ?? "RobomakerSimulator", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "RobomakerSimulator";
+  (node as unknown as Record<string, unknown>)["~resource"] = "RobomakerSimulator";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = robomaker_simulatorIcon;
   return node;
 }
 
 export function Robomaker(label?: string, options?: Record<string, unknown>) {
   const node = _Robotics(label ?? "Robomaker", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Robomaker";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Robomaker";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = robomakerIcon;
   return node;
 }
 
 export function Robotics(label?: string, options?: Record<string, unknown>) {
   const node = _Robotics(label ?? "Robotics", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Robotics";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Robotics";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = roboticsIcon;
   return node;
 }

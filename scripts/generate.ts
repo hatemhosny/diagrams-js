@@ -92,7 +92,7 @@ function _${pascalServiceType}(label?: string, options?: Record<string, unknown>
   for (const meta of classMetas) {
     code += `export function ${meta.name}(label?: string, options?: Record<string, unknown>) {
   const node = _${pascalServiceType}(label ?? "${meta.name}", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "${meta.name}";
+  (node as unknown as Record<string, unknown>)["~resource"] = "${meta.name}";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = ${meta.importName}Icon;
   return node;
 }
@@ -172,6 +172,87 @@ export * from "../index.js";
   console.log("Generated providers/index.ts");
 }
 
+interface ResourceInfo {
+  provider: string;
+  type: string;
+  resource: string;
+}
+
+function generateResourcesList(): void {
+  console.log("Generating resources-list.ts...");
+
+  const allResources: ResourceInfo[] = [];
+
+  for (const provider of PROVIDERS) {
+    const resourceDir = path.join(RESOURCES_DIR, provider);
+
+    if (!fs.existsSync(resourceDir)) {
+      continue;
+    }
+
+    const entries = fs.readdirSync(resourceDir, { withFileTypes: true });
+
+    for (const entry of entries) {
+      if (entry.isDirectory()) {
+        const serviceType = entry.name;
+        const serviceDir = path.join(resourceDir, serviceType);
+
+        const files = fs.readdirSync(serviceDir);
+        const pngFiles = files.filter((f) => f.endsWith(".png") && !f.includes("rounded")).sort();
+
+        for (const file of pngFiles) {
+          const resourceName = generateClassName(provider, file);
+          allResources.push({
+            provider,
+            type: serviceType,
+            resource: resourceName,
+          });
+        }
+      }
+    }
+  }
+
+  // Build index for O(1) exact match lookups
+  const indexEntries: Array<[string, number]> = [];
+  allResources.forEach((r, idx) => {
+    indexEntries.push([r.resource.toLowerCase(), idx]);
+  });
+
+  let code = `// Auto-generated resources-list module
+// Do not edit manually
+
+export interface ResourceInfo {
+  provider: string;
+  type: string;
+  resource: string;
+}
+
+export const allResources: ResourceInfo[] = ${JSON.stringify(allResources, null, 2)};
+
+// Index for O(1) exact match lookups
+const resourceIndex: Map<string, number> = new Map(${JSON.stringify(indexEntries)});
+
+export function findResource(query: string): ResourceInfo[] {
+  const lowerQuery = query.toLowerCase();
+
+  // Check for exact match first (O(1) lookup)
+  const exactMatchIndex = resourceIndex.get(lowerQuery);
+  if (exactMatchIndex !== undefined) {
+    return [allResources[exactMatchIndex]];
+  }
+
+  // Fall back to partial match search
+  return allResources.filter((r) =>
+    r.resource.toLowerCase().includes(lowerQuery)
+  );
+}
+`;
+
+  const filePath = path.join(PROVIDERS_DIR, "resources-list.ts");
+  fs.writeFileSync(filePath, code);
+  console.log(`  Created resources-list.ts (${allResources.length} resources)`);
+}
+
 function main(): void {
   const args = process.argv.slice(2);
 
@@ -186,6 +267,7 @@ function main(): void {
       console.log();
     }
     generateProvidersIndex();
+    generateResourcesList();
     console.log("\n✓ All providers generated successfully!");
   } else {
     const provider = args[0];
@@ -196,6 +278,7 @@ function main(): void {
     }
     generateProvider(provider as Provider);
     generateProvidersIndex();
+    generateResourcesList();
   }
 }
 

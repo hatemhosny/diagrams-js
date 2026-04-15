@@ -9,7 +9,7 @@ function _Database(label?: string, options?: Record<string, unknown>) {
 
 export function Postgis(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "Postgis", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Postgis";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Postgis";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = postgisIcon;
   return node;
 }

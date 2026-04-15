@@ -13,35 +13,35 @@ function _Compute(label?: string, options?: Record<string, unknown>) {
 
 export function BareMetalServer(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "BareMetalServer", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "BareMetalServer";
+  (node as unknown as Record<string, unknown>)["~resource"] = "BareMetalServer";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = bare_metal_serverIcon;
   return node;
 }
 
 export function ImageService(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "ImageService", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "ImageService";
+  (node as unknown as Record<string, unknown>)["~resource"] = "ImageService";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = image_serviceIcon;
   return node;
 }
 
 export function Instance(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "Instance", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Instance";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Instance";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = instanceIcon;
   return node;
 }
 
 export function Key(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "Key", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Key";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Key";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = keyIcon;
   return node;
 }
 
 export function PowerInstance(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "PowerInstance", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "PowerInstance";
+  (node as unknown as Record<string, unknown>)["~resource"] = "PowerInstance";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = power_instanceIcon;
   return node;
 }

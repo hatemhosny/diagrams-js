@@ -8,11 +8,14 @@
  */
 
 import type { Node } from "./Node.js";
+import type { Yaml } from "./types.ts";
 
 /**
  * A node factory function (e.g., `EC2`, `Lambda`, `S3`).
  */
 export type NodeFactory = (label?: string, options?: Record<string, unknown>) => Node;
+
+let importStrategy: "relative" | "direct" | "bare" | "cdn" | null = null;
 
 /**
  * Attempts to import a provider module using multiple path strategies.
@@ -32,48 +35,60 @@ export type NodeFactory = (label?: string, options?: Record<string, unknown>) =>
  */
 async function tryImportProvider(
   provider: string,
-  service: string,
+  service?: string,
 ): Promise<Record<string, unknown> | null> {
   // Use indirect dynamic imports to prevent bundlers from analyzing paths
   // while still working with native ES module resolution
-  const p = provider;
-  const s = service;
-  const importModule = (path: string) => import(path);
+  const getPath = (parts: Array<string | undefined>) => parts.filter((x) => x != null).join("/");
 
   // Strategy 1: Relative subpath import (resolved by package exports)
   // In Node.js/Bun: ./aws/compute -> package exports -> ./dist/providers/aws/compute.js
-  try {
-    const parts = [".", p, s];
-    return await importModule(parts.join("/"));
-  } catch {
-    // Package exports not available
+  if (importStrategy === "relative" || (!importStrategy && !import.meta.url.endsWith(".js"))) {
+    try {
+      const path = getPath([".", provider, service]);
+      const module = await import(path);
+      importStrategy = "relative";
+      return module;
+    } catch {
+      // Package exports not available
+    }
   }
 
   // Strategy 2: Direct relative path with .js extension
   // For Deno, browsers, or environments without package exports support
-  try {
-    const parts = [".", "providers", p, s];
-    return await importModule(parts.join("/") + ".js");
-  } catch {
-    // Relative path not available
+  if (importStrategy === "direct" || !importStrategy) {
+    try {
+      const path = getPath([".", "providers", provider, service]);
+      const module = await import(path + ".js");
+      importStrategy = "direct";
+      return module;
+    } catch {
+      // Relative path not available
+    }
   }
 
   // Strategy 3: bare module imports for Node.js/Bun or browsers/Deno with importmaps
-  try {
-    const parts = ["diagrams-js", p, s];
-    return await importModule(parts.join("/"));
-  } catch {
-    // bare module not supported
+  if (importStrategy === "bare" || !importStrategy) {
+    try {
+      const path = getPath(["diagrams-js", provider, service]);
+      const module = await import(path);
+      importStrategy = "bare";
+      return module;
+    } catch {
+      // bare module not supported
+    }
   }
-
   // Strategy 4: CDN - constructed dynamically
-  try {
-    const parts = ["https://esm.sh", "diagrams-js", p, s];
-    return await importModule(parts.join("/"));
-  } catch {
-    // Module not found - fall back to plain nodes
+  if (importStrategy === "cdn" || !importStrategy) {
+    try {
+      const path = getPath(["https://esm.sh", "diagrams-js", provider, service]);
+      const module = await import(path);
+      importStrategy = "cdn";
+      return module;
+    } catch {
+      // Module not found - fall back to plain nodes
+    }
   }
-
   return null;
 }
 
@@ -107,4 +122,14 @@ export async function loadProviderModules(
   }
 
   return factoryLookup;
+}
+
+export async function loadResourcesList() {
+  return (await tryImportProvider("resources-list")) as
+    | typeof import("./providers/resources-list.ts")
+    | null;
+}
+
+export async function loadYaml(): Promise<Yaml | null> {
+  return (await tryImportProvider("yaml")) as Yaml | null;
 }

@@ -26,126 +26,126 @@ function _Security(label?: string, options?: Record<string, unknown>) {
 
 export function AntiBotService(label?: string, options?: Record<string, unknown>) {
   const node = _Security(label ?? "AntiBotService", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "AntiBotService";
+  (node as unknown as Record<string, unknown>)["~resource"] = "AntiBotService";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = anti_bot_serviceIcon;
   return node;
 }
 
 export function AntiDdosBasic(label?: string, options?: Record<string, unknown>) {
   const node = _Security(label ?? "AntiDdosBasic", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "AntiDdosBasic";
+  (node as unknown as Record<string, unknown>)["~resource"] = "AntiDdosBasic";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = anti_ddos_basicIcon;
   return node;
 }
 
 export function AntiDdosPro(label?: string, options?: Record<string, unknown>) {
   const node = _Security(label ?? "AntiDdosPro", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "AntiDdosPro";
+  (node as unknown as Record<string, unknown>)["~resource"] = "AntiDdosPro";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = anti_ddos_proIcon;
   return node;
 }
 
 export function AntifraudService(label?: string, options?: Record<string, unknown>) {
   const node = _Security(label ?? "AntifraudService", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "AntifraudService";
+  (node as unknown as Record<string, unknown>)["~resource"] = "AntifraudService";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = antifraud_serviceIcon;
   return node;
 }
 
 export function BastionHost(label?: string, options?: Record<string, unknown>) {
   const node = _Security(label ?? "BastionHost", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "BastionHost";
+  (node as unknown as Record<string, unknown>)["~resource"] = "BastionHost";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = bastion_hostIcon;
   return node;
 }
 
 export function CloudFirewall(label?: string, options?: Record<string, unknown>) {
   const node = _Security(label ?? "CloudFirewall", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "CloudFirewall";
+  (node as unknown as Record<string, unknown>)["~resource"] = "CloudFirewall";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = cloud_firewallIcon;
   return node;
 }
 
 export function CloudSecurityScanner(label?: string, options?: Record<string, unknown>) {
   const node = _Security(label ?? "CloudSecurityScanner", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "CloudSecurityScanner";
+  (node as unknown as Record<string, unknown>)["~resource"] = "CloudSecurityScanner";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = cloud_security_scannerIcon;
   return node;
 }
 
 export function ContentModeration(label?: string, options?: Record<string, unknown>) {
   const node = _Security(label ?? "ContentModeration", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "ContentModeration";
+  (node as unknown as Record<string, unknown>)["~resource"] = "ContentModeration";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = content_moderationIcon;
   return node;
 }
 
 export function CrowdsourcedSecurityTesting(label?: string, options?: Record<string, unknown>) {
   const node = _Security(label ?? "CrowdsourcedSecurityTesting", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "CrowdsourcedSecurityTesting";
+  (node as unknown as Record<string, unknown>)["~resource"] = "CrowdsourcedSecurityTesting";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = crowdsourced_security_testingIcon;
   return node;
 }
 
 export function DataEncryptionService(label?: string, options?: Record<string, unknown>) {
   const node = _Security(label ?? "DataEncryptionService", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "DataEncryptionService";
+  (node as unknown as Record<string, unknown>)["~resource"] = "DataEncryptionService";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = data_encryption_serviceIcon;
   return node;
 }
 
 export function DbAudit(label?: string, options?: Record<string, unknown>) {
   const node = _Security(label ?? "DbAudit", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "DbAudit";
+  (node as unknown as Record<string, unknown>)["~resource"] = "DbAudit";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = db_auditIcon;
   return node;
 }
 
 export function GameShield(label?: string, options?: Record<string, unknown>) {
   const node = _Security(label ?? "GameShield", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "GameShield";
+  (node as unknown as Record<string, unknown>)["~resource"] = "GameShield";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = game_shieldIcon;
   return node;
 }
 
 export function IdVerification(label?: string, options?: Record<string, unknown>) {
   const node = _Security(label ?? "IdVerification", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "IdVerification";
+  (node as unknown as Record<string, unknown>)["~resource"] = "IdVerification";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = id_verificationIcon;
   return node;
 }
 
 export function ManagedSecurityService(label?: string, options?: Record<string, unknown>) {
   const node = _Security(label ?? "ManagedSecurityService", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "ManagedSecurityService";
+  (node as unknown as Record<string, unknown>)["~resource"] = "ManagedSecurityService";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = managed_security_serviceIcon;
   return node;
 }
 
 export function SecurityCenter(label?: string, options?: Record<string, unknown>) {
   const node = _Security(label ?? "SecurityCenter", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "SecurityCenter";
+  (node as unknown as Record<string, unknown>)["~resource"] = "SecurityCenter";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = security_centerIcon;
   return node;
 }
 
 export function ServerGuard(label?: string, options?: Record<string, unknown>) {
   const node = _Security(label ?? "ServerGuard", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "ServerGuard";
+  (node as unknown as Record<string, unknown>)["~resource"] = "ServerGuard";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = server_guardIcon;
   return node;
 }
 
 export function SslCertificates(label?: string, options?: Record<string, unknown>) {
   const node = _Security(label ?? "SslCertificates", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "SslCertificates";
+  (node as unknown as Record<string, unknown>)["~resource"] = "SslCertificates";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = ssl_certificatesIcon;
   return node;
 }
 
 export function WebApplicationFirewall(label?: string, options?: Record<string, unknown>) {
   const node = _Security(label ?? "WebApplicationFirewall", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "WebApplicationFirewall";
+  (node as unknown as Record<string, unknown>)["~resource"] = "WebApplicationFirewall";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = web_application_firewallIcon;
   return node;
 }

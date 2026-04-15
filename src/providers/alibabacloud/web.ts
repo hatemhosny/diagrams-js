@@ -10,14 +10,14 @@ function _Web(label?: string, options?: Record<string, unknown>) {
 
 export function Dns(label?: string, options?: Record<string, unknown>) {
   const node = _Web(label ?? "Dns", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Dns";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Dns";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = dnsIcon;
   return node;
 }
 
 export function Domain(label?: string, options?: Record<string, unknown>) {
   const node = _Web(label ?? "Domain", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Domain";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Domain";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = domainIcon;
   return node;
 }

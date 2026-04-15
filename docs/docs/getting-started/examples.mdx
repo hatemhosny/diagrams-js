@@ -423,9 +423,217 @@ const svg = await diagram.render();
   className="example-img"
 />
 
+## Plugin System Example
+
+This example demonstrates the plugin system that allows you to hook into diagram creation and modify nodes, edges, and clusters programmatically.
+
+```typescript
+import { Diagram, HookEvent } from "diagrams-js";
+import { EC2 } from "diagrams-js/aws/compute";
+import { RDS } from "diagrams-js/aws/database";
+import { ELB } from "diagrams-js/aws/network";
+
+// Create a plugin that modifies node labels
+const labelPrefixPlugin = () => ({
+  name: "label-prefix",
+  version: "1.0.0",
+  apiVersion: "1.0",
+  runtimeSupport: { node: true, browser: true, deno: true, bun: true },
+  capabilities: [
+    {
+      type: "hook",
+      hooks: [
+        {
+          event: HookEvent.NODE_CREATE,
+          handler: async (data) => {
+            data.node.label = "[AWS] " + data.node.label;
+            return data;
+          },
+        },
+      ],
+    },
+  ],
+});
+
+// Create a plugin that adds colored edges
+const coloredEdgePlugin = () => ({
+  name: "colored-edges",
+  version: "1.0.0",
+  apiVersion: "1.0",
+  runtimeSupport: { node: true, browser: true, deno: true, bun: true },
+  capabilities: [
+    {
+      type: "hook",
+      hooks: [
+        {
+          event: HookEvent.EDGE_CREATE,
+          handler: async (data) => {
+            // Modify edge attributes via edgeAttrs
+            data.edge.edgeAttrs.color = "blue";
+            data.edge.edgeAttrs.penwidth = "2";
+            return data;
+          },
+        },
+      ],
+    },
+  ],
+});
+
+// Create a plugin that modifies node attributes (style, fillcolor, etc.)
+const nodeStylePlugin = () => ({
+  name: "node-style",
+  version: "1.0.0",
+  apiVersion: "1.0",
+  runtimeSupport: { node: true, browser: true, deno: true, bun: true },
+  capabilities: [
+    {
+      type: "hook",
+      hooks: [
+        {
+          event: HookEvent.NODE_CREATE,
+          handler: async (data) => {
+            // Modify node attributes via nodeAttrs
+            data.node.nodeAttrs.width = "1.2";
+            return data;
+          },
+        },
+      ],
+    },
+  ],
+});
+
+const diagram = Diagram("Plugin Example");
+
+// Register plugins before adding nodes
+await diagram.registerPlugins([labelPrefixPlugin, coloredEdgePlugin, nodeStylePlugin]);
+
+const lb = diagram.add(ELB("Load Balancer"));
+const web = diagram.add(EC2("Web Server"));
+const db = diagram.add(RDS("Database"));
+
+// Connect nodes using chained syntax - edges will be modified by the plugin
+lb.to(web).to(db);
+
+const svg = await diagram.render();
+```
+
+<img
+  src="/examples/example10-plugin-system.svg"
+  alt="Plugin System Example"
+  className="example-img"
+/>
+
+:::tip Learn More
+For a comprehensive guide on creating plugins, check out the [Plugin System](../plugins/overview.mdx) documentation.
+:::
+
+## Hook-Based Diagram Styling
+
+This example demonstrates a comprehensive use of hooks to style all diagram elements based on their environment (production vs development).
+
+```typescript
+import { Diagram, HookEvent } from "diagrams-js";
+import { EC2 } from "diagrams-js/aws/compute";
+import { RDS } from "diagrams-js/aws/database";
+import { ELB } from "diagrams-js/aws/network";
+
+// Environment-based styling plugin
+const environmentStylingPlugin = (environment) => () => ({
+  name: "environment-styling",
+  version: "1.0.0",
+  apiVersion: "1.0",
+  runtimeSupport: { node: true, browser: true, deno: true, bun: true },
+  capabilities: [
+    {
+      type: "hook",
+      hooks: [
+        {
+          event: HookEvent.NODE_CREATE,
+          handler: async (data) => {
+            // Style nodes based on environment
+            if (environment === "prod") {
+              data.node.nodeAttrs.style = "filled";
+              data.node.nodeAttrs.fillcolor = "#FFE5E5"; // Light red for prod
+              data.node.nodeAttrs.penwidth = "2";
+              data.node.label = "[PROD] " + data.node.label;
+            } else {
+              data.node.nodeAttrs.style = "filled";
+              data.node.nodeAttrs.fillcolor = "#E5F5E5"; // Light green for dev
+              data.node.label = "[DEV] " + data.node.label;
+            }
+            return data;
+          },
+        },
+        {
+          event: HookEvent.EDGE_CREATE,
+          handler: async (data) => {
+            // Style edges based on environment
+            if (environment === "prod") {
+              data.edge.edgeAttrs.color = "#CC0000";
+              data.edge.edgeAttrs.penwidth = "2";
+            } else {
+              data.edge.edgeAttrs.color = "#00AA00";
+              data.edge.edgeAttrs.style = "dashed";
+            }
+            return data;
+          },
+        },
+        {
+          event: HookEvent.CLUSTER_CREATE,
+          handler: async (data) => {
+            // Style clusters based on environment
+            if (environment === "prod") {
+              data.cluster.clusterAttrs.bgcolor = "#FFF0F0";
+              data.cluster.clusterAttrs.pencolor = "#CC0000";
+              data.cluster.clusterAttrs.penwidth = "3";
+            } else {
+              data.cluster.clusterAttrs.bgcolor = "#F0FFF0";
+              data.cluster.clusterAttrs.pencolor = "#00AA00";
+            }
+            return data;
+          },
+        },
+      ],
+    },
+  ],
+});
+
+const diagram = Diagram("Environment Styling Example");
+
+// Register the plugin for production environment
+await diagram.registerPlugins([environmentStylingPlugin("prod")]);
+
+const webCluster = diagram.cluster("Web Tier");
+const lb = webCluster.add(ELB("Load Balancer"));
+const web1 = webCluster.add(EC2("Web Server 1"));
+const web2 = webCluster.add(EC2("Web Server 2"));
+
+const dbCluster = diagram.cluster("Database Tier");
+const db = dbCluster.add(RDS("Primary Database"));
+
+lb.to([web1, web2]);
+web1.to(db);
+web2.to(db);
+
+const svg = await diagram.render();
+```
+
+<img
+  src="/examples/example11-plugin-hooks.svg"
+  alt="Plugin Hooks Example"
+  className="example-img"
+/>
+
+This example shows how to:
+
+- Use `nodeAttrs` to modify node styling (fillcolor, penwidth, style)
+- Use `edgeAttrs` to modify edge styling (color, penwidth, style)
+- Use `clusterAttrs` to modify cluster styling (bgcolor, pencolor, penwidth)
+- Modify node labels programmatically
+- Create reusable plugins with configuration
+
 ## Next Steps
 
 - Explore [all providers](../guides/providers.mdx) and their available nodes
-- Learn about [custom nodes](../guides/custom-nodes.mdx) for external icons
 - Read the [complete API reference](../guides/diagram.mdx)
 - Try the [playground](/playground) for interactive examples

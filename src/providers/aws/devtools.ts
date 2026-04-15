@@ -22,98 +22,98 @@ function _Devtools(label?: string, options?: Record<string, unknown>) {
 
 export function CloudDevelopmentKit(label?: string, options?: Record<string, unknown>) {
   const node = _Devtools(label ?? "CloudDevelopmentKit", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "CloudDevelopmentKit";
+  (node as unknown as Record<string, unknown>)["~resource"] = "CloudDevelopmentKit";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = cloud_development_kitIcon;
   return node;
 }
 
 export function Cloud9Resource(label?: string, options?: Record<string, unknown>) {
   const node = _Devtools(label ?? "Cloud9Resource", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Cloud9Resource";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Cloud9Resource";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = cloud9_resourceIcon;
   return node;
 }
 
 export function Cloud9(label?: string, options?: Record<string, unknown>) {
   const node = _Devtools(label ?? "Cloud9", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Cloud9";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Cloud9";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = cloud9Icon;
   return node;
 }
 
 export function Cloudshell(label?: string, options?: Record<string, unknown>) {
   const node = _Devtools(label ?? "Cloudshell", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Cloudshell";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Cloudshell";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = cloudshellIcon;
   return node;
 }
 
 export function Codeartifact(label?: string, options?: Record<string, unknown>) {
   const node = _Devtools(label ?? "Codeartifact", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Codeartifact";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Codeartifact";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = codeartifactIcon;
   return node;
 }
 
 export function Codebuild(label?: string, options?: Record<string, unknown>) {
   const node = _Devtools(label ?? "Codebuild", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Codebuild";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Codebuild";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = codebuildIcon;
   return node;
 }
 
 export function Codecommit(label?: string, options?: Record<string, unknown>) {
   const node = _Devtools(label ?? "Codecommit", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Codecommit";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Codecommit";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = codecommitIcon;
   return node;
 }
 
 export function Codedeploy(label?: string, options?: Record<string, unknown>) {
   const node = _Devtools(label ?? "Codedeploy", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Codedeploy";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Codedeploy";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = codedeployIcon;
   return node;
 }
 
 export function Codepipeline(label?: string, options?: Record<string, unknown>) {
   const node = _Devtools(label ?? "Codepipeline", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Codepipeline";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Codepipeline";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = codepipelineIcon;
   return node;
 }
 
 export function Codestar(label?: string, options?: Record<string, unknown>) {
   const node = _Devtools(label ?? "Codestar", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Codestar";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Codestar";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = codestarIcon;
   return node;
 }
 
 export function CommandLineInterface(label?: string, options?: Record<string, unknown>) {
   const node = _Devtools(label ?? "CommandLineInterface", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "CommandLineInterface";
+  (node as unknown as Record<string, unknown>)["~resource"] = "CommandLineInterface";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = command_line_interfaceIcon;
   return node;
 }
 
 export function DeveloperTools(label?: string, options?: Record<string, unknown>) {
   const node = _Devtools(label ?? "DeveloperTools", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "DeveloperTools";
+  (node as unknown as Record<string, unknown>)["~resource"] = "DeveloperTools";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = developer_toolsIcon;
   return node;
 }
 
 export function ToolsAndSdks(label?: string, options?: Record<string, unknown>) {
   const node = _Devtools(label ?? "ToolsAndSdks", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "ToolsAndSdks";
+  (node as unknown as Record<string, unknown>)["~resource"] = "ToolsAndSdks";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = tools_and_sdksIcon;
   return node;
 }
 
 export function XRay(label?: string, options?: Record<string, unknown>) {
   const node = _Devtools(label ?? "XRay", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "XRay";
+  (node as unknown as Record<string, unknown>)["~resource"] = "XRay";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = x_rayIcon;
   return node;
 }

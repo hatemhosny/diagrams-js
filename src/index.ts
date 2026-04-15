@@ -13,8 +13,7 @@
  * const api = diagram.add(EC2("API Server"));
  * const storage = diagram.add(S3("Storage"));
  *
- * db.to(api);
- * api.to(storage);
+ * db.to(api).to(storage);
  *
  * const svg = await diagram.render();
  * ```
@@ -26,11 +25,18 @@
 export { Diagram } from "./Diagram.js";
 export { Node } from "./Node.js";
 export { Edge } from "./Edge.js";
-export { Custom } from "./Custom.js";
+export { Cluster } from "./Cluster.js";
+export { Custom, Iconify } from "./Custom.js";
 
 // Types
-export type { Cluster } from "./Cluster.js";
-export type { DiagramOptions, EdgeOptions, NodeOptions, ThemeName, ThemeConfig } from "./types.js";
+export type {
+  DiagramOptions,
+  EdgeOptions,
+  NodeOptions,
+  ThemeName,
+  ThemeConfig,
+  Yaml,
+} from "./types.js";
 export type {
   DiagramJSON,
   DiagramNodeJSON,
@@ -39,3 +45,36 @@ export type {
   FromJSONOptions,
   ProviderModule,
 } from "./json.js";
+
+// Plugin system
+export {
+  createPluginRegistry,
+  createJSONPlugin,
+  jsonPlugin,
+  HookEvent,
+  PluginError,
+  DependencyError,
+  RuntimeError,
+} from "./plugins/index.js";
+
+// Plugin types
+export type {
+  DiagramsPlugin,
+  CreatePlugin,
+  PluginCapability,
+  ImporterCapability,
+  ExporterCapability,
+  RendererCapability,
+  MetadataCapability,
+  HookCapability,
+  PluginContext,
+  ImportContext,
+  ExportContext,
+  RenderContext,
+  MetadataContext,
+  HookContext,
+  NodeMetadata,
+  PluginRegistry,
+  RuntimeSupport,
+  HookHandler,
+} from "./plugins/types.js";

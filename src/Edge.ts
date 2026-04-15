@@ -24,8 +24,14 @@ export interface Edge {
   forward: boolean;
   /** Whether this is a reverse edge (arrow points back) */
   reverse: boolean;
-  /** Graphviz attributes for this edge */
+  /** Graphviz attributes for this edge (includes computed properties like dir) */
   attrs: Record<string, string>;
+  /**
+   * Edge attributes that can be modified by hooks.
+   * This is the internal attribute store that hooks should modify.
+   * Changes here will be reflected in the attrs getter.
+   */
+  edgeAttrs: Record<string, string>;
 
   /**
    * Connect this edge to a node or merge with another edge
@@ -133,6 +139,21 @@ export function Edge(options: EdgeOptions = {}): Edge {
       }
       node = target;
       return target;
+    },
+    /**
+     * Edge attributes that can be modified by hooks.
+     * This provides direct access to the internal attribute store.
+     * Changes here will be reflected in the attrs getter.
+     */
+    get edgeAttrs(): Record<string, string> {
+      return _attrs;
+    },
+    set edgeAttrs(value: Record<string, string>) {
+      // Clear existing attrs and set new ones
+      for (const key of Object.keys(_attrs)) {
+        delete _attrs[key];
+      }
+      Object.assign(_attrs, value);
     },
     /**
      * Connect from a node or another edge

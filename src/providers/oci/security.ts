@@ -24,112 +24,112 @@ function _Security(label?: string, options?: Record<string, unknown>) {
 
 export function CloudGuardWhite(label?: string, options?: Record<string, unknown>) {
   const node = _Security(label ?? "CloudGuardWhite", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "CloudGuardWhite";
+  (node as unknown as Record<string, unknown>)["~resource"] = "CloudGuardWhite";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = cloud_guard_whiteIcon;
   return node;
 }
 
 export function CloudGuard(label?: string, options?: Record<string, unknown>) {
   const node = _Security(label ?? "CloudGuard", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "CloudGuard";
+  (node as unknown as Record<string, unknown>)["~resource"] = "CloudGuard";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = cloud_guardIcon;
   return node;
 }
 
 export function DDOSWhite(label?: string, options?: Record<string, unknown>) {
   const node = _Security(label ?? "DDOSWhite", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "DDOSWhite";
+  (node as unknown as Record<string, unknown>)["~resource"] = "DDOSWhite";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = ddos_whiteIcon;
   return node;
 }
 
 export function DDOS(label?: string, options?: Record<string, unknown>) {
   const node = _Security(label ?? "DDOS", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "DDOS";
+  (node as unknown as Record<string, unknown>)["~resource"] = "DDOS";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = ddosIcon;
   return node;
 }
 
 export function EncryptionWhite(label?: string, options?: Record<string, unknown>) {
   const node = _Security(label ?? "EncryptionWhite", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "EncryptionWhite";
+  (node as unknown as Record<string, unknown>)["~resource"] = "EncryptionWhite";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = encryption_whiteIcon;
   return node;
 }
 
 export function Encryption(label?: string, options?: Record<string, unknown>) {
   const node = _Security(label ?? "Encryption", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Encryption";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Encryption";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = encryptionIcon;
   return node;
 }
 
 export function IDAccessWhite(label?: string, options?: Record<string, unknown>) {
   const node = _Security(label ?? "IDAccessWhite", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "IDAccessWhite";
+  (node as unknown as Record<string, unknown>)["~resource"] = "IDAccessWhite";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = id_access_whiteIcon;
   return node;
 }
 
 export function IDAccess(label?: string, options?: Record<string, unknown>) {
   const node = _Security(label ?? "IDAccess", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "IDAccess";
+  (node as unknown as Record<string, unknown>)["~resource"] = "IDAccess";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = id_accessIcon;
   return node;
 }
 
 export function KeyManagementWhite(label?: string, options?: Record<string, unknown>) {
   const node = _Security(label ?? "KeyManagementWhite", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "KeyManagementWhite";
+  (node as unknown as Record<string, unknown>)["~resource"] = "KeyManagementWhite";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = key_management_whiteIcon;
   return node;
 }
 
 export function KeyManagement(label?: string, options?: Record<string, unknown>) {
   const node = _Security(label ?? "KeyManagement", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "KeyManagement";
+  (node as unknown as Record<string, unknown>)["~resource"] = "KeyManagement";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = key_managementIcon;
   return node;
 }
 
 export function MaxSecurityZoneWhite(label?: string, options?: Record<string, unknown>) {
   const node = _Security(label ?? "MaxSecurityZoneWhite", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "MaxSecurityZoneWhite";
+  (node as unknown as Record<string, unknown>)["~resource"] = "MaxSecurityZoneWhite";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = max_security_zone_whiteIcon;
   return node;
 }
 
 export function MaxSecurityZone(label?: string, options?: Record<string, unknown>) {
   const node = _Security(label ?? "MaxSecurityZone", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "MaxSecurityZone";
+  (node as unknown as Record<string, unknown>)["~resource"] = "MaxSecurityZone";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = max_security_zoneIcon;
   return node;
 }
 
 export function VaultWhite(label?: string, options?: Record<string, unknown>) {
   const node = _Security(label ?? "VaultWhite", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "VaultWhite";
+  (node as unknown as Record<string, unknown>)["~resource"] = "VaultWhite";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = vault_whiteIcon;
   return node;
 }
 
 export function Vault(label?: string, options?: Record<string, unknown>) {
   const node = _Security(label ?? "Vault", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Vault";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Vault";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = vaultIcon;
   return node;
 }
 
 export function WAFWhite(label?: string, options?: Record<string, unknown>) {
   const node = _Security(label ?? "WAFWhite", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "WAFWhite";
+  (node as unknown as Record<string, unknown>)["~resource"] = "WAFWhite";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = waf_whiteIcon;
   return node;
 }
 
 export function WAF(label?: string, options?: Record<string, unknown>) {
   const node = _Security(label ?? "WAF", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "WAF";
+  (node as unknown as Record<string, unknown>)["~resource"] = "WAF";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = wafIcon;
   return node;
 }

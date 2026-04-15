@@ -15,29 +15,29 @@ const docsDir = join(__dirname, "..", "docs", "docs", "nodes");
 
 // Provider metadata
 const providerMeta = {
-  alibabacloud: { title: "Alibaba Cloud", description: "Node classes for Alibaba Cloud provider" },
-  aws: { title: "AWS", description: "Node classes for Amazon Web Services provider" },
-  azure: { title: "Azure", description: "Node classes for Microsoft Azure provider" },
-  digitalocean: { title: "DigitalOcean", description: "Node classes for DigitalOcean provider" },
-  elastic: { title: "Elastic", description: "Node classes for Elastic Stack provider" },
-  firebase: { title: "Firebase", description: "Node classes for Firebase provider" },
-  gcp: { title: "GCP", description: "Node classes for Google Cloud Platform provider" },
-  generic: { title: "Generic", description: "Node classes for generic/on-premise resources" },
+  alibabacloud: { title: "Alibaba Cloud", description: "Node types for Alibaba Cloud provider" },
+  aws: { title: "AWS", description: "Node types for Amazon Web Services provider" },
+  azure: { title: "Azure", description: "Node types for Microsoft Azure provider" },
+  digitalocean: { title: "DigitalOcean", description: "Node types for DigitalOcean provider" },
+  elastic: { title: "Elastic", description: "Node types for Elastic Stack provider" },
+  firebase: { title: "Firebase", description: "Node types for Firebase provider" },
+  gcp: { title: "GCP", description: "Node types for Google Cloud Platform provider" },
+  generic: { title: "Generic", description: "Node types for generic/on-premise resources" },
   gis: {
     title: "GIS",
-    description: "Node classes for GIS (Geographic Information Systems) provider",
+    description: "Node types for GIS (Geographic Information Systems) provider",
   },
-  ibm: { title: "IBM", description: "Node classes for IBM Cloud provider" },
-  k8s: { title: "Kubernetes", description: "Node classes for Kubernetes provider" },
-  oci: { title: "OCI", description: "Node classes for Oracle Cloud Infrastructure provider" },
-  onprem: { title: "On-Premises", description: "Node classes for on-premises infrastructure" },
-  openstack: { title: "OpenStack", description: "Node classes for OpenStack provider" },
-  outscale: { title: "Outscale", description: "Node classes for Outscale provider" },
+  ibm: { title: "IBM", description: "Node types for IBM Cloud provider" },
+  k8s: { title: "Kubernetes", description: "Node types for Kubernetes provider" },
+  oci: { title: "OCI", description: "Node types for Oracle Cloud Infrastructure provider" },
+  onprem: { title: "On-Premises", description: "Node types for on-premises infrastructure" },
+  openstack: { title: "OpenStack", description: "Node types for OpenStack provider" },
+  outscale: { title: "Outscale", description: "Node types for Outscale provider" },
   programming: {
     title: "Programming",
-    description: "Node classes for programming languages and frameworks",
+    description: "Node types for programming languages and frameworks",
   },
-  saas: { title: "SaaS", description: "Node classes for Software as a Service providers" },
+  saas: { title: "SaaS", description: "Node types for Software as a Service providers" },
 };
 
 // hardcoded mappings for irreversible naming conversions
@@ -162,7 +162,7 @@ function generateProviderDocs(provider) {
 
   // Title
   content += `# ${meta.title}\n\n`;
-  content += `Node classes list for the ${meta.title} provider.\n\n`;
+  content += `Node types list for the ${meta.title} provider.\n\n`;
 
   // Example Usage section
   content += "## Example Usage\n\n";
@@ -201,7 +201,7 @@ function generateProviderDocs(provider) {
 
   // Note section
   content += ":::note\n";
-  content += `All node classes available in the [Python diagrams library](https://diagrams.mingrammer.com/docs/nodes/${provider}) are also available in diagrams-js with the same class names and structure.\n`;
+  content += `All node types available in the [Python diagrams library](https://diagrams.mingrammer.com/docs/nodes/${provider}) are also available in diagrams-js with the same class names and structure.\n`;
   content += ":::\n\n";
 
   // Node Reference section

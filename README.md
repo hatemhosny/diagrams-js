@@ -6,7 +6,7 @@
 
 [![NPM Version](https://img.shields.io/npm/v/diagrams-js?color=blue)](https://www.npmjs.com/package/diagrams-js)
 [![NPM Downloads](https://img.shields.io/npm/dm/diagrams-js)](https://www.npmjs.com/package/diagrams-js)
-[![CI](https://github.com/hatemhosny/diagrams-js/actions/workflows/ci.yml/badge.svg)](https://github.com/hatemhosny/diagrams-js/actions/workflows/ci.yml)
+[![CI](https://github.com/diagrams-js/diagrams-js/actions/workflows/ci.yml/badge.svg)](https://github.com/diagrams-js/diagrams-js/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
 <a href="https://livecodes.io/?x=id/456y7h6in9s" target="_blank"><img src="./assets/try-in-livecodes.png" alt="Try in LiveCodes" width="200"/></a>
@@ -134,7 +134,7 @@ View the [full list](https://diagrams-js.hatemhosny.dev/docs/guides/providers)
 
 ```bash
 # Clone the repository
-git clone https://github.com/hatemhosny/diagrams-js.git
+git clone https://github.com/diagrams-js/diagrams-js.git
 cd diagrams-js
 
 # Install dependencies
@@ -178,8 +178,8 @@ This project is a TypeScript port of the excellent Python [diagrams](https://git
 ## Support
 
 - 📖 [Documentation](https://diagrams-js.hatemhosny.dev)
-- 🐛 [Issue Tracker](https://github.com/hatemhosny/diagrams-js/issues)
-- 💬 [Discussions](https://github.com/hatemhosny/diagrams-js/discussions)
+- 🐛 [Issue Tracker](https://github.com/diagrams-js/diagrams-js/issues)
+- 💬 [Discussions](https://github.com/diagrams-js/diagrams-js/discussions)
 
 ---
 

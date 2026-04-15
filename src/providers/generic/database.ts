@@ -9,7 +9,7 @@ function _Database(label?: string, options?: Record<string, unknown>) {
 
 export function SQL(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "SQL", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "SQL";
+  (node as unknown as Record<string, unknown>)["~resource"] = "SQL";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = sqlIcon;
   return node;
 }

@@ -13,35 +13,35 @@ function _Logging(label?: string, options?: Record<string, unknown>) {
 
 export function Fluentbit(label?: string, options?: Record<string, unknown>) {
   const node = _Logging(label ?? "Fluentbit", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Fluentbit";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Fluentbit";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = fluentbitIcon;
   return node;
 }
 
 export function Graylog(label?: string, options?: Record<string, unknown>) {
   const node = _Logging(label ?? "Graylog", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Graylog";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Graylog";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = graylogIcon;
   return node;
 }
 
 export function Loki(label?: string, options?: Record<string, unknown>) {
   const node = _Logging(label ?? "Loki", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Loki";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Loki";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = lokiIcon;
   return node;
 }
 
 export function Rsyslog(label?: string, options?: Record<string, unknown>) {
   const node = _Logging(label ?? "Rsyslog", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Rsyslog";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Rsyslog";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = rsyslogIcon;
   return node;
 }
 
 export function SyslogNg(label?: string, options?: Record<string, unknown>) {
   const node = _Logging(label ?? "SyslogNg", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "SyslogNg";
+  (node as unknown as Record<string, unknown>)["~resource"] = "SyslogNg";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = syslog_ngIcon;
   return node;
 }

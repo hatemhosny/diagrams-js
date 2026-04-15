@@ -9,7 +9,7 @@ function _Menu(label?: string, options?: Record<string, unknown>) {
 
 export function Keys(label?: string, options?: Record<string, unknown>) {
   const node = _Menu(label ?? "Keys", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Keys";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Keys";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = keysIcon;
   return node;
 }

@@ -25,6 +25,7 @@ import { Diagram as createDiagram } from "./Diagram.js";
 import type { Diagram } from "./Diagram.js";
 import { Node } from "./Node.js";
 import { Edge } from "./Edge.js";
+import { Custom } from "./Custom.js";
 import type { DiagramOptions } from "./types.js";
 import { loadProviderModules } from "./provider-loader.js";
 
@@ -46,6 +47,8 @@ export interface DiagramNodeJSON {
   iconUrl?: string;
   /** Additional Graphviz attributes */
   attrs?: Record<string, string | number>;
+  /** Metadata attached to this node (e.g., cloud provider specs, pricing) */
+  metadata?: Record<string, any>;
 }
 
 /**
@@ -210,17 +213,22 @@ function serializeNode(
     const raw = nodeObj as unknown as Record<string, unknown>;
     const provider = raw["~provider"] as string | undefined;
     const service = raw["~type"] as string | undefined;
-    const resourceType = raw["~resourceType"] as string | undefined;
+    const resource = raw["~resource"] as string | undefined;
 
     if (provider) json.provider = provider;
     if (service) json.service = service;
-    if (resourceType) json.type = resourceType;
+    if (resource) json.type = resource;
 
     // Extract icon URL for Custom nodes only.
     // Provider nodes get icons resolved from their provider/service/type triple
     // at import time, so we don't embed them in JSON.
     if ("~getIconUrl" in raw && typeof raw["~getIconUrl"] === "function") {
       json.iconUrl = (raw["~getIconUrl"] as () => string)();
+    }
+
+    // Extract metadata if present
+    if (nodeObj.metadata && Object.keys(nodeObj.metadata).length > 0) {
+      json.metadata = nodeObj.metadata;
     }
   }
 
@@ -604,11 +612,12 @@ export async function fromJSON(
   }
 
   // Create all nodes
+  const nodeIdSet = new Set<string>();
   for (const nodeDef of json.nodes) {
-    // Validate node ID uniqueness
-    if (nodeMap.has(nodeDef.id)) {
+    if (nodeIdSet.has(nodeDef.id)) {
       throw new Error(`Duplicate node ID: "${nodeDef.id}"`);
     }
+    nodeIdSet.add(nodeDef.id);
 
     // Try to use a provider factory function if type is specified and a matching factory exists.
     // This gives us the correct icon, provider metadata, etc. automatically.
@@ -616,8 +625,17 @@ export async function fromJSON(
     const factory = nodeDef.type ? factoryLookup.get(nodeDef.type) : undefined;
 
     if (factory) {
-      // Use the provider factory - it sets ~provider, ~type, ~resourceType, ~iconDataUrl
+      // Use the provider factory - it sets ~provider, ~type, ~resource, ~iconDataUrl
       node = factory(nodeDef.label ?? "", { nodeId: nodeDef.id, ...nodeDef.attrs });
+    } else if (nodeDef.iconUrl && _isRemoteUrl(nodeDef.iconUrl)) {
+      // Remote icon URL - use Custom node which handles fetching automatically
+      const nodeOptions: Record<string, unknown> = {
+        nodeId: nodeDef.id,
+      };
+      if (nodeDef.attrs) {
+        Object.assign(nodeOptions, nodeDef.attrs);
+      }
+      node = Custom(nodeDef.label ?? "", nodeDef.iconUrl, nodeOptions);
     } else {
       // Fallback: create a plain Node and set metadata manually
       const nodeOptions: Record<string, unknown> = {
@@ -638,12 +656,17 @@ export async function fromJSON(
         raw["~type"] = nodeDef.service;
       }
       if (nodeDef.type) {
-        raw["~resourceType"] = nodeDef.type;
+        raw["~resource"] = nodeDef.type;
       }
-      // Set explicit iconUrl (for Custom nodes or manual override)
+      // Set explicit iconUrl (for data URLs or local paths)
       if (nodeDef.iconUrl) {
         raw["~iconDataUrl"] = nodeDef.iconUrl;
       }
+    }
+
+    // Copy metadata if present
+    if (nodeDef.metadata) {
+      node.metadata = nodeDef.metadata;
     }
 
     // Add to correct parent (cluster or diagram)
@@ -712,4 +735,12 @@ export async function fromJSON(
   }
 
   return diagram;
+}
+
+/**
+ * Check if a URL is a remote URL (http/https)
+ * Data URLs return false
+ */
+function _isRemoteUrl(url: string): boolean {
+  return url.startsWith("http://") || url.startsWith("https://");
 }

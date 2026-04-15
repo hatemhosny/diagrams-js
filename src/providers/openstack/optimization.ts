@@ -12,28 +12,28 @@ function _Optimization(label?: string, options?: Record<string, unknown>) {
 
 export function Congress(label?: string, options?: Record<string, unknown>) {
   const node = _Optimization(label ?? "Congress", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Congress";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Congress";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = congressIcon;
   return node;
 }
 
 export function Rally(label?: string, options?: Record<string, unknown>) {
   const node = _Optimization(label ?? "Rally", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Rally";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Rally";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = rallyIcon;
   return node;
 }
 
 export function Vitrage(label?: string, options?: Record<string, unknown>) {
   const node = _Optimization(label ?? "Vitrage", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Vitrage";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Vitrage";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = vitrageIcon;
   return node;
 }
 
 export function Watcher(label?: string, options?: Record<string, unknown>) {
   const node = _Optimization(label ?? "Watcher", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Watcher";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Watcher";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = watcherIcon;
   return node;
 }

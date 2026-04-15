@@ -13,35 +13,35 @@ function _Sharedservices(label?: string, options?: Record<string, unknown>) {
 
 export function Barbican(label?: string, options?: Record<string, unknown>) {
   const node = _Sharedservices(label ?? "Barbican", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Barbican";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Barbican";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = barbicanIcon;
   return node;
 }
 
 export function Glance(label?: string, options?: Record<string, unknown>) {
   const node = _Sharedservices(label ?? "Glance", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Glance";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Glance";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = glanceIcon;
   return node;
 }
 
 export function Karbor(label?: string, options?: Record<string, unknown>) {
   const node = _Sharedservices(label ?? "Karbor", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Karbor";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Karbor";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = karborIcon;
   return node;
 }
 
 export function Keystone(label?: string, options?: Record<string, unknown>) {
   const node = _Sharedservices(label ?? "Keystone", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Keystone";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Keystone";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = keystoneIcon;
   return node;
 }
 
 export function Searchlight(label?: string, options?: Record<string, unknown>) {
   const node = _Sharedservices(label ?? "Searchlight", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Searchlight";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Searchlight";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = searchlightIcon;
   return node;
 }

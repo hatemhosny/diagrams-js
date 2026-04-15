@@ -11,21 +11,21 @@ function _Infra(label?: string, options?: Record<string, unknown>) {
 
 export function ETCD(label?: string, options?: Record<string, unknown>) {
   const node = _Infra(label ?? "ETCD", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "ETCD";
+  (node as unknown as Record<string, unknown>)["~resource"] = "ETCD";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = etcdIcon;
   return node;
 }
 
 export function Master(label?: string, options?: Record<string, unknown>) {
   const node = _Infra(label ?? "Master", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Master";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Master";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = masterIcon;
   return node;
 }
 
 export function Node(label?: string, options?: Record<string, unknown>) {
   const node = _Infra(label ?? "Node", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Node";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Node";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = nodeIcon;
   return node;
 }

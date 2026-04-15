@@ -16,56 +16,56 @@ function _Appservices(label?: string, options?: Record<string, unknown>) {
 
 export function AppServiceCertificates(label?: string, options?: Record<string, unknown>) {
   const node = _Appservices(label ?? "AppServiceCertificates", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "AppServiceCertificates";
+  (node as unknown as Record<string, unknown>)["~resource"] = "AppServiceCertificates";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = app_service_certificatesIcon;
   return node;
 }
 
 export function AppServiceDomains(label?: string, options?: Record<string, unknown>) {
   const node = _Appservices(label ?? "AppServiceDomains", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "AppServiceDomains";
+  (node as unknown as Record<string, unknown>)["~resource"] = "AppServiceDomains";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = app_service_domainsIcon;
   return node;
 }
 
 export function AppServiceEnvironments(label?: string, options?: Record<string, unknown>) {
   const node = _Appservices(label ?? "AppServiceEnvironments", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "AppServiceEnvironments";
+  (node as unknown as Record<string, unknown>)["~resource"] = "AppServiceEnvironments";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = app_service_environmentsIcon;
   return node;
 }
 
 export function AppServicePlans(label?: string, options?: Record<string, unknown>) {
   const node = _Appservices(label ?? "AppServicePlans", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "AppServicePlans";
+  (node as unknown as Record<string, unknown>)["~resource"] = "AppServicePlans";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = app_service_plansIcon;
   return node;
 }
 
 export function AppServices(label?: string, options?: Record<string, unknown>) {
   const node = _Appservices(label ?? "AppServices", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "AppServices";
+  (node as unknown as Record<string, unknown>)["~resource"] = "AppServices";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = app_servicesIcon;
   return node;
 }
 
 export function CDNProfiles(label?: string, options?: Record<string, unknown>) {
   const node = _Appservices(label ?? "CDNProfiles", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "CDNProfiles";
+  (node as unknown as Record<string, unknown>)["~resource"] = "CDNProfiles";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = cdn_profilesIcon;
   return node;
 }
 
 export function CognitiveSearch(label?: string, options?: Record<string, unknown>) {
   const node = _Appservices(label ?? "CognitiveSearch", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "CognitiveSearch";
+  (node as unknown as Record<string, unknown>)["~resource"] = "CognitiveSearch";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = cognitive_searchIcon;
   return node;
 }
 
 export function NotificationHubs(label?: string, options?: Record<string, unknown>) {
   const node = _Appservices(label ?? "NotificationHubs", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "NotificationHubs";
+  (node as unknown as Record<string, unknown>)["~resource"] = "NotificationHubs";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = notification_hubsIcon;
   return node;
 }

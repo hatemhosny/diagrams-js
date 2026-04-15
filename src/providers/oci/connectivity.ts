@@ -26,126 +26,126 @@ function _Connectivity(label?: string, options?: Record<string, unknown>) {
 
 export function BackboneWhite(label?: string, options?: Record<string, unknown>) {
   const node = _Connectivity(label ?? "BackboneWhite", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "BackboneWhite";
+  (node as unknown as Record<string, unknown>)["~resource"] = "BackboneWhite";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = backbone_whiteIcon;
   return node;
 }
 
 export function Backbone(label?: string, options?: Record<string, unknown>) {
   const node = _Connectivity(label ?? "Backbone", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Backbone";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Backbone";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = backboneIcon;
   return node;
 }
 
 export function CDNWhite(label?: string, options?: Record<string, unknown>) {
   const node = _Connectivity(label ?? "CDNWhite", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "CDNWhite";
+  (node as unknown as Record<string, unknown>)["~resource"] = "CDNWhite";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = cdn_whiteIcon;
   return node;
 }
 
 export function CDN(label?: string, options?: Record<string, unknown>) {
   const node = _Connectivity(label ?? "CDN", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "CDN";
+  (node as unknown as Record<string, unknown>)["~resource"] = "CDN";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = cdnIcon;
   return node;
 }
 
 export function CustomerDatacenter(label?: string, options?: Record<string, unknown>) {
   const node = _Connectivity(label ?? "CustomerDatacenter", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "CustomerDatacenter";
+  (node as unknown as Record<string, unknown>)["~resource"] = "CustomerDatacenter";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = customer_datacenterIcon;
   return node;
 }
 
 export function CustomerDatacntrWhite(label?: string, options?: Record<string, unknown>) {
   const node = _Connectivity(label ?? "CustomerDatacntrWhite", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "CustomerDatacntrWhite";
+  (node as unknown as Record<string, unknown>)["~resource"] = "CustomerDatacntrWhite";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = customer_datacntr_whiteIcon;
   return node;
 }
 
 export function CustomerPremisesWhite(label?: string, options?: Record<string, unknown>) {
   const node = _Connectivity(label ?? "CustomerPremisesWhite", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "CustomerPremisesWhite";
+  (node as unknown as Record<string, unknown>)["~resource"] = "CustomerPremisesWhite";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = customer_premises_whiteIcon;
   return node;
 }
 
 export function CustomerPremises(label?: string, options?: Record<string, unknown>) {
   const node = _Connectivity(label ?? "CustomerPremises", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "CustomerPremises";
+  (node as unknown as Record<string, unknown>)["~resource"] = "CustomerPremises";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = customer_premisesIcon;
   return node;
 }
 
 export function DisconnectedRegionsWhite(label?: string, options?: Record<string, unknown>) {
   const node = _Connectivity(label ?? "DisconnectedRegionsWhite", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "DisconnectedRegionsWhite";
+  (node as unknown as Record<string, unknown>)["~resource"] = "DisconnectedRegionsWhite";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = disconnected_regions_whiteIcon;
   return node;
 }
 
 export function DisconnectedRegions(label?: string, options?: Record<string, unknown>) {
   const node = _Connectivity(label ?? "DisconnectedRegions", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "DisconnectedRegions";
+  (node as unknown as Record<string, unknown>)["~resource"] = "DisconnectedRegions";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = disconnected_regionsIcon;
   return node;
 }
 
 export function DNSWhite(label?: string, options?: Record<string, unknown>) {
   const node = _Connectivity(label ?? "DNSWhite", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "DNSWhite";
+  (node as unknown as Record<string, unknown>)["~resource"] = "DNSWhite";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = dns_whiteIcon;
   return node;
 }
 
 export function DNS(label?: string, options?: Record<string, unknown>) {
   const node = _Connectivity(label ?? "DNS", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "DNS";
+  (node as unknown as Record<string, unknown>)["~resource"] = "DNS";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = dnsIcon;
   return node;
 }
 
 export function FastConnectWhite(label?: string, options?: Record<string, unknown>) {
   const node = _Connectivity(label ?? "FastConnectWhite", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "FastConnectWhite";
+  (node as unknown as Record<string, unknown>)["~resource"] = "FastConnectWhite";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = fast_connect_whiteIcon;
   return node;
 }
 
 export function FastConnect(label?: string, options?: Record<string, unknown>) {
   const node = _Connectivity(label ?? "FastConnect", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "FastConnect";
+  (node as unknown as Record<string, unknown>)["~resource"] = "FastConnect";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = fast_connectIcon;
   return node;
 }
 
 export function NATGatewayWhite(label?: string, options?: Record<string, unknown>) {
   const node = _Connectivity(label ?? "NATGatewayWhite", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "NATGatewayWhite";
+  (node as unknown as Record<string, unknown>)["~resource"] = "NATGatewayWhite";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = nat_gateway_whiteIcon;
   return node;
 }
 
 export function NATGateway(label?: string, options?: Record<string, unknown>) {
   const node = _Connectivity(label ?? "NATGateway", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "NATGateway";
+  (node as unknown as Record<string, unknown>)["~resource"] = "NATGateway";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = nat_gatewayIcon;
   return node;
 }
 
 export function VPNWhite(label?: string, options?: Record<string, unknown>) {
   const node = _Connectivity(label ?? "VPNWhite", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "VPNWhite";
+  (node as unknown as Record<string, unknown>)["~resource"] = "VPNWhite";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = vpn_whiteIcon;
   return node;
 }
 
 export function VPN(label?: string, options?: Record<string, unknown>) {
   const node = _Connectivity(label ?? "VPN", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "VPN";
+  (node as unknown as Record<string, unknown>)["~resource"] = "VPN";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = vpnIcon;
   return node;
 }

@@ -3,7 +3,8 @@ import type { Viz } from "@viz-js/viz";
 import { setDiagram } from "./context.js";
 import { Cluster } from "./Cluster.js";
 import type { Node } from "./Node.js";
-import { Edge } from "./Edge.js";
+import type { Edge } from "./Edge.js";
+import * as lib from "./index.js";
 import {
   THEMES,
   type DiagramOptions,
@@ -13,6 +14,9 @@ import {
 } from "./types.js";
 import { injectIcons, type NodeIconMap, type IconData } from "./icons.js";
 import { buildDiagramJSON, type DiagramJSON, fromJSON as fromJSONImpl } from "./json.js";
+import { createPluginRegistry, createJSONPlugin } from "./plugins/index.js";
+import type { PluginRegistry } from "./plugins/types.js";
+import { HookEvent as HookEventEnum } from "./plugins/types.js";
 
 // Render function overload types for proper type inference
 type RenderFunction = {
@@ -149,6 +153,48 @@ export interface Diagram {
    * @returns DOT format string
    */
   toString(): string;
+
+  /**
+   * Import diagram from external format
+   * @param source - Source content to import (string or array of strings for grouped/clustered import)
+   * @param format - Format to import from (e.g., "docker-compose", "terraform")
+   * @returns Promise that resolves when import is complete
+   */
+  import(source: string | string[], format: string): Promise<void>;
+
+  /**
+   * Register plugins with the diagram
+   * @param plugins - Array of plugin factory functions
+   * @returns Promise that resolves when all plugins are registered and initialized
+   * @example
+   * ```typescript
+   * const diagram = Diagram("My Architecture");
+   * await diagram.registerPlugins([dockerComposePlugin, loggingPlugin]);
+   * diagram.add(EC2("Web Server"));
+   * ```
+   */
+  registerPlugins(plugins?: import("./plugins/types.js").DiagramsPlugin[]): Promise<void>;
+
+  /**
+   * Export diagram to external format
+   * @param format - Format to export to (e.g., "docker-compose", "terraform")
+   * @returns Promise resolving to exported content
+   */
+  export(format: string): Promise<string | Uint8Array>;
+
+  /**
+   * Attach metadata from a provider to nodes
+   * @param provider - Provider name (e.g., "aws", "azure", "gcp")
+   * @param nodeType - Optional node type filter (e.g., "EC2")
+   * @returns Promise that resolves when metadata is attached
+   */
+  attachMetadata(provider: string, nodeType?: string): Promise<void>;
+
+  /**
+   * Get the plugin registry for this diagram
+   * @returns The plugin registry
+   */
+  registry: PluginRegistry;
 
   /**
    * Register a node with an icon for automatic icon injection
@@ -326,6 +372,20 @@ export function Diagram(name = "", options: DiagramOptions = {}): Diagram {
   const autolabel = options.autolabel ?? false;
   const strict = options.strict ?? false;
 
+  // Initialize plugin registry
+  const registry = options.pluginRegistry || createPluginRegistry();
+
+  // Track if plugins have been initialized
+  let pluginsInitialized = false;
+
+  // Auto-register built-in plugins on first use
+  async function ensureBuiltInPlugins(): Promise<void> {
+    if (!pluginsInitialized && !registry.getPlugin("json")) {
+      await registry.register(createJSONPlugin());
+      pluginsInitialized = true;
+    }
+  }
+
   // Initialize attributes with defaults
   const graphAttr: Record<string, string> = { ...defaultGraphAttrs };
   const nodeAttr: Record<string, string> = { ...defaultNodeAttrs };
@@ -442,6 +502,57 @@ export function Diagram(name = "", options: DiagramOptions = {}): Diagram {
      */
     ["~trackNode"](node: Node): void {
       _nodeObjects.set(node.nodeId, node);
+
+      // Fire node:create hook synchronously if plugins are initialized
+      if (pluginsInitialized) {
+        void registry
+          .executeHooks(HookEventEnum.NODE_CREATE, { node, diagram })
+          .then((result: { node?: { label?: string; nodeAttrs?: Record<string, unknown> } }) => {
+            // Apply any changes from the hook back to the node
+            if (result?.node) {
+              // Update label if changed
+              if (result.node.label && result.node.label !== node.label) {
+                node.label = result.node.label;
+                // Update in diagram's node storage
+                const nodeData = _nodes.get(node.nodeId);
+                if (nodeData) {
+                  nodeData.label = result.node.label;
+                }
+                // Also update in cluster's node storage if the node is in a cluster
+                const cluster = node.cluster;
+                if (cluster) {
+                  const clusterNodes = cluster.getNodes();
+                  const clusterNodeData = clusterNodes.get(node.nodeId);
+                  if (clusterNodeData) {
+                    clusterNodeData.label = result.node.label;
+                  }
+                }
+              }
+              // Update attrs if changed via nodeAttrs
+              if (result.node.nodeAttrs) {
+                // Update in diagram's node storage
+                const nodeData = _nodes.get(node.nodeId);
+                if (nodeData) {
+                  Object.assign(nodeData.attrs, result.node.nodeAttrs);
+                }
+                // Also update in cluster's node storage if the node is in a cluster
+                const cluster = node.cluster;
+                if (cluster) {
+                  const clusterNodes = cluster.getNodes();
+                  const clusterNodeData = clusterNodes.get(node.nodeId);
+                  if (clusterNodeData) {
+                    Object.assign(clusterNodeData.attrs, result.node.nodeAttrs);
+                  }
+                }
+                // Also update the node's internal attrs via nodeAttrs setter
+                Object.assign(node.nodeAttrs, result.node.nodeAttrs);
+              }
+            }
+          })
+          .catch(() => {
+            // Silently ignore errors - hooks shouldn't break node creation
+          });
+      }
     },
 
     /**
@@ -456,18 +567,45 @@ export function Diagram(name = "", options: DiagramOptions = {}): Diagram {
      * Internal method to register a node
      */
     ["~node"](nodeId: string, label: string, attrs: Record<string, unknown>): void {
-      _nodes.set(nodeId, { label, attrs });
+      // Check if the node object exists and has a different label (e.g., modified by hooks)
+      const nodeObj = _nodeObjects.get(nodeId);
+      const currentLabel = nodeObj?.label ?? label;
+      _nodes.set(nodeId, { label: currentLabel, attrs });
     },
 
     /**
      * Connect two nodes
      */
     ["~connect"](from: Node, to: Node, edge: Edge): void {
-      _edges.push({
+      // Create the edge entry that will be stored
+      const edgeEntry = {
         from: from.nodeId,
         to: to.nodeId,
         attrs: edge.attrs,
-      });
+      };
+      _edges.push(edgeEntry);
+
+      // Fire edge:create hook synchronously if plugins are initialized
+      if (pluginsInitialized) {
+        void registry
+          .executeHooks(HookEventEnum.EDGE_CREATE, { edge, source: from, target: to, diagram })
+          .then((result: { edge?: { edgeAttrs?: Record<string, string> } }) => {
+            // Apply any changes from the hook back to the edge's internal attrs
+            if (result?.edge?.edgeAttrs) {
+              // Update the edge's internal _attrs object directly via edgeAttrs
+              // This ensures changes are reflected when attrs getter is called
+              const edgeResult = result.edge as Edge;
+              if (edgeResult.edgeAttrs) {
+                Object.assign(edgeResult.edgeAttrs, result.edge.edgeAttrs);
+              }
+              // Update the stored edge attrs by re-reading from the edge
+              edgeEntry.attrs = edgeResult.attrs;
+            }
+          })
+          .catch(() => {
+            // Silently ignore errors - hooks shouldn't break edge creation
+          });
+      }
     },
 
     /**
@@ -475,6 +613,22 @@ export function Diagram(name = "", options: DiagramOptions = {}): Diagram {
      */
     ["~subgraph"](cluster: Cluster): void {
       _clusters.push(cluster);
+
+      // Fire cluster:create hook synchronously if plugins are initialized
+      if (pluginsInitialized) {
+        void registry
+          .executeHooks(HookEventEnum.CLUSTER_CREATE, { cluster, diagram })
+          .then((result: unknown) => {
+            // Apply any changes from the hook back to the cluster
+            const clusterResult = result as { cluster?: { clusterAttrs?: Record<string, string> } };
+            if (clusterResult?.cluster?.clusterAttrs) {
+              Object.assign(cluster.clusterAttrs, clusterResult.cluster.clusterAttrs);
+            }
+          })
+          .catch(() => {
+            // Silently ignore errors - hooks shouldn't break cluster creation
+          });
+      }
     },
 
     /**
@@ -485,6 +639,23 @@ export function Diagram(name = "", options: DiagramOptions = {}): Diagram {
     cluster(label: string): Cluster {
       const cluster = Cluster(label, "LR", undefined, diagram as Diagram);
       _clusters.push(cluster);
+
+      // Fire cluster:create hook synchronously if plugins are initialized
+      if (pluginsInitialized) {
+        void registry
+          .executeHooks(HookEventEnum.CLUSTER_CREATE, { cluster, diagram })
+          .then((result: unknown) => {
+            // Apply any changes from the hook back to the cluster
+            const clusterResult = result as { cluster?: { clusterAttrs?: Record<string, string> } };
+            if (clusterResult?.cluster?.clusterAttrs) {
+              Object.assign(cluster.clusterAttrs, clusterResult.cluster.clusterAttrs);
+            }
+          })
+          .catch(() => {
+            // Silently ignore errors - hooks shouldn't break cluster creation
+          });
+      }
+
       return cluster;
     },
 
@@ -496,6 +667,9 @@ export function Diagram(name = "", options: DiagramOptions = {}): Diagram {
       // Wait for any pending icon loads (e.g., Custom nodes with remote icons)
       await _waitForIconLoads();
 
+      // Ensure built-in plugins are registered
+      await ensureBuiltInPlugins();
+
       if (!_viz) {
         _viz = await instance();
       }
@@ -503,13 +677,21 @@ export function Diagram(name = "", options: DiagramOptions = {}): Diagram {
       const dot = _buildDot();
       const format = options.format ?? "svg";
 
+      // Execute before:render hook
+      const renderHookData = await registry.executeHooks(HookEventEnum.BEFORE_RENDER, {
+        dot,
+        diagram,
+        format,
+      });
+      const finalDot = (renderHookData as { dot: string }).dot;
+
       // If DOT format was requested, return the raw DOT source
       if (format === "dot") {
         // If dataUrl was requested, convert DOT to data URL
         if (options.dataUrl) {
-          return _toDataUrl(dot, "dot");
+          return _toDataUrl(finalDot, "dot");
         }
-        return dot;
+        return finalDot;
       }
 
       // If JSON format was requested, return the serialized JSON
@@ -527,7 +709,7 @@ export function Diagram(name = "", options: DiagramOptions = {}): Diagram {
       const shouldInjectIcons = options.injectIcons ?? needsIconInjection;
       const renderFormat = "svg";
 
-      const result = _viz.render(dot, { format: renderFormat });
+      const result = _viz.render(finalDot, { format: renderFormat });
 
       if (result.status === "failure") {
         throw new Error(
@@ -561,6 +743,13 @@ export function Diagram(name = "", options: DiagramOptions = {}): Diagram {
       if (options.dataUrl) {
         output = _toDataUrl(output, format);
       }
+
+      // Execute after:render hook
+      await registry.executeHooks(HookEventEnum.AFTER_RENDER, {
+        output,
+        diagram,
+        format,
+      });
 
       return output;
 
@@ -1164,7 +1353,10 @@ export function Diagram(name = "", options: DiagramOptions = {}): Diagram {
      * Serialize the diagram to a JSON representation
      */
     toJSON(): DiagramJSON {
-      return buildDiagramJSON(
+      // Ensure built-in plugins are registered
+      void ensureBuiltInPlugins();
+
+      const jsonData = buildDiagramJSON(
         diagram,
         _nodes,
         _edges,
@@ -1173,10 +1365,183 @@ export function Diagram(name = "", options: DiagramOptions = {}): Diagram {
         _nodeObjects,
         options,
       );
+
+      // Execute before:serialize hook synchronously if plugins are initialized
+      if (pluginsInitialized) {
+        void registry
+          .executeHooks(HookEventEnum.BEFORE_SERIALIZE, { data: jsonData, diagram })
+          .catch(() => {
+            // Silently ignore errors - hooks shouldn't break serialization
+          });
+      }
+
+      return jsonData;
     },
 
     /**
-     * Get the DOT source
+     * Import diagram from external format
+     */
+    async import(source: string | string[], format: string): Promise<void> {
+      // Ensure built-in plugins are registered
+      await ensureBuiltInPlugins();
+
+      const importer = registry.getImporter(format);
+      if (!importer) {
+        throw new Error(
+          `No importer found for format: "${format}". ` +
+            `Available importers: ${registry.listCapabilities().importers.join(", ") || "none"}`,
+        );
+      }
+
+      // Execute before import hook
+      await registry.executeHooks(HookEventEnum.BEFORE_IMPORT, { source, format });
+
+      // Import
+      await importer.import(source, diagram, {
+        source,
+        format,
+        registry,
+        fetch: globalThis.fetch.bind(globalThis),
+        getPlugin: registry.getPlugin,
+        getImporter: registry.getImporter,
+        getExporter: registry.getExporter,
+        getRenderer: registry.getRenderer,
+        getMetadataProvider: registry.getMetadataProvider,
+        executeHooks: registry.executeHooks,
+        loadResourcesList: registry.loadResourcesList,
+        loadYaml: registry.loadYaml,
+        lib,
+      });
+
+      // Execute after import hook
+      await registry.executeHooks(HookEventEnum.AFTER_IMPORT, { diagram });
+    },
+
+    /**
+     * Export diagram to external format
+     */
+    async export(format: string): Promise<string | Uint8Array> {
+      // Ensure built-in plugins are registered
+      await ensureBuiltInPlugins();
+
+      const exporter = registry.getExporter(format);
+      if (!exporter) {
+        throw new Error(
+          `No exporter found for format: "${format}". ` +
+            `Available exporters: ${registry.listCapabilities().exporters.join(", ") || "none"}`,
+        );
+      }
+
+      // Execute before export hook
+      await registry.executeHooks(HookEventEnum.BEFORE_EXPORT, { diagram, format });
+
+      // Export
+      const result = await exporter.export(diagram, {
+        format,
+        registry,
+        fetch: globalThis.fetch.bind(globalThis),
+        getPlugin: registry.getPlugin,
+        getImporter: registry.getImporter,
+        getExporter: registry.getExporter,
+        getRenderer: registry.getRenderer,
+        getMetadataProvider: registry.getMetadataProvider,
+        executeHooks: registry.executeHooks,
+        loadResourcesList: registry.loadResourcesList,
+        loadYaml: registry.loadYaml,
+        lib,
+      });
+
+      // Execute after export hook
+      await registry.executeHooks(HookEventEnum.AFTER_EXPORT, { result, format });
+
+      return result;
+    },
+
+    /**
+     * Attach metadata from a provider to nodes
+     */
+    async attachMetadata(provider: string, nodeType?: string): Promise<void> {
+      // Ensure built-in plugins are registered
+      await ensureBuiltInPlugins();
+
+      const metadataProvider = registry.getMetadataProvider(provider);
+      if (!metadataProvider) {
+        throw new Error(
+          `No metadata provider found for: "${provider}". ` +
+            `Available providers: ${registry.listCapabilities().metadataProviders.join(", ") || "none"}`,
+        );
+      }
+
+      // Get all node objects
+      const allNodes = Array.from(_nodeObjects.values());
+
+      // Filter by nodeType if specified
+      const targetNodes = nodeType ? allNodes.filter((n) => n["~type"] === nodeType) : allNodes;
+
+      for (const node of targetNodes) {
+        const currentMetadata = node.metadata || {};
+
+        // Get metadata from provider
+        const metadata = await metadataProvider.getMetadata(
+          node["~type"] || "unknown",
+          currentMetadata,
+          {
+            node,
+            currentMetadata,
+            registry,
+            fetch: globalThis.fetch.bind(globalThis),
+            getPlugin: registry.getPlugin,
+            getImporter: registry.getImporter,
+            getExporter: registry.getExporter,
+            getRenderer: registry.getRenderer,
+            getMetadataProvider: registry.getMetadataProvider,
+            executeHooks: registry.executeHooks,
+            loadResourcesList: registry.loadResourcesList,
+            loadYaml: registry.loadYaml,
+            lib,
+          },
+        );
+
+        // Execute metadata attach hook
+        const enrichedData = await registry.executeHooks(HookEventEnum.METADATA_ATTACH, {
+          node,
+          metadata,
+          provider,
+        });
+
+        // Attach metadata to node
+        node.metadata = { ...currentMetadata, ...enrichedData.metadata };
+      }
+    },
+
+    /**
+     * Plugin registry for this diagram
+     */
+    registry,
+
+    /**
+     * Register plugins with the diagram
+     * @param plugins - Array of plugin instances
+     * @returns Promise that resolves when all plugins are registered and initialized
+     */
+    async registerPlugins(
+      plugins: import("./plugins/types.js").DiagramsPlugin[] = [],
+    ): Promise<void> {
+      // Register built-in JSON plugin first (always available)
+      if (!registry.getPlugin("json")) {
+        await registry.register(createJSONPlugin());
+      }
+
+      // Register all provided plugins
+      for (const plugin of plugins) {
+        await registry.register(plugin);
+      }
+
+      pluginsInitialized = true;
+    },
+
+    /**
+     * Convert the diagram to DOT format string
      */
     toString(): string {
       // Build DOT representation inline
@@ -1221,7 +1586,7 @@ export function Diagram(name = "", options: DiagramOptions = {}): Diagram {
             dot += `, imagescale=true`;
           }
         }
-        dot += "];\n";
+        dot += ";\n";
       }
 
       // Edges
@@ -1272,7 +1637,7 @@ export function Diagram(name = "", options: DiagramOptions = {}): Diagram {
               clusterDot += `, imagescale=true`;
             }
           }
-          clusterDot += "];\n";
+          clusterDot += ";\n";
         }
 
         // Nested clusters

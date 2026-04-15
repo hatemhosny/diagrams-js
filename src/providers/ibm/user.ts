@@ -14,42 +14,42 @@ function _User(label?: string, options?: Record<string, unknown>) {
 
 export function Browser(label?: string, options?: Record<string, unknown>) {
   const node = _User(label ?? "Browser", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Browser";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Browser";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = browserIcon;
   return node;
 }
 
 export function Device(label?: string, options?: Record<string, unknown>) {
   const node = _User(label ?? "Device", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Device";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Device";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = deviceIcon;
   return node;
 }
 
 export function IntegratedDigitalExperiences(label?: string, options?: Record<string, unknown>) {
   const node = _User(label ?? "IntegratedDigitalExperiences", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "IntegratedDigitalExperiences";
+  (node as unknown as Record<string, unknown>)["~resource"] = "IntegratedDigitalExperiences";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = integrated_digital_experiencesIcon;
   return node;
 }
 
 export function PhysicalEntity(label?: string, options?: Record<string, unknown>) {
   const node = _User(label ?? "PhysicalEntity", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "PhysicalEntity";
+  (node as unknown as Record<string, unknown>)["~resource"] = "PhysicalEntity";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = physical_entityIcon;
   return node;
 }
 
 export function Sensor(label?: string, options?: Record<string, unknown>) {
   const node = _User(label ?? "Sensor", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Sensor";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Sensor";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = sensorIcon;
   return node;
 }
 
 export function User(label?: string, options?: Record<string, unknown>) {
   const node = _User(label ?? "User", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "User";
+  (node as unknown as Record<string, unknown>)["~resource"] = "User";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = userIcon;
   return node;
 }

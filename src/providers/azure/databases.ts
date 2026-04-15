@@ -35,28 +35,28 @@ function _Databases(label?: string, options?: Record<string, unknown>) {
 
 export function AzureCosmosDb(label?: string, options?: Record<string, unknown>) {
   const node = _Databases(label ?? "AzureCosmosDb", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "AzureCosmosDb";
+  (node as unknown as Record<string, unknown>)["~resource"] = "AzureCosmosDb";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = azure_cosmos_dbIcon;
   return node;
 }
 
 export function AzureDataExplorerClusters(label?: string, options?: Record<string, unknown>) {
   const node = _Databases(label ?? "AzureDataExplorerClusters", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "AzureDataExplorerClusters";
+  (node as unknown as Record<string, unknown>)["~resource"] = "AzureDataExplorerClusters";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = azure_data_explorer_clustersIcon;
   return node;
 }
 
 export function AzureDatabaseMariadbServer(label?: string, options?: Record<string, unknown>) {
   const node = _Databases(label ?? "AzureDatabaseMariadbServer", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "AzureDatabaseMariadbServer";
+  (node as unknown as Record<string, unknown>)["~resource"] = "AzureDatabaseMariadbServer";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = azure_database_mariadb_serverIcon;
   return node;
 }
 
 export function AzureDatabaseMigrationServices(label?: string, options?: Record<string, unknown>) {
   const node = _Databases(label ?? "AzureDatabaseMigrationServices", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "AzureDatabaseMigrationServices";
+  (node as unknown as Record<string, unknown>)["~resource"] = "AzureDatabaseMigrationServices";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] =
     azure_database_migration_servicesIcon;
   return node;
@@ -64,7 +64,7 @@ export function AzureDatabaseMigrationServices(label?: string, options?: Record<
 
 export function AzureDatabaseMysqlServer(label?: string, options?: Record<string, unknown>) {
   const node = _Databases(label ?? "AzureDatabaseMysqlServer", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "AzureDatabaseMysqlServer";
+  (node as unknown as Record<string, unknown>)["~resource"] = "AzureDatabaseMysqlServer";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = azure_database_mysql_serverIcon;
   return node;
 }
@@ -74,8 +74,7 @@ export function AzureDatabasePostgresqlServerGroup(
   options?: Record<string, unknown>,
 ) {
   const node = _Databases(label ?? "AzureDatabasePostgresqlServerGroup", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] =
-    "AzureDatabasePostgresqlServerGroup";
+  (node as unknown as Record<string, unknown>)["~resource"] = "AzureDatabasePostgresqlServerGroup";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] =
     azure_database_postgresql_server_groupIcon;
   return node;
@@ -83,7 +82,7 @@ export function AzureDatabasePostgresqlServerGroup(
 
 export function AzureDatabasePostgresqlServer(label?: string, options?: Record<string, unknown>) {
   const node = _Databases(label ?? "AzureDatabasePostgresqlServer", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "AzureDatabasePostgresqlServer";
+  (node as unknown as Record<string, unknown>)["~resource"] = "AzureDatabasePostgresqlServer";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] =
     azure_database_postgresql_serverIcon;
   return node;
@@ -91,21 +90,21 @@ export function AzureDatabasePostgresqlServer(label?: string, options?: Record<s
 
 export function AzurePurviewAccounts(label?: string, options?: Record<string, unknown>) {
   const node = _Databases(label ?? "AzurePurviewAccounts", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "AzurePurviewAccounts";
+  (node as unknown as Record<string, unknown>)["~resource"] = "AzurePurviewAccounts";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = azure_purview_accountsIcon;
   return node;
 }
 
 export function AzureSQLEdge(label?: string, options?: Record<string, unknown>) {
   const node = _Databases(label ?? "AzureSQLEdge", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "AzureSQLEdge";
+  (node as unknown as Record<string, unknown>)["~resource"] = "AzureSQLEdge";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = azure_sql_edgeIcon;
   return node;
 }
 
 export function AzureSQLServerStretchDatabases(label?: string, options?: Record<string, unknown>) {
   const node = _Databases(label ?? "AzureSQLServerStretchDatabases", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "AzureSQLServerStretchDatabases";
+  (node as unknown as Record<string, unknown>)["~resource"] = "AzureSQLServerStretchDatabases";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] =
     azure_sql_server_stretch_databasesIcon;
   return node;
@@ -113,119 +112,119 @@ export function AzureSQLServerStretchDatabases(label?: string, options?: Record<
 
 export function AzureSQLVM(label?: string, options?: Record<string, unknown>) {
   const node = _Databases(label ?? "AzureSQLVM", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "AzureSQLVM";
+  (node as unknown as Record<string, unknown>)["~resource"] = "AzureSQLVM";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = azure_sql_vmIcon;
   return node;
 }
 
 export function AzureSQL(label?: string, options?: Record<string, unknown>) {
   const node = _Databases(label ?? "AzureSQL", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "AzureSQL";
+  (node as unknown as Record<string, unknown>)["~resource"] = "AzureSQL";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = azure_sqlIcon;
   return node;
 }
 
 export function AzureSynapseAnalytics(label?: string, options?: Record<string, unknown>) {
   const node = _Databases(label ?? "AzureSynapseAnalytics", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "AzureSynapseAnalytics";
+  (node as unknown as Record<string, unknown>)["~resource"] = "AzureSynapseAnalytics";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = azure_synapse_analyticsIcon;
   return node;
 }
 
 export function CacheRedis(label?: string, options?: Record<string, unknown>) {
   const node = _Databases(label ?? "CacheRedis", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "CacheRedis";
+  (node as unknown as Record<string, unknown>)["~resource"] = "CacheRedis";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = cache_redisIcon;
   return node;
 }
 
 export function DataFactories(label?: string, options?: Record<string, unknown>) {
   const node = _Databases(label ?? "DataFactories", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "DataFactories";
+  (node as unknown as Record<string, unknown>)["~resource"] = "DataFactories";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = data_factoriesIcon;
   return node;
 }
 
 export function ElasticJobAgents(label?: string, options?: Record<string, unknown>) {
   const node = _Databases(label ?? "ElasticJobAgents", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "ElasticJobAgents";
+  (node as unknown as Record<string, unknown>)["~resource"] = "ElasticJobAgents";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = elastic_job_agentsIcon;
   return node;
 }
 
 export function InstancePools(label?: string, options?: Record<string, unknown>) {
   const node = _Databases(label ?? "InstancePools", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "InstancePools";
+  (node as unknown as Record<string, unknown>)["~resource"] = "InstancePools";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = instance_poolsIcon;
   return node;
 }
 
 export function ManagedDatabase(label?: string, options?: Record<string, unknown>) {
   const node = _Databases(label ?? "ManagedDatabase", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "ManagedDatabase";
+  (node as unknown as Record<string, unknown>)["~resource"] = "ManagedDatabase";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = managed_databaseIcon;
   return node;
 }
 
 export function OracleDatabase(label?: string, options?: Record<string, unknown>) {
   const node = _Databases(label ?? "OracleDatabase", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "OracleDatabase";
+  (node as unknown as Record<string, unknown>)["~resource"] = "OracleDatabase";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = oracle_databaseIcon;
   return node;
 }
 
 export function SQLDataWarehouses(label?: string, options?: Record<string, unknown>) {
   const node = _Databases(label ?? "SQLDataWarehouses", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "SQLDataWarehouses";
+  (node as unknown as Record<string, unknown>)["~resource"] = "SQLDataWarehouses";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = sql_data_warehousesIcon;
   return node;
 }
 
 export function SQLDatabase(label?: string, options?: Record<string, unknown>) {
   const node = _Databases(label ?? "SQLDatabase", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "SQLDatabase";
+  (node as unknown as Record<string, unknown>)["~resource"] = "SQLDatabase";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = sql_databaseIcon;
   return node;
 }
 
 export function SQLElasticPools(label?: string, options?: Record<string, unknown>) {
   const node = _Databases(label ?? "SQLElasticPools", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "SQLElasticPools";
+  (node as unknown as Record<string, unknown>)["~resource"] = "SQLElasticPools";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = sql_elastic_poolsIcon;
   return node;
 }
 
 export function SQLManagedInstance(label?: string, options?: Record<string, unknown>) {
   const node = _Databases(label ?? "SQLManagedInstance", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "SQLManagedInstance";
+  (node as unknown as Record<string, unknown>)["~resource"] = "SQLManagedInstance";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = sql_managed_instanceIcon;
   return node;
 }
 
 export function SQLServerRegistries(label?: string, options?: Record<string, unknown>) {
   const node = _Databases(label ?? "SQLServerRegistries", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "SQLServerRegistries";
+  (node as unknown as Record<string, unknown>)["~resource"] = "SQLServerRegistries";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = sql_server_registriesIcon;
   return node;
 }
 
 export function SQLServer(label?: string, options?: Record<string, unknown>) {
   const node = _Databases(label ?? "SQLServer", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "SQLServer";
+  (node as unknown as Record<string, unknown>)["~resource"] = "SQLServer";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = sql_serverIcon;
   return node;
 }
 
 export function SsisLiftAndShiftIr(label?: string, options?: Record<string, unknown>) {
   const node = _Databases(label ?? "SsisLiftAndShiftIr", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "SsisLiftAndShiftIr";
+  (node as unknown as Record<string, unknown>)["~resource"] = "SsisLiftAndShiftIr";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = ssis_lift_and_shift_irIcon;
   return node;
 }
 
 export function VirtualClusters(label?: string, options?: Record<string, unknown>) {
   const node = _Databases(label ?? "VirtualClusters", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "VirtualClusters";
+  (node as unknown as Record<string, unknown>)["~resource"] = "VirtualClusters";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = virtual_clustersIcon;
   return node;
 }

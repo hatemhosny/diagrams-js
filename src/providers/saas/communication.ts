@@ -9,7 +9,7 @@ function _Communication(label?: string, options?: Record<string, unknown>) {
 
 export function Twilio(label?: string, options?: Record<string, unknown>) {
   const node = _Communication(label ?? "Twilio", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Twilio";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Twilio";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = twilioIcon;
   return node;
 }

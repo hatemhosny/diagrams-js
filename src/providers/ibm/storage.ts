@@ -10,14 +10,14 @@ function _Storage(label?: string, options?: Record<string, unknown>) {
 
 export function BlockStorage(label?: string, options?: Record<string, unknown>) {
   const node = _Storage(label ?? "BlockStorage", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "BlockStorage";
+  (node as unknown as Record<string, unknown>)["~resource"] = "BlockStorage";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = block_storageIcon;
   return node;
 }
 
 export function ObjectStorage(label?: string, options?: Record<string, unknown>) {
   const node = _Storage(label ?? "ObjectStorage", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "ObjectStorage";
+  (node as unknown as Record<string, unknown>)["~resource"] = "ObjectStorage";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = object_storageIcon;
   return node;
 }

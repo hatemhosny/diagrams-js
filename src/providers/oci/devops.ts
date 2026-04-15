@@ -14,42 +14,42 @@ function _Devops(label?: string, options?: Record<string, unknown>) {
 
 export function APIGatewayWhite(label?: string, options?: Record<string, unknown>) {
   const node = _Devops(label ?? "APIGatewayWhite", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "APIGatewayWhite";
+  (node as unknown as Record<string, unknown>)["~resource"] = "APIGatewayWhite";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = api_gateway_whiteIcon;
   return node;
 }
 
 export function APIGateway(label?: string, options?: Record<string, unknown>) {
   const node = _Devops(label ?? "APIGateway", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "APIGateway";
+  (node as unknown as Record<string, unknown>)["~resource"] = "APIGateway";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = api_gatewayIcon;
   return node;
 }
 
 export function APIServiceWhite(label?: string, options?: Record<string, unknown>) {
   const node = _Devops(label ?? "APIServiceWhite", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "APIServiceWhite";
+  (node as unknown as Record<string, unknown>)["~resource"] = "APIServiceWhite";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = api_service_whiteIcon;
   return node;
 }
 
 export function APIService(label?: string, options?: Record<string, unknown>) {
   const node = _Devops(label ?? "APIService", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "APIService";
+  (node as unknown as Record<string, unknown>)["~resource"] = "APIService";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = api_serviceIcon;
   return node;
 }
 
 export function ResourceMgmtWhite(label?: string, options?: Record<string, unknown>) {
   const node = _Devops(label ?? "ResourceMgmtWhite", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "ResourceMgmtWhite";
+  (node as unknown as Record<string, unknown>)["~resource"] = "ResourceMgmtWhite";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = resource_mgmt_whiteIcon;
   return node;
 }
 
 export function ResourceMgmt(label?: string, options?: Record<string, unknown>) {
   const node = _Devops(label ?? "ResourceMgmt", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "ResourceMgmt";
+  (node as unknown as Record<string, unknown>)["~resource"] = "ResourceMgmt";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = resource_mgmtIcon;
   return node;
 }

@@ -42,238 +42,238 @@ function _Network(label?: string, options?: Record<string, unknown>) {
 
 export function Ambassador(label?: string, options?: Record<string, unknown>) {
   const node = _Network(label ?? "Ambassador", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Ambassador";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Ambassador";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = ambassadorIcon;
   return node;
 }
 
 export function Apache(label?: string, options?: Record<string, unknown>) {
   const node = _Network(label ?? "Apache", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Apache";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Apache";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = apacheIcon;
   return node;
 }
 
 export function Bind9(label?: string, options?: Record<string, unknown>) {
   const node = _Network(label ?? "Bind9", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Bind9";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Bind9";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = bind_9Icon;
   return node;
 }
 
 export function Caddy(label?: string, options?: Record<string, unknown>) {
   const node = _Network(label ?? "Caddy", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Caddy";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Caddy";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = caddyIcon;
   return node;
 }
 
 export function CiscoRouter(label?: string, options?: Record<string, unknown>) {
   const node = _Network(label ?? "CiscoRouter", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "CiscoRouter";
+  (node as unknown as Record<string, unknown>)["~resource"] = "CiscoRouter";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = cisco_routerIcon;
   return node;
 }
 
 export function CiscoSwitchL2(label?: string, options?: Record<string, unknown>) {
   const node = _Network(label ?? "CiscoSwitchL2", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "CiscoSwitchL2";
+  (node as unknown as Record<string, unknown>)["~resource"] = "CiscoSwitchL2";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = cisco_switch_l2Icon;
   return node;
 }
 
 export function CiscoSwitchL3(label?: string, options?: Record<string, unknown>) {
   const node = _Network(label ?? "CiscoSwitchL3", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "CiscoSwitchL3";
+  (node as unknown as Record<string, unknown>)["~resource"] = "CiscoSwitchL3";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = cisco_switch_l3Icon;
   return node;
 }
 
 export function Consul(label?: string, options?: Record<string, unknown>) {
   const node = _Network(label ?? "Consul", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Consul";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Consul";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = consulIcon;
   return node;
 }
 
 export function Envoy(label?: string, options?: Record<string, unknown>) {
   const node = _Network(label ?? "Envoy", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Envoy";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Envoy";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = envoyIcon;
   return node;
 }
 
 export function Etcd(label?: string, options?: Record<string, unknown>) {
   const node = _Network(label ?? "Etcd", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Etcd";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Etcd";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = etcdIcon;
   return node;
 }
 
 export function Glassfish(label?: string, options?: Record<string, unknown>) {
   const node = _Network(label ?? "Glassfish", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Glassfish";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Glassfish";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = glassfishIcon;
   return node;
 }
 
 export function Gunicorn(label?: string, options?: Record<string, unknown>) {
   const node = _Network(label ?? "Gunicorn", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Gunicorn";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Gunicorn";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = gunicornIcon;
   return node;
 }
 
 export function Haproxy(label?: string, options?: Record<string, unknown>) {
   const node = _Network(label ?? "Haproxy", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Haproxy";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Haproxy";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = haproxyIcon;
   return node;
 }
 
 export function Internet(label?: string, options?: Record<string, unknown>) {
   const node = _Network(label ?? "Internet", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Internet";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Internet";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = internetIcon;
   return node;
 }
 
 export function Istio(label?: string, options?: Record<string, unknown>) {
   const node = _Network(label ?? "Istio", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Istio";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Istio";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = istioIcon;
   return node;
 }
 
 export function Jbossas(label?: string, options?: Record<string, unknown>) {
   const node = _Network(label ?? "Jbossas", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Jbossas";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Jbossas";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = jbossasIcon;
   return node;
 }
 
 export function Jetty(label?: string, options?: Record<string, unknown>) {
   const node = _Network(label ?? "Jetty", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Jetty";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Jetty";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = jettyIcon;
   return node;
 }
 
 export function Kong(label?: string, options?: Record<string, unknown>) {
   const node = _Network(label ?? "Kong", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Kong";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Kong";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = kongIcon;
   return node;
 }
 
 export function Linkerd(label?: string, options?: Record<string, unknown>) {
   const node = _Network(label ?? "Linkerd", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Linkerd";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Linkerd";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = linkerdIcon;
   return node;
 }
 
 export function Mikrotik(label?: string, options?: Record<string, unknown>) {
   const node = _Network(label ?? "Mikrotik", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Mikrotik";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Mikrotik";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = mikrotikIcon;
   return node;
 }
 
 export function Nginx(label?: string, options?: Record<string, unknown>) {
   const node = _Network(label ?? "Nginx", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Nginx";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Nginx";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = nginxIcon;
   return node;
 }
 
 export function Ocelot(label?: string, options?: Record<string, unknown>) {
   const node = _Network(label ?? "Ocelot", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Ocelot";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Ocelot";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = ocelotIcon;
   return node;
 }
 
 export function OpenServiceMesh(label?: string, options?: Record<string, unknown>) {
   const node = _Network(label ?? "OpenServiceMesh", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "OpenServiceMesh";
+  (node as unknown as Record<string, unknown>)["~resource"] = "OpenServiceMesh";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = open_service_meshIcon;
   return node;
 }
 
 export function Opnsense(label?: string, options?: Record<string, unknown>) {
   const node = _Network(label ?? "Opnsense", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Opnsense";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Opnsense";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = opnsenseIcon;
   return node;
 }
 
 export function Pfsense(label?: string, options?: Record<string, unknown>) {
   const node = _Network(label ?? "Pfsense", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Pfsense";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Pfsense";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = pfsenseIcon;
   return node;
 }
 
 export function Pomerium(label?: string, options?: Record<string, unknown>) {
   const node = _Network(label ?? "Pomerium", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Pomerium";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Pomerium";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = pomeriumIcon;
   return node;
 }
 
 export function Powerdns(label?: string, options?: Record<string, unknown>) {
   const node = _Network(label ?? "Powerdns", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Powerdns";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Powerdns";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = powerdnsIcon;
   return node;
 }
 
 export function Tomcat(label?: string, options?: Record<string, unknown>) {
   const node = _Network(label ?? "Tomcat", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Tomcat";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Tomcat";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = tomcatIcon;
   return node;
 }
 
 export function Traefik(label?: string, options?: Record<string, unknown>) {
   const node = _Network(label ?? "Traefik", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Traefik";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Traefik";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = traefikIcon;
   return node;
 }
 
 export function Tyk(label?: string, options?: Record<string, unknown>) {
   const node = _Network(label ?? "Tyk", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Tyk";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Tyk";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = tykIcon;
   return node;
 }
 
 export function Vyos(label?: string, options?: Record<string, unknown>) {
   const node = _Network(label ?? "Vyos", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Vyos";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Vyos";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = vyosIcon;
   return node;
 }
 
 export function Wildfly(label?: string, options?: Record<string, unknown>) {
   const node = _Network(label ?? "Wildfly", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Wildfly";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Wildfly";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = wildflyIcon;
   return node;
 }
 
 export function Yarp(label?: string, options?: Record<string, unknown>) {
   const node = _Network(label ?? "Yarp", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Yarp";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Yarp";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = yarpIcon;
   return node;
 }
 
 export function Zookeeper(label?: string, options?: Record<string, unknown>) {
   const node = _Network(label ?? "Zookeeper", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Zookeeper";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Zookeeper";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = zookeeperIcon;
   return node;
 }

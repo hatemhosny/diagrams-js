@@ -1,5 +1,6 @@
 import { describe, it, expect } from "vite-plus/test";
-import { Diagram, Node, Edge } from "../src/index.js";
+import { Diagram, Node, Edge, HookEvent } from "../src/index.js";
+import type { DiagramsPlugin } from "../src/plugins/types.js";
 
 describe("Diagram", () => {
   it("should create a diagram with default options", () => {
@@ -546,6 +547,90 @@ describe("Custom Nodes", () => {
     expect(useMatches?.length).toBe(3);
   });
 
+  it("should fetch and inline remote URL as base64 data URL", async () => {
+    const { Custom } = await import("../src/Custom.js");
+
+    // Mock fetch to return a test image
+    const originalFetch = globalThis.fetch;
+    const testBase64 =
+      "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==";
+    globalThis.fetch = async () =>
+      ({
+        ok: true,
+        headers: { get: () => "image/png" },
+        arrayBuffer: async () => {
+          // Convert base64 to ArrayBuffer
+          const binary = atob(testBase64);
+          const bytes = new Uint8Array(binary.length);
+          for (let i = 0; i < binary.length; i++) {
+            bytes[i] = binary.charCodeAt(i);
+          }
+          return bytes.buffer;
+        },
+      }) as unknown as Response;
+
+    try {
+      const diagram = Diagram("Remote Icon Test");
+      diagram.add(Custom("My Service", "https://example.com/icon.png"));
+
+      // Render - this should fetch and convert the icon
+      const result = await diagram.render();
+      expect(typeof result).toBe("string");
+
+      // The SVG should contain the inlined data URL, not the external URL
+      const resultStr = result as string;
+
+      // Should NOT contain the external URL
+      expect(resultStr).not.toContain("https://example.com/icon.png");
+
+      // Should contain a data URL
+      expect(resultStr).toContain("data:image/png;base64,");
+
+      // Should have icon injected
+      expect(resultStr).toContain("<image");
+    } finally {
+      // Restore original fetch
+      globalThis.fetch = originalFetch;
+    }
+  });
+
+  it("should use data URL in DOT output for remote icons", async () => {
+    const { Custom } = await import("../src/Custom.js");
+
+    // Mock fetch to return a test image
+    const originalFetch = globalThis.fetch;
+    const testBase64 =
+      "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==";
+    globalThis.fetch = async () =>
+      ({
+        ok: true,
+        headers: { get: () => "image/png" },
+        arrayBuffer: async () => {
+          const binary = atob(testBase64);
+          const bytes = new Uint8Array(binary.length);
+          for (let i = 0; i < binary.length; i++) {
+            bytes[i] = binary.charCodeAt(i);
+          }
+          return bytes.buffer;
+        },
+      }) as unknown as Response;
+
+    try {
+      const diagram = Diagram("Remote Icon DOT Test");
+      diagram.add(Custom("My Service", "https://example.com/icon.png"));
+
+      // Get DOT output via render (which waits for async icon loading)
+      const dot = await diagram.render({ format: "dot" });
+
+      // DOT should contain data URL, not external URL
+      expect(dot).not.toContain("https://example.com/icon.png");
+      expect(dot).toContain("data:image/png;base64,");
+      expect(dot).toContain(`image="data:image/png;base64,${testBase64}"`);
+    } finally {
+      globalThis.fetch = originalFetch;
+    }
+  });
+
   it("should handle different icons for different Custom nodes", async () => {
     const { Custom } = await import("../src/Custom.js");
 
@@ -578,5 +663,400 @@ describe("Custom Nodes", () => {
       const id2 = idMatches[1].replace('<g id="', "").replace('"', "");
       expect(id1).not.toBe(id2);
     }
+  });
+
+  it("should create Iconify node with iconify API URL", async () => {
+    const { Iconify } = await import("../src/Custom.js");
+
+    const diagram = Diagram("Iconify Test");
+    const node = diagram.add(Iconify("Home", "mdi:home"));
+
+    // Verify the node was created with the correct label
+    expect(node.label).toBe("Home");
+
+    // Verify the icon URL points to iconify API
+    expect(node["~getIconUrl"]()).toBe("https://api.iconify.design/mdi:home.svg");
+  });
+
+  it("should allow Iconify nodes in diagrams", async () => {
+    const { Iconify } = await import("../src/Custom.js");
+
+    // Mock fetch to return a test SVG
+    const originalFetch = globalThis.fetch;
+    globalThis.fetch = async () =>
+      ({
+        ok: true,
+        headers: { get: () => "image/svg+xml" },
+        arrayBuffer: async () => {
+          const svg = "<svg></svg>";
+          const buffer = new Uint8Array(svg.length);
+          for (let i = 0; i < svg.length; i++) {
+            buffer[i] = svg.charCodeAt(i);
+          }
+          return buffer.buffer;
+        },
+      }) as unknown as Response;
+
+    try {
+      const diagram = Diagram("Iconify Diagram");
+      const web = diagram.add(Iconify("Web Server", "mdi:server"));
+      const db = diagram.add(Iconify("Database", "mdi:database"));
+
+      web.to(db);
+
+      const result = await diagram.render();
+      expect(typeof result).toBe("string");
+
+      // Should have iconify URLs fetched
+      const resultStr = result as string;
+      expect(resultStr).toContain("<image");
+    } finally {
+      globalThis.fetch = originalFetch;
+    }
+  });
+});
+
+describe("Plugin System", () => {
+  it("should have built-in JSON plugin registered", async () => {
+    const diagram = Diagram("Test");
+    await diagram.registerPlugins([]); // Register default plugins (includes JSON)
+    const jsonExporter = diagram.registry.getExporter("json");
+    expect(jsonExporter).toBeDefined();
+    expect(jsonExporter?.name).toBe("json");
+  });
+
+  it("should export to JSON using plugin", async () => {
+    const diagram = Diagram("Test");
+    await diagram.registerPlugins([]); // Register default plugins (includes JSON)
+    const node1 = diagram.add(Node("Node1"));
+    const node2 = diagram.add(Node("Node2"));
+    node1.to(node2);
+
+    const json = await diagram.export("json");
+    expect(typeof json).toBe("string");
+    const parsed = JSON.parse(json as string);
+    expect(parsed.name).toBe("Test");
+    expect(parsed.nodes).toHaveLength(2);
+    expect(parsed.edges).toHaveLength(1);
+  });
+
+  it("should support custom plugins", async () => {
+    // Create a test plugin
+    const testPlugin = () => ({
+      name: "test-exporter",
+      version: "1.0.0",
+      apiVersion: "1.0" as const,
+      runtimeSupport: { node: true, browser: true, deno: true, bun: true },
+      capabilities: [
+        {
+          type: "exporter" as const,
+          name: "test-format",
+          extension: ".test",
+          mimeType: "text/plain",
+          export: async (diagram: ReturnType<typeof Diagram>) => {
+            return `Test export: ${diagram.name}`;
+          },
+        },
+      ],
+    });
+
+    const diagram = Diagram("Test Plugin");
+    await diagram.registerPlugins([testPlugin()]);
+
+    const exporter = diagram.registry.getExporter("test-format");
+    expect(exporter).toBeDefined();
+
+    const result = await diagram.export("test-format");
+    expect(result).toBe("Test export: Test Plugin");
+  });
+
+  it("should list registered capabilities", async () => {
+    const diagram = Diagram("Test");
+    await diagram.registerPlugins([]); // Register default plugins (includes JSON)
+    const capabilities = diagram.registry.listCapabilities();
+    expect(capabilities.exporters).toContain("json");
+  });
+
+  it("should support plugin dependency resolution", async () => {
+    // Create a base plugin with at least one capability
+    const basePlugin = () => ({
+      name: "base-plugin",
+      version: "1.0.0",
+      apiVersion: "1.0" as const,
+      runtimeSupport: { node: true, browser: true, deno: true, bun: true },
+      capabilities: [
+        {
+          type: "exporter" as const,
+          name: "base-format",
+          extension: ".base",
+          mimeType: "text/plain",
+          export: async () => "Base export",
+        },
+      ],
+    });
+
+    // Create a dependent plugin
+    const dependentPlugin = () => ({
+      name: "dependent-plugin",
+      version: "1.0.0",
+      apiVersion: "1.0" as const,
+      runtimeSupport: { node: true, browser: true, deno: true, bun: true },
+      dependencies: ["base-plugin"],
+      capabilities: [
+        {
+          type: "exporter" as const,
+          name: "dependent-format",
+          extension: ".dep",
+          mimeType: "text/plain",
+          export: async () => "Dependent export",
+        },
+      ],
+    });
+
+    const diagram = Diagram("Test");
+    await diagram.registerPlugins([basePlugin(), dependentPlugin()]);
+
+    const exporter = diagram.registry.getExporter("dependent-format");
+    expect(exporter).toBeDefined();
+  });
+
+  it("should support node metadata", () => {
+    const diagram = Diagram("Test");
+    const node = diagram.add(Node("Test Node"));
+
+    // Initially empty
+    expect(node.metadata).toEqual({});
+
+    // Set metadata
+    node.metadata = { test: "value", number: 123 };
+    expect(node.metadata.test).toBe("value");
+    expect(node.metadata.number).toBe(123);
+  });
+
+  it("should execute hooks", async () => {
+    const hookCalls: string[] = [];
+
+    // Create a plugin with hooks
+    const hookPlugin = (): DiagramsPlugin => ({
+      name: "hook-plugin",
+      version: "1.0.0",
+      apiVersion: "1.0",
+      runtimeSupport: { node: true, browser: true, deno: true, bun: true },
+      capabilities: [
+        {
+          type: "hook",
+          hooks: [
+            {
+              event: HookEvent.BEFORE_EXPORT,
+              handler: async () => {
+                hookCalls.push("before:export");
+              },
+            },
+            {
+              event: HookEvent.AFTER_EXPORT,
+              handler: async () => {
+                hookCalls.push("after:export");
+              },
+            },
+          ],
+        },
+      ],
+    });
+
+    const diagram = Diagram("Test");
+    await diagram.registerPlugins([hookPlugin()]);
+
+    await diagram.export("json");
+
+    expect(hookCalls).toContain("before:export");
+    expect(hookCalls).toContain("after:export");
+  });
+
+  it("should support importing array of sources each in its own cluster", async () => {
+    // Create a test importer plugin that handles arrays
+    const arrayImporterPlugin = (): DiagramsPlugin => ({
+      name: "array-importer",
+      version: "1.0.0",
+      apiVersion: "1.0",
+      runtimeSupport: { node: true, browser: true, deno: true, bun: true },
+      capabilities: [
+        {
+          type: "importer",
+          name: "array-test",
+          extensions: [".txt"],
+          canImport: async (_source: string | string[]) => {
+            return true;
+          },
+          import: async (source: string | string[], diagram: Diagram) => {
+            const sources = Array.isArray(source) ? source : [source];
+
+            for (let i = 0; i < sources.length; i++) {
+              if (sources.length > 1) {
+                // Multiple sources - each in its own cluster
+                const cluster = diagram.cluster(`import-${i}`);
+                const node = Node(`node-${i}`, { label: sources[i] });
+                cluster.add(node);
+              } else {
+                // Single source - add directly (no cluster)
+                diagram.add(Node("single-node", { label: sources[i] }));
+              }
+            }
+          },
+        },
+      ],
+    });
+
+    const diagram = Diagram("Array Import Test");
+    await diagram.registerPlugins([arrayImporterPlugin()]);
+
+    // Test with array of sources
+    await diagram.import(["source-1", "source-2", "source-3"], "array-test");
+
+    // Verify the diagram has nodes
+    const json = diagram.toJSON();
+    expect(json.nodes.length).toBeGreaterThanOrEqual(3);
+    expect(json.clusters).toBeDefined();
+    expect(json.clusters!.length).toBeGreaterThanOrEqual(3); // Each source in its own cluster
+  });
+
+  it("should wait for async plugin initialization before executing hooks", async () => {
+    const hookCalls: string[] = [];
+    let initCompleted = false;
+
+    // Create a plugin with async initialize that takes time
+    const slowPlugin = (): DiagramsPlugin => ({
+      name: "slow-plugin",
+      version: "1.0.0",
+      apiVersion: "1.0",
+      runtimeSupport: { node: true, browser: true, deno: true, bun: true },
+      async initialize() {
+        // Simulate slow initialization
+        await new Promise((resolve) => setTimeout(resolve, 50));
+        initCompleted = true;
+      },
+      capabilities: [
+        {
+          type: "hook",
+          hooks: [
+            {
+              event: HookEvent.BEFORE_EXPORT,
+              handler: async () => {
+                // This should only fire AFTER initialize completes
+                if (!initCompleted) {
+                  throw new Error("Hook fired before initialization completed!");
+                }
+                hookCalls.push("before:export");
+              },
+            },
+          ],
+        },
+      ],
+    });
+
+    const diagram = Diagram("Test");
+
+    // Register plugins explicitly
+    await diagram.registerPlugins([slowPlugin()]);
+
+    // Add a node immediately
+    diagram.add(Node("Test Node"));
+
+    // Export should wait for plugin initialization
+    await diagram.export("json");
+
+    // Hook should have fired
+    expect(hookCalls).toContain("before:export");
+    expect(initCompleted).toBe(true);
+  });
+
+  it("should handle node:create hooks with async initialization", async () => {
+    const nodeCreateCalls: string[] = [];
+
+    // Create a plugin that hooks into node:create
+    const trackingPlugin = (): DiagramsPlugin => ({
+      name: "tracking-plugin",
+      version: "1.0.0",
+      apiVersion: "1.0",
+      runtimeSupport: { node: true, browser: true, deno: true, bun: true },
+      async initialize() {
+        // Simulate async work
+        await new Promise((resolve) => setTimeout(resolve, 10));
+      },
+      capabilities: [
+        {
+          type: "hook",
+          hooks: [
+            {
+              event: HookEvent.NODE_CREATE,
+              handler: async (data) => {
+                const nodeData = data as { node: { label: string } };
+                nodeCreateCalls.push(nodeData.node.label);
+                return data;
+              },
+            },
+          ],
+        },
+      ],
+    });
+
+    // Create diagram and register plugins explicitly
+    const diagram = Diagram("Test");
+    await diagram.registerPlugins([trackingPlugin()]);
+
+    // Now add nodes - hooks should fire
+    diagram.add(Node("Node 1"));
+    diagram.add(Node("Node 2"));
+
+    // Wait a bit for async hooks to complete
+    await new Promise((resolve) => setTimeout(resolve, 50));
+
+    // Hooks should have fired
+    expect(nodeCreateCalls).toContain("Node 1");
+    expect(nodeCreateCalls).toContain("Node 2");
+  });
+
+  it("should allow hooks to modify node properties", async () => {
+    // Create a plugin that renames nodes
+    const renamePlugin = (): DiagramsPlugin => ({
+      name: "rename-plugin",
+      version: "1.0.0",
+      apiVersion: "1.0",
+      runtimeSupport: { node: true, browser: true, deno: true, bun: true },
+      capabilities: [
+        {
+          type: "hook",
+          hooks: [
+            {
+              event: HookEvent.NODE_CREATE,
+              handler: async (data) => {
+                const nodeData = data as { node: { label: string } };
+                // Rename the node
+                nodeData.node.label = "Renamed:" + nodeData.node.label;
+                return nodeData;
+              },
+            },
+          ],
+        },
+      ],
+    });
+
+    // Create diagram and register plugins explicitly
+    const diagram = Diagram("Test");
+    await diagram.registerPlugins([renamePlugin()]);
+
+    // Add a node
+    const node = diagram.add(Node("Original"));
+
+    // Wait for hook to complete
+    await new Promise((resolve) => setTimeout(resolve, 50));
+
+    // The node should have been renamed
+    const json = diagram.toJSON();
+    const nodeInJson = json.nodes.find((n) => n.id === node.nodeId);
+    expect(nodeInJson?.label).toBe("Renamed:Original");
+
+    // The DOT output should also reflect the renamed label
+    const dot = diagram.toString();
+    expect(dot).toContain("Renamed:Original");
   });
 });

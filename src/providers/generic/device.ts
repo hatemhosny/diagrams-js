@@ -10,14 +10,14 @@ function _Device(label?: string, options?: Record<string, unknown>) {
 
 export function Mobile(label?: string, options?: Record<string, unknown>) {
   const node = _Device(label ?? "Mobile", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Mobile";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Mobile";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = mobileIcon;
   return node;
 }
 
 export function Tablet(label?: string, options?: Record<string, unknown>) {
   const node = _Device(label ?? "Tablet", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Tablet";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Tablet";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = tabletIcon;
   return node;
 }

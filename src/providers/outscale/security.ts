@@ -10,14 +10,14 @@ function _Security(label?: string, options?: Record<string, unknown>) {
 
 export function Firewall(label?: string, options?: Record<string, unknown>) {
   const node = _Security(label ?? "Firewall", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Firewall";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Firewall";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = firewallIcon;
   return node;
 }
 
 export function IdentityAndAccessManagement(label?: string, options?: Record<string, unknown>) {
   const node = _Security(label ?? "IdentityAndAccessManagement", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "IdentityAndAccessManagement";
+  (node as unknown as Record<string, unknown>)["~resource"] = "IdentityAndAccessManagement";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = identity_and_access_managementIcon;
   return node;
 }

@@ -36,8 +36,8 @@
     "index.js",
     "LICENSE",
     "README.md",
-    ".agents/skills",
-    "!**/_artifacts"
+    "skills",
+    "!skills/_artifacts"
   ],
   "type": "module",
   "browser": "./dist/index.js",
@@ -962,6 +962,13 @@
     "./saas/social": {
       "import": "./dist/providers/saas/social.js",
       "types": "./dist/providers/saas/social.d.ts"
+    },
+    "./resources-list": {
+      "import": "./dist/providers/resources-list.js",
+      "types": "./dist/providers/resources-list.d.ts"
+    },
+    "./yaml": {
+      "import": "./dist/providers/yaml.js"
     }
   },
   "publishConfig": {
@@ -988,18 +995,19 @@
     "changelog": "conventional-changelog -p angular -i ../CHANGELOG.md -s"
   },
   "devDependencies": {
-    "@tanstack/intent": "^0.0.29",
-    "@types/node": "^25.5.0",
-    "@types/sharp": "^0.32.0",
+    "@tanstack/intent": "0.0.29",
+    "@types/js-yaml": "4.0.9",
+    "@types/node": "25.5.0",
     "@typescript/native-preview": "7.0.0-dev.20260328.1",
-    "@viz-js/viz": "^3.25.0",
-    "bumpp": "^11.0.1",
-    "esbuild": "^0.28.0",
-    "typescript": "^6.0.2",
-    "vite-plus": "^0.1.14"
+    "@viz-js/viz": "3.25.0",
+    "bumpp": "11.0.1",
+    "esbuild": "0.28.0",
+    "js-yaml": "4.1.1",
+    "typescript": "6.0.2",
+    "vite-plus": "0.1.16"
   },
   "optionalDependencies": {
-    "sharp": "^0.33.0"
+    "sharp": "^0.34.5"
   },
   "packageManager": "pnpm@10.33.0",
   "pnpm": {

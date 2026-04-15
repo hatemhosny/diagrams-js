@@ -37,6 +37,10 @@ domains:
     slug: "migration-interop"
     description: "Migrating from Python diagrams and integrating with other tools"
 
+  - name: "Extensibility"
+    slug: "extensibility"
+    description: "Plugin system for extending diagrams-js with custom import/export formats and metadata providers"
+
 skills:
   - name: "Getting Started"
     slug: "getting-started"
@@ -489,6 +493,43 @@ skills:
           [web1, web2].forEach(w => w.to(database)); // TypeScript
         source: "docs/guides/migration.mdx"
         priority: "CRITICAL"
+        status: "active"
+
+  - name: "Creating Plugins"
+    slug: "creating-plugins"
+    domain: "extensibility"
+    description: "Create custom plugins for diagrams-js to extend import/export capabilities"
+    type: "feature"
+    covers:
+      - "Plugin package structure"
+      - "Importer and exporter capabilities"
+      - "context.lib for runtime exports"
+      - "context.loadResourcesList() for resource discovery"
+      - "Factory function pattern"
+      - "NPM keywords for discoverability"
+    tasks:
+      - "Create a custom importer plugin"
+      - "Create a custom exporter plugin"
+      - "Use resource discovery for icons"
+      - "Publish plugin to NPM"
+    failure_modes:
+      - mistake: "Importing runtime exports from diagrams-js"
+        mechanism: "Using context.lib avoids multiple library instances"
+        wrong_pattern: |
+          import { Node } from "diagrams-js"; // Creates separate instance
+        correct_pattern: |
+          const { Node } = context.lib; // Uses same instance as diagram
+        source: "plugin best practices"
+        priority: "CRITICAL"
+        status: "active"
+      - mistake: "Not adding diagrams-js to NPM keywords"
+        mechanism: "Keywords make plugins discoverable on NPM"
+        wrong_pattern: |
+          "keywords": ["plugin", "import", "export"]
+        correct_pattern: |
+          "keywords": ["diagrams-js", "diagrams", "plugin", "import", "export"]
+        source: "plugin publishing guide"
+        priority: "MEDIUM"
         status: "active"
 
 tensions:

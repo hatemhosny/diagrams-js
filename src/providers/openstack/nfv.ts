@@ -9,7 +9,7 @@ function _Nfv(label?: string, options?: Record<string, unknown>) {
 
 export function Tacker(label?: string, options?: Record<string, unknown>) {
   const node = _Nfv(label ?? "Tacker", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Tacker";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Tacker";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = tackerIcon;
   return node;
 }

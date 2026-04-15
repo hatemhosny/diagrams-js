@@ -26,126 +26,126 @@ function _Monitoring(label?: string, options?: Record<string, unknown>) {
 
 export function AlarmWhite(label?: string, options?: Record<string, unknown>) {
   const node = _Monitoring(label ?? "AlarmWhite", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "AlarmWhite";
+  (node as unknown as Record<string, unknown>)["~resource"] = "AlarmWhite";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = alarm_whiteIcon;
   return node;
 }
 
 export function Alarm(label?: string, options?: Record<string, unknown>) {
   const node = _Monitoring(label ?? "Alarm", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Alarm";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Alarm";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = alarmIcon;
   return node;
 }
 
 export function EmailWhite(label?: string, options?: Record<string, unknown>) {
   const node = _Monitoring(label ?? "EmailWhite", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "EmailWhite";
+  (node as unknown as Record<string, unknown>)["~resource"] = "EmailWhite";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = email_whiteIcon;
   return node;
 }
 
 export function Email(label?: string, options?: Record<string, unknown>) {
   const node = _Monitoring(label ?? "Email", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Email";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Email";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = emailIcon;
   return node;
 }
 
 export function EventsWhite(label?: string, options?: Record<string, unknown>) {
   const node = _Monitoring(label ?? "EventsWhite", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "EventsWhite";
+  (node as unknown as Record<string, unknown>)["~resource"] = "EventsWhite";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = events_whiteIcon;
   return node;
 }
 
 export function Events(label?: string, options?: Record<string, unknown>) {
   const node = _Monitoring(label ?? "Events", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Events";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Events";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = eventsIcon;
   return node;
 }
 
 export function HealthCheckWhite(label?: string, options?: Record<string, unknown>) {
   const node = _Monitoring(label ?? "HealthCheckWhite", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "HealthCheckWhite";
+  (node as unknown as Record<string, unknown>)["~resource"] = "HealthCheckWhite";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = health_check_whiteIcon;
   return node;
 }
 
 export function HealthCheck(label?: string, options?: Record<string, unknown>) {
   const node = _Monitoring(label ?? "HealthCheck", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "HealthCheck";
+  (node as unknown as Record<string, unknown>)["~resource"] = "HealthCheck";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = health_checkIcon;
   return node;
 }
 
 export function NotificationsWhite(label?: string, options?: Record<string, unknown>) {
   const node = _Monitoring(label ?? "NotificationsWhite", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "NotificationsWhite";
+  (node as unknown as Record<string, unknown>)["~resource"] = "NotificationsWhite";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = notifications_whiteIcon;
   return node;
 }
 
 export function Notifications(label?: string, options?: Record<string, unknown>) {
   const node = _Monitoring(label ?? "Notifications", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Notifications";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Notifications";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = notificationsIcon;
   return node;
 }
 
 export function QueueWhite(label?: string, options?: Record<string, unknown>) {
   const node = _Monitoring(label ?? "QueueWhite", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "QueueWhite";
+  (node as unknown as Record<string, unknown>)["~resource"] = "QueueWhite";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = queue_whiteIcon;
   return node;
 }
 
 export function Queue(label?: string, options?: Record<string, unknown>) {
   const node = _Monitoring(label ?? "Queue", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Queue";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Queue";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = queueIcon;
   return node;
 }
 
 export function SearchWhite(label?: string, options?: Record<string, unknown>) {
   const node = _Monitoring(label ?? "SearchWhite", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "SearchWhite";
+  (node as unknown as Record<string, unknown>)["~resource"] = "SearchWhite";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = search_whiteIcon;
   return node;
 }
 
 export function Search(label?: string, options?: Record<string, unknown>) {
   const node = _Monitoring(label ?? "Search", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Search";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Search";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = searchIcon;
   return node;
 }
 
 export function TelemetryWhite(label?: string, options?: Record<string, unknown>) {
   const node = _Monitoring(label ?? "TelemetryWhite", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "TelemetryWhite";
+  (node as unknown as Record<string, unknown>)["~resource"] = "TelemetryWhite";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = telemetry_whiteIcon;
   return node;
 }
 
 export function Telemetry(label?: string, options?: Record<string, unknown>) {
   const node = _Monitoring(label ?? "Telemetry", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Telemetry";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Telemetry";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = telemetryIcon;
   return node;
 }
 
 export function WorkflowWhite(label?: string, options?: Record<string, unknown>) {
   const node = _Monitoring(label ?? "WorkflowWhite", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "WorkflowWhite";
+  (node as unknown as Record<string, unknown>)["~resource"] = "WorkflowWhite";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = workflow_whiteIcon;
   return node;
 }
 
 export function Workflow(label?: string, options?: Record<string, unknown>) {
   const node = _Monitoring(label ?? "Workflow", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Workflow";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Workflow";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = workflowIcon;
   return node;
 }

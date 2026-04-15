@@ -15,49 +15,49 @@ function _Queue(label?: string, options?: Record<string, unknown>) {
 
 export function Activemq(label?: string, options?: Record<string, unknown>) {
   const node = _Queue(label ?? "Activemq", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Activemq";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Activemq";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = activemqIcon;
   return node;
 }
 
 export function Celery(label?: string, options?: Record<string, unknown>) {
   const node = _Queue(label ?? "Celery", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Celery";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Celery";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = celeryIcon;
   return node;
 }
 
 export function Emqx(label?: string, options?: Record<string, unknown>) {
   const node = _Queue(label ?? "Emqx", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Emqx";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Emqx";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = emqxIcon;
   return node;
 }
 
 export function Kafka(label?: string, options?: Record<string, unknown>) {
   const node = _Queue(label ?? "Kafka", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Kafka";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Kafka";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = kafkaIcon;
   return node;
 }
 
 export function Nats(label?: string, options?: Record<string, unknown>) {
   const node = _Queue(label ?? "Nats", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Nats";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Nats";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = natsIcon;
   return node;
 }
 
 export function Rabbitmq(label?: string, options?: Record<string, unknown>) {
   const node = _Queue(label ?? "Rabbitmq", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Rabbitmq";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Rabbitmq";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = rabbitmqIcon;
   return node;
 }
 
 export function Zeromq(label?: string, options?: Record<string, unknown>) {
   const node = _Queue(label ?? "Zeromq", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Zeromq";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Zeromq";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = zeromqIcon;
   return node;
 }

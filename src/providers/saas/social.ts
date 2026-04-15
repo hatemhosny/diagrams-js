@@ -10,14 +10,14 @@ function _Social(label?: string, options?: Record<string, unknown>) {
 
 export function Facebook(label?: string, options?: Record<string, unknown>) {
   const node = _Social(label ?? "Facebook", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Facebook";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Facebook";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = facebookIcon;
   return node;
 }
 
 export function Twitter(label?: string, options?: Record<string, unknown>) {
   const node = _Social(label ?? "Twitter", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Twitter";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Twitter";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = twitterIcon;
   return node;
 }

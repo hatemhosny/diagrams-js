@@ -385,6 +385,101 @@ consumers.forEach((consumer) => consumer.to(database));
     },
   },
   {
+    name: "Plugin System Example",
+    config: {
+      title: "Plugin System Example",
+      script: {
+        language: "javascript",
+        content: `import { Diagram, HookEvent } from "diagrams-js";
+import { EC2 } from "diagrams-js/aws/compute";
+import { RDS } from "diagrams-js/aws/database";
+import { ELB } from "diagrams-js/aws/network";
+
+// Create a plugin that modifies node labels
+const labelPrefixPlugin = () => ({
+  name: "label-prefix",
+  version: "1.0.0",
+  apiVersion: "1.0",
+  runtimeSupport: { node: true, browser: true, deno: true, bun: true },
+  capabilities: [
+    {
+      type: "hook",
+      hooks: [
+        {
+          event: HookEvent.NODE_CREATE,
+          handler: async (data) => {
+            data.node.label = "[AWS] " + data.node.label;
+            return data;
+          },
+        },
+      ],
+    },
+  ],
+});
+
+// Create a plugin that adds colored edges
+const coloredEdgePlugin = () => ({
+  name: "colored-edges",
+  version: "1.0.0",
+  apiVersion: "1.0",
+  runtimeSupport: { node: true, browser: true, deno: true, bun: true },
+  capabilities: [
+    {
+      type: "hook",
+      hooks: [
+        {
+          event: HookEvent.EDGE_CREATE,
+          handler: async (data) => {
+            // Modify edge attributes via edgeAttrs
+            data.edge.edgeAttrs.color = "blue";
+            data.edge.edgeAttrs.penwidth = "2";
+            return data;
+          },
+        },
+      ],
+    },
+  ],
+});
+
+// Create a plugin that modifies node attributes
+const nodeStylePlugin = () => ({
+  name: "node-style",
+  version: "1.0.0",
+  apiVersion: "1.0",
+  runtimeSupport: { node: true, browser: true, deno: true, bun: true },
+  capabilities: [
+    {
+      type: "hook",
+      hooks: [
+        {
+          event: HookEvent.NODE_CREATE,
+          handler: async (data) => {
+            // Modify node attributes via nodeAttrs
+            data.node.nodeAttrs.width = "1.2";
+            return data;
+          },
+        },
+      ],
+    },
+  ],
+});
+
+const diagram = Diagram("Plugin Example");
+
+// Register plugins before adding nodes
+await diagram.registerPlugins([labelPrefixPlugin, coloredEdgePlugin, nodeStylePlugin]);
+
+const lb = diagram.add(ELB("Load Balancer"));
+const web = diagram.add(EC2("Web Server"));
+const db = diagram.add(RDS("Database"));
+
+// Connect nodes using chained syntax - edges will be modified by the plugin
+lb.to(web).to(db);
+`,
+      },
+    },
+  },
+  {
     name: "Blank Template",
     config: {
       title: "Blank Template",

@@ -15,49 +15,49 @@ function _Rbac(label?: string, options?: Record<string, unknown>) {
 
 export function CRole(label?: string, options?: Record<string, unknown>) {
   const node = _Rbac(label ?? "CRole", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "CRole";
+  (node as unknown as Record<string, unknown>)["~resource"] = "CRole";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = c_roleIcon;
   return node;
 }
 
 export function CRB(label?: string, options?: Record<string, unknown>) {
   const node = _Rbac(label ?? "CRB", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "CRB";
+  (node as unknown as Record<string, unknown>)["~resource"] = "CRB";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = crbIcon;
   return node;
 }
 
 export function Group(label?: string, options?: Record<string, unknown>) {
   const node = _Rbac(label ?? "Group", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Group";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Group";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = groupIcon;
   return node;
 }
 
 export function RB(label?: string, options?: Record<string, unknown>) {
   const node = _Rbac(label ?? "RB", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "RB";
+  (node as unknown as Record<string, unknown>)["~resource"] = "RB";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = rbIcon;
   return node;
 }
 
 export function Role(label?: string, options?: Record<string, unknown>) {
   const node = _Rbac(label ?? "Role", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Role";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Role";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = roleIcon;
   return node;
 }
 
 export function SA(label?: string, options?: Record<string, unknown>) {
   const node = _Rbac(label ?? "SA", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "SA";
+  (node as unknown as Record<string, unknown>)["~resource"] = "SA";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = saIcon;
   return node;
 }
 
 export function User(label?: string, options?: Record<string, unknown>) {
   const node = _Rbac(label ?? "User", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "User";
+  (node as unknown as Record<string, unknown>)["~resource"] = "User";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = userIcon;
   return node;
 }

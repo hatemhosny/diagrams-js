@@ -12,28 +12,28 @@ function _Business(label?: string, options?: Record<string, unknown>) {
 
 export function AlexaForBusiness(label?: string, options?: Record<string, unknown>) {
   const node = _Business(label ?? "AlexaForBusiness", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "AlexaForBusiness";
+  (node as unknown as Record<string, unknown>)["~resource"] = "AlexaForBusiness";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = alexa_for_businessIcon;
   return node;
 }
 
 export function BusinessApplications(label?: string, options?: Record<string, unknown>) {
   const node = _Business(label ?? "BusinessApplications", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "BusinessApplications";
+  (node as unknown as Record<string, unknown>)["~resource"] = "BusinessApplications";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = business_applicationsIcon;
   return node;
 }
 
 export function Chime(label?: string, options?: Record<string, unknown>) {
   const node = _Business(label ?? "Chime", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Chime";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Chime";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = chimeIcon;
   return node;
 }
 
 export function Workmail(label?: string, options?: Record<string, unknown>) {
   const node = _Business(label ?? "Workmail", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Workmail";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Workmail";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = workmailIcon;
   return node;
 }

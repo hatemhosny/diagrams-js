@@ -20,64 +20,64 @@
 <path fill="#e5f5fd" stroke="#aeb6be" d="M92,-28C92,-28 141.6,-28 141.6,-28 147.6,-28 153.6,-34 153.6,-40 153.6,-40 153.6,-271 153.6,-271 153.6,-277 147.6,-283 141.6,-283 141.6,-283 92,-283 92,-283 86,-283 80,-277 80,-271 80,-271 80,-40 80,-40 80,-34 86,-28 92,-28"/>
 <text xml:space="preserve" text-anchor="middle" x="115" y="-268.2" font-family="Sans-Serif" font-size="12.00">Consumers</text>
 </g>
-<!-- mnp3hkr4_rae6zyc5m -->
+<!-- mo069q7l_upp6v7qgg -->
 <g id="node1" class="node">
-<title>mnp3hkr4_rae6zyc5m</title>
+<title>mo069q7l_upp6v7qgg</title>
 <text xml:space="preserve" text-anchor="middle" x="36" y="-114" font-family="Sans-Serif" font-size="8.00">Message queue</text>
 <use href="#icon-jxkozv" x="36" y="-148"/></g>
-<!-- mnp3hkr3_t1g7ly4u4 -->
+<!-- mo069q7k_nqhwzzq0j -->
 <g id="node3" class="node">
-<title>mnp3hkr3_t1g7ly4u4</title>
+<title>mo069q7k_nqhwzzq0j</title>
 <text xml:space="preserve" text-anchor="middle" x="116.8" y="-38" font-family="Sans-Serif" font-size="8.00">worker</text>
 <use href="#icon-ughy3o" x="116.8" y="-72"/></g>
-<!-- mnp3hkr4_rae6zyc5m&#45;&gt;mnp3hkr3_t1g7ly4u4 -->
+<!-- mo069q7l_upp6v7qgg&#45;&gt;mo069q7k_nqhwzzq0j -->
 <g id="edge1" class="edge">
-<title>mnp3hkr4_rae6zyc5m&#45;&gt;mnp3hkr3_t1g7ly4u4</title>
+<title>mo069q7l_upp6v7qgg&#45;&gt;mo069q7k_nqhwzzq0j</title>
 <path fill="none" stroke="#7b8894" d="M36.2,-111.77C36.2,-91.06 36.2,-68 36.2,-68 36.2,-68 81.64,-68 81.64,-68"/>
 <polygon fill="#7b8894" stroke="#7b8894" points="81.64,-69.75 86.64,-68 81.64,-66.25 81.64,-69.75"/>
 </g>
-<!-- mnp3hkr3_oe3e1hkil -->
+<!-- mo069q7k_7enserxu2 -->
 <g id="node4" class="node">
-<title>mnp3hkr3_oe3e1hkil</title>
+<title>mo069q7k_7enserxu2</title>
 <text xml:space="preserve" text-anchor="middle" x="116.8" y="-114" font-family="Sans-Serif" font-size="8.00">worker</text>
 <use href="#icon-ughy3o" x="116.8" y="-148"/></g>
-<!-- mnp3hkr4_rae6zyc5m&#45;&gt;mnp3hkr3_oe3e1hkil -->
+<!-- mo069q7l_upp6v7qgg&#45;&gt;mo069q7k_7enserxu2 -->
 <g id="edge2" class="edge">
-<title>mnp3hkr4_rae6zyc5m&#45;&gt;mnp3hkr3_oe3e1hkil</title>
+<title>mo069q7l_upp6v7qgg&#45;&gt;mo069q7k_7enserxu2</title>
 <path fill="none" stroke="#7b8894" d="M71.68,-144C71.68,-144 81.83,-144 81.83,-144"/>
 <polygon fill="#7b8894" stroke="#7b8894" points="81.83,-145.75 86.83,-144 81.83,-142.25 81.83,-145.75"/>
 </g>
-<!-- mnp3hkr3_ewkkq9pvg -->
+<!-- mo069q7l_rqfzbngem -->
 <g id="node5" class="node">
-<title>mnp3hkr3_ewkkq9pvg</title>
+<title>mo069q7l_rqfzbngem</title>
 <text xml:space="preserve" text-anchor="middle" x="116.8" y="-190" font-family="Sans-Serif" font-size="8.00">worker</text>
 <use href="#icon-ughy3o" x="116.8" y="-224"/></g>
-<!-- mnp3hkr4_rae6zyc5m&#45;&gt;mnp3hkr3_ewkkq9pvg -->
+<!-- mo069q7l_upp6v7qgg&#45;&gt;mo069q7l_rqfzbngem -->
 <g id="edge3" class="edge">
-<title>mnp3hkr4_rae6zyc5m&#45;&gt;mnp3hkr3_ewkkq9pvg</title>
+<title>mo069q7l_upp6v7qgg&#45;&gt;mo069q7l_rqfzbngem</title>
 <path fill="none" stroke="#7b8894" d="M36.2,-176.23C36.2,-196.94 36.2,-220 36.2,-220 36.2,-220 81.64,-220 81.64,-220"/>
 <polygon fill="#7b8894" stroke="#7b8894" points="81.64,-221.75 86.64,-220 81.64,-218.25 81.64,-221.75"/>
 </g>
-<!-- mnp3hkt2_difzt44kf -->
+<!-- mo069qa6_vkj2hw8qf -->
 <g id="node2" class="node">
-<title>mnp3hkt2_difzt44kf</title>
+<title>mo069qa6_vkj2hw8qf</title>
 <text xml:space="preserve" text-anchor="middle" x="190.4" y="-114" font-family="Sans-Serif" font-size="8.00">Database</text>
 <use href="#icon-q3noqf" x="190.4" y="-148"/></g>
-<!-- mnp3hkr3_t1g7ly4u4&#45;&gt;mnp3hkt2_difzt44kf -->
+<!-- mo069q7k_nqhwzzq0j&#45;&gt;mo069qa6_vkj2hw8qf -->
 <g id="edge4" class="edge">
-<title>mnp3hkr3_t1g7ly4u4&#45;&gt;mnp3hkt2_difzt44kf</title>
+<title>mo069q7k_nqhwzzq0j&#45;&gt;mo069qa6_vkj2hw8qf</title>
 <path fill="none" stroke="#7b8894" d="M145.39,-68C166,-68 190.2,-68 190.2,-68 190.2,-68 190.2,-105.26 190.2,-105.26"/>
 <polygon fill="#7b8894" stroke="#7b8894" points="188.45,-105.26 190.2,-110.26 191.95,-105.26 188.45,-105.26"/>
 </g>
-<!-- mnp3hkr3_oe3e1hkil&#45;&gt;mnp3hkt2_difzt44kf -->
+<!-- mo069q7k_7enserxu2&#45;&gt;mo069qa6_vkj2hw8qf -->
 <g id="edge5" class="edge">
-<title>mnp3hkr3_oe3e1hkil&#45;&gt;mnp3hkt2_difzt44kf</title>
+<title>mo069q7k_7enserxu2&#45;&gt;mo069qa6_vkj2hw8qf</title>
 <path fill="none" stroke="#7b8894" d="M145.47,-144C145.47,-144 155.18,-144 155.18,-144"/>
 <polygon fill="#7b8894" stroke="#7b8894" points="155.18,-145.75 160.18,-144 155.18,-142.25 155.18,-145.75"/>
 </g>
-<!-- mnp3hkr3_ewkkq9pvg&#45;&gt;mnp3hkt2_difzt44kf -->
+<!-- mo069q7l_rqfzbngem&#45;&gt;mo069qa6_vkj2hw8qf -->
 <g id="edge6" class="edge">
-<title>mnp3hkr3_ewkkq9pvg&#45;&gt;mnp3hkt2_difzt44kf</title>
+<title>mo069q7l_rqfzbngem&#45;&gt;mo069qa6_vkj2hw8qf</title>
 <path fill="none" stroke="#7b8894" d="M145.39,-220C166,-220 190.2,-220 190.2,-220 190.2,-220 190.2,-182.74 190.2,-182.74"/>
 <polygon fill="#7b8894" stroke="#7b8894" points="191.95,-182.74 190.2,-177.74 188.45,-182.74 191.95,-182.74"/>
 </g>

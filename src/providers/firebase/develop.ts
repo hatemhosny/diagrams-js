@@ -15,49 +15,49 @@ function _Develop(label?: string, options?: Record<string, unknown>) {
 
 export function Authentication(label?: string, options?: Record<string, unknown>) {
   const node = _Develop(label ?? "Authentication", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Authentication";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Authentication";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = authenticationIcon;
   return node;
 }
 
 export function Firestore(label?: string, options?: Record<string, unknown>) {
   const node = _Develop(label ?? "Firestore", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Firestore";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Firestore";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = firestoreIcon;
   return node;
 }
 
 export function Functions(label?: string, options?: Record<string, unknown>) {
   const node = _Develop(label ?? "Functions", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Functions";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Functions";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = functionsIcon;
   return node;
 }
 
 export function Hosting(label?: string, options?: Record<string, unknown>) {
   const node = _Develop(label ?? "Hosting", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Hosting";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Hosting";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = hostingIcon;
   return node;
 }
 
 export function MLKit(label?: string, options?: Record<string, unknown>) {
   const node = _Develop(label ?? "MLKit", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "MLKit";
+  (node as unknown as Record<string, unknown>)["~resource"] = "MLKit";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = ml_kitIcon;
   return node;
 }
 
 export function RealtimeDatabase(label?: string, options?: Record<string, unknown>) {
   const node = _Develop(label ?? "RealtimeDatabase", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "RealtimeDatabase";
+  (node as unknown as Record<string, unknown>)["~resource"] = "RealtimeDatabase";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = realtime_databaseIcon;
   return node;
 }
 
 export function Storage(label?: string, options?: Record<string, unknown>) {
   const node = _Develop(label ?? "Storage", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Storage";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Storage";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = storageIcon;
   return node;
 }

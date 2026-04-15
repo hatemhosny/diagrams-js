@@ -30,6 +30,12 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: "category",
+      label: "Plugins",
+      collapsed: false,
+      items: ["plugins/overview", "plugins/docker-compose"],
+    },
+    {
+      type: "category",
       label: "Node Reference",
       collapsed: true,
       items: [

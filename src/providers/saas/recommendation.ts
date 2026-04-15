@@ -9,7 +9,7 @@ function _Recommendation(label?: string, options?: Record<string, unknown>) {
 
 export function Recombee(label?: string, options?: Record<string, unknown>) {
   const node = _Recommendation(label ?? "Recombee", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Recombee";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Recombee";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = recombeeIcon;
   return node;
 }

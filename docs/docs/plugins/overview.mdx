@@ -1,0 +1,723 @@
+---
+title: Plugin System Overview
+description: Extend diagrams-js with custom import/export formats, metadata providers, and hooks
+---
+
+# Plugin System Overview
+
+The diagrams-js plugin system allows you to extend the library with custom functionality including:
+
+- **Importers**: Import from external formats (Docker Compose, Terraform, etc.)
+- **Exporters**: Export to external formats
+- **Metadata Providers**: Attach cloud provider metadata (pricing, specs) to nodes
+- **Hooks**: Execute custom code at various lifecycle events
+
+## Quick Start
+
+### Creating a Simple Plugin
+
+```typescript
+// Create a custom exporter plugin
+// Note: Use context.lib to access diagrams-js exports instead of importing
+const myExporter = {
+  name: "my-exporter",
+  version: "1.0.0",
+  apiVersion: "1.0",
+  runtimeSupport: {
+    browser: true,
+    node: true,
+    deno: true,
+    bun: true,
+  },
+  capabilities: [
+    {
+      type: "exporter",
+      name: "my-format",
+      extension: ".my",
+      mimeType: "text/plain",
+      export: async (diagram, context) => {
+        // Access library exports via context.lib
+        const { Node, Edge } = context.lib;
+        return `Diagram: ${diagram.name}`;
+      },
+    },
+  ],
+};
+
+// Use the plugin (import only needed for Diagram creation)
+import { Diagram } from "diagrams-js";
+
+const diagram = Diagram("My Architecture");
+
+// Register the plugin directly
+await diagram.registerPlugins([myExporter]);
+
+// Export to custom format
+const result = await diagram.export("my-format");
+console.log(result); // "Diagram: My Architecture"
+```
+
+### Built-in Plugins
+
+Built-in plugins (like JSON) are automatically registered:
+
+```typescript
+const diagram = Diagram("My Architecture");
+
+const json = await diagram.export("json"); // Works without explicit registration
+const json2 = diagram.toJSON(); // Also works
+```
+
+### Using Library Exports in Plugins
+
+Plugins should use `context.lib` to access diagrams-js functions instead of importing them. This prevents multiple instances and circular dependencies. The `context.lib` object exports the entire diagrams-js library, so you can access any export including `Node`, `Edge`, `Cluster`, `Custom`, `Iconify`, etc.
+
+```typescript
+const myPlugin = {
+  name: "my-plugin",
+  version: "1.0.0",
+  apiVersion: "1.0",
+  runtimeSupport: { browser: true, node: true, deno: true, bun: true },
+  capabilities: [
+    {
+      type: "importer",
+      name: "my-format",
+      extensions: [".my"],
+      import: async (source, diagram, context) => {
+        // ✅ Good: Use context.lib to access any diagrams-js export
+        const { Node, Edge, Cluster, Custom, Iconify } = context.lib;
+
+        // Create nodes
+        const node = diagram.add(Node("My Node"));
+        const cluster = diagram.cluster("My Cluster");
+        cluster.add(Node("Nested Node"));
+
+        // Create Custom nodes with external icons
+        const customNode = diagram.add(Custom("Custom Service", "https://example.com/icon.png"));
+
+        // Create Iconify nodes
+        const iconifyNode = diagram.add(Iconify("Docker", "logos:docker"));
+      },
+    },
+  ],
+};
+```
+
+## Plugin Structure
+
+Every plugin must implement the `DiagramsPlugin` interface:
+
+```typescript
+interface DiagramsPlugin {
+  name: string; // Unique plugin name
+  version: string; // Semver version
+  apiVersion: "1.0"; // Plugin API version
+  runtimeSupport: {
+    browser: boolean; // Supports browsers
+    node: boolean; // Supports Node.js
+    deno: boolean; // Supports Deno
+    bun: boolean; // Supports Bun
+  };
+  dependencies?: string[]; // Names of required plugins
+  requiredConfig?: string[]; // Required configuration keys
+  capabilities: PluginCapability[];
+  initialize?: (config: unknown, context: PluginContext) => Promise<void>;
+  destroy?: () => Promise<void>;
+}
+```
+
+## Capabilities
+
+### Importer
+
+Import diagrams from external formats:
+
+```typescript
+// For plugins that need configuration, use a factory function
+const createDockerComposePlugin = (config?: { defaultVersion?: string }) => ({
+  name: "docker-compose",
+  version: "1.0.0",
+  apiVersion: "1.0",
+  runtimeSupport: { browser: true, node: true, deno: true, bun: true },
+  capabilities: [
+    {
+      type: "importer",
+      name: "docker-compose",
+      extensions: [".yml", ".yaml"],
+      mimeTypes: ["text/yaml"],
+      canImport: async (source) => {
+        return source.includes("services:");
+      },
+      import: async (source, diagram, context) => {
+        // Use context.loadYaml() - no need to bundle your own parser
+        const yaml = await context.loadYaml();
+        const compose = yaml.load(source);
+
+        for (const [name, service] of Object.entries(compose.services)) {
+          const node = diagram.add(Node(name));
+          node.metadata = { image: service.image };
+        }
+      },
+    },
+  ],
+});
+
+// Usage with factory - call it to get the plugin instance
+const diagram = Diagram("My App");
+await diagram.registerPlugins([createDockerComposePlugin()]);
+// or with config: await diagram.registerPlugins([createDockerComposePlugin({ defaultVersion: "3.9" })]);
+await diagram.import(yamlContent, "docker-compose");
+```
+
+**Importing Multiple Sources**
+
+When importing an array of strings, each source is placed in its own cluster:
+
+```typescript
+// Each compose file gets its own cluster
+await diagram.import([compose1, compose2, compose3], "docker-compose");
+```
+
+### Exporter
+
+Export diagrams to external formats:
+
+```typescript
+// Simple plugin without configuration - use an object directly
+const terraformPlugin = {
+  name: "terraform",
+  version: "1.0.0",
+  apiVersion: "1.0",
+  runtimeSupport: { browser: true, node: true, deno: true, bun: true },
+  capabilities: [
+    {
+      type: "exporter",
+      name: "terraform",
+      extension: ".tf",
+      mimeType: "text/plain",
+      export: async (diagram, context) => {
+        let tf = `# Terraform generated from ${diagram.name}\n\n`;
+
+        for (const node of diagram.toJSON().nodes) {
+          tf += `resource "aws_instance" "${node.id}" {\n`;
+          tf += `  # Configuration...\n`;
+          tf += `}\n\n`;
+        }
+
+        return tf;
+      },
+    },
+  ],
+};
+
+// Usage - pass the plugin instance directly
+const diagram = Diagram("My Infrastructure");
+await diagram.registerPlugins([terraformPlugin]);
+const terraform = await diagram.export("terraform");
+```
+
+For YAML export, use `context.loadYaml()`:
+
+```typescript
+const kubernetesPlugin = {
+  name: "kubernetes",
+  version: "1.0.0",
+  apiVersion: "1.0",
+  runtimeSupport: { browser: true, node: true, deno: true, bun: true },
+  capabilities: [
+    {
+      type: "exporter",
+      name: "kubernetes",
+      extension: ".yaml",
+      mimeType: "text/yaml",
+      export: async (diagram, context) => {
+        // Use context-provided YAML module
+        const yaml = await context.loadYaml();
+        const json = diagram.toJSON();
+
+        const manifests = json.nodes.map((node) => ({
+          apiVersion: "apps/v1",
+          kind: "Deployment",
+          metadata: { name: node.label },
+          spec: {
+            replicas: node.metadata?.replicas || 1,
+            template: {
+              spec: {
+                containers: [{ name: node.label, image: node.metadata?.image }],
+              },
+            },
+          },
+        }));
+
+        return yaml.dump(manifests);
+      },
+    },
+  ],
+};
+```
+
+### Metadata Provider
+
+Attach cloud provider metadata to nodes:
+
+```typescript
+const awsMetadataPlugin = {
+  name: "aws-metadata",
+  version: "1.0.0",
+  apiVersion: "1.0",
+  runtimeSupport: { browser: true, node: true, deno: true, bun: true },
+  capabilities: [
+    {
+      type: "metadata",
+      provider: "aws",
+      nodeTypes: ["EC2", "RDS", "Lambda"],
+      getMetadata: async (nodeType, config, context) => {
+        // Fetch pricing/specs from AWS API
+        return {
+          provider: "aws",
+          specifications: {
+            cpu: 4,
+            memory: "16GB",
+          },
+          pricing: {
+            hourly: 0.192,
+            monthly: 140.16,
+          },
+        };
+      },
+    },
+  ],
+};
+
+// Usage
+const diagram = Diagram("My App");
+await diagram.registerPlugins([awsMetadataPlugin]);
+const ec2 = diagram.add(EC2("Web Server"));
+
+// Attach metadata to all EC2 nodes
+await diagram.attachMetadata("aws", "EC2");
+
+// Access metadata
+console.log(ec2.metadata.pricing.monthly); // 140.16
+```
+
+### Hooks
+
+Execute code at lifecycle events:
+
+```typescript
+const loggingPlugin = {
+  name: "logging",
+  version: "1.0.0",
+  apiVersion: "1.0",
+  runtimeSupport: { browser: true, node: true, deno: true, bun: true },
+  capabilities: [
+    {
+      type: "hook",
+      hooks: [
+        {
+          event: "before:export",
+          handler: async (data, context) => {
+            console.log(`Exporting to ${data.format}...`);
+            return data;
+          },
+        },
+        {
+          event: "after:export",
+          handler: async (data, context) => {
+            console.log("Export complete!");
+            return data;
+          },
+        },
+      ],
+    },
+  ],
+};
+
+await diagram.registerPlugins([loggingPlugin]);
+```
+
+#### Available Hook Events
+
+- `before:import` / `after:import` - Import operations
+- `before:export` / `after:export` - Export operations
+- `before:render` / `after:render` - Rendering
+- `before:serialize` / `after:deserialize` - JSON serialization
+- `node:create` - Node creation
+- `edge:create` - Edge creation
+- `cluster:create` - Cluster creation
+- `metadata:attach` - Metadata attachment
+
+## Plugin Dependencies
+
+Plugins can declare dependencies on other plugins:
+
+```typescript
+const basePlugin = {
+  name: "base-plugin",
+  version: "1.0.0",
+  apiVersion: "1.0",
+  runtimeSupport: { browser: true, node: true, deno: true, bun: true },
+  capabilities: [
+    {
+      type: "exporter",
+      name: "base-format",
+      extension: ".base",
+      mimeType: "text/plain",
+      export: async () => "Base export",
+    },
+  ],
+};
+
+const advancedPlugin = {
+  name: "advanced",
+  version: "1.0.0",
+  apiVersion: "1.0",
+  runtimeSupport: { browser: true, node: true, deno: true, bun: true },
+  dependencies: ["base-plugin"], // Depends on base-plugin
+  capabilities: [
+    {
+      type: "exporter",
+      name: "advanced-format",
+      extension: ".adv",
+      mimeType: "text/plain",
+      export: async (diagram, context) => {
+        // Can access base-plugin's capabilities
+        const baseExporter = context.getExporter("base-format");
+        const base = await baseExporter.export(diagram, context);
+        return `Advanced: ${base}`;
+      },
+    },
+  ],
+};
+
+// Register in correct order (dependencies first)
+const diagram = Diagram("Test");
+await diagram.registerPlugins([basePlugin, advancedPlugin]);
+```
+
+## Plugin Context Utilities
+
+The plugin context provides several utility methods to help plugins function without bundling their own dependencies:
+
+### Lazy-Loaded YAML Parser
+
+Plugins can use `context.loadYaml()` to access a YAML parsing module (js-yaml) without bundling their own parser:
+
+```typescript
+const myPlugin = {
+  name: "my-yaml-plugin",
+  version: "1.0.0",
+  apiVersion: "1.0",
+  runtimeSupport: { browser: true, node: true, deno: true, bun: true },
+  initialize: async (config, context) => {
+    // Load the YAML module during initialization
+    const yaml = await context.loadYaml();
+    // Store it for later use in import/export
+    this.yamlModule = yaml;
+  },
+  capabilities: [
+    {
+      type: "importer",
+      name: "my-format",
+      extensions: [".yml", ".yaml"],
+      import: async (source, diagram, context) => {
+        // Use the pre-loaded YAML module
+        const yaml = await context.loadYaml();
+        const parsed = yaml.load(source);
+        // ... process parsed data
+      },
+    },
+    {
+      type: "exporter",
+      name: "my-format",
+      extension: ".yml",
+      mimeType: "text/yaml",
+      export: async (diagram, context) => {
+        const yaml = await context.loadYaml();
+        const data = {
+          /* ... */
+        };
+        return yaml.dump(data);
+      },
+    },
+  ],
+};
+```
+
+**Benefits:**
+
+- No need to bundle a YAML parser in your plugin
+- Consistent YAML parsing across all plugins
+- Lazy-loaded only when needed
+- Works across all runtimes (browser, Node.js, Deno, Bun)
+
+### Resource Discovery
+
+Plugins can access the resource discovery utility via `context.loadResourcesList()`:
+
+```typescript
+const myPlugin = {
+  name: "my-plugin",
+  version: "1.0.0",
+  apiVersion: "1.0",
+  runtimeSupport: { browser: true, node: true, deno: true, bun: true },
+  initialize: async (config, context) => {
+    const resources = await context.loadResourcesList();
+    if (resources?.findResource) {
+      // Use findResource to dynamically discover provider icons
+      const matches = resources.findResource("postgres");
+      // matches = [{ provider: "onprem", type: "database", resource: "Postgresql" }, ...]
+    }
+  },
+  // ...
+};
+```
+
+## Plugin Registry
+
+Access the plugin registry to query capabilities:
+
+```typescript
+const diagram = Diagram("Test");
+
+await diagram.registerPlugins([myPlugin]);
+
+// List all capabilities
+const caps = diagram.registry.listCapabilities();
+console.log(caps.importers); // ["docker-compose", ...]
+console.log(caps.exporters); // ["terraform", "json", ...]
+
+// Get specific plugin
+const importer = diagram.registry.getImporter("docker-compose");
+const exporter = diagram.registry.getExporter("terraform");
+const provider = diagram.registry.getMetadataProvider("aws");
+
+// List all registered plugins
+const plugins = diagram.registry.listPlugins();
+```
+
+## Sharing Plugin Registries
+
+You can share a plugin registry across multiple diagrams:
+
+```typescript
+import { createPluginRegistry } from "diagrams-js";
+
+// Create a shared registry
+const sharedRegistry = createPluginRegistry();
+
+// Register plugins once
+await sharedRegistry.register(dockerComposePlugin);
+await sharedRegistry.register(terraformPlugin);
+
+// Use in multiple diagrams
+const diagram1 = Diagram("App 1", { pluginRegistry: sharedRegistry });
+const diagram2 = Diagram("App 2", { pluginRegistry: sharedRegistry });
+
+// Note: When using a shared registry, plugins are already registered
+// so you don't need to call registerPlugins() again
+```
+
+## Best Practices
+
+### 1. Use Objects for Simple Plugins, Factories for Configurable Ones
+
+If your plugin doesn't need configuration, use a plain object. Use factory functions only when you need to accept configuration:
+
+```typescript
+// ✅ Good: Simple plugin without config - use an object
+const mySimplePlugin = {
+  name: "my-simple-plugin",
+  version: "1.0.0",
+  apiVersion: "1.0",
+  runtimeSupport: { browser: true, node: true, deno: true, bun: true },
+  capabilities: [
+    // ...
+  ],
+};
+
+// ✅ Good: Plugin with config - use a factory function
+const createMyPlugin = (config: { apiKey: string }) => ({
+  name: "my-plugin",
+  version: "1.0.0",
+  apiVersion: "1.0",
+  runtimeSupport: { browser: true, node: true, deno: true, bun: true },
+  capabilities: [
+    // ... use config.apiKey ...
+  ],
+});
+
+// Usage: Objects are passed directly
+await diagram.registerPlugins([mySimplePlugin]);
+
+// Usage: Factories are called to get the instance
+await diagram.registerPlugins([createMyPlugin({ apiKey: "xxx" })]);
+```
+
+### 2. Declare Runtime Support
+
+Always declare which runtimes your plugin supports:
+
+```typescript
+runtimeSupport: {
+  node: true,      // Works in Node.js
+  browser: false,  // Doesn't work in browsers (uses fs)
+  deno: false,     // Not tested in Deno
+  bun: false,      // Not tested in Bun
+}
+```
+
+### 3. Handle Errors Gracefully
+
+```typescript
+export: async (diagram, context) => {
+  try {
+    // Export logic
+  } catch (error) {
+    throw new Error(`Export failed: ${error.message}`);
+  }
+}
+```
+
+### 4. Use Context-Provided Utilities
+
+For common needs like YAML parsing, use the utilities provided in the plugin context instead of bundling your own dependencies:
+
+```typescript
+// ✅ Good: Use context.loadYaml() - no bundling needed
+import: async (source, diagram, context) => {
+  const yaml = await context.loadYaml();
+  const parsed = yaml.load(source);
+  // ...
+}
+
+// ❌ Avoid: Bundling your own YAML parser
+import: async (source, diagram, context) => {
+  const yaml = await import("yaml"); // Adds bundle size
+  const parsed = yaml.parse(source);
+  // ...
+}
+```
+
+This approach:
+
+- Reduces plugin bundle size
+- Ensures consistent parsing across plugins
+- Works across all runtimes automatically
+
+### 5. Validate Configuration
+
+Use `requiredConfig` and `initialize` to validate plugin setup:
+
+```typescript
+const apiPlugin = () => ({
+  name: "api-plugin",
+  version: "1.0.0",
+  apiVersion: "1.0",
+  requiredConfig: ["apiKey", "region"],
+  async initialize(config, context) {
+    if (!config.apiKey) {
+      throw new Error("apiKey is required");
+    }
+    // Set up API client
+  },
+  // ...
+});
+
+// Usage with config - call factory with config
+const diagram = Diagram("Test");
+await diagram.registerPlugins([apiPlugin({ apiKey: "xxx", region: "us-west-2" })]);
+```
+
+## Examples
+
+### Complete Docker Compose Plugin
+
+```typescript
+const createDockerComposePlugin = () => ({
+  name: "docker-compose",
+  version: "1.0.0",
+  apiVersion: "1.0",
+  runtimeSupport: { browser: true, node: true, deno: true, bun: true },
+  capabilities: [
+    {
+      type: "importer",
+      name: "docker-compose",
+      extensions: [".yml", ".yaml"],
+      mimeTypes: ["text/yaml", "application/x-yaml"],
+      canImport: async (source) => {
+        return source.includes("version:") || source.includes("services:");
+      },
+      import: async (source, diagram, context) => {
+        // Use context.loadYaml() instead of bundling your own parser
+        const yaml = await context.loadYaml();
+        const compose = yaml.load(source);
+
+        // Create nodes for each service
+        for (const [name, service] of Object.entries(compose.services || {})) {
+          const node = diagram.add(
+            Node(name, {
+              shape: "box",
+              style: "rounded",
+            }),
+          );
+
+          node.metadata = {
+            compose: {
+              image: service.image,
+              ports: service.ports,
+              environment: service.environment,
+            },
+          };
+        }
+
+        // Create edges for dependencies
+        for (const [name, service] of Object.entries(compose.services || {})) {
+          if (service.depends_on) {
+            const deps = Array.isArray(service.depends_on)
+              ? service.depends_on
+              : Object.keys(service.depends_on);
+
+            for (const dep of deps) {
+              // Find nodes and connect them
+              const json = diagram.toJSON();
+              const sourceNode = json.nodes.find((n) => n.id === dep);
+              const targetNode = json.nodes.find((n) => n.id === name);
+              if (sourceNode && targetNode) {
+                // Connection logic...
+              }
+            }
+          }
+        }
+      },
+    },
+    {
+      type: "exporter",
+      name: "docker-compose",
+      extension: ".yml",
+      mimeType: "text/yaml",
+      export: async (diagram, context) => {
+        // Use context.loadYaml() for consistent YAML serialization
+        const yaml = await context.loadYaml();
+        const compose = { version: "3.8", services: {} };
+
+        for (const node of diagram.toJSON().nodes) {
+          compose.services[node.label] = {
+            image: node.metadata?.compose?.image || "nginx:latest",
+            // ...
+          };
+        }
+
+        return yaml.dump(compose);
+      },
+    },
+  ],
+});
+```
+
+## Next Steps
+
+- Try the [Docker Compose Plugin](./docker-compose.mdx) for importing/exporting Docker Compose files
+- See [complete examples](../getting-started/examples.mdx)
+- Check out the [API Reference](../guides/diagram.mdx)

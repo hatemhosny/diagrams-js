@@ -42,6 +42,11 @@ export type ThemeName = keyof typeof THEMES;
 export type ThemeConfig = (typeof THEMES)[ThemeName];
 
 /**
+ * Plugin definition for diagram options
+ */
+export type PluginDefinition = import("./plugins/types.js").DiagramsPlugin;
+
+/**
  * Options for creating a diagram
  * @example
  * ```typescript
@@ -75,6 +80,8 @@ export interface DiagramOptions {
   nodeAttr?: Record<string, string>;
   /** Default edge Graphviz attributes */
   edgeAttr?: Record<string, string>;
+  /** Custom plugin registry (creates new one if not provided) */
+  pluginRegistry?: import("./plugins/types.js").PluginRegistry;
 }
 
 /**
@@ -146,3 +153,5 @@ export interface NodeOptions {
 
 // Note: Node and Edge types are defined in their respective modules
 // Import them from "./Node.js" and "./Edge.js"
+
+export type Yaml = typeof import("./yaml.ts");

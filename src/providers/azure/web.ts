@@ -28,140 +28,140 @@ function _Web(label?: string, options?: Record<string, unknown>) {
 
 export function APICenter(label?: string, options?: Record<string, unknown>) {
   const node = _Web(label ?? "APICenter", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "APICenter";
+  (node as unknown as Record<string, unknown>)["~resource"] = "APICenter";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = api_centerIcon;
   return node;
 }
 
 export function APIConnections(label?: string, options?: Record<string, unknown>) {
   const node = _Web(label ?? "APIConnections", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "APIConnections";
+  (node as unknown as Record<string, unknown>)["~resource"] = "APIConnections";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = api_connectionsIcon;
   return node;
 }
 
 export function APIManagementServices(label?: string, options?: Record<string, unknown>) {
   const node = _Web(label ?? "APIManagementServices", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "APIManagementServices";
+  (node as unknown as Record<string, unknown>)["~resource"] = "APIManagementServices";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = api_management_servicesIcon;
   return node;
 }
 
 export function AppServiceCertificates(label?: string, options?: Record<string, unknown>) {
   const node = _Web(label ?? "AppServiceCertificates", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "AppServiceCertificates";
+  (node as unknown as Record<string, unknown>)["~resource"] = "AppServiceCertificates";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = app_service_certificatesIcon;
   return node;
 }
 
 export function AppServiceDomains(label?: string, options?: Record<string, unknown>) {
   const node = _Web(label ?? "AppServiceDomains", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "AppServiceDomains";
+  (node as unknown as Record<string, unknown>)["~resource"] = "AppServiceDomains";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = app_service_domainsIcon;
   return node;
 }
 
 export function AppServiceEnvironments(label?: string, options?: Record<string, unknown>) {
   const node = _Web(label ?? "AppServiceEnvironments", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "AppServiceEnvironments";
+  (node as unknown as Record<string, unknown>)["~resource"] = "AppServiceEnvironments";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = app_service_environmentsIcon;
   return node;
 }
 
 export function AppServicePlans(label?: string, options?: Record<string, unknown>) {
   const node = _Web(label ?? "AppServicePlans", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "AppServicePlans";
+  (node as unknown as Record<string, unknown>)["~resource"] = "AppServicePlans";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = app_service_plansIcon;
   return node;
 }
 
 export function AppServices(label?: string, options?: Record<string, unknown>) {
   const node = _Web(label ?? "AppServices", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "AppServices";
+  (node as unknown as Record<string, unknown>)["~resource"] = "AppServices";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = app_servicesIcon;
   return node;
 }
 
 export function AppSpace(label?: string, options?: Record<string, unknown>) {
   const node = _Web(label ?? "AppSpace", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "AppSpace";
+  (node as unknown as Record<string, unknown>)["~resource"] = "AppSpace";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = app_spaceIcon;
   return node;
 }
 
 export function AzureMediaService(label?: string, options?: Record<string, unknown>) {
   const node = _Web(label ?? "AzureMediaService", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "AzureMediaService";
+  (node as unknown as Record<string, unknown>)["~resource"] = "AzureMediaService";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = azure_media_serviceIcon;
   return node;
 }
 
 export function AzureSpringApps(label?: string, options?: Record<string, unknown>) {
   const node = _Web(label ?? "AzureSpringApps", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "AzureSpringApps";
+  (node as unknown as Record<string, unknown>)["~resource"] = "AzureSpringApps";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = azure_spring_appsIcon;
   return node;
 }
 
 export function CognitiveSearch(label?: string, options?: Record<string, unknown>) {
   const node = _Web(label ?? "CognitiveSearch", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "CognitiveSearch";
+  (node as unknown as Record<string, unknown>)["~resource"] = "CognitiveSearch";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = cognitive_searchIcon;
   return node;
 }
 
 export function CognitiveServices(label?: string, options?: Record<string, unknown>) {
   const node = _Web(label ?? "CognitiveServices", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "CognitiveServices";
+  (node as unknown as Record<string, unknown>)["~resource"] = "CognitiveServices";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = cognitive_servicesIcon;
   return node;
 }
 
 export function FrontDoorAndCDNProfiles(label?: string, options?: Record<string, unknown>) {
   const node = _Web(label ?? "FrontDoorAndCDNProfiles", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "FrontDoorAndCDNProfiles";
+  (node as unknown as Record<string, unknown>)["~resource"] = "FrontDoorAndCDNProfiles";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = front_door_and_cdn_profilesIcon;
   return node;
 }
 
 export function MediaServices(label?: string, options?: Record<string, unknown>) {
   const node = _Web(label ?? "MediaServices", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "MediaServices";
+  (node as unknown as Record<string, unknown>)["~resource"] = "MediaServices";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = media_servicesIcon;
   return node;
 }
 
 export function NotificationHubNamespaces(label?: string, options?: Record<string, unknown>) {
   const node = _Web(label ?? "NotificationHubNamespaces", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "NotificationHubNamespaces";
+  (node as unknown as Record<string, unknown>)["~resource"] = "NotificationHubNamespaces";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = notification_hub_namespacesIcon;
   return node;
 }
 
 export function PowerPlatform(label?: string, options?: Record<string, unknown>) {
   const node = _Web(label ?? "PowerPlatform", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "PowerPlatform";
+  (node as unknown as Record<string, unknown>)["~resource"] = "PowerPlatform";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = power_platformIcon;
   return node;
 }
 
 export function Search(label?: string, options?: Record<string, unknown>) {
   const node = _Web(label ?? "Search", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Search";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Search";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = searchIcon;
   return node;
 }
 
 export function Signalr(label?: string, options?: Record<string, unknown>) {
   const node = _Web(label ?? "Signalr", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Signalr";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Signalr";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = signalrIcon;
   return node;
 }
 
 export function StaticApps(label?: string, options?: Record<string, unknown>) {
   const node = _Web(label ?? "StaticApps", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "StaticApps";
+  (node as unknown as Record<string, unknown>)["~resource"] = "StaticApps";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = static_appsIcon;
   return node;
 }

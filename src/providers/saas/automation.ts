@@ -9,7 +9,7 @@ function _Automation(label?: string, options?: Record<string, unknown>) {
 
 export function N8n(label?: string, options?: Record<string, unknown>) {
   const node = _Automation(label ?? "N8n", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "N8n";
+  (node as unknown as Record<string, unknown>)["~resource"] = "N8n";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = n8nIcon;
   return node;
 }

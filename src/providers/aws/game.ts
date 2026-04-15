@@ -10,14 +10,14 @@ function _Game(label?: string, options?: Record<string, unknown>) {
 
 export function GameTech(label?: string, options?: Record<string, unknown>) {
   const node = _Game(label ?? "GameTech", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "GameTech";
+  (node as unknown as Record<string, unknown>)["~resource"] = "GameTech";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = game_techIcon;
   return node;
 }
 
 export function Gamelift(label?: string, options?: Record<string, unknown>) {
   const node = _Game(label ?? "Gamelift", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Gamelift";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Gamelift";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = gameliftIcon;
   return node;
 }

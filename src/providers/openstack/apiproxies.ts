@@ -9,7 +9,7 @@ function _Apiproxies(label?: string, options?: Record<string, unknown>) {
 
 export function EC2API(label?: string, options?: Record<string, unknown>) {
   const node = _Apiproxies(label ?? "EC2API", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "EC2API";
+  (node as unknown as Record<string, unknown>)["~resource"] = "EC2API";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = ec2apiIcon;
   return node;
 }

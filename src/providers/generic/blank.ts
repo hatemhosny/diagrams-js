@@ -9,7 +9,7 @@ function _Blank(label?: string, options?: Record<string, unknown>) {
 
 export function Blank(label?: string, options?: Record<string, unknown>) {
   const node = _Blank(label ?? "Blank", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Blank";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Blank";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = blankIcon;
   return node;
 }

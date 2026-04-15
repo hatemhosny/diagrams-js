@@ -9,7 +9,7 @@ function _Proxmox(label?: string, options?: Record<string, unknown>) {
 
 export function Pve(label?: string, options?: Record<string, unknown>) {
   const node = _Proxmox(label ?? "Pve", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Pve";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Pve";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = pveIcon;
   return node;
 }

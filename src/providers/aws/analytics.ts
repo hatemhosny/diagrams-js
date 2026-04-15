@@ -37,203 +37,203 @@ function _Analytics(label?: string, options?: Record<string, unknown>) {
 
 export function AmazonOpensearchService(label?: string, options?: Record<string, unknown>) {
   const node = _Analytics(label ?? "AmazonOpensearchService", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "AmazonOpensearchService";
+  (node as unknown as Record<string, unknown>)["~resource"] = "AmazonOpensearchService";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = amazon_opensearch_serviceIcon;
   return node;
 }
 
 export function Analytics(label?: string, options?: Record<string, unknown>) {
   const node = _Analytics(label ?? "Analytics", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Analytics";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Analytics";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = analyticsIcon;
   return node;
 }
 
 export function Athena(label?: string, options?: Record<string, unknown>) {
   const node = _Analytics(label ?? "Athena", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Athena";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Athena";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = athenaIcon;
   return node;
 }
 
 export function CloudsearchSearchDocuments(label?: string, options?: Record<string, unknown>) {
   const node = _Analytics(label ?? "CloudsearchSearchDocuments", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "CloudsearchSearchDocuments";
+  (node as unknown as Record<string, unknown>)["~resource"] = "CloudsearchSearchDocuments";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = cloudsearch_search_documentsIcon;
   return node;
 }
 
 export function Cloudsearch(label?: string, options?: Record<string, unknown>) {
   const node = _Analytics(label ?? "Cloudsearch", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Cloudsearch";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Cloudsearch";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = cloudsearchIcon;
   return node;
 }
 
 export function DataLakeResource(label?: string, options?: Record<string, unknown>) {
   const node = _Analytics(label ?? "DataLakeResource", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "DataLakeResource";
+  (node as unknown as Record<string, unknown>)["~resource"] = "DataLakeResource";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = data_lake_resourceIcon;
   return node;
 }
 
 export function DataPipeline(label?: string, options?: Record<string, unknown>) {
   const node = _Analytics(label ?? "DataPipeline", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "DataPipeline";
+  (node as unknown as Record<string, unknown>)["~resource"] = "DataPipeline";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = data_pipelineIcon;
   return node;
 }
 
 export function ElasticsearchService(label?: string, options?: Record<string, unknown>) {
   const node = _Analytics(label ?? "ElasticsearchService", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "ElasticsearchService";
+  (node as unknown as Record<string, unknown>)["~resource"] = "ElasticsearchService";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = elasticsearch_serviceIcon;
   return node;
 }
 
 export function EMRCluster(label?: string, options?: Record<string, unknown>) {
   const node = _Analytics(label ?? "EMRCluster", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "EMRCluster";
+  (node as unknown as Record<string, unknown>)["~resource"] = "EMRCluster";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = emr_clusterIcon;
   return node;
 }
 
 export function EMREngineMaprM3(label?: string, options?: Record<string, unknown>) {
   const node = _Analytics(label ?? "EMREngineMaprM3", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "EMREngineMaprM3";
+  (node as unknown as Record<string, unknown>)["~resource"] = "EMREngineMaprM3";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = emr_engine_mapr_m3Icon;
   return node;
 }
 
 export function EMREngineMaprM5(label?: string, options?: Record<string, unknown>) {
   const node = _Analytics(label ?? "EMREngineMaprM5", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "EMREngineMaprM5";
+  (node as unknown as Record<string, unknown>)["~resource"] = "EMREngineMaprM5";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = emr_engine_mapr_m5Icon;
   return node;
 }
 
 export function EMREngineMaprM7(label?: string, options?: Record<string, unknown>) {
   const node = _Analytics(label ?? "EMREngineMaprM7", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "EMREngineMaprM7";
+  (node as unknown as Record<string, unknown>)["~resource"] = "EMREngineMaprM7";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = emr_engine_mapr_m7Icon;
   return node;
 }
 
 export function EMREngine(label?: string, options?: Record<string, unknown>) {
   const node = _Analytics(label ?? "EMREngine", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "EMREngine";
+  (node as unknown as Record<string, unknown>)["~resource"] = "EMREngine";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = emr_engineIcon;
   return node;
 }
 
 export function EMRHdfsCluster(label?: string, options?: Record<string, unknown>) {
   const node = _Analytics(label ?? "EMRHdfsCluster", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "EMRHdfsCluster";
+  (node as unknown as Record<string, unknown>)["~resource"] = "EMRHdfsCluster";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = emr_hdfs_clusterIcon;
   return node;
 }
 
 export function EMR(label?: string, options?: Record<string, unknown>) {
   const node = _Analytics(label ?? "EMR", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "EMR";
+  (node as unknown as Record<string, unknown>)["~resource"] = "EMR";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = emrIcon;
   return node;
 }
 
 export function GlueCrawlers(label?: string, options?: Record<string, unknown>) {
   const node = _Analytics(label ?? "GlueCrawlers", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "GlueCrawlers";
+  (node as unknown as Record<string, unknown>)["~resource"] = "GlueCrawlers";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = glue_crawlersIcon;
   return node;
 }
 
 export function GlueDataCatalog(label?: string, options?: Record<string, unknown>) {
   const node = _Analytics(label ?? "GlueDataCatalog", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "GlueDataCatalog";
+  (node as unknown as Record<string, unknown>)["~resource"] = "GlueDataCatalog";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = glue_data_catalogIcon;
   return node;
 }
 
 export function Glue(label?: string, options?: Record<string, unknown>) {
   const node = _Analytics(label ?? "Glue", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Glue";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Glue";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = glueIcon;
   return node;
 }
 
 export function KinesisDataAnalytics(label?: string, options?: Record<string, unknown>) {
   const node = _Analytics(label ?? "KinesisDataAnalytics", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "KinesisDataAnalytics";
+  (node as unknown as Record<string, unknown>)["~resource"] = "KinesisDataAnalytics";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = kinesis_data_analyticsIcon;
   return node;
 }
 
 export function KinesisDataFirehose(label?: string, options?: Record<string, unknown>) {
   const node = _Analytics(label ?? "KinesisDataFirehose", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "KinesisDataFirehose";
+  (node as unknown as Record<string, unknown>)["~resource"] = "KinesisDataFirehose";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = kinesis_data_firehoseIcon;
   return node;
 }
 
 export function KinesisDataStreams(label?: string, options?: Record<string, unknown>) {
   const node = _Analytics(label ?? "KinesisDataStreams", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "KinesisDataStreams";
+  (node as unknown as Record<string, unknown>)["~resource"] = "KinesisDataStreams";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = kinesis_data_streamsIcon;
   return node;
 }
 
 export function KinesisVideoStreams(label?: string, options?: Record<string, unknown>) {
   const node = _Analytics(label ?? "KinesisVideoStreams", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "KinesisVideoStreams";
+  (node as unknown as Record<string, unknown>)["~resource"] = "KinesisVideoStreams";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = kinesis_video_streamsIcon;
   return node;
 }
 
 export function Kinesis(label?: string, options?: Record<string, unknown>) {
   const node = _Analytics(label ?? "Kinesis", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Kinesis";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Kinesis";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = kinesisIcon;
   return node;
 }
 
 export function LakeFormation(label?: string, options?: Record<string, unknown>) {
   const node = _Analytics(label ?? "LakeFormation", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "LakeFormation";
+  (node as unknown as Record<string, unknown>)["~resource"] = "LakeFormation";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = lake_formationIcon;
   return node;
 }
 
 export function ManagedStreamingForKafka(label?: string, options?: Record<string, unknown>) {
   const node = _Analytics(label ?? "ManagedStreamingForKafka", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "ManagedStreamingForKafka";
+  (node as unknown as Record<string, unknown>)["~resource"] = "ManagedStreamingForKafka";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = managed_streaming_for_kafkaIcon;
   return node;
 }
 
 export function Quicksight(label?: string, options?: Record<string, unknown>) {
   const node = _Analytics(label ?? "Quicksight", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Quicksight";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Quicksight";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = quicksightIcon;
   return node;
 }
 
 export function RedshiftDenseComputeNode(label?: string, options?: Record<string, unknown>) {
   const node = _Analytics(label ?? "RedshiftDenseComputeNode", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "RedshiftDenseComputeNode";
+  (node as unknown as Record<string, unknown>)["~resource"] = "RedshiftDenseComputeNode";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = redshift_dense_compute_nodeIcon;
   return node;
 }
 
 export function RedshiftDenseStorageNode(label?: string, options?: Record<string, unknown>) {
   const node = _Analytics(label ?? "RedshiftDenseStorageNode", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "RedshiftDenseStorageNode";
+  (node as unknown as Record<string, unknown>)["~resource"] = "RedshiftDenseStorageNode";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = redshift_dense_storage_nodeIcon;
   return node;
 }
 
 export function Redshift(label?: string, options?: Record<string, unknown>) {
   const node = _Analytics(label ?? "Redshift", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Redshift";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Redshift";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = redshiftIcon;
   return node;
 }

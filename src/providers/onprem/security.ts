@@ -11,21 +11,21 @@ function _Security(label?: string, options?: Record<string, unknown>) {
 
 export function Bitwarden(label?: string, options?: Record<string, unknown>) {
   const node = _Security(label ?? "Bitwarden", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Bitwarden";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Bitwarden";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = bitwardenIcon;
   return node;
 }
 
 export function Trivy(label?: string, options?: Record<string, unknown>) {
   const node = _Security(label ?? "Trivy", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Trivy";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Trivy";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = trivyIcon;
   return node;
 }
 
 export function Vault(label?: string, options?: Record<string, unknown>) {
   const node = _Security(label ?? "Vault", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Vault";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Vault";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = vaultIcon;
   return node;
 }

@@ -9,7 +9,7 @@ function _Billing(label?: string, options?: Record<string, unknown>) {
 
 export function Cloudkitty(label?: string, options?: Record<string, unknown>) {
   const node = _Billing(label ?? "Cloudkitty", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Cloudkitty";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Cloudkitty";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = cloudkittyIcon;
   return node;
 }

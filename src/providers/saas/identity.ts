@@ -10,14 +10,14 @@ function _Identity(label?: string, options?: Record<string, unknown>) {
 
 export function Auth0(label?: string, options?: Record<string, unknown>) {
   const node = _Identity(label ?? "Auth0", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Auth0";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Auth0";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = auth0Icon;
   return node;
 }
 
 export function Okta(label?: string, options?: Record<string, unknown>) {
   const node = _Identity(label ?? "Okta", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Okta";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Okta";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = oktaIcon;
   return node;
 }

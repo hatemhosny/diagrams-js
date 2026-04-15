@@ -9,7 +9,7 @@ function _Extentions(label?: string, options?: Record<string, unknown>) {
 
 export function Extensions(label?: string, options?: Record<string, unknown>) {
   const node = _Extentions(label ?? "Extensions", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Extensions";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Extensions";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = extensionsIcon;
   return node;
 }

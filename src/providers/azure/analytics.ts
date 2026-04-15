@@ -28,140 +28,140 @@ function _Analytics(label?: string, options?: Record<string, unknown>) {
 
 export function AnalysisServices(label?: string, options?: Record<string, unknown>) {
   const node = _Analytics(label ?? "AnalysisServices", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "AnalysisServices";
+  (node as unknown as Record<string, unknown>)["~resource"] = "AnalysisServices";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = analysis_servicesIcon;
   return node;
 }
 
 export function AzureDataExplorerClusters(label?: string, options?: Record<string, unknown>) {
   const node = _Analytics(label ?? "AzureDataExplorerClusters", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "AzureDataExplorerClusters";
+  (node as unknown as Record<string, unknown>)["~resource"] = "AzureDataExplorerClusters";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = azure_data_explorer_clustersIcon;
   return node;
 }
 
 export function AzureDatabricks(label?: string, options?: Record<string, unknown>) {
   const node = _Analytics(label ?? "AzureDatabricks", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "AzureDatabricks";
+  (node as unknown as Record<string, unknown>)["~resource"] = "AzureDatabricks";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = azure_databricksIcon;
   return node;
 }
 
 export function AzureSynapseAnalytics(label?: string, options?: Record<string, unknown>) {
   const node = _Analytics(label ?? "AzureSynapseAnalytics", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "AzureSynapseAnalytics";
+  (node as unknown as Record<string, unknown>)["~resource"] = "AzureSynapseAnalytics";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = azure_synapse_analyticsIcon;
   return node;
 }
 
 export function AzureWorkbooks(label?: string, options?: Record<string, unknown>) {
   const node = _Analytics(label ?? "AzureWorkbooks", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "AzureWorkbooks";
+  (node as unknown as Record<string, unknown>)["~resource"] = "AzureWorkbooks";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = azure_workbooksIcon;
   return node;
 }
 
 export function DataExplorerClusters(label?: string, options?: Record<string, unknown>) {
   const node = _Analytics(label ?? "DataExplorerClusters", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "DataExplorerClusters";
+  (node as unknown as Record<string, unknown>)["~resource"] = "DataExplorerClusters";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = data_explorer_clustersIcon;
   return node;
 }
 
 export function DataFactories(label?: string, options?: Record<string, unknown>) {
   const node = _Analytics(label ?? "DataFactories", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "DataFactories";
+  (node as unknown as Record<string, unknown>)["~resource"] = "DataFactories";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = data_factoriesIcon;
   return node;
 }
 
 export function DataLakeAnalytics(label?: string, options?: Record<string, unknown>) {
   const node = _Analytics(label ?? "DataLakeAnalytics", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "DataLakeAnalytics";
+  (node as unknown as Record<string, unknown>)["~resource"] = "DataLakeAnalytics";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = data_lake_analyticsIcon;
   return node;
 }
 
 export function DataLakeStoreGen1(label?: string, options?: Record<string, unknown>) {
   const node = _Analytics(label ?? "DataLakeStoreGen1", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "DataLakeStoreGen1";
+  (node as unknown as Record<string, unknown>)["~resource"] = "DataLakeStoreGen1";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = data_lake_store_gen1Icon;
   return node;
 }
 
 export function Databricks(label?: string, options?: Record<string, unknown>) {
   const node = _Analytics(label ?? "Databricks", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Databricks";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Databricks";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = databricksIcon;
   return node;
 }
 
 export function EndpointAnalytics(label?: string, options?: Record<string, unknown>) {
   const node = _Analytics(label ?? "EndpointAnalytics", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "EndpointAnalytics";
+  (node as unknown as Record<string, unknown>)["~resource"] = "EndpointAnalytics";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = endpoint_analyticsIcon;
   return node;
 }
 
 export function EventHubClusters(label?: string, options?: Record<string, unknown>) {
   const node = _Analytics(label ?? "EventHubClusters", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "EventHubClusters";
+  (node as unknown as Record<string, unknown>)["~resource"] = "EventHubClusters";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = event_hub_clustersIcon;
   return node;
 }
 
 export function EventHubs(label?: string, options?: Record<string, unknown>) {
   const node = _Analytics(label ?? "EventHubs", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "EventHubs";
+  (node as unknown as Record<string, unknown>)["~resource"] = "EventHubs";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = event_hubsIcon;
   return node;
 }
 
 export function HDInsightClusters(label?: string, options?: Record<string, unknown>) {
   const node = _Analytics(label ?? "HDInsightClusters", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "HDInsightClusters";
+  (node as unknown as Record<string, unknown>)["~resource"] = "HDInsightClusters";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = hd_insight_clustersIcon;
   return node;
 }
 
 export function LogAnalyticsWorkspaces(label?: string, options?: Record<string, unknown>) {
   const node = _Analytics(label ?? "LogAnalyticsWorkspaces", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "LogAnalyticsWorkspaces";
+  (node as unknown as Record<string, unknown>)["~resource"] = "LogAnalyticsWorkspaces";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = log_analytics_workspacesIcon;
   return node;
 }
 
 export function PowerBiEmbedded(label?: string, options?: Record<string, unknown>) {
   const node = _Analytics(label ?? "PowerBiEmbedded", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "PowerBiEmbedded";
+  (node as unknown as Record<string, unknown>)["~resource"] = "PowerBiEmbedded";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = power_bi_embeddedIcon;
   return node;
 }
 
 export function PowerPlatform(label?: string, options?: Record<string, unknown>) {
   const node = _Analytics(label ?? "PowerPlatform", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "PowerPlatform";
+  (node as unknown as Record<string, unknown>)["~resource"] = "PowerPlatform";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = power_platformIcon;
   return node;
 }
 
 export function PrivateLinkServices(label?: string, options?: Record<string, unknown>) {
   const node = _Analytics(label ?? "PrivateLinkServices", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "PrivateLinkServices";
+  (node as unknown as Record<string, unknown>)["~resource"] = "PrivateLinkServices";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = private_link_servicesIcon;
   return node;
 }
 
 export function StreamAnalyticsJobs(label?: string, options?: Record<string, unknown>) {
   const node = _Analytics(label ?? "StreamAnalyticsJobs", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "StreamAnalyticsJobs";
+  (node as unknown as Record<string, unknown>)["~resource"] = "StreamAnalyticsJobs";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = stream_analytics_jobsIcon;
   return node;
 }
 
 export function SynapseAnalytics(label?: string, options?: Record<string, unknown>) {
   const node = _Analytics(label ?? "SynapseAnalytics", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "SynapseAnalytics";
+  (node as unknown as Record<string, unknown>)["~resource"] = "SynapseAnalytics";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = synapse_analyticsIcon;
   return node;
 }

@@ -16,56 +16,56 @@ function _Javascript(label?: string, options?: Record<string, unknown>) {
 
 export function Cesium(label?: string, options?: Record<string, unknown>) {
   const node = _Javascript(label ?? "Cesium", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Cesium";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Cesium";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = cesiumIcon;
   return node;
 }
 
 export function Geostyler(label?: string, options?: Record<string, unknown>) {
   const node = _Javascript(label ?? "Geostyler", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Geostyler";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Geostyler";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = geostylerIcon;
   return node;
 }
 
 export function Keplerjs(label?: string, options?: Record<string, unknown>) {
   const node = _Javascript(label ?? "Keplerjs", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Keplerjs";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Keplerjs";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = keplerjsIcon;
   return node;
 }
 
 export function Leaflet(label?: string, options?: Record<string, unknown>) {
   const node = _Javascript(label ?? "Leaflet", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Leaflet";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Leaflet";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = leafletIcon;
   return node;
 }
 
 export function Maplibre(label?: string, options?: Record<string, unknown>) {
   const node = _Javascript(label ?? "Maplibre", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Maplibre";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Maplibre";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = maplibreIcon;
   return node;
 }
 
 export function OlExt(label?: string, options?: Record<string, unknown>) {
   const node = _Javascript(label ?? "OlExt", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "OlExt";
+  (node as unknown as Record<string, unknown>)["~resource"] = "OlExt";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = ol_extIcon;
   return node;
 }
 
 export function Openlayers(label?: string, options?: Record<string, unknown>) {
   const node = _Javascript(label ?? "Openlayers", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Openlayers";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Openlayers";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = openlayersIcon;
   return node;
 }
 
 export function Turfjs(label?: string, options?: Record<string, unknown>) {
   const node = _Javascript(label ?? "Turfjs", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Turfjs";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Turfjs";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = turfjsIcon;
   return node;
 }

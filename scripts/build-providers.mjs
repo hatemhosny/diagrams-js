@@ -15,6 +15,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const ROOT_DIR = path.resolve(__dirname, "..");
+const SRC_DIR = path.join(ROOT_DIR, "src");
 const SRC_PROVIDERS_DIR = path.join(ROOT_DIR, "src", "providers");
 const DIST_DIR = path.join(ROOT_DIR, "dist");
 const DIST_PROVIDERS_DIR = path.join(DIST_DIR, "providers");
@@ -100,10 +101,66 @@ async function buildProvidersIndex() {
       platform: "neutral",
       format: "esm",
       target: "es2022",
+      minify: true,
+      sourcemap: false,
       outdir: DIST_PROVIDERS_DIR,
     });
   } catch (err) {
     console.error(`  ✗ Failed to build index: ${err.message}\n`);
+  }
+}
+
+/**
+ * Build resources-list module
+ */
+async function buildResourcesList() {
+  const entry = path.join(SRC_PROVIDERS_DIR, "resources-list.ts");
+  if (!fs.existsSync(entry)) {
+    console.log("  No resources-list.ts found");
+    return;
+  }
+
+  try {
+    await build({
+      entryPoints: [entry],
+      bundle: false,
+      platform: "neutral",
+      format: "esm",
+      target: "es2022",
+      minify: true,
+      sourcemap: false,
+      outdir: DIST_PROVIDERS_DIR,
+    });
+    console.log("  ✓ Built resources-list.ts");
+  } catch (err) {
+    console.error(`  ✗ Failed to build resources-list: ${err.message}\n`);
+  }
+}
+
+/**
+ * Build yaml module
+ */
+async function buildYaml() {
+  const entry = path.join(SRC_DIR, "yaml.ts");
+  if (!fs.existsSync(entry)) {
+    console.log("  No yaml.ts found");
+    return;
+  }
+
+  try {
+    await build({
+      entryPoints: [entry],
+      bundle: true,
+      platform: "neutral",
+      format: "esm",
+      target: "es2022",
+      minify: true,
+      sourcemap: false,
+      outdir: DIST_PROVIDERS_DIR,
+    });
+    console.log("  ✓ Built yaml.ts");
+  } catch (err) {
+    console.error(`  ✗ Failed to build yaml: ${err.message}\n`);
   }
 }
 
@@ -154,12 +211,23 @@ function updatePackageExports() {
     }
   }
 
+  // Add resources-list export
+  exports["./resources-list"] = {
+    import: "./dist/providers/resources-list.js",
+    types: "./dist/providers/resources-list.d.ts",
+  };
+
+  // Add yaml export
+  exports["./yaml"] = {
+    import: "./dist/providers/yaml.js",
+  };
+
   // Update package.json
   packageJson.exports = exports;
   fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2) + "\n");
 
   console.log("✓ package.json exports updated");
-  console.log(`  Added ${Object.keys(exports).length - 2} provider exports`);
+  console.log(`  Added ${Object.keys(exports).length - 3} provider exports`);
 }
 
 /**
@@ -180,6 +248,12 @@ async function main() {
 
   // Build index
   await buildProvidersIndex();
+
+  // Build resources-list
+  await buildResourcesList();
+
+  // Build yaml
+  await buildYaml();
 
   // Build types
   await buildTypes();

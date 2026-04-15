@@ -16,56 +16,56 @@ function _Chat(label?: string, options?: Record<string, unknown>) {
 
 export function Discord(label?: string, options?: Record<string, unknown>) {
   const node = _Chat(label ?? "Discord", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Discord";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Discord";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = discordIcon;
   return node;
 }
 
 export function Line(label?: string, options?: Record<string, unknown>) {
   const node = _Chat(label ?? "Line", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Line";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Line";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = lineIcon;
   return node;
 }
 
 export function Mattermost(label?: string, options?: Record<string, unknown>) {
   const node = _Chat(label ?? "Mattermost", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Mattermost";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Mattermost";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = mattermostIcon;
   return node;
 }
 
 export function Messenger(label?: string, options?: Record<string, unknown>) {
   const node = _Chat(label ?? "Messenger", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Messenger";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Messenger";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = messengerIcon;
   return node;
 }
 
 export function RocketChat(label?: string, options?: Record<string, unknown>) {
   const node = _Chat(label ?? "RocketChat", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "RocketChat";
+  (node as unknown as Record<string, unknown>)["~resource"] = "RocketChat";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = rocket_chatIcon;
   return node;
 }
 
 export function Slack(label?: string, options?: Record<string, unknown>) {
   const node = _Chat(label ?? "Slack", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Slack";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Slack";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = slackIcon;
   return node;
 }
 
 export function Teams(label?: string, options?: Record<string, unknown>) {
   const node = _Chat(label ?? "Teams", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Teams";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Teams";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = teamsIcon;
   return node;
 }
 
 export function Telegram(label?: string, options?: Record<string, unknown>) {
   const node = _Chat(label ?? "Telegram", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Telegram";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Telegram";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = telegramIcon;
   return node;
 }

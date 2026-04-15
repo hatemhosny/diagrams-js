@@ -9,7 +9,7 @@ function _Java(label?: string, options?: Record<string, unknown>) {
 
 export function Geotools(label?: string, options?: Record<string, unknown>) {
   const node = _Java(label ?? "Geotools", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Geotools";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Geotools";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = geotoolsIcon;
   return node;
 }

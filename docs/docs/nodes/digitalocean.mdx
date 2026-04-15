@@ -1,22 +1,18 @@
 ---
 title: DigitalOcean
-description: Node classes for DigitalOcean provider
+description: Node types for DigitalOcean provider
 ---
 
 # DigitalOcean
 
-Node classes list for the DigitalOcean provider.
+Node types list for the DigitalOcean provider.
 
 ## Example Usage
 
 ```typescript
 import { Diagram } from "diagrams-js";
 import { Containers, Docker, DropletConnect } from "diagrams-js/digitalocean/compute";
-import {
-  DbaasPrimaryStandbyMore,
-  DbaasPrimary,
-  DbaasReadOnly,
-} from "diagrams-js/digitalocean/database";
+import { DbaasPrimaryStandbyMore, DbaasPrimary, DbaasReadOnly } from "diagrams-js/digitalocean/database";
 
 const diagram = Diagram("DigitalOcean Architecture", { direction: "TB" });
 
@@ -29,164 +25,141 @@ const svg = await diagram.render();
 ```
 
 :::note
-All node classes available in the [Python diagrams library](https://diagrams.mingrammer.com/docs/nodes/digitalocean) are also available in diagrams-js with the same class names and structure.
+All node types available in the [Python diagrams library](https://diagrams.mingrammer.com/docs/nodes/digitalocean) are also available in diagrams-js with the same class names and structure.
 :::
 
 ## Node Reference
 
 ### digitalocean/compute
 
-<img src="/resources/digitalocean/compute/containers.png" width="30" alt="Containers" />
-**Containers**
+<img src="/resources/digitalocean/compute/containers.png" width="30" alt="Containers" /> **Containers**
 
 ```typescript
-import { Containers } from "diagrams-js/digitalocean/compute";
+import { Containers } from "diagrams-js/digitalocean/compute"
 ```
 
 <img src="/resources/digitalocean/compute/docker.png" width="30" alt="Docker" /> **Docker**
 
 ```typescript
-import { Docker } from "diagrams-js/digitalocean/compute";
+import { Docker } from "diagrams-js/digitalocean/compute"
 ```
 
-<img src="/resources/digitalocean/compute/droplet-connect.png" width="30" alt="DropletConnect" />
-**DropletConnect**
+<img src="/resources/digitalocean/compute/droplet-connect.png" width="30" alt="DropletConnect" /> **DropletConnect**
 
 ```typescript
-import { DropletConnect } from "diagrams-js/digitalocean/compute";
+import { DropletConnect } from "diagrams-js/digitalocean/compute"
 ```
 
-<img src="/resources/digitalocean/compute/droplet-snapshot.png" width="30" alt="DropletSnapshot" />
-**DropletSnapshot**
+<img src="/resources/digitalocean/compute/droplet-snapshot.png" width="30" alt="DropletSnapshot" /> **DropletSnapshot**
 
 ```typescript
-import { DropletSnapshot } from "diagrams-js/digitalocean/compute";
+import { DropletSnapshot } from "diagrams-js/digitalocean/compute"
 ```
 
 <img src="/resources/digitalocean/compute/droplet.png" width="30" alt="Droplet" /> **Droplet**
 
 ```typescript
-import { Droplet } from "diagrams-js/digitalocean/compute";
+import { Droplet } from "diagrams-js/digitalocean/compute"
 ```
 
-<img src="/resources/digitalocean/compute/k8s-cluster.png" width="30" alt="K8sCluster" />
-**K8sCluster**
+<img src="/resources/digitalocean/compute/k8s-cluster.png" width="30" alt="K8sCluster" /> **K8sCluster**
 
 ```typescript
-import { K8sCluster } from "diagrams-js/digitalocean/compute";
+import { K8sCluster } from "diagrams-js/digitalocean/compute"
 ```
 
-<img src="/resources/digitalocean/compute/k8s-node-pool.png" width="30" alt="K8sNodePool" />
-**K8sNodePool**
+<img src="/resources/digitalocean/compute/k8s-node-pool.png" width="30" alt="K8sNodePool" /> **K8sNodePool**
 
 ```typescript
-import { K8sNodePool } from "diagrams-js/digitalocean/compute";
+import { K8sNodePool } from "diagrams-js/digitalocean/compute"
 ```
 
 <img src="/resources/digitalocean/compute/k8s-node.png" width="30" alt="K8sNode" /> **K8sNode**
 
 ```typescript
-import { K8sNode } from "diagrams-js/digitalocean/compute";
+import { K8sNode } from "diagrams-js/digitalocean/compute"
 ```
 
 ### digitalocean/database
 
-<img
-  src="/resources/digitalocean/database/dbaas-primary-standby-more.png"
-  width="30"
-  alt="DbaasPrimaryStandbyMore"
-/>
-**DbaasPrimaryStandbyMore**
+<img src="/resources/digitalocean/database/dbaas-primary-standby-more.png" width="30" alt="DbaasPrimaryStandbyMore" /> **DbaasPrimaryStandbyMore**
 
 ```typescript
-import { DbaasPrimaryStandbyMore } from "diagrams-js/digitalocean/database";
+import { DbaasPrimaryStandbyMore } from "diagrams-js/digitalocean/database"
 ```
 
-<img src="/resources/digitalocean/database/dbaas-primary.png" width="30" alt="DbaasPrimary" />
-**DbaasPrimary**
+<img src="/resources/digitalocean/database/dbaas-primary.png" width="30" alt="DbaasPrimary" /> **DbaasPrimary**
 
 ```typescript
-import { DbaasPrimary } from "diagrams-js/digitalocean/database";
+import { DbaasPrimary } from "diagrams-js/digitalocean/database"
 ```
 
-<img src="/resources/digitalocean/database/dbaas-read-only.png" width="30" alt="DbaasReadOnly" />
-**DbaasReadOnly**
+<img src="/resources/digitalocean/database/dbaas-read-only.png" width="30" alt="DbaasReadOnly" /> **DbaasReadOnly**
 
 ```typescript
-import { DbaasReadOnly } from "diagrams-js/digitalocean/database";
+import { DbaasReadOnly } from "diagrams-js/digitalocean/database"
 ```
 
-<img src="/resources/digitalocean/database/dbaas-standby.png" width="30" alt="DbaasStandby" />
-**DbaasStandby**
+<img src="/resources/digitalocean/database/dbaas-standby.png" width="30" alt="DbaasStandby" /> **DbaasStandby**
 
 ```typescript
-import { DbaasStandby } from "diagrams-js/digitalocean/database";
+import { DbaasStandby } from "diagrams-js/digitalocean/database"
 ```
 
 ### digitalocean/network
 
-<img src="/resources/digitalocean/network/certificate.png" width="30" alt="Certificate" />
-**Certificate**
+<img src="/resources/digitalocean/network/certificate.png" width="30" alt="Certificate" /> **Certificate**
 
 ```typescript
-import { Certificate } from "diagrams-js/digitalocean/network";
+import { Certificate } from "diagrams-js/digitalocean/network"
 ```
 
-<img
-  src="/resources/digitalocean/network/domain-registration.png"
-  width="30"
-  alt="DomainRegistration"
-/>
-**DomainRegistration**
+<img src="/resources/digitalocean/network/domain-registration.png" width="30" alt="DomainRegistration" /> **DomainRegistration**
 
 ```typescript
-import { DomainRegistration } from "diagrams-js/digitalocean/network";
+import { DomainRegistration } from "diagrams-js/digitalocean/network"
 ```
 
 <img src="/resources/digitalocean/network/domain.png" width="30" alt="Domain" /> **Domain**
 
 ```typescript
-import { Domain } from "diagrams-js/digitalocean/network";
+import { Domain } from "diagrams-js/digitalocean/network"
 ```
 
 <img src="/resources/digitalocean/network/firewall.png" width="30" alt="Firewall" /> **Firewall**
 
 ```typescript
-import { Firewall } from "diagrams-js/digitalocean/network";
+import { Firewall } from "diagrams-js/digitalocean/network"
 ```
 
-<img src="/resources/digitalocean/network/floating-ip.png" width="30" alt="FloatingIp" />
-**FloatingIp**
+<img src="/resources/digitalocean/network/floating-ip.png" width="30" alt="FloatingIp" /> **FloatingIp**
 
 ```typescript
-import { FloatingIp } from "diagrams-js/digitalocean/network";
+import { FloatingIp } from "diagrams-js/digitalocean/network"
 ```
 
-<img src="/resources/digitalocean/network/internet-gateway.png" width="30" alt="InternetGateway" />
-**InternetGateway**
+<img src="/resources/digitalocean/network/internet-gateway.png" width="30" alt="InternetGateway" /> **InternetGateway**
 
 ```typescript
-import { InternetGateway } from "diagrams-js/digitalocean/network";
+import { InternetGateway } from "diagrams-js/digitalocean/network"
 ```
 
-<img src="/resources/digitalocean/network/load-balancer.png" width="30" alt="LoadBalancer" />
-**LoadBalancer**
+<img src="/resources/digitalocean/network/load-balancer.png" width="30" alt="LoadBalancer" /> **LoadBalancer**
 
 ```typescript
-import { LoadBalancer } from "diagrams-js/digitalocean/network";
+import { LoadBalancer } from "diagrams-js/digitalocean/network"
 ```
 
-<img src="/resources/digitalocean/network/managed-vpn.png" width="30" alt="ManagedVpn" />
-**ManagedVpn**
+<img src="/resources/digitalocean/network/managed-vpn.png" width="30" alt="ManagedVpn" /> **ManagedVpn**
 
 ```typescript
-import { ManagedVpn } from "diagrams-js/digitalocean/network";
+import { ManagedVpn } from "diagrams-js/digitalocean/network"
 ```
 
 <img src="/resources/digitalocean/network/vpc.png" width="30" alt="Vpc" /> **Vpc**
 
 ```typescript
-import { Vpc } from "diagrams-js/digitalocean/network";
+import { Vpc } from "diagrams-js/digitalocean/network"
 ```
 
 ### digitalocean/storage
@@ -194,24 +167,24 @@ import { Vpc } from "diagrams-js/digitalocean/network";
 <img src="/resources/digitalocean/storage/folder.png" width="30" alt="Folder" /> **Folder**
 
 ```typescript
-import { Folder } from "diagrams-js/digitalocean/storage";
+import { Folder } from "diagrams-js/digitalocean/storage"
 ```
 
 <img src="/resources/digitalocean/storage/space.png" width="30" alt="Space" /> **Space**
 
 ```typescript
-import { Space } from "diagrams-js/digitalocean/storage";
+import { Space } from "diagrams-js/digitalocean/storage"
 ```
 
-<img src="/resources/digitalocean/storage/volume-snapshot.png" width="30" alt="VolumeSnapshot" />
-**VolumeSnapshot**
+<img src="/resources/digitalocean/storage/volume-snapshot.png" width="30" alt="VolumeSnapshot" /> **VolumeSnapshot**
 
 ```typescript
-import { VolumeSnapshot } from "diagrams-js/digitalocean/storage";
+import { VolumeSnapshot } from "diagrams-js/digitalocean/storage"
 ```
 
 <img src="/resources/digitalocean/storage/volume.png" width="30" alt="Volume" /> **Volume**
 
 ```typescript
-import { Volume } from "diagrams-js/digitalocean/storage";
+import { Volume } from "diagrams-js/digitalocean/storage"
 ```
+

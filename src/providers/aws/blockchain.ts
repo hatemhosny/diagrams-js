@@ -12,28 +12,28 @@ function _Blockchain(label?: string, options?: Record<string, unknown>) {
 
 export function BlockchainResource(label?: string, options?: Record<string, unknown>) {
   const node = _Blockchain(label ?? "BlockchainResource", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "BlockchainResource";
+  (node as unknown as Record<string, unknown>)["~resource"] = "BlockchainResource";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = blockchain_resourceIcon;
   return node;
 }
 
 export function Blockchain(label?: string, options?: Record<string, unknown>) {
   const node = _Blockchain(label ?? "Blockchain", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Blockchain";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Blockchain";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = blockchainIcon;
   return node;
 }
 
 export function ManagedBlockchain(label?: string, options?: Record<string, unknown>) {
   const node = _Blockchain(label ?? "ManagedBlockchain", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "ManagedBlockchain";
+  (node as unknown as Record<string, unknown>)["~resource"] = "ManagedBlockchain";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = managed_blockchainIcon;
   return node;
 }
 
 export function QuantumLedgerDatabaseQldb(label?: string, options?: Record<string, unknown>) {
   const node = _Blockchain(label ?? "QuantumLedgerDatabaseQldb", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "QuantumLedgerDatabaseQldb";
+  (node as unknown as Record<string, unknown>)["~resource"] = "QuantumLedgerDatabaseQldb";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = quantum_ledger_database_qldbIcon;
   return node;
 }

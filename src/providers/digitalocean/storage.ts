@@ -12,28 +12,28 @@ function _Storage(label?: string, options?: Record<string, unknown>) {
 
 export function Folder(label?: string, options?: Record<string, unknown>) {
   const node = _Storage(label ?? "Folder", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Folder";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Folder";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = folderIcon;
   return node;
 }
 
 export function Space(label?: string, options?: Record<string, unknown>) {
   const node = _Storage(label ?? "Space", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Space";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Space";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = spaceIcon;
   return node;
 }
 
 export function VolumeSnapshot(label?: string, options?: Record<string, unknown>) {
   const node = _Storage(label ?? "VolumeSnapshot", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "VolumeSnapshot";
+  (node as unknown as Record<string, unknown>)["~resource"] = "VolumeSnapshot";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = volume_snapshotIcon;
   return node;
 }
 
 export function Volume(label?: string, options?: Record<string, unknown>) {
   const node = _Storage(label ?? "Volume", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Volume";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Volume";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = volumeIcon;
   return node;
 }

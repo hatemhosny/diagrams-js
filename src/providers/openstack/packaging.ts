@@ -11,21 +11,21 @@ function _Packaging(label?: string, options?: Record<string, unknown>) {
 
 export function LOCI(label?: string, options?: Record<string, unknown>) {
   const node = _Packaging(label ?? "LOCI", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "LOCI";
+  (node as unknown as Record<string, unknown>)["~resource"] = "LOCI";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = lociIcon;
   return node;
 }
 
 export function Puppet(label?: string, options?: Record<string, unknown>) {
   const node = _Packaging(label ?? "Puppet", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Puppet";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Puppet";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = puppetIcon;
   return node;
 }
 
 export function RPM(label?: string, options?: Record<string, unknown>) {
   const node = _Packaging(label ?? "RPM", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "RPM";
+  (node as unknown as Record<string, unknown>)["~resource"] = "RPM";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = rpmIcon;
   return node;
 }

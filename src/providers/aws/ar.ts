@@ -10,14 +10,14 @@ function _Ar(label?: string, options?: Record<string, unknown>) {
 
 export function ArVr(label?: string, options?: Record<string, unknown>) {
   const node = _Ar(label ?? "ArVr", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "ArVr";
+  (node as unknown as Record<string, unknown>)["~resource"] = "ArVr";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = ar_vrIcon;
   return node;
 }
 
 export function Sumerian(label?: string, options?: Record<string, unknown>) {
   const node = _Ar(label ?? "Sumerian", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Sumerian";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Sumerian";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = sumerianIcon;
   return node;
 }

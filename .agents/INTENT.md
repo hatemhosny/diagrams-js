@@ -29,6 +29,8 @@ intent install
 | `diagrams-js/browser-integration`   | CDN, DOM, data URLs, downloads              |
 | `diagrams-js/nodejs-integration`    | File system, sharp, local icons             |
 | `diagrams-js/python-migration`      | Python to TypeScript conversion             |
+| `diagrams-js/plugin-system`         | Importers, exporters, metadata, hooks       |
+| `diagrams-js/creating-plugins`      | Create custom plugins, package structure    |
 
 ## Usage
 
@@ -57,7 +59,7 @@ npx @tanstack/intent validate
 
 ## Contributing
 
-Skills are located in `.agents/skills/`. Each skill includes:
+Skills are located in `skills/`. Each skill includes:
 
 - **SKILL.md** - The skill content for AI agents
 - **References/** - Optional detailed reference files

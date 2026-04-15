@@ -83,7 +83,7 @@ function FeaturesSection() {
       description: (
         <>
           Written in TypeScript with complete type definitions. Get <strong>autocompletion</strong>{" "}
-          and <strong>type checking</strong> for all 2000+ node classes.
+          and <strong>type checking</strong> for all 2000+ node types.
         </>
       ),
     },
@@ -92,7 +92,7 @@ function FeaturesSection() {
       description: (
         <>
           Support for <strong>AWS</strong>, <strong>Azure</strong>, <strong>GCP</strong>,{" "}
-          <strong>Kubernetes</strong>, and 13 more providers with 2000+ pre-built node classes.
+          <strong>Kubernetes</strong>, and 13 more providers with 2000+ pre-built node types.
         </>
       ),
     },

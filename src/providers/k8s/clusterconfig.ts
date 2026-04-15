@@ -11,21 +11,21 @@ function _Clusterconfig(label?: string, options?: Record<string, unknown>) {
 
 export function HPA(label?: string, options?: Record<string, unknown>) {
   const node = _Clusterconfig(label ?? "HPA", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "HPA";
+  (node as unknown as Record<string, unknown>)["~resource"] = "HPA";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = hpaIcon;
   return node;
 }
 
 export function Limits(label?: string, options?: Record<string, unknown>) {
   const node = _Clusterconfig(label ?? "Limits", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Limits";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Limits";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = limitsIcon;
   return node;
 }
 
 export function Quota(label?: string, options?: Record<string, unknown>) {
   const node = _Clusterconfig(label ?? "Quota", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Quota";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Quota";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = quotaIcon;
   return node;
 }

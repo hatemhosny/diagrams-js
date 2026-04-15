@@ -28,140 +28,140 @@ function _Database(label?: string, options?: Record<string, unknown>) {
 
 export function Cassandra(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "Cassandra", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Cassandra";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Cassandra";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = cassandraIcon;
   return node;
 }
 
 export function Clickhouse(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "Clickhouse", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Clickhouse";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Clickhouse";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = clickhouseIcon;
   return node;
 }
 
 export function Cockroachdb(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "Cockroachdb", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Cockroachdb";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Cockroachdb";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = cockroachdbIcon;
   return node;
 }
 
 export function Couchbase(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "Couchbase", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Couchbase";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Couchbase";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = couchbaseIcon;
   return node;
 }
 
 export function Couchdb(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "Couchdb", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Couchdb";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Couchdb";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = couchdbIcon;
   return node;
 }
 
 export function Dgraph(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "Dgraph", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Dgraph";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Dgraph";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = dgraphIcon;
   return node;
 }
 
 export function Druid(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "Druid", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Druid";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Druid";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = druidIcon;
   return node;
 }
 
 export function Duckdb(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "Duckdb", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Duckdb";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Duckdb";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = duckdbIcon;
   return node;
 }
 
 export function Hbase(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "Hbase", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Hbase";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Hbase";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = hbaseIcon;
   return node;
 }
 
 export function Influxdb(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "Influxdb", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Influxdb";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Influxdb";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = influxdbIcon;
   return node;
 }
 
 export function Janusgraph(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "Janusgraph", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Janusgraph";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Janusgraph";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = janusgraphIcon;
   return node;
 }
 
 export function Mariadb(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "Mariadb", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Mariadb";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Mariadb";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = mariadbIcon;
   return node;
 }
 
 export function Mongodb(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "Mongodb", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Mongodb";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Mongodb";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = mongodbIcon;
   return node;
 }
 
 export function Mssql(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "Mssql", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Mssql";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Mssql";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = mssqlIcon;
   return node;
 }
 
 export function Mysql(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "Mysql", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Mysql";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Mysql";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = mysqlIcon;
   return node;
 }
 
 export function Neo4j(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "Neo4j", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Neo4j";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Neo4j";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = neo4jIcon;
   return node;
 }
 
 export function Oracle(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "Oracle", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Oracle";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Oracle";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = oracleIcon;
   return node;
 }
 
 export function Postgresql(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "Postgresql", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Postgresql";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Postgresql";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = postgresqlIcon;
   return node;
 }
 
 export function Qdrant(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "Qdrant", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Qdrant";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Qdrant";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = qdrantIcon;
   return node;
 }
 
 export function Scylla(label?: string, options?: Record<string, unknown>) {
   const node = _Database(label ?? "Scylla", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Scylla";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Scylla";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = scyllaIcon;
   return node;
 }

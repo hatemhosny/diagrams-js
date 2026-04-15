@@ -12,28 +12,28 @@ function _Network(label?: string, options?: Record<string, unknown>) {
 
 export function Ep(label?: string, options?: Record<string, unknown>) {
   const node = _Network(label ?? "Ep", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Ep";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Ep";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = epIcon;
   return node;
 }
 
 export function Ing(label?: string, options?: Record<string, unknown>) {
   const node = _Network(label ?? "Ing", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Ing";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Ing";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = ingIcon;
   return node;
 }
 
 export function Netpol(label?: string, options?: Record<string, unknown>) {
   const node = _Network(label ?? "Netpol", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "Netpol";
+  (node as unknown as Record<string, unknown>)["~resource"] = "Netpol";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = netpolIcon;
   return node;
 }
 
 export function SVC(label?: string, options?: Record<string, unknown>) {
   const node = _Network(label ?? "SVC", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "SVC";
+  (node as unknown as Record<string, unknown>)["~resource"] = "SVC";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = svcIcon;
   return node;
 }

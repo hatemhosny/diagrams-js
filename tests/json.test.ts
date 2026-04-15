@@ -846,12 +846,12 @@ describe("toJSON() - Provider Nodes", () => {
     expect(json.nodes[0].service).toBe("compute");
   });
 
-  it("should serialize resourceType on provider nodes", () => {
+  it("should serialize resource on provider nodes", () => {
     const diagram = Diagram("Test");
     const node = Node("My Server", { nodeId: "ec2" });
     (node as unknown as Record<string, unknown>)["~provider"] = "aws";
     (node as unknown as Record<string, unknown>)["~type"] = "compute";
-    (node as unknown as Record<string, unknown>)["~resourceType"] = "EC2";
+    (node as unknown as Record<string, unknown>)["~resource"] = "EC2";
     diagram.add(node);
 
     const json = diagram.toJSON();
@@ -866,7 +866,7 @@ describe("toJSON() - Provider Nodes", () => {
     const node = Node("EC2", { nodeId: "ec2" });
     (node as unknown as Record<string, unknown>)["~provider"] = "aws";
     (node as unknown as Record<string, unknown>)["~type"] = "compute";
-    (node as unknown as Record<string, unknown>)["~resourceType"] = "EC2";
+    (node as unknown as Record<string, unknown>)["~resource"] = "EC2";
     (node as unknown as Record<string, unknown>)["~iconDataUrl"] =
       "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==";
     diagram.add(node);
@@ -905,14 +905,14 @@ describe("toJSON() - Provider Nodes", () => {
     const node = Node("Server", { nodeId: "srv" });
     (node as unknown as Record<string, unknown>)["~provider"] = "aws";
     (node as unknown as Record<string, unknown>)["~type"] = "compute";
-    (node as unknown as Record<string, unknown>)["~resourceType"] = "EC2";
+    (node as unknown as Record<string, unknown>)["~resource"] = "EC2";
     diagram.add(node);
 
     const dot = diagram.toString();
     // No ~ keys should appear in the DOT output
     expect(dot).not.toContain("~provider");
     expect(dot).not.toContain("~type");
-    expect(dot).not.toContain("~resourceType");
+    expect(dot).not.toContain("~resource");
     expect(dot).not.toContain("~iconDir");
     expect(dot).not.toContain("~icon");
   });
@@ -1351,7 +1351,7 @@ describe("Provisioning Consistency", () => {
     const node = Node("API Server", { nodeId: "api" });
     (node as unknown as Record<string, unknown>)["~provider"] = "aws";
     (node as unknown as Record<string, unknown>)["~type"] = "compute";
-    (node as unknown as Record<string, unknown>)["~resourceType"] = "EC2";
+    (node as unknown as Record<string, unknown>)["~resource"] = "EC2";
     diagram.add(node);
 
     const json = diagram.toJSON();

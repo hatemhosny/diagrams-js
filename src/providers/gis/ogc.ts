@@ -11,21 +11,21 @@ function _Ogc(label?: string, options?: Record<string, unknown>) {
 
 export function OGC(label?: string, options?: Record<string, unknown>) {
   const node = _Ogc(label ?? "OGC", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "OGC";
+  (node as unknown as Record<string, unknown>)["~resource"] = "OGC";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = ogcIcon;
   return node;
 }
 
 export function WFS(label?: string, options?: Record<string, unknown>) {
   const node = _Ogc(label ?? "WFS", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "WFS";
+  (node as unknown as Record<string, unknown>)["~resource"] = "WFS";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = wfsIcon;
   return node;
 }
 
 export function WMS(label?: string, options?: Record<string, unknown>) {
   const node = _Ogc(label ?? "WMS", options);
-  (node as unknown as Record<string, unknown>)["~resourceType"] = "WMS";
+  (node as unknown as Record<string, unknown>)["~resource"] = "WMS";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = wmsIcon;
   return node;
 }

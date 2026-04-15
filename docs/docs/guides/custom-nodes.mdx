@@ -17,6 +17,34 @@ const diagram = Diagram("Custom Icons");
 const service = diagram.add(Custom("My Service", "https://example.com/icon.png"));
 ```
 
+## Using Iconify
+
+The `Iconify` function provides easy access to more than 200,000 icons from the [Iconify](https://iconify.design/) icon sets.
+
+```typescript
+import { Diagram, Iconify } from "diagrams-js";
+
+const diagram = Diagram("Iconify Example");
+
+// Material Design icons
+const home = diagram.add(Iconify("Home", "mdi:home"));
+const settings = diagram.add(Iconify("Settings", "mdi:cog"));
+
+// Technology logos
+const aws = diagram.add(Iconify("AWS", "logos:aws"));
+const docker = diagram.add(Iconify("Docker", "logos:docker"));
+
+home.to(settings).to(aws).to(docker);
+```
+
+Browse available icons at [icon-sets.iconify.design](https://icon-sets.iconify.design/).
+
+The `Iconify` function is a simple wrapper around `Custom`:
+
+```typescript
+const Iconify = (label, iconName) => Custom(label, `https://api.iconify.design/${iconName}.svg`);
+```
+
 ## From Data URL
 
 ```typescript
