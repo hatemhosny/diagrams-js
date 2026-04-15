@@ -71,7 +71,7 @@ const json2 = diagram.toJSON(); // Also works
 
 ### Using Library Exports in Plugins
 
-Plugins should use `context.lib` to access diagrams-js functions instead of importing them. This prevents multiple instances and circular dependencies:
+Plugins should use `context.lib` to access diagrams-js functions instead of importing them. This prevents multiple instances and circular dependencies. The `context.lib` object exports the entire diagrams-js library, so you can access any export including `Node`, `Edge`, `Cluster`, `Custom`, `Iconify`, etc.
 
 ```typescript
 const myPlugin = {
@@ -85,12 +85,19 @@ const myPlugin = {
       name: "my-format",
       extensions: [".my"],
       import: async (source, diagram, context) => {
-        // ✅ Good: Use context.lib
-        const { Node, Edge, Cluster } = context.lib;
+        // ✅ Good: Use context.lib to access any diagrams-js export
+        const { Node, Edge, Cluster, Custom, Iconify } = context.lib;
 
+        // Create nodes
         const node = diagram.add(Node("My Node"));
         const cluster = diagram.cluster("My Cluster");
         cluster.add(Node("Nested Node"));
+
+        // Create Custom nodes with external icons
+        const customNode = diagram.add(Custom("Custom Service", "https://example.com/icon.png"));
+
+        // Create Iconify nodes
+        const iconifyNode = diagram.add(Iconify("Docker", "logos:docker"));
       },
     },
   ],

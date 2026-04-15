@@ -1,5 +1,5 @@
 ---
-name: diagrams-js-plugin-system
+name: diagrams-js/diagrams-js-plugin-system
 description: >-
   Extend diagrams-js with custom import/export formats, metadata providers, and hooks.
   Create plugins for Docker Compose, Terraform, cloud provider metadata, and more.

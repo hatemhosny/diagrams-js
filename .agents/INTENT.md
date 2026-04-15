@@ -59,7 +59,7 @@ npx @tanstack/intent validate
 
 ## Contributing
 
-Skills are located in `.agents/skills/`. Each skill includes:
+Skills are located in `skills/`. Each skill includes:
 
 - **SKILL.md** - The skill content for AI agents
 - **References/** - Optional detailed reference files

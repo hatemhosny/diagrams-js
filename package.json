@@ -36,8 +36,8 @@
     "index.js",
     "LICENSE",
     "README.md",
-    ".agents/skills",
-    "!**/_artifacts"
+    "skills",
+    "!skills/_artifacts"
   ],
   "type": "module",
   "browser": "./dist/index.js",

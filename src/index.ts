@@ -27,6 +27,25 @@ export { Node } from "./Node.js";
 export { Edge } from "./Edge.js";
 export { Custom, Iconify } from "./Custom.js";
 
+// Types
+export type { Cluster } from "./Cluster.js";
+export type {
+  DiagramOptions,
+  EdgeOptions,
+  NodeOptions,
+  ThemeName,
+  ThemeConfig,
+  Yaml,
+} from "./types.js";
+export type {
+  DiagramJSON,
+  DiagramNodeJSON,
+  DiagramEdgeJSON,
+  DiagramClusterJSON,
+  FromJSONOptions,
+  ProviderModule,
+} from "./json.js";
+
 // Plugin system
 export {
   createPluginRegistry,
@@ -38,7 +57,7 @@ export {
   RuntimeError,
 } from "./plugins/index.js";
 
-// Re-export plugin types for external plugins
+// Plugin types
 export type {
   DiagramsPlugin,
   CreatePlugin,
@@ -59,22 +78,3 @@ export type {
   RuntimeSupport,
   HookHandler,
 } from "./plugins/types.js";
-
-// Types
-export type { Cluster } from "./Cluster.js";
-export type {
-  DiagramOptions,
-  EdgeOptions,
-  NodeOptions,
-  ThemeName,
-  ThemeConfig,
-  Yaml,
-} from "./types.js";
-export type {
-  DiagramJSON,
-  DiagramNodeJSON,
-  DiagramEdgeJSON,
-  DiagramClusterJSON,
-  FromJSONOptions,
-  ProviderModule,
-} from "./json.js";
