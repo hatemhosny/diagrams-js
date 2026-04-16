@@ -15,30 +15,30 @@
 <title>Plugin Example</title>
 <polygon fill="white" stroke="none" points="-3.6,3.6 -3.6,-88.4 290.8,-88.4 290.8,3.6 -3.6,3.6"/>
 <text xml:space="preserve" text-anchor="middle" x="143.6" y="-7" font-family="Sans-Serif" font-size="10.00">Plugin Example</text>
-<!-- mo069ql9_uzy46xfmx -->
+<!-- mo1trnbl_hwbtv1sp6 -->
 <g id="node1" class="node">
-<title>mo069ql9_uzy46xfmx</title>
+<title>mo1trnbl_hwbtv1sp6</title>
 <text xml:space="preserve" text-anchor="middle" x="43.2" y="-22.4" font-family="Sans-Serif" font-size="8.00">[AWS] Load Balancer</text>
 <use href="#icon-gqe3wx" x="43.2" y="-56.4"/></g>
-<!-- mo069ql9_gd550u2fn -->
+<!-- mo1trnbm_44y8qlbis -->
 <g id="node2" class="node">
-<title>mo069ql9_gd550u2fn</title>
+<title>mo1trnbm_44y8qlbis</title>
 <text xml:space="preserve" text-anchor="middle" x="143.6" y="-22.4" font-family="Sans-Serif" font-size="8.00">[AWS] Web Server</text>
 <use href="#icon-h0qvqq" x="143.6" y="-56.4"/></g>
-<!-- mo069ql9_uzy46xfmx&#45;&gt;mo069ql9_gd550u2fn -->
+<!-- mo1trnbl_hwbtv1sp6&#45;&gt;mo1trnbm_44y8qlbis -->
 <g id="edge1" class="edge">
-<title>mo069ql9_uzy46xfmx&#45;&gt;mo069ql9_gd550u2fn</title>
+<title>mo1trnbl_hwbtv1sp6&#45;&gt;mo1trnbm_44y8qlbis</title>
 <path fill="none" stroke="blue" stroke-width="2" d="M86.36,-52.4C86.36,-52.4 92.45,-52.4 92.45,-52.4"/>
 <polygon fill="blue" stroke="blue" stroke-width="2" points="92.45,-54.15 97.45,-52.4 92.45,-50.65 92.45,-54.15"/>
 </g>
-<!-- mo069ql9_o3qyeyo8z -->
+<!-- mo1trnbm_abqht6tzw -->
 <g id="node3" class="node">
-<title>mo069ql9_o3qyeyo8z</title>
+<title>mo1trnbm_abqht6tzw</title>
 <text xml:space="preserve" text-anchor="middle" x="244" y="-22.4" font-family="Sans-Serif" font-size="8.00">[AWS] Database</text>
 <use href="#icon-diqtdm" x="244" y="-56.4"/></g>
-<!-- mo069ql9_gd550u2fn&#45;&gt;mo069ql9_o3qyeyo8z -->
+<!-- mo1trnbm_44y8qlbis&#45;&gt;mo1trnbm_abqht6tzw -->
 <g id="edge2" class="edge">
-<title>mo069ql9_gd550u2fn&#45;&gt;mo069ql9_o3qyeyo8z</title>
+<title>mo1trnbm_44y8qlbis&#45;&gt;mo1trnbm_abqht6tzw</title>
 <path fill="none" stroke="blue" stroke-width="2" d="M186.76,-52.4C186.76,-52.4 192.85,-52.4 192.85,-52.4"/>
 <polygon fill="blue" stroke="blue" stroke-width="2" points="192.85,-54.15 197.85,-52.4 192.85,-50.65 192.85,-54.15"/>
 </g>

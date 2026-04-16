@@ -5,6 +5,8 @@ description: Import and export Kubernetes YAML manifests with diagrams-js
 
 # Kubernetes Plugin
 
+**(Experimental!)**
+
 The Kubernetes plugin enables bidirectional conversion between Kubernetes YAML manifests and architecture diagrams. Visualize your container orchestration setups or generate Kubernetes deployment configurations from diagrams.
 
 ## Installation
@@ -64,6 +66,8 @@ await diagram.import(k8sYaml, "kubernetes");
 // Render the diagram
 const svg = await diagram.render();
 ```
+
+<img src="/examples/k8s-app.svg" alt="Kubernetes Plugin Example" className="example-img" />
 
 ### Export to Kubernetes YAML
 

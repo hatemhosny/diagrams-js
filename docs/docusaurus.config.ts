@@ -90,6 +90,11 @@ const config: Config = {
           label: "Providers",
           to: "/docs/guides/providers",
         },
+        {
+          position: "left",
+          label: "Plugins",
+          to: "/docs/plugins/overview",
+        },
         { to: "/playground", label: "Playground", position: "left" },
         {
           href: "https://www.npmjs.com/package/diagrams-js",

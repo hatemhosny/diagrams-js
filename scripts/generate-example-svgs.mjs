@@ -3,8 +3,9 @@
  * Generate SVG images for documentation examples
  */
 
-import { Custom, Diagram, Edge, Node } from "../dist/index.js";
+import { Custom, Diagram, Edge, Node, Iconify } from "../dist/index.js";
 import { dockerComposePlugin } from "../../plugin-docker-compose/dist/index.js";
+import { kubernetesPlugin } from "../../plugin-kubernetes/dist/index.js";
 import { EC2, Lambda, ECS, EKS } from "../dist/providers/aws/compute.js";
 import { Aurora, RDS, Elasticache, Redshift } from "../dist/providers/aws/database.js";
 import { ALB, ELB, Route53 } from "../dist/providers/aws/network.js";
@@ -335,7 +336,7 @@ async function generateExample9() {
     }),
   );
 
-  const database = diagram.add(Aurora("Database"));
+  const database = diagram.add(Iconify("Database", "logos:aws-aurora"));
 
   queue.to(consumers);
   consumers.forEach((consumer) => consumer.to(database));
@@ -562,7 +563,7 @@ async function generateQuickstartCloud() {
   console.log("  ✓ Generated");
 }
 
-async function generateDockerCompose() {
+async function generateDockerComposeExample() {
   console.log("Generating ecommerce-app.svg...");
   const composeYaml = `
 version: "3.8"
@@ -606,6 +607,53 @@ volumes:
   console.log("  ✓ Generated");
 }
 
+async function generateKubernetesExample() {
+  console.log("Generating k8s-app.svg...");
+  const diagram = Diagram("My K8s Application");
+
+  // Register the plugin instance
+  await diagram.registerPlugins([kubernetesPlugin]);
+
+  // Import from Kubernetes YAML
+  const k8sYaml = `
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: web-deployment
+  namespace: default
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: web
+  template:
+    spec:
+      containers:
+      - name: web
+        image: nginx:latest
+        ports:
+        - containerPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: web-service
+  namespace: default
+spec:
+  selector:
+    app: web
+  ports:
+  - port: 80
+    targetPort: 80
+`;
+
+  await diagram.import(k8sYaml, "kubernetes");
+
+  const svg = await diagram.render();
+  fs.writeFileSync(path.join(OUTPUT_DIR, "k8s-app.svg"), svg);
+  console.log("  ✓ Generated");
+}
+
 async function main() {
   console.log("Generating example SVGs...\n");
 
@@ -622,7 +670,8 @@ async function main() {
   await generateExample11();
   await generateQuickstartBasic();
   await generateQuickstartCloud();
-  await generateDockerCompose();
+  await generateDockerComposeExample();
+  await generateKubernetesExample();
 
   console.log("\n✓ All SVGs generated successfully!");
   console.log(`  Output directory: ${OUTPUT_DIR}`);

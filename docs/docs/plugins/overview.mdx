@@ -7,7 +7,7 @@ description: Extend diagrams-js with custom import/export formats, metadata prov
 
 The diagrams-js plugin system allows you to extend the library with custom functionality including:
 
-- **Importers**: Import from external formats (Docker Compose, Terraform, etc.)
+- **Importers**: Import from external formats ([Docker Compose](./docker-compose.mdx), [Kubernetes](./kubernetes.mdx), etc.)
 - **Exporters**: Export to external formats
 - **Metadata Providers**: Attach cloud provider metadata (pricing, specs) to nodes
 - **Hooks**: Execute custom code at various lifecycle events
@@ -633,6 +633,8 @@ await diagram.registerPlugins([apiPlugin({ apiKey: "xxx", region: "us-west-2" })
 ## Examples
 
 ### Complete Docker Compose Plugin
+
+This is a minimal example of a Docker Compose plugin. See the official [Docker Compose Plugin](./docker-compose.mdx) for a complete ready-to-use plugin.
 
 ```typescript
 const createDockerComposePlugin = () => ({
