@@ -396,7 +396,7 @@ import { RDS } from "diagrams-js/aws/database";
 import { ELB } from "diagrams-js/aws/network";
 
 // Create a plugin that modifies node labels
-const labelPrefixPlugin = () => ({
+const labelPrefixPlugin = {
   name: "label-prefix",
   version: "1.0.0",
   apiVersion: "1.0",
@@ -415,10 +415,10 @@ const labelPrefixPlugin = () => ({
       ],
     },
   ],
-});
+};
 
 // Create a plugin that adds colored edges
-const coloredEdgePlugin = () => ({
+const coloredEdgePlugin = {
   name: "colored-edges",
   version: "1.0.0",
   apiVersion: "1.0",
@@ -439,10 +439,10 @@ const coloredEdgePlugin = () => ({
       ],
     },
   ],
-});
+};
 
 // Create a plugin that modifies node attributes
-const nodeStylePlugin = () => ({
+const nodeStylePlugin = {
   name: "node-style",
   version: "1.0.0",
   apiVersion: "1.0",
@@ -462,7 +462,7 @@ const nodeStylePlugin = () => ({
       ],
     },
   ],
-});
+};
 
 const diagram = Diagram("Plugin Example");
 
