@@ -976,7 +976,7 @@
   },
   "scripts": {
     "build": "vp run build:core && vp run build:providers && vp run build:fix",
-    "build:core": "vp pack src/index.ts",
+    "build:core": "vp pack src/index.ts && node scripts/inline-chunks.mjs",
     "build:providers": "node scripts/build-providers.mjs",
     "build:fix": "vp check --fix",
     "dev": "vp build --watch",
