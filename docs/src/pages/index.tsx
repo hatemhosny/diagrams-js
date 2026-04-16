@@ -189,6 +189,51 @@ const svg = await diagram.render();`}</CodeBlock>
   );
 }
 
+function PluginsSection() {
+  return (
+    <section className={styles.pluginsSection}>
+      <div className="container">
+        <Heading as="h2" className={styles.sectionTitle}>
+          Plugin Support
+        </Heading>
+        <p className={styles.sectionDescription}>
+          Visualize existing infrastructure by importing and exporting external formats. Official
+          plugins are available for Docker Compose and Kubernetes.
+        </p>
+        <div className="row">
+          <div className="col col--6">
+            <div className={styles.pluginCard}>
+              <Heading as="h3" className={styles.pluginTitle}>
+                🐳 Docker Compose
+              </Heading>
+              <p className={styles.pluginDescription}>
+                Import Docker Compose files to visualize container architectures with volumes,
+                networks, and service dependencies.
+              </p>
+            </div>
+          </div>
+          <div className="col col--6">
+            <div className={styles.pluginCard}>
+              <Heading as="h3" className={styles.pluginTitle}>
+                ☸️ Kubernetes
+              </Heading>
+              <p className={styles.pluginDescription}>
+                Import Kubernetes manifests to visualize Deployments, Services, StatefulSets, and
+                cluster topology.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className={styles.pluginCta}>
+          <Link className="button button--primary button--lg" to="/docs/plugins/overview">
+            Explore Plugins
+          </Link>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function CTASection() {
   return (
     <section className={styles.ctaSection}>
@@ -231,6 +276,7 @@ export default function Home(): ReactNode {
         <HeroSection />
         <FeaturesSection />
         <CodeExampleSection />
+        <PluginsSection />
         <CTASection />
       </main>
     </Layout>

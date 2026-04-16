@@ -158,6 +158,48 @@
   font-weight: bold;
 }
 
+/* Plugins Section */
+.pluginsSection {
+  padding: 4rem 0;
+  background: var(--ifm-background-color);
+}
+
+.pluginCard {
+  padding: 2rem;
+  background: var(--ifm-background-surface-color);
+  border-radius: 12px;
+  border: 1px solid var(--ifm-color-emphasis-200);
+  height: 100%;
+  margin-bottom: 2rem;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.pluginCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.pluginTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--ifm-color-content);
+}
+
+.pluginDescription {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--ifm-color-content-secondary);
+  margin-bottom: 1.5rem;
+}
+
+.pluginCta {
+  text-align: center;
+  margin-top: 1rem;
+}
+
 /* CTA Section */
 .ctaSection {
   padding: 5rem 0;
