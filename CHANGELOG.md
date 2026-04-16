@@ -1,3 +1,23 @@
+## [0.3.1] - 2026-04-16
+
+### Features
+
+- feat: export loadAll from yaml (54faeda)
+
+### Bug Fixes
+
+- fix links in readme (48d3d90)
+
+### Other Changes
+
+- update homepage (443080d)
+- update docs (d86e1b0)
+- inline build chunks (ac972e7)
+- edit vite config (f46a671)
+- clean up playground page (8f17c20)
+- update kubernetes plugin docs (d2db802)
+- add docker compose playground example (8c1443c)
+
 ## [0.3.0] - 2026-04-15
 
 ### Features
