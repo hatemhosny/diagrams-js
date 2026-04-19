@@ -85,6 +85,8 @@ export default function VisualEditor(): React.JSX.Element {
   // Refs
   const diagramModuleRef = useRef<any>(null);
   const moduleCacheRef = useRef<Map<string, any>>(new Map());
+  const dockerComposePluginRef = useRef<any>(null);
+  const kubernetesPluginRef = useRef<any>(null);
   const [isLibraryLoaded, setIsLibraryLoaded] = useState(false);
 
   // Load diagrams-js module via direct ESM import (BrowserOnly ensures this runs in browser)
@@ -431,6 +433,323 @@ export default function VisualEditor(): React.JSX.Element {
     URL.revokeObjectURL(url);
   }, [state]);
 
+  // Load plugins from CDN
+  const loadDockerComposePlugin = useCallback(async () => {
+    if (dockerComposePluginRef.current) return dockerComposePluginRef.current;
+    try {
+      const mod = await import(
+        /* webpackIgnore: true */ cdn + "@diagrams-js/plugin-docker-compose"
+      );
+      dockerComposePluginRef.current = mod.dockerComposePlugin || mod.default;
+      return dockerComposePluginRef.current;
+    } catch (e) {
+      console.error("Failed to load Docker Compose plugin:", e);
+      throw new Error("Failed to load Docker Compose plugin from CDN");
+    }
+  }, []);
+
+  const loadKubernetesPlugin = useCallback(async () => {
+    if (kubernetesPluginRef.current) return kubernetesPluginRef.current;
+    try {
+      const mod = await import(/* webpackIgnore: true */ cdn + "@diagrams-js/plugin-kubernetes");
+      kubernetesPluginRef.current = mod.kubernetesPlugin || mod.default;
+      return kubernetesPluginRef.current;
+    } catch (e) {
+      console.error("Failed to load Kubernetes plugin:", e);
+      throw new Error("Failed to load Kubernetes plugin from CDN");
+    }
+  }, []);
+
+  // Import from Docker Compose YAML
+  const importDockerCompose = useCallback(
+    async (content: string) => {
+      if (!diagramModuleRef.current) {
+        throw new Error("Diagram library not loaded");
+      }
+
+      // 1. Clear current diagram immediately
+      setState({
+        name: "Docker Compose Import",
+        direction: state.direction,
+        theme: state.theme,
+        clusters: [],
+        nodes: [],
+        edges: [],
+      });
+      setIdCounter(1);
+      setSelected(null);
+      setError("");
+      setIsLoading(true);
+
+      try {
+        const { Diagram } = diagramModuleRef.current;
+
+        // 2. Load plugin if not already loaded
+        const plugin = await loadDockerComposePlugin();
+
+        // 3. Create diagram and import
+        const diagram = Diagram("Docker Compose Import", {
+          direction: state.direction,
+          theme: state.theme,
+        });
+
+        await diagram.registerPlugins([plugin]);
+        await diagram.import(content, "docker-compose");
+
+        // 4. Extract data from diagram using toJSON()
+        const diagramJson = diagram.toJSON();
+
+        // Convert to VisualEditor state format
+        const importedState: DiagramState = {
+          name: diagramJson.name || "Docker Compose Import",
+          direction: state.direction,
+          theme: state.theme,
+          clusters: [],
+          nodes: [],
+          edges: [],
+        };
+
+        // Convert clusters
+        if (diagramJson.clusters) {
+          for (const cluster of diagramJson.clusters) {
+            const clusterId = nextId("c");
+            importedState.clusters.push({
+              id: clusterId,
+              label: cluster.label || "Cluster",
+            });
+
+            // Assign cluster to nodes that belong to it
+            if (cluster.nodes) {
+              for (const nodeId of cluster.nodes) {
+                const node = diagramJson.nodes.find((n: any) => n.id === nodeId);
+                if (node) {
+                  node._clusterId = clusterId;
+                }
+              }
+            }
+          }
+        }
+
+        // Convert nodes
+        let nodeIdCounter = 1;
+        const nodeIdMap = new Map<string, string>(); // Map old ID to new ID
+
+        for (const node of diagramJson.nodes) {
+          const newId = `n${nodeIdCounter++}`;
+          nodeIdMap.set(node.id, newId);
+
+          const nodeData: Node = {
+            id: newId,
+            label: node.label || "Node",
+            clusterId: node._clusterId || null,
+          };
+
+          // Check if node has custom icon URL
+          if (node.iconUrl) {
+            nodeData.custom = true;
+            nodeData.iconMode = "url";
+            nodeData.iconUrl = node.iconUrl;
+          } else if (node.provider && node.service && node.type) {
+            // Provider-based icon (service nodes from Docker Compose)
+            nodeData.provider = node.provider;
+            nodeData.type = node.service;
+            nodeData.resource = node.type;
+          } else if (node.provider && node.type) {
+            // Alternative format
+            nodeData.provider = node.provider;
+            nodeData.type = node.type;
+            nodeData.resource = node.type;
+          } else {
+            // Network/volume nodes or nodes without provider info - use generic container icon
+            nodeData.custom = true;
+            nodeData.iconMode = "iconify";
+            nodeData.iconName = "mdi:docker";
+          }
+
+          importedState.nodes.push(nodeData);
+        }
+
+        // Convert edges
+        let edgeIdCounter = 1;
+        if (diagramJson.edges) {
+          for (const edge of diagramJson.edges) {
+            const fromId = nodeIdMap.get(edge.from);
+            const toId = nodeIdMap.get(edge.to);
+
+            if (fromId && toId) {
+              importedState.edges.push({
+                id: `e${edgeIdCounter++}`,
+                from: fromId,
+                to: toId,
+                direction: edge.direction || "forward",
+                style: edge.style || "",
+                color: edge.color || "",
+                label: edge.label || "",
+              });
+            }
+          }
+        }
+
+        // 5. Update state
+        setState(importedState);
+        setIdCounter(Math.max(nodeIdCounter, edgeIdCounter, importedState.clusters.length + 1));
+        setSelected(null);
+      } catch (err: any) {
+        console.error("Import failed:", err);
+        setError("Failed to import Docker Compose: " + (err.message || "Unknown error"));
+        throw err;
+      } finally {
+        setIsLoading(false);
+      }
+    },
+    [loadDockerComposePlugin, nextId, state.direction, state.theme],
+  );
+
+  // Import from Kubernetes YAML
+  const importKubernetes = useCallback(
+    async (content: string) => {
+      if (!diagramModuleRef.current) {
+        throw new Error("Diagram library not loaded");
+      }
+
+      // 1. Clear current diagram immediately
+      setState({
+        name: "Kubernetes Import",
+        direction: state.direction,
+        theme: state.theme,
+        clusters: [],
+        nodes: [],
+        edges: [],
+      });
+      setIdCounter(1);
+      setSelected(null);
+      setError("");
+      setIsLoading(true);
+
+      try {
+        const { Diagram } = diagramModuleRef.current;
+
+        // 2. Load plugin if not already loaded
+        const plugin = await loadKubernetesPlugin();
+
+        // 3. Create diagram and import
+        const diagram = Diagram("Kubernetes Import", {
+          direction: state.direction,
+          theme: state.theme,
+        });
+
+        await diagram.registerPlugins([plugin]);
+        await diagram.import(content, "kubernetes");
+
+        // 4. Extract data from diagram using toJSON()
+        const diagramJson = diagram.toJSON();
+
+        // Convert to VisualEditor state format
+        const importedState: DiagramState = {
+          name: diagramJson.name || "Kubernetes Import",
+          direction: state.direction,
+          theme: state.theme,
+          clusters: [],
+          nodes: [],
+          edges: [],
+        };
+
+        // Convert clusters
+        if (diagramJson.clusters) {
+          for (const cluster of diagramJson.clusters) {
+            const clusterId = nextId("c");
+            importedState.clusters.push({
+              id: clusterId,
+              label: cluster.label || "Cluster",
+            });
+
+            // Assign cluster to nodes that belong to it
+            if (cluster.nodes) {
+              for (const nodeId of cluster.nodes) {
+                const node = diagramJson.nodes.find((n: any) => n.id === nodeId);
+                if (node) {
+                  node._clusterId = clusterId;
+                }
+              }
+            }
+          }
+        }
+
+        // Convert nodes
+        let nodeIdCounter = 1;
+        const nodeIdMap = new Map<string, string>(); // Map old ID to new ID
+
+        for (const node of diagramJson.nodes) {
+          const newId = `n${nodeIdCounter++}`;
+          nodeIdMap.set(node.id, newId);
+
+          const nodeData: Node = {
+            id: newId,
+            label: node.label || "Node",
+            clusterId: node._clusterId || null,
+          };
+
+          // Check if node has custom icon URL
+          if (node.iconUrl) {
+            nodeData.custom = true;
+            nodeData.iconMode = "url";
+            nodeData.iconUrl = node.iconUrl;
+          } else if (node.provider && node.service && node.type) {
+            // Provider-based icon (Kubernetes nodes)
+            nodeData.provider = node.provider;
+            nodeData.type = node.service;
+            nodeData.resource = node.type;
+          } else if (node.provider && node.type) {
+            // Alternative format
+            nodeData.provider = node.provider;
+            nodeData.type = node.type;
+            nodeData.resource = node.type;
+          } else {
+            // Nodes without provider info - use generic Kubernetes icon
+            nodeData.custom = true;
+            nodeData.iconMode = "iconify";
+            nodeData.iconName = "logos:kubernetes";
+          }
+
+          importedState.nodes.push(nodeData);
+        }
+
+        // Convert edges
+        let edgeIdCounter = 1;
+        if (diagramJson.edges) {
+          for (const edge of diagramJson.edges) {
+            const fromId = nodeIdMap.get(edge.from);
+            const toId = nodeIdMap.get(edge.to);
+
+            if (fromId && toId) {
+              importedState.edges.push({
+                id: `e${edgeIdCounter++}`,
+                from: fromId,
+                to: toId,
+                direction: edge.direction || "forward",
+                style: edge.style || "",
+                color: edge.color || "",
+                label: edge.label || "",
+              });
+            }
+          }
+        }
+
+        // 5. Update state
+        setState(importedState);
+        setIdCounter(Math.max(nodeIdCounter, edgeIdCounter, importedState.clusters.length + 1));
+        setSelected(null);
+      } catch (err: any) {
+        console.error("Import failed:", err);
+        setError("Failed to import Kubernetes: " + (err.message || "Unknown error"));
+        throw err;
+      } finally {
+        setIsLoading(false);
+      }
+    },
+    [loadKubernetesPlugin, nextId, state.direction, state.theme],
+  );
+
   // Import JSON
   const importJson = useCallback((file: File) => {
     const reader = new FileReader();
@@ -616,6 +935,8 @@ export default function VisualEditor(): React.JSX.Element {
         onExportSvg={exportSvg}
         onExportJson={exportJson}
         onImportJson={importJson}
+        onImportDockerCompose={importDockerCompose}
+        onImportKubernetes={importKubernetes}
         onShare={handleShare}
         shareCopied={shareCopied}
       />
@@ -1562,7 +1883,7 @@ function Canvas({
         <div className={styles.canvasEmpty}>
           Add nodes from the Build panel to start,
           <br />
-          or load an example from the File menu.
+          or load an example from the Import menu.
         </div>
       )}
       {svgContent && (
@@ -2316,6 +2637,8 @@ function Toolbar({
   onExportSvg,
   onExportJson,
   onImportJson,
+  onImportDockerCompose,
+  onImportKubernetes,
   onShare,
   shareCopied,
 }: {
@@ -2326,10 +2649,32 @@ function Toolbar({
   onExportSvg: () => void;
   onExportJson: () => void;
   onImportJson: (file: File) => void;
+  onImportDockerCompose: (content: string) => Promise<void>;
+  onImportKubernetes: (content: string) => Promise<void>;
   onShare: () => void;
   shareCopied: boolean;
 }) {
   const fileInputRef = useRef<HTMLInputElement>(null);
+  const dockerComposeInputRef = useRef<HTMLInputElement>(null);
+  const kubernetesInputRef = useRef<HTMLInputElement>(null);
+
+  const handleDockerComposeImport = async (file: File) => {
+    try {
+      const content = await file.text();
+      await onImportDockerCompose(content);
+    } catch (err: any) {
+      alert("Failed to import Docker Compose: " + err.message);
+    }
+  };
+
+  const handleKubernetesImport = async (file: File) => {
+    try {
+      const content = await file.text();
+      await onImportKubernetes(content);
+    } catch (err: any) {
+      alert("Failed to import Kubernetes: " + err.message);
+    }
+  };
 
   return (
     <div className={styles.toolbar}>
@@ -2382,6 +2727,8 @@ function Toolbar({
           onChange={(e) => {
             const value = e.target.value;
             if (value === "example") onLoadExample();
+            else if (value === "import-docker-compose") dockerComposeInputRef.current?.click();
+            else if (value === "import-kubernetes") kubernetesInputRef.current?.click();
             else if (value === "import") fileInputRef.current?.click();
             else if (value === "export") onExportJson();
             e.target.value = "";
@@ -2389,11 +2736,16 @@ function Toolbar({
           value=""
         >
           <option value="" disabled>
-            File...
+            Import...
           </option>
           <option value="example">Load Example</option>
-          <option value="import">Import JSON</option>
-          <option value="export">Export JSON</option>
+          <option value="" disabled>
+            ──────────
+          </option>
+          <option value="import-docker-compose">Import Docker Compose...</option>
+          <option value="import-kubernetes">Import Kubernetes...</option>
+          <option value="import">Import JSON...</option>
+          <option value="export">Export JSON...</option>
         </select>
         <input
           ref={fileInputRef}
@@ -2403,6 +2755,28 @@ function Toolbar({
           onChange={(e) => {
             const file = e.target.files?.[0];
             if (file) onImportJson(file);
+            e.target.value = "";
+          }}
+        />
+        <input
+          ref={dockerComposeInputRef}
+          type="file"
+          accept=".yml,.yaml"
+          style={{ display: "none" }}
+          onChange={(e) => {
+            const file = e.target.files?.[0];
+            if (file) void handleDockerComposeImport(file);
+            e.target.value = "";
+          }}
+        />
+        <input
+          ref={kubernetesInputRef}
+          type="file"
+          accept=".yml,.yaml"
+          style={{ display: "none" }}
+          onChange={(e) => {
+            const file = e.target.files?.[0];
+            if (file) void handleKubernetesImport(file);
             e.target.value = "";
           }}
         />
