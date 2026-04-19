@@ -109,6 +109,7 @@ export default function Playground(): React.JSX.Element {
       const url = `${window.location.origin}${window.location.pathname}#${compressed}`;
 
       await navigator.clipboard.writeText(url);
+      window.location.hash = compressed;
       setShareCopied(true);
       setTimeout(() => setShareCopied(false), 2000);
     } catch (e) {
@@ -140,7 +141,7 @@ export default function Playground(): React.JSX.Element {
           <button
             onClick={handleShare}
             className={
-              "button " + styles.button + (shareCopied ? " button--success" : " button--primary")
+              styles.button + " " + styles.btnShare + (shareCopied ? " " + styles.btnSuccess : "")
             }
             disabled={shareCopied}
           >

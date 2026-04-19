@@ -96,6 +96,7 @@ const config: Config = {
           to: "/docs/plugins/overview",
         },
         { to: "/playground", label: "Playground", position: "left" },
+        { to: "/visual-editor", label: "Visual Editor", position: "left" },
         {
           href: "https://www.npmjs.com/package/diagrams-js",
           label: "npm",
@@ -163,6 +164,10 @@ const config: Config = {
             {
               label: "Playground",
               to: "/playground",
+            },
+            {
+              label: "Visual Editor",
+              to: "/visual-editor",
             },
             {
               label: "Sponsor 💚",
