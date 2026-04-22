@@ -26,11 +26,22 @@ src/
 ├── icons.ts          # Icon injection utilities
 ├── types.ts          # TypeScript types
 ├── context.ts        # Context management
+├── json.ts           # JSON serialization
+├── plugins/          # Plugin system
+│   ├── built-in/     # Built-in plugins (json, svg)
+│   ├── registry.ts   # Plugin registry
+│   ├── types.ts      # Plugin types
+│   └── index.ts      # Plugin exports
 └── providers/        # Auto-generated provider classes
     ├── aws/
     ├── azure/
     ├── gcp/
     └── ... (17 providers)
+
+docs/                  # Docusaurus documentation
+skills/                # AI agent skill definitions
+tests/                 # Test suite
+scripts/               # Build and generation scripts
 ```
 
 ## Technology Stack
@@ -43,7 +54,29 @@ src/
 - **Rendering**: @viz-js/viz (Graphviz WASM)
 - **Documentation**: Docusaurus
 
+## AI Agent Skills
+
+The `skills/` directory contains structured skill definitions for AI agents. Load relevant skills before working on related tasks:
+
+- **getting-started** — Installation, first diagram, basic concepts
+- **diagram-configuration** — Direction, theme, curve style, custom attributes
+- **rendering-export** — SVG/PNG/JPG/DOT output, data URLs, file saving
+- **json-serialization** — Export/import diagrams as JSON
+- **svg-serialization** — Export/import diagrams as SVG with embedded metadata
+- **provider-nodes** — Using 2000+ pre-built cloud provider nodes
+- **custom-nodes** — External icons and images
+- **node-connections** — `.to()`, `.from()`, `.with()`, `Edge()` styling
+- **clusters-grouping** — Nested clusters and visual organization
+- **diagrams-js-plugin-system** — Creating custom import/export plugins
+- **creating-plugins** — Package structure, API, best practices
+- **diagram-diff** — Comparing diagram versions
+- **browser-integration** — CDN, bundlers, DOM insertion
+- **nodejs-integration** — File system, sharp, local icons
+- **python-migration** — Converting from Python diagrams library
+
 ## Development Workflow
+
+> **Platform Note**: This is a Windows machine using PowerShell. Use PowerShell-compatible commands.
 
 ### Prerequisites
 
@@ -52,7 +85,7 @@ src/
 
 ### Essential Commands
 
-```bash
+```powershell
 # Install dependencies
 vp install
 
@@ -132,13 +165,26 @@ Test files are in `tests/` directory using Vitest.
 1. **Core functionality**: Add to appropriate file in `src/`
 2. **New providers**: Modify `scripts/generate.ts` and regenerate
 3. **Tests**: Add to `tests/index.test.ts` or create new test files
-4. **Documentation**: Update files in `docs/src/content/docs/`
+4. **Documentation**: Update files in `docs/docs/`
+5. **Skills**: Update or add skill files in `skills/` when behavior changes
+
+### Public API Changes
+
+**Confirm before changing public API**: Any changes to exported types, class signatures, or method signatures that affect consumers must be confirmed with the user first. Prefer additive changes (new optional parameters) over breaking changes.
+
+This includes:
+
+- Changes to `Diagram` constructor options or methods
+- Changes to `Node`, `Edge`, or `Cluster` public APIs
+- Changes to plugin type definitions in `src/plugins/types.ts`
+- Changes to exported type interfaces in `src/types.ts`
+- Renaming or removing exported functions/classes
 
 ### Provider Generation
 
 Providers are auto-generated from icon resources:
 
-```bash
+```powershell
 # Modify scripts/generate.ts if needed
 # Then regenerate:
 npx tsx scripts/generate.ts
@@ -205,12 +251,12 @@ const node3 = new Custom("Label", "./local/icon.png");
 ### Writing Tests
 
 ```typescript
-import { describe, it, expect } from "vitest";
-import { Diagram } from "../src/Diagram.js";
+import { describe, it, expect } from "vite-plus/test";
+import { Diagram } from "../src/index.js";
 
 describe("Feature Name", () => {
   it("should do something", async () => {
-    const diagram = new Diagram("Test");
+    const diagram = Diagram("Test");
     // ... test code
   });
 });
@@ -236,7 +282,7 @@ describe("Feature Name", () => {
 
 Documentation site is in `docs/`:
 
-```bash
+```powershell
 cd docs
 pnpm install
 pnpm start  # Start dev server
@@ -256,11 +302,11 @@ Add/update MDX files in `docs/docs/`.
 
 Always run:
 
-```bash
+```powershell
 vp run build && vp check && vp test
 ```
 
-ALl must pass before committing.
+All must pass before committing.
 
 ## Release Process
 
