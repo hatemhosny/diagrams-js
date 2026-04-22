@@ -2,7 +2,7 @@
 name: diagrams-js/diagram-diff
 description: >
   Visual diff for diagrams. Compare two versions of a diagram to see added, removed,
-  modified, and renamed elements with color-coded side-by-side rendering. Perfect for
+  and modified elements with color-coded side-by-side rendering. Perfect for
   code reviews, documentation, and architecture evolution tracking.
 type: core
 library: diagrams-js
@@ -19,7 +19,7 @@ This skill builds on diagrams-js/getting-started and diagrams-js/json-serializat
 
 # diagrams-js — Diagram Diff
 
-Compare two versions of a diagram visually. The diff feature highlights **added**, **removed**, **modified**, and **renamed** elements with color-coded overlays in a side-by-side view.
+Compare two versions of a diagram visually. The diff feature highlights **added**, **removed**, and **modified** elements with color-coded overlays in a side-by-side view.
 
 ## Use Cases
 
@@ -40,7 +40,7 @@ const after = JSON.parse(await fs.readFile("arch-v2.json", "utf8"));
 
 // Compute the diff
 const diff = computeDiff(before, after);
-console.log(diff.summary); // { added: 2, removed: 1, modified: 3, ... }
+console.log(diff.summary); // { added: 2, removed: 1, modified: 3, unchanged: 5 }
 
 // Render as self-contained HTML
 const html = await renderDiff(diff, before, after, { format: "html" });
@@ -66,7 +66,7 @@ const diff = computeDiff(before, after);
 
 // Summary counts
 console.log(diff.summary);
-// { added: 2, removed: 1, modified: 3, unchanged: 5, renamed: 0 }
+// { added: 2, removed: 1, modified: 3, unchanged: 5 }
 
 // Check specific node
 const nodeDiff = diff.nodes.get("web-server");
@@ -100,20 +100,54 @@ const html = await renderDiff(diff, before, after, {
 | `modified`  | 🟠 Amber | Properties changed (including label changes) |
 | `unchanged` | ⚪ Gray  | No changes (shown by default)                |
 
-## Node Matching
+## Node Matching Algorithm
 
-Nodes are matched in phases:
+Nodes are matched using a three-phase approach:
 
-1. **Fingerprint Matching**: Nodes matched by `(label, provider, service, type)`
-2. **Label Fingerprint + Edge Connectivity**: Unmatched nodes with same `(provider, service, type)` are matched using edge connectivity to disambiguate
-3. **Simple Label Fingerprint**: Remaining unmatched nodes matched 1:1 by `(provider, service, type)`
+### Phase 1: Fingerprint Matching
 
-This detects renames (same entity, different ID) vs true add/remove.
+Nodes with identical `(label, provider, service, type)` are matched directly as `unchanged` or `modified`.
 
 ```typescript
-// These match as "renamed" (same fingerprint, different ID)
-// Before: { id: "web-old", label: "Web Server", provider: "aws", type: "EC2" }
-// After:  { id: "web-new", label: "Web Server", provider: "aws", type: "EC2" }
+// Before: { label: "Web Server", provider: "aws", service: "compute", type: "EC2" }
+// After:  { label: "Web Server", provider: "aws", service: "compute", type: "EC2" }
+// Result: unchanged
+
+// Before: { label: "Web Server", provider: "aws", service: "compute", type: "EC2" }
+// After:  { label: "Web Server v2", provider: "aws", service: "compute", type: "EC2" }
+// Result: modified (label change)
+```
+
+### Phase 2: Label Fingerprint + Edge Connectivity
+
+Unmatched nodes with the same `(provider, service, type)` are matched using edge connectivity:
+
+- If edge connectivity patterns match → paired and marked as `modified` (label change)
+- If edge connectivity differs → treated as separate nodes (removed + added)
+
+```typescript
+// Example: worker4 → worker1 with same connectivity
+// Before: { label: "worker4", provider: "aws", type: "EC2", connectsTo: ["lb"] }
+// After:  { label: "worker1", provider: "aws", type: "EC2", connectsTo: ["lb"] }
+// Result: modified (label: "worker4" → "worker1")
+
+// Example: Different connectivity = different nodes
+// Before: { label: "worker4", provider: "aws", type: "EC2", connectsTo: ["lb"] }
+// After:  { label: "worker1", provider: "aws", type: "EC2", connectsTo: ["db"] }
+// Result: removed (worker4) + added (worker1)
+```
+
+### Phase 3: Simple Label Fingerprint
+
+Remaining unmatched nodes are matched 1:1 by `(provider, service, type)`:
+
+- Same label → `unchanged`
+- Different labels → `modified`
+
+```typescript
+// Before: { label: "worker1", provider: "aws", type: "EC2" }
+// After:  { label: "worker2", provider: "aws", type: "EC2" }
+// Result: modified (label: "worker1" → "worker2")
 ```
 
 ## Diff Options
@@ -155,6 +189,24 @@ if (diff.meta.theme) {
 
 These appear in the HTML output under "Diagram Options Changed".
 
+## CLI Tool
+
+Use `diagrams-diff-cli` for git workflows:
+
+```bash
+# Install globally
+npm install -g diagrams-diff-cli
+
+# Compare with HEAD
+diagrams-diff HEAD diagram.json -o diff.html
+
+# Compare branches
+diagrams-diff main...feature diagram.json -o diff.html
+
+# Terminal preview
+diagrams-diff HEAD diagram.json --format terminal
+```
+
 ## Common Mistakes
 
 ### CRITICAL Forgetting to await renderDiff
@@ -175,52 +227,60 @@ fs.writeFileSync("diff.html", html);
 
 `renderDiff` is async because it renders both diagrams to SVG.
 
-### HIGH Expecting renamed nodes without fingerprint match
+### HIGH Expecting modified nodes without matching criteria
 
 Wrong:
 
 ```typescript
-// Before: { id: "web", label: "Web Server" }
-// After:  { id: "api", label: "API Server" }
-// Both label AND id changed → detected as removed + added
+// Before: { label: "worker4", provider: "aws", type: "EC2" }
+// After:  { label: "worker1", provider: "aws", type: "EC2" }
+// Different labels, no edge connectivity match → detected as removed + added
 ```
 
 Correct:
 
 ```typescript
-// Before: { id: "web", label: "Web Server", provider: "aws", type: "EC2" }
-// After:  { id: "api", label: "Web Server", provider: "aws", type: "EC2" }
-// Same label/provider/type → detected as renamed
+// Before: { label: "worker1", provider: "aws", type: "EC2" }
+// After:  { label: "worker1-prod", provider: "aws", type: "EC2" }
+// Same provider/type with matching connectivity → detected as modified
 ```
 
-Keep at least `(label, provider, service, type)` consistent for rename detection.
+Keep the same `(provider, service, type)` and similar edge connectivity for modification detection.
 
-### MEDIUM Confusing modified with renamed
+### MEDIUM Confusing modified with removed+added
 
-- `renamed`: Only the ID changed, everything else identical
-- `modified`: ID stayed the same, properties changed
-- Both: ID changed AND properties changed → `renamed` with `changes` array
+- `modified`: Same `(provider, service, type)` with matching edge connectivity, but different label
+- `removed` + `added`: Different labels without matching connectivity, or different `(provider, service, type)`
 
 ```typescript
-if (nodeDiff.kind === "renamed" && nodeDiff.changes) {
-  // Renamed AND something else changed
-  console.log("Renamed from", nodeDiff.before?.id, "to", nodeDiff.after?.id);
-  console.log("Also changed:", nodeDiff.changes);
+if (nodeDiff.kind === "modified") {
+  // Label changed but same entity
+  console.log("Renamed:", nodeDiff.changes);
+}
+
+if (nodeDiff.kind === "removed") {
+  // Node was deleted
+  console.log("Removed:", nodeDiff.before?.label);
+}
+
+if (nodeDiff.kind === "added") {
+  // Node is new
+  console.log("Added:", nodeDiff.after?.label);
 }
 ```
 
 ## Best Practices
 
-### Use Stable Node IDs
+### Use Stable Node Identifiers
 
-Node IDs should represent the logical entity:
+Node matching relies on `(label, provider, service, type)`, not IDs:
 
 ```typescript
-// Good: ID represents the service
-const web = diagram.add(EC2("Web Server", { nodeId: "web-service" }));
+// Good: Consistent identifiers across versions
+const web = diagram.add(EC2("Web Server"));
 
-// Bad: ID includes version/instance info
-const web = diagram.add(EC2("Web Server", { nodeId: "web-v1-az1" }));
+// Good: Meaningful labels that persist
+const api = diagram.add(Lambda("API Handler"));
 ```
 
 ### Export JSON for Versioning
@@ -271,7 +331,7 @@ web2.to(storage);
 // Compute diff
 const diff = computeDiff(v1.toJSON(), v2.toJSON());
 console.log(diff.summary);
-// { added: 1, removed: 0, modified: 1, unchanged: 1, renamed: 0 }
+// { added: 1, removed: 0, modified: 1, unchanged: 1 }
 
 // Render visual diff
 const html = await renderDiff(diff, v1.toJSON(), v2.toJSON(), {

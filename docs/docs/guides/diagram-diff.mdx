@@ -110,7 +110,16 @@ Nodes are matched using a three-phase approach:
 2. **Label Fingerprint + Edge Connectivity**: Unmatched nodes with same `(provider, service, type)` are matched using edge connectivity to disambiguate multiple candidates
 3. **Simple Label Fingerprint**: Remaining unmatched nodes are matched 1:1 by `(provider, service, type)`
 
-This means if you change a node's label but keep the same provider and type, it's detected as `modified` rather than `removed` + `added`.
+#### Label Change Detection
+
+When nodes have the same `(provider, service, type)` but different labels:
+
+- **Same label** → `unchanged`
+- **Different labels** → `modified` (label change)
+
+This means if you rename a node (e.g., "worker1" → "worker1-prod") while keeping the same provider and type, it's detected as `modified` rather than `removed` + `added`.
+
+**Note**: Nodes with completely different labels but same type are treated as separate nodes (removed + added), not modifications. The algorithm uses edge connectivity to determine if nodes should be paired.
 
 ## Rendering Diffs
 
@@ -242,19 +251,58 @@ The resulting HTML will show:
 - **Amber**: Changed EC2 → Lambda node
 - **Dimmed**: Unchanged RDS node
 
-## Git Integration (Future)
+## Git Integration with CLI
 
-A CLI plugin is planned for automatic diff generation in git workflows:
+Use the `diagrams-diff-cli` package for automatic diff generation in git workflows:
 
 ```bash
+# Install globally
+npm install -g diagrams-diff-cli
+
 # Compare current file with HEAD
-diagrams-diff HEAD -- architecture.ts
+diagrams-diff HEAD diagram.json -o diff.html
 
 # Generate diff for PR
-diagrams-diff main...feature -- architecture.ts --output diff.html
+diagrams-diff main...feature diagram.json -o diff.html
+
+# Show in terminal (ASCII preview)
+diagrams-diff HEAD diagram.json --format terminal
 ```
 
-For now, you can integrate manually by exporting JSON at each revision and running `Diagram.renderDiff()`.
+### CLI Options
+
+```bash
+diagrams-diff <ref> <file> [options]
+
+Options:
+  -o, --output <file>     Output file (default: stdout)
+  -f, --format <format>   Output format: html, svg, json, terminal (default: html)
+  -t, --theme <theme>     Theme: light, dark (default: light)
+  -l, --layout <layout>   Layout: side-by-side, stacked (default: side-by-side)
+  --show-unchanged        Show unchanged elements (default: true)
+  --no-show-unchanged     Hide unchanged elements
+  --ignore-position       Ignore position changes (default: true)
+  --no-ignore-position    Include position changes
+```
+
+### Programmatic Usage
+
+```typescript
+import { generateDiff, diffFromGit } from "diagrams-diff-cli";
+
+// Generate diff from two JSON files
+const html = await generateDiff(beforeJSON, afterJSON, {
+  format: "html",
+  theme: "dark",
+});
+
+// Generate diff from git ref
+const html = await diffFromGit("HEAD", "diagram.json", {
+  format: "html",
+});
+```
+
+For manual integration, you can also export JSON at each revision and run `Diagram.renderDiff()`.
 
 ## Best Practices
 
@@ -278,7 +326,14 @@ For now, you can integrate manually by exporting JSON at each revision and runni
 
 ### Nodes showing as removed+added instead of modified
 
-Ensure the node has the same `label`, `provider`, `service`, and `type` in both versions. If any of these differ, it won't match as a modification.
+This is the expected behavior when:
+
+- The node has a different `label` AND different edge connectivity
+- The node has different `provider`, `service`, or `type`
+
+Nodes are only matched as `modified` when they share the same `(provider, service, type)` and have matching edge connectivity patterns. If you rename a node and significantly change its connections, it will be treated as removed + added.
+
+To force a match as modified, ensure the node keeps the same `provider`, `service`, `type`, and similar edge connectivity.
 
 ### Edges not matching after node rename
 

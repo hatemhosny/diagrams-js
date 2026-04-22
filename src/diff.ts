@@ -663,11 +663,13 @@ export function computeDiff(
       matchedBeforeEdges.add(beforeStorageKey);
       matchedAfterEdges.add(afterStorageKey);
 
+      // Compare edges, but ignore from/to ID changes since those are just
+      // remapped node IDs - the logical connection is the same
       const changes = getChanges(
         beforeEdge as unknown as Record<string, unknown>,
         afterEdge as unknown as Record<string, unknown>,
         "",
-        ignorePaths,
+        [...ignorePaths, "from", "to"],
       );
 
       if (changes.length === 0) {
