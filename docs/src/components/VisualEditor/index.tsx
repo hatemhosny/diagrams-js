@@ -750,6 +750,94 @@ export default function VisualEditor(): React.JSX.Element {
     [loadKubernetesPlugin, nextId, state.direction, state.theme],
   );
 
+  // Import SVG using the built-in SVG plugin
+  const importSvg = useCallback(
+    async (file: File) => {
+      if (!diagramModuleRef.current) {
+        alert("Diagram library not loaded yet");
+        return;
+      }
+
+      try {
+        const svg = await file.text();
+        const { Diagram } = diagramModuleRef.current;
+
+        // Use the built-in SVG plugin to parse embedded metadata
+        const diagram = Diagram("SVG Import", {
+          direction: state.direction,
+          theme: state.theme,
+        });
+        await diagram.import(svg, "svg");
+
+        // Extract the imported diagram as JSON
+        const data = diagram.toJSON();
+
+        const nodes = (Array.isArray(data.nodes) ? data.nodes : []).map((n: any) => {
+          if (n.custom) {
+            return {
+              id: n.id,
+              label: n.label,
+              custom: true,
+              iconMode: n.iconMode === "iconify" ? "iconify" : "url",
+              iconUrl: n.iconUrl || "",
+              iconName: n.iconName || "",
+              clusterId: n.clusterId || null,
+            };
+          }
+          return {
+            id: n.id,
+            label: n.label,
+            provider: n.provider,
+            type: n.type || n.service,
+            resource: n.resource || n.type,
+            clusterId: n.clusterId || null,
+          };
+        });
+
+        const clusters = Array.isArray(data.clusters)
+          ? data.clusters.map((c: any) => ({ id: c.id, label: c.label }))
+          : [];
+
+        const edges = Array.isArray(data.edges)
+          ? data.edges.map((e: any) => ({
+              id: e.id,
+              from: e.from,
+              to: e.to,
+              direction: e.direction || "forward",
+              style: e.style || "",
+              color: e.color || "",
+              label: e.label || "",
+            }))
+          : [];
+
+        setState({
+          name: data.name || "Imported Diagram",
+          direction: ["LR", "RL", "TB", "BT"].includes(data.direction) ? data.direction : "LR",
+          theme: data.theme || "pastel",
+          clusters,
+          nodes,
+          edges,
+        });
+
+        // Calculate next ID counter
+        const allIds = [
+          ...clusters.map((c: any) => c.id),
+          ...nodes.map((n: any) => n.id),
+          ...edges.map((e: any) => e.id),
+        ];
+        const maxNum = allIds.reduce((m: number, id: string) => {
+          const num = parseInt(String(id).replace(/\D/g, ""), 10);
+          return isNaN(num) ? m : Math.max(m, num);
+        }, 0);
+        setIdCounter(maxNum + 1);
+        setSelected(null);
+      } catch (err: any) {
+        alert("Failed to import SVG: " + (err.message || "Unknown error"));
+      }
+    },
+    [state.direction, state.theme],
+  );
+
   // Import JSON
   const importJson = useCallback((file: File) => {
     const reader = new FileReader();
@@ -934,6 +1022,7 @@ export default function VisualEditor(): React.JSX.Element {
         onLoadExample={loadExample}
         onExportSvg={exportSvg}
         onExportJson={exportJson}
+        onImportSvg={importSvg}
         onImportJson={importJson}
         onImportDockerCompose={importDockerCompose}
         onImportKubernetes={importKubernetes}
@@ -2636,6 +2725,7 @@ function Toolbar({
   onLoadExample,
   onExportSvg,
   onExportJson,
+  onImportSvg,
   onImportJson,
   onImportDockerCompose,
   onImportKubernetes,
@@ -2648,15 +2738,25 @@ function Toolbar({
   onLoadExample: () => void;
   onExportSvg: () => void;
   onExportJson: () => void;
+  onImportSvg: (file: File) => Promise<void>;
   onImportJson: (file: File) => void;
   onImportDockerCompose: (content: string) => Promise<void>;
   onImportKubernetes: (content: string) => Promise<void>;
   onShare: () => void;
   shareCopied: boolean;
 }) {
+  const svgInputRef = useRef<HTMLInputElement>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
   const dockerComposeInputRef = useRef<HTMLInputElement>(null);
   const kubernetesInputRef = useRef<HTMLInputElement>(null);
+
+  const handleSvgImport = async (file: File) => {
+    try {
+      await onImportSvg(file);
+    } catch (err: any) {
+      alert("Failed to import SVG: " + err.message);
+    }
+  };
 
   const handleDockerComposeImport = async (file: File) => {
     try {
@@ -2729,6 +2829,7 @@ function Toolbar({
             if (value === "example") onLoadExample();
             else if (value === "import-docker-compose") dockerComposeInputRef.current?.click();
             else if (value === "import-kubernetes") kubernetesInputRef.current?.click();
+            else if (value === "import-svg") svgInputRef.current?.click();
             else if (value === "import") fileInputRef.current?.click();
             else if (value === "export") onExportJson();
             e.target.value = "";
@@ -2744,9 +2845,21 @@ function Toolbar({
           </option>
           <option value="import-docker-compose">Import Docker Compose...</option>
           <option value="import-kubernetes">Import Kubernetes...</option>
+          <option value="import-svg">Import SVG...</option>
           <option value="import">Import JSON...</option>
           <option value="export">Export JSON...</option>
         </select>
+        <input
+          ref={svgInputRef}
+          type="file"
+          accept=".svg,image/svg+xml"
+          style={{ display: "none" }}
+          onChange={async (e) => {
+            const file = e.target.files?.[0];
+            if (file) await handleSvgImport(file);
+            e.target.value = "";
+          }}
+        />
         <input
           ref={fileInputRef}
           type="file"
