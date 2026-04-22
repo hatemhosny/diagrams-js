@@ -20,6 +20,7 @@ export default defineConfig({
     format: ["esm"],
     minify: true,
     sourcemap: false,
+    unbundle: false,
     deps: {
       onlyBundle: false,
       alwaysBundle: ["@viz-js/viz"],

@@ -46,11 +46,27 @@ export type {
   ProviderModule,
 } from "./json.js";
 
+// Diff functionality
+export { computeDiff, renderDiff } from "./diff.js";
+export type {
+  ChangeKind,
+  NodeDiff,
+  EdgeDiff,
+  ClusterDiff,
+  DiffSummary,
+  DiffMeta,
+  DiagramDiffResult,
+  DiffOptions,
+  RenderDiffOptions,
+} from "./diff.js";
+
 // Plugin system
 export {
   createPluginRegistry,
   createJSONPlugin,
   jsonPlugin,
+  createSVGPlugin,
+  svgPlugin,
   HookEvent,
   PluginError,
   DependencyError,

@@ -233,6 +233,37 @@ const svg2 = await restored.render();
 // svg1 === svg2
 ```
 
+## SVG Serialization (Alternative)
+
+In addition to JSON, diagrams can be serialized through SVG. Every SVG produced by `diagram.render()` automatically embeds the full diagram metadata, making SVG a self-contained serialization format:
+
+```typescript
+const diagram = Diagram("Web Architecture");
+diagram.add(EC2("Web Server"));
+diagram.add(RDS("Database"));
+
+// SVG contains embedded metadata by default
+const svg = await diagram.render();
+
+// Re-import directly from SVG
+const restored = await Diagram.fromSVG(svg);
+
+// Or use the plugin exporter (same output)
+const svg2 = await diagram.export("svg");
+```
+
+SVG serialization is useful when:
+
+- You want a single file that is both a visual diagram and a data source
+- You need to distribute diagrams that can be edited later
+- You are working with tools that primarily handle SVG files
+
+To generate a clean SVG without embedded metadata:
+
+```typescript
+const cleanSvg = await diagram.render({ embedData: false });
+```
+
 ## Use Cases
 
 ### 1. Documentation Generation

@@ -27,21 +27,23 @@ function chunksToDataUrls() {
   }
 
   let indexContent = fs.readFileSync(indexPath, "utf-8");
-
-  // Find chunk imports (e.g., import{t as e}from"./chunk-XXXX.js";)
-  const chunkImportRegex = /from["']\.\/chunk-([^"']+\.js)["'];?/g;
-
-  let match;
   let chunksProcessed = 0;
 
-  while ((match = chunkImportRegex.exec(indexContent)) !== null) {
-    const fullMatch = match[0];
-    const chunkFileName = match[1];
-    const chunkName = "chunk-" + chunkFileName;
+  // Process all .js files in dist except index.js
+  const allFiles = fs.readdirSync(DIST_DIR);
+  const jsFiles = allFiles.filter((f) => f.endsWith(".js") && f !== "index.js");
+
+  for (const chunkName of jsFiles) {
     const chunkPath = path.join(DIST_DIR, chunkName);
 
-    if (!fs.existsSync(chunkPath)) {
-      console.warn(`⚠ Chunk file not found: ${chunkName}`);
+    // Check if this file is imported in index.js
+    const importPattern = new RegExp(
+      `from["']\\./${chunkName.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}["'];?`,
+      "g",
+    );
+
+    if (!importPattern.test(indexContent)) {
+      console.log(`ℹ Skipping ${chunkName} (not imported in index.js)`);
       continue;
     }
 
@@ -51,8 +53,7 @@ function chunksToDataUrls() {
     const dataUrl = `data:application/javascript;base64,${base64Content}`;
 
     // Replace the relative import with the data URL
-    const newImport = `from"${dataUrl}";`;
-    indexContent = indexContent.replace(fullMatch, newImport);
+    indexContent = indexContent.replace(importPattern, `from"${dataUrl}";`);
 
     // Delete the chunk file since it's now embedded
     fs.unlinkSync(chunkPath);

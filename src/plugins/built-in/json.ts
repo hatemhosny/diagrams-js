@@ -103,7 +103,7 @@ export function createJSONPlugin(): DiagramsPlugin {
  * This copies all nodes, edges, and clusters from the source to the target
  * This is a reusable utility that can be used by other plugins
  */
-async function mergeDiagrams(
+export async function mergeDiagrams(
   target: Diagram,
   source: Diagram,
   lib: ImportContext["lib"],
@@ -225,7 +225,33 @@ async function mergeDiagrams(
       const toNode = sourceNodes.get(edgeDef.to);
 
       if (fromNode && toNode) {
-        fromNode.to(toNode);
+        const edgeOptions: Record<string, unknown> = {};
+        if (edgeDef.label) edgeOptions.label = edgeDef.label;
+        if (edgeDef.color) edgeOptions.color = edgeDef.color;
+        if (edgeDef.style) edgeOptions.style = edgeDef.style;
+        if (edgeDef.direction) edgeOptions.dir = edgeDef.direction;
+        if (edgeDef.attrs) Object.assign(edgeOptions, edgeDef.attrs);
+
+        const edge = lib.Edge(edgeOptions);
+        const direction = edgeDef.direction ?? "forward";
+        switch (direction) {
+          case "forward":
+            edge.forward = true;
+            break;
+          case "back":
+            edge.reverse = true;
+            break;
+          case "both":
+            edge.forward = true;
+            edge.reverse = true;
+            break;
+          case "none":
+            // neither forward nor reverse
+            break;
+          default:
+            edge.forward = true;
+        }
+        fromNode["~connect"](toNode, edge);
       }
     }
   }

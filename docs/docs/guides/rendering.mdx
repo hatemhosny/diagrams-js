@@ -83,7 +83,41 @@ const svg = await diagram.render({
   height: 600, // Output height (for PNG/JPG)
   scale: 2, // Scale factor (default: 2 for PNG/JPG)
   dataUrl: true, // Return as base64 data URL
+  embedData: false, // Disable embedded diagram metadata in SVG
 });
+```
+
+## SVG Data Embedding
+
+By default, all SVG output includes embedded diagram metadata, allowing you to re-import the SVG later:
+
+```typescript
+const svg = await diagram.render();
+// SVG contains embedded data-diagram-json attribute
+
+// Re-import later
+const restored = await Diagram.fromSVG(svg);
+```
+
+To generate a clean SVG without embedded data:
+
+```typescript
+const cleanSvg = await diagram.render({ embedData: false });
+```
+
+### Import from SVG
+
+Restore a diagram from an SVG that was previously exported or rendered:
+
+```typescript
+import { Diagram } from "diagrams-js";
+
+// From a rendered/exported SVG string
+const restored = await Diagram.fromSVG(svgString);
+
+// Or merge into an existing diagram
+const diagram = Diagram("Merged");
+await diagram.import(svgString, "svg");
 ```
 
 ## Browser Usage

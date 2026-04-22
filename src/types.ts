@@ -105,6 +105,8 @@ export interface RenderOptions {
   scale?: number;
   /** Whether to inject icons into SVG output */
   injectIcons?: boolean;
+  /** Whether to embed diagram metadata into SVG output (default: true) */
+  embedData?: boolean;
   /** Whether to return output as data URL */
   dataUrl?: boolean;
 }

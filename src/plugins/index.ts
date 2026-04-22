@@ -50,3 +50,4 @@ export { createPluginRegistry } from "./registry.js";
 
 // Built-in plugins
 export { createJSONPlugin, jsonPlugin } from "./built-in/json.js";
+export { createSVGPlugin, svgPlugin } from "./built-in/svg.js";

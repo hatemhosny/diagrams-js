@@ -18,6 +18,7 @@
 - **2000+ Node Classes**: Comprehensive coverage of cloud services and infrastructure components
 - **Cross-Platform**: Works in browsers, Node.js, Deno and Bun
 - **Multiple Output Formats**: SVG, PNG, JPG, and DOT
+- **Visual Diff**: Compare diagram versions side-by-side with color-coded changes (added, removed, modified, renamed)
 - **Type-Safe**: Full TypeScript support with comprehensive type definitions
 - **WebAssembly Powered**: Uses a WebAssembly build of [Graphviz](https://graphviz.org) ([viz](https://github.com/mdaines/viz-js)) for fast, client-side rendering
 - **Custom Nodes**: Support for external icons and images
@@ -67,6 +68,34 @@ api.to([db, storage]);
 // Render to SVG
 const svg = await diagram.render();
 ```
+
+### Visual Diff
+
+Compare two versions of a diagram to see what changed:
+
+```typescript
+import { Diagram } from "diagrams-js";
+import { writeFileSync } from "fs";
+
+// Load two versions (e.g., from git or saved JSON)
+const before = JSON.parse(await fs.readFile("arch-v1.json", "utf8"));
+const after = JSON.parse(await fs.readFile("arch-v2.json", "utf8"));
+
+// Generate visual diff as self-contained HTML
+const html = await Diagram.renderDiff(before, after, {
+  format: "html",
+  theme: "light",
+  showUnchanged: "show", // "show" (default), "dim", or "hide"
+});
+
+await fs.writeFile("diff.html", html);
+```
+
+The diff shows:
+
+- 🟢 **Green**: Added elements
+- 🔴 **Red**: Removed elements
+- 🟠 **Amber**: Modified elements (including label changes)
 
 ### Browser
 

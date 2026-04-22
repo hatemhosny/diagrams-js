@@ -195,3 +195,17 @@ skills:
       - "hatemhosny/diagrams-js:src/plugins/types.ts"
       - "hatemhosny/plugin-docker-compose:src/index.ts"
       - "hatemhosny/plugin-docker-compose:package.json"
+
+  - name: "SVG Serialization"
+    slug: "svg-serialization"
+    type: "core"
+    domain: "diagram-creation"
+    path: ".agents/skills/svg-serialization/SKILL.md"
+    description: "Export diagrams to SVG with embedded metadata and import them back. SVG serves as both visual image and self-contained data format. Round-trip editing without separate JSON files."
+    requires:
+      - "getting-started"
+      - "provider-nodes"
+    sources:
+      - "hatemhosny/diagrams-js:docs/docs/guides/rendering.mdx"
+      - "hatemhosny/diagrams-js:docs/docs/guides/json.mdx"
+      - "hatemhosny/diagrams-js:src/plugins/built-in/svg.ts"

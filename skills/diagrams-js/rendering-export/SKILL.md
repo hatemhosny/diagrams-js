@@ -18,7 +18,7 @@ This skill builds on diagrams-js/getting-started. Read it first for foundational
 
 # diagrams-js — Rendering & Export
 
-Render diagrams to SVG, PNG, JPG, DOT, or JSON formats. Get data URLs for embedding. Save to files in Node.js or trigger downloads in browsers. Export/import diagrams as JSON for cloud architecture provisioning and tool integration.
+Render diagrams to SVG, PNG, JPG, DOT, or JSON formats. SVG output embeds diagram metadata by default for round-trip import. Get data URLs for embedding. Save to files in Node.js or trigger downloads in browsers. Export/import diagrams as JSON or SVG for cloud architecture provisioning and tool integration.
 
 ## Setup
 
@@ -149,6 +149,37 @@ const png = await diagram.render({
   height: 600, // Output height in pixels
   scale: 2, // Scale factor (default: 2)
 });
+```
+
+### SVG Data Embedding
+
+By default, SVG output includes embedded diagram metadata, allowing re-import:
+
+```typescript
+const svg = await diagram.render();
+// Contains data-diagram-json attribute with full diagram data
+
+// Re-import later
+const restored = await Diagram.fromSVG(svg);
+```
+
+To generate a clean SVG without embedded data:
+
+```typescript
+const cleanSvg = await diagram.render({ embedData: false });
+```
+
+### Import from SVG
+
+Restore a diagram from a previously rendered or exported SVG:
+
+```typescript
+// Direct static method
+const restored = await Diagram.fromSVG(svgString);
+
+// Or merge into existing diagram via plugin
+const diagram = Diagram("Merged");
+await diagram.import(svgString, "svg");
 ```
 
 ## Common Mistakes

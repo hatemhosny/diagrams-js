@@ -18,7 +18,7 @@ This skill builds on diagrams-js/getting-started and diagrams-js/provider-nodes.
 
 # diagrams-js — JSON Serialization
 
-Export diagrams to JSON format and import them back. Enables cloud architecture provisioning, infrastructure-as-code integration, version control, and tool interoperability.
+Export diagrams to JSON format and import them back. Enables cloud architecture provisioning, infrastructure-as-code integration, version control, and tool interoperability. SVG output also supports round-trip serialization via embedded metadata.
 
 ## Setup
 
@@ -241,6 +241,23 @@ const json = {
 Use provider/service/type fields for automatic icon resolution. Avoid embedding icon data URLs unless using Custom nodes.
 
 Source: source code - provider-loader.ts dynamic imports
+
+## SVG Serialization (Alternative)
+
+In addition to JSON, diagrams can be serialized through SVG. Every SVG produced by `diagram.render()` automatically embeds the full diagram metadata:
+
+```typescript
+const diagram = Diagram("Web Architecture");
+diagram.add(EC2("Web Server"));
+
+// SVG contains embedded metadata by default
+const svg = await diagram.render();
+
+// Re-import directly from SVG
+const restored = await Diagram.fromSVG(svg);
+```
+
+Use SVG serialization when you want a single file that is both a visual diagram and an editable data source. Use `embedData: false` to generate a clean SVG without metadata.
 
 ## See also
 

@@ -1,3 +1,16 @@
+## [Unreleased]
+
+### Features
+
+- feat: add visual diff support for comparing diagram versions
+  - `computeDiff()` - Compare two diagrams and detect added, removed, modified, and renamed elements
+  - `renderDiff()` - Render side-by-side visual diff as HTML or SVG
+  - `Diagram.diff()` and `Diagram.renderDiff()` - Static convenience methods
+  - Color-coded changes: green (added), red (removed), amber (modified), purple (renamed)
+  - Smart node matching by ID with fingerprint fallback for rename detection
+  - Configurable ignore options for position, metadata, and attributes
+  - Self-contained HTML output with legend, summary, and hover tooltips
+
 ## [0.3.1] - 2026-04-16
 
 ### Features

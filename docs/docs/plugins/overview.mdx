@@ -59,13 +59,20 @@ console.log(result); // "Diagram: My Architecture"
 
 ### Built-in Plugins
 
-Built-in plugins (like JSON) are automatically registered:
+Built-in plugins (JSON and SVG) are automatically registered:
 
 ```typescript
 const diagram = Diagram("My Architecture");
 
+// JSON export/import
 const json = await diagram.export("json"); // Works without explicit registration
 const json2 = diagram.toJSON(); // Also works
+
+// SVG export/import with embedded metadata
+const svg = await diagram.export("svg"); // Works without explicit registration
+
+// Re-import from SVG
+const restored = await Diagram.fromSVG(svg);
 ```
 
 ### Using Library Exports in Plugins
