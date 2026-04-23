@@ -5,7 +5,7 @@ description: >
   infrastructure-as-code integration, and tool interoperability. Import JSON with automatic icon resolution.
 type: core
 library: diagrams-js
-library_version: "0.0.9"
+library_version: "0.5.0"
 requires:
   - diagrams-js/getting-started
   - diagrams-js/provider-nodes

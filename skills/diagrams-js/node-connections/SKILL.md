@@ -6,7 +6,7 @@ description: >
   Chaining connections and connecting to multiple targets with arrays.
 type: core
 library: diagrams-js
-library_version: "0.0.9"
+library_version: "0.5.0"
 requires:
   - diagrams-js/getting-started
   - diagrams-js/provider-nodes

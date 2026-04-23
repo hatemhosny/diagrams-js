@@ -5,7 +5,7 @@ description: >
   DOT format as Graphviz source, JSON for serialization. Data URLs for embedding. Saving files with diagram.save().
 type: core
 library: diagrams-js
-library_version: "0.0.9"
+library_version: "0.5.0"
 requires:
   - diagrams-js/getting-started
 sources:

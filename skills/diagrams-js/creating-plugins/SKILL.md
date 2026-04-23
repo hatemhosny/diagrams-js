@@ -7,7 +7,7 @@ description: >-
   and context.loadYaml for YAML parsing without bundling dependencies.
 type: feature
 library: diagrams-js
-library_version: "0.2.4"
+library_version: "0.5.0"
 sources:
   - "hatemhosny/diagrams-js:src/plugins/types.ts"
   - "hatemhosny/plugin-docker-compose:src/index.ts"

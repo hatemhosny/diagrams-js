@@ -5,7 +5,7 @@ description: >
   Local icon files for Custom nodes. Buffer handling for binary output formats.
 type: core
 library: diagrams-js
-library_version: "0.0.9"
+library_version: "0.5.0"
 requires:
   - diagrams-js/getting-started
 sources:

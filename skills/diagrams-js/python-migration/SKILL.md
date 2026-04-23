@@ -6,7 +6,7 @@ description: >
   Key differences: explicit diagram.add(), async render(), no destroy().
 type: lifecycle
 library: diagrams-js
-library_version: "0.0.9"
+library_version: "0.5.0"
 requires:
   - diagrams-js/getting-started
 sources:

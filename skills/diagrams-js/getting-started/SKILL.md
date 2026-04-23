@@ -6,7 +6,7 @@ description: >
   Covers ES modules, import maps, and basic diagram lifecycle.
 type: lifecycle
 library: diagrams-js
-library_version: "0.0.9"
+library_version: "0.5.0"
 sources:
   - "hatemhosny/diagrams-js:docs/docs/getting-started/quickstart.mdx"
   - "hatemhosny/diagrams-js:docs/docs/getting-started/installation.mdx"
