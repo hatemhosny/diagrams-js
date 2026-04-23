@@ -1,3 +1,18 @@
+## [0.5.1] - 2026-04-23
+
+### Features
+
+- No new features
+
+### Bug Fixes
+
+- fix visual editor (ffd9c53)
+
+### Other Changes
+
+- improve backward compatibility (0bcdd02)
+- update library version in skills (2adab9c)
+
 ## [0.5.0] - 2026-04-23
 
 ### Features
