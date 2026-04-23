@@ -1,3 +1,17 @@
+## [0.6.0] - 2026-04-23
+
+### Features
+
+- feat: allow svg elements dom manipulation (1b8f029)
+
+### Bug Fixes
+
+- No bug fixes
+
+### Other Changes
+
+- improve visual editor (79ade91)
+
 ## [0.5.1] - 2026-04-23
 
 ### Features
