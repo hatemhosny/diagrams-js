@@ -1390,4 +1390,30 @@ describe("Provisioning Consistency", () => {
     const json2 = restored.toJSON();
     expect(json2).toEqual(json);
   });
+
+  it("should preserve className and dataAttrs in JSON round-trip", async () => {
+    const original = Diagram("Test");
+    original.add(
+      Node("Web", { nodeId: "web", className: "server", dataAttrs: { team: "backend" } }),
+    );
+    const cluster = original.cluster("VPC", {
+      className: "production",
+      dataAttrs: { region: "us-east-1" },
+    });
+    const db = cluster.add(Node("DB", { nodeId: "db" }));
+    const web = original.add(Node("Web", { nodeId: "web2" }));
+    web.to(Edge({ className: "critical", dataAttrs: { latency: "50ms" } }), db);
+
+    const json = original.toJSON();
+    expect(json.nodes.find((n) => n.id === "web")?.className).toBe("server");
+    expect(json.nodes.find((n) => n.id === "web")?.dataAttrs).toEqual({ team: "backend" });
+    expect(json.edges?.[0].className).toBe("critical");
+    expect(json.edges?.[0].dataAttrs).toEqual({ latency: "50ms" });
+    expect(json.clusters?.[0].className).toBe("production");
+    expect(json.clusters?.[0].dataAttrs).toEqual({ region: "us-east-1" });
+
+    const restored = await Diagram.fromJSON(json);
+    const json2 = restored.toJSON();
+    expect(json2).toEqual(json);
+  });
 });

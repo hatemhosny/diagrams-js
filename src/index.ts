@@ -33,6 +33,7 @@ export type {
   DiagramOptions,
   EdgeOptions,
   NodeOptions,
+  ClusterOptions,
   ThemeName,
   ThemeConfig,
   Yaml,

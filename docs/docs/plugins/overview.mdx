@@ -349,11 +349,25 @@ await diagram.registerPlugins([loggingPlugin]);
 - `before:import` / `after:import` - Import operations
 - `before:export` / `after:export` - Export operations
 - `before:render` / `after:render` - Rendering
+- `after:layout` - After Graphviz produces SVG, before PNG/JPG conversion
 - `before:serialize` / `after:deserialize` - JSON serialization
 - `node:create` - Node creation
 - `edge:create` - Edge creation
 - `cluster:create` - Cluster creation
 - `metadata:attach` - Metadata attachment
+
+The `after:layout` hook is especially useful for SVG post-processing that should also affect PNG/JPG output. It fires after Graphviz renders the SVG string but before rasterization:
+
+```typescript
+{
+  event: "after:layout",
+  handler: async ({ svg, diagram, format }) => {
+    // Modify SVG string before PNG/JPG conversion
+    const modified = svg.replace(/stroke="#7b8894"/g, 'stroke="red"');
+    return { svg: modified, diagram, format };
+  },
+}
+```
 
 ## Plugin Dependencies
 

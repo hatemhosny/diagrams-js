@@ -194,6 +194,46 @@ grpcsvc.forEach((svc) => svc.to(Edge({ color: "darkorange" }), aggregator));
 const svg = await diagram.render();
 ```
 
+## Custom CSS Classes and Data Attributes
+
+Add CSS classes and data attributes to edges for DOM manipulation after rendering:
+
+```typescript
+const edge = Edge({
+  label: "HTTP",
+  color: "red",
+  className: "critical",
+  dataAttrs: { latency: "50ms", protocol: "https" },
+});
+
+web.to(edge, db);
+```
+
+These are injected into the rendered SVG:
+
+```html
+<g
+  id="diagram_edge_0"
+  class="edge critical"
+  data-edge-from="web"
+  data-edge-to="db"
+  data-latency="50ms"
+  data-protocol="https"
+>
+  ...
+</g>
+```
+
+Query the edge element after rendering:
+
+```typescript
+const svg = await diagram.render();
+document.body.innerHTML = svg;
+
+const el = edge.getElement();
+el?.addEventListener("mouseenter", () => el.classList.add("hovered"));
+```
+
 ## Custom Attributes
 
 You can pass any Graphviz edge attribute:

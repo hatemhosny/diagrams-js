@@ -49,6 +49,10 @@ export interface DiagramNodeJSON {
   attrs?: Record<string, string | number>;
   /** Metadata attached to this node (e.g., cloud provider specs, pricing) */
   metadata?: Record<string, any>;
+  /** CSS class(es) to add to the rendered SVG element */
+  className?: string;
+  /** Custom data attributes to add to the rendered SVG element */
+  dataAttrs?: Record<string, string>;
 }
 
 /**
@@ -69,6 +73,10 @@ export interface DiagramEdgeJSON {
   style?: string;
   /** Additional Graphviz attributes */
   attrs?: Record<string, string>;
+  /** CSS class(es) to add to the rendered SVG element */
+  className?: string;
+  /** Custom data attributes to add to the rendered SVG element */
+  dataAttrs?: Record<string, string>;
 }
 
 /**
@@ -83,6 +91,10 @@ export interface DiagramClusterJSON {
   graphAttr?: Record<string, string>;
   /** Nested clusters */
   clusters?: DiagramClusterJSON[];
+  /** CSS class(es) to add to the rendered SVG element */
+  className?: string;
+  /** Custom data attributes to add to the rendered SVG element */
+  dataAttrs?: Record<string, string>;
 }
 
 /**
@@ -230,6 +242,14 @@ function serializeNode(
     if (nodeObj.metadata && Object.keys(nodeObj.metadata).length > 0) {
       json.metadata = nodeObj.metadata;
     }
+
+    // Extract className and dataAttrs if present
+    if (nodeObj.className) {
+      json.className = nodeObj.className;
+    }
+    if (nodeObj.dataAttrs && Object.keys(nodeObj.dataAttrs).length > 0) {
+      json.dataAttrs = nodeObj.dataAttrs;
+    }
   }
 
   // Extract user-meaningful attributes (filter out icon defaults for provider nodes)
@@ -307,6 +327,14 @@ function serializeCluster(
     json.graphAttr = userAttrs;
   }
 
+  // Serialize className and dataAttrs
+  if (cluster.className) {
+    json.className = cluster.className;
+  }
+  if (cluster.dataAttrs && Object.keys(cluster.dataAttrs).length > 0) {
+    json.dataAttrs = cluster.dataAttrs;
+  }
+
   // Nested clusters
   const subgraphs = cluster.getSubgraphs();
   if (subgraphs.length > 0) {
@@ -323,7 +351,13 @@ function serializeCluster(
  * @returns Array of edge JSON representations
  */
 function serializeEdges(
-  edges: Array<{ from: string; to: string; attrs: Record<string, string> }>,
+  edges: Array<{
+    from: string;
+    to: string;
+    attrs: Record<string, string>;
+    className?: string;
+    dataAttrs?: Record<string, string>;
+  }>,
 ): DiagramEdgeJSON[] {
   return edges.map((edge) => {
     const json: DiagramEdgeJSON = {
@@ -344,6 +378,14 @@ function serializeEdges(
     // Remaining attributes
     if (Object.keys(rest).length > 0) {
       json.attrs = rest;
+    }
+
+    // className and dataAttrs
+    if (edge.className) {
+      json.className = edge.className;
+    }
+    if (edge.dataAttrs && Object.keys(edge.dataAttrs).length > 0) {
+      json.dataAttrs = edge.dataAttrs;
     }
 
     return json;
@@ -401,7 +443,13 @@ export function diagramToJSON(diagram: Diagram): DiagramJSON {
 export function buildDiagramJSON(
   diagram: Diagram,
   nodes: Map<string, { label: string; attrs: Record<string, unknown> }>,
-  edges: Array<{ from: string; to: string; attrs: Record<string, string> }>,
+  edges: Array<{
+    from: string;
+    to: string;
+    attrs: Record<string, string>;
+    className?: string;
+    dataAttrs?: Record<string, string>;
+  }>,
   clusters: import("./Cluster.js").Cluster[],
   nodeIconMap: Array<{ node: import("./Node.js").Node; icon: string; iconPath?: string }>,
   nodeObjects: Map<string, import("./Node.js").Node>,
@@ -592,9 +640,16 @@ export async function fromJSON(
       clusterDef: DiagramClusterJSON,
       parent: Diagram | import("./Cluster.js").Cluster,
     ): void {
-      const cluster = parent.cluster(clusterDef.label);
+      const clusterOptions: Record<string, unknown> = {};
+      if (clusterDef.graphAttr) clusterOptions.graphAttr = clusterDef.graphAttr;
+      if (clusterDef.className) clusterOptions.className = clusterDef.className;
+      if (clusterDef.dataAttrs) clusterOptions.dataAttrs = clusterDef.dataAttrs;
+      const cluster = parent.cluster(
+        clusterDef.label,
+        clusterOptions as import("./types.js").ClusterOptions,
+      );
 
-      // Apply custom graph attributes
+      // Apply custom graph attributes (also handled by ClusterOptions but kept for safety)
       if (clusterDef.graphAttr) {
         Object.assign(cluster.graphAttr, clusterDef.graphAttr);
       }
@@ -631,23 +686,25 @@ export async function fromJSON(
     const resourceName = isNewFormat ? nodeDef.resource : (nodeDef as any).type;
     const factory = resourceName ? factoryLookup.get(resourceName) : undefined;
 
+    const nodeBaseOptions: Record<string, unknown> = {
+      nodeId: nodeDef.id,
+    };
+    if (nodeDef.className) nodeBaseOptions.className = nodeDef.className;
+    if (nodeDef.dataAttrs) nodeBaseOptions.dataAttrs = nodeDef.dataAttrs;
+
     if (factory) {
       // Use the provider factory - it sets ~provider, ~type, ~resource, ~iconDataUrl
-      node = factory(nodeDef.label ?? "", { nodeId: nodeDef.id, ...nodeDef.attrs });
+      node = factory(nodeDef.label ?? "", { ...nodeBaseOptions, ...nodeDef.attrs });
     } else if (nodeDef.iconUrl && _isRemoteUrl(nodeDef.iconUrl)) {
       // Remote icon URL - use Custom node which handles fetching automatically
-      const nodeOptions: Record<string, unknown> = {
-        nodeId: nodeDef.id,
-      };
+      const nodeOptions: Record<string, unknown> = { ...nodeBaseOptions };
       if (nodeDef.attrs) {
         Object.assign(nodeOptions, nodeDef.attrs);
       }
       node = Custom(nodeDef.label ?? "", nodeDef.iconUrl, nodeOptions);
     } else {
       // Fallback: create a plain Node and set metadata manually
-      const nodeOptions: Record<string, unknown> = {
-        nodeId: nodeDef.id,
-      };
+      const nodeOptions: Record<string, unknown> = { ...nodeBaseOptions };
 
       if (nodeDef.attrs) {
         Object.assign(nodeOptions, nodeDef.attrs);
@@ -715,6 +772,8 @@ export async function fromJSON(
       if (edgeDef.color) edgeOptions.color = edgeDef.color;
       if (edgeDef.style) edgeOptions.style = edgeDef.style;
       if (edgeDef.attrs) Object.assign(edgeOptions, edgeDef.attrs);
+      if (edgeDef.className) edgeOptions.className = edgeDef.className;
+      if (edgeDef.dataAttrs) edgeOptions.dataAttrs = edgeDef.dataAttrs;
 
       // Create the connection based on direction.
       // We directly connect using the diagram's internal ~connect method

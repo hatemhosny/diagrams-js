@@ -118,6 +118,33 @@ web.to(
 );
 ```
 
+### Edge CSS Classes and Data Attributes
+
+Add custom classes and data attributes for SVG DOM manipulation:
+
+```typescript
+const edge = Edge({
+  label: "HTTP",
+  color: "red",
+  className: "critical",
+  dataAttrs: { latency: "50ms", protocol: "https" },
+});
+
+web.to(edge, db);
+```
+
+After rendering, query the edge element:
+
+```typescript
+const svg = await diagram.render();
+document.body.innerHTML = svg;
+
+const el = edge.getElement();
+el?.addEventListener("mouseenter", () => {
+  el.classList.add("hovered");
+});
+```
+
 ### Edge Direction Control
 
 ```typescript

@@ -131,6 +131,10 @@ export interface EdgeOptions {
   color?: string;
   /** Edge style (solid, dashed, dotted, etc.) */
   style?: string;
+  /** CSS class(es) to add to the rendered SVG element */
+  className?: string;
+  /** Custom data attributes to add to the rendered SVG element */
+  dataAttrs?: Record<string, string>;
   /** Additional Graphviz edge attributes */
   [key: string]: unknown;
 }
@@ -149,8 +153,31 @@ export interface NodeOptions {
   ["~type"]?: string;
   /** @internal Icon data URL */
   ["~iconDataUrl"]?: string;
+  /** CSS class(es) to add to the rendered SVG element */
+  className?: string;
+  /** Custom data attributes to add to the rendered SVG element */
+  dataAttrs?: Record<string, string>;
   /** Additional Graphviz node attributes */
   [key: string]: unknown;
+}
+
+/**
+ * Options for creating a cluster
+ * @example
+ * ```typescript
+ * const cluster = diagram.cluster("VPC", {
+ *   className: "production",
+ *   dataAttrs: { region: "us-east-1" }
+ * });
+ * ```
+ */
+export interface ClusterOptions {
+  /** Graphviz attributes for the cluster */
+  graphAttr?: Record<string, string>;
+  /** CSS class(es) to add to the rendered SVG element */
+  className?: string;
+  /** Custom data attributes to add to the rendered SVG element */
+  dataAttrs?: Record<string, string>;
 }
 
 // Note: Node and Edge types are defined in their respective modules

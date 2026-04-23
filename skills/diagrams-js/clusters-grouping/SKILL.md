@@ -72,6 +72,26 @@ const primary = dbTier.add(RDS("Primary"));
 const replica = dbTier.add(RDS("Replica"));
 ```
 
+### Cluster Options
+
+Clusters accept an optional `ClusterOptions` object with `className`, `dataAttrs`, and `graphAttr`:
+
+```typescript
+const cluster = diagram.cluster("VPC", {
+  className: "production",
+  dataAttrs: { region: "us-east-1" },
+});
+```
+
+These are injected into the rendered SVG as attributes on the cluster `<g>` element, enabling DOM manipulation after rendering.
+
+Nested clusters also support options:
+
+```typescript
+const prod = diagram.cluster("Production", { className: "prod-env" });
+const webTier = prod.cluster("Web Tier", { className: "web-tier" });
+```
+
 ### Connecting Across Clusters
 
 ```typescript

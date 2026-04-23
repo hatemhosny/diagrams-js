@@ -172,6 +172,96 @@ describe("SVG Plugin - Round-trip Consistency", () => {
   });
 });
 
+describe("SVG Plugin - Custom Classes and Data Attributes", () => {
+  it("should inject node className and dataAttrs into SVG", async () => {
+    const diagram = Diagram("Test");
+    diagram.add(
+      Node("Web", { nodeId: "web", className: "server", dataAttrs: { team: "backend" } }),
+    );
+    const svg = (await diagram.export("svg")) as string;
+
+    expect(svg).toContain('class="node server"');
+    expect(svg).toContain('data-team="backend"');
+    expect(svg).toContain('data-node-id="web"');
+  });
+
+  it("should inject edge className and dataAttrs into SVG", async () => {
+    const diagram = Diagram("Test");
+    const a = diagram.add(Node("A", { nodeId: "a" }));
+    const b = diagram.add(Node("B", { nodeId: "b" }));
+    a.to(Edge({ className: "critical", dataAttrs: { latency: "50ms" } }), b);
+    const svg = (await diagram.export("svg")) as string;
+
+    expect(svg).toContain('class="edge critical"');
+    expect(svg).toContain('data-latency="50ms"');
+    expect(svg).toContain('data-edge-from="a"');
+    expect(svg).toContain('data-edge-to="b"');
+  });
+
+  it("should inject cluster className and dataAttrs into SVG", async () => {
+    const diagram = Diagram("Test");
+    const cluster = diagram.cluster("VPC", {
+      className: "production",
+      dataAttrs: { region: "us-east-1" },
+    });
+    cluster.add(Node("Web", { nodeId: "web" }));
+    const svg = (await diagram.export("svg")) as string;
+
+    expect(svg).toContain('class="cluster production"');
+    expect(svg).toContain('data-region="us-east-1"');
+    expect(svg).toContain('data-cluster-label="VPC"');
+  });
+
+  it("should assign edge IDs in SVG", async () => {
+    const diagram = Diagram("Test");
+    const a = diagram.add(Node("A", { nodeId: "a" }));
+    const b = diagram.add(Node("B", { nodeId: "b" }));
+    a.to(b);
+    const svg = (await diagram.export("svg")) as string;
+
+    expect(svg).toContain('id="diagram_edge_0"');
+  });
+
+  it("should inject nested cluster className and dataAttrs into SVG", async () => {
+    const diagram = Diagram("Test");
+    const outer = diagram.cluster("VPC", { className: "vpc-class" });
+    const inner = outer.cluster("Subnet", { className: "subnet-class", dataAttrs: { az: "a" } });
+    inner.add(Node("Server", { nodeId: "srv" }));
+    const svg = (await diagram.export("svg")) as string;
+
+    expect(svg).toContain('class="cluster vpc-class"');
+    expect(svg).toContain('class="cluster subnet-class"');
+    expect(svg).toContain('data-az="a"');
+    expect(svg).toContain('data-cluster-label="Subnet"');
+  });
+});
+
+describe("SVG Plugin - Round-trip with custom classes/attrs", () => {
+  it("should round-trip className and dataAttrs through SVG", async () => {
+    const original = Diagram("Test");
+    const node = original.add(
+      Node("Web", { nodeId: "web", className: "server", dataAttrs: { team: "backend" } }),
+    );
+    const cluster = original.cluster("VPC", {
+      className: "production",
+      dataAttrs: { region: "us-east-1" },
+    });
+    const db = cluster.add(Node("DB", { nodeId: "db" }));
+    node.to(Edge({ className: "critical", dataAttrs: { latency: "50ms" } }), db);
+
+    const svg = (await original.export("svg")) as string;
+    const restored = await Diagram.fromSVG(svg);
+    const json = restored.toJSON();
+
+    expect(json.nodes.find((n) => n.id === "web")?.className).toBe("server");
+    expect(json.nodes.find((n) => n.id === "web")?.dataAttrs).toEqual({ team: "backend" });
+    expect(json.edges?.[0].className).toBe("critical");
+    expect(json.edges?.[0].dataAttrs).toEqual({ latency: "50ms" });
+    expect(json.clusters?.[0].className).toBe("production");
+    expect(json.clusters?.[0].dataAttrs).toEqual({ region: "us-east-1" });
+  });
+});
+
 describe("SVG Plugin - Error Handling", () => {
   it("should throw when importing plain SVG without embedded data", async () => {
     const plainSvg = `<svg xmlns="http://www.w3.org/2000/svg"><text>Hello</text></svg>`;

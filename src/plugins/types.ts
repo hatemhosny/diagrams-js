@@ -246,6 +246,7 @@ export enum HookEvent {
   // Diagram lifecycle
   BEFORE_RENDER = "before:render",
   AFTER_RENDER = "after:render",
+  AFTER_LAYOUT = "after:layout",
   BEFORE_SERIALIZE = "before:serialize",
   AFTER_DESERIALIZE = "after:deserialize",
 

@@ -146,6 +146,46 @@ web.with(db); // Undirected connection
 const svg = await diagram.render();
 ```
 
+## Custom CSS Classes and Data Attributes
+
+Add CSS classes and data attributes to nodes for DOM manipulation after rendering:
+
+```typescript
+const server = diagram.add(
+  Node("Server", {
+    className: "highlight server-node",
+    dataAttrs: { team: "backend", priority: "high" },
+  }),
+);
+```
+
+These are injected into the rendered SVG:
+
+```html
+<g
+  class="node highlight server-node"
+  data-node-id="Server"
+  data-team="backend"
+  data-priority="high"
+>
+  ...
+</g>
+```
+
+You can then query and manipulate these elements in the browser:
+
+```typescript
+const svg = await diagram.render();
+document.body.innerHTML = svg;
+
+// Get the SVG element for this node
+const el = server.getElement();
+el?.addEventListener("click", () => console.log("Clicked!"));
+
+// Query by data attribute
+const backendNodes = document.querySelectorAll('[data-team="backend"]');
+```
+
 ## Notes
 
 - The order of rendered diagrams is not guaranteed

@@ -40,6 +40,30 @@ const api = backend.add(ECS("API"));
 web.to(api);
 ```
 
+## Cluster Options
+
+Clusters support CSS classes and data attributes for SVG DOM manipulation, as well as custom Graphviz attributes:
+
+```typescript
+const cluster = diagram.cluster("VPC", {
+  className: "production",
+  dataAttrs: { region: "us-east-1", az: "a" },
+});
+```
+
+These are injected into the rendered SVG:
+
+```html
+<g class="cluster production" data-cluster-label="VPC" data-region="us-east-1" data-az="a"> ... </g>
+```
+
+Nested clusters also support options:
+
+```typescript
+const outer = diagram.cluster("Production", { className: "prod-env" });
+const inner = outer.cluster("Web Tier", { className: "web-tier" });
+```
+
 ## Full Example
 
 ```typescript
@@ -52,11 +76,17 @@ const diagram = Diagram("Full Architecture");
 
 const lb = diagram.add(ALB("Load Balancer"));
 
-const webCluster = diagram.cluster("Web Tier");
+const webCluster = diagram.cluster("Web Tier", {
+  className: "web-tier",
+  dataAttrs: { tier: "web" },
+});
 const web1 = webCluster.add(ECS("web1"));
 const web2 = webCluster.add(ECS("web2"));
 
-const dbCluster = diagram.cluster("Database Tier");
+const dbCluster = diagram.cluster("Database Tier", {
+  className: "db-tier",
+  dataAttrs: { tier: "db" },
+});
 const primary = dbCluster.add(RDS("Primary"));
 const replica = dbCluster.add(RDS("Replica"));
 
@@ -66,4 +96,10 @@ web2.to(primary);
 primary.with(replica);
 
 const svg = await diagram.render();
+
+// Query cluster elements in browser
+const webTierEl = webCluster.getElement();
+webTierEl?.addEventListener("click", () => {
+  console.log("Web tier clicked!");
+});
 ```

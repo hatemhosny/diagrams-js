@@ -1097,4 +1097,80 @@ describe("Plugin System - Comprehensive Hook Tests", () => {
       expect(regularNode.label).toBe("Regular");
     });
   });
+
+  describe("Layout Hook", () => {
+    it("should fire after:layout hook with SVG string before format conversion", async () => {
+      let capturedSvg = "";
+
+      const layoutPlugin = (): DiagramsPlugin => ({
+        name: "layout-tracker",
+        version: "1.0.0",
+        apiVersion: "1.0",
+        runtimeSupport: { node: true, browser: true, deno: true, bun: true },
+        capabilities: [
+          {
+            type: "hook",
+            hooks: [
+              {
+                event: HookEvent.AFTER_LAYOUT,
+                handler: async (data) => {
+                  const layoutData = data as {
+                    svg: string;
+                    diagram: typeof Diagram;
+                    format: string;
+                  };
+                  capturedSvg = layoutData.svg;
+                  return data;
+                },
+              },
+            ],
+          },
+        ],
+      });
+
+      const diagram = Diagram("Test");
+      await diagram.registerPlugins([layoutPlugin()]);
+      diagram.add(Node("A"));
+
+      const svg = await diagram.render({ format: "svg" });
+      expect(typeof svg).toBe("string");
+      expect(capturedSvg).toContain("<svg");
+      expect(capturedSvg).toContain("</svg>");
+    });
+
+    it("should allow after:layout hook to modify SVG", async () => {
+      const modifyPlugin = (): DiagramsPlugin => ({
+        name: "svg-modifier",
+        version: "1.0.0",
+        apiVersion: "1.0",
+        runtimeSupport: { node: true, browser: true, deno: true, bun: true },
+        capabilities: [
+          {
+            type: "hook",
+            hooks: [
+              {
+                event: HookEvent.AFTER_LAYOUT,
+                handler: async (data) => {
+                  const layoutData = data as {
+                    svg: string;
+                    diagram: typeof Diagram;
+                    format: string;
+                  };
+                  layoutData.svg = layoutData.svg.replace("<svg", '<svg data-modified="true"');
+                  return layoutData;
+                },
+              },
+            ],
+          },
+        ],
+      });
+
+      const diagram = Diagram("Test");
+      await diagram.registerPlugins([modifyPlugin()]);
+      diagram.add(Node("A"));
+
+      const svg = (await diagram.render({ format: "svg" })) as string;
+      expect(svg).toContain('data-modified="true"');
+    });
+  });
 });

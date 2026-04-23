@@ -61,6 +61,10 @@ export interface Node {
   type?: string;
   /** The specific resource type (e.g., "EC2", "S3", "RDS") */
   resource?: string;
+  /** CSS class(es) to add to the rendered SVG element */
+  className: string | undefined;
+  /** Custom data attributes to add to the rendered SVG element */
+  dataAttrs: Record<string, string>;
   /** @internal */
   ["~id"]: string;
   /** @internal */
@@ -140,6 +144,14 @@ export interface Node {
   with(edge: Edge, targets: Node[]): Node[];
 
   /**
+   * Get the SVG element for this node.
+   * If no svg argument is provided, queries the current document.
+   * @param svg - Optional SVG string or Element to query within
+   * @returns The SVG element, or null if not found
+   */
+  getElement(svg?: string | Element): Element | null;
+
+  /**
    * Internal method to connect this node to another with an edge
    * @param target - The target node
    * @param edge - The edge configuration
@@ -182,6 +194,8 @@ export function Node(label = "", options: NodeOptions = {}): Node {
   const _attrs: Record<string, string | number> = {};
   let _iconDataUrl: string | null = null;
   let _metadata: Record<string, any> = {};
+  const _className = options.className;
+  const _dataAttrs = options.dataAttrs ? { ...options.dataAttrs } : {};
 
   // Check if this node has an icon data URL (embedded via esbuild dataurl loader)
   // This will be set by provider factory functions
@@ -211,9 +225,15 @@ export function Node(label = "", options: NodeOptions = {}): Node {
     _attrs.shape = "none";
   }
 
-  // Merge additional attributes (excluding internal keys and shape which we handled above)
+  // Merge additional attributes (excluding internal keys, shape, className, dataAttrs which we handle separately)
   for (const [key, value] of Object.entries(options)) {
-    if (key.startsWith("~") || key === "nodeId" || key === "shape") {
+    if (
+      key.startsWith("~") ||
+      key === "nodeId" ||
+      key === "shape" ||
+      key === "className" ||
+      key === "dataAttrs"
+    ) {
       continue;
     }
     _attrs[key] = String(value);
@@ -313,10 +333,45 @@ export function Node(label = "", options: NodeOptions = {}): Node {
     },
 
     /**
+     * Get the CSS class(es) for this node
+     */
+    get className(): string | undefined {
+      return _className;
+    },
+
+    /**
+     * Get the custom data attributes for this node
+     */
+    get dataAttrs(): Record<string, string> {
+      return { ..._dataAttrs };
+    },
+
+    /**
      * Get the cluster this node belongs to, if any
      */
     get cluster(): Cluster | undefined {
       return _cluster;
+    },
+
+    /**
+     * Get the SVG element for this node.
+     * If no svg argument is provided, queries the current document.
+     * @param svg - Optional SVG string or Element to query within
+     * @returns The SVG element, or null if not found
+     */
+    getElement(svg?: string | Element): Element | null {
+      let root: Element | Document | null;
+      if (svg === undefined) {
+        root = typeof document !== "undefined" ? document : null;
+      } else if (typeof svg === "string") {
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(svg, "image/svg+xml");
+        root = doc.documentElement;
+      } else {
+        root = svg;
+      }
+      if (!root) return null;
+      return root.querySelector(`[data-node-id="${_id}"]`);
     },
 
     /**
@@ -590,6 +645,9 @@ export function Node(label = "", options: NodeOptions = {}): Node {
       if (!_diagram) {
         throw new Error("Node is not registered with a diagram");
       }
+      // Store endpoint IDs on the edge for SVG element lookup
+      edge["~fromNodeId"] = node.nodeId;
+      edge["~toNodeId"] = target.nodeId;
       _diagram["~connect"](node, target, edge);
       return target;
     },

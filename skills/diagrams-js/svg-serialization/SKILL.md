@@ -92,8 +92,61 @@ The embedded metadata includes:
 - **`data-node-provider`**, **`data-node-type`**, **`data-node-resource`**: Provider metadata
 - **`data-node-metadata`**: Base64-encoded custom metadata
 - **`data-cluster-label`**, **`data-cluster-nodes`**: Cluster information
+- **`data-edge-from`**, **`data-edge-to`**, **`data-edge-label`**: Edge information
 
 These attributes enable DOM querying and third-party tooling.
+
+### Custom Classes and Data Attributes
+
+Nodes, edges, and clusters can have custom CSS classes and data attributes injected into the SVG:
+
+```typescript
+const server = diagram.add(
+  Node("Server", {
+    className: "highlight",
+    dataAttrs: { team: "backend", env: "prod" },
+  }),
+);
+
+web.to(
+  Edge({
+    className: "critical",
+    dataAttrs: { latency: "50ms" },
+  }),
+  db,
+);
+
+const cluster = diagram.cluster("VPC", {
+  className: "production",
+  dataAttrs: { region: "us-east-1" },
+});
+```
+
+Injected SVG output:
+
+```html
+<g class="node highlight" data-node-id="Server" data-team="backend" data-env="prod">...</g>
+<g
+  id="diagram_edge_0"
+  class="edge critical"
+  data-edge-from="web"
+  data-edge-to="db"
+  data-latency="50ms"
+  >...</g
+>
+<g class="cluster production" data-cluster-label="VPC" data-region="us-east-1">...</g>
+```
+
+Access elements after rendering with `getElement()`:
+
+```typescript
+const svg = await diagram.render();
+document.body.innerHTML = svg;
+
+server.getElement()?.addEventListener("click", handler);
+edge.getElement()?.classList.add("hovered");
+cluster.getElement()?.setAttribute("data-active", "true");
+```
 
 ## Clean SVG Without Metadata
 

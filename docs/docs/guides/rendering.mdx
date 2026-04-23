@@ -130,6 +130,122 @@ const svg = await diagram.render();
 document.getElementById("diagram").innerHTML = svg;
 ```
 
+## SVG DOM Manipulation
+
+You can attach CSS classes and data attributes to nodes, edges, and clusters, then manipulate them in the browser after rendering.
+
+### Adding CSS Classes and Data Attributes
+
+```typescript
+const diagram = Diagram("Interactive");
+
+const server = diagram.add(
+  Node("Server", {
+    className: "server-node",
+    dataAttrs: { team: "backend", env: "prod" },
+  }),
+);
+
+const db = diagram.add(
+  Node("Database", {
+    className: "db-node",
+    dataAttrs: { team: "data" },
+  }),
+);
+
+server.to(
+  Edge({
+    className: "critical-edge",
+    dataAttrs: { latency: "50ms" },
+  }),
+  db,
+);
+
+const cluster = diagram.cluster("Production", {
+  className: "prod-cluster",
+  dataAttrs: { region: "us-east-1" },
+});
+```
+
+### Querying SVG Elements
+
+After rendering and inserting into the DOM, use `getElement()` to access SVG elements:
+
+```typescript
+const svg = await diagram.render();
+document.getElementById("diagram").innerHTML = svg;
+
+// Query from current document (browser only)
+const serverEl = server.getElement();
+const dbEl = db.getElement();
+const edgeEl = edge.getElement();
+const clusterEl = cluster.getElement();
+
+// Or query within a specific SVG string/element
+const serverEl2 = server.getElement(svg);
+```
+
+### Adding Event Handlers
+
+```typescript
+const serverEl = server.getElement();
+if (serverEl) {
+  serverEl.addEventListener("click", () => {
+    console.log("Server clicked!");
+    serverEl.classList.add("selected");
+  });
+
+  serverEl.addEventListener("mouseenter", () => {
+    serverEl.style.opacity = "0.8";
+  });
+}
+```
+
+### Dynamic Styling
+
+```typescript
+// Highlight all nodes in production
+const nodes = document.querySelectorAll('[data-env="prod"]');
+nodes.forEach((el) => el.classList.add("highlight"));
+
+// Dim non-critical edges
+const edges = document.querySelectorAll(".edge:not(.critical-edge)");
+edges.forEach((el) => (el.style.opacity = "0.5"));
+```
+
+## The `after:layout` Hook
+
+For plugin authors, the `after:layout` hook fires after Graphviz produces the SVG but before format conversion (PNG/JPG). This lets you modify the SVG string and have changes reflected in raster output too.
+
+```typescript
+import { HookEvent } from "diagrams-js";
+
+const modifySvgPlugin = () => ({
+  name: "svg-modifier",
+  version: "1.0.0",
+  apiVersion: "1.0",
+  runtimeSupport: { node: true, browser: true, deno: true, bun: true },
+  capabilities: [
+    {
+      type: "hook",
+      hooks: [
+        {
+          event: HookEvent.AFTER_LAYOUT,
+          handler: async ({ svg, diagram, format }) => {
+            // Modify SVG before PNG/JPG conversion
+            const modified = svg.replace(/stroke="#7b8894"/g, 'stroke="red"');
+            return { svg: modified, diagram, format };
+          },
+        },
+      ],
+    },
+  ],
+});
+
+const diagram = Diagram("Test");
+await diagram.registerPlugins([modifySvgPlugin()]);
+```
+
 ## Node.js Usage
 
 ```typescript

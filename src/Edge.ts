@@ -32,6 +32,14 @@ export interface Edge {
    * Changes here will be reflected in the attrs getter.
    */
   edgeAttrs: Record<string, string>;
+  /** CSS class(es) to add to the rendered SVG element */
+  className: string | undefined;
+  /** Custom data attributes to add to the rendered SVG element */
+  dataAttrs: Record<string, string>;
+  /** @internal Source node ID (set during connection) */
+  ["~fromNodeId"]: string;
+  /** @internal Target node ID (set during connection) */
+  ["~toNodeId"]: string;
 
   /**
    * Connect this edge to a node or merge with another edge
@@ -46,6 +54,14 @@ export interface Edge {
    * @returns The source node or this edge
    */
   from(target: Node | Edge): Node | Edge;
+
+  /**
+   * Get the SVG element for this edge.
+   * If no svg argument is provided, queries the current document.
+   * @param svg - Optional SVG string or Element to query within
+   * @returns The SVG element, or null if not found
+   */
+  getElement(svg?: string | Element): Element | null;
 }
 
 /**
@@ -63,6 +79,10 @@ export function Edge(options: EdgeOptions = {}): Edge {
   let forward = options.forward ?? false;
   let reverse = options.reverse ?? false;
   const _attrs: Record<string, string> = {};
+  const _className = options.className;
+  const _dataAttrs = options.dataAttrs ? { ...options.dataAttrs } : {};
+  let _fromNodeId = "";
+  let _toNodeId = "";
 
   // Set optional attributes
   if (options.label) {
@@ -75,7 +95,7 @@ export function Edge(options: EdgeOptions = {}): Edge {
     _attrs.style = options.style;
   }
 
-  // Set any additional attributes
+  // Set any additional attributes (excluding className, dataAttrs which we handle separately)
   for (const [key, value] of Object.entries(options)) {
     if (
       key !== "node" &&
@@ -83,7 +103,9 @@ export function Edge(options: EdgeOptions = {}): Edge {
       key !== "reverse" &&
       key !== "label" &&
       key !== "color" &&
-      key !== "style"
+      key !== "style" &&
+      key !== "className" &&
+      key !== "dataAttrs"
     ) {
       _attrs[key] = String(value);
     }
@@ -155,6 +177,56 @@ export function Edge(options: EdgeOptions = {}): Edge {
       }
       Object.assign(_attrs, value);
     },
+
+    /**
+     * Get the CSS class(es) for this edge
+     */
+    get className(): string | undefined {
+      return _className;
+    },
+
+    /**
+     * Get the custom data attributes for this edge
+     */
+    get dataAttrs(): Record<string, string> {
+      return { ..._dataAttrs };
+    },
+
+    get ["~fromNodeId"](): string {
+      return _fromNodeId;
+    },
+    set ["~fromNodeId"](value: string) {
+      _fromNodeId = value;
+    },
+
+    get ["~toNodeId"](): string {
+      return _toNodeId;
+    },
+    set ["~toNodeId"](value: string) {
+      _toNodeId = value;
+    },
+
+    /**
+     * Get the SVG element for this edge.
+     * If no svg argument is provided, queries the current document.
+     * @param svg - Optional SVG string or Element to query within
+     * @returns The SVG element, or null if not found
+     */
+    getElement(svg?: string | Element): Element | null {
+      let root: Element | Document | null;
+      if (svg === undefined) {
+        root = typeof document !== "undefined" ? document : null;
+      } else if (typeof svg === "string") {
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(svg, "image/svg+xml");
+        root = doc.documentElement;
+      } else {
+        root = svg;
+      }
+      if (!root) return null;
+      return root.querySelector(`[data-edge-from="${_fromNodeId}"][data-edge-to="${_toNodeId}"]`);
+    },
+
     /**
      * Connect from a node or another edge
      * Implements: Edge << Node, Edge << Edge

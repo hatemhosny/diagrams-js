@@ -182,6 +182,82 @@ const diagram = Diagram("Merged");
 await diagram.import(svgString, "svg");
 ```
 
+### SVG DOM Manipulation
+
+Add CSS classes and data attributes to nodes, edges, and clusters for interactive SVGs:
+
+```typescript
+const server = diagram.add(
+  Node("Server", {
+    className: "server-node",
+    dataAttrs: { team: "backend" },
+  }),
+);
+
+const db = diagram.add(
+  Node("DB", {
+    className: "db-node",
+    dataAttrs: { team: "data" },
+  }),
+);
+
+server.to(
+  Edge({
+    className: "critical",
+    dataAttrs: { latency: "50ms" },
+  }),
+  db,
+);
+
+const cluster = diagram.cluster("VPC", {
+  className: "prod-cluster",
+  dataAttrs: { region: "us-east-1" },
+});
+```
+
+After rendering and inserting into the DOM, query elements with `getElement()`:
+
+```typescript
+const svg = await diagram.render();
+document.body.innerHTML = svg;
+
+const el = server.getElement(); // queries document
+el?.addEventListener("click", () => console.log("Clicked!"));
+
+// Or query within a specific SVG string/element
+const el2 = server.getElement(svg);
+```
+
+### The `after:layout` Hook
+
+The `after:layout` hook fires after Graphviz produces the SVG string but before PNG/JPG conversion. Use it for SVG post-processing that should also affect raster output.
+
+```typescript
+import { HookEvent } from "diagrams-js";
+
+const svgPlugin = () => ({
+  name: "svg-post-processor",
+  version: "1.0.0",
+  apiVersion: "1.0",
+  runtimeSupport: { node: true, browser: true, deno: true, bun: true },
+  capabilities: [
+    {
+      type: "hook",
+      hooks: [
+        {
+          event: HookEvent.AFTER_LAYOUT,
+          handler: async ({ svg, diagram, format }) => {
+            // Modify SVG string
+            const modified = svg.replace(/stroke="#7b8894"/g, 'stroke="red"');
+            return { svg: modified, diagram, format };
+          },
+        },
+      ],
+    },
+  ],
+});
+```
+
 ## Common Mistakes
 
 ### CRITICAL Trying to render PNG without sharp installed

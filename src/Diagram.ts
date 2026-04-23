@@ -116,9 +116,10 @@ export interface Diagram {
   /**
    * Create a cluster (group) of nodes
    * @param label - The label for the cluster
+   * @param options - Optional cluster configuration
    * @returns The cluster object
    */
-  cluster(label: string): Cluster;
+  cluster(label: string, options?: import("./types.js").ClusterOptions): Cluster;
 
   /**
    * Render the diagram to SVG or other formats
@@ -411,6 +412,8 @@ export function Diagram(name = "", options: DiagramOptions = {}): Diagram {
     from: string;
     to: string;
     attrs: Record<string, string>;
+    className?: string;
+    dataAttrs?: Record<string, string>;
   }> = [];
   const _clusters: Cluster[] = [];
   let _viz: Viz | null = null;
@@ -659,6 +662,8 @@ export function Diagram(name = "", options: DiagramOptions = {}): Diagram {
         from: from.nodeId,
         to: to.nodeId,
         attrs: edge.attrs,
+        className: edge.className,
+        dataAttrs: edge.dataAttrs,
       };
       _edges.push(edgeEntry);
 
@@ -711,10 +716,11 @@ export function Diagram(name = "", options: DiagramOptions = {}): Diagram {
     /**
      * Create a cluster
      * @param label - The label for the cluster
+     * @param options - Optional cluster configuration
      * @returns The created cluster
      */
-    cluster(label: string): Cluster {
-      const cluster = Cluster(label, "LR", undefined, diagram as Diagram);
+    cluster(label: string, options?: import("./types.js").ClusterOptions): Cluster {
+      const cluster = Cluster(label, "LR", options, diagram as Diagram);
       _clusters.push(cluster);
 
       // Fire cluster:create hook synchronously if plugins are initialized
@@ -810,6 +816,14 @@ export function Diagram(name = "", options: DiagramOptions = {}): Diagram {
       if (format === "svg" && options.embedData !== false) {
         output = embedDiagramData(output as string, diagram.toJSON());
       }
+
+      // Execute after:layout hook (SVG string manipulation before format conversion)
+      const layoutHookData = await registry.executeHooks(HookEventEnum.AFTER_LAYOUT, {
+        svg: output as string,
+        diagram,
+        format,
+      });
+      output = (layoutHookData as { svg: string }).svg;
 
       // If PNG format was requested, convert SVG to PNG
       if (format === "png") {
@@ -911,27 +925,23 @@ export function Diagram(name = "", options: DiagramOptions = {}): Diagram {
         }
 
         // Edges
+        let edgeIdx = 0;
         for (const { from, to, attrs } of _edges) {
           dot += `  "${from}" -> "${to}"`;
+          const edgeId = `diagram_edge_${edgeIdx++}`;
           const attrEntries = Object.entries(attrs);
-          if (attrEntries.length > 0) {
-            dot += " [";
-            dot += attrEntries
-              .map(([k, v]) => {
-                // Check if this is an HTML-like label (starts with < and ends with >)
-                if (
-                  k === "label" &&
-                  typeof v === "string" &&
-                  v.startsWith("<") &&
-                  v.endsWith(">")
-                ) {
-                  return `${k}=${v}`;
-                }
-                return `${k}="${v}"`;
-              })
-              .join(", ");
-            dot += "]";
-          }
+          const allAttrs: [string, string][] = [[`id`, edgeId], ...attrEntries];
+          dot += " [";
+          dot += allAttrs
+            .map(([k, v]) => {
+              // Check if this is an HTML-like label (starts with < and ends with >)
+              if (k === "label" && typeof v === "string" && v.startsWith("<") && v.endsWith(">")) {
+                return `${k}=${v}`;
+              }
+              return `${k}="${v}"`;
+            })
+            .join(", ");
+          dot += "]";
           dot += ";\n";
         }
 
@@ -1675,14 +1685,15 @@ export function Diagram(name = "", options: DiagramOptions = {}): Diagram {
       }
 
       // Edges
+      let toStringEdgeIdx = 0;
       for (const { from, to, attrs } of _edges) {
         dot += `  "${from}" -> "${to}"`;
+        const edgeId = `diagram_edge_${toStringEdgeIdx++}`;
         const attrEntries = Object.entries(attrs);
-        if (attrEntries.length > 0) {
-          dot += " [";
-          dot += attrEntries.map(([k, v]) => `${k}="${v}"`).join(", ");
-          dot += "]";
-        }
+        const allAttrs: [string, string][] = [[`id`, edgeId], ...attrEntries];
+        dot += " [";
+        dot += allAttrs.map(([k, v]) => `${k}="${v}"`).join(", ");
+        dot += "]";
         dot += ";\n";
       }
 

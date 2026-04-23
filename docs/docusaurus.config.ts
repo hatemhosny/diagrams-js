@@ -90,11 +90,11 @@ const config: Config = {
           label: "Providers",
           to: "/docs/guides/providers",
         },
-        {
-          position: "left",
-          label: "Plugins",
-          to: "/docs/plugins/overview",
-        },
+        // {
+        //   position: "left",
+        //   label: "Plugins",
+        //   to: "/docs/plugins/overview",
+        // },
         { to: "/playground", label: "Playground", position: "left" },
         { to: "/visual-editor", label: "Visual Editor", position: "left" },
         {

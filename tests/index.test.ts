@@ -42,6 +42,15 @@ describe("Node", () => {
     const node = diagram.add(Node("test"));
     expect(node.label).toContain("Node");
   });
+
+  it("should support className and dataAttrs", () => {
+    const diagram = Diagram("Test", {});
+    const node = diagram.add(
+      Node("Server", { className: "highlight", dataAttrs: { team: "backend" } }),
+    );
+    expect(node.className).toBe("highlight");
+    expect(node.dataAttrs).toEqual({ team: "backend" });
+  });
 });
 
 describe("Edge", () => {
@@ -68,6 +77,13 @@ describe("Edge", () => {
     expect(Edge.label("test").attrs.label).toBe("test");
     expect(Edge.color("red").attrs.color).toBe("red");
     expect(Edge.style("dashed").attrs.style).toBe("dashed");
+  });
+
+  it("should support className and dataAttrs", () => {
+    const edge = Edge({ label: "HTTP", className: "critical", dataAttrs: { latency: "50ms" } });
+    expect(edge.className).toBe("critical");
+    expect(edge.dataAttrs).toEqual({ latency: "50ms" });
+    expect(edge.attrs.label).toBe("HTTP");
   });
 });
 
@@ -217,6 +233,16 @@ describe("Cluster", () => {
     const cluster = diagram.cluster("My Cluster");
     const node = cluster.add(Node("Test Node"));
     expect(node.label).toBe("Test Node");
+  });
+
+  it("should support className and dataAttrs", () => {
+    const diagram = Diagram("Test");
+    const cluster = diagram.cluster("VPC", {
+      className: "production",
+      dataAttrs: { region: "us-east-1" },
+    });
+    expect(cluster.className).toBe("production");
+    expect(cluster.dataAttrs).toEqual({ region: "us-east-1" });
   });
 });
 

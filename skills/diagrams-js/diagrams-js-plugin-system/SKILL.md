@@ -252,11 +252,40 @@ const loggingPlugin = () => ({
 });
 ```
 
+#### SVG Post-Processing with `after:layout`
+
+The `after:layout` hook fires after Graphviz renders the SVG but before format conversion to PNG/JPG. This is the ideal place for SVG string manipulation that should also affect raster output.
+
+```typescript
+const svgPostProcessor = () => ({
+  name: "svg-post-processor",
+  version: "1.0.0",
+  apiVersion: "1.0",
+  runtimeSupport: { node: true, browser: true, deno: true, bun: true },
+  capabilities: [
+    {
+      type: "hook",
+      hooks: [
+        {
+          event: "after:layout",
+          handler: async ({ svg, diagram, format }) => {
+            // Modify SVG string - affects both SVG and PNG/JPG output
+            const modified = svg.replace(/stroke="#7b8894"/g, 'stroke="red"');
+            return { svg: modified, diagram, format };
+          },
+        },
+      ],
+    },
+  ],
+});
+```
+
 #### Available Hook Events
 
 - `before:import` / `after:import` - Import operations
 - `before:export` / `after:export` - Export operations
 - `before:render` / `after:render` - Rendering
+- `after:layout` - After Graphviz produces SVG, before format conversion (PNG/JPG)
 - `before:serialize` / `after:deserialize` - JSON serialization
 - `node:create` - Node creation
 - `edge:create` - Edge creation

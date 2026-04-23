@@ -125,6 +125,56 @@ function ArchitectureDiagram() {
 }
 ```
 
+## SVG Interactivity
+
+Add CSS classes and data attributes to diagram items, then attach event handlers after rendering:
+
+```typescript
+import { Diagram, Node, Edge } from "diagrams-js";
+import { EC2, RDS } from "diagrams-js/aws/compute";
+
+const diagram = Diagram("Interactive");
+
+const web = diagram.add(
+  Node("Web", {
+    className: "web-node",
+    dataAttrs: { tier: "frontend" },
+  }),
+);
+
+const db = diagram.add(
+  Node("Database", {
+    className: "db-node",
+    dataAttrs: { tier: "backend" },
+  }),
+);
+
+const edge = Edge({
+  className: "connection",
+  dataAttrs: { type: "sql" },
+});
+web.to(edge, db);
+
+const svg = await diagram.render();
+const container = document.getElementById("diagram");
+container.innerHTML = svg;
+
+// Attach event handlers using getElement()
+const webEl = web.getElement();
+webEl?.addEventListener("click", () => {
+  console.log("Web server clicked!");
+  webEl.classList.toggle("selected");
+});
+
+// Or query by data attribute
+const frontendNodes = container.querySelectorAll('[data-tier="frontend"]');
+frontendNodes.forEach((el) => {
+  el.addEventListener("mouseenter", () => {
+    el.style.opacity = "0.8";
+  });
+});
+```
+
 ## Common Mistakes
 
 ### CRITICAL Trying to use Node.js fs APIs in browser

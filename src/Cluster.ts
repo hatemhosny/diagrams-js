@@ -1,5 +1,6 @@
 import type { Diagram } from "./Diagram.js";
 import type { Node } from "./Node.js";
+import type { ClusterOptions } from "./types.js";
 
 const defaultGraphAttrs: Record<string, string> = {
   shape: "box",
@@ -39,6 +40,10 @@ export interface Cluster {
    * Changes here will be reflected in the rendered output.
    */
   clusterAttrs: Record<string, string>;
+  /** CSS class(es) to add to the rendered SVG element */
+  className: string | undefined;
+  /** Custom data attributes to add to the rendered SVG element */
+  dataAttrs: Record<string, string>;
   /** The diagram this cluster belongs to */
   diagram: Diagram;
 
@@ -68,9 +73,10 @@ export interface Cluster {
   /**
    * Create a nested cluster within this one
    * @param label - The label for the nested cluster
+   * @param options - Optional cluster configuration
    * @returns The created nested cluster
    */
-  cluster(label: string): Cluster;
+  cluster(label: string, options?: import("./types.js").ClusterOptions): Cluster;
 
   /**
    * Get all nodes in this cluster
@@ -97,13 +103,21 @@ export interface Cluster {
    * @returns The diagram this cluster belongs to
    */
   getDiagram(): Diagram;
+
+  /**
+   * Get the SVG element for this cluster.
+   * If no svg argument is provided, queries the current document.
+   * @param svg - Optional SVG string or Element to query within
+   * @returns The SVG element, or null if not found
+   */
+  getElement(svg?: string | Element): Element | null;
 }
 
 /**
  * Create a new cluster
  * @param label - The display label for the cluster
  * @param direction - Layout direction for the cluster
- * @param graphAttr - Optional Graphviz attributes
+ * @param options - Optional Graphviz attributes or ClusterOptions
  * @param diagram - The diagram this cluster belongs to
  * @param parent - Optional parent cluster for nesting
  * @returns A new Cluster instance
@@ -116,7 +130,7 @@ export interface Cluster {
 export function Cluster(
   label = "cluster",
   direction: "TB" | "BT" | "LR" | "RL" = "LR",
-  graphAttr?: Record<string, string>,
+  options?: Record<string, string> | ClusterOptions,
   diagram?: Diagram,
   parent?: Cluster,
 ): Cluster {
@@ -128,6 +142,15 @@ export function Cluster(
   if (!diagram) {
     throw new Error("Cluster must be created through diagram.cluster() or cluster.cluster()");
   }
+
+  // Normalize options (backward-compatible with old graphAttr parameter)
+  const isClusterOptions =
+    options && ("className" in options || "dataAttrs" in options || "graphAttr" in options);
+  const opts: ClusterOptions = isClusterOptions
+    ? (options as ClusterOptions)
+    : { graphAttr: options as Record<string, string> | undefined };
+  const _className = opts.className;
+  const _dataAttrs = opts.dataAttrs ? { ...opts.dataAttrs } : {};
 
   // Get theme configuration from the diagram
   const themeConfig = diagram.themeConfig;
@@ -146,8 +169,8 @@ export function Cluster(
   _graphAttr.bgcolor = bgcolors[colorIdx];
 
   // Merge passed in attributes
-  if (graphAttr) {
-    Object.assign(_graphAttr, graphAttr);
+  if (opts.graphAttr) {
+    Object.assign(_graphAttr, opts.graphAttr);
   }
 
   // Ignore direction parameter but use it to avoid unused warning
@@ -208,10 +231,11 @@ export function Cluster(
     /**
      * Create a nested cluster within this one
      * @param childLabel - The label for the nested cluster
+     * @param options - Optional cluster configuration
      * @returns The created nested cluster
      */
-    cluster(childLabel: string): Cluster {
-      const child = Cluster(childLabel, "LR", undefined, diagram, cluster);
+    cluster(childLabel: string, options?: import("./types.js").ClusterOptions): Cluster {
+      const child = Cluster(childLabel, "LR", options, diagram, cluster);
       _subgraphs.push(child);
 
       // Fire cluster:create hook via the diagram
@@ -228,6 +252,20 @@ export function Cluster(
       }
 
       return child;
+    },
+
+    /**
+     * Get the CSS class(es) for this cluster
+     */
+    get className(): string | undefined {
+      return _className;
+    },
+
+    /**
+     * Get the custom data attributes for this cluster
+     */
+    get dataAttrs(): Record<string, string> {
+      return { ..._dataAttrs };
     },
 
     /**
@@ -256,6 +294,27 @@ export function Cluster(
      */
     getDiagram(): Diagram {
       return diagram;
+    },
+
+    /**
+     * Get the SVG element for this cluster.
+     * If no svg argument is provided, queries the current document.
+     * @param svg - Optional SVG string or Element to query within
+     * @returns The SVG element, or null if not found
+     */
+    getElement(svg?: string | Element): Element | null {
+      let root: Element | Document | null;
+      if (svg === undefined) {
+        root = typeof document !== "undefined" ? document : null;
+      } else if (typeof svg === "string") {
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(svg, "image/svg+xml");
+        root = doc.documentElement;
+      } else {
+        root = svg;
+      }
+      if (!root) return null;
+      return root.querySelector(`[data-cluster-label="${label}"]`);
     },
   };
 

@@ -98,13 +98,13 @@
           "type": "string",
           "description": "Cloud provider identifier (e.g., 'aws', 'gcp', 'azure', 'k8s')"
         },
-        "service": {
+        "type": {
           "type": "string",
           "description": "Service type within the provider (e.g., 'compute', 'storage', 'database')"
         },
-        "type": {
+        "resource": {
           "type": "string",
-          "description": "Specific resource type within the service (e.g., 'EC2', 'S3', 'RDS')"
+          "description": "Specific resource within the service type (e.g., 'EC2', 'S3', 'RDS')"
         },
         "iconUrl": {
           "type": "string",
