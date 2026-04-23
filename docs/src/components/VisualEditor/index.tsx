@@ -75,11 +75,13 @@ function nodeFromDiagramJson(n: any): Node {
 
   // Provider node (type = category, resource = resource name)
   if (n.provider && (n.type || n.resource)) {
+    // Backward compat: old JSON used `service` for category and `type` for resource
+    const isNewFormat = n.resource != null;
     return {
       ...base,
       provider: n.provider,
-      type: n.type,
-      resource: n.resource,
+      type: isNewFormat ? n.type : n.service || n.type,
+      resource: isNewFormat ? n.resource : n.type,
     };
   }
 
@@ -616,16 +618,13 @@ export default function VisualEditor(): React.JSX.Element {
             nodeData.iconMode = isIconify ? "iconify" : "url";
             nodeData.iconUrl = isIconify ? "" : node.iconUrl;
             nodeData.iconName = iconName;
-          } else if (node.provider && node.service && node.type) {
+          } else if (node.provider) {
             // Provider-based icon (service nodes from Docker Compose)
+            // Backward compat: old JSON used `service` for category and `type` for resource
+            const isNewFormat = node.resource != null;
             nodeData.provider = node.provider;
-            nodeData.type = node.service;
-            nodeData.resource = node.type;
-          } else if (node.provider && node.type) {
-            // Alternative format
-            nodeData.provider = node.provider;
-            nodeData.type = node.type;
-            nodeData.resource = node.type;
+            nodeData.type = isNewFormat ? node.type : node.service || node.type;
+            nodeData.resource = isNewFormat ? node.resource : node.type;
           } else {
             // Network/volume nodes or nodes without provider info - use generic container icon
             nodeData.custom = true;
@@ -770,16 +769,13 @@ export default function VisualEditor(): React.JSX.Element {
             nodeData.iconMode = isIconify ? "iconify" : "url";
             nodeData.iconUrl = isIconify ? "" : node.iconUrl;
             nodeData.iconName = iconName;
-          } else if (node.provider && node.service && node.type) {
+          } else if (node.provider) {
             // Provider-based icon (Kubernetes nodes)
+            // Backward compat: old JSON used `service` for category and `type` for resource
+            const isNewFormat = node.resource != null;
             nodeData.provider = node.provider;
-            nodeData.type = node.service;
-            nodeData.resource = node.type;
-          } else if (node.provider && node.type) {
-            // Alternative format
-            nodeData.provider = node.provider;
-            nodeData.type = node.type;
-            nodeData.resource = node.type;
+            nodeData.type = isNewFormat ? node.type : node.service || node.type;
+            nodeData.resource = isNewFormat ? node.resource : node.type;
           } else {
             // Nodes without provider info - use generic Kubernetes icon
             nodeData.custom = true;

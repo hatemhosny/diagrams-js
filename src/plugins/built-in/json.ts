@@ -114,8 +114,9 @@ export async function mergeDiagrams(
   // Collect unique provider/type pairs from nodes that have them
   const providerTypePairs = new Map<string, [string, string]>();
   for (const node of json.nodes) {
-    // Backward compat: old JSON used `service` for category
-    const category = node.type || (node as any).service;
+    // Backward compat: old JSON used `service` for category and `type` for resource
+    const isNewFormat = node.resource != null;
+    const category = isNewFormat ? node.type : (node as any).service || node.type;
     if (node.provider && category) {
       const key = `${node.provider}/${category}`;
       providerTypePairs.set(key, [node.provider, category]);
@@ -171,7 +172,8 @@ export async function mergeDiagrams(
           nodeOptions["~provider"] = nodeDef.provider;
         }
         // Backward compat: old JSON used `service` for category; new JSON uses `type`
-        const category = nodeDef.type || (nodeDef as any).service;
+        const isNewFormat = nodeDef.resource != null;
+        const category = isNewFormat ? nodeDef.type : (nodeDef as any).service || nodeDef.type;
         if (category) {
           nodeOptions["~type"] = category;
         }

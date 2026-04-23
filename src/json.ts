@@ -523,7 +523,8 @@ export async function fromJSON(
   const providerTypePairs = new Map<string, [string, string]>();
   for (const node of json.nodes) {
     // Backward compat: old JSON used `service` for category and `type` for resource
-    const category = node.type || (node as any).service;
+    const isNewFormat = node.resource != null;
+    const category = isNewFormat ? node.type : (node as any).service || node.type;
     if (node.provider && category) {
       const key = `${node.provider}/${category}`;
       providerTypePairs.set(key, [node.provider, category]);
@@ -624,8 +625,10 @@ export async function fromJSON(
     // Try to use a provider factory function if resource is specified and a matching factory exists.
     // This gives us the correct icon, provider metadata, etc. automatically.
     let node: import("./Node.js").Node;
-    // Backward compat: old JSON used `type` for resource name; new JSON uses `resource`
-    const resourceName = nodeDef.resource || (nodeDef as any).type;
+    // Backward compat: old JSON used `service` for category and `type` for resource
+    const isNewFormat = nodeDef.resource != null;
+    const category = isNewFormat ? nodeDef.type : (nodeDef as any).service || nodeDef.type;
+    const resourceName = isNewFormat ? nodeDef.resource : (nodeDef as any).type;
     const factory = resourceName ? factoryLookup.get(resourceName) : undefined;
 
     if (factory) {
@@ -656,8 +659,6 @@ export async function fromJSON(
       if (nodeDef.provider) {
         raw["~provider"] = nodeDef.provider;
       }
-      // Backward compat: old JSON used `service` for category; new JSON uses `type`
-      const category = nodeDef.type || (nodeDef as any).service;
       if (category) {
         raw["~type"] = category;
       }
