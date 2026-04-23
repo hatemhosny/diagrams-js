@@ -1,3 +1,17 @@
+## [0.5.0] - 2026-04-23
+
+### Features
+
+- No new features
+
+### Bug Fixes
+
+- fix visual editor svg import (6a6d2f3)
+
+### Other Changes
+
+- rename json properties to provider/type/resource (a24f38a)
+
 ## [0.4.0] - 2026-04-22
 
 ### Features
