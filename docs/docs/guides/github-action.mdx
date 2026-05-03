@@ -1,0 +1,283 @@
+---
+title: GitHub Action
+description: Using diagrams-js in GitHub Actions for CI/CD
+sidebar_position: 13
+---
+
+# GitHub Action
+
+Use diagrams-js in GitHub Actions to render, diff, and validate architecture diagrams in CI/CD pipelines.
+
+## Usage
+
+```yaml
+- uses: diagrams-js/action@v1
+  with:
+    command: render
+    args: architecture.ts
+    output: architecture.svg
+```
+
+## Inputs
+
+| Input               | Description                                               | Required | Default           |
+| ------------------- | --------------------------------------------------------- | -------- | ----------------- |
+| `command`           | CLI command: `render`, `export`, `diff`                   | Yes      | `render`          |
+| `args`              | Arguments for the command                                 | No       | `""`              |
+| `format`            | Output format: `svg`, `png`, `jpg`, `dot`, `json`, `html` | No       | `svg`             |
+| `output`            | Output file path                                          | No       | `""`              |
+| `theme`             | Color theme                                               | No       | `""`              |
+| `direction`         | Layout direction: `TB`, `BT`, `LR`, `RL`                  | No       | `""`              |
+| `plugin`            | Plugin name for import/export                             | No       | `""`              |
+| `comment-pr`        | Comment output on PR: `true` or `false`                   | No       | `false`           |
+| `upload-artifact`   | Upload output as artifact: `true` or `false`              | No       | `true`            |
+| `artifact-name`     | Artifact name                                             | No       | `diagrams-output` |
+| `working-directory` | Working directory                                         | No       | `""`              |
+| `node-version`      | Node.js version                                           | No       | `22`              |
+| `cli-version`       | CLI version: `latest` or specific                         | No       | `latest`          |
+
+## Outputs
+
+| Output          | Description                   |
+| --------------- | ----------------------------- |
+| `output-path`   | Path to generated output file |
+| `output-format` | Format of generated output    |
+
+## Examples
+
+### Render on push
+
+Render diagrams when source files change:
+
+```yaml
+name: Render Diagrams
+on:
+  push:
+    branches: [main]
+    paths:
+      - "diagrams/**"
+      - "**/*.diagram.ts"
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        diagram:
+          - architecture.ts
+          - infrastructure.ts
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Render ${{ matrix.diagram }}
+        uses: diagrams-js/action@v1
+        with:
+          command: render
+          args: diagrams/${{ matrix.diagram }}
+          output: output/${{ matrix.diagram }}.svg
+          format: svg
+          theme: light
+
+      - name: Upload diagram
+        uses: actions/upload-artifact@v4
+        with:
+          name: diagram-${{ matrix.diagram }}
+          path: output/${{ matrix.diagram }}.svg
+```
+
+### Diff in PR
+
+Generate visual diffs when diagram files change in a pull request:
+
+```yaml
+name: Diagram Diff
+on:
+  pull_request:
+    paths:
+      - "**/*.ts"
+      - "**/*.json"
+      - "**/*.svg"
+
+jobs:
+  diff:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: diagrams-js/action@v1
+        with:
+          command: diff
+          args: show origin/${{ github.base_ref }} architecture.ts
+          output: diff.html
+          format: html
+          comment-pr: true
+```
+
+### Validate diagrams
+
+Ensure all diagram files render successfully:
+
+```yaml
+name: Validate Diagrams
+on: [pull_request]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Find diagram files
+        id: find
+        run: |
+          files=$(find . -name "*.ts" -o -name "*.json" | tr '\n' ' ')
+          echo "files=$files" >> $GITHUB_OUTPUT
+
+      - uses: diagrams-js/action@v1
+        with:
+          command: render
+          args: ${{ steps.find.outputs.files }}
+          format: svg
+```
+
+### Render from Docker Compose
+
+Render architecture diagrams from Docker Compose files (the `render` command auto-imports via plugins for `.yaml`/`.yml` files):
+
+```yaml
+name: Docker Compose Architecture
+on:
+  push:
+    paths:
+      - "docker-compose.yml"
+      - "docker-compose.yaml"
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: diagrams-js/action@v1
+        with:
+          command: render
+          args: docker-compose.yml
+          output: architecture.svg
+          plugin: docker-compose
+          format: svg
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: architecture
+          path: architecture.svg
+```
+
+### Render from Kubernetes
+
+Render architecture diagrams from Kubernetes manifests (the `render` command auto-imports via plugins for `.yaml`/`.yml` files):
+
+```yaml
+name: Kubernetes Architecture
+on:
+  push:
+    paths:
+      - "k8s/**"
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Find K8s manifests
+        id: find
+        run: |
+          files=$(find k8s -name "*.yaml" -o -name "*.yml" | tr '\n' ' ')
+          echo "files=$files" >> $GITHUB_OUTPUT
+
+      - uses: diagrams-js/action@v1
+        with:
+          command: render
+          args: ${{ steps.find.outputs.files }}
+          output: k8s-architecture.svg
+          plugin: kubernetes
+          format: svg
+```
+
+## PR Comments
+
+Enable `comment-pr: true` to post diff output on pull requests:
+
+```yaml
+- uses: diagrams-js/action@v1
+  with:
+    command: diff
+    args: show HEAD diagram.ts
+    output: diff.html
+    format: html
+    comment-pr: true
+```
+
+The action will comment with:
+
+- **HTML diffs**: Link to download the artifact
+- **SVG renders**: Inline SVG preview
+- **Other formats**: File and format info
+
+## Artifacts
+
+Outputs are automatically uploaded as artifacts (disable with `upload-artifact: false`):
+
+```yaml
+- uses: diagrams-js/action@v1
+  with:
+    command: render
+    args: diagram.ts
+    output: diagram.svg
+    artifact-name: my-diagram
+```
+
+Download artifacts from the workflow run summary page.
+
+## Version Pinning
+
+Pin to a specific CLI version for reproducible builds:
+
+```yaml
+- uses: diagrams-js/action@v1
+  with:
+    command: render
+    args: diagram.ts
+    cli-version: "0.1.0"
+```
+
+## Node.js Version
+
+Specify a Node.js version (default: 22):
+
+```yaml
+- uses: diagrams-js/action@v1
+  with:
+    command: render
+    args: diagram.ts
+    node-version: "20"
+```
+
+## Working Directory
+
+Run commands in a subdirectory:
+
+```yaml
+- uses: diagrams-js/action@v1
+  with:
+    command: render
+    args: diagram.ts
+    working-directory: ./projects/my-app
+```
+
+## See Also
+
+- [CLI](./cli.mdx) — Command-line interface documentation
+- [Diagram Diff](./diagram-diff.mdx) — Visual diff for diagrams

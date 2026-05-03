@@ -191,20 +191,29 @@ These appear in the HTML output under "Diagram Options Changed".
 
 ## CLI Tool
 
-Use `diagrams-diff-cli` for git workflows:
+Use `@diagrams-js/cli` for git workflows:
 
 ```bash
 # Install globally
-npm install -g diagrams-diff-cli
+npm install -g @diagrams-js/cli
 
-# Compare with HEAD
-diagrams-diff HEAD diagram.json -o diff.html
+# Compare with HEAD (default: diagram-diff.html)
+diagrams diff show HEAD diagram.json
+
+# Compare with explicit output
+diagrams diff show HEAD diagram.json -o diff.html
+
+# Output to stdout
+diagrams diff show HEAD diagram.json --stdout
 
 # Compare branches
-diagrams-diff main...feature diagram.json -o diff.html
+diagrams diff show main...feature diagram.json -F html -o diff.html
 
-# Terminal preview
-diagrams-diff HEAD diagram.json --format terminal
+# List changed files
+diagrams diff list HEAD
+
+# Batch diff all changed files
+diagrams diff batch main...feature -o ./diffs
 ```
 
 ## Common Mistakes

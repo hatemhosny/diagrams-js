@@ -542,7 +542,35 @@ const diagram2 = Diagram("App 2", { pluginRegistry: sharedRegistry });
 
 ## Best Practices
 
-### 1. Use Objects for Simple Plugins, Factories for Configurable Ones
+### 1. Name Your Plugin with the `diagrams-js-plugin-` Prefix
+
+Use the `diagrams-js-plugin-` prefix (or `@scope/diagrams-js-plugin-` for scoped packages) so the CLI and users can find it:
+
+```json
+{
+  "name": "diagrams-js-plugin-terraform"
+}
+```
+
+Or with a scope:
+
+```json
+{
+  "name": "@myorg/diagrams-js-plugin-terraform"
+}
+```
+
+### 2. Add `diagrams-js` to package.json Keywords
+
+Include `diagrams-js` in your `package.json` keywords to make your plugin discoverable on npm:
+
+```json
+{
+  "keywords": ["diagrams-js", "diagrams", "architecture", "plugin", "terraform"]
+}
+```
+
+### 3. Use Objects for Simple Plugins, Factories for Configurable Ones
 
 If your plugin doesn't need configuration, use a plain object. Use factory functions only when you need to accept configuration:
 
@@ -576,7 +604,7 @@ await diagram.registerPlugins([mySimplePlugin]);
 await diagram.registerPlugins([createMyPlugin({ apiKey: "xxx" })]);
 ```
 
-### 2. Declare Runtime Support
+### 4. Declare Runtime Support
 
 Always declare which runtimes your plugin supports:
 
@@ -589,7 +617,7 @@ runtimeSupport: {
 }
 ```
 
-### 3. Handle Errors Gracefully
+### 5. Handle Errors Gracefully
 
 ```typescript
 export: async (diagram, context) => {
@@ -601,7 +629,7 @@ export: async (diagram, context) => {
 }
 ```
 
-### 4. Use Context-Provided Utilities
+### 6. Use Context-Provided Utilities
 
 For common needs like YAML parsing, use the utilities provided in the plugin context instead of bundling your own dependencies:
 
@@ -627,7 +655,7 @@ This approach:
 - Ensures consistent parsing across plugins
 - Works across all runtimes automatically
 
-### 5. Validate Configuration
+### 7. Validate Configuration
 
 Use `requiredConfig` and `initialize` to validate plugin setup:
 

@@ -1,0 +1,329 @@
+---
+title: CLI
+description: Using diagrams from the command line with @diagrams-js/cli
+sidebar_position: 12
+---
+
+# CLI
+
+Use diagrams-js from the command line with `@diagrams-js/cli`. Render diagrams, import/export with plugins, generate diffs, scaffold new files, and watch for changes.
+
+## Installation
+
+Install globally with `npm`:
+
+```bash
+npm install -g @diagrams-js/cli
+
+# then run `diagrams`
+diagrams render diagram.ts
+```
+
+Alternatively, install locally in your project:
+
+```bash
+npm install @diagrams-js/cli
+
+# then run `npx diagrams`
+npx diagrams render diagram.ts
+```
+
+Or use directly with `npx`:
+
+```bash
+npx @diagrams-js/cli render diagram.ts
+```
+
+## Commands
+
+### `render`
+
+Render a diagram file to SVG, PNG, JPG, DOT, or JSON. Also supports importing from external formats (Docker Compose, Kubernetes, etc.) via plugins when given `.yaml` or `.yml` files. Can also read from stdin or inline data.
+
+Given these examples:
+
+<details>
+  <summary>diagram.ts</summary>
+
+The diagram must be the default export:
+
+```ts
+import { Diagram } from "diagrams-js";
+import { EC2 } from "diagrams-js/aws/compute";
+import { RDS } from "diagrams-js/aws/database";
+import { S3 } from "diagrams-js/aws/storage";
+
+const diagram = Diagram("My Architecture");
+
+const web = diagram.add(EC2("Web Server"));
+const db = diagram.add(RDS("Database"));
+const storage = diagram.add(S3("Storage"));
+
+web.to(db);
+web.to(storage);
+
+// the diagram must be the default export
+export default diagram;
+```
+
+</details>
+
+<details>
+  <summary>diagram.json</summary>
+
+```json
+{
+  "nodes": [
+    {
+      "id": "moq10984_mtpsupb74",
+      "label": "Web Server",
+      "provider": "aws",
+      "type": "compute",
+      "resource": "EC2"
+    },
+    {
+      "id": "moq10984_f5m7biyus",
+      "label": "Database",
+      "provider": "aws",
+      "type": "database",
+      "resource": "RDS"
+    },
+    {
+      "id": "moq10984_2ushtc3hs",
+      "label": "Storage",
+      "provider": "aws",
+      "type": "storage",
+      "resource": "SimpleStorageServiceS3"
+    }
+  ],
+  "name": "My Architecture",
+  "edges": [
+    {
+      "from": "moq10984_mtpsupb74",
+      "to": "moq10984_f5m7biyus"
+    },
+    {
+      "from": "moq10984_mtpsupb74",
+      "to": "moq10984_2ushtc3hs"
+    }
+  ]
+}
+```
+
+</details>
+
+```bash
+# Render diagram source to SVG (default: <input-file-name>.svg)
+diagrams render diagram.ts # creates diagram.svg
+
+# Also supports JSON
+diagrams render diagram.json
+
+# Render to PNG
+diagrams render diagram.ts -o diagram.png
+
+# Render with theme and direction
+diagrams render diagram.ts -f svg -t dark -d LR -o out.svg
+
+# Render to JSON
+diagrams render diagram.ts -f json
+
+# Import Docker Compose and render to SVG
+diagrams render docker-compose.yml
+
+# Import Kubernetes manifest and render to PNG
+diagrams render k8s-deployment.yaml -o architecture.png
+
+# Output to stdout instead of file
+diagrams render diagram.ts --stdout
+
+# Write to file AND output to stdout
+diagrams render diagram.ts -o out.svg --stdout
+
+# Render from stdin (pipe JSON or SVG)
+cat diagram.json | diagrams render - -o out.svg
+
+```
+
+**Supported input sources:**
+
+- File: `.ts`, `.js`, `.mjs`, `.json`, `.svg`, `.yaml`, `.yml`
+- Stdin: pass `-` as the file argument
+
+**Supported output formats:** `svg`, `png`, `jpg`, `dot`, `json`
+
+**Options:**
+
+| Option                  | Description                                                     |
+| ----------------------- | --------------------------------------------------------------- |
+| `-o, --output <path>`   | Output file path (default: same name as input file with `.svg`) |
+| `--stdout`              | Output to stdout (in addition to `--output` if both are set)    |
+| `-f, --format <format>` | Output format: `svg`, `png`, `jpg`, `dot`, `json`               |
+| `-p, --plugin <name>`   | Plugin to use for importing (auto-detected)                     |
+| `-t, --theme <theme>`   | Color theme                                                     |
+| `-d, --direction <dir>` | Layout direction: `TB`, `BT`, `LR`, `RL`                        |
+| `--curve-style <style>` | Edge style: `ortho`, `curved`, `spline`, `polyline`             |
+| `--width <px>`          | Output width for PNG/JPG                                        |
+| `--height <px>`         | Output height for PNG/JPG                                       |
+| `--scale <n>`           | Scale factor for PNG/JPG                                        |
+| `--data-url`            | Output as data URL                                              |
+| `--no-embed-data`       | Disable embedding diagram data in SVG                           |
+
+Plugins are auto-detected from file content for `.yaml`/`.yml` files:
+
+- **docker-compose** — files with `services:`
+- **kubernetes** — files with `apiVersion:` and `kind:`
+
+### `export`
+
+Export a diagram to an external format. Supports file and stdin input.
+
+```bash
+# Export to Docker Compose (default: same-name.yml)
+diagrams export diagram.json -f docker-compose
+
+# Export to Kubernetes with explicit output
+diagrams export diagram.ts -f kubernetes -o manifest.yaml
+
+# Export from stdin
+cat diagram.json | diagrams export - -f docker-compose
+
+# Export to stdout
+diagrams export diagram.json -f docker-compose --stdout
+
+# Export to file AND stdout
+diagrams export diagram.json -f docker-compose -o compose.yml --stdout
+```
+
+**Options:**
+
+| Option                  | Description                                                  |
+| ----------------------- | ------------------------------------------------------------ |
+| `-f, --format <format>` | Export format (required)                                     |
+| `-o, --output <path>`   | Output file path (default: same name with format extension)  |
+| `--stdout`              | Output to stdout (in addition to `--output` if both are set) |
+| `-p, --plugin <name>`   | Plugin to use (defaults to format name)                      |
+
+### `diff`
+
+Generate visual diffs of diagrams in git workflows.
+
+```bash
+# Diff a file against HEAD (default: diagram-diff.html)
+diagrams diff show HEAD diagram.ts
+
+# Diff with explicit output
+diagrams diff show HEAD diagram.ts -o diff.html
+
+# Diff to stdout
+diagrams diff show HEAD diagram.ts --stdout
+
+# Diff between branches
+diagrams diff show main...feature diagram.json -F html
+
+# List changed diagram files
+diagrams diff list main...feature
+
+# Batch diff all changed files
+diagrams diff batch main...feature -o ./diffs
+```
+
+**Diff show options:**
+
+| Option                        | Description                                        |
+| ----------------------------- | -------------------------------------------------- |
+| `-o, --output <path>`         | Output file path (default: `<filename>-diff.html`) |
+| `--stdout`                    | Output to stdout (in addition to `--output`)       |
+| `-F, --format <format>`       | Diff format: `html` or `svg` (default: html)       |
+| `-t, --theme <theme>`         | Theme: `light` or `dark` (default: light)          |
+| `-l, --layout <layout>`       | Layout: `side-by-side` or `stacked`                |
+| `-u, --show-unchanged <mode>` | `show`, `dim`, or `hide`                           |
+| `--ignore-position`           | Ignore position changes (default: true)            |
+| `--ignore-metadata`           | Ignore metadata changes                            |
+| `-C, --directory <path>`      | Working directory for git commands                 |
+
+### `init`
+
+Scaffold a new diagram file.
+
+```bash
+# Create a basic diagram
+diagrams init "My Architecture"
+
+# Create with AWS template
+diagrams init "AWS Stack" -t aws -o aws.ts
+
+# Create with Kubernetes template
+diagrams init "K8s Cluster" -t k8s -o k8s.ts
+```
+
+**Templates:** `basic`, `aws`, `k8s`
+
+**Options:**
+
+| Option                      | Description                            |
+| --------------------------- | -------------------------------------- |
+| `-o, --output <path>`       | Output file path (default: diagram.ts) |
+| `-t, --template <template>` | Template name (default: basic)         |
+
+### `watch`
+
+Watch a diagram file and re-render on changes.
+
+```bash
+# Watch and render to SVG (default: same-name.svg)
+diagrams watch diagram.ts
+
+# Watch with custom output
+diagrams watch diagram.ts -o out.svg
+
+# Watch with PNG output
+diagrams watch diagram.ts -f png --scale 2 -o out.png
+```
+
+**Options:** Same as `render`
+
+### `plugins`
+
+Discover and manage plugins.
+
+```bash
+# List installed plugins
+diagrams plugins list
+
+# Show plugin info
+diagrams plugins info docker-compose
+```
+
+Plugins are auto-discovered from `node_modules`:
+
+- `@diagrams-js/plugin-*` (scoped)
+- `diagrams-js-plugin-*` (unscoped)
+
+## Configuration
+
+Create a `.diagramsrc.json` file in your project root:
+
+```json
+{
+  "format": "svg",
+  "theme": "light",
+  "direction": "TB",
+  "curveStyle": "ortho",
+  "scale": 2,
+  "plugins": ["docker-compose", "kubernetes"],
+  "diff": {
+    "layout": "side-by-side",
+    "showUnchanged": "show",
+    "ignorePosition": true
+  }
+}
+```
+
+CLI options override config file values.
+
+## See Also
+
+- [Diagram Diff](./diagram-diff.mdx) — Visual diff for diagrams
+- [Plugins](../plugins/overview.mdx) — Plugin system overview
+- [GitHub Action](./github-action.mdx) — CI/CD integration

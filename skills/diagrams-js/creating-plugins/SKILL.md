@@ -443,13 +443,31 @@ export const myPlugin = () => ({
 3. **Version**: `npm version patch|minor|major`
 4. **Publish**: `npm publish --access public`
 
+### Naming Convention
+
+Name your plugin with the `diagrams-js-plugin-` prefix so the CLI and users can find it:
+
+```json
+{
+  "name": "diagrams-js-plugin-terraform"
+}
+```
+
+Or with a scope:
+
+```json
+{
+  "name": "@myorg/diagrams-js-plugin-terraform"
+}
+```
+
 ### NPM Keywords for Discoverability
 
 Add `diagrams-js` to your `package.json` keywords to make your plugin discoverable:
 
 ```json
 {
-  "name": "@diagrams-js/plugin-my-format",
+  "name": "diagrams-js-plugin-my-format",
   "keywords": ["diagrams-js", "diagrams", "architecture", "plugin", "import", "export"]
 }
 ```
