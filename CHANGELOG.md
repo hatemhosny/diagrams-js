@@ -1,3 +1,17 @@
+## [0.7.0] - 2026-05-03
+
+### Features
+
+- No new features
+
+### Bug Fixes
+
+- fix: fix types (12d334b)
+
+### Other Changes
+
+- update docs (ac9cc14)
+
 ## [0.6.0] - 2026-04-23
 
 ### Features
