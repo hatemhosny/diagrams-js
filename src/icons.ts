@@ -12,7 +12,7 @@ export interface NodeIconMap {
   iconPath?: string;
 }
 
-export type { Node };
+// Note: Node is not re-exported here to avoid type-only export issues in declaration bundling
 
 /**
  * Map of icon keys to data URIs
