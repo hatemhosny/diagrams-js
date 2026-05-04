@@ -1,3 +1,17 @@
+## [0.7.1] - 2026-05-04
+
+### Features
+
+- No new features
+
+### Bug Fixes
+
+- fix: fix diff (eb37bbd)
+
+### Other Changes
+
+- No other changes
+
 ## [0.7.0] - 2026-05-03
 
 ### Features
