@@ -7,6 +7,8 @@ sidebar_position: 10
 
 Compare two versions of a diagram visually to see what changed. The diff feature highlights **added**, **removed**, and **modified** elements with color-coded overlays in a side-by-side view.
 
+![Diagram Diff](./img/diff.jpg)
+
 ## Overview
 
 When you version control your diagram code, you can see text diffs. But for architecture diagrams, a visual diff is much more useful:
@@ -253,29 +255,32 @@ The resulting HTML will show:
 
 ## Git Integration with CLI
 
-Use the `diagrams-diff-cli` package for automatic diff generation in git workflows:
+Use the `diagrams` CLI for automatic diff generation in git workflows:
 
 ```bash
 # Install globally
-npm install -g diagrams-diff-cli
+npm install -g @diagrams-js/cli
 
 # Compare current file with HEAD
-diagrams-diff HEAD diagram.json -o diff.html
+diagrams diff HEAD diagram.json -o diff.html
+
+# Also compare SVG
+diagrams diff HEAD diagram.svg -o diff.html
 
 # Generate diff for PR
-diagrams-diff main...feature diagram.json -o diff.html
+diagrams diff main...feature diagram.json -o diff.html
 
 # Show in terminal (ASCII preview)
-diagrams-diff HEAD diagram.json --format terminal
+diagrams diff HEAD diagram.json --format terminal
 ```
 
 ### CLI Options
 
 ```bash
-diagrams-diff <ref> <file> [options]
+diagrams diff <ref> <file> [options]
 
 Options:
-  -o, --output <file>     Output file (default: stdout)
+  -o, --output <file>     Output file (default: <filename>-diff.html)
   -f, --format <format>   Output format: html, svg, json, terminal (default: html)
   -t, --theme <theme>     Theme: light, dark (default: light)
   -l, --layout <layout>   Layout: side-by-side, stacked (default: side-by-side)
@@ -284,25 +289,6 @@ Options:
   --ignore-position       Ignore position changes (default: true)
   --no-ignore-position    Include position changes
 ```
-
-### Programmatic Usage
-
-```typescript
-import { generateDiff, diffFromGit } from "diagrams-diff-cli";
-
-// Generate diff from two JSON files
-const html = await generateDiff(beforeJSON, afterJSON, {
-  format: "html",
-  theme: "dark",
-});
-
-// Generate diff from git ref
-const html = await diffFromGit("HEAD", "diagram.json", {
-  format: "html",
-});
-```
-
-For manual integration, you can also export JSON at each revision and run `Diagram.renderDiff()`.
 
 ## Best Practices
 

@@ -774,6 +774,20 @@ export function computeDiff(
  * Uses Graphviz's emitted <title> elements to identify nodes and edges.
  * Highlights changed items using drop-shadow filters (like VisualEditor) instead of stroke modifications.
  */
+/**
+ * Decode common XML entities in SVG <title> content.
+ * Graphviz encodes special characters like >, <, &, - in titles.
+ */
+function decodeSvgTitle(title: string): string {
+  return title
+    .replace(/&gt;/g, ">")
+    .replace(/&lt;/g, "<")
+    .replace(/&amp;/g, "&")
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;/g, "'")
+    .replace(/&#45;/g, "-");
+}
+
 function injectDiffStyling(
   svg: string,
   elements: Map<string, NodeDiff | EdgeDiff>,
@@ -794,7 +808,8 @@ function injectDiffStyling(
   processed = processed.replace(
     nodeRegex,
     (match, beforeAttrs, afterAttrs, _beforeTitle, nodeId, _afterTitle) => {
-      const diff = elements.get(nodeId) as NodeDiff | undefined;
+      const decodedNodeId = decodeSvgTitle(nodeId);
+      const diff = elements.get(decodedNodeId) as NodeDiff | undefined;
       if (!diff) return match;
 
       let kind = diff.kind;
@@ -816,13 +831,10 @@ function injectDiffStyling(
           ? `filter: drop-shadow(0 0 4px ${color.border}) drop-shadow(0 0 4px ${color.border});`
           : "";
 
-      // Add data-diff-kind attribute for CSS targeting
-      const newAttrs = `${beforeAttrs}data-diff-kind="${kind}" ${afterAttrs}`;
-
-      // Apply subtle background fill and drop-shadow to the node group
+      // Replace the opening tag, preserving all attributes and avoiding duplication
       let modified = match.replace(
-        /<g([^>]*)class="node"/,
-        `<g${newAttrs}class="node" style="opacity:${opacity};${filterStyle}"`,
+        /<g\b([^>]*)class="node"([^>]*)>/,
+        `<g$1data-diff-kind="${kind}" $2class="node" style="opacity:${opacity};${filterStyle}">`,
       );
 
       // Add subtle fill to the shape (ellipse or polygon) without changing stroke
@@ -853,8 +865,12 @@ function injectDiffStyling(
   processed = processed.replace(
     edgeRegex,
     (match, beforeAttrs, afterAttrs, _beforeTitle, edgeTitle, _afterTitle) => {
-      // Edge titles are like "web->db[label]"
-      const diff = elements.get(edgeTitle) as EdgeDiff | undefined;
+      // Edge titles in SVG are like "web->db", but edge keys include the label suffix "[]"
+      const decodedEdgeTitle = decodeSvgTitle(edgeTitle);
+      let diff = elements.get(decodedEdgeTitle) as EdgeDiff | undefined;
+      if (!diff) {
+        diff = elements.get(`${decodedEdgeTitle}[]`) as EdgeDiff | undefined;
+      }
       if (!diff) return match;
 
       let kind = diff.kind;
@@ -874,11 +890,19 @@ function injectDiffStyling(
           ? `stroke:${color.border};stroke-width:2;filter: drop-shadow(0 0 2px ${color.border});`
           : "";
 
-      const newAttrs = `${beforeAttrs}data-diff-kind="${kind}" ${afterAttrs}`;
-      return match
-        .replace(/<g([^>]*)class="edge"/, `<g${newAttrs}class="edge" style="opacity:${opacity}"`)
-        .replace(/<path/g, `<path style="${strokeStyle}"`)
-        .replace(/<polygon/g, `<polygon style="fill:${color.border};stroke:${color.border}"`);
+      // Replace the opening tag, preserving all attributes and avoiding duplication
+      let modified = match.replace(
+        /<g\b([^>]*)class="edge"([^>]*)>/,
+        `<g$1data-diff-kind="${kind}" $2class="edge" style="opacity:${opacity}">`,
+      );
+
+      if (kind !== "unchanged") {
+        modified = modified
+          .replace(/<path/g, `<path style="${strokeStyle}"`)
+          .replace(/<polygon/g, `<polygon style="fill:${color.border};stroke:${color.border}"`);
+      }
+
+      return modified;
     },
   );
 
