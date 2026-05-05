@@ -207,7 +207,7 @@ diagrams diff show HEAD diagram.json -o diff.html
 diagrams diff show HEAD diagram.json --stdout
 
 # Compare branches
-diagrams diff show main...feature diagram.json -F html -o diff.html
+diagrams diff show main...feature diagram.json -f html -o diff.html
 
 # List changed files
 diagrams diff list HEAD

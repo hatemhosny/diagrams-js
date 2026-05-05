@@ -102,7 +102,7 @@ diagrams diff show HEAD diagram.ts -o diff.html
 diagrams diff show HEAD diagram.ts --stdout
 
 # Diff between branches
-diagrams diff show main...feature diagram.json -F html
+diagrams diff show main...feature diagram.json -f html
 
 # List changed files
 diagrams diff list HEAD

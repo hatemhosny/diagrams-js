@@ -219,7 +219,7 @@ diagrams diff show HEAD diagram.ts -o diff.html
 diagrams diff show HEAD diagram.ts --stdout
 
 # Diff between branches
-diagrams diff show main...feature diagram.json -F html
+diagrams diff show main...feature diagram.json -f html
 
 # List changed diagram files
 diagrams diff list main...feature
@@ -234,13 +234,13 @@ diagrams diff batch main...feature -o ./diffs
 | ----------------------------- | -------------------------------------------------- |
 | `-o, --output <path>`         | Output file path (default: `<filename>-diff.html`) |
 | `--stdout`                    | Output to stdout (in addition to `--output`)       |
-| `-F, --format <format>`       | Diff format: `html` or `svg` (default: html)       |
+| `-f, --format <format>`       | Diff format: `html` or `svg` (default: html)       |
 | `-t, --theme <theme>`         | Theme: `light` or `dark` (default: light)          |
 | `-l, --layout <layout>`       | Layout: `side-by-side` or `stacked`                |
 | `-u, --show-unchanged <mode>` | `show`, `dim`, or `hide`                           |
 | `--ignore-position`           | Ignore position changes (default: true)            |
 | `--ignore-metadata`           | Ignore metadata changes                            |
-| `-C, --directory <path>`      | Working directory for git commands                 |
+| `-D, --directory <path>`      | Working directory for git commands                 |
 
 ### `init`
 
