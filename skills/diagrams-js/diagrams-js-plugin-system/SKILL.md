@@ -9,22 +9,7 @@ library: diagrams-js
 
 # diagrams-js Plugin System
 
-The diagrams-js plugin system enables extending the library with custom:
-
-- **Importers**: Import from external formats (Docker Compose, Terraform, etc.)
-- **Exporters**: Export to external formats
-- **Metadata Providers**: Attach cloud provider metadata (pricing, specs) to nodes
-- **Hooks**: Execute custom code at lifecycle events
-
-## When to Use This Skill
-
-Use this skill when you need to:
-
-- Import diagrams from infrastructure-as-code files (Terraform, CloudFormation, etc.)
-- Export diagrams to deployment configurations
-- Attach cloud provider metadata (AWS pricing, Azure specs, etc.) to nodes
-- Extend diagrams-js functionality with custom formats or behaviors
-- Create integrations with CI/CD pipelines or documentation tools
+Extend diagrams-js with custom importers, exporters, metadata providers, and lifecycle hooks.
 
 ## Quick Start
 
@@ -431,50 +416,26 @@ await diagram.registerPlugins([[apiPlugin, { apiKey: "xxx", region: "us-west-2" 
 
 ## Common Patterns
 
-### Docker Compose Import
+### Importer with YAML
 
 ```typescript
-const dockerComposePlugin = () => ({
-  name: "docker-compose",
+const myImporter = () => ({
+  name: "my-format",
   version: "1.0.0",
   apiVersion: "1.0",
   runtimeSupport: { node: true, browser: true, deno: true, bun: true },
   capabilities: [
     {
       type: "importer",
-      name: "docker-compose",
+      name: "my-format",
       extensions: [".yml", ".yaml"],
-      canImport: async (source) => {
-        return source.includes("services:");
-      },
+      canImport: async (source) => source.includes("services:"),
       import: async (source, diagram, context) => {
-        // Use context.loadYaml() instead of bundling yaml parser
         const yaml = await context.loadYaml();
-        const compose = yaml.load(source);
-
-        // Access Node from context.lib
+        const data = yaml.load(source);
         const { Node } = context.lib;
-
-        const sources = Array.isArray(source) ? source : [source];
-
-        for (let i = 0; i < sources.length; i++) {
-          const compose = yaml.load(sources[i]);
-
-          // Multiple sources: each gets its own cluster
-          if (sources.length > 1) {
-            const cluster = diagram.cluster(compose.name || `compose-${i}`);
-
-            for (const [name, service] of Object.entries(compose.services)) {
-              const node = cluster.add(Node(name));
-              node.metadata = { image: service.image };
-            }
-          } else {
-            // Single source: add directly
-            for (const [name, service] of Object.entries(compose.services)) {
-              const node = diagram.add(Node(name));
-              node.metadata = { image: service.image };
-            }
-          }
+        for (const [name, service] of Object.entries(data.services)) {
+          diagram.add(Node(name)).metadata = { image: service.image };
         }
       },
     },
@@ -482,48 +443,24 @@ const dockerComposePlugin = () => ({
 });
 ```
 
-### Cloud Provider Metadata
+### Metadata Provider
 
 ```typescript
-const awsMetadataPlugin = (config) => ({
+const awsMetadataPlugin = () => ({
   name: "aws-metadata",
   version: "1.0.0",
   apiVersion: "1.0",
   runtimeSupport: { node: true, browser: true, deno: true, bun: true },
-  requiredConfig: ["apiKey"],
-  async initialize(cfg, context) {
-    // Validate API key
-    if (!cfg.apiKey) {
-      throw new Error("AWS API key is required");
-    }
-  },
   capabilities: [
     {
       type: "metadata",
       provider: "aws",
-      nodeTypes: ["EC2", "RDS", "Lambda", "S3"],
-      getMetadata: async (nodeType, nodeConfig, context) => {
-        // Fetch from AWS Pricing API
-        const pricing = await fetchAWSPricing(nodeType, nodeConfig);
-
-        return {
-          provider: "aws",
-          region: config.region || "us-east-1",
-          instanceType: nodeConfig.instanceType,
-          specifications: {
-            cpu: pricing.vcpu,
-            memory: pricing.memory,
-            storage: pricing.storage,
-          },
-          pricing: {
-            onDemand: pricing.onDemand,
-            reserved: pricing.reserved,
-            spot: pricing.spot,
-          },
-          availabilityZones: pricing.azs,
-          compliance: ["SOC2", "PCI-DSS"],
-        };
-      },
+      nodeTypes: ["EC2", "RDS", "Lambda"],
+      getMetadata: async (nodeType, config, context) => ({
+        provider: "aws",
+        pricing: { hourly: 0.192, monthly: 140.16 },
+        specifications: { cpu: 4, memory: "16GB" },
+      }),
     },
   ],
 });

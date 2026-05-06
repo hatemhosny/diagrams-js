@@ -9,17 +9,7 @@ library: diagrams-js
 
 # Kubernetes Plugin for diagrams-js
 
-The Kubernetes plugin enables bidirectional conversion between Kubernetes YAML manifests and architecture diagrams.
-
-## When to Use This Skill
-
-Use this skill when you need to:
-
-- Visualize Kubernetes configurations as architecture diagrams
-- Generate Kubernetes manifests from existing diagrams
-- Import multi-resource Kubernetes applications into diagrams
-- Export diagrams to Kubernetes deployment configurations
-- Document container orchestration setups
+Bidirectional conversion between Kubernetes YAML manifests and architecture diagrams.
 
 ## Quick Start
 
@@ -243,208 +233,45 @@ imageMappings: {
 
 ## Examples
 
-### Visualize a Microservices Architecture
+### Visualize a Manifest
 
 ```typescript
 import { Diagram } from "diagrams-js";
 import { kubernetesPlugin } from "@diagrams-js/plugin-kubernetes";
 
-const k8sYaml = `
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: frontend
-spec:
-  replicas: 3
-  selector:
-    matchLabels:
-      app: frontend
-  template:
-    spec:
-      containers:
-      - name: frontend
-        image: nginx:alpine
-        ports:
-        - containerPort: 80
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: frontend-service
-spec:
-  selector:
-    app: frontend
-  ports:
-  - port: 80
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: api
-spec:
-  replicas: 2
-  selector:
-    matchLabels:
-      app: api
-  template:
-    spec:
-      containers:
-      - name: api
-        image: node:18
-        ports:
-        - containerPort: 3000
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: api-service
-spec:
-  selector:
-    app: api
-  ports:
-  - port: 3000
----
-apiVersion: apps/v1
-kind: StatefulSet
-metadata:
-  name: postgres
-spec:
-  serviceName: postgres
-  replicas: 1
-  selector:
-    matchLabels:
-      app: postgres
-  template:
-    spec:
-      containers:
-      - name: postgres
-        image: postgres:15
-`;
-
 const diagram = Diagram("Production Architecture");
 await diagram.registerPlugins([kubernetesPlugin]);
 await diagram.import(k8sYaml, "kubernetes");
-
 const svg = await diagram.render();
 ```
 
-### Import Multiple Manifest Files
+### Import Multiple Manifests
 
 ```typescript
-const stagingManifest = `
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: web
-  namespace: staging
-spec:
-  replicas: 1
-  template:
-    spec:
-      containers:
-      - name: web
-        image: myapp:staging
-`;
-
-const productionManifest = `
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: web
-  namespace: production
-spec:
-  replicas: 5
-  template:
-    spec:
-      containers:
-      - name: web
-        image: myapp:latest
-`;
-
 const diagram = Diagram("Environment Comparison");
 await diagram.registerPlugins([kubernetesPlugin]);
-
-// Each manifest gets its own cluster
 await diagram.import([stagingManifest, productionManifest], "kubernetes");
 ```
 
-### Export with Custom Metadata
+### Export with Metadata
 
 ```typescript
-import { Diagram, Node } from "diagrams-js";
-import { kubernetesPlugin } from "@diagrams-js/plugin-kubernetes";
-
-const diagram = Diagram("Production Stack");
-
 const deployment = diagram.add(Node("api"));
 deployment.metadata = {
   kubernetes: {
     kind: "Deployment",
     namespace: "production",
-    labels: {
-      app: "api",
-      tier: "backend",
-      env: "production",
-    },
-    spec: {
-      replicas: 5,
-      selector: { matchLabels: { app: "api" } },
-      template: {
-        spec: {
-          containers: [
-            {
-              name: "api",
-              image: "myapp:latest",
-              resources: {
-                limits: { cpu: "1000m", memory: "512Mi" },
-                requests: { cpu: "200m", memory: "256Mi" },
-              },
-            },
-          ],
-        },
-      },
-    },
+    spec: { replicas: 5, selector: { matchLabels: { app: "api" } } },
   },
 };
-
-await diagram.registerPlugins([kubernetesPlugin]);
 const k8sYaml = await diagram.export("kubernetes");
 ```
 
-### Round-trip Conversion
+### Round-trip
 
 ```typescript
-const diagram = Diagram("Modified Stack");
-await diagram.registerPlugins([kubernetesPlugin]);
-
-// Import existing manifest
 await diagram.import(existingK8sYaml, "kubernetes");
-
-// Add a new resource
-const monitoring = diagram.add(Node("prometheus"));
-monitoring.metadata = {
-  kubernetes: {
-    kind: "Deployment",
-    namespace: "monitoring",
-    spec: {
-      replicas: 1,
-      selector: { matchLabels: { app: "prometheus" } },
-      template: {
-        spec: {
-          containers: [
-            {
-              name: "prometheus",
-              image: "prom/prometheus:latest",
-              ports: [{ containerPort: 9090 }],
-            },
-          ],
-        },
-      },
-    },
-  },
-};
-
-// Export modified configuration
+// ... modify diagram ...
 const updatedYaml = await diagram.export("kubernetes");
 ```
 
@@ -452,222 +279,53 @@ const updatedYaml = await diagram.export("kubernetes");
 
 ### `kubernetesPlugin`
 
-Pre-created Kubernetes plugin instance (no configuration needed).
+Pre-created instance:
 
 ```typescript
 import { kubernetesPlugin } from "@diagrams-js/plugin-kubernetes";
-
-// ✅ Use the pre-created instance
 await diagram.registerPlugins([kubernetesPlugin]);
 ```
 
-The plugin provides:
-
-- **Importer**: `name: "kubernetes"`, supports `.yml` and `.yaml` files
-- **Exporter**: `name: "kubernetes"`, exports to `.yaml` format
+Provides importer (`name: "kubernetes"`, `.yml`/`.yaml`) and exporter (`name: "kubernetes"`, `.yaml`).
 
 ### `createKubernetesPlugin(config?)`
 
-Factory function for creating a Kubernetes plugin with custom configuration.
-
-```typescript
-import { createKubernetesPlugin } from "@diagrams-js/plugin-kubernetes";
-
-// ✅ Create plugin with custom configuration
-const customPlugin = createKubernetesPlugin({
-  defaultNamespace: "production",
-  imageMappings: {
-    "custom-app": { iconify: "logos:kubernetes" },
-  },
-});
-
-await diagram.registerPlugins([customPlugin]);
-```
-
-**Parameters:**
-
-- `config` (optional): `KubernetesPluginConfig`
-  - `defaultNamespace`: Default namespace for exports (default: "default")
-  - `imageMappings`: Custom resource to icon mappings
-
-**Returns:** `DiagramsPlugin` - The plugin instance
-
-### Exported Types
-
-The plugin exports the `ImageMappings` type for TypeScript users:
+Factory for custom configuration:
 
 ```typescript
 import { createKubernetesPlugin, type ImageMappings } from "@diagrams-js/plugin-kubernetes";
 
-// Type your image mappings for better IDE support
-const mappings: ImageMappings = {
-  "my-deployment": { provider: "k8s", type: "compute", resource: "Deploy" },
-  "my-app": { iconify: "logos:kubernetes" },
-  "custom-resource": "https://example.com/icon.svg",
-};
+const plugin = createKubernetesPlugin({
+  defaultNamespace: "production",
+  imageMappings: {
+    "custom-app": { iconify: "logos:kubernetes" },
+    "my-deployment": { provider: "k8s", type: "compute", resource: "Deploy" },
+  },
+});
 
-const plugin = createKubernetesPlugin({ imageMappings: mappings });
+await diagram.registerPlugins([plugin]);
 ```
 
-## Runtime Support
-
-- Node.js ✅
-- Browser ✅
-- Deno ✅
-- Bun ✅
+Config: `defaultNamespace` (default: "default"), `imageMappings`.
 
 ## Best Practices
 
-### 1. Use Descriptive Resource Names
-
-Resource names become node labels:
-
-```yaml
-# ✅ Good
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: user-service
-
-# ❌ Avoid
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: svc1
-```
-
-### 2. Store Metadata for Round-trip
-
-When creating nodes programmatically, store Kubernetes metadata:
-
-```typescript
-const node = diagram.add(Node("my-deployment"));
-node.metadata = {
-  kubernetes: {
-    kind: "Deployment",
-    namespace: "default",
-    spec: {
-      replicas: 3,
-      selector: { matchLabels: { app: "my-app" } },
-    },
-  },
-};
-```
-
-### 3. Handle Service Selectors
-
-The plugin automatically creates edges when Service selectors match Deployment labels:
-
-```yaml
-# Deployment labels
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: web
-  labels:
-    app: web
-
-# Service selector matches
-apiVersion: v1
-kind: Service
-metadata:
-  name: web-service
-spec:
-  selector:
-    app: web  # Creates edge from service to deployment
-```
-
-### 4. Use Namespaces
-
-Organize resources with namespaces for better visualization:
-
-```yaml
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: api
-  namespace: production
-
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: api
-  namespace: staging
-```
-
-### 5. Multi-document YAML
-
-Use `---` separator for multiple resources:
-
-```yaml
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: web
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: web-service
-```
+- **Use descriptive resource names** — `name: user-service` not `svc1`
+- **Store metadata for round-trip** — Keep `kind`, `namespace`, `spec` in `node.metadata.kubernetes`
+- **Service selectors create edges** — Service→Deployment edges are auto-created when selectors match labels
+- **Use namespaces** — Organize resources; each namespace becomes a cluster
+- **Multi-document YAML** — Separate resources with `---`
 
 ## Troubleshooting
 
-### Plugin Not Found
-
-```typescript
-// Make sure to register the plugin before using import/export
-import { kubernetesPlugin } from "@diagrams-js/plugin-kubernetes";
-
-await diagram.registerPlugins([kubernetesPlugin]);
-```
-
-### Type Errors
-
-The metadata property is typed as `Record<string, any>`:
-
-```typescript
-node.metadata = {
-  kubernetes: { ... }
-};
-```
-
-### Missing Icons
-
-For custom resources or specific icons:
-
-```typescript
-const plugin = createKubernetesPlugin({
-  imageMappings: {
-    // Option 1: Use a provider icon
-    "my-deployment": { provider: "k8s", type: "compute", resource: "Deploy" },
-
-    // Option 2: Use a custom image URL
-    "my-app": "https://example.com/icon.svg",
-
-    // Option 3: Use Iconify
-    "custom-app": { iconify: "logos:kubernetes" },
-  },
-});
-```
-
-### Import Fails
-
-Ensure your Kubernetes YAML is valid:
-
-```typescript
-try {
-  await diagram.import(k8sYaml, "kubernetes");
-} catch (error) {
-  console.error("Import failed:", error.message);
-}
-```
-
-Required fields: `apiVersion`, `kind`, `metadata.name`
+- **Plugin not found** — Register before import/export: `await diagram.registerPlugins([kubernetesPlugin])`
+- **Metadata typing** — `node.metadata` is `Record<string, any>`
+- **Missing icons** — Use `imageMappings` with provider, URL, or Iconify
+- **Import fails** — Ensure `apiVersion`, `kind`, `metadata.name` are present
 
 ## Further Reading
 
-- diagrams-js Plugin System: See plugin system documentation
+- diagrams-js Plugin System: See `diagrams-js-plugin-system` skill
 - diagrams-js Documentation: https://diagrams-js.hatemhosny.dev
 - Kubernetes Documentation: https://kubernetes.io/docs/
 - Iconify Icons: https://iconify.design/

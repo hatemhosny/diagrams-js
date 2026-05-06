@@ -27,7 +27,6 @@ const sidebars: SidebarsConfig = {
         "guides/json",
         "guides/diagram-diff",
         "guides/cli",
-        "guides/github-action",
         "guides/migration",
       ],
     },
