@@ -102,6 +102,9 @@ jobs:
           # Build providers
           vp run build:providers
 
+          # remove python repo
+          rm -rf ./diagrams-py
+
       - name: Run tests
         if: steps.compare.outputs.has_changes == 'true'
         run: vp run test
