@@ -29,6 +29,7 @@ import route_tableIcon from "../../../resources/aws/network/route-table.png";
 import site_to_site_vpnIcon from "../../../resources/aws/network/site-to-site-vpn.png";
 import transit_gateway_attachmentIcon from "../../../resources/aws/network/transit-gateway-attachment.png";
 import transit_gatewayIcon from "../../../resources/aws/network/transit-gateway.png";
+import verified_accessIcon from "../../../resources/aws/network/verified-access.png";
 import vpc_customer_gatewayIcon from "../../../resources/aws/network/vpc-customer-gateway.png";
 import vpc_elastic_network_adapterIcon from "../../../resources/aws/network/vpc-elastic-network-adapter.png";
 import vpc_elastic_network_interfaceIcon from "../../../resources/aws/network/vpc-elastic-network-interface.png";
@@ -256,6 +257,13 @@ export function TransitGateway(label?: string, options?: Record<string, unknown>
   const node = _Network(label ?? "TransitGateway", options);
   (node as unknown as Record<string, unknown>)["~resource"] = "TransitGateway";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = transit_gatewayIcon;
+  return node;
+}
+
+export function VerifiedAccess(label?: string, options?: Record<string, unknown>) {
+  const node = _Network(label ?? "VerifiedAccess", options);
+  (node as unknown as Record<string, unknown>)["~resource"] = "VerifiedAccess";
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = verified_accessIcon;
   return node;
 }
 
