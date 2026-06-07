@@ -1,3 +1,26 @@
+## [0.8.0] - 2026-06-07
+
+### Features
+
+- No new features
+
+### Bug Fixes
+
+- fix (20d3c10)
+- fix sync resources (b50154b)
+- fix pnpm (40ebb16)
+
+### Other Changes
+
+- chore: sync resources from Python diagrams repo (22746da)
+- build node docs (ed36287)
+- clean up sync resources (5265339)
+- pnpm approve-builds (ce5a7c8)
+- docs: upgrade livecodes (77b61d6)
+- add diagram diff example in playground (a2ca89d)
+- update docs (11a984b)
+- update docs (d191ca1)
+
 ## [0.7.1] - 2026-05-04
 
 ### Features
