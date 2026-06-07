@@ -35,82 +35,24 @@ jobs:
       - name: Compare resources
         id: compare
         run: |
-          # Create a temporary script to compare resources
-          cat > /tmp/compare_resources.py << 'PYTHON_SCRIPT'
-          import os
-          import json
-          import sys
-          from pathlib import Path
-
-          def get_resource_files(resources_dir):
-              """Get all resource files recursively with relative paths"""
-              files = {}
-              resources_path = Path(resources_dir)
-              if resources_path.exists():
-                  for file in resources_path.rglob('*'):
-                      if file.is_file():
-                          rel_path = file.relative_to(resources_path)
-                          files[str(rel_path)] = file.stat().st_size
-              return files
-
-          def main():
-              js_resources = Path('./resources')
-              py_resources = Path('./diagrams-py/resources')
-
-              if not py_resources.exists():
-                  print("Python resources directory not found")
-                  sys.exit(0)
-
-              js_files = get_resource_files(js_resources)
-              py_files = get_resource_files(py_resources)
-
-              new_files = []
-              updated_files = []
-
-              for rel_path, size in py_files.items():
-                  if rel_path not in js_files:
-                      new_files.append(str(rel_path))
-                  elif js_files[rel_path] != size:
-                      updated_files.append(str(rel_path))
-
-              result = {
-                  'has_changes': len(new_files) > 0 or len(updated_files) > 0,
-                  'new_files': new_files,
-                  'updated_files': updated_files,
-                  'new_count': len(new_files),
-                  'updated_count': len(updated_files)
-              }
-
-              print(json.dumps(result, indent=2))
-
-              # Save to file for later steps
-              with open('/tmp/sync_result.json', 'w') as f:
-                  json.dump(result, f, indent=2)
-
-              return result['has_changes']
-
-          if __name__ == '__main__':
-              has_changes = main()
-              sys.exit(0 if not has_changes else 1)
-          PYTHON_SCRIPT
-
-          python3 /tmp/compare_resources.py
+          set +e
+          node scripts/compare-resources.mjs --output /tmp/sync_result.json
           echo "HAS_CHANGES=$?" >> $GITHUB_ENV
+          set -e
 
-          # Check if the Python script found changes
           if [ -f /tmp/sync_result.json ]; then
-            HAS_CHANGES=$(python3 -c "import json; print(json.load(open('/tmp/sync_result.json'))['has_changes'])")
+            HAS_CHANGES=$(node -e "console.log(JSON.parse(require('fs').readFileSync('/tmp/sync_result.json', 'utf8')).has_changes)")
             echo "has_changes=$HAS_CHANGES" >> $GITHUB_OUTPUT
 
             # Store the counts and file lists
-            NEW_COUNT=$(python3 -c "import json; print(json.load(open('/tmp/sync_result.json'))['new_count'])")
-            UPDATED_COUNT=$(python3 -c "import json; print(json.load(open('/tmp/sync_result.json'))['updated_count'])")
+            NEW_COUNT=$(node -e "console.log(JSON.parse(require('fs').readFileSync('/tmp/sync_result.json', 'utf8')).new_count)")
+            UPDATED_COUNT=$(node -e "console.log(JSON.parse(require('fs').readFileSync('/tmp/sync_result.json', 'utf8')).updated_count)")
             echo "new_count=$NEW_COUNT" >> $GITHUB_OUTPUT
             echo "updated_count=$UPDATED_COUNT" >> $GITHUB_OUTPUT
 
             # Store file lists as multiline strings
-            NEW_FILES=$(python3 -c "import json; data=json.load(open('/tmp/sync_result.json')); print('\\n'.join(data['new_files']))")
-            UPDATED_FILES=$(python3 -c "import json; data=json.load(open('/tmp/sync_result.json')); print('\\n'.join(data['updated_files']))")
+            NEW_FILES=$(node -e "const data = JSON.parse(require('fs').readFileSync('/tmp/sync_result.json', 'utf8')); console.log(data.new_files.join('\n'))")
+            UPDATED_FILES=$(node -e "const data = JSON.parse(require('fs').readFileSync('/tmp/sync_result.json', 'utf8')); console.log(data.updated_files.join('\n'))")
 
             echo "new_files<<EOF" >> $GITHUB_OUTPUT
             echo "$NEW_FILES" >> $GITHUB_OUTPUT
