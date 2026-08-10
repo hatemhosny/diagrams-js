@@ -1,4 +1,5 @@
 import { _Azure } from "./index.js";
+import azure_monitor_pipelineIcon from "../../../resources/azure/hybridmulticloud/azure-monitor-pipeline.png";
 import azure_operator_5g_coreIcon from "../../../resources/azure/hybridmulticloud/azure-operator-5g-core.png";
 import azure_operator_insightsIcon from "../../../resources/azure/hybridmulticloud/azure-operator-insights.png";
 import azure_operator_nexusIcon from "../../../resources/azure/hybridmulticloud/azure-operator-nexus.png";
@@ -8,6 +9,13 @@ import azure_programmable_connectivityIcon from "../../../resources/azure/hybrid
 function _Hybridmulticloud(label?: string, options?: Record<string, unknown>) {
   const node = _Azure(label, options);
   (node as unknown as Record<string, unknown>)["~type"] = "hybridmulticloud";
+  return node;
+}
+
+export function AzureMonitorPipeline(label?: string, options?: Record<string, unknown>) {
+  const node = _Hybridmulticloud(label ?? "AzureMonitorPipeline", options);
+  (node as unknown as Record<string, unknown>)["~resource"] = "AzureMonitorPipeline";
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = azure_monitor_pipelineIcon;
   return node;
 }
 

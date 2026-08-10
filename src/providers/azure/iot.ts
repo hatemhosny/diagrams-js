@@ -3,6 +3,7 @@ import azure_cosmos_dbIcon from "../../../resources/azure/iot/azure-cosmos-db.pn
 import azure_databox_gatewayIcon from "../../../resources/azure/iot/azure-databox-gateway.png";
 import azure_iot_operationsIcon from "../../../resources/azure/iot/azure-iot-operations.png";
 import azure_maps_accountsIcon from "../../../resources/azure/iot/azure-maps-accounts.png";
+import azure_stack_hci_sizerIcon from "../../../resources/azure/iot/azure-stack-hci-sizer.png";
 import azure_stackIcon from "../../../resources/azure/iot/azure-stack.png";
 import device_provisioning_servicesIcon from "../../../resources/azure/iot/device-provisioning-services.png";
 import digital_twinsIcon from "../../../resources/azure/iot/digital-twins.png";
@@ -64,6 +65,13 @@ export function AzureMapsAccounts(label?: string, options?: Record<string, unkno
   const node = _Iot(label ?? "AzureMapsAccounts", options);
   (node as unknown as Record<string, unknown>)["~resource"] = "AzureMapsAccounts";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = azure_maps_accountsIcon;
+  return node;
+}
+
+export function AzureStackHciSizer(label?: string, options?: Record<string, unknown>) {
+  const node = _Iot(label ?? "AzureStackHciSizer", options);
+  (node as unknown as Record<string, unknown>)["~resource"] = "AzureStackHciSizer";
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = azure_stack_hci_sizerIcon;
   return node;
 }
 

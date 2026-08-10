@@ -20,6 +20,7 @@ import codeguruIcon from "../../../resources/aws/management/codeguru.png";
 import command_line_interfaceIcon from "../../../resources/aws/management/command-line-interface.png";
 import configIcon from "../../../resources/aws/management/config.png";
 import control_towerIcon from "../../../resources/aws/management/control-tower.png";
+import devops_agentIcon from "../../../resources/aws/management/devops-agent.png";
 import license_managerIcon from "../../../resources/aws/management/license-manager.png";
 import managed_servicesIcon from "../../../resources/aws/management/managed-services.png";
 import management_and_governanceIcon from "../../../resources/aws/management/management-and-governance.png";
@@ -213,6 +214,13 @@ export function ControlTower(label?: string, options?: Record<string, unknown>) 
   const node = _Management(label ?? "ControlTower", options);
   (node as unknown as Record<string, unknown>)["~resource"] = "ControlTower";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = control_towerIcon;
+  return node;
+}
+
+export function DevopsAgent(label?: string, options?: Record<string, unknown>) {
+  const node = _Management(label ?? "DevopsAgent", options);
+  (node as unknown as Record<string, unknown>)["~resource"] = "DevopsAgent";
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = devops_agentIcon;
   return node;
 }
 

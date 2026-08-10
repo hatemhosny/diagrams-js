@@ -9,6 +9,7 @@ import device_security_googleIcon from "../../../resources/azure/intune/device-s
 import device_security_windowsIcon from "../../../resources/azure/intune/device-security-windows.png";
 import devicesIcon from "../../../resources/azure/intune/devices.png";
 import ebooksIcon from "../../../resources/azure/intune/ebooks.png";
+import entra_identity_roles_and_administratorsIcon from "../../../resources/azure/intune/entra-identity-roles-and-administrators.png";
 import exchange_accessIcon from "../../../resources/azure/intune/exchange-access.png";
 import intune_app_protectionIcon from "../../../resources/azure/intune/intune-app-protection.png";
 import intune_for_educationIcon from "../../../resources/azure/intune/intune-for-education.png";
@@ -92,6 +93,17 @@ export function Ebooks(label?: string, options?: Record<string, unknown>) {
   const node = _Intune(label ?? "Ebooks", options);
   (node as unknown as Record<string, unknown>)["~resource"] = "Ebooks";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = ebooksIcon;
+  return node;
+}
+
+export function EntraIdentityRolesAndAdministrators(
+  label?: string,
+  options?: Record<string, unknown>,
+) {
+  const node = _Intune(label ?? "EntraIdentityRolesAndAdministrators", options);
+  (node as unknown as Record<string, unknown>)["~resource"] = "EntraIdentityRolesAndAdministrators";
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] =
+    entra_identity_roles_and_administratorsIcon;
   return node;
 }
 

@@ -15,11 +15,13 @@ import data_share_invitationsIcon from "../../../resources/azure/storage/data-sh
 import data_sharesIcon from "../../../resources/azure/storage/data-shares.png";
 import general_storageIcon from "../../../resources/azure/storage/general-storage.png";
 import import_export_jobsIcon from "../../../resources/azure/storage/import-export-jobs.png";
+import managed_file_sharesIcon from "../../../resources/azure/storage/managed-file-shares.png";
 import netapp_filesIcon from "../../../resources/azure/storage/netapp-files.png";
 import queues_storageIcon from "../../../resources/azure/storage/queues-storage.png";
 import recovery_services_vaultsIcon from "../../../resources/azure/storage/recovery-services-vaults.png";
 import storage_accounts_classicIcon from "../../../resources/azure/storage/storage-accounts-classic.png";
 import storage_accountsIcon from "../../../resources/azure/storage/storage-accounts.png";
+import storage_actionsIcon from "../../../resources/azure/storage/storage-actions.png";
 import storage_explorerIcon from "../../../resources/azure/storage/storage-explorer.png";
 import storage_sync_servicesIcon from "../../../resources/azure/storage/storage-sync-services.png";
 import storsimple_data_managersIcon from "../../../resources/azure/storage/storsimple-data-managers.png";
@@ -144,6 +146,13 @@ export function ImportExportJobs(label?: string, options?: Record<string, unknow
   return node;
 }
 
+export function ManagedFileShares(label?: string, options?: Record<string, unknown>) {
+  const node = _Storage(label ?? "ManagedFileShares", options);
+  (node as unknown as Record<string, unknown>)["~resource"] = "ManagedFileShares";
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = managed_file_sharesIcon;
+  return node;
+}
+
 export function NetappFiles(label?: string, options?: Record<string, unknown>) {
   const node = _Storage(label ?? "NetappFiles", options);
   (node as unknown as Record<string, unknown>)["~resource"] = "NetappFiles";
@@ -176,6 +185,13 @@ export function StorageAccounts(label?: string, options?: Record<string, unknown
   const node = _Storage(label ?? "StorageAccounts", options);
   (node as unknown as Record<string, unknown>)["~resource"] = "StorageAccounts";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = storage_accountsIcon;
+  return node;
+}
+
+export function StorageActions(label?: string, options?: Record<string, unknown>) {
+  const node = _Storage(label ?? "StorageActions", options);
+  (node as unknown as Record<string, unknown>)["~resource"] = "StorageActions";
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = storage_actionsIcon;
   return node;
 }
 

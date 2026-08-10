@@ -2,6 +2,7 @@ import { _Aws } from "./index.js";
 import app_runnerIcon from "../../../resources/aws/compute/app-runner.png";
 import application_auto_scalingIcon from "../../../resources/aws/compute/application-auto-scaling.png";
 import batchIcon from "../../../resources/aws/compute/batch.png";
+import bottlerocketIcon from "../../../resources/aws/compute/bottlerocket.png";
 import compute_optimizerIcon from "../../../resources/aws/compute/compute-optimizer.png";
 import computeIcon from "../../../resources/aws/compute/compute.png";
 import ec2_amiIcon from "../../../resources/aws/compute/ec2-ami.png";
@@ -66,6 +67,13 @@ export function Batch(label?: string, options?: Record<string, unknown>) {
   const node = _Compute(label ?? "Batch", options);
   (node as unknown as Record<string, unknown>)["~resource"] = "Batch";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = batchIcon;
+  return node;
+}
+
+export function Bottlerocket(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "Bottlerocket", options);
+  (node as unknown as Record<string, unknown>)["~resource"] = "Bottlerocket";
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = bottlerocketIcon;
   return node;
 }
 

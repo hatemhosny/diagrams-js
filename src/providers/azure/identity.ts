@@ -21,10 +21,18 @@ import azure_information_protectionIcon from "../../../resources/azure/identity/
 import conditional_accessIcon from "../../../resources/azure/identity/conditional-access.png";
 import custom_azure_ad_rolesIcon from "../../../resources/azure/identity/custom-azure-ad-roles.png";
 import enterprise_applicationsIcon from "../../../resources/azure/identity/enterprise-applications.png";
+import entra_connect_healthIcon from "../../../resources/azure/identity/entra-connect-health.png";
+import entra_connect_syncIcon from "../../../resources/azure/identity/entra-connect-sync.png";
 import entra_connectIcon from "../../../resources/azure/identity/entra-connect.png";
 import entra_domain_servicesIcon from "../../../resources/azure/identity/entra-domain-services.png";
+import entra_global_secure_accessIcon from "../../../resources/azure/identity/entra-global-secure-access.png";
 import entra_id_protectionIcon from "../../../resources/azure/identity/entra-id-protection.png";
+import entra_identity_custom_rolesIcon from "../../../resources/azure/identity/entra-identity-custom-roles.png";
+import entra_identity_licensesIcon from "../../../resources/azure/identity/entra-identity-licenses.png";
+import entra_identity_roles_and_administratorsIcon from "../../../resources/azure/identity/entra-identity-roles-and-administrators.png";
+import entra_internet_accessIcon from "../../../resources/azure/identity/entra-internet-access.png";
 import entra_managed_identitiesIcon from "../../../resources/azure/identity/entra-managed-identities.png";
+import entra_private_accessIcon from "../../../resources/azure/identity/entra-private-access.png";
 import entra_privleged_identity_managementIcon from "../../../resources/azure/identity/entra-privleged-identity-management.png";
 import entra_verified_idIcon from "../../../resources/azure/identity/entra-verified-id.png";
 import external_identitiesIcon from "../../../resources/azure/identity/external-identities.png";
@@ -34,12 +42,14 @@ import identity_governanceIcon from "../../../resources/azure/identity/identity-
 import information_protectionIcon from "../../../resources/azure/identity/information-protection.png";
 import internet_accessIcon from "../../../resources/azure/identity/internet-access.png";
 import managed_identitiesIcon from "../../../resources/azure/identity/managed-identities.png";
+import multi_factor_authenticationIcon from "../../../resources/azure/identity/multi-factor-authentication.png";
 import private_accessIcon from "../../../resources/azure/identity/private-access.png";
 import securityIcon from "../../../resources/azure/identity/security.png";
 import tenant_propertiesIcon from "../../../resources/azure/identity/tenant-properties.png";
 import user_settingsIcon from "../../../resources/azure/identity/user-settings.png";
 import usersIcon from "../../../resources/azure/identity/users.png";
 import verifiable_credentialsIcon from "../../../resources/azure/identity/verifiable-credentials.png";
+import verification_as_a_serviceIcon from "../../../resources/azure/identity/verification-as-a-service.png";
 
 function _Identity(label?: string, options?: Record<string, unknown>) {
   const node = _Azure(label, options);
@@ -212,6 +222,20 @@ export function EnterpriseApplications(label?: string, options?: Record<string, 
   return node;
 }
 
+export function EntraConnectHealth(label?: string, options?: Record<string, unknown>) {
+  const node = _Identity(label ?? "EntraConnectHealth", options);
+  (node as unknown as Record<string, unknown>)["~resource"] = "EntraConnectHealth";
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = entra_connect_healthIcon;
+  return node;
+}
+
+export function EntraConnectSync(label?: string, options?: Record<string, unknown>) {
+  const node = _Identity(label ?? "EntraConnectSync", options);
+  (node as unknown as Record<string, unknown>)["~resource"] = "EntraConnectSync";
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = entra_connect_syncIcon;
+  return node;
+}
+
 export function EntraConnect(label?: string, options?: Record<string, unknown>) {
   const node = _Identity(label ?? "EntraConnect", options);
   (node as unknown as Record<string, unknown>)["~resource"] = "EntraConnect";
@@ -226,6 +250,13 @@ export function EntraDomainServices(label?: string, options?: Record<string, unk
   return node;
 }
 
+export function EntraGlobalSecureAccess(label?: string, options?: Record<string, unknown>) {
+  const node = _Identity(label ?? "EntraGlobalSecureAccess", options);
+  (node as unknown as Record<string, unknown>)["~resource"] = "EntraGlobalSecureAccess";
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = entra_global_secure_accessIcon;
+  return node;
+}
+
 export function EntraIDProtection(label?: string, options?: Record<string, unknown>) {
   const node = _Identity(label ?? "EntraIDProtection", options);
   (node as unknown as Record<string, unknown>)["~resource"] = "EntraIDProtection";
@@ -233,10 +264,49 @@ export function EntraIDProtection(label?: string, options?: Record<string, unkno
   return node;
 }
 
+export function EntraIdentityCustomRoles(label?: string, options?: Record<string, unknown>) {
+  const node = _Identity(label ?? "EntraIdentityCustomRoles", options);
+  (node as unknown as Record<string, unknown>)["~resource"] = "EntraIdentityCustomRoles";
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = entra_identity_custom_rolesIcon;
+  return node;
+}
+
+export function EntraIdentityLicenses(label?: string, options?: Record<string, unknown>) {
+  const node = _Identity(label ?? "EntraIdentityLicenses", options);
+  (node as unknown as Record<string, unknown>)["~resource"] = "EntraIdentityLicenses";
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = entra_identity_licensesIcon;
+  return node;
+}
+
+export function EntraIdentityRolesAndAdministrators(
+  label?: string,
+  options?: Record<string, unknown>,
+) {
+  const node = _Identity(label ?? "EntraIdentityRolesAndAdministrators", options);
+  (node as unknown as Record<string, unknown>)["~resource"] = "EntraIdentityRolesAndAdministrators";
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] =
+    entra_identity_roles_and_administratorsIcon;
+  return node;
+}
+
+export function EntraInternetAccess(label?: string, options?: Record<string, unknown>) {
+  const node = _Identity(label ?? "EntraInternetAccess", options);
+  (node as unknown as Record<string, unknown>)["~resource"] = "EntraInternetAccess";
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = entra_internet_accessIcon;
+  return node;
+}
+
 export function EntraManagedIdentities(label?: string, options?: Record<string, unknown>) {
   const node = _Identity(label ?? "EntraManagedIdentities", options);
   (node as unknown as Record<string, unknown>)["~resource"] = "EntraManagedIdentities";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = entra_managed_identitiesIcon;
+  return node;
+}
+
+export function EntraPrivateAccess(label?: string, options?: Record<string, unknown>) {
+  const node = _Identity(label ?? "EntraPrivateAccess", options);
+  (node as unknown as Record<string, unknown>)["~resource"] = "EntraPrivateAccess";
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = entra_private_accessIcon;
   return node;
 }
 
@@ -307,6 +377,13 @@ export function ManagedIdentities(label?: string, options?: Record<string, unkno
   return node;
 }
 
+export function MultiFactorAuthentication(label?: string, options?: Record<string, unknown>) {
+  const node = _Identity(label ?? "MultiFactorAuthentication", options);
+  (node as unknown as Record<string, unknown>)["~resource"] = "MultiFactorAuthentication";
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = multi_factor_authenticationIcon;
+  return node;
+}
+
 export function PrivateAccess(label?: string, options?: Record<string, unknown>) {
   const node = _Identity(label ?? "PrivateAccess", options);
   (node as unknown as Record<string, unknown>)["~resource"] = "PrivateAccess";
@@ -346,5 +423,12 @@ export function VerifiableCredentials(label?: string, options?: Record<string, u
   const node = _Identity(label ?? "VerifiableCredentials", options);
   (node as unknown as Record<string, unknown>)["~resource"] = "VerifiableCredentials";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = verifiable_credentialsIcon;
+  return node;
+}
+
+export function VerificationAsAService(label?: string, options?: Record<string, unknown>) {
+  const node = _Identity(label ?? "VerificationAsAService", options);
+  (node as unknown as Record<string, unknown>)["~resource"] = "VerificationAsAService";
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = verification_as_a_serviceIcon;
   return node;
 }

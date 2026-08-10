@@ -13,6 +13,7 @@ import cognitive_services_decisionsIcon from "../../../resources/azure/aimachine
 import cognitive_servicesIcon from "../../../resources/azure/aimachinelearning/cognitive-services.png";
 import computer_visionIcon from "../../../resources/azure/aimachinelearning/computer-vision.png";
 import content_moderatorsIcon from "../../../resources/azure/aimachinelearning/content-moderators.png";
+import content_safetyIcon from "../../../resources/azure/aimachinelearning/content-safety.png";
 import custom_visionIcon from "../../../resources/azure/aimachinelearning/custom-vision.png";
 import face_apisIcon from "../../../resources/azure/aimachinelearning/face-apis.png";
 import form_recognizersIcon from "../../../resources/azure/aimachinelearning/form-recognizers.png";
@@ -133,6 +134,13 @@ export function ContentModerators(label?: string, options?: Record<string, unkno
   const node = _Aimachinelearning(label ?? "ContentModerators", options);
   (node as unknown as Record<string, unknown>)["~resource"] = "ContentModerators";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = content_moderatorsIcon;
+  return node;
+}
+
+export function ContentSafety(label?: string, options?: Record<string, unknown>) {
+  const node = _Aimachinelearning(label ?? "ContentSafety", options);
+  (node as unknown as Record<string, unknown>)["~resource"] = "ContentSafety";
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = content_safetyIcon;
   return node;
 }
 
