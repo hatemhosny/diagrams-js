@@ -14,9 +14,11 @@ import devtest_labsIcon from "../../../resources/azure/devops/devtest-labs.png";
 import lab_accountsIcon from "../../../resources/azure/devops/lab-accounts.png";
 import lab_servicesIcon from "../../../resources/azure/devops/lab-services.png";
 import load_testingIcon from "../../../resources/azure/devops/load-testing.png";
+import managed_devops_poolsIcon from "../../../resources/azure/devops/managed-devops-pools.png";
 import pipelinesIcon from "../../../resources/azure/devops/pipelines.png";
 import reposIcon from "../../../resources/azure/devops/repos.png";
 import test_plansIcon from "../../../resources/azure/devops/test-plans.png";
+import workspace_gatewayIcon from "../../../resources/azure/devops/workspace-gateway.png";
 
 function _Devops(label?: string, options?: Record<string, unknown>) {
   const node = _Azure(label, options);
@@ -129,6 +131,13 @@ export function LoadTesting(label?: string, options?: Record<string, unknown>) {
   return node;
 }
 
+export function ManagedDevopsPools(label?: string, options?: Record<string, unknown>) {
+  const node = _Devops(label ?? "ManagedDevopsPools", options);
+  (node as unknown as Record<string, unknown>)["~resource"] = "ManagedDevopsPools";
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = managed_devops_poolsIcon;
+  return node;
+}
+
 export function Pipelines(label?: string, options?: Record<string, unknown>) {
   const node = _Devops(label ?? "Pipelines", options);
   (node as unknown as Record<string, unknown>)["~resource"] = "Pipelines";
@@ -147,5 +156,12 @@ export function TestPlans(label?: string, options?: Record<string, unknown>) {
   const node = _Devops(label ?? "TestPlans", options);
   (node as unknown as Record<string, unknown>)["~resource"] = "TestPlans";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = test_plansIcon;
+  return node;
+}
+
+export function WorkspaceGateway(label?: string, options?: Record<string, unknown>) {
+  const node = _Devops(label ?? "WorkspaceGateway", options);
+  (node as unknown as Record<string, unknown>)["~resource"] = "WorkspaceGateway";
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = workspace_gatewayIcon;
   return node;
 }

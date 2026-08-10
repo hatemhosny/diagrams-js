@@ -7,6 +7,7 @@ import app_service_domainsIcon from "../../../resources/azure/web/app-service-do
 import app_service_environmentsIcon from "../../../resources/azure/web/app-service-environments.png";
 import app_service_plansIcon from "../../../resources/azure/web/app-service-plans.png";
 import app_servicesIcon from "../../../resources/azure/web/app-services.png";
+import app_space_componentIcon from "../../../resources/azure/web/app-space-component.png";
 import app_spaceIcon from "../../../resources/azure/web/app-space.png";
 import azure_media_serviceIcon from "../../../resources/azure/web/azure-media-service.png";
 import azure_spring_appsIcon from "../../../resources/azure/web/azure-spring-apps.png";
@@ -79,6 +80,13 @@ export function AppServices(label?: string, options?: Record<string, unknown>) {
   const node = _Web(label ?? "AppServices", options);
   (node as unknown as Record<string, unknown>)["~resource"] = "AppServices";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = app_servicesIcon;
+  return node;
+}
+
+export function AppSpaceComponent(label?: string, options?: Record<string, unknown>) {
+  const node = _Web(label ?? "AppSpaceComponent", options);
+  (node as unknown as Record<string, unknown>)["~resource"] = "AppSpaceComponent";
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = app_space_componentIcon;
   return node;
 }
 

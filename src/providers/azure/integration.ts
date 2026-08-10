@@ -10,6 +10,7 @@ import azure_databox_gatewayIcon from "../../../resources/azure/integration/azur
 import azure_service_busIcon from "../../../resources/azure/integration/azure-service-bus.png";
 import azure_sql_server_stretch_databasesIcon from "../../../resources/azure/integration/azure-sql-server-stretch-databases.png";
 import azure_stack_edgeIcon from "../../../resources/azure/integration/azure-stack-edge.png";
+import business_process_trackingIcon from "../../../resources/azure/integration/business-process-tracking.png";
 import data_catalogIcon from "../../../resources/azure/integration/data-catalog.png";
 import data_factoriesIcon from "../../../resources/azure/integration/data-factories.png";
 import event_grid_domainsIcon from "../../../resources/azure/integration/event-grid-domains.png";
@@ -115,6 +116,13 @@ export function AzureStackEdge(label?: string, options?: Record<string, unknown>
   const node = _Integration(label ?? "AzureStackEdge", options);
   (node as unknown as Record<string, unknown>)["~resource"] = "AzureStackEdge";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = azure_stack_edgeIcon;
+  return node;
+}
+
+export function BusinessProcessTracking(label?: string, options?: Record<string, unknown>) {
+  const node = _Integration(label ?? "BusinessProcessTracking", options);
+  (node as unknown as Record<string, unknown>)["~resource"] = "BusinessProcessTracking";
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = business_process_trackingIcon;
   return node;
 }
 

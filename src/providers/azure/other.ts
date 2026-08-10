@@ -31,6 +31,7 @@ import azure_quotasIcon from "../../../resources/azure/other/azure-quotas.png";
 import azure_sphereIcon from "../../../resources/azure/other/azure-sphere.png";
 import azure_storage_moverIcon from "../../../resources/azure/other/azure-storage-mover.png";
 import azure_support_center_blueIcon from "../../../resources/azure/other/azure-support-center-blue.png";
+import azure_sustainabilityIcon from "../../../resources/azure/other/azure-sustainability.png";
 import azure_video_indexerIcon from "../../../resources/azure/other/azure-video-indexer.png";
 import azure_virtual_desktopIcon from "../../../resources/azure/other/azure-virtual-desktop.png";
 import azure_vmware_solutionIcon from "../../../resources/azure/other/azure-vmware-solution.png";
@@ -45,6 +46,7 @@ import cloud_services_extended_supportIcon from "../../../resources/azure/other/
 import community_imagesIcon from "../../../resources/azure/other/community-images.png";
 import compliance_centerIcon from "../../../resources/azure/other/compliance-center.png";
 import confidential_ledgersIcon from "../../../resources/azure/other/confidential-ledgers.png";
+import connected_vehicle_platformIcon from "../../../resources/azure/other/connected-vehicle-platform.png";
 import container_apps_environmentsIcon from "../../../resources/azure/other/container-apps-environments.png";
 import cost_exportIcon from "../../../resources/azure/other/cost-export.png";
 import custom_ip_prefixIcon from "../../../resources/azure/other/custom-ip-prefix.png";
@@ -79,12 +81,14 @@ import device_update_iot_hubIcon from "../../../resources/azure/other/device-upd
 import disk_poolIcon from "../../../resources/azure/other/disk-pool.png";
 import edge_managementIcon from "../../../resources/azure/other/edge-management.png";
 import elastic_sanIcon from "../../../resources/azure/other/elastic-san.png";
+import entra_identity_licensesIcon from "../../../resources/azure/other/entra-identity-licenses.png";
 import exchange_on_premises_accessIcon from "../../../resources/azure/other/exchange-on-premises-access.png";
 import express_route_traffic_collectorIcon from "../../../resources/azure/other/express-route-traffic-collector.png";
 import expressroute_directIcon from "../../../resources/azure/other/expressroute-direct.png";
 import fhir_serviceIcon from "../../../resources/azure/other/fhir-service.png";
 import fijiIcon from "../../../resources/azure/other/fiji.png";
 import hdi_aks_clusterIcon from "../../../resources/azure/other/hdi-aks-cluster.png";
+import icm_troubleshootingIcon from "../../../resources/azure/other/icm-troubleshooting.png";
 import instance_poolsIcon from "../../../resources/azure/other/instance-pools.png";
 import internet_analyzer_profilesIcon from "../../../resources/azure/other/internet-analyzer-profiles.png";
 import kubernetes_fleet_managerIcon from "../../../resources/azure/other/kubernetes-fleet-manager.png";
@@ -96,9 +100,11 @@ import microsoft_dev_boxIcon from "../../../resources/azure/other/microsoft-dev-
 import mission_landing_zoneIcon from "../../../resources/azure/other/mission-landing-zone.png";
 import mobile_networksIcon from "../../../resources/azure/other/mobile-networks.png";
 import modular_data_centerIcon from "../../../resources/azure/other/modular-data-center.png";
+import monitor_health_modelsIcon from "../../../resources/azure/other/monitor-health-models.png";
 import network_managersIcon from "../../../resources/azure/other/network-managers.png";
 import network_security_perimetersIcon from "../../../resources/azure/other/network-security-perimeters.png";
 import open_supply_chain_platformIcon from "../../../resources/azure/other/open-supply-chain-platform.png";
+import osconfigIcon from "../../../resources/azure/other/osconfig.png";
 import peering_serviceIcon from "../../../resources/azure/other/peering-service.png";
 import peeringsIcon from "../../../resources/azure/other/peerings.png";
 import private_endpointsIcon from "../../../resources/azure/other/private-endpoints.png";
@@ -122,6 +128,7 @@ import virtual_visits_builderIcon from "../../../resources/azure/other/virtual-v
 import vm_app_definitionsIcon from "../../../resources/azure/other/vm-app-definitions.png";
 import vm_app_versionsIcon from "../../../resources/azure/other/vm-app-versions.png";
 import vm_image_versionIcon from "../../../resources/azure/other/vm-image-version.png";
+import wac_installerIcon from "../../../resources/azure/other/wac-installer.png";
 import wacIcon from "../../../resources/azure/other/wac.png";
 import web_app_databaseIcon from "../../../resources/azure/other/web-app-database.png";
 import web_jobsIcon from "../../../resources/azure/other/web-jobs.png";
@@ -363,6 +370,13 @@ export function AzureSupportCenterBlue(label?: string, options?: Record<string, 
   return node;
 }
 
+export function AzureSustainability(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "AzureSustainability", options);
+  (node as unknown as Record<string, unknown>)["~resource"] = "AzureSustainability";
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = azure_sustainabilityIcon;
+  return node;
+}
+
 export function AzureVideoIndexer(label?: string, options?: Record<string, unknown>) {
   const node = _Other(label ?? "AzureVideoIndexer", options);
   (node as unknown as Record<string, unknown>)["~resource"] = "AzureVideoIndexer";
@@ -460,6 +474,13 @@ export function ConfidentialLedgers(label?: string, options?: Record<string, unk
   const node = _Other(label ?? "ConfidentialLedgers", options);
   (node as unknown as Record<string, unknown>)["~resource"] = "ConfidentialLedgers";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = confidential_ledgersIcon;
+  return node;
+}
+
+export function ConnectedVehiclePlatform(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "ConnectedVehiclePlatform", options);
+  (node as unknown as Record<string, unknown>)["~resource"] = "ConnectedVehiclePlatform";
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = connected_vehicle_platformIcon;
   return node;
 }
 
@@ -710,6 +731,13 @@ export function ElasticSan(label?: string, options?: Record<string, unknown>) {
   return node;
 }
 
+export function EntraIdentityLicenses(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "EntraIdentityLicenses", options);
+  (node as unknown as Record<string, unknown>)["~resource"] = "EntraIdentityLicenses";
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = entra_identity_licensesIcon;
+  return node;
+}
+
 export function ExchangeOnPremisesAccess(label?: string, options?: Record<string, unknown>) {
   const node = _Other(label ?? "ExchangeOnPremisesAccess", options);
   (node as unknown as Record<string, unknown>)["~resource"] = "ExchangeOnPremisesAccess";
@@ -750,6 +778,13 @@ export function HdiAksCluster(label?: string, options?: Record<string, unknown>)
   const node = _Other(label ?? "HdiAksCluster", options);
   (node as unknown as Record<string, unknown>)["~resource"] = "HdiAksCluster";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = hdi_aks_clusterIcon;
+  return node;
+}
+
+export function IcmTroubleshooting(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "IcmTroubleshooting", options);
+  (node as unknown as Record<string, unknown>)["~resource"] = "IcmTroubleshooting";
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = icm_troubleshootingIcon;
   return node;
 }
 
@@ -831,6 +866,13 @@ export function ModularDataCenter(label?: string, options?: Record<string, unkno
   return node;
 }
 
+export function MonitorHealthModels(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "MonitorHealthModels", options);
+  (node as unknown as Record<string, unknown>)["~resource"] = "MonitorHealthModels";
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = monitor_health_modelsIcon;
+  return node;
+}
+
 export function NetworkManagers(label?: string, options?: Record<string, unknown>) {
   const node = _Other(label ?? "NetworkManagers", options);
   (node as unknown as Record<string, unknown>)["~resource"] = "NetworkManagers";
@@ -849,6 +891,13 @@ export function OpenSupplyChainPlatform(label?: string, options?: Record<string,
   const node = _Other(label ?? "OpenSupplyChainPlatform", options);
   (node as unknown as Record<string, unknown>)["~resource"] = "OpenSupplyChainPlatform";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = open_supply_chain_platformIcon;
+  return node;
+}
+
+export function Osconfig(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "Osconfig", options);
+  (node as unknown as Record<string, unknown>)["~resource"] = "Osconfig";
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = osconfigIcon;
   return node;
 }
 
@@ -1010,6 +1059,13 @@ export function VMImageVersion(label?: string, options?: Record<string, unknown>
   const node = _Other(label ?? "VMImageVersion", options);
   (node as unknown as Record<string, unknown>)["~resource"] = "VMImageVersion";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = vm_image_versionIcon;
+  return node;
+}
+
+export function WacInstaller(label?: string, options?: Record<string, unknown>) {
+  const node = _Other(label ?? "WacInstaller", options);
+  (node as unknown as Record<string, unknown>)["~resource"] = "WacInstaller";
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = wac_installerIcon;
   return node;
 }
 

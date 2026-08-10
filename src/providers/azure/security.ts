@@ -10,6 +10,8 @@ import azure_sentinelIcon from "../../../resources/azure/security/azure-sentinel
 import conditional_accessIcon from "../../../resources/azure/security/conditional-access.png";
 import defenderIcon from "../../../resources/azure/security/defender.png";
 import detonationIcon from "../../../resources/azure/security/detonation.png";
+import entra_identity_risky_signinsIcon from "../../../resources/azure/security/entra-identity-risky-signins.png";
+import entra_identity_risky_usersIcon from "../../../resources/azure/security/entra-identity-risky-users.png";
 import extended_security_updatesIcon from "../../../resources/azure/security/extended-security-updates.png";
 import extendedsecurityupdatesIcon from "../../../resources/azure/security/extendedsecurityupdates.png";
 import identity_secure_scoreIcon from "../../../resources/azure/security/identity-secure-score.png";
@@ -107,6 +109,20 @@ export function Detonation(label?: string, options?: Record<string, unknown>) {
   const node = _Security(label ?? "Detonation", options);
   (node as unknown as Record<string, unknown>)["~resource"] = "Detonation";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = detonationIcon;
+  return node;
+}
+
+export function EntraIdentityRiskySignins(label?: string, options?: Record<string, unknown>) {
+  const node = _Security(label ?? "EntraIdentityRiskySignins", options);
+  (node as unknown as Record<string, unknown>)["~resource"] = "EntraIdentityRiskySignins";
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = entra_identity_risky_signinsIcon;
+  return node;
+}
+
+export function EntraIdentityRiskyUsers(label?: string, options?: Record<string, unknown>) {
+  const node = _Security(label ?? "EntraIdentityRiskyUsers", options);
+  (node as unknown as Record<string, unknown>)["~resource"] = "EntraIdentityRiskyUsers";
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = entra_identity_risky_usersIcon;
   return node;
 }
 

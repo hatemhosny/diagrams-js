@@ -1,4 +1,5 @@
 import { _Azure } from "./index.js";
+import application_gateway_containersIcon from "../../../resources/azure/networking/application-gateway-containers.png";
 import application_gatewaysIcon from "../../../resources/azure/networking/application-gateways.png";
 import atm_multistackIcon from "../../../resources/azure/networking/atm-multistack.png";
 import azure_communications_gatewayIcon from "../../../resources/azure/networking/azure-communications-gateway.png";
@@ -54,6 +55,13 @@ import web_application_firewall_policieswafIcon from "../../../resources/azure/n
 function _Networking(label?: string, options?: Record<string, unknown>) {
   const node = _Azure(label, options);
   (node as unknown as Record<string, unknown>)["~type"] = "networking";
+  return node;
+}
+
+export function ApplicationGatewayContainers(label?: string, options?: Record<string, unknown>) {
+  const node = _Networking(label ?? "ApplicationGatewayContainers", options);
+  (node as unknown as Record<string, unknown>)["~resource"] = "ApplicationGatewayContainers";
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = application_gateway_containersIcon;
   return node;
 }
 

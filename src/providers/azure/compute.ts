@@ -1,4 +1,5 @@
 import { _Azure } from "./index.js";
+import aks_automaticIcon from "../../../resources/azure/compute/aks-automatic.png";
 import app_servicesIcon from "../../../resources/azure/compute/app-services.png";
 import application_groupIcon from "../../../resources/azure/compute/application-group.png";
 import automanaged_vmIcon from "../../../resources/azure/compute/automanaged-vm.png";
@@ -10,6 +11,7 @@ import citrix_virtual_desktops_essentialsIcon from "../../../resources/azure/com
 import cloud_services_classicIcon from "../../../resources/azure/compute/cloud-services-classic.png";
 import cloud_servicesIcon from "../../../resources/azure/compute/cloud-services.png";
 import cloudsimple_virtual_machinesIcon from "../../../resources/azure/compute/cloudsimple-virtual-machines.png";
+import compute_fleetIcon from "../../../resources/azure/compute/compute-fleet.png";
 import container_appsIcon from "../../../resources/azure/compute/container-apps.png";
 import container_instancesIcon from "../../../resources/azure/compute/container-instances.png";
 import container_registriesIcon from "../../../resources/azure/compute/container-registries.png";
@@ -56,6 +58,13 @@ import workspacesIcon from "../../../resources/azure/compute/workspaces.png";
 function _Compute(label?: string, options?: Record<string, unknown>) {
   const node = _Azure(label, options);
   (node as unknown as Record<string, unknown>)["~type"] = "compute";
+  return node;
+}
+
+export function AksAutomatic(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "AksAutomatic", options);
+  (node as unknown as Record<string, unknown>)["~resource"] = "AksAutomatic";
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = aks_automaticIcon;
   return node;
 }
 
@@ -134,6 +143,13 @@ export function CloudsimpleVirtualMachines(label?: string, options?: Record<stri
   const node = _Compute(label ?? "CloudsimpleVirtualMachines", options);
   (node as unknown as Record<string, unknown>)["~resource"] = "CloudsimpleVirtualMachines";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = cloudsimple_virtual_machinesIcon;
+  return node;
+}
+
+export function ComputeFleet(label?: string, options?: Record<string, unknown>) {
+  const node = _Compute(label ?? "ComputeFleet", options);
+  (node as unknown as Record<string, unknown>)["~resource"] = "ComputeFleet";
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = compute_fleetIcon;
   return node;
 }
 

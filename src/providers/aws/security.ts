@@ -37,6 +37,7 @@ import shield_advancedIcon from "../../../resources/aws/security/shield-advanced
 import shieldIcon from "../../../resources/aws/security/shield.png";
 import simple_adIcon from "../../../resources/aws/security/simple-ad.png";
 import single_sign_onIcon from "../../../resources/aws/security/single-sign-on.png";
+import verified_permissionsIcon from "../../../resources/aws/security/verified-permissions.png";
 import waf_filtering_ruleIcon from "../../../resources/aws/security/waf-filtering-rule.png";
 import wafIcon from "../../../resources/aws/security/waf.png";
 
@@ -370,6 +371,13 @@ export function SingleSignOn(label?: string, options?: Record<string, unknown>) 
   const node = _Security(label ?? "SingleSignOn", options);
   (node as unknown as Record<string, unknown>)["~resource"] = "SingleSignOn";
   (node as unknown as Record<string, unknown>)["~iconDataUrl"] = single_sign_onIcon;
+  return node;
+}
+
+export function VerifiedPermissions(label?: string, options?: Record<string, unknown>) {
+  const node = _Security(label ?? "VerifiedPermissions", options);
+  (node as unknown as Record<string, unknown>)["~resource"] = "VerifiedPermissions";
+  (node as unknown as Record<string, unknown>)["~iconDataUrl"] = verified_permissionsIcon;
   return node;
 }
 
